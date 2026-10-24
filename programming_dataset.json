@@ -1,0 +1,1399 @@
+[
+  {
+    "question": "Make me a Python calculator",
+    "answer": "Here's a command-line calculator with error handling that loops until you quit:\n\n```python\ndef add(a, b): return a + b\ndef sub(a, b): return a - b\ndef mul(a, b): return a * b\ndef div(a, b):\n    if b == 0:\n        raise ValueError(\"Cannot divide by zero\")\n    return a / b\n\nOPS = {\"+\": add, \"-\": sub, \"*\": mul, \"/\": div}\n\ndef main():\n    print(\"Simple Calculator (type 'q' to quit)\")\n    while True:\n        raw = input(\"\\nEnter expression (e.g. 5 + 3): \").strip()\n        if raw.lower() == \"q\":\n            break\n        try:\n            a, op, b = raw.split()\n            result = OPS[op](float(a), float(b))\n            print(f\"= {result}\")\n        except KeyError:\n            print(\"Unknown operator. Use + - * /\")\n        except ValueError as e:\n            print(f\"Error: {e}\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nRun with `python calculator.py`.",
+    "keywords": [
+      "python",
+      "calculator",
+      "cli",
+      "input",
+      "functions",
+      "dictionary"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "python calculator",
+      "build a calculator in python",
+      "create a simple calc python",
+      "write a python program that adds subtracts multiplies divides",
+      "basic calculator script"
+    ]
+  },
+  {
+    "question": "Make me a to-do list app in Python",
+    "answer": "A CLI to-do app that saves tasks to a JSON file:\n\n```python\nimport json\nfrom pathlib import Path\n\nFILE = Path(\"todos.json\")\n\ndef load():\n    return json.loads(FILE.read_text()) if FILE.exists() else []\n\ndef save(todos):\n    FILE.write_text(json.dumps(todos, indent=2))\n\ndef show(todos):\n    if not todos:\n        print(\"Nothing to do!\")\n    for i, t in enumerate(todos, 1):\n        print(f\"{i}. [{'x' if t['done'] else ' '}] {t['title']}\")\n\ndef main():\n    todos = load()\n    while True:\n        cmd = input(\"\\n(a)dd (d)one (r)emove (l)ist (q)uit > \").lower()\n        if cmd == \"a\":\n            todos.append({\"title\": input(\"Task: \"), \"done\": False})\n        elif cmd == \"d\":\n            show(todos); todos[int(input(\"Number: \")) - 1][\"done\"] = True\n        elif cmd == \"r\":\n            show(todos); todos.pop(int(input(\"Number: \")) - 1)\n        elif cmd == \"l\":\n            show(todos)\n        elif cmd == \"q\":\n            break\n        save(todos)\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "keywords": [
+      "python",
+      "todo",
+      "json",
+      "cli",
+      "file io",
+      "pathlib"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "python todo app",
+      "task manager in python",
+      "create a todo list python cli",
+      "build a task tracker python",
+      "to do list program python"
+    ]
+  },
+  {
+    "question": "Make me a number guessing game in Python",
+    "answer": "```python\nimport random\n\ndef play():\n    secret = random.randint(1, 100)\n    attempts = 0\n    print(\"I'm thinking of a number between 1 and 100.\")\n    while True:\n        try:\n            guess = int(input(\"Your guess: \"))\n        except ValueError:\n            print(\"Please enter a whole number.\")\n            continue\n        attempts += 1\n        if guess < secret:\n            print(\"Too low!\")\n        elif guess > secret:\n            print(\"Too high!\")\n        else:\n            print(f\"Correct! You got it in {attempts} attempts.\")\n            break\n\nwhile True:\n    play()\n    if input(\"Play again? (y/n): \").lower() != \"y\":\n        break\n```",
+    "keywords": [
+      "python",
+      "game",
+      "random",
+      "loop",
+      "input validation"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "guess the number game python",
+      "python random number game",
+      "create a simple python game",
+      "number guessing program"
+    ]
+  },
+  {
+    "question": "Make me a web scraper in Python",
+    "answer": "This scraper uses `requests` and `BeautifulSoup`. Install first: `pip install requests beautifulsoup4`.\n\n```python\nimport csv\nimport requests\nfrom bs4 import BeautifulSoup\n\nURL = \"https://quotes.toscrape.com/\"\nHEADERS = {\"User-Agent\": \"Mozilla/5.0 (compatible; MyScraper/1.0)\"}\n\ndef scrape(url):\n    resp = requests.get(url, headers=HEADERS, timeout=10)\n    resp.raise_for_status()\n    soup = BeautifulSoup(resp.text, \"html.parser\")\n    rows = []\n    for q in soup.select(\"div.quote\"):\n        rows.append({\n            \"text\": q.select_one(\"span.text\").get_text(strip=True),\n            \"author\": q.select_one(\"small.author\").get_text(strip=True),\n            \"tags\": \",\".join(t.get_text() for t in q.select(\"a.tag\")),\n        })\n    return rows\n\nif __name__ == \"__main__\":\n    data = scrape(URL)\n    with open(\"quotes.csv\", \"w\", newline=\"\", encoding=\"utf-8\") as f:\n        w = csv.DictWriter(f, fieldnames=data[0].keys())\n        w.writeheader()\n        w.writerows(data)\n    print(f\"Saved {len(data)} rows\")\n```\n\nAlways check a site's robots.txt and terms of service before scraping.",
+    "keywords": [
+      "python",
+      "web scraping",
+      "requests",
+      "beautifulsoup",
+      "csv",
+      "html parsing"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "scrape a website with python",
+      "python web crawler",
+      "extract data from html python",
+      "beautifulsoup example",
+      "write a scraper"
+    ]
+  },
+  {
+    "question": "Make me a REST API in Python with Flask",
+    "answer": "A small CRUD API for a `books` resource (in-memory). Install: `pip install flask`.\n\n```python\nfrom flask import Flask, jsonify, request, abort\n\napp = Flask(__name__)\nbooks = {1: {\"id\": 1, \"title\": \"Dune\", \"author\": \"Frank Herbert\"}}\nnext_id = 2\n\n@app.get(\"/books\")\ndef list_books():\n    return jsonify(list(books.values()))\n\n@app.get(\"/books/<int:book_id>\")\ndef get_book(book_id):\n    return jsonify(books.get(book_id) or abort(404))\n\n@app.post(\"/books\")\ndef create_book():\n    global next_id\n    data = request.get_json(silent=True) or {}\n    if \"title\" not in data or \"author\" not in data:\n        abort(400, \"title and author required\")\n    book = {\"id\": next_id, **{k: data[k] for k in (\"title\", \"author\")}}\n    books[next_id] = book\n    next_id += 1\n    return jsonify(book), 201\n\n@app.put(\"/books/<int:book_id>\")\ndef update_book(book_id):\n    if book_id not in books:\n        abort(404)\n    books[book_id].update(request.get_json() or {})\n    return jsonify(books[book_id])\n\n@app.delete(\"/books/<int:book_id>\")\ndef delete_book(book_id):\n    books.pop(book_id, None)\n    return \"\", 204\n\nif __name__ == \"__main__\":\n    app.run(debug=True)\n```\n\nTest: `curl -X POST localhost:5000/books -H \"Content-Type: application/json\" -d '{\"title\":\"Emma\",\"author\":\"Austen\"}'`",
+    "keywords": [
+      "python",
+      "flask",
+      "rest",
+      "api",
+      "crud",
+      "json",
+      "http"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "flask api",
+      "python backend example",
+      "create REST endpoints python",
+      "build an api with flask",
+      "flask crud"
+    ]
+  },
+  {
+    "question": "Make me a FastAPI app with validation",
+    "answer": "Install: `pip install fastapi uvicorn`.\n\n```python\nfrom fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel, Field\n\napp = FastAPI(title=\"Items API\")\n\nclass ItemIn(BaseModel):\n    name: str = Field(min_length=1, max_length=50)\n    price: float = Field(gt=0)\n\nclass Item(ItemIn):\n    id: int\n\ndb: dict[int, Item] = {}\n\n@app.post(\"/items\", response_model=Item, status_code=201)\ndef create(item: ItemIn):\n    new = Item(id=len(db) + 1, **item.model_dump())\n    db[new.id] = new\n    return new\n\n@app.get(\"/items/{item_id}\", response_model=Item)\ndef read(item_id: int):\n    if item_id not in db:\n        raise HTTPException(404, \"Item not found\")\n    return db[item_id]\n```\n\nRun: `uvicorn main:app --reload` then open `http://127.0.0.1:8000/docs` for auto-generated Swagger docs.",
+    "keywords": [
+      "python",
+      "fastapi",
+      "pydantic",
+      "uvicorn",
+      "api",
+      "validation"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "fastapi example",
+      "python async api",
+      "create fastapi crud",
+      "pydantic validation example"
+    ]
+  },
+  {
+    "question": "Make me a password generator in Python",
+    "answer": "```python\nimport secrets\nimport string\n\ndef generate(length=16, symbols=True):\n    alphabet = string.ascii_letters + string.digits\n    if symbols:\n        alphabet += \"!@#$%^&*()-_=+\"\n    while True:\n        pw = \"\".join(secrets.choice(alphabet) for _ in range(length))\n        # ensure at least one of each class\n        if (any(c.islower() for c in pw) and any(c.isupper() for c in pw)\n                and any(c.isdigit() for c in pw)):\n            return pw\n\nif __name__ == \"__main__\":\n    print(generate(20))\n```\n\nUse `secrets` (not `random`) for anything security-related because it uses a cryptographically secure source.",
+    "keywords": [
+      "python",
+      "password",
+      "secrets",
+      "security",
+      "random"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "random password python",
+      "secure password generator script",
+      "generate strong passwords"
+    ]
+  },
+  {
+    "question": "Make me a Discord bot in Python",
+    "answer": "Install: `pip install discord.py`. Create a bot at the Discord Developer Portal and enable the Message Content intent.\n\n```python\nimport os\nimport discord\nfrom discord.ext import commands\n\nintents = discord.Intents.default()\nintents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)\n\n@bot.event\nasync def on_ready():\n    print(f\"Logged in as {bot.user}\")\n\n@bot.command()\nasync def ping(ctx):\n    await ctx.send(f\"Pong! {round(bot.latency * 1000)}ms\")\n\n@bot.command()\nasync def roll(ctx, sides: int = 6):\n    import random\n    await ctx.send(f\"🎲 You rolled a {random.randint(1, sides)}\")\n\nbot.run(os.environ[\"DISCORD_TOKEN\"])\n```\n\nNever hard-code your token. Keep it in an environment variable.",
+    "keywords": [
+      "python",
+      "discord",
+      "bot",
+      "discord.py",
+      "async",
+      "commands"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "discord bot python",
+      "create a discord bot",
+      "write a bot for discord",
+      "discord.py example"
+    ]
+  },
+  {
+    "question": "Make me a Snake game in Python",
+    "answer": "Uses `pygame` (`pip install pygame`).\n\n```python\nimport random\nimport pygame\n\npygame.init()\nW, H, CELL = 600, 400, 20\nscreen = pygame.display.set_mode((W, H))\nclock = pygame.time.Clock()\nfont = pygame.font.SysFont(None, 28)\n\nsnake = [(W // 2, H // 2)]\ndirection = (CELL, 0)\nfood = (random.randrange(0, W, CELL), random.randrange(0, H, CELL))\nscore = 0\nrunning = True\n\nwhile running:\n    for e in pygame.event.get():\n        if e.type == pygame.QUIT:\n            running = False\n        elif e.type == pygame.KEYDOWN:\n            moves = {pygame.K_UP: (0, -CELL), pygame.K_DOWN: (0, CELL),\n                     pygame.K_LEFT: (-CELL, 0), pygame.K_RIGHT: (CELL, 0)}\n            if e.key in moves and moves[e.key] != (-direction[0], -direction[1]):\n                direction = moves[e.key]\n\n    head = (snake[0][0] + direction[0], snake[0][1] + direction[1])\n    if head in snake or not (0 <= head[0] < W and 0 <= head[1] < H):\n        running = False\n    snake.insert(0, head)\n    if head == food:\n        score += 1\n        food = (random.randrange(0, W, CELL), random.randrange(0, H, CELL))\n    else:\n        snake.pop()\n\n    screen.fill((20, 20, 20))\n    for x, y in snake:\n        pygame.draw.rect(screen, (0, 200, 0), (x, y, CELL - 2, CELL - 2))\n    pygame.draw.rect(screen, (220, 40, 40), (*food, CELL - 2, CELL - 2))\n    screen.blit(font.render(f\"Score: {score}\", True, (255, 255, 255)), (10, 10))\n    pygame.display.flip()\n    clock.tick(10)\n\npygame.quit()\n```",
+    "keywords": [
+      "python",
+      "pygame",
+      "snake",
+      "game",
+      "game loop",
+      "collision"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "snake game pygame",
+      "create snake in python",
+      "python game with pygame",
+      "make a simple game python"
+    ]
+  },
+  {
+    "question": "Make me a Tic-Tac-Toe game in Python",
+    "answer": "```python\ndef show(b):\n    for i in range(0, 9, 3):\n        print(\" | \".join(b[i:i + 3]))\n        if i < 6: print(\"--+---+--\")\n\ndef winner(b):\n    lines = [(0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6)]\n    for a, c, d in lines:\n        if b[a] == b[c] == b[d] != \" \":\n            return b[a]\n    return None\n\ndef main():\n    board = [\" \"] * 9\n    player = \"X\"\n    for _ in range(9):\n        show(board)\n        while True:\n            try:\n                move = int(input(f\"{player}, choose 1-9: \")) - 1\n                if board[move] == \" \":\n                    break\n            except (ValueError, IndexError):\n                pass\n            print(\"Invalid move.\")\n        board[move] = player\n        if winner(board):\n            show(board); print(f\"{player} wins!\"); return\n        player = \"O\" if player == \"X\" else \"X\"\n    show(board); print(\"It's a draw!\")\n\nmain()\n```",
+    "keywords": [
+      "python",
+      "tic tac toe",
+      "game",
+      "board",
+      "list"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "tictactoe python",
+      "noughts and crosses code",
+      "two player game python"
+    ]
+  },
+  {
+    "question": "Make me a script that organizes files in a folder by extension",
+    "answer": "```python\nimport shutil\nfrom pathlib import Path\n\nFOLDERS = {\n    \"Images\": {\".jpg\", \".jpeg\", \".png\", \".gif\", \".webp\"},\n    \"Documents\": {\".pdf\", \".docx\", \".txt\", \".xlsx\", \".pptx\"},\n    \"Video\": {\".mp4\", \".mkv\", \".mov\"},\n    \"Audio\": {\".mp3\", \".wav\", \".flac\"},\n    \"Archives\": {\".zip\", \".rar\", \".7z\", \".tar\", \".gz\"},\n}\n\ndef organize(path):\n    root = Path(path).expanduser()\n    for f in root.iterdir():\n        if not f.is_file():\n            continue\n        dest = next((k for k, exts in FOLDERS.items() if f.suffix.lower() in exts), \"Other\")\n        target = root / dest\n        target.mkdir(exist_ok=True)\n        shutil.move(str(f), str(target / f.name))\n        print(f\"{f.name} -> {dest}/\")\n\nif __name__ == \"__main__\":\n    organize(\"~/Downloads\")\n```\n\nTest on a copy first because this moves files.",
+    "keywords": [
+      "python",
+      "automation",
+      "files",
+      "pathlib",
+      "shutil",
+      "script"
+    ],
+    "category": "script-request",
+    "language": "python",
+    "aliases": [
+      "file organizer python",
+      "sort downloads folder automatically",
+      "automate file cleanup",
+      "move files by type script"
+    ]
+  },
+  {
+    "question": "Read and write a CSV file in Python",
+    "answer": "```python\nimport csv\n\n# write\nrows = [{\"name\": \"Ana\", \"age\": 30}, {\"name\": \"Omar\", \"age\": 25}]\nwith open(\"people.csv\", \"w\", newline=\"\", encoding=\"utf-8\") as f:\n    writer = csv.DictWriter(f, fieldnames=[\"name\", \"age\"])\n    writer.writeheader()\n    writer.writerows(rows)\n\n# read\nwith open(\"people.csv\", newline=\"\", encoding=\"utf-8\") as f:\n    for row in csv.DictReader(f):\n        print(row[\"name\"], int(row[\"age\"]))\n```\n\nFor large or messy data use `pandas.read_csv(\"people.csv\")`.",
+    "keywords": [
+      "python",
+      "csv",
+      "file io",
+      "dictreader",
+      "pandas"
+    ],
+    "category": "how-to",
+    "language": "python",
+    "aliases": [
+      "python csv example",
+      "open csv python",
+      "save list of dicts to csv"
+    ]
+  },
+  {
+    "question": "Explain Python decorators with examples",
+    "answer": "A decorator is a function that takes a function and returns a new function, which lets you add behavior without changing the original.\n\n```python\nimport time\nfrom functools import wraps\n\ndef timer(func):\n    @wraps(func)  # preserves name/docstring\n    def wrapper(*args, **kwargs):\n        start = time.perf_counter()\n        result = func(*args, **kwargs)\n        print(f\"{func.__name__} took {time.perf_counter() - start:.4f}s\")\n        return result\n    return wrapper\n\n@timer\ndef slow():\n    time.sleep(0.5)\n\nslow()\n```\n\n`@timer` is sugar for `slow = timer(slow)`. Decorators with arguments need one extra nesting level:\n\n```python\ndef repeat(n):\n    def deco(func):\n        @wraps(func)\n        def wrapper(*a, **k):\n            for _ in range(n):\n                result = func(*a, **k)\n            return result\n        return wrapper\n    return deco\n\n@repeat(3)\ndef hi(): print(\"hi\")\n```",
+    "keywords": [
+      "python",
+      "decorator",
+      "closure",
+      "functools",
+      "higher-order function"
+    ],
+    "category": "concept",
+    "language": "python",
+    "aliases": [
+      "what is a decorator in python",
+      "python @ syntax",
+      "how do decorators work",
+      "decorator example"
+    ]
+  },
+  {
+    "question": "What are list comprehensions in Python?",
+    "answer": "A concise way to build lists from iterables.\n\n```python\nsquares = [x * x for x in range(10)]\nevens = [x for x in range(20) if x % 2 == 0]\nflat = [n for row in [[1, 2], [3, 4]] for n in row]\nlabels = [\"big\" if x > 5 else \"small\" for x in range(10)]\n\n# Same idea for dicts, sets and generators\nd = {w: len(w) for w in [\"a\", \"bb\", \"ccc\"]}\ns = {x % 3 for x in range(10)}\ng = (x * x for x in range(10**9))  # lazy, uses almost no memory\n```\n\nRule of thumb: if it needs more than one condition or nested loop, use a regular `for` loop for readability.",
+    "keywords": [
+      "python",
+      "list comprehension",
+      "iterables",
+      "generator",
+      "syntax"
+    ],
+    "category": "concept",
+    "language": "python",
+    "aliases": [
+      "python comprehension",
+      "one line for loop python",
+      "dict comprehension",
+      "how to make a list in one line"
+    ]
+  },
+  {
+    "question": "Write a Python Fibonacci function (iterative, recursive, memoized)",
+    "answer": "```python\nfrom functools import lru_cache\n\ndef fib_iter(n):                # O(n) time, O(1) space\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a\n\ndef fib_naive(n):               # O(2^n) - educational only\n    return n if n < 2 else fib_naive(n - 1) + fib_naive(n - 2)\n\n@lru_cache(maxsize=None)\ndef fib_memo(n):                # O(n) with caching\n    return n if n < 2 else fib_memo(n - 1) + fib_memo(n - 2)\n\nprint([fib_iter(i) for i in range(10)])  # [0,1,1,2,3,5,8,13,21,34]\n```",
+    "keywords": [
+      "python",
+      "fibonacci",
+      "recursion",
+      "memoization",
+      "lru_cache",
+      "dynamic programming"
+    ],
+    "category": "algorithm",
+    "language": "python",
+    "aliases": [
+      "fibonacci python",
+      "nth fibonacci number",
+      "recursive fibonacci",
+      "fib sequence code"
+    ]
+  },
+  {
+    "question": "How do I use pytest to write unit tests?",
+    "answer": "Install: `pip install pytest`. Files named `test_*.py` and functions named `test_*` are discovered automatically.\n\n```python\n# math_utils.py\ndef divide(a, b):\n    if b == 0:\n        raise ZeroDivisionError(\"b cannot be 0\")\n    return a / b\n```\n\n```python\n# test_math_utils.py\nimport pytest\nfrom math_utils import divide\n\ndef test_divide_basic():\n    assert divide(10, 2) == 5\n\ndef test_divide_by_zero():\n    with pytest.raises(ZeroDivisionError):\n        divide(1, 0)\n\n@pytest.mark.parametrize(\"a,b,expected\", [(6, 3, 2), (9, 3, 3), (-4, 2, -2)])\ndef test_divide_many(a, b, expected):\n    assert divide(a, b) == expected\n\n@pytest.fixture\ndef sample():\n    return {\"x\": 1}\n\ndef test_with_fixture(sample):\n    assert sample[\"x\"] == 1\n```\n\nRun with `pytest -v`. Add `--cov` (via `pytest-cov`) for coverage.",
+    "keywords": [
+      "python",
+      "pytest",
+      "testing",
+      "unit test",
+      "fixtures",
+      "parametrize"
+    ],
+    "category": "testing",
+    "language": "python",
+    "aliases": [
+      "python unit testing",
+      "how to test python code",
+      "pytest example",
+      "write tests for my function"
+    ]
+  },
+  {
+    "question": "Explain Python virtual environments and how to create one",
+    "answer": "A virtual environment is an isolated folder of packages so each project has its own dependencies.\n\n```bash\npython -m venv .venv                # create\nsource .venv/bin/activate           # macOS/Linux\n.venv\\Scripts\\activate              # Windows\npip install requests                # installs only into this env\npip freeze > requirements.txt       # save deps\npip install -r requirements.txt     # restore deps\ndeactivate                          # leave the env\n```\n\nAdd `.venv/` to `.gitignore`. Alternatives: `uv`, `poetry`, `pipenv`, `conda`.",
+    "keywords": [
+      "python",
+      "venv",
+      "pip",
+      "virtualenv",
+      "dependencies",
+      "requirements.txt"
+    ],
+    "category": "tooling",
+    "language": "python",
+    "aliases": [
+      "python venv",
+      "pip install in virtual environment",
+      "isolate python packages",
+      "requirements.txt how to"
+    ]
+  },
+  {
+    "question": "Group and aggregate data with pandas",
+    "answer": "```python\nimport pandas as pd\n\ndf = pd.DataFrame({\n    \"region\": [\"N\", \"S\", \"N\", \"S\", \"N\"],\n    \"product\": [\"A\", \"A\", \"B\", \"B\", \"A\"],\n    \"sales\": [100, 150, 200, 50, 75],\n})\n\nsummary = df.groupby(\"region\")[\"sales\"].agg([\"sum\", \"mean\", \"count\"])\nprint(summary)\n\npivot = df.pivot_table(index=\"region\", columns=\"product\",\n                       values=\"sales\", aggfunc=\"sum\", fill_value=0)\nprint(pivot)\n\ntop = df.sort_values(\"sales\", ascending=False).head(3)\n```\n\nCommon follow-ups: `.merge()` to join tables, `.apply()` for custom logic, `.to_csv()` / `.to_excel()` to export.",
+    "keywords": [
+      "python",
+      "pandas",
+      "groupby",
+      "pivot",
+      "dataframe",
+      "data analysis"
+    ],
+    "category": "data",
+    "language": "python",
+    "aliases": [
+      "pandas groupby example",
+      "sum by category pandas",
+      "pivot table in python",
+      "aggregate dataframe"
+    ]
+  },
+  {
+    "question": "Use dataclasses in Python",
+    "answer": "```python\nfrom dataclasses import dataclass, field\n\n@dataclass(order=True, frozen=False)\nclass Player:\n    name: str\n    score: int = 0\n    items: list[str] = field(default_factory=list)  # never use [] directly\n\n    def add_score(self, n: int) -> None:\n        self.score += n\n\np = Player(\"Sam\")\np.add_score(10)\nprint(p)  # Player(name='Sam', score=10, items=[])\n```\n\nYou get `__init__`, `__repr__`, and `__eq__` for free. Use `frozen=True` for immutability and `slots=True` (3.10+) for lower memory.",
+    "keywords": [
+      "python",
+      "dataclass",
+      "oop",
+      "class",
+      "type hints"
+    ],
+    "category": "concept",
+    "language": "python",
+    "aliases": [
+      "python dataclass example",
+      "simple class python",
+      "struct in python"
+    ]
+  },
+  {
+    "question": "Make a Dijkstra shortest path implementation in Python",
+    "answer": "```python\nimport heapq\n\ndef dijkstra(graph, start):\n    dist = {node: float(\"inf\") for node in graph}\n    dist[start] = 0\n    pq = [(0, start)]\n    while pq:\n        d, node = heapq.heappop(pq)\n        if d > dist[node]:\n            continue\n        for neighbor, w in graph[node]:\n            nd = d + w\n            if nd < dist[neighbor]:\n                dist[neighbor] = nd\n                heapq.heappush(pq, (nd, neighbor))\n    return dist\n\ngraph = {\n    \"A\": [(\"B\", 1), (\"C\", 4)],\n    \"B\": [(\"C\", 2), (\"D\", 5)],\n    \"C\": [(\"D\", 1)],\n    \"D\": [],\n}\nprint(dijkstra(graph, \"A\"))  # {'A': 0, 'B': 1, 'C': 3, 'D': 4}\n```\n\nComplexity is O((V + E) log V). It does not work with negative edge weights; use Bellman-Ford there.",
+    "keywords": [
+      "python",
+      "dijkstra",
+      "graph",
+      "shortest path",
+      "heap",
+      "algorithm"
+    ],
+    "category": "algorithm",
+    "language": "python",
+    "aliases": [
+      "shortest path algorithm",
+      "dijkstra python",
+      "graph algorithm code",
+      "heapq example"
+    ]
+  },
+  {
+    "question": "Implement binary search in Python",
+    "answer": "```python\ndef binary_search(arr, target):\n    lo, hi = 0, len(arr) - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        if arr[mid] == target:\n            return mid\n        if arr[mid] < target:\n            lo = mid + 1\n        else:\n            hi = mid - 1\n    return -1\n\nprint(binary_search([1, 3, 5, 7, 9, 11], 7))  # 3\n```\n\nThe array must be sorted. Time is O(log n). In real code prefer the stdlib `bisect` module.",
+    "keywords": [
+      "python",
+      "binary search",
+      "algorithm",
+      "sorting",
+      "searching",
+      "big o"
+    ],
+    "category": "algorithm",
+    "language": "python",
+    "aliases": [
+      "binary search code",
+      "search sorted array",
+      "log n search"
+    ]
+  },
+  {
+    "question": "How do I fix \"TypeError: 'NoneType' object is not subscriptable\" in Python?",
+    "answer": "You are indexing (`x[0]`, `x[\"key\"]`) something that is `None`. The usual causes:\n\n1. A function with no `return` (or a branch that doesn't return) gives back `None`.\n2. In-place methods return `None`, e.g. `lst = lst.sort()` or `lst = lst.append(1)`.\n3. `re.match()`, `dict.get()`, or a DB query found nothing.\n\n```python\n# Bug\ndata = my_list.sort()\nprint(data[0])          # TypeError\n\n# Fix\nmy_list.sort()\nprint(my_list[0])\n\n# Guard against None\nm = re.match(r\"\\d+\", text)\nif m:\n    print(m.group())\n```\n\nDebug tip: print `type(x)` and `repr(x)` right before the failing line, and trace back to where it was assigned.",
+    "keywords": [
+      "python",
+      "typeerror",
+      "nonetype",
+      "debugging",
+      "error",
+      "subscriptable"
+    ],
+    "category": "debugging",
+    "language": "python",
+    "aliases": [
+      "NoneType object is not subscriptable",
+      "python none error",
+      "'NoneType' object has no attribute",
+      "why is my variable None"
+    ]
+  },
+  {
+    "question": "Make me a to-do list web app with HTML, CSS and JavaScript",
+    "answer": "Save as `index.html` and open in a browser. Tasks persist via `localStorage`.\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>To-Do</title>\n<style>\n  body { font-family: system-ui, sans-serif; max-width: 420px; margin: 3rem auto; }\n  form { display: flex; gap: .5rem; }\n  input { flex: 1; padding: .6rem; }\n  button { padding: .6rem 1rem; cursor: pointer; }\n  li { display: flex; justify-content: space-between; padding: .5rem 0; border-bottom: 1px solid #ddd; }\n  li.done span { text-decoration: line-through; color: #888; }\n  span { cursor: pointer; }\n</style>\n</head>\n<body>\n<h1>To-Do</h1>\n<form id=\"form\"><input id=\"input\" placeholder=\"New task\" required><button>Add</button></form>\n<ul id=\"list\"></ul>\n<script>\n  let todos = JSON.parse(localStorage.getItem(\"todos\") || \"[]\");\n  const list = document.getElementById(\"list\");\n\n  function save() { localStorage.setItem(\"todos\", JSON.stringify(todos)); render(); }\n\n  function render() {\n    list.innerHTML = \"\";\n    todos.forEach((t, i) => {\n      const li = document.createElement(\"li\");\n      if (t.done) li.className = \"done\";\n      const span = document.createElement(\"span\");\n      span.textContent = t.text;           // textContent avoids XSS\n      span.onclick = () => { t.done = !t.done; save(); };\n      const del = document.createElement(\"button\");\n      del.textContent = \"✕\";\n      del.onclick = () => { todos.splice(i, 1); save(); };\n      li.append(span, del);\n      list.append(li);\n    });\n  }\n\n  document.getElementById(\"form\").addEventListener(\"submit\", e => {\n    e.preventDefault();\n    const input = document.getElementById(\"input\");\n    todos.push({ text: input.value.trim(), done: false });\n    input.value = \"\";\n    save();\n  });\n  render();\n</script>\n</body>\n</html>\n```",
+    "keywords": [
+      "javascript",
+      "html",
+      "css",
+      "todo",
+      "localstorage",
+      "dom",
+      "web app"
+    ],
+    "category": "app-request",
+    "language": "javascript",
+    "aliases": [
+      "js todo app",
+      "make a todo list website",
+      "build a task app in html",
+      "vanilla js todo",
+      "create to do list javascript"
+    ]
+  },
+  {
+    "question": "Write a debounce function in JavaScript",
+    "answer": "Debounce delays a function until the caller has stopped triggering it for `wait` ms. It's ideal for search boxes and window resize.\n\n```javascript\nfunction debounce(fn, wait = 300) {\n  let timer;\n  return function (...args) {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn.apply(this, args), wait);\n  };\n}\n\nconst onSearch = debounce(q => fetch(`/search?q=${encodeURIComponent(q)}`), 400);\ninput.addEventListener(\"input\", e => onSearch(e.target.value));\n```\n\nIts cousin, **throttle**, runs at most once per interval instead of waiting for silence.",
+    "keywords": [
+      "javascript",
+      "debounce",
+      "throttle",
+      "performance",
+      "closure",
+      "events"
+    ],
+    "category": "snippet",
+    "language": "javascript",
+    "aliases": [
+      "js debounce",
+      "delay function until user stops typing",
+      "rate limit function calls",
+      "throttle vs debounce"
+    ]
+  },
+  {
+    "question": "How do I fetch data from an API in JavaScript?",
+    "answer": "```javascript\nasync function getUsers() {\n  try {\n    const res = await fetch(\"https://jsonplaceholder.typicode.com/users\");\n    if (!res.ok) throw new Error(`HTTP ${res.status}`);  // fetch doesn't throw on 404/500\n    const users = await res.json();\n    return users;\n  } catch (err) {\n    console.error(\"Request failed:\", err);\n    return [];\n  }\n}\n\n// POST with JSON\nasync function createPost(data) {\n  const res = await fetch(\"/api/posts\", {\n    method: \"POST\",\n    headers: { \"Content-Type\": \"application/json\" },\n    body: JSON.stringify(data),\n  });\n  return res.json();\n}\n\ngetUsers().then(console.log);\n```\n\nAdd an `AbortController` to support timeouts and cancellation.",
+    "keywords": [
+      "javascript",
+      "fetch",
+      "api",
+      "async await",
+      "json",
+      "http",
+      "promise"
+    ],
+    "category": "how-to",
+    "language": "javascript",
+    "aliases": [
+      "js fetch example",
+      "call a rest api from javascript",
+      "get json from url js",
+      "ajax request javascript"
+    ]
+  },
+  {
+    "question": "Explain Promises vs async/await in JavaScript",
+    "answer": "Both handle asynchronous work. `async/await` is syntax built on top of Promises that reads like synchronous code.\n\n```javascript\n// Promise chain\nfetch(\"/user\")\n  .then(r => r.json())\n  .then(u => fetch(`/posts?user=${u.id}`))\n  .then(r => r.json())\n  .catch(console.error);\n\n// async/await (same thing)\nasync function load() {\n  try {\n    const u = await (await fetch(\"/user\")).json();\n    return await (await fetch(`/posts?user=${u.id}`)).json();\n  } catch (e) { console.error(e); }\n}\n\n// Run in parallel, not sequentially\nconst [a, b] = await Promise.all([fetch(\"/a\"), fetch(\"/b\")]);\n```\n\nUseful helpers: `Promise.all` (all succeed), `Promise.allSettled` (never rejects), `Promise.race` (first to finish), `Promise.any` (first to succeed).",
+    "keywords": [
+      "javascript",
+      "promise",
+      "async",
+      "await",
+      "event loop",
+      "concurrency"
+    ],
+    "category": "concept",
+    "language": "javascript",
+    "aliases": [
+      "async await explained",
+      "what is a promise js",
+      "callback hell fix",
+      "promise.all example"
+    ]
+  },
+  {
+    "question": "Implement quicksort in JavaScript",
+    "answer": "```javascript\nfunction quickSort(arr) {\n  if (arr.length <= 1) return arr;\n  const pivot = arr[Math.floor(arr.length / 2)];\n  const left = arr.filter(x => x < pivot);\n  const mid = arr.filter(x => x === pivot);\n  const right = arr.filter(x => x > pivot);\n  return [...quickSort(left), ...mid, ...quickSort(right)];\n}\n\nconsole.log(quickSort([5, 3, 8, 1, 9, 2]));  // [1,2,3,5,8,9]\n```\n\nAverage O(n log n), worst case O(n²) with bad pivots. This version is readable but uses extra memory; in-place partitioning (Lomuto/Hoare) avoids that.",
+    "keywords": [
+      "javascript",
+      "quicksort",
+      "sorting",
+      "algorithm",
+      "recursion",
+      "divide and conquer"
+    ],
+    "category": "algorithm",
+    "language": "javascript",
+    "aliases": [
+      "quick sort js",
+      "sort array algorithm javascript",
+      "implement sorting from scratch"
+    ]
+  },
+  {
+    "question": "Make me a basic Express.js server",
+    "answer": "```bash\nnpm init -y && npm install express\n```\n\n```javascript\n// server.js\nconst express = require(\"express\");\nconst app = express();\napp.use(express.json());\n\nconst items = [];\n\napp.get(\"/\", (req, res) => res.send(\"Hello World\"));\napp.get(\"/items\", (req, res) => res.json(items));\n\napp.post(\"/items\", (req, res) => {\n  if (!req.body.name) return res.status(400).json({ error: \"name required\" });\n  const item = { id: items.length + 1, name: req.body.name };\n  items.push(item);\n  res.status(201).json(item);\n});\n\n// error handler\napp.use((err, req, res, next) => {\n  console.error(err);\n  res.status(500).json({ error: \"Internal Server Error\" });\n});\n\napp.listen(3000, () => console.log(\"Listening on http://localhost:3000\"));\n```\n\nRun: `node server.js`.",
+    "keywords": [
+      "javascript",
+      "node",
+      "express",
+      "server",
+      "api",
+      "backend",
+      "npm"
+    ],
+    "category": "app-request",
+    "language": "javascript",
+    "aliases": [
+      "node.js server",
+      "express hello world",
+      "create a node api",
+      "node backend starter"
+    ]
+  },
+  {
+    "question": "Implement JWT authentication in Node.js",
+    "answer": "`npm i express jsonwebtoken bcryptjs`\n\n```javascript\nconst express = require(\"express\");\nconst jwt = require(\"jsonwebtoken\");\nconst bcrypt = require(\"bcryptjs\");\n\nconst app = express();\napp.use(express.json());\nconst SECRET = process.env.JWT_SECRET;   // long random string\nconst users = [];                        // use a real DB in production\n\napp.post(\"/register\", async (req, res) => {\n  const { email, password } = req.body;\n  const hash = await bcrypt.hash(password, 12);\n  users.push({ email, hash });\n  res.sendStatus(201);\n});\n\napp.post(\"/login\", async (req, res) => {\n  const user = users.find(u => u.email === req.body.email);\n  if (!user || !(await bcrypt.compare(req.body.password, user.hash)))\n    return res.status(401).json({ error: \"Invalid credentials\" });\n  const token = jwt.sign({ email: user.email }, SECRET, { expiresIn: \"1h\" });\n  res.json({ token });\n});\n\nfunction auth(req, res, next) {\n  const token = (req.headers.authorization || \"\").replace(\"Bearer \", \"\");\n  try {\n    req.user = jwt.verify(token, SECRET);\n    next();\n  } catch {\n    res.sendStatus(401);\n  }\n}\n\napp.get(\"/me\", auth, (req, res) => res.json(req.user));\napp.listen(3000);\n```\n\nAlways hash passwords, use HTTPS, and keep tokens short-lived.",
+    "keywords": [
+      "javascript",
+      "node",
+      "jwt",
+      "authentication",
+      "bcrypt",
+      "express",
+      "security"
+    ],
+    "category": "app-request",
+    "language": "javascript",
+    "aliases": [
+      "node login system",
+      "jwt express example",
+      "token based auth",
+      "register and login api node"
+    ]
+  },
+  {
+    "question": "Make me a React counter component",
+    "answer": "```jsx\nimport { useState } from \"react\";\n\nexport default function Counter({ initial = 0 }) {\n  const [count, setCount] = useState(initial);\n\n  return (\n    <div style={{ textAlign: \"center\" }}>\n      <h2>Count: {count}</h2>\n      <button onClick={() => setCount(c => c - 1)}>-</button>\n      <button onClick={() => setCount(initial)}>Reset</button>\n      <button onClick={() => setCount(c => c + 1)}>+</button>\n    </div>\n  );\n}\n```\n\nUse the functional form `setCount(c => c + 1)` when the new state depends on the previous one.",
+    "keywords": [
+      "react",
+      "usestate",
+      "component",
+      "hooks",
+      "jsx",
+      "counter"
+    ],
+    "category": "app-request",
+    "language": "javascript",
+    "aliases": [
+      "react useState example",
+      "simple react component",
+      "react button counter",
+      "hello world react"
+    ]
+  },
+  {
+    "question": "How do I fetch data in React with useEffect?",
+    "answer": "```jsx\nimport { useState, useEffect } from \"react\";\n\nexport default function Users() {\n  const [users, setUsers] = useState([]);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(null);\n\n  useEffect(() => {\n    const controller = new AbortController();\n    fetch(\"https://jsonplaceholder.typicode.com/users\", { signal: controller.signal })\n      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })\n      .then(setUsers)\n      .catch(e => { if (e.name !== \"AbortError\") setError(e.message); })\n      .finally(() => setLoading(false));\n    return () => controller.abort();   // cleanup on unmount\n  }, []);                              // [] = run once\n\n  if (loading) return <p>Loading…</p>;\n  if (error) return <p>Error: {error}</p>;\n  return <ul>{users.map(u => <li key={u.id}>{u.name}</li>)}</ul>;\n}\n```\n\nFor larger apps consider TanStack Query or SWR for caching and retries.",
+    "keywords": [
+      "react",
+      "useeffect",
+      "fetch",
+      "hooks",
+      "api",
+      "async",
+      "loading state"
+    ],
+    "category": "how-to",
+    "language": "javascript",
+    "aliases": [
+      "react api call",
+      "useEffect fetch example",
+      "load data when component mounts",
+      "react loading spinner state"
+    ]
+  },
+  {
+    "question": "What's the difference between interface and type in TypeScript?",
+    "answer": "They overlap heavily. The practical differences:\n\n```typescript\n// interface: extendable, supports declaration merging\ninterface User { id: number; name: string }\ninterface Admin extends User { role: \"admin\" }\ninterface User { email?: string }          // merges into the first User\n\n// type: can name unions, tuples, primitives, mapped/conditional types\ntype ID = string | number;\ntype Pair = [string, number];\ntype Admin2 = User & { role: \"admin\" };\ntype Readonly<T> = { readonly [K in keyof T]: T[K] };\n```\n\nGuideline: use `interface` for object shapes that others may extend (especially public APIs), and `type` for unions, intersections, and anything computed.",
+    "keywords": [
+      "typescript",
+      "interface",
+      "type alias",
+      "types",
+      "union",
+      "generics"
+    ],
+    "category": "concept",
+    "language": "typescript",
+    "aliases": [
+      "interface vs type",
+      "typescript type or interface",
+      "ts types explained"
+    ]
+  },
+  {
+    "question": "Make me a responsive navbar with HTML and CSS",
+    "answer": "```html\n<nav class=\"nav\">\n  <a class=\"logo\" href=\"#\">MySite</a>\n  <input type=\"checkbox\" id=\"toggle\" hidden>\n  <label for=\"toggle\" class=\"burger\">☰</label>\n  <ul class=\"links\">\n    <li><a href=\"#\">Home</a></li>\n    <li><a href=\"#\">About</a></li>\n    <li><a href=\"#\">Contact</a></li>\n  </ul>\n</nav>\n<style>\n  * { box-sizing: border-box; margin: 0; }\n  .nav { display: flex; align-items: center; justify-content: space-between;\n         padding: 1rem 2rem; background: #111; color: #fff; position: sticky; top: 0; }\n  .nav a { color: inherit; text-decoration: none; }\n  .links { display: flex; gap: 1.5rem; list-style: none; }\n  .burger { display: none; font-size: 1.6rem; cursor: pointer; }\n  @media (max-width: 640px) {\n    .burger { display: block; }\n    .links { display: none; position: absolute; top: 100%; left: 0; right: 0;\n             flex-direction: column; background: #111; padding: 1rem 2rem; }\n    #toggle:checked ~ .links { display: flex; }\n  }\n</style>\n```\n\nIt's pure CSS, so no JavaScript is needed for the mobile menu.",
+    "keywords": [
+      "html",
+      "css",
+      "navbar",
+      "responsive",
+      "media query",
+      "flexbox",
+      "menu"
+    ],
+    "category": "app-request",
+    "language": "css",
+    "aliases": [
+      "responsive navigation bar",
+      "hamburger menu css",
+      "make a navbar",
+      "mobile menu without javascript"
+    ]
+  },
+  {
+    "question": "How do I center a div with CSS?",
+    "answer": "```css\n/* 1. Flexbox (most common) */\n.parent { display: flex; justify-content: center; align-items: center; min-height: 100vh; }\n\n/* 2. Grid (shortest) */\n.parent { display: grid; place-items: center; min-height: 100vh; }\n\n/* 3. Horizontal only */\n.child { margin-inline: auto; width: fit-content; }\n\n/* 4. Absolute positioning */\n.child { position: absolute; inset: 0; margin: auto; width: 200px; height: 100px; }\n```\n\nThe parent needs a defined height for vertical centering to have any effect.",
+    "keywords": [
+      "css",
+      "center",
+      "flexbox",
+      "grid",
+      "layout",
+      "div"
+    ],
+    "category": "how-to",
+    "language": "css",
+    "aliases": [
+      "css center div",
+      "vertically center html element",
+      "flexbox center",
+      "how to align in the middle"
+    ]
+  },
+  {
+    "question": "Write a regex to validate an email address",
+    "answer": "```javascript\nconst emailRe = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/;\nemailRe.test(\"user@example.com\");   // true\nemailRe.test(\"bad@@example\");       // false\n```\n\n```python\nimport re\nEMAIL = re.compile(r\"^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$\")\nbool(EMAIL.match(\"user@example.com\"))\n```\n\nThis is a pragmatic check, not full RFC 5322 compliance (which is enormous). The only reliable validation is sending a confirmation email.",
+    "keywords": [
+      "regex",
+      "email",
+      "validation",
+      "pattern",
+      "javascript",
+      "python"
+    ],
+    "category": "snippet",
+    "language": "javascript",
+    "aliases": [
+      "email regex",
+      "validate email js",
+      "check if string is email",
+      "regular expression for email"
+    ]
+  },
+  {
+    "question": "Reverse a string in several languages",
+    "answer": "```python\ns[::-1]\n```\n```javascript\n[...s].reverse().join(\"\")\n```\n```java\nnew StringBuilder(s).reverse().toString()\n```\n```go\nfunc reverse(s string) string {\n    r := []rune(s)\n    for i, j := 0, len(r)-1; i < j; i, j = i+1, j-1 {\n        r[i], r[j] = r[j], r[i]\n    }\n    return string(r)\n}\n```\n```c\nvoid reverse(char *s) {\n    for (int i = 0, j = strlen(s) - 1; i < j; i++, j--) {\n        char t = s[i]; s[i] = s[j]; s[j] = t;\n    }\n}\n```\n```rust\ns.chars().rev().collect::<String>()\n```\n\nUse runes/chars rather than bytes when text may contain non-ASCII characters.",
+    "keywords": [
+      "string",
+      "reverse",
+      "python",
+      "javascript",
+      "java",
+      "go",
+      "c",
+      "rust",
+      "multi-language"
+    ],
+    "category": "snippet",
+    "language": "multi",
+    "aliases": [
+      "reverse a string",
+      "string reversal",
+      "flip text code",
+      "reverse string in python java js"
+    ]
+  },
+  {
+    "question": "Make me a linked list in C",
+    "answer": "```c\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct Node {\n    int value;\n    struct Node *next;\n} Node;\n\nNode *push_front(Node *head, int value) {\n    Node *n = malloc(sizeof *n);\n    if (!n) { perror(\"malloc\"); exit(1); }\n    n->value = value;\n    n->next = head;\n    return n;\n}\n\nvoid print_list(const Node *head) {\n    for (; head; head = head->next) printf(\"%d -> \", head->value);\n    puts(\"NULL\");\n}\n\nvoid free_list(Node *head) {\n    while (head) {\n        Node *next = head->next;\n        free(head);\n        head = next;\n    }\n}\n\nint main(void) {\n    Node *list = NULL;\n    for (int i = 1; i <= 5; i++) list = push_front(list, i);\n    print_list(list);   // 5 -> 4 -> 3 -> 2 -> 1 -> NULL\n    free_list(list);\n    return 0;\n}\n```\n\nCompile: `gcc -Wall -Wextra -g list.c -o list`. Check leaks with `valgrind ./list`.",
+    "keywords": [
+      "c",
+      "linked list",
+      "pointers",
+      "malloc",
+      "free",
+      "data structure"
+    ],
+    "category": "app-request",
+    "language": "c",
+    "aliases": [
+      "singly linked list c",
+      "implement linked list",
+      "c data structures",
+      "dynamic memory c example"
+    ]
+  },
+  {
+    "question": "What causes a segmentation fault in C and how do I debug it?",
+    "answer": "A segfault happens when your program touches memory it doesn't own. Common causes:\n\n- Dereferencing a `NULL` or uninitialized pointer\n- Array index out of bounds / buffer overflow\n- Use after `free()` or double free\n- Returning a pointer to a local (stack) variable\n- Stack overflow from infinite recursion\n- Writing to a string literal: `char *s = \"hi\"; s[0] = 'H';`\n\n```bash\ngcc -g -fsanitize=address,undefined prog.c -o prog && ./prog   # pinpoints the bug\ngdb ./prog          # then: run, bt (backtrace)\nvalgrind ./prog\n```\n\nAddressSanitizer usually reports the exact line and whether it's a heap/stack overflow or use-after-free.",
+    "keywords": [
+      "c",
+      "segfault",
+      "segmentation fault",
+      "pointers",
+      "gdb",
+      "valgrind",
+      "debugging",
+      "memory"
+    ],
+    "category": "debugging",
+    "language": "c",
+    "aliases": [
+      "segfault c",
+      "core dumped",
+      "why does my c program crash",
+      "null pointer dereference"
+    ]
+  },
+  {
+    "question": "Make me a BankAccount class in C++",
+    "answer": "```cpp\n#include <iostream>\n#include <stdexcept>\n#include <string>\n\nclass BankAccount {\n    std::string owner_;\n    double balance_;\npublic:\n    BankAccount(std::string owner, double initial = 0.0)\n        : owner_(std::move(owner)), balance_(initial) {}\n\n    void deposit(double amount) {\n        if (amount <= 0) throw std::invalid_argument(\"Deposit must be positive\");\n        balance_ += amount;\n    }\n\n    void withdraw(double amount) {\n        if (amount > balance_) throw std::runtime_error(\"Insufficient funds\");\n        balance_ -= amount;\n    }\n\n    double balance() const { return balance_; }\n    const std::string& owner() const { return owner_; }\n};\n\nint main() {\n    BankAccount acc(\"Lina\", 100);\n    acc.deposit(50);\n    try { acc.withdraw(500); }\n    catch (const std::exception& e) { std::cout << \"Error: \" << e.what() << '\\n'; }\n    std::cout << acc.owner() << \": $\" << acc.balance() << '\\n';\n}\n```\n\nCompile: `g++ -std=c++20 -Wall bank.cpp -o bank`.",
+    "keywords": [
+      "c++",
+      "class",
+      "oop",
+      "encapsulation",
+      "exceptions",
+      "bank account"
+    ],
+    "category": "app-request",
+    "language": "c++",
+    "aliases": [
+      "c++ class example",
+      "oop in cpp",
+      "bank account program",
+      "encapsulation c++"
+    ]
+  },
+  {
+    "question": "Make me a Stack implementation in Java",
+    "answer": "```java\nimport java.util.ArrayList;\nimport java.util.EmptyStackException;\nimport java.util.List;\n\npublic class Stack<T> {\n    private final List<T> items = new ArrayList<>();\n\n    public void push(T item) { items.add(item); }\n\n    public T pop() {\n        if (isEmpty()) throw new EmptyStackException();\n        return items.remove(items.size() - 1);\n    }\n\n    public T peek() {\n        if (isEmpty()) throw new EmptyStackException();\n        return items.get(items.size() - 1);\n    }\n\n    public boolean isEmpty() { return items.isEmpty(); }\n    public int size() { return items.size(); }\n\n    public static void main(String[] args) {\n        Stack<String> s = new Stack<>();\n        s.push(\"a\"); s.push(\"b\");\n        System.out.println(s.pop());   // b\n        System.out.println(s.peek());  // a\n    }\n}\n```\n\nIn production prefer `java.util.ArrayDeque` as a stack. The legacy `java.util.Stack` is synchronized and slower.",
+    "keywords": [
+      "java",
+      "stack",
+      "generics",
+      "data structure",
+      "arraylist",
+      "exceptions"
+    ],
+    "category": "app-request",
+    "language": "java",
+    "aliases": [
+      "java stack class",
+      "implement stack java",
+      "generic class java example"
+    ]
+  },
+  {
+    "question": "Make me a simple HTTP server in Go",
+    "answer": "```go\npackage main\n\nimport (\n\t\"encoding/json\"\n\t\"log\"\n\t\"net/http\"\n)\n\ntype Msg struct {\n\tMessage string `json:\"message\"`\n}\n\nfunc hello(w http.ResponseWriter, r *http.Request) {\n\tw.Header().Set(\"Content-Type\", \"application/json\")\n\tjson.NewEncoder(w).Encode(Msg{Message: \"Hello, \" + r.URL.Query().Get(\"name\")})\n}\n\nfunc main() {\n\tmux := http.NewServeMux()\n\tmux.HandleFunc(\"GET /hello\", hello) // method patterns need Go 1.22+\n\tlog.Println(\"Listening on :8080\")\n\tlog.Fatal(http.ListenAndServe(\":8080\", mux))\n}\n```\n\nRun: `go run main.go`, then `curl \"localhost:8080/hello?name=Sam\"`.",
+    "keywords": [
+      "go",
+      "golang",
+      "http",
+      "server",
+      "json",
+      "net/http"
+    ],
+    "category": "app-request",
+    "language": "go",
+    "aliases": [
+      "golang web server",
+      "go rest api",
+      "go hello world server",
+      "net/http example"
+    ]
+  },
+  {
+    "question": "Explain Rust ownership and borrowing",
+    "answer": "Rust manages memory without a garbage collector using three rules:\n\n1. Each value has exactly one owner.\n2. When the owner goes out of scope, the value is dropped.\n3. You can have either one mutable reference **or** any number of immutable references at a time.\n\n```rust\nfn main() {\n    let a = String::from(\"hi\");\n    let b = a;                 // ownership MOVES to b; a is no longer valid\n    // println!(\"{a}\");        // compile error\n\n    let c = b.clone();         // explicit deep copy\n    print_len(&c);             // borrow immutably\n    println!(\"{c}\");           // still usable\n\n    let mut s = String::from(\"x\");\n    append(&mut s);            // borrow mutably\n    println!(\"{s}\");\n}\n\nfn print_len(s: &String) { println!(\"{}\", s.len()); }\nfn append(s: &mut String) { s.push_str(\"yz\"); }\n```\n\nThe borrow checker enforces these rules at compile time, which prevents data races, dangling pointers, and use-after-free.",
+    "keywords": [
+      "rust",
+      "ownership",
+      "borrowing",
+      "borrow checker",
+      "memory safety",
+      "references"
+    ],
+    "category": "concept",
+    "language": "rust",
+    "aliases": [
+      "rust borrow checker",
+      "rust move semantics",
+      "why can't i use value after move",
+      "rust memory management"
+    ]
+  },
+  {
+    "question": "Make a LINQ example in C#",
+    "answer": "```csharp\nusing System;\nusing System.Linq;\n\nrecord Person(string Name, int Age, string City);\n\nclass Program {\n    static void Main() {\n        var people = new[] {\n            new Person(\"Ana\", 31, \"Cairo\"),\n            new Person(\"Omar\", 24, \"Amman\"),\n            new Person(\"Lina\", 29, \"Cairo\"),\n        };\n\n        var adults = people.Where(p => p.Age >= 25).OrderBy(p => p.Name);\n        var byCity = people.GroupBy(p => p.City)\n                           .Select(g => new { City = g.Key, Avg = g.Average(p => p.Age) });\n        var names = string.Join(\", \", people.Select(p => p.Name));\n\n        foreach (var g in byCity) Console.WriteLine($\"{g.City}: {g.Avg:F1}\");\n        Console.WriteLine(names);\n    }\n}\n```",
+    "keywords": [
+      "c#",
+      "linq",
+      "csharp",
+      "dotnet",
+      "where",
+      "groupby",
+      "records"
+    ],
+    "category": "snippet",
+    "language": "c#",
+    "aliases": [
+      "csharp linq",
+      "c# filter list",
+      "dotnet group by",
+      "query collections c#"
+    ]
+  },
+  {
+    "question": "Make a PHP login system with PDO",
+    "answer": "```php\n<?php\n// register.php\n$pdo = new PDO(\"mysql:host=localhost;dbname=app;charset=utf8mb4\", \"user\", \"pass\", [\n    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,\n]);\n\nif ($_SERVER[\"REQUEST_METHOD\"] === \"POST\") {\n    $hash = password_hash($_POST[\"password\"], PASSWORD_DEFAULT);\n    $stmt = $pdo->prepare(\"INSERT INTO users (email, password) VALUES (?, ?)\");\n    $stmt->execute([$_POST[\"email\"], $hash]);\n}\n```\n\n```php\n<?php\n// login.php\nsession_start();\n// ... same $pdo connection ...\n$stmt = $pdo->prepare(\"SELECT id, password FROM users WHERE email = ?\");\n$stmt->execute([$_POST[\"email\"]]);\n$user = $stmt->fetch(PDO::FETCH_ASSOC);\n\nif ($user && password_verify($_POST[\"password\"], $user[\"password\"])) {\n    session_regenerate_id(true);\n    $_SESSION[\"user_id\"] = $user[\"id\"];\n    header(\"Location: dashboard.php\");\n    exit;\n}\necho \"Invalid credentials\";\n```\n\nPrepared statements prevent SQL injection and `password_hash` handles salting. Add CSRF tokens and HTTPS for production.",
+    "keywords": [
+      "php",
+      "login",
+      "pdo",
+      "password_hash",
+      "sessions",
+      "sql injection",
+      "authentication"
+    ],
+    "category": "app-request",
+    "language": "php",
+    "aliases": [
+      "php authentication",
+      "php user registration",
+      "secure php login",
+      "php mysql login"
+    ]
+  },
+  {
+    "question": "Explain Swift struct vs class",
+    "answer": "```swift\nstruct Point { var x: Int; var y: Int }    // value type (copied)\nclass Counter { var n = 0 }                // reference type (shared)\n\nvar a = Point(x: 1, y: 2)\nvar b = a\nb.x = 99\nprint(a.x)          // 1 -> independent copy\n\nlet c1 = Counter()\nlet c2 = c1\nc2.n = 5\nprint(c1.n)         // 5 -> same instance\n```\n\nPrefer structs by default: they are safer and often faster. Use classes when you need inheritance, identity (`===`), deinitializers, or shared mutable state.",
+    "keywords": [
+      "swift",
+      "struct",
+      "class",
+      "value type",
+      "reference type",
+      "ios"
+    ],
+    "category": "concept",
+    "language": "swift",
+    "aliases": [
+      "swift value vs reference types",
+      "when to use struct in swift",
+      "swift class or struct"
+    ]
+  },
+  {
+    "question": "Create SQL tables for a blog and write a JOIN query",
+    "answer": "```sql\nCREATE TABLE users (\n    id SERIAL PRIMARY KEY,\n    username VARCHAR(50) UNIQUE NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\nCREATE TABLE posts (\n    id SERIAL PRIMARY KEY,\n    user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,\n    title VARCHAR(200) NOT NULL,\n    body TEXT,\n    published_at TIMESTAMP\n);\nCREATE INDEX idx_posts_user ON posts(user_id);\n\n-- Posts with author names\nSELECT p.id, p.title, u.username\nFROM posts p\nJOIN users u ON u.id = p.user_id\nWHERE p.published_at IS NOT NULL\nORDER BY p.published_at DESC\nLIMIT 10;\n\n-- Post count per user (including users with zero posts)\nSELECT u.username, COUNT(p.id) AS posts\nFROM users u\nLEFT JOIN posts p ON p.user_id = u.id\nGROUP BY u.username;\n```",
+    "keywords": [
+      "sql",
+      "postgresql",
+      "create table",
+      "join",
+      "foreign key",
+      "index",
+      "database design"
+    ],
+    "category": "database",
+    "language": "sql",
+    "aliases": [
+      "sql join example",
+      "database schema for blog",
+      "left join vs inner join",
+      "foreign key example",
+      "design tables"
+    ]
+  },
+  {
+    "question": "How do I find duplicate rows in SQL?",
+    "answer": "```sql\n-- Find duplicated emails\nSELECT email, COUNT(*) AS n\nFROM users\nGROUP BY email\nHAVING COUNT(*) > 1;\n\n-- Delete duplicates, keep the lowest id (PostgreSQL/MySQL 8+)\nDELETE FROM users\nWHERE id IN (\n    SELECT id FROM (\n        SELECT id, ROW_NUMBER() OVER (PARTITION BY email ORDER BY id) AS rn\n        FROM users\n    ) t\n    WHERE rn > 1\n);\n\n-- Prevent future duplicates\nALTER TABLE users ADD CONSTRAINT uniq_email UNIQUE (email);\n```\n\nBack up or test inside a transaction before running a `DELETE`.",
+    "keywords": [
+      "sql",
+      "duplicates",
+      "group by",
+      "having",
+      "row_number",
+      "delete",
+      "unique"
+    ],
+    "category": "database",
+    "language": "sql",
+    "aliases": [
+      "remove duplicate records sql",
+      "sql count duplicates",
+      "delete duplicate rows keep one"
+    ]
+  },
+  {
+    "question": "How do I undo the last Git commit?",
+    "answer": "```bash\ngit reset --soft HEAD~1     # undo commit, keep changes staged\ngit reset --mixed HEAD~1    # undo commit, keep changes unstaged (default)\ngit reset --hard HEAD~1     # undo commit AND discard changes (destructive)\n\ngit commit --amend          # edit the last commit message / add files\n\ngit revert HEAD             # safe for pushed commits: creates a new \"undo\" commit\n```\n\nIf you've already pushed and others may have pulled, use `git revert` rather than rewriting history. Lost something? `git reflog` shows where HEAD has been.",
+    "keywords": [
+      "git",
+      "undo",
+      "reset",
+      "revert",
+      "commit",
+      "reflog",
+      "version control"
+    ],
+    "category": "how-to",
+    "language": "bash",
+    "aliases": [
+      "git undo commit",
+      "revert last commit",
+      "git reset hard head",
+      "uncommit changes",
+      "oops i committed to wrong branch"
+    ]
+  },
+  {
+    "question": "What's a good Git branching workflow?",
+    "answer": "A simple feature-branch flow that works for most teams:\n\n```bash\ngit switch main && git pull\ngit switch -c feature/login-page      # branch per task\n# ...edit, then commit small logical pieces...\ngit add -p\ngit commit -m \"feat(auth): add login form validation\"\ngit push -u origin feature/login-page\n# open a Pull Request, get review, squash-merge\ngit switch main && git pull\ngit branch -d feature/login-page\n```\n\nTips: keep branches short-lived, rebase on `main` often (`git pull --rebase origin main`), use Conventional Commit messages, and protect `main` with required reviews and CI.",
+    "keywords": [
+      "git",
+      "branching",
+      "pull request",
+      "workflow",
+      "rebase",
+      "merge",
+      "github"
+    ],
+    "category": "workflow",
+    "language": "bash",
+    "aliases": [
+      "git flow",
+      "feature branch workflow",
+      "how to use git branches",
+      "git best practices"
+    ]
+  },
+  {
+    "question": "Write a Dockerfile for a Node.js app",
+    "answer": "```dockerfile\nFROM node:20-alpine AS deps\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci --omit=dev\n\nFROM node:20-alpine\nWORKDIR /app\nENV NODE_ENV=production\nCOPY --from=deps /app/node_modules ./node_modules\nCOPY . .\nUSER node\nEXPOSE 3000\nCMD [\"node\", \"server.js\"]\n```\n\n```\n# .dockerignore\nnode_modules\n.git\n.env\nDockerfile\n```\n\nBuild and run: `docker build -t myapp .` then `docker run -p 3000:3000 myapp`. Copying `package*.json` first lets Docker cache the dependency layer.",
+    "keywords": [
+      "docker",
+      "dockerfile",
+      "node",
+      "container",
+      "multi-stage build",
+      "devops"
+    ],
+    "category": "devops",
+    "language": "dockerfile",
+    "aliases": [
+      "dockerize node app",
+      "docker node example",
+      "containerize my express app"
+    ]
+  },
+  {
+    "question": "Write a docker-compose file for a Python app with PostgreSQL",
+    "answer": "```yaml\nservices:\n  web:\n    build: .\n    ports: [\"8000:8000\"]\n    environment:\n      DATABASE_URL: postgresql://app:secret@db:5432/appdb\n    depends_on:\n      db:\n        condition: service_healthy\n\n  db:\n    image: postgres:16\n    environment:\n      POSTGRES_USER: app\n      POSTGRES_PASSWORD: secret\n      POSTGRES_DB: appdb\n    volumes: [pgdata:/var/lib/postgresql/data]\n    healthcheck:\n      test: [\"CMD-SHELL\", \"pg_isready -U app -d appdb\"]\n      interval: 5s\n      retries: 5\n\nvolumes:\n  pgdata:\n```\n\nStart with `docker compose up --build`. Use a `.env` file or Docker secrets for real passwords.",
+    "keywords": [
+      "docker compose",
+      "postgres",
+      "python",
+      "yaml",
+      "healthcheck",
+      "volumes",
+      "devops"
+    ],
+    "category": "devops",
+    "language": "yaml",
+    "aliases": [
+      "docker compose postgres",
+      "multi container setup",
+      "compose python database"
+    ]
+  },
+  {
+    "question": "Write a GitHub Actions workflow to run tests",
+    "answer": "```yaml\n# .github/workflows/ci.yml\nname: CI\non:\n  push: { branches: [main] }\n  pull_request:\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    strategy:\n      matrix:\n        python-version: [\"3.11\", \"3.12\"]\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v5\n        with:\n          python-version: ${{ matrix.python-version }}\n          cache: pip\n      - run: pip install -r requirements.txt pytest\n      - run: pytest -v\n```\n\nSwap in `actions/setup-node` and `npm ci && npm test` for a JavaScript project.",
+    "keywords": [
+      "github actions",
+      "ci",
+      "cd",
+      "yaml",
+      "pytest",
+      "workflow",
+      "automation"
+    ],
+    "category": "devops",
+    "language": "yaml",
+    "aliases": [
+      "github ci pipeline",
+      "run tests on push",
+      "setup continuous integration",
+      "github workflow example"
+    ]
+  },
+  {
+    "question": "Write a Bash backup script",
+    "answer": "```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\nSRC=\"${1:-$HOME/projects}\"\nDEST=\"$HOME/backups\"\nSTAMP=$(date +%Y-%m-%d_%H-%M-%S)\nFILE=\"$DEST/backup_$STAMP.tar.gz\"\n\nmkdir -p \"$DEST\"\ntar -czf \"$FILE\" -C \"$(dirname \"$SRC\")\" \"$(basename \"$SRC\")\"\necho \"Backup created: $FILE ($(du -h \"$FILE\" | cut -f1))\"\n\n# keep only the 7 newest backups\nls -1t \"$DEST\"/backup_*.tar.gz | tail -n +8 | xargs -r rm --\n\n# schedule daily at 2am: crontab -e  ->  0 2 * * * /path/to/backup.sh\n```\n\n`set -euo pipefail` makes the script stop on errors, unset variables, and failed pipes.",
+    "keywords": [
+      "bash",
+      "backup",
+      "tar",
+      "cron",
+      "shell script",
+      "linux",
+      "automation"
+    ],
+    "category": "script-request",
+    "language": "bash",
+    "aliases": [
+      "linux backup script",
+      "shell script to zip folder",
+      "automate backups cron",
+      "bash tar gz"
+    ]
+  },
+  {
+    "question": "Linux commands to find large files and disk usage",
+    "answer": "```bash\ndf -h                                          # free space per filesystem\ndu -sh * | sort -rh | head -20                 # biggest items in current folder\ndu -ah /var | sort -rh | head -20              # biggest files/dirs under /var\nfind / -type f -size +500M 2>/dev/null         # files larger than 500 MB\nfind . -type f -mtime +30 -name \"*.log\"        # logs older than 30 days\nncdu /                                         # interactive browser (install ncdu)\n```",
+    "keywords": [
+      "linux",
+      "disk usage",
+      "du",
+      "df",
+      "find",
+      "sysadmin",
+      "bash"
+    ],
+    "category": "how-to",
+    "language": "bash",
+    "aliases": [
+      "find big files linux",
+      "disk full what is using space",
+      "check folder size",
+      "du sort"
+    ]
+  },
+  {
+    "question": "Explain Big O notation",
+    "answer": "Big O describes how an algorithm's time or memory grows as the input size `n` grows.\n\n| Notation | Name | Example |\n|---|---|---|\n| O(1) | constant | array index, hash lookup |\n| O(log n) | logarithmic | binary search |\n| O(n) | linear | scanning a list |\n| O(n log n) | linearithmic | merge sort, quicksort (avg) |\n| O(n²) | quadratic | nested loops, bubble sort |\n| O(2ⁿ) | exponential | naive Fibonacci, subsets |\n| O(n!) | factorial | brute-force permutations |\n\nRules: drop constants (`O(2n)` → `O(n)`), keep the dominant term (`O(n² + n)` → `O(n²)`), and loops in sequence add while nested loops multiply. Big O is about scaling, not exact speed.",
+    "keywords": [
+      "big o",
+      "complexity",
+      "algorithms",
+      "time complexity",
+      "space complexity",
+      "computer science"
+    ],
+    "category": "concept",
+    "language": "language-agnostic",
+    "aliases": [
+      "time complexity explained",
+      "what is O(n)",
+      "algorithm efficiency",
+      "big-o cheat sheet"
+    ]
+  },
+  {
+    "question": "What are the SOLID principles?",
+    "answer": "Five object-oriented design guidelines:\n\n- **S: Single Responsibility.** A class should have one reason to change.\n- **O: Open/Closed.** Open for extension, closed for modification (add behavior via new code, e.g. polymorphism).\n- **L: Liskov Substitution.** Subtypes must be usable wherever their base type is expected without breaking behavior.\n- **I: Interface Segregation.** Prefer small, focused interfaces over one giant one.\n- **D: Dependency Inversion.** Depend on abstractions, not concrete implementations (inject dependencies).\n\n```python\n# Dependency Inversion in practice\nclass Notifier:                     # abstraction\n    def send(self, msg): raise NotImplementedError\n\nclass EmailNotifier(Notifier):\n    def send(self, msg): print(\"email:\", msg)\n\nclass Order:\n    def __init__(self, notifier: Notifier):   # injected\n        self.notifier = notifier\n    def complete(self):\n        self.notifier.send(\"Order complete\")\n\nOrder(EmailNotifier()).complete()\n```",
+    "keywords": [
+      "solid",
+      "oop",
+      "design principles",
+      "clean code",
+      "architecture",
+      "dependency injection"
+    ],
+    "category": "concept",
+    "language": "language-agnostic",
+    "aliases": [
+      "solid principles explained",
+      "object oriented design rules",
+      "single responsibility principle",
+      "dependency inversion example"
+    ]
+  },
+  {
+    "question": "REST vs GraphQL: what's the difference?",
+    "answer": "**REST** exposes many resource URLs (`GET /users/1`, `GET /users/1/posts`) with fixed response shapes. It's simple, cache-friendly (HTTP caching), and widely supported, but can over-fetch or require multiple round trips.\n\n**GraphQL** exposes one endpoint where the client specifies exactly the fields it needs:\n\n```graphql\nquery {\n  user(id: 1) {\n    name\n    posts(limit: 3) { title }\n  }\n}\n```\n\n| | REST | GraphQL |\n|---|---|---|\n| Endpoints | many | one |\n| Over/under-fetching | common | avoided |\n| Caching | easy (HTTP) | harder |\n| Learning curve | low | higher |\n| Best for | simple/public APIs | complex UIs, many clients |\n\nNeither is universally better. Pick based on client needs and team experience.",
+    "keywords": [
+      "rest",
+      "graphql",
+      "api design",
+      "http",
+      "endpoints",
+      "comparison"
+    ],
+    "category": "concept",
+    "language": "language-agnostic",
+    "aliases": [
+      "graphql vs rest",
+      "should i use graphql",
+      "api architecture comparison"
+    ]
+  },
+  {
+    "question": "Explain recursion with an example",
+    "answer": "Recursion is when a function calls itself on a smaller version of the problem. Every recursive function needs a **base case** (when to stop) and a **recursive case** (progress toward it).\n\n```python\ndef factorial(n):\n    if n <= 1:                 # base case\n        return 1\n    return n * factorial(n - 1)  # recursive case\n\nfactorial(5)  # 120 = 5*4*3*2*1\n```\n\nEach call is pushed on the call stack; too deep a recursion causes a stack overflow (Python's default limit is ~1000). Convert to a loop or use memoization when depth or repeated work becomes a problem.",
+    "keywords": [
+      "recursion",
+      "base case",
+      "call stack",
+      "factorial",
+      "algorithms",
+      "python"
+    ],
+    "category": "concept",
+    "language": "python",
+    "aliases": [
+      "what is recursion",
+      "recursive function example",
+      "how does recursion work",
+      "stack overflow recursion"
+    ]
+  },
+  {
+    "question": "What is the difference between a process and a thread?",
+    "answer": "A **process** is a running program with its own isolated memory space. A **thread** is a unit of execution inside a process; threads share the process's memory.\n\n| | Process | Thread |\n|---|---|---|\n| Memory | isolated | shared |\n| Creation cost | heavy | light |\n| Communication | IPC (pipes, sockets) | shared variables (needs locks) |\n| Crash impact | contained | can take down the whole process |\n\n```python\nfrom concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor\n\n# I/O-bound work (network, disk): threads\nwith ThreadPoolExecutor(8) as ex: list(ex.map(download, urls))\n\n# CPU-bound work in Python: processes (the GIL blocks CPU parallelism in threads)\nwith ProcessPoolExecutor() as ex: list(ex.map(crunch, chunks))\n```\n\nShared mutable state between threads causes race conditions, so protect it with locks or avoid it.",
+    "keywords": [
+      "process",
+      "thread",
+      "concurrency",
+      "parallelism",
+      "gil",
+      "operating systems",
+      "multithreading"
+    ],
+    "category": "concept",
+    "language": "python",
+    "aliases": [
+      "thread vs process",
+      "multithreading vs multiprocessing",
+      "what is the GIL",
+      "concurrency explained"
+    ]
+  },
+  {
+    "question": "Why do I get \"undefined is not a function\" in JavaScript?",
+    "answer": "You're calling something that isn't a function, usually because a property is `undefined`.\n\nCommon causes:\n- Typo in a method name (`arr.lenght()`; also `length` isn't a function at all)\n- Calling a method before the object/module is loaded\n- Wrong import: `import foo from \"x\"` when it's a named export `{ foo }`\n- Losing `this` in callbacks\n- Array methods on a non-array (e.g. `document.querySelectorAll(...).map` needs `Array.from`)\n\n```javascript\nconsole.log(typeof obj.method);   // 'undefined' -> find out why\nobj.method?.();                   // optional call: safe if missing\n\n// lost `this`\nclass A { constructor(){ this.x = 1; this.go = this.go.bind(this); } go(){ return this.x; } }\n```\n\nCheck the browser console's stack trace; the line number points to the exact call.",
+    "keywords": [
+      "javascript",
+      "undefined",
+      "typeerror",
+      "debugging",
+      "this",
+      "import",
+      "error"
+    ],
+    "category": "debugging",
+    "language": "javascript",
+    "aliases": [
+      "is not a function js",
+      "cannot read properties of undefined",
+      "uncaught typeerror",
+      "js error fix"
+    ]
+  },
+  {
+    "question": "Fix CORS errors when calling my API from the browser",
+    "answer": "CORS is enforced by the **browser**: the server must say which origins may call it.\n\n```javascript\n// Express\nconst cors = require(\"cors\");\napp.use(cors({ origin: \"https://myapp.com\", credentials: true }));\n```\n\n```python\n# Flask\nfrom flask_cors import CORS\nCORS(app, origins=[\"https://myapp.com\"])\n\n# FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\napp.add_middleware(CORSMiddleware, allow_origins=[\"https://myapp.com\"],\n                   allow_methods=[\"*\"], allow_headers=[\"*\"])\n```\n\nFor development, a dev-server proxy (e.g. Vite `server.proxy`) avoids CORS entirely. Don't use `*` with credentials, and remember that preflight `OPTIONS` requests must also succeed.",
+    "keywords": [
+      "cors",
+      "http",
+      "headers",
+      "browser",
+      "api",
+      "express",
+      "flask",
+      "fastapi",
+      "debugging"
+    ],
+    "category": "debugging",
+    "language": "multi",
+    "aliases": [
+      "access-control-allow-origin",
+      "blocked by cors policy",
+      "cross origin request blocked",
+      "enable cors"
+    ]
+  },
+  {
+    "question": "Make me a simple weather app using JavaScript and an API",
+    "answer": "This uses the free Open-Meteo API (no key required).\n\n```html\n<input id=\"city\" placeholder=\"City\"><button id=\"go\">Get weather</button>\n<pre id=\"out\"></pre>\n<script>\ndocument.getElementById(\"go\").onclick = async () => {\n  const city = document.getElementById(\"city\").value;\n  const out = document.getElementById(\"out\");\n  try {\n    const geo = await (await fetch(\n      `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`)).json();\n    if (!geo.results) { out.textContent = \"City not found\"; return; }\n    const { latitude, longitude, name, country } = geo.results[0];\n    const w = await (await fetch(\n      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m`)).json();\n    out.textContent = `${name}, ${country}\\nTemp: ${w.current.temperature_2m}°C\\nWind: ${w.current.wind_speed_10m} km/h`;\n  } catch (e) { out.textContent = \"Error: \" + e.message; }\n};\n</script>\n```",
+    "keywords": [
+      "javascript",
+      "weather",
+      "api",
+      "fetch",
+      "geocoding",
+      "open-meteo",
+      "app"
+    ],
+    "category": "app-request",
+    "language": "javascript",
+    "aliases": [
+      "weather app js",
+      "build a weather website",
+      "fetch weather api example"
+    ]
+  },
+  {
+    "question": "Make me a Python script that sends an email",
+    "answer": "```python\nimport os\nimport smtplib\nfrom email.message import EmailMessage\n\nmsg = EmailMessage()\nmsg[\"From\"] = \"me@gmail.com\"\nmsg[\"To\"] = \"friend@example.com\"\nmsg[\"Subject\"] = \"Hello from Python\"\nmsg.set_content(\"This email was sent with smtplib.\")\n\nwith smtplib.SMTP_SSL(\"smtp.gmail.com\", 465) as smtp:\n    smtp.login(\"me@gmail.com\", os.environ[\"EMAIL_APP_PASSWORD\"])\n    smtp.send_message(msg)\nprint(\"Sent!\")\n```\n\nGmail requires an **App Password** (with 2FA enabled), not your normal password. Never commit credentials to Git.",
+    "keywords": [
+      "python",
+      "email",
+      "smtp",
+      "smtplib",
+      "automation",
+      "gmail"
+    ],
+    "category": "script-request",
+    "language": "python",
+    "aliases": [
+      "send email python",
+      "python smtp example",
+      "automate emails",
+      "gmail python script"
+    ]
+  },
+  {
+    "question": "Create a Python script that converts text to speech and back",
+    "answer": "```python\n# pip install pyttsx3 SpeechRecognition pyaudio\nimport pyttsx3\nimport speech_recognition as sr\n\ndef speak(text):\n    engine = pyttsx3.init()\n    engine.setProperty(\"rate\", 165)\n    engine.say(text)\n    engine.runAndWait()\n\ndef listen():\n    r = sr.Recognizer()\n    with sr.Microphone() as mic:\n        r.adjust_for_ambient_noise(mic)\n        print(\"Listening…\")\n        audio = r.listen(mic)\n    try:\n        return r.recognize_google(audio)\n    except sr.UnknownValueError:\n        return \"\"\n\nspeak(\"Say something\")\nheard = listen()\nspeak(f\"You said {heard}\")\n```",
+    "keywords": [
+      "python",
+      "text to speech",
+      "speech recognition",
+      "pyttsx3",
+      "audio",
+      "voice"
+    ],
+    "category": "script-request",
+    "language": "python",
+    "aliases": [
+      "python voice assistant basics",
+      "tts python",
+      "speech to text python"
+    ]
+  },
+  {
+    "question": "Make me a simple chat server with Python sockets",
+    "answer": "```python\n# server.py\nimport socket\nimport threading\n\nclients = []\n\ndef broadcast(msg, sender):\n    for c in clients:\n        if c is not sender:\n            try: c.sendall(msg)\n            except OSError: pass\n\ndef handle(conn, addr):\n    clients.append(conn)\n    try:\n        while data := conn.recv(1024):\n            broadcast(f\"{addr[1]}: \".encode() + data, conn)\n    finally:\n        clients.remove(conn)\n        conn.close()\n\nsrv = socket.socket()\nsrv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)\nsrv.bind((\"0.0.0.0\", 5000))\nsrv.listen()\nprint(\"Chat server on :5000\")\nwhile True:\n    conn, addr = srv.accept()\n    threading.Thread(target=handle, args=(conn, addr), daemon=True).start()\n```\n\nTest with several terminals: `nc localhost 5000`.",
+    "keywords": [
+      "python",
+      "sockets",
+      "networking",
+      "threading",
+      "chat",
+      "tcp",
+      "server"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "python chat app",
+      "tcp server python",
+      "socket programming example",
+      "multi client server"
+    ]
+  },
+  {
+    "question": "Show me how to use async/await in Python with asyncio",
+    "answer": "```python\nimport asyncio\nimport time\n\nasync def fetch(name, delay):\n    await asyncio.sleep(delay)          # stand-in for network I/O\n    return f\"{name} done\"\n\nasync def main():\n    start = time.perf_counter()\n    results = await asyncio.gather(\n        fetch(\"A\", 1), fetch(\"B\", 2), fetch(\"C\", 1.5)\n    )\n    print(results, f\"{time.perf_counter() - start:.1f}s\")   # ~2s, not 4.5s\n\nasyncio.run(main())\n```\n\nUse `aiohttp`/`httpx.AsyncClient` for real HTTP calls. `asyncio` helps with I/O-bound concurrency, not CPU-bound work. Never call blocking functions like `time.sleep` inside a coroutine.",
+    "keywords": [
+      "python",
+      "asyncio",
+      "async",
+      "await",
+      "gather",
+      "concurrency",
+      "coroutines"
+    ],
+    "category": "concept",
+    "language": "python",
+    "aliases": [
+      "python asyncio example",
+      "run tasks concurrently python",
+      "asyncio gather",
+      "async python tutorial"
+    ]
+  },
+  {
+    "question": "Create a simple machine learning model with scikit-learn",
+    "answer": "```python\n# pip install scikit-learn\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score, classification_report\n\nX, y = load_iris(return_X_y=True)\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42, stratify=y)\n\nmodel = RandomForestClassifier(n_estimators=200, random_state=42)\nmodel.fit(X_train, y_train)\n\npred = model.predict(X_test)\nprint(\"Accuracy:\", accuracy_score(y_test, pred))\nprint(classification_report(y_test, pred))\n```\n\nWorkflow: split data → fit on train → evaluate on test. Use cross-validation (`cross_val_score`) for more reliable estimates, and never fit preprocessing on the test set.",
+    "keywords": [
+      "python",
+      "machine learning",
+      "scikit-learn",
+      "random forest",
+      "classification",
+      "train test split",
+      "ai"
+    ],
+    "category": "app-request",
+    "language": "python",
+    "aliases": [
+      "sklearn example",
+      "train a model in python",
+      "iris classifier",
+      "beginner ml project"
+    ]
+  },
+  {
+    "question": "Make a simple todo REST API in Go with in-memory storage",
+    "answer": "```go\npackage main\n\nimport (\n\t\"encoding/json\"\n\t\"net/http\"\n\t\"strconv\"\n\t\"sync\"\n)\n\ntype Todo struct {\n\tID    int    `json:\"id\"`\n\tTitle string `json:\"title\"`\n\tDone  bool   `json:\"done\"`\n}\n\nvar (\n\tmu    sync.Mutex\n\ttodos = map[int]Todo{}\n\tnext  = 1\n)\n\nfunc main() {\n\thttp.HandleFunc(\"GET /todos\", func(w http.ResponseWriter, r *http.Request) {\n\t\tmu.Lock(); defer mu.Unlock()\n\t\tlist := make([]Todo, 0, len(todos))\n\t\tfor _, t := range todos { list = append(list, t) }\n\t\tjson.NewEncoder(w).Encode(list)\n\t})\n\thttp.HandleFunc(\"POST /todos\", func(w http.ResponseWriter, r *http.Request) {\n\t\tvar t Todo\n\t\tif err := json.NewDecoder(r.Body).Decode(&t); err != nil || t.Title == \"\" {\n\t\t\thttp.Error(w, \"bad request\", 400); return\n\t\t}\n\t\tmu.Lock(); t.ID = next; next++; todos[t.ID] = t; mu.Unlock()\n\t\tw.WriteHeader(201)\n\t\tjson.NewEncoder(w).Encode(t)\n\t})\n\thttp.HandleFunc(\"DELETE /todos/{id}\", func(w http.ResponseWriter, r *http.Request) {\n\t\tid, _ := strconv.Atoi(r.PathValue(\"id\"))\n\t\tmu.Lock(); delete(todos, id); mu.Unlock()\n\t\tw.WriteHeader(204)\n\t})\n\thttp.ListenAndServe(\":8080\", nil)\n}\n```\n\nThe mutex protects the map from concurrent requests. This needs Go 1.22+ for method and path patterns.",
+    "keywords": [
+      "go",
+      "golang",
+      "rest api",
+      "crud",
+      "mutex",
+      "json",
+      "todo"
+    ],
+    "category": "app-request",
+    "language": "go",
+    "aliases": [
+      "go crud api",
+      "golang todo app",
+      "build rest api go",
+      "go net/http crud"
+    ]
+  },
+  {
+    "question": "Implement a simple LRU cache",
+    "answer": "```python\nfrom collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity: int):\n        self.cap = capacity\n        self.data = OrderedDict()\n\n    def get(self, key):\n        if key not in self.data:\n            return -1\n        self.data.move_to_end(key)           # mark as recently used\n        return self.data[key]\n\n    def put(self, key, value):\n        self.data[key] = value\n        self.data.move_to_end(key)\n        if len(self.data) > self.cap:\n            self.data.popitem(last=False)    # evict least recently used\n\nc = LRUCache(2)\nc.put(\"a\", 1); c.put(\"b\", 2); c.get(\"a\"); c.put(\"c\", 3)\nprint(list(c.data))   # ['a', 'c'] -> 'b' was evicted\n```\n\nBoth operations are O(1). For caching function results, just use `@functools.lru_cache`.",
+    "keywords": [
+      "python",
+      "lru cache",
+      "ordereddict",
+      "data structure",
+      "caching",
+      "interview",
+      "algorithm"
+    ],
+    "category": "algorithm",
+    "language": "python",
+    "aliases": [
+      "least recently used cache",
+      "lru cache leetcode",
+      "implement cache eviction"
+    ]
+  }
+]

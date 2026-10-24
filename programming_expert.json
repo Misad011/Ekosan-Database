@@ -1,0 +1,766 @@
+[
+  {
+    "question": "Write a thread pool in modern C++",
+    "answer": "A fixed-size thread pool with a task queue, futures for results, and clean shutdown (C++17/20).\n\n```cpp\n#include <condition_variable>\n#include <functional>\n#include <future>\n#include <mutex>\n#include <queue>\n#include <stdexcept>\n#include <thread>\n#include <vector>\n\nclass ThreadPool {\npublic:\n    explicit ThreadPool(size_t n = std::thread::hardware_concurrency()) {\n        for (size_t i = 0; i < n; ++i) {\n            workers_.emplace_back([this] {\n                for (;;) {\n                    std::function<void()> task;\n                    {\n                        std::unique_lock lock(mu_);\n                        cv_.wait(lock, [this] { return stop_ || !tasks_.empty(); });\n                        if (stop_ && tasks_.empty()) return;\n                        task = std::move(tasks_.front());\n                        tasks_.pop();\n                    }\n                    task();\n                }\n            });\n        }\n    }\n\n    template <class F, class... Args>\n    auto submit(F&& f, Args&&... args) -> std::future<std::invoke_result_t<F, Args...>> {\n        using R = std::invoke_result_t<F, Args...>;\n        auto task = std::make_shared<std::packaged_task<R()>>(\n            std::bind(std::forward<F>(f), std::forward<Args>(args)...));\n        std::future<R> fut = task->get_future();\n        {\n            std::lock_guard lock(mu_);\n            if (stop_) throw std::runtime_error(\"submit on stopped pool\");\n            tasks_.emplace([task] { (*task)(); });\n        }\n        cv_.notify_one();\n        return fut;\n    }\n\n    ~ThreadPool() {\n        {\n            std::lock_guard lock(mu_);\n            stop_ = true;\n        }\n        cv_.notify_all();\n        for (auto& t : workers_) t.join();\n    }\n\nprivate:\n    std::vector<std::thread> workers_;\n    std::queue<std::function<void()>> tasks_;\n    std::mutex mu_;\n    std::condition_variable cv_;\n    bool stop_ = false;\n};\n\n// usage\nint main() {\n    ThreadPool pool(4);\n    auto f = pool.submit([](int a, int b) { return a * b; }, 6, 7);\n    return f.get() == 42 ? 0 : 1;\n}\n```\n\nKey points: `packaged_task` transports both the return value and any exception to the caller. The destructor drains the queue before joining, so no submitted work is lost. Compile with `g++ -std=c++20 -O2 -pthread`.",
+    "keywords": [
+      "c++",
+      "thread pool",
+      "concurrency",
+      "std::future",
+      "packaged_task",
+      "condition_variable",
+      "multithreading"
+    ],
+    "category": "app-request",
+    "language": "c++",
+    "aliases": [
+      "c++ thread pool",
+      "thread pool implementation cpp",
+      "concurrent task queue c++",
+      "async tasks in c++ with futures"
+    ]
+  },
+  {
+    "question": "Show a C++ RAII wrapper and smart pointer ownership model",
+    "answer": "RAII ties resource lifetime to object lifetime. Smart pointers apply it to heap memory.\n\n```cpp\n#include <cstdio>\n#include <memory>\n#include <stdexcept>\n#include <string>\n\n// Custom RAII wrapper for a C FILE*\nclass File {\npublic:\n    File(const char* path, const char* mode) : f_(std::fopen(path, mode)) {\n        if (!f_) throw std::runtime_error(std::string(\"cannot open \") + path);\n    }\n    ~File() { if (f_) std::fclose(f_); }\n    File(const File&) = delete;             // exactly one owner\n    File& operator=(const File&) = delete;\n    File(File&& o) noexcept : f_(std::exchange(o.f_, nullptr)) {}\n    File& operator=(File&& o) noexcept {\n        if (this != &o) { if (f_) std::fclose(f_); f_ = std::exchange(o.f_, nullptr); }\n        return *this;\n    }\n    std::FILE* get() const { return f_; }\nprivate:\n    std::FILE* f_;\n};\n\nstruct Node {\n    std::string name;\n    std::shared_ptr<Node> next;     // shared ownership\n    std::weak_ptr<Node> prev;       // breaks reference cycles\n};\n\nint main() {\n    auto unique = std::make_unique<int>(42);            // single owner\n    auto shared = std::make_shared<std::string>(\"hi\");  // shared count, one allocation\n    std::weak_ptr<std::string> observer = shared;       // non-owning\n\n    if (auto locked = observer.lock())                  // safe access\n        std::printf(\"%s\\n\", locked->c_str());\n\n    File f(\"data.txt\", \"w\");                            // closed automatically\n    std::fputs(\"ok\\n\", f.get());\n}                                                       // all resources freed here\n```\n\nRules of thumb: prefer `unique_ptr`, use `make_unique`/`make_shared`, and use `weak_ptr` for back-references. Never call `delete` manually.",
+    "keywords": [
+      "c++",
+      "raii",
+      "unique_ptr",
+      "shared_ptr",
+      "weak_ptr",
+      "smart pointers",
+      "memory management"
+    ],
+    "category": "concept",
+    "language": "c++",
+    "aliases": [
+      "c++ smart pointers",
+      "raii explained",
+      "unique_ptr vs shared_ptr",
+      "how to avoid memory leaks in c++"
+    ]
+  },
+  {
+    "question": "Use std::variant and std::visit in C++17",
+    "answer": "A type-safe tagged union, replacing error-prone C unions with an enum tag.\n\n```cpp\n#include <iostream>\n#include <string>\n#include <variant>\n#include <vector>\n\nstruct Circle { double r; };\nstruct Rect   { double w, h; };\nusing Shape = std::variant<Circle, Rect>;\n\n// Overload set helper (C++17 idiom)\ntemplate <class... Ts> struct overloaded : Ts... { using Ts::operator()...; };\ntemplate <class... Ts> overloaded(Ts...) -> overloaded<Ts...>;\n\ndouble area(const Shape& s) {\n    return std::visit(overloaded{\n        [](const Circle& c) { return 3.14159265 * c.r * c.r; },\n        [](const Rect& r)   { return r.w * r.h; },\n    }, s);\n}\n\nint main() {\n    std::vector<Shape> shapes{Circle{1.0}, Rect{2, 3}};\n    for (const auto& s : shapes)\n        std::cout << area(s) << '\\n';\n\n    std::variant<int, std::string> v = \"hello\";\n    if (auto* str = std::get_if<std::string>(&v))   // non-throwing access\n        std::cout << str->size() << '\\n';\n}\n```\n\nThe compiler forces you to handle every alternative, so adding a new shape causes a compile error wherever a case is missing.",
+    "keywords": [
+      "c++",
+      "std::variant",
+      "std::visit",
+      "overloaded",
+      "type safety",
+      "c++17",
+      "sum types"
+    ],
+    "category": "concept",
+    "language": "c++",
+    "aliases": [
+      "variant visit example",
+      "tagged union c++",
+      "replace enum with variant cpp",
+      "pattern matching in c++"
+    ]
+  },
+  {
+    "question": "Implement a variadic template sum with fold expressions in C++",
+    "answer": "C++17 fold expressions expand a parameter pack with an operator, avoiding recursion.\n\n```cpp\n#include <iostream>\n#include <type_traits>\n\ntemplate <typename... Args>\nconstexpr auto sum(Args... args) {\n    return (args + ... + 0);         // binary left fold with initial value 0\n}\n\ntemplate <typename... Args>\nvoid print_all(const Args&... args) {\n    ((std::cout << args << ' '), ...);   // comma fold\n    std::cout << '\\n';\n}\n\n// Compile-time check that every argument is arithmetic\ntemplate <typename... Args>\nconstexpr bool all_arithmetic = (std::is_arithmetic_v<Args> && ...);\n\nstatic_assert(all_arithmetic<int, double, float>);\nstatic_assert(sum(1, 2, 3) == 6);\n\nint main() {\n    print_all(\"a\", 1, 2.5);\n    std::cout << sum(1.5, 2.5, 3) << '\\n';   // 7\n}\n```\n\n`(args + ... + 0)` is a unary-binary fold. It expands to `((a1 + a2) + a3) + 0`.",
+    "keywords": [
+      "c++",
+      "variadic templates",
+      "fold expressions",
+      "parameter pack",
+      "templates",
+      "c++17",
+      "metaprogramming"
+    ],
+    "category": "snippet",
+    "language": "c++",
+    "aliases": [
+      "variadic template c++",
+      "c++ parameter pack sum",
+      "fold expression example",
+      "template metaprogramming cpp"
+    ]
+  },
+  {
+    "question": "Write a segment tree in C++ for range sum queries",
+    "answer": "An iterative segment tree gives O(log n) range queries and point updates.\n\n```cpp\n#include <iostream>\n#include <vector>\n\nclass SegmentTree {\npublic:\n    explicit SegmentTree(const std::vector<long long>& a)\n        : n_(a.size()), t_(2 * n_) {\n        for (size_t i = 0; i < n_; ++i) t_[n_ + i] = a[i];\n        for (size_t i = n_ - 1; i > 0; --i) t_[i] = t_[2 * i] + t_[2 * i + 1];\n    }\n\n    void update(size_t pos, long long value) {\n        for (t_[pos += n_] = value; pos > 1; pos >>= 1)\n            t_[pos >> 1] = t_[pos] + t_[pos ^ 1];\n    }\n\n    // sum over [l, r)\n    long long query(size_t l, size_t r) const {\n        long long res = 0;\n        for (l += n_, r += n_; l < r; l >>= 1, r >>= 1) {\n            if (l & 1) res += t_[l++];\n            if (r & 1) res += t_[--r];\n        }\n        return res;\n    }\n\nprivate:\n    size_t n_;\n    std::vector<long long> t_;\n};\n\nint main() {\n    SegmentTree st({1, 3, 5, 7, 9, 11});\n    std::cout << st.query(1, 4) << '\\n';   // 3+5+7 = 15\n    st.update(2, 10);\n    std::cout << st.query(1, 4) << '\\n';   // 3+10+7 = 20\n}\n```\n\nThe bottom-up layout uses `2n` memory and works for any `n`. Swap `+` for `min`/`max`/`gcd` to answer other associative range queries.",
+    "keywords": [
+      "c++",
+      "segment tree",
+      "range query",
+      "data structure",
+      "algorithm",
+      "competitive programming",
+      "log n"
+    ],
+    "category": "algorithm",
+    "language": "c++",
+    "aliases": [
+      "segment tree cpp",
+      "range sum query fast",
+      "competitive programming data structure",
+      "range minimum query implementation"
+    ]
+  },
+  {
+    "question": "Implement union-find (disjoint set) with path compression in C++",
+    "answer": "```cpp\n#include <numeric>\n#include <vector>\n\nclass DSU {\npublic:\n    explicit DSU(int n) : parent_(n), rank_(n, 0), components_(n) {\n        std::iota(parent_.begin(), parent_.end(), 0);\n    }\n\n    int find(int x) {\n        if (parent_[x] != x) parent_[x] = find(parent_[x]);   // path compression\n        return parent_[x];\n    }\n\n    bool unite(int a, int b) {\n        a = find(a); b = find(b);\n        if (a == b) return false;\n        if (rank_[a] < rank_[b]) std::swap(a, b);             // union by rank\n        parent_[b] = a;\n        if (rank_[a] == rank_[b]) ++rank_[a];\n        --components_;\n        return true;\n    }\n\n    int components() const { return components_; }\n\nprivate:\n    std::vector<int> parent_, rank_;\n    int components_;\n};\n\n// Kruskal-style cycle detection example\nbool has_cycle(int n, const std::vector<std::pair<int,int>>& edges) {\n    DSU dsu(n);\n    for (auto [u, v] : edges)\n        if (!dsu.unite(u, v)) return true;\n    return false;\n}\n```\n\nWith both optimizations, operations run in nearly O(1) amortized time (inverse Ackermann).",
+    "keywords": [
+      "c++",
+      "union find",
+      "disjoint set",
+      "dsu",
+      "path compression",
+      "union by rank",
+      "graph",
+      "algorithm"
+    ],
+    "category": "algorithm",
+    "language": "c++",
+    "aliases": [
+      "disjoint set union cpp",
+      "union find implementation",
+      "detect cycle in graph c++",
+      "dsu with path compression"
+    ]
+  },
+  {
+    "question": "Write a C# async stream with IAsyncEnumerable",
+    "answer": "`IAsyncEnumerable<T>` lets you stream results as they arrive instead of buffering everything.\n\n```csharp\nusing System;\nusing System.Collections.Generic;\nusing System.Runtime.CompilerServices;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic static class Feed\n{\n    public static async IAsyncEnumerable<int> Ticks(\n        int count,\n        [EnumeratorCancellation] CancellationToken ct = default)\n    {\n        for (int i = 1; i <= count; i++)\n        {\n            ct.ThrowIfCancellationRequested();\n            await Task.Delay(200, ct);     // simulated I/O\n            yield return i;\n        }\n    }\n}\n\npublic static class Program\n{\n    public static async Task Main()\n    {\n        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));\n        try\n        {\n            await foreach (var tick in Feed.Ticks(10).WithCancellation(cts.Token))\n                Console.WriteLine($\"Got {tick}\");\n        }\n        catch (OperationCanceledException)\n        {\n            Console.WriteLine(\"Cancelled.\");\n        }\n    }\n}\n```\n\n`[EnumeratorCancellation]` ensures the token passed to `WithCancellation` flows into the iterator. Without it the cancellation token is silently ignored.",
+    "keywords": [
+      "c#",
+      "async",
+      "iasyncenumerable",
+      "yield return",
+      "cancellation",
+      "streams",
+      "await foreach"
+    ],
+    "category": "app-request",
+    "language": "c#",
+    "aliases": [
+      "c# async streaming",
+      "await foreach example",
+      "iasyncenumerable csharp",
+      "stream data asynchronously c#"
+    ]
+  },
+  {
+    "question": "Use C# records and switch expressions for pattern matching",
+    "answer": "Modern C# lets you model data immutably and dispatch on its shape concisely.\n\n```csharp\nusing System;\n\npublic abstract record Expr;\npublic sealed record Num(double Value) : Expr;\npublic sealed record Add(Expr Left, Expr Right) : Expr;\npublic sealed record Mul(Expr Left, Expr Right) : Expr;\npublic sealed record Neg(Expr Operand) : Expr;\n\npublic static class Evaluator\n{\n    public static double Eval(Expr e) => e switch\n    {\n        Num n                  => n.Value,\n        Add(var l, var r)      => Eval(l) + Eval(r),\n        Mul(Num { Value: 0 }, _) => 0,              // constant pattern on nested record\n        Mul(var l, var r)      => Eval(l) * Eval(r),\n        Neg(var x)             => -Eval(x),\n        _ => throw new ArgumentException(\"Unknown expression\")\n    };\n}\n\npublic static class Demo\n{\n    public static void Main()\n    {\n        var e = new Add(new Num(2), new Mul(new Num(3), new Neg(new Num(4))));\n        Console.WriteLine(Evaluator.Eval(e));   // 2 + 3 * -4 = -10\n\n        var copy = e with { Left = new Num(5) }; // non-destructive update\n        Console.WriteLine(copy);\n    }\n}\n```\n\nRecords give value equality and `with` expressions for immutable updates. Property patterns like `Num { Value: 0 }` match nested structure directly.",
+    "keywords": [
+      "c#",
+      "records",
+      "switch expression",
+      "pattern matching",
+      "immutable",
+      "expression tree",
+      "csharp 9"
+    ],
+    "category": "concept",
+    "language": "c#",
+    "aliases": [
+      "c# pattern matching example",
+      "csharp switch expression",
+      "c# records explained",
+      "immutable data c#"
+    ]
+  },
+  {
+    "question": "Build a minimal ASP.NET Core API with dependency injection",
+    "answer": "Minimal APIs in .NET 8+, with a service registered in DI, validation, and typed results.\n\n```csharp\n// Program.cs\nusing Microsoft.AspNetCore.Http.HttpResults;\n\nvar builder = WebApplication.CreateBuilder(args);\nbuilder.Services.AddSingleton<ITodoStore, InMemoryTodoStore>();\nvar app = builder.Build();\n\napp.MapGet(\"/todos\", (ITodoStore store) => TypedResults.Ok(store.All()));\n\napp.MapPost(\"/todos\", (CreateTodo dto, ITodoStore store) =>\n{\n    if (string.IsNullOrWhiteSpace(dto.Title))\n        return Results.ValidationProblem(new Dictionary<string, string[]>\n        {\n            [\"Title\"] = [\"Title is required.\"]\n        });\n\n    var todo = store.Add(dto.Title);\n    return TypedResults.Created($\"/todos/{todo.Id}\", todo);\n});\n\napp.MapDelete(\"/todos/{id:int}\", (int id, ITodoStore store) =>\n    store.Remove(id) ? TypedResults.NoContent() : TypedResults.NotFound());\n\napp.Run();\n\n// Types\npublic record CreateTodo(string Title);\npublic record Todo(int Id, string Title);\n\npublic interface ITodoStore\n{\n    IEnumerable<Todo> All();\n    Todo Add(string title);\n    bool Remove(int id);\n}\n\npublic class InMemoryTodoStore : ITodoStore\n{\n    private readonly List<Todo> _items = [];\n    private int _next = 1;\n    public IEnumerable<Todo> All() => _items;\n    public Todo Add(string title) { var t = new Todo(_next++, title); _items.Add(t); return t; }\n    public bool Remove(int id) => _items.RemoveAll(t => t.Id == id) > 0;\n}\n```\n\nDepending on the interface (`ITodoStore`) lets you swap in EF Core or a test double without changing endpoints. Singletons with mutable state need thread safety in real use.",
+    "keywords": [
+      "c#",
+      "asp.net core",
+      "minimal api",
+      "dependency injection",
+      "rest",
+      "typed results",
+      "dotnet 8"
+    ],
+    "category": "app-request",
+    "language": "c#",
+    "aliases": [
+      "asp.net minimal api example",
+      "dotnet web api di",
+      "csharp rest api",
+      "aspnet core todo api"
+    ]
+  },
+  {
+    "question": "Use Java 21 records and sealed interfaces with pattern matching",
+    "answer": "Sealed types restrict subclasses, so the compiler can check that a `switch` is exhaustive.\n\n```java\npublic class Shapes {\n    sealed interface Shape permits Circle, Square, Triangle {}\n    record Circle(double radius) implements Shape {}\n    record Square(double side) implements Shape {}\n    record Triangle(double base, double height) implements Shape {}\n\n    static double area(Shape s) {\n        return switch (s) {\n            case Circle c when c.radius() < 0 -> throw new IllegalArgumentException(\"negative radius\");\n            case Circle c   -> Math.PI * c.radius() * c.radius();\n            case Square sq  -> sq.side() * sq.side();\n            case Triangle t -> 0.5 * t.base() * t.height();\n            // no default needed: the sealed hierarchy is exhaustive\n        };\n    }\n\n    public static void main(String[] args) {\n        System.out.println(area(new Circle(1)));\n        System.out.println(area(new Triangle(4, 3)));   // 6.0\n    }\n}\n```\n\nAdding a new permitted subtype breaks compilation of every exhaustive `switch`, which is exactly what you want when evolving a domain model.",
+    "keywords": [
+      "java",
+      "java 21",
+      "records",
+      "sealed interface",
+      "pattern matching",
+      "switch expression",
+      "exhaustive"
+    ],
+    "category": "concept",
+    "language": "java",
+    "aliases": [
+      "java sealed classes example",
+      "java record pattern matching",
+      "java 21 features",
+      "exhaustive switch java"
+    ]
+  },
+  {
+    "question": "Run tasks on virtual threads in Java 21",
+    "answer": "Virtual threads are lightweight and cheap, so you can create one per blocking task.\n\n```java\nimport java.net.URI;\nimport java.net.http.HttpClient;\nimport java.net.http.HttpRequest;\nimport java.net.http.HttpResponse;\nimport java.util.List;\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\nimport java.util.concurrent.Future;\n\npublic class Fetcher {\n    private static final HttpClient CLIENT = HttpClient.newHttpClient();\n\n    static String fetch(String url) throws Exception {\n        var req = HttpRequest.newBuilder(URI.create(url)).build();\n        return CLIENT.send(req, HttpResponse.BodyHandlers.ofString()).body();\n    }\n\n    public static void main(String[] args) throws Exception {\n        List<String> urls = List.of(\n            \"https://example.com\", \"https://example.org\", \"https://example.net\");\n\n        try (ExecutorService exec = Executors.newVirtualThreadPerTaskExecutor()) {\n            List<Future<String>> futures = urls.stream()\n                .map(u -> exec.submit(() -> fetch(u)))\n                .toList();\n            for (var f : futures)\n                System.out.println(f.get().length() + \" chars\");\n        }   // try-with-resources waits for all tasks\n    }\n}\n```\n\nDon't pool virtual threads, and avoid `synchronized` blocks around long I/O because they can pin the carrier thread. Prefer `ReentrantLock` in that case.",
+    "keywords": [
+      "java",
+      "virtual threads",
+      "project loom",
+      "concurrency",
+      "executor",
+      "httpclient",
+      "java 21"
+    ],
+    "category": "app-request",
+    "language": "java",
+    "aliases": [
+      "java virtual threads example",
+      "java concurrent http requests",
+      "project loom java",
+      "executors newvirtualthreadpertaskexecutor"
+    ]
+  },
+  {
+    "question": "Use Java streams with Collectors.groupingBy and custom reducers",
+    "answer": "```java\nimport java.util.*;\nimport java.util.stream.*;\n\npublic class Sales {\n    record Sale(String region, String product, int units, double price) {\n        double revenue() { return units * price; }\n    }\n\n    public static void main(String[] args) {\n        List<Sale> sales = List.of(\n            new Sale(\"EU\", \"Laptop\", 3, 1200),\n            new Sale(\"EU\", \"Mouse\", 10, 25),\n            new Sale(\"US\", \"Laptop\", 5, 1100),\n            new Sale(\"US\", \"Mouse\", 2, 30));\n\n        // Total revenue per region, sorted\n        Map<String, Double> byRegion = sales.stream()\n            .collect(Collectors.groupingBy(Sale::region,\n                     TreeMap::new,\n                     Collectors.summingDouble(Sale::revenue)));\n        System.out.println(byRegion);\n\n        // Best-selling product per region (by units)\n        Map<String, Optional<Sale>> best = sales.stream()\n            .collect(Collectors.groupingBy(Sale::region,\n                     Collectors.maxBy(Comparator.comparingInt(Sale::units))));\n\n        // Partition into big and small orders\n        Map<Boolean, List<String>> big = sales.stream()\n            .collect(Collectors.partitioningBy(s -> s.units() >= 5,\n                     Collectors.mapping(Sale::product, Collectors.toList())));\n        System.out.println(big);\n    }\n}\n```\n\n`groupingBy` accepts a map factory and a downstream collector, which lets you compose aggregations in a single pass.",
+    "keywords": [
+      "java",
+      "streams",
+      "collectors",
+      "groupingby",
+      "partitioningby",
+      "aggregation",
+      "functional"
+    ],
+    "category": "snippet",
+    "language": "java",
+    "aliases": [
+      "java groupingby example",
+      "java stream aggregate",
+      "java collectors summing",
+      "group list by field java"
+    ]
+  },
+  {
+    "question": "Write a thread-safe LRU cache in Java using LinkedHashMap",
+    "answer": "```java\nimport java.util.LinkedHashMap;\nimport java.util.Map;\n\npublic class LruCache<K, V> {\n    private final int capacity;\n    private final Map<K, V> map;\n\n    public LruCache(int capacity) {\n        this.capacity = capacity;\n        // accessOrder = true makes iteration order least-recently-used first\n        this.map = new LinkedHashMap<>(capacity, 0.75f, true) {\n            @Override\n            protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {\n                return size() > LruCache.this.capacity;\n            }\n        };\n    }\n\n    public synchronized V get(K key) { return map.get(key); }\n    public synchronized void put(K key, V value) { map.put(key, value); }\n    public synchronized int size() { return map.size(); }\n\n    public static void main(String[] args) {\n        LruCache<String, Integer> c = new LruCache<>(2);\n        c.put(\"a\", 1); c.put(\"b\", 2);\n        c.get(\"a\");          // a is now most recent\n        c.put(\"c\", 3);       // evicts b\n        System.out.println(c.get(\"b\"));   // null\n    }\n}\n```\n\nThe `synchronized` methods make it safe for concurrent use. For high contention, consider Caffeine, which is what most Java services use in practice.",
+    "keywords": [
+      "java",
+      "lru cache",
+      "linkedhashmap",
+      "thread safe",
+      "synchronized",
+      "caching",
+      "data structure"
+    ],
+    "category": "app-request",
+    "language": "java",
+    "aliases": [
+      "java lru cache",
+      "linkedhashmap eviction java",
+      "java cache implementation",
+      "thread safe cache java"
+    ]
+  },
+  {
+    "question": "Implement KMP string search in Java",
+    "answer": "Knuth-Morris-Pratt finds a pattern in O(n + m) by never re-scanning text characters.\n\n```java\npublic class KMP {\n    static int[] buildLps(String p) {\n        int[] lps = new int[p.length()];\n        for (int i = 1, len = 0; i < p.length(); ) {\n            if (p.charAt(i) == p.charAt(len)) {\n                lps[i++] = ++len;\n            } else if (len > 0) {\n                len = lps[len - 1];           // fall back, don't advance i\n            } else {\n                lps[i++] = 0;\n            }\n        }\n        return lps;\n    }\n\n    static java.util.List<Integer> search(String text, String pat) {\n        var result = new java.util.ArrayList<Integer>();\n        if (pat.isEmpty()) return result;\n        int[] lps = buildLps(pat);\n        for (int i = 0, j = 0; i < text.length(); ) {\n            if (text.charAt(i) == pat.charAt(j)) {\n                i++; j++;\n                if (j == pat.length()) {\n                    result.add(i - j);\n                    j = lps[j - 1];\n                }\n            } else if (j > 0) {\n                j = lps[j - 1];\n            } else {\n                i++;\n            }\n        }\n        return result;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(search(\"abababcabab\", \"abab\"));   // [0, 2, 7]\n    }\n}\n```\n\n`lps[i]` stores the length of the longest proper prefix of the pattern that is also a suffix of `pat[0..i]`.",
+    "keywords": [
+      "java",
+      "kmp",
+      "string search",
+      "pattern matching",
+      "prefix function",
+      "algorithm",
+      "lps"
+    ],
+    "category": "algorithm",
+    "language": "java",
+    "aliases": [
+      "kmp algorithm java",
+      "substring search efficient",
+      "knuth morris pratt code",
+      "find all occurrences of pattern"
+    ]
+  },
+  {
+    "question": "Build a reactive object with JavaScript Proxy",
+    "answer": "A Proxy intercepts property reads and writes, letting you build simple reactivity (the idea behind Vue 3).\n\n```javascript\nfunction reactive(target, onChange) {\n  return new Proxy(target, {\n    get(obj, key, receiver) {\n      const value = Reflect.get(obj, key, receiver);\n      return typeof value === \"object\" && value !== null\n        ? reactive(value, onChange)          // deep reactivity, lazily wrapped\n        : value;\n    },\n    set(obj, key, value, receiver) {\n      const ok = Reflect.set(obj, key, value, receiver);\n      onChange(key, value);\n      return ok;\n    },\n    deleteProperty(obj, key) {\n      const ok = Reflect.deleteProperty(obj, key);\n      onChange(key, undefined);\n      return ok;\n    },\n  });\n}\n\nconst state = reactive({ user: { name: \"Ana\" }, items: [] }, (k, v) => {\n  console.log(`changed ${String(k)} ->`, v);\n});\n\nstate.user.name = \"Omar\";   // logs: changed name -> Omar\nstate.items.push(1);        // logs: changed 0 -> 1, changed length -> 1\n```\n\nNote that `Reflect` is used instead of `obj[key]` so getters and setters receive the correct `this`.",
+    "keywords": [
+      "javascript",
+      "proxy",
+      "reflect",
+      "reactivity",
+      "metaprogramming",
+      "vue",
+      "observer pattern"
+    ],
+    "category": "concept",
+    "language": "javascript",
+    "aliases": [
+      "javascript proxy example",
+      "make reactive object js",
+      "how vue reactivity works",
+      "intercept property set javascript"
+    ]
+  },
+  {
+    "question": "Create an async generator pipeline in JavaScript",
+    "answer": "Async generators let you compose streams of data lazily with backpressure.\n\n```javascript\nasync function* readLines(lines) {\n  for (const line of lines) {\n    await new Promise(r => setTimeout(r, 50));   // simulate I/O\n    yield line;\n  }\n}\n\nasync function* map(source, fn) {\n  for await (const x of source) yield fn(x);\n}\n\nasync function* filter(source, pred) {\n  for await (const x of source) if (pred(x)) yield x;\n}\n\nasync function* take(source, n) {\n  if (n <= 0) return;\n  for await (const x of source) {\n    yield x;\n    if (--n === 0) return;     // stops pulling from upstream\n  }\n}\n\n(async () => {\n  const lines = [\"alpha\", \"beta\", \"\", \"gamma\", \"delta\"];\n  const pipeline = take(\n    map(filter(readLines(lines), s => s.length > 0), s => s.toUpperCase()),\n    3\n  );\n  for await (const out of pipeline) console.log(out);  // ALPHA, BETA, GAMMA\n})();\n```\n\nNothing runs until the consumer pulls. When `take` returns, `for await` calls `.return()` on the upstream generators, so resources are cleaned up.",
+    "keywords": [
+      "javascript",
+      "async generator",
+      "for await",
+      "streams",
+      "pipeline",
+      "lazy evaluation",
+      "backpressure"
+    ],
+    "category": "concept",
+    "language": "javascript",
+    "aliases": [
+      "async generators js",
+      "javascript streaming pipeline",
+      "for await of example",
+      "lazy evaluation javascript"
+    ]
+  },
+  {
+    "question": "Offload heavy computation to a Web Worker",
+    "answer": "Web Workers run JavaScript on a background thread so the UI stays responsive.\n\n`worker.js`:\n```javascript\nself.onmessage = ({ data }) => {\n  const { start, end } = data;\n  let count = 0;\n  for (let n = start; n < end; n++) {\n    let prime = n > 1;\n    for (let d = 2; d * d <= n && prime; d++) if (n % d === 0) prime = false;\n    if (prime) count++;\n  }\n  self.postMessage({ count });\n};\n```\n\n`main.js`:\n```javascript\nconst worker = new Worker(\"worker.js\");\nworker.onmessage = ({ data }) => {\n  document.querySelector(\"#result\").textContent = `Primes: ${data.count}`;\n};\nworker.onerror = e => console.error(\"Worker failed:\", e.message);\n\ndocument.querySelector(\"#run\").addEventListener(\"click\", () => {\n  worker.postMessage({ start: 0, end: 5_000_000 });  // UI stays responsive\n});\n\n// later: worker.terminate();\n```\n\nWorkers can't touch the DOM. Messages are copied with the structured clone algorithm; pass large `ArrayBuffer`s as transferables (`postMessage(buf, [buf])`) to avoid copies.",
+    "keywords": [
+      "javascript",
+      "web worker",
+      "postmessage",
+      "background thread",
+      "performance",
+      "concurrency",
+      "dom"
+    ],
+    "category": "app-request",
+    "language": "javascript",
+    "aliases": [
+      "web worker example",
+      "run javascript in background thread",
+      "offload computation browser",
+      "postmessage javascript"
+    ]
+  },
+  {
+    "question": "Implement lazy loading images with IntersectionObserver",
+    "answer": "```html\n<img data-src=\"photo1.jpg\" alt=\"Photo 1\" width=\"600\" height=\"400\">\n<img data-src=\"photo2.jpg\" alt=\"Photo 2\" width=\"600\" height=\"400\">\n\n<script>\nconst observer = new IntersectionObserver((entries, obs) => {\n  for (const entry of entries) {\n    if (!entry.isIntersecting) continue;\n    const img = entry.target;\n    img.src = img.dataset.src;\n    img.removeAttribute(\"data-src\");\n    obs.unobserve(img);                       // load once\n  }\n}, { rootMargin: \"200px\" });                  // start loading 200px early\n\ndocument.querySelectorAll(\"img[data-src]\").forEach(img => observer.observe(img));\n</script>\n```\n\nSet `width` and `height` so the layout doesn't shift. For modern browsers, the native `<img loading=\"lazy\">` attribute handles simple cases with no JavaScript.",
+    "keywords": [
+      "javascript",
+      "intersectionobserver",
+      "lazy loading",
+      "images",
+      "performance",
+      "html",
+      "web vitals"
+    ],
+    "category": "snippet",
+    "language": "javascript",
+    "aliases": [
+      "lazy load images js",
+      "intersection observer example",
+      "defer image loading",
+      "improve page speed images"
+    ]
+  },
+  {
+    "question": "Create a accessible modal dialog in HTML using the dialog element",
+    "answer": "The native `<dialog>` element handles focus trapping, the Escape key, and the backdrop.\n\n```html\n<button id=\"open\">Delete account</button>\n\n<dialog id=\"confirm\" aria-labelledby=\"title\" aria-describedby=\"desc\">\n  <h2 id=\"title\">Delete your account?</h2>\n  <p id=\"desc\">This action cannot be undone.</p>\n  <form method=\"dialog\">\n    <button value=\"cancel\">Cancel</button>\n    <button value=\"confirm\">Delete</button>\n  </form>\n</dialog>\n\n<script>\nconst dlg = document.getElementById(\"confirm\");\ndocument.getElementById(\"open\").addEventListener(\"click\", () => dlg.showModal());\ndlg.addEventListener(\"close\", () => {\n  if (dlg.returnValue === \"confirm\") console.log(\"Deleted\");\n});\n</script>\n\n<style>\n  dialog::backdrop { background: rgb(0 0 0 / 0.5); }\n</style>\n```\n\n`showModal()` makes the rest of the page inert and returns focus to the trigger on close. Use `show()` only for non-modal dialogs.",
+    "keywords": [
+      "html",
+      "dialog",
+      "accessibility",
+      "a11y",
+      "modal",
+      "focus trap",
+      "aria"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "html modal dialog",
+      "accessible popup html",
+      "confirm dialog without library",
+      "dialog element example"
+    ]
+  },
+  {
+    "question": "Build an HTML5 canvas particle animation",
+    "answer": "```html\n<canvas id=\"c\" style=\"width:100%;height:100vh;display:block;background:#000\"></canvas>\n<script>\nconst canvas = document.getElementById(\"c\");\nconst ctx = canvas.getContext(\"2d\");\nlet w, h, particles = [];\n\nfunction resize() {\n  const dpr = window.devicePixelRatio || 1;          // crisp on retina\n  w = canvas.clientWidth; h = canvas.clientHeight;\n  canvas.width = w * dpr; canvas.height = h * dpr;\n  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);\n}\n\nfunction spawn(n) {\n  particles = Array.from({ length: n }, () => ({\n    x: Math.random() * w, y: Math.random() * h,\n    vx: (Math.random() - 0.5) * 1.5, vy: (Math.random() - 0.5) * 1.5,\n  }));\n}\n\nlet mouse = { x: -9999, y: -9999 };\ncanvas.addEventListener(\"pointermove\", e => {\n  const r = canvas.getBoundingClientRect();\n  mouse = { x: e.clientX - r.left, y: e.clientY - r.top };\n});\n\nfunction frame() {\n  ctx.clearRect(0, 0, w, h);\n  for (const p of particles) {\n    const dx = p.x - mouse.x, dy = p.y - mouse.y;\n    const d2 = dx * dx + dy * dy;\n    if (d2 < 10000) { p.vx += dx / 500; p.vy += dy / 500; }   // repel from pointer\n    p.x += p.vx; p.y += p.vy;\n    if (p.x < 0 || p.x > w) p.vx *= -1;\n    if (p.y < 0 || p.y > h) p.vy *= -1;\n    ctx.fillStyle = \"#6cf\";\n    ctx.fillRect(p.x, p.y, 2, 2);\n  }\n  requestAnimationFrame(frame);\n}\n\nwindow.addEventListener(\"resize\", () => { resize(); spawn(150); });\nresize(); spawn(150); frame();\n</script>\n```\n\nScaling by `devicePixelRatio` keeps the canvas sharp on high-DPI screens. The animation loop uses `requestAnimationFrame`, which pauses automatically in background tabs.",
+    "keywords": [
+      "html",
+      "canvas",
+      "javascript",
+      "animation",
+      "requestanimationframe",
+      "particles",
+      "devicepixelratio"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "canvas particle effect",
+      "html5 canvas animation example",
+      "interactive background animation",
+      "particles js from scratch"
+    ]
+  },
+  {
+    "question": "Make a responsive CSS grid layout with container queries",
+    "answer": "Container queries style an element based on its parent's size, not the viewport.\n\n```html\n<div class=\"cards\">\n  <article class=\"card\"><h3>Alpha</h3><p>Short description.</p></article>\n  <article class=\"card\"><h3>Beta</h3><p>Another card with more text.</p></article>\n  <article class=\"card\"><h3>Gamma</h3><p>Third card.</p></article>\n</div>\n\n<style>\n  .cards { container-type: inline-size; }\n\n  .card {\n    padding: 1rem;\n    border-radius: 12px;\n    background: #fff;\n    box-shadow: 0 1px 4px rgb(0 0 0 / .12);\n  }\n\n  /* Only when the container is at least 600px wide */\n  @container (min-width: 600px) {\n    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }\n    .card h3 { font-size: 1.5rem; }\n  }\n\n  @container (min-width: 900px) {\n    .cards { grid-template-columns: repeat(3, 1fr); }\n  }\n</style>\n```\n\nBecause the rule depends on `.cards`' width, the same component works in a narrow sidebar and a wide main column without modification.",
+    "keywords": [
+      "css",
+      "container queries",
+      "grid",
+      "responsive",
+      "component design",
+      "container-type",
+      "modern css"
+    ],
+    "category": "snippet",
+    "language": "css",
+    "aliases": [
+      "css container queries example",
+      "responsive component css",
+      "grid layout without media queries",
+      "css container width breakpoints"
+    ]
+  },
+  {
+    "question": "Write a CSS dark mode toggle that respects system preference and persists",
+    "answer": "```html\n<button id=\"theme\">Toggle theme</button>\n\n<style>\n  :root { --bg: #fff; --fg: #111; color-scheme: light; }\n  :root[data-theme=\"dark\"] { --bg: #111; --fg: #eee; color-scheme: dark; }\n  body { background: var(--bg); color: var(--fg); transition: background .2s, color .2s; }\n</style>\n\n<script>\nconst root = document.documentElement;\nconst saved = localStorage.getItem(\"theme\");\nconst prefersDark = matchMedia(\"(prefers-color-scheme: dark)\").matches;\n\nfunction apply(theme) {\n  root.dataset.theme = theme;\n  localStorage.setItem(\"theme\", theme);\n}\n\napply(saved ?? (prefersDark ? \"dark\" : \"light\"));\n\ndocument.getElementById(\"theme\").addEventListener(\"click\", () =>\n  apply(root.dataset.theme === \"dark\" ? \"light\" : \"dark\"));\n</script>\n```\n\n`color-scheme` tells the browser to style form controls and scrollbars to match. The saved choice overrides the system setting.",
+    "keywords": [
+      "css",
+      "javascript",
+      "dark mode",
+      "custom properties",
+      "prefers-color-scheme",
+      "localstorage",
+      "theme"
+    ],
+    "category": "app-request",
+    "language": "css",
+    "aliases": [
+      "dark mode toggle",
+      "css dark theme switch",
+      "prefers color scheme javascript",
+      "theme switcher with persistence"
+    ]
+  },
+  {
+    "question": "Write a context manager and a decorator-based retry with exponential backoff",
+    "answer": "```python\nimport functools\nimport logging\nimport random\nimport time\nfrom contextlib import contextmanager\n\nlog = logging.getLogger(__name__)\n\ndef retry(times=5, base=0.5, exceptions=(Exception,)):\n    def deco(fn):\n        @functools.wraps(fn)\n        def wrapper(*args, **kwargs):\n            for attempt in range(1, times + 1):\n                try:\n                    return fn(*args, **kwargs)\n                except exceptions as e:\n                    if attempt == times:\n                        raise\n                    delay = base * 2 ** (attempt - 1) + random.uniform(0, base)  # jitter\n                    log.warning(\"attempt %d failed (%s); retrying in %.2fs\", attempt, e, delay)\n                    time.sleep(delay)\n        return wrapper\n    return deco\n\n@contextmanager\ndef timed(label):\n    start = time.perf_counter()\n    try:\n        yield\n    finally:\n        print(f\"{label}: {time.perf_counter() - start:.3f}s\")\n\n@retry(times=3, exceptions=(ConnectionError,))\ndef flaky():\n    if random.random() < 0.7:\n        raise ConnectionError(\"temporary failure\")\n    return \"ok\"\n\nwith timed(\"call\"):\n    print(flaky())\n```\n\nThe `finally` in `timed` runs even if the body raises. Jitter spreads retries out so many clients don't hammer a recovering server at the same instant.",
+    "keywords": [
+      "python",
+      "retry",
+      "exponential backoff",
+      "jitter",
+      "decorator",
+      "context manager",
+      "contextlib",
+      "resilience"
+    ],
+    "category": "snippet",
+    "language": "python",
+    "aliases": [
+      "python retry decorator",
+      "exponential backoff python",
+      "retry with jitter",
+      "contextmanager timing example"
+    ]
+  },
+  {
+    "question": "Use Python typing.Protocol for structural typing",
+    "answer": "`Protocol` lets you define interfaces that any class with the right methods satisfies, with no inheritance needed.\n\n```python\nfrom typing import Protocol, runtime_checkable\nfrom dataclasses import dataclass\n\nclass Storage(Protocol):\n    def save(self, key: str, data: bytes) -> None: ...\n    def load(self, key: str) -> bytes: ...\n\nclass MemoryStorage:                 # does NOT inherit from Storage\n    def __init__(self) -> None:\n        self._d: dict[str, bytes] = {}\n    def save(self, key: str, data: bytes) -> None:\n        self._d[key] = data\n    def load(self, key: str) -> bytes:\n        return self._d[key]\n\n@dataclass\nclass Cache:\n    backend: Storage                 # type checkers accept MemoryStorage here\n\n    def put(self, name: str, payload: bytes) -> None:\n        self.backend.save(name, payload)\n\ncache = Cache(MemoryStorage())\ncache.put(\"a\", b\"hello\")\n```\n\nRun `mypy` to verify that the classes match the protocol. Add `@runtime_checkable` if you need `isinstance()` checks at runtime.",
+    "keywords": [
+      "python",
+      "typing",
+      "protocol",
+      "structural typing",
+      "type hints",
+      "mypy",
+      "duck typing"
+    ],
+    "category": "concept",
+    "language": "python",
+    "aliases": [
+      "python protocol typing",
+      "duck typing with type hints",
+      "python interface without abc",
+      "structural subtyping python"
+    ]
+  },
+  {
+    "question": "Write idiomatic Rust error handling with the ? operator and custom errors",
+    "answer": "```rust\nuse std::fmt;\nuse std::fs;\nuse std::num::ParseIntError;\n\n#[derive(Debug)]\nenum ConfigError {\n    Io(std::io::Error),\n    Parse(ParseIntError),\n    Missing(&'static str),\n}\n\nimpl fmt::Display for ConfigError {\n    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {\n        match self {\n            ConfigError::Io(e) => write!(f, \"I/O error: {e}\"),\n            ConfigError::Parse(e) => write!(f, \"invalid number: {e}\"),\n            ConfigError::Missing(k) => write!(f, \"missing key: {k}\"),\n        }\n    }\n}\n\nimpl std::error::Error for ConfigError {}\n\n// `From` impls let `?` convert the underlying errors automatically\nimpl From<std::io::Error> for ConfigError {\n    fn from(e: std::io::Error) -> Self { ConfigError::Io(e) }\n}\nimpl From<ParseIntError> for ConfigError {\n    fn from(e: ParseIntError) -> Self { ConfigError::Parse(e) }\n}\n\nfn read_port(path: &str) -> Result<u16, ConfigError> {\n    let text = fs::read_to_string(path)?;          // io::Error -> ConfigError\n    let line = text\n        .lines()\n        .find(|l| l.starts_with(\"port=\"))\n        .ok_or(ConfigError::Missing(\"port\"))?;\n    let port: u16 = line[\"port=\".len()..].trim().parse()?; // ParseIntError -> ConfigError\n    Ok(port)\n}\n\nfn main() {\n    match read_port(\"app.conf\") {\n        Ok(p) => println!(\"port = {p}\"),\n        Err(e) => eprintln!(\"error: {e}\"),\n    }\n}\n```\n\nLibraries often use `thiserror` to generate the `Display` and `From` boilerplate, and applications use `anyhow` for convenient error propagation.",
+    "keywords": [
+      "rust",
+      "error handling",
+      "result",
+      "question mark operator",
+      "from trait",
+      "custom error",
+      "thiserror",
+      "anyhow"
+    ],
+    "category": "snippet",
+    "language": "rust",
+    "aliases": [
+      "rust custom error type",
+      "rust result question mark",
+      "rust error propagation",
+      "idiomatic error handling rust"
+    ]
+  },
+  {
+    "question": "Build a parallel iterator pipeline in Rust with rayon",
+    "answer": "Rayon turns sequential iterators into parallel ones with a single method change. Add `rayon = \"1\"` to `Cargo.toml`.\n\n```rust\nuse rayon::prelude::*;\n\n#[derive(Debug)]\nstruct Record { id: u32, score: f64 }\n\nfn main() {\n    let records: Vec<Record> = (0..1_000_000)\n        .map(|i| Record { id: i, score: (i % 97) as f64 })\n        .collect();\n\n    // Sequential:  records.iter().filter(...).map(...).sum()\n    // Parallel:    just swap iter() for par_iter()\n    let total: f64 = records\n        .par_iter()\n        .filter(|r| r.score > 50.0)\n        .map(|r| r.score * 1.1)\n        .sum();\n\n    let max_id = records\n        .par_iter()\n        .max_by(|a, b| a.score.partial_cmp(&b.score).unwrap())\n        .map(|r| r.id);\n\n    println!(\"total = {total:.2}, max id = {:?}\", max_id);\n}\n```\n\nRayon uses a work-stealing thread pool. Parallelism only pays off when the per-item work is significant. For tiny closures, the sequential version is often faster.",
+    "keywords": [
+      "rust",
+      "rayon",
+      "parallel",
+      "iterators",
+      "par_iter",
+      "work stealing",
+      "data parallelism"
+    ],
+    "category": "snippet",
+    "language": "rust",
+    "aliases": [
+      "rust parallel iterator",
+      "rayon example",
+      "parallelize loop rust",
+      "multithreaded iterator rust"
+    ]
+  },
+  {
+    "question": "Implement a worker pool with goroutines, channels and context cancellation in Go",
+    "answer": "```go\npackage main\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\t\"sync\"\n\t\"time\"\n)\n\ntype Job struct{ ID int }\ntype Result struct {\n\tJobID int\n\tValue int\n}\n\nfunc worker(ctx context.Context, id int, jobs <-chan Job, results chan<- Result, wg *sync.WaitGroup) {\n\tdefer wg.Done()\n\tfor {\n\t\tselect {\n\t\tcase <-ctx.Done():\n\t\t\treturn\n\t\tcase j, ok := <-jobs:\n\t\t\tif !ok {\n\t\t\t\treturn\n\t\t\t}\n\t\t\ttime.Sleep(100 * time.Millisecond)            // simulated work\n\t\t\tselect {\n\t\t\tcase results <- Result{JobID: j.ID, Value: j.ID * j.ID}:\n\t\t\tcase <-ctx.Done():\n\t\t\t\treturn\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc main() {\n\tctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)\n\tdefer cancel()\n\n\tjobs := make(chan Job)\n\tresults := make(chan Result)\n\tvar wg sync.WaitGroup\n\n\tfor i := 1; i <= 4; i++ {\n\t\twg.Add(1)\n\t\tgo worker(ctx, i, jobs, results, &wg)\n\t}\n\n\tgo func() {                       // producer\n\t\tdefer close(jobs)\n\t\tfor i := 1; i <= 20; i++ {\n\t\t\tselect {\n\t\t\tcase jobs <- Job{ID: i}:\n\t\t\tcase <-ctx.Done():\n\t\t\t\treturn\n\t\t\t}\n\t\t}\n\t}()\n\n\tgo func() {                       // close results after all workers finish\n\t\twg.Wait()\n\t\tclose(results)\n\t}()\n\n\tfor r := range results {\n\t\tfmt.Printf(\"job %d -> %d\\n\", r.JobID, r.Value)\n\t}\n\tif ctx.Err() != nil {\n\t\tfmt.Println(\"stopped:\", ctx.Err())\n\t}\n}\n```\n\nEvery blocking send and receive also watches `ctx.Done()`, so the whole pipeline shuts down cleanly on timeout. Whoever closes a channel should be the sole sender.",
+    "keywords": [
+      "go",
+      "goroutines",
+      "channels",
+      "worker pool",
+      "context",
+      "cancellation",
+      "sync.waitgroup",
+      "concurrency"
+    ],
+    "category": "app-request",
+    "language": "go",
+    "aliases": [
+      "go worker pool example",
+      "goroutines with context cancel",
+      "golang channels pipeline",
+      "concurrent jobs golang"
+    ]
+  },
+  {
+    "question": "Compute running totals and moving averages with SQL window functions",
+    "answer": "```sql\n-- Table: daily_sales(sale_date DATE, amount NUMERIC)\n\nSELECT\n    sale_date,\n    amount,\n    SUM(amount) OVER (ORDER BY sale_date)                          AS running_total,\n    AVG(amount) OVER (ORDER BY sale_date\n                      ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)    AS moving_avg_7d,\n    amount - LAG(amount) OVER (ORDER BY sale_date)                 AS change_vs_prev,\n    RANK()       OVER (ORDER BY amount DESC)                       AS amount_rank\nFROM daily_sales\nORDER BY sale_date;\n```\n\n`PARTITION BY` restarts the calculation per group, for example `SUM(amount) OVER (PARTITION BY region ORDER BY sale_date)`. Window functions don't collapse rows the way `GROUP BY` does, so you keep the detail alongside the aggregate.",
+    "keywords": [
+      "sql",
+      "window functions",
+      "running total",
+      "moving average",
+      "lag",
+      "rank",
+      "partition by",
+      "analytics"
+    ],
+    "category": "database",
+    "language": "sql",
+    "aliases": [
+      "sql running total",
+      "moving average sql",
+      "window function examples",
+      "sql lag previous row"
+    ]
+  },
+  {
+    "question": "Write a recursive CTE in SQL to traverse a hierarchy",
+    "answer": "A recursive common table expression walks tree data such as org charts or category trees.\n\n```sql\n-- Table: employees(id INT PRIMARY KEY, name TEXT, manager_id INT NULL)\n\nWITH RECURSIVE chain AS (\n    -- anchor: start at the CEO\n    SELECT id, name, manager_id, 0 AS depth, name::text AS path\n    FROM employees\n    WHERE manager_id IS NULL\n\n    UNION ALL\n\n    -- recursive step: add direct reports\n    SELECT e.id, e.name, e.manager_id, c.depth + 1,\n           c.path || ' > ' || e.name\n    FROM employees e\n    JOIN chain c ON e.manager_id = c.id\n)\nSELECT depth, path\nFROM chain\nORDER BY path;\n```\n\nUse `UNION ALL` unless you need deduplication. For graphs with cycles, track visited nodes or add a depth limit, because otherwise the recursion never ends.",
+    "keywords": [
+      "sql",
+      "recursive cte",
+      "hierarchy",
+      "tree traversal",
+      "with recursive",
+      "postgresql",
+      "graph"
+    ],
+    "category": "database",
+    "language": "sql",
+    "aliases": [
+      "sql recursive query",
+      "org chart sql",
+      "traverse tree in sql",
+      "with recursive example"
+    ]
+  },
+  {
+    "question": "Write a Kubernetes Deployment with health checks and resource limits",
+    "answer": "```yaml\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: web\n  labels: { app: web }\nspec:\n  replicas: 3\n  selector:\n    matchLabels: { app: web }\n  strategy:\n    rollingUpdate: { maxUnavailable: 0, maxSurge: 1 }\n  template:\n    metadata:\n      labels: { app: web }\n    spec:\n      containers:\n        - name: web\n          image: ghcr.io/example/web:1.4.2\n          ports:\n            - containerPort: 8080\n          env:\n            - name: DATABASE_URL\n              valueFrom:\n                secretKeyRef: { name: web-secrets, key: database-url }\n          resources:\n            requests: { cpu: \"100m\", memory: \"128Mi\" }\n            limits:   { cpu: \"500m\", memory: \"256Mi\" }\n          readinessProbe:\n            httpGet: { path: /healthz, port: 8080 }\n            initialDelaySeconds: 5\n            periodSeconds: 10\n          livenessProbe:\n            httpGet: { path: /livez, port: 8080 }\n            initialDelaySeconds: 15\n            periodSeconds: 20\n          securityContext:\n            runAsNonRoot: true\n            readOnlyRootFilesystem: true\n```\n\nReadiness controls whether traffic reaches the pod. Liveness restarts a stuck pod. Requests are used for scheduling and limits are enforced at runtime. Pin image tags rather than using `latest`.",
+    "keywords": [
+      "kubernetes",
+      "k8s",
+      "deployment",
+      "yaml",
+      "readiness probe",
+      "liveness probe",
+      "resource limits",
+      "devops"
+    ],
+    "category": "devops",
+    "language": "yaml",
+    "aliases": [
+      "kubernetes deployment example",
+      "k8s health checks",
+      "production kubernetes yaml",
+      "k8s resource limits"
+    ]
+  },
+  {
+    "question": "Write a robust Bash script with logging, locking and cleanup traps",
+    "answer": "```bash\n#!/usr/bin/env bash\nset -Eeuo pipefail\n\nLOCKFILE=\"/tmp/sync.lock\"\nTMP=$(mktemp -d)\n\nlog() { printf '%s [%s] %s\\n' \"$(date +%T)\" \"$1\" \"${*:2}\" >&2; }\n\ncleanup() {\n  local code=$?\n  rm -rf \"$TMP\"\n  rm -f \"$LOCKFILE\"\n  if (( code != 0 )); then log ERROR \"exited with code $code\"; fi\n}\ntrap cleanup EXIT\ntrap 'log ERROR \"failed at line $LINENO\"' ERR\n\n# prevent concurrent runs using an atomic noclobber lock\nif ! ( set -o noclobber; echo $$ > \"$LOCKFILE\" ) 2>/dev/null; then\n  log WARN \"another instance is running (pid $(cat \"$LOCKFILE\"))\"\n  exit 1\nfi\n\nlog INFO \"starting sync\"\nfind \"${1:-.}\" -type f -name '*.csv' -print0 \\\n  | xargs -0 -P 4 -I{} sh -c 'wc -l \"$1\" > \"'\"$TMP\"'/$(basename \"$1\").count\"' _ {}\ncat \"$TMP\"/*.count 2>/dev/null | awk '{s+=$1} END {print s+0, \"total lines\"}'\nlog INFO \"done\"\n```\n\n`trap ... EXIT` runs cleanup on success, failure, and Ctrl-C alike. `noclobber` makes the lock creation atomic. `-print0` with `xargs -0` handles filenames containing spaces.",
+    "keywords": [
+      "bash",
+      "trap",
+      "lock file",
+      "noclobber",
+      "xargs",
+      "parallel",
+      "error handling",
+      "shell scripting"
+    ],
+    "category": "script-request",
+    "language": "bash",
+    "aliases": [
+      "robust bash script",
+      "bash trap cleanup",
+      "bash lock file to prevent concurrent runs",
+      "production shell script template"
+    ]
+  },
+  {
+    "question": "Implement a trie for autocomplete in TypeScript",
+    "answer": "```typescript\nclass TrieNode {\n  children = new Map<string, TrieNode>();\n  isWord = false;\n}\n\nclass Trie {\n  private root = new TrieNode();\n\n  insert(word: string): void {\n    let node = this.root;\n    for (const ch of word) {\n      if (!node.children.has(ch)) node.children.set(ch, new TrieNode());\n      node = node.children.get(ch)!;\n    }\n    node.isWord = true;\n  }\n\n  private findNode(prefix: string): TrieNode | undefined {\n    let node: TrieNode | undefined = this.root;\n    for (const ch of prefix) {\n      node = node.children.get(ch);\n      if (!node) return undefined;\n    }\n    return node;\n  }\n\n  autocomplete(prefix: string, limit = 10): string[] {\n    const start = this.findNode(prefix);\n    const results: string[] = [];\n    const dfs = (node: TrieNode, path: string) => {\n      if (results.length >= limit) return;\n      if (node.isWord) results.push(path);\n      for (const [ch, child] of node.children) dfs(child, path + ch);\n    };\n    if (start) dfs(start, prefix);\n    return results;\n  }\n}\n\nconst t = new Trie();\n[\"car\", \"card\", \"care\", \"cat\", \"dog\"].forEach(w => t.insert(w));\nconsole.log(t.autocomplete(\"car\"));   // [\"car\", \"card\", \"care\"]\n```\n\nLookup costs O(length of prefix), independent of how many words are stored. For huge vocabularies, replace the `Map`s with compressed (radix) nodes to save memory.",
+    "keywords": [
+      "typescript",
+      "trie",
+      "prefix tree",
+      "autocomplete",
+      "data structure",
+      "dfs",
+      "map"
+    ],
+    "category": "algorithm",
+    "language": "typescript",
+    "aliases": [
+      "trie implementation typescript",
+      "autocomplete data structure",
+      "prefix search algorithm",
+      "trie in js"
+    ]
+  },
+  {
+    "question": "Implement Dijkstra with a binary heap in C++ using std::priority_queue",
+    "answer": "```cpp\n#include <iostream>\n#include <limits>\n#include <queue>\n#include <utility>\n#include <vector>\n\nusing Graph = std::vector<std::vector<std::pair<int, int>>>;  // node -> (neighbor, weight)\n\nstd::vector<long long> dijkstra(const Graph& g, int src, std::vector<int>* parent = nullptr) {\n    const long long INF = std::numeric_limits<long long>::max();\n    std::vector<long long> dist(g.size(), INF);\n    if (parent) parent->assign(g.size(), -1);\n\n    using State = std::pair<long long, int>;                        // (distance, node)\n    std::priority_queue<State, std::vector<State>, std::greater<>> pq;\n\n    dist[src] = 0;\n    pq.emplace(0, src);\n    while (!pq.empty()) {\n        auto [d, u] = pq.top();\n        pq.pop();\n        if (d > dist[u]) continue;                                  // stale entry\n        for (auto [v, w] : g[u]) {\n            if (d + w < dist[v]) {\n                dist[v] = d + w;\n                if (parent) (*parent)[v] = u;\n                pq.emplace(dist[v], v);\n            }\n        }\n    }\n    return dist;\n}\n\nint main() {\n    Graph g(4);\n    g[0] = {{1, 1}, {2, 4}};\n    g[1] = {{2, 2}, {3, 5}};\n    g[2] = {{3, 1}};\n    std::vector<int> parent;\n    auto dist = dijkstra(g, 0, &parent);\n    for (int i = 0; i < 4; ++i) std::cout << i << \": \" << dist[i] << '\\n';\n}\n```\n\n`std::greater<>` turns the max-heap into a min-heap. The `stale entry` check skips outdated queue items instead of supporting decrease-key. Complexity is O((V+E) log V).",
+    "keywords": [
+      "c++",
+      "dijkstra",
+      "priority_queue",
+      "shortest path",
+      "graph",
+      "heap",
+      "algorithm"
+    ],
+    "category": "algorithm",
+    "language": "c++",
+    "aliases": [
+      "dijkstra c++ priority queue",
+      "shortest path cpp",
+      "graph shortest path code",
+      "dijkstra with path reconstruction"
+    ]
+  },
+  {
+    "question": "Why does my C++ code show undefined behavior, and how do I catch it?",
+    "answer": "Undefined behavior (UB) means the standard places no requirements on the outcome, so a program can appear to work and then fail elsewhere. Common culprits:\n\n- Signed integer overflow: `int x = INT_MAX; x + 1;`\n- Out-of-bounds access: `std::vector` `operator[]` doesn't check bounds\n- Iterator invalidation: `v.push_back()` while holding an iterator into `v`\n- Use after move or after `delete`\n- Strict aliasing violations and reading uninitialized variables\n\n```cpp\nstd::vector<int> v{1, 2, 3};\nfor (auto it = v.begin(); it != v.end(); ++it)\n    if (*it == 2) v.push_back(4);   // UB: iterators invalidated on reallocation\n```\n\nDetection tools:\n```bash\ng++ -std=c++20 -g -O1 -fsanitize=address,undefined -fno-omit-frame-pointer prog.cpp -o prog\n./prog\n```\n\nUse `.at()` during development for checked access, and enable `_GLIBCXX_ASSERTIONS` for bounds checks in libstdc++. Run a static analyzer too (`clang-tidy`).",
+    "keywords": [
+      "c++",
+      "undefined behavior",
+      "sanitizer",
+      "asan",
+      "ubsan",
+      "iterator invalidation",
+      "debugging"
+    ],
+    "category": "debugging",
+    "language": "c++",
+    "aliases": [
+      "undefined behavior c++",
+      "why does my cpp program crash randomly",
+      "iterator invalidated push_back",
+      "address sanitizer usage"
+    ]
+  },
+  {
+    "question": "Track down a memory leak in Java",
+    "answer": "Java has garbage collection, but leaks still happen when objects stay reachable, usually through static collections, listeners, or caches without eviction.\n\n```java\n// Leak: the static list grows forever\nstatic final List<byte[]> CACHE = new ArrayList<>();\nvoid handle(Request r) { CACHE.add(new byte[1 << 20]); }   // never removed\n```\n\nHow to investigate:\n```bash\n# Take a heap dump when memory is high\njcmd <pid> GC.heap_dump /tmp/heap.hprof\n\n# Or start the JVM so it dumps on OOM\njava -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp -jar app.jar\n```\n\nOpen the `.hprof` file in Eclipse MAT or VisualVM and look at the **dominator tree** to see which objects retain the most memory and what holds references to them. Fixes are usually bounded caches (Caffeine with `maximumSize`), removing listeners on shutdown, and closing resources in try-with-resources.",
+    "keywords": [
+      "java",
+      "memory leak",
+      "heap dump",
+      "jcmd",
+      "garbage collection",
+      "eclipse mat",
+      "debugging",
+      "outofmemoryerror"
+    ],
+    "category": "debugging",
+    "language": "java",
+    "aliases": [
+      "java memory leak how to find",
+      "outofmemoryerror java heap",
+      "jvm heap dump analysis",
+      "java garbage collector not freeing memory"
+    ]
+  },
+  {
+    "question": "Make an interactive HTML data dashboard with a chart and filter",
+    "answer": "Self-contained, no build step, using Chart.js from a CDN.\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Sales Dashboard</title>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js\"></script>\n<style>\n  body { font-family: system-ui; max-width: 800px; margin: 2rem auto; }\n  select { padding: .4rem; }\n</style>\n</head>\n<body>\n<h1>Sales by month</h1>\n<label>Region\n  <select id=\"region\"><option>All</option><option>EU</option><option>US</option></select>\n</label>\n<canvas id=\"chart\"></canvas>\n\n<script>\nconst DATA = [\n  { month: \"Jan\", region: \"EU\", sales: 120 }, { month: \"Feb\", region: \"EU\", sales: 135 },\n  { month: \"Jan\", region: \"US\", sales: 90 },  { month: \"Feb\", region: \"US\", sales: 150 },\n];\nconst months = [...new Set(DATA.map(d => d.month))];\n\nconst chart = new Chart(document.getElementById(\"chart\"), {\n  type: \"bar\",\n  data: { labels: months, datasets: [{ label: \"Sales\", data: [] }] },\n  options: { responsive: true, scales: { y: { beginAtZero: true } } },\n});\n\nfunction update() {\n  const region = document.getElementById(\"region\").value;\n  const rows = DATA.filter(d => region === \"All\" || d.region === region);\n  chart.data.datasets[0].data = months.map(m =>\n    rows.filter(r => r.month === m).reduce((s, r) => s + r.sales, 0));\n  chart.update();\n}\n\ndocument.getElementById(\"region\").addEventListener(\"change\", update);\nupdate();\n</script>\n</body>\n</html>\n```\n\nReplace `DATA` with a `fetch()` call to load real data. Because the filter recomputes totals from the source rows, switching regions never double-counts.",
+    "keywords": [
+      "html",
+      "javascript",
+      "chart.js",
+      "dashboard",
+      "data visualization",
+      "filter",
+      "interactive"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "html chart dashboard",
+      "chart.js filter example",
+      "interactive sales chart html",
+      "data dashboard without framework"
+    ]
+  }
+]

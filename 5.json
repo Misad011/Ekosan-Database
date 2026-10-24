@@ -1,0 +1,1178 @@
+[
+  {
+    "question": "make a calculator with python",
+    "answer": "Here is a complete command-line calculator in Python that supports +, -, *, and / with safe division:\n\n```python\ndef add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef multiply(a, b):\n    return a * b\n\ndef divide(a, b):\n    if b == 0:\n        return 'Error: division by zero'\n    return a / b\n\ndef main():\n    print('Simple Calculator')\n    print('Operations: + - * /')\n    while True:\n        line = input('Enter expression (e.g. 3 + 5) or q to quit: ').strip()\n        if line.lower() == 'q':\n            break\n        parts = line.split()\n        if len(parts) != 3:\n            print('Use format: number operator number')\n            continue\n        try:\n            a = float(parts[0])\n            op = parts[1]\n            b = float(parts[2])\n        except ValueError:\n            print('Invalid numbers')\n            continue\n        if op == '+':\n            result = add(a, b)\n        elif op == '-':\n            result = subtract(a, b)\n        elif op == '*':\n            result = multiply(a, b)\n        elif op == '/':\n            result = divide(a, b)\n        else:\n            print('Unknown operator')\n            continue\n        print('Result:', result)\n\nif __name__ == '__main__':\n    main()\n```\n\nNotes: uses `float` so decimals work; input is split on whitespace so the user types `3 + 5`; division by zero is handled explicitly rather than raising an exception.",
+    "keywords": ["python", "calculator", "arithmetic", "cli"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["write a calculator in python", "python calculator code", "simple python calculator", "make a python calculator"]
+  },
+  {
+    "question": "make a calculator with javascript",
+    "answer": "A browser-based calculator with HTML, CSS, and JavaScript:\n\n```html\n<!DOCTYPE html>\n<html>\n<head><meta charset='utf-8'><title>Calc</title></head>\n<body>\n  <input id='display' readonly>\n  <div id='keys'>\n    <button data-k='7'>7</button><button data-k='8'>8</button><button data-k='9'>9</button><button data-k='/'>/</button>\n    <button data-k='4'>4</button><button data-k='5'>5</button><button data-k='6'>6</button><button data-k='*'>*</button>\n    <button data-k='1'>1</button><button data-k='2'>2</button><button data-k='3'>3</button><button data-k='-'>-</button>\n    <button data-k='0'>0</button><button data-k='.'>.</button><button data-k='C'>C</button><button data-k='+'>+</button>\n    <button data-k='=' id='eq'>=</button>\n  </div>\n  <script>\n    const display = document.getElementById('display');\n    document.getElementById('keys').addEventListener('click', e => {\n      const k = e.target.dataset.k;\n      if (!k) return;\n      if (k === 'C') { display.value = ''; return; }\n      if (k === '=') {\n        try {\n          const result = Function('return ' + display.value)();\n          display.value = Number.isFinite(result) ? result : 'Error';\n        } catch (err) {\n          display.value = 'Error';\n        }\n        return;\n      }\n      display.value += k;\n    });\n  </script>\n</body>\n</html>\n```\n\nNotes: `Function` is used for expression evaluation, not `eval` directly, and the input is limited to digits and operators via the button set so no arbitrary code can slip in.",
+    "keywords": ["javascript", "calculator", "html", "browser"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["javascript calculator", "make calculator in js", "web calculator code"]
+  },
+  {
+    "question": "make a calculator with java",
+    "answer": "A Java console calculator using a switch expression:\n\n```java\nimport java.util.Scanner;\n\npublic class Calculator {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        System.out.println('Calculator: enter like 3 + 5 or q to quit');\n        while (true) {\n            String line = sc.nextLine().trim();\n            if (line.equalsIgnoreCase('q')) break;\n            String[] parts = line.split('\\\\s+');\n            if (parts.length != 3) {\n                System.out.println('Format: number operator number');\n                continue;\n            }\n            try {\n                double a = Double.parseDouble(parts[0]);\n                double b = Double.parseDouble(parts[2]);\n                double r = switch (parts[1]) {\n                    case '+' -> a + b;\n                    case '-' -> a - b;\n                    case '*' -> a * b;\n                    case '/' -> b == 0 ? Double.NaN : a / b;\n                    default -> Double.NaN;\n                };\n                System.out.println('Result: ' + r);\n            } catch (NumberFormatException e) {\n                System.out.println('Invalid numbers');\n            }\n        }\n        sc.close();\n    }\n}\n```\n\nNotes: uses Java 14+ switch expressions and arrow syntax. `Double.NaN` signals a bad operation.",
+    "keywords": ["java", "calculator", "console", "switch"],
+    "category": "Java Requests",
+    "language": "en",
+    "aliases": ["java calculator", "calculator in java", "java calc code"]
+  },
+  {
+    "question": "write a python function to check if a number is prime",
+    "answer": "An efficient prime check using trial division up to the square root:\n\n```python\ndef is_prime(n: int) -> bool:\n    if n < 2:\n        return False\n    if n < 4:\n        return True\n    if n % 2 == 0:\n        return False\n    i = 3\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 2\n    return True\n\nif __name__ == '__main__':\n    for x in [1, 2, 3, 4, 17, 100, 9973]:\n        print(x, is_prime(x))\n```\n\nNotes: only tests odd divisors after handling 2; stops at √n. Complexity is O(√n).",
+    "keywords": ["python", "prime", "function", "math"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python prime checker", "check if number is prime python", "is prime function"]
+  },
+  {
+    "question": "write a python function to sort a list",
+    "answer": "Multiple sorting approaches, from built-in to quicksort written from scratch:\n\n```python\ndef sort_builtin(values):\n    return sorted(values)\n\ndef quicksort(values):\n    if len(values) <= 1:\n        return values\n    pivot = values[len(values) // 2]\n    left = [x for x in values if x < pivot]\n    mid = [x for x in values if x == pivot]\n    right = [x for x in values if x > pivot]\n    return quicksort(left) + mid + quicksort(right)\n\ndef bubble_sort(values):\n    arr = list(values)\n    n = len(arr)\n    for i in range(n):\n        swapped = False\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n                swapped = True\n        if not swapped:\n            break\n    return arr\n\nif __name__ == '__main__':\n    data = [5, 2, 9, 1, 5, 6]\n    print(sort_builtin(data))\n    print(quicksort(data))\n    print(bubble_sort(data))\n```\n\nNotes: `sorted` returns a new list; `quicksort` is O(n log n) average; `bubble_sort` is O(n²) but easy to read.",
+    "keywords": ["python", "sort", "quicksort", "algorithm"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["python sort list", "sorting function python", "how to sort in python"]
+  },
+  {
+    "question": "write a python class for a bank account",
+    "answer": "A simple bank account class with deposit, withdraw, and balance tracking:\n\n```python\nclass BankAccount:\n    def __init__(self, owner: str, balance: float = 0.0):\n        self.owner = owner\n        self._balance = balance\n        self._history = []\n\n    @property\n    def balance(self) -> float:\n        return self._balance\n\n    def deposit(self, amount: float) -> None:\n        if amount <= 0:\n            raise ValueError('Deposit must be positive')\n        self._balance += amount\n        self._history.append(('deposit', amount))\n\n    def withdraw(self, amount: float) -> None:\n        if amount <= 0:\n            raise ValueError('Withdrawal must be positive')\n        if amount > self._balance:\n            raise ValueError('Insufficient funds')\n        self._balance -= amount\n        self._history.append(('withdraw', amount))\n\n    def statement(self):\n        for kind, amount in self._history:\n            print(f'{kind}: {amount:.2f}')\n        print(f'Balance: {self._balance:.2f}')\n\nif __name__ == '__main__':\n    acc = BankAccount('Alice', 100)\n    acc.deposit(50)\n    acc.withdraw(30)\n    acc.statement()\n```\n\nNotes: uses a property to expose the balance read-only; validates input in each method.",
+    "keywords": ["python", "class", "bank", "oop"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python bank account class", "oop python example", "class example python"]
+  },
+  {
+    "question": "write a python program to read a JSON file",
+    "answer": "Reading and writing JSON safely with error handling:\n\n```python\nimport json\nfrom pathlib import Path\n\ndef read_json(path):\n    p = Path(path)\n    if not p.exists():\n        raise FileNotFoundError(f'No such file: {path}')\n    with p.open('r', encoding='utf-8') as f:\n        try:\n            return json.load(f)\n        except json.JSONDecodeError as e:\n            raise ValueError(f'Invalid JSON in {path}: {e}') from e\n\ndef write_json(path, data):\n    with open(path, 'w', encoding='utf-8') as f:\n        json.dump(data, f, indent=2, ensure_ascii=False)\n\nif __name__ == '__main__':\n    write_json('sample.json', {'name': 'Alice', 'age': 30})\n    print(read_json('sample.json'))\n```\n\nNotes: uses `encoding='utf-8'` so non-English characters survive; `ensure_ascii=False` writes them literally instead of `\\uXXXX`.",
+    "keywords": ["python", "json", "file", "read", "write"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["read json python", "python json reader", "load json file python"]
+  },
+  {
+    "question": "write a python program to read a CSV file",
+    "answer": "Using the standard library `csv` module:\n\n```python\nimport csv\n\ndef read_csv(path):\n    rows = []\n    with open(path, newline='', encoding='utf-8') as f:\n        reader = csv.DictReader(f)\n        for row in reader:\n            rows.append(row)\n    return rows\n\ndef write_csv(path, rows, fieldnames):\n    with open(path, 'w', newline='', encoding='utf-8') as f:\n        writer = csv.DictWriter(f, fieldnames=fieldnames)\n        writer.writeheader()\n        writer.writerows(rows)\n\nif __name__ == '__main__':\n    sample = [{'name': 'Alice', 'age': '30'}, {'name': 'Bob', 'age': '25'}]\n    write_csv('people.csv', sample, ['name', 'age'])\n    for row in read_csv('people.csv'):\n        print(row)\n```\n\nNotes: `DictReader` gives each row as a dictionary keyed by header name; `newline=''` avoids blank lines on Windows.",
+    "keywords": ["python", "csv", "file", "read", "write"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["read csv python", "python csv reader", "csv file python"]
+  },
+  {
+    "question": "write a python flask API endpoint",
+    "answer": "A minimal Flask REST API with GET and POST:\n\n```python\nfrom flask import Flask, request, jsonify\n\napp = Flask(__name__)\n\nusers = [{'id': 1, 'name': 'Alice'}]\n\n@app.get('/users')\ndef list_users():\n    return jsonify(users)\n\n@app.get('/users/<int:user_id>')\ndef get_user(user_id):\n    for u in users:\n        if u['id'] == user_id:\n            return jsonify(u)\n    return jsonify({'error': 'not found'}), 404\n\n@app.post('/users')\ndef create_user():\n    data = request.get_json(force=True)\n    if not data or 'name' not in data:\n        return jsonify({'error': 'name required'}), 400\n    new_id = max((u['id'] for u in users), default=0) + 1\n    user = {'id': new_id, 'name': data['name']}\n    users.append(user)\n    return jsonify(user), 201\n\nif __name__ == '__main__':\n    app.run(debug=True, port=5000)\n```\n\nRun with `pip install flask` then `python app.py`. Test with `curl http://localhost:5000/users`.",
+    "keywords": ["python", "flask", "api", "rest", "http"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["flask api example", "python rest api", "flask server code"]
+  },
+  {
+    "question": "write a python script to rename files in a folder",
+    "answer": "Bulk rename with a pattern, safely:\n\n```python\nfrom pathlib import Path\nimport sys\n\ndef bulk_rename(folder, prefix=''):\n    folder = Path(folder)\n    if not folder.is_dir():\n        print(f'Not a folder: {folder}')\n        return\n    files = sorted(p for p in folder.iterdir() if p.is_file())\n    for i, path in enumerate(files, start=1):\n        new_name = f'{prefix}{i:03d}{path.suffix}'\n        new_path = path.with_name(new_name)\n        if new_path.exists():\n            print(f'Skipping {path.name}: {new_name} already exists')\n            continue\n        path.rename(new_path)\n        print(f'{path.name} -> {new_name}')\n\nif __name__ == '__main__':\n    folder = sys.argv[1] if len(sys.argv) > 1 else '.'\n    bulk_rename(folder, prefix='file_')\n```\n\nNotes: sorts first for deterministic order; skips existing targets to avoid overwriting; uses `Path` for cross-platform safety.",
+    "keywords": ["python", "files", "rename", "bulk", "pathlib"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["rename files python", "bulk rename script", "python file renamer"]
+  },
+  {
+    "question": "write a python password generator",
+    "answer": "Cryptographically secure password generator:\n\n```python\nimport secrets\nimport string\n\ndef generate_password(length=16, symbols=True):\n    if length < 8:\n        raise ValueError('Password must be at least 8 characters')\n    alphabet = string.ascii_letters + string.digits\n    if symbols:\n        alphabet += '!@#$%^&*()-_=+[]{}'\n    return ''.join(secrets.choice(alphabet) for _ in range(length))\n\nif __name__ == '__main__':\n    for _ in range(5):\n        print(generate_password())\n```\n\nNotes: uses `secrets`, not `random` — `random` is not safe for passwords.",
+    "keywords": ["python", "password", "generator", "security", "secrets"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["password generator python", "secure password python", "generate password"]
+  },
+  {
+    "question": "write a python guessing game",
+    "answer": "A number-guessing game with hints and limited attempts:\n\n```python\nimport random\n\ndef play(low=1, high=100, max_tries=7):\n    target = random.randint(low, high)\n    print(f'Guess a number between {low} and {high}. You have {max_tries} tries.')\n    for attempt in range(1, max_tries + 1):\n        try:\n            guess = int(input(f'Try {attempt}: '))\n        except ValueError:\n            print('Enter an integer')\n            continue\n        if guess < target:\n            print('Too low')\n        elif guess > target:\n            print('Too high')\n        else:\n            print(f'Correct in {attempt} tries!')\n            return\n    print(f'Out of tries. The number was {target}.')\n\nif __name__ == '__main__':\n    play()\n```\n\nNotes: uses binary-search-worthy bounds so 7 tries is enough for 1-100.",
+    "keywords": ["python", "game", "guessing", "random"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["guessing game python", "number guessing game", "python game code"]
+  },
+  {
+    "question": "write rock paper scissors in python",
+    "answer": "A complete rock-paper-scissors game:\n\n```python\nimport random\n\nBEATS = {'rock': 'scissors', 'scissors': 'paper', 'paper': 'rock'}\n\ndef winner(player, computer):\n    if player == computer:\n        return 'tie'\n    if BEATS[player] == computer:\n        return 'player'\n    return 'computer'\n\ndef play():\n    player_score = 0\n    computer_score = 0\n    while True:\n        player = input('rock, paper, scissors, or q: ').strip().lower()\n        if player == 'q':\n            break\n        if player not in BEATS:\n            print('Invalid choice')\n            continue\n        computer = random.choice(list(BEATS))\n        result = winner(player, computer)\n        print(f'You: {player} | Computer: {computer} -> {result}')\n        if result == 'player':\n            player_score += 1\n        elif result == 'computer':\n            computer_score += 1\n    print(f'Final: you {player_score}, computer {computer_score}')\n\nif __name__ == '__main__':\n    play()\n```\n\nNotes: `BEATS` maps each choice to what it defeats — a clean way to encode game rules.",
+    "keywords": ["python", "game", "rock paper scissors", "random"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["rock paper scissors python", "rps game python", "python game example"]
+  },
+  {
+    "question": "write a python function to reverse a string",
+    "answer": "Multiple ways to reverse a string in Python:\n\n```python\ndef reverse_slice(s):\n    return s[::-1]\n\ndef reverse_loop(s):\n    out = []\n    for ch in s:\n        out.insert(0, ch)\n    return ''.join(out)\n\ndef reverse_join(s):\n    return ''.join(reversed(s))\n\ndef reverse_recursive(s):\n    if len(s) <= 1:\n        return s\n    return reverse_recursive(s[1:]) + s[0]\n\nif __name__ == '__main__':\n    text = 'hello'\n    print(reverse_slice(text))\n    print(reverse_loop(text))\n    print(reverse_join(text))\n    print(reverse_recursive(text))\n```\n\nNotes: slicing `[::-1]` is the idiomatic way; the recursive version is elegant but blows the stack on long strings.",
+    "keywords": ["python", "string", "reverse"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["reverse string python", "how to reverse a string", "string reversal python"]
+  },
+  {
+    "question": "write a python fibonacci function",
+    "answer": "Iterative, recursive, and memoized Fibonacci:\n\n```python\nfrom functools import lru_cache\n\ndef fib_iter(n):\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a\n\n@lru_cache(maxsize=None)\ndef fib_memo(n):\n    if n < 2:\n        return n\n    return fib_memo(n - 1) + fib_memo(n - 2)\n\ndef fib_recursive(n):\n    if n < 2:\n        return n\n    return fib_recursive(n - 1) + fib_recursive(n - 2)\n\nif __name__ == '__main__':\n    print([fib_iter(i) for i in range(10)])\n    print(fib_memo(50))\n```\n\nNotes: `fib_iter` runs in O(n) time and O(1) space; `fib_recursive` is exponential and only for teaching; `fib_memo` is fast but uses memory.",
+    "keywords": ["python", "fibonacci", "recursion", "memoization"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["fibonacci python", "fib function python", "fibonacci sequence code"]
+  },
+  {
+    "question": "write a python function to find the factorial",
+    "answer": "Iterative and recursive factorial, plus `math.factorial`:\n\n```python\nimport math\n\ndef factorial_iter(n):\n    if n < 0:\n        raise ValueError('Negative input')\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result\n\ndef factorial_recursive(n):\n    if n < 0:\n        raise ValueError('Negative input')\n    if n < 2:\n        return 1\n    return n * factorial_recursive(n - 1)\n\nif __name__ == '__main__':\n    print(factorial_iter(5))\n    print(factorial_recursive(5))\n    print(math.factorial(5))\n```\n\nNotes: `math.factorial` is fastest and handles big integers.",
+    "keywords": ["python", "factorial", "recursion"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["factorial python", "n factorial code", "factorial function"]
+  },
+  {
+    "question": "write a python function to compute gcd",
+    "answer": "Using the Euclidean algorithm and Python's built-in:\n\n```python\nimport math\n\ndef gcd_euclid(a, b):\n    a, b = abs(a), abs(b)\n    while b:\n        a, b = b, a % b\n    return a\n\ndef gcd_multi(*args):\n    result = 0\n    for x in args:\n        result = gcd_euclid(result, x)\n    return result\n\nif __name__ == '__main__':\n    print(gcd_euclid(48, 18))      # 6\n    print(math.gcd(48, 18))         # 6\n    print(gcd_multi(12, 18, 24))    # 6\n```\n\nNotes: Euclidean algorithm is O(log min(a,b)); `math.gcd` handles multiple arguments directly.",
+    "keywords": ["python", "gcd", "euclidean", "math"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["gcd python", "greatest common divisor code", "euclidean algorithm python"]
+  },
+  {
+    "question": "write a python function to check for palindromes",
+    "answer": "Palindrome check ignoring case and non-alphanumeric characters:\n\n```python\ndef is_palindrome(text):\n    cleaned = ''.join(ch.lower() for ch in text if ch.isalnum())\n    return cleaned == cleaned[::-1]\n\nif __name__ == '__main__':\n    tests = ['racecar', 'A man, a plan, a canal: Panama', 'hello']\n    for s in tests:\n        print(s, '->', is_palindrome(s))\n```\n\nNotes: strips spaces and punctuation and lowercases before comparing.",
+    "keywords": ["python", "palindrome", "string"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["palindrome python", "check palindrome", "palindrome function"]
+  },
+  {
+    "question": "write a python decorator example",
+    "answer": "A timing decorator and a logger decorator:\n\n```python\nimport functools\nimport time\n\ndef timer(func):\n    @functools.wraps(func)\n    def wrapper(*args, **kwargs):\n        start = time.perf_counter()\n        try:\n            return func(*args, **kwargs)\n        finally:\n            elapsed = time.perf_counter() - start\n            print(f'{func.__name__} took {elapsed:.4f}s')\n    return wrapper\n\ndef logged(func):\n    @functools.wraps(func)\n    def wrapper(*args, **kwargs):\n        print(f'calling {func.__name__}(args={args}, kwargs={kwargs})')\n        return func(*args, **kwargs)\n    return wrapper\n\n@timer\n@logged\ndef slow_sum(n):\n    return sum(range(n))\n\nif __name__ == '__main__':\n    print(slow_sum(1_000_000))\n```\n\nNotes: `functools.wraps` preserves the original function's metadata; decorators apply bottom-up.",
+    "keywords": ["python", "decorator", "functools", "wrapper"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python decorator", "decorator example", "how to write decorator"]
+  },
+  {
+    "question": "write a python context manager",
+    "answer": "Using a context manager with `__enter__` and `__exit__`, plus `contextlib`:\n\n```python\nimport time\nfrom contextlib import contextmanager\n\nclass Timer:\n    def __init__(self, label='block'):\n        self.label = label\n        self.start = None\n\n    def __enter__(self):\n        self.start = time.perf_counter()\n        return self\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        elapsed = time.perf_counter() - self.start\n        print(f'{self.label}: {elapsed:.4f}s')\n        return False\n\n@contextmanager\ndef managed_resource(name):\n    print(f'opening {name}')\n    try:\n        yield name.upper()\n    finally:\n        print(f'closing {name}')\n\nif __name__ == '__main__':\n    with Timer('loop'):\n        sum(range(1_000_000))\n    with managed_resource('db') as r:\n        print('using', r)\n```\n\nNotes: `__exit__` returning `False` re-raises exceptions; `@contextmanager` is the shorthand version for simple cases.",
+    "keywords": ["python", "context manager", "with", "contextlib"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python with statement", "context manager python", "custom context manager"]
+  },
+  {
+    "question": "write a python generator example",
+    "answer": "Generators for lazy sequences:\n\n```python\ndef count_up(n):\n    i = 1\n    while i <= n:\n        yield i\n        i += 1\n\ndef read_lines(path):\n    with open(path, 'r', encoding='utf-8') as f:\n        for line in f:\n            yield line.rstrip('\\\\n')\n\ndef fibonacci(limit):\n    a, b = 0, 1\n    for _ in range(limit):\n        yield a\n        a, b = b, a + b\n\nif __name__ == '__main__':\n    print(list(count_up(5)))\n    print(list(fibonacci(10)))\n    total = sum(x * x for x in count_up(1000))\n    print('sum of squares:', total)\n```\n\nNotes: generators produce values one at a time using `yield`; they hold only one value in memory regardless of length.",
+    "keywords": ["python", "generator", "yield", "iterator"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python generator", "yield example", "generator function python"]
+  },
+  {
+    "question": "write a python program using threads",
+    "answer": "Running tasks in parallel with `threading`:\n\n```python\nimport threading\nimport time\n\ndef worker(name, delay, results):\n    for i in range(3):\n        time.sleep(delay)\n        results.append(f'{name}: step {i}')\n\nif __name__ == '__main__':\n    results = []\n    threads = [\n        threading.Thread(target=worker, args=('A', 0.1, results)),\n        threading.Thread(target=worker, args=('B', 0.15, results)),\n    ]\n    for t in threads:\n        t.start()\n    for t in threads:\n        t.join()\n    for line in results:\n        print(line)\n```\n\nNotes: Python's GIL means threads do not run CPU-bound code faster, but they do help with I/O. Use `multiprocessing` for CPU-bound work.",
+    "keywords": ["python", "threading", "concurrency", "parallel"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python threads", "threading example", "multithreading python"]
+  },
+  {
+    "question": "write a python argparse CLI",
+    "answer": "Command-line argument parsing with `argparse`:\n\n```python\nimport argparse\n\ndef main():\n    parser = argparse.ArgumentParser(description='Sample CLI tool')\n    parser.add_argument('input', help='input file')\n    parser.add_argument('-o', '--output', default='out.txt', help='output file')\n    parser.add_argument('-v', '--verbose', action='store_true')\n    parser.add_argument('--lines', type=int, default=10)\n    args = parser.parse_args()\n\n    if args.verbose:\n        print(f'reading {args.input}')\n    with open(args.input, 'r', encoding='utf-8') as f:\n        lines = [next(f) for _ in range(args.lines)]\n    with open(args.output, 'w', encoding='utf-8') as f:\n        f.writelines(lines)\n    print(f'wrote {len(lines)} lines to {args.output}')\n\nif __name__ == '__main__':\n    main()\n```\n\nRun `python cli.py data.txt -o head.txt --lines 5 -v`. `argparse` also generates `--help` automatically.",
+    "keywords": ["python", "argparse", "cli", "arguments"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python command line tool", "argparse example", "cli python"]
+  },
+  {
+    "question": "write a python tkinter GUI",
+    "answer": "A minimal Tkinter app with a label, entry, and button:\n\n```python\nimport tkinter as tk\nfrom tkinter import messagebox\n\ndef greet():\n    name = entry.get().strip()\n    if not name:\n        messagebox.showwarning('Missing', 'Enter a name')\n        return\n    label.config(text=f'Hello, {name}!')\n\nroot = tk.Tk()\nroot.title('Greeter')\nroot.geometry('300x150')\n\nlabel = tk.Label(root, text='Enter your name:', font=('Helvetica', 12))\nlabel.pack(pady=10)\n\nentry = tk.Entry(root, width=25)\nentry.pack()\n\nbtn = tk.Button(root, text='Greet', command=greet)\nbtn.pack(pady=10)\n\nroot.mainloop()\n```\n\nNotes: every Tkinter app needs a `Tk()` root and a `mainloop()`. Widgets are placed with `pack`, `grid`, or `place`.",
+    "keywords": ["python", "tkinter", "gui", "desktop"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python gui", "tkinter example", "python desktop app"]
+  },
+  {
+    "question": "write a python web server using http.server",
+    "answer": "A simple HTTP server without any framework:\n\n```python\nfrom http.server import HTTPServer, BaseHTTPRequestHandler\nimport json\n\nclass Handler(BaseHTTPRequestHandler):\n    def do_GET(self):\n        if self.path == '/':\n            body = b'<h1>Hello from Python</h1>'\n            self.send_response(200)\n            self.send_header('Content-Type', 'text/html')\n            self.send_header('Content-Length', str(len(body)))\n            self.end_headers()\n            self.wfile.write(body)\n        elif self.path == '/api/time':\n            import time\n            data = json.dumps({'time': time.time()}).encode()\n            self.send_response(200)\n            self.send_header('Content-Type', 'application/json')\n            self.send_header('Content-Length', str(len(data)))\n            self.end_headers()\n            self.wfile.write(data)\n        else:\n            self.send_response(404)\n            self.end_headers()\n\n    def log_message(self, fmt, *args):\n        print('%s - %s' % (self.address_string(), fmt % args))\n\nif __name__ == '__main__':\n    server = HTTPServer(('0.0.0.0', 8000), Handler)\n    print('Serving on http://localhost:8000')\n    server.serve_forever()\n```\n\nNotes: perfect for local development and tiny APIs; for anything serious, use Flask or FastAPI.",
+    "keywords": ["python", "http", "server", "web"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python web server", "http server python", "simple python server"]
+  },
+  {
+    "question": "write a python script to ping a list of hosts",
+    "answer": "Concurrent ping using `subprocess` and threads:\n\n```python\nimport subprocess\nimport platform\nfrom concurrent.futures import ThreadPoolExecutor\n\ndef ping(host):\n    param = '-n' if platform.system().lower() == 'windows' else '-c'\n    try:\n        result = subprocess.run(\n            ['ping', param, '1', '-W', '1', host],\n            capture_output=True, timeout=3, text=True\n        )\n        return host, result.returncode == 0\n    except Exception:\n        return host, False\n\nif __name__ == '__main__':\n    hosts = ['1.1.1.1', '8.8.8.8', 'localhost', 'nonexistent.invalid']\n    with ThreadPoolExecutor(max_workers=8) as pool:\n        for host, ok in pool.map(ping, hosts):\n            print(f'{host:25} {\"UP\" if ok else \"DOWN\"}')\n```\n\nNotes: uses `-c 1` on Linux/macOS and `-n 1` on Windows; runs in parallel so slow hosts do not block.",
+    "keywords": ["python", "ping", "network", "threads", "subprocess"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["ping hosts python", "network ping script", "python ping"]
+  },
+  {
+    "question": "write a python function to validate an email",
+    "answer": "Basic email validation using a regular expression:\n\n```python\nimport re\n\nEMAIL_RE = re.compile(r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}$')\n\ndef is_valid_email(email):\n    if not isinstance(email, str):\n        return False\n    return bool(EMAIL_RE.match(email))\n\nif __name__ == '__main__':\n    tests = ['user@example.com', 'bad@@x', 'a@b.co', 'no-at-sign']\n    for t in tests:\n        print(t, is_valid_email(t))\n```\n\nNotes: this catches obvious errors, not every edge case. For production, use the `email-validator` library. True RFC 5322 compliance requires a much more complex regex.",
+    "keywords": ["python", "email", "validation", "regex"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["validate email python", "email regex python", "check email"]
+  },
+  {
+    "question": "write javascript code to fetch an API",
+    "answer": "Fetching JSON from an API with async/await and error handling:\n\n```javascript\nasync function fetchUser(id) {\n  try {\n    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);\n    if (!res.ok) throw new Error(`HTTP ${res.status}`);\n    const user = await res.json();\n    return user;\n  } catch (err) {\n    console.error('fetchUser failed:', err.message);\n    throw err;\n  }\n}\n\nasync function main() {\n  const user = await fetchUser(1);\n  console.log(user.name, user.email);\n}\n\nmain().catch(err => console.error(err));\n```\n\nNotes: always check `res.ok` — `fetch` does not reject on 4xx or 5xx. Use `res.text()` for non-JSON responses.",
+    "keywords": ["javascript", "fetch", "api", "async", "await"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["fetch api javascript", "async await fetch", "javascript http request"]
+  },
+  {
+    "question": "write a javascript debounce function",
+    "answer": "Debounce delays a function until input stops arriving:\n\n```javascript\nfunction debounce(fn, delay = 300) {\n  let timer = null;\n  return function (...args) {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn.apply(this, args), delay);\n  };\n}\n\nconst onSearch = debounce(query => {\n  console.log('searching for:', query);\n}, 400);\n\n// Simulated typing\nonSearch('a');\nonSearch('ap');\nonSearch('app');\n// Only 'app' is logged after 400ms of silence\n```\n\nNotes: debounce waits for quiet; throttle (below) fires at a steady rate.",
+    "keywords": ["javascript", "debounce", "event", "performance"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["debounce javascript", "debounce function", "delay function calls"]
+  },
+  {
+    "question": "write a javascript throttle function",
+    "answer": "Throttle limits how often a function runs:\n\n```javascript\nfunction throttle(fn, interval = 200) {\n  let last = 0;\n  let timer = null;\n  return function (...args) {\n    const now = Date.now();\n    const remaining = interval - (now - last);\n    if (remaining <= 0) {\n      if (timer) { clearTimeout(timer); timer = null; }\n      last = now;\n      fn.apply(this, args);\n    } else if (!timer) {\n      timer = setTimeout(() => {\n        last = Date.now();\n        timer = null;\n        fn.apply(this, args);\n      }, remaining);\n    }\n  };\n}\n\nconst onScroll = throttle(() => console.log('scrolling', Date.now()), 250);\nwindow.addEventListener('scroll', onScroll);\n```\n\nNotes: throttle fires at most once per interval; debounce fires only after quiet. Use throttle for scroll/resize, debounce for search input.",
+    "keywords": ["javascript", "throttle", "event", "performance"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["throttle javascript", "throttle function", "limit function rate"]
+  },
+  {
+    "question": "write a javascript deep clone function",
+    "answer": "Deep clone with cycle handling:\n\n```javascript\nfunction deepClone(value, seen = new WeakMap()) {\n  if (value === null || typeof value !== 'object') return value;\n  if (seen.has(value)) return seen.get(value);\n\n  if (value instanceof Date) return new Date(value.getTime());\n  if (value instanceof RegExp) return new RegExp(value.source, value.flags);\n  if (Array.isArray(value)) {\n    const arr = [];\n    seen.set(value, arr);\n    for (const item of value) arr.push(deepClone(item, seen));\n    return arr;\n  }\n  if (value instanceof Map) {\n    const m = new Map();\n    seen.set(value, m);\n    for (const [k, v] of value) m.set(deepClone(k, seen), deepClone(v, seen));\n    return m;\n  }\n  if (value instanceof Set) {\n    const s = new Set();\n    seen.set(value, s);\n    for (const v of value) s.add(deepClone(v, seen));\n    return s;\n  }\n  const out = {};\n  seen.set(value, out);\n  for (const key of Object.keys(value)) out[key] = deepClone(value[key], seen);\n  return out;\n}\n\nconst original = { a: 1, b: { c: [1, 2, 3] } };\noriginal.self = original;\nconst copy = deepClone(original);\nconsole.log(copy.b.c);\n```\n\nNotes: `structuredClone` is built into modern browsers — use it if you do not need custom behaviour. This version handles cycles, Dates, RegExps, Maps, and Sets.",
+    "keywords": ["javascript", "clone", "deep copy", "recursion"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["deep clone javascript", "deep copy object", "clone object js"]
+  },
+  {
+    "question": "write a javascript memoize function",
+    "answer": "Memoization caches function results by arguments:\n\n```javascript\nfunction memoize(fn, keyFn = (...args) => JSON.stringify(args)) {\n  const cache = new Map();\n  return function (...args) {\n    const key = keyFn(...args);\n    if (cache.has(key)) return cache.get(key);\n    const result = fn.apply(this, args);\n    cache.set(key, result);\n    return result;\n  };\n}\n\nconst slowSquare = n => {\n  console.log('computing', n);\n  return n * n;\n};\n\nconst fastSquare = memoize(slowSquare);\nconsole.log(fastSquare(5)); // computes\nconsole.log(fastSquare(5)); // cached\nconsole.log(fastSquare(6)); // computes\n```\n\nNotes: useful for pure functions only. For single-argument functions, use the argument directly as key. For objects, pass a custom `keyFn`.",
+    "keywords": ["javascript", "memoize", "cache", "performance"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["memoize javascript", "memoization js", "cache function results"]
+  },
+  {
+    "question": "write a javascript event emitter",
+    "answer": "A minimal event emitter class:\n\n```javascript\nclass EventEmitter {\n  constructor() {\n    this.listeners = new Map();\n  }\n\n  on(event, handler) {\n    if (!this.listeners.has(event)) this.listeners.set(event, new Set());\n    this.listeners.get(event).add(handler);\n    return () => this.off(event, handler);\n  }\n\n  off(event, handler) {\n    const set = this.listeners.get(event);\n    if (set) set.delete(handler);\n  }\n\n  emit(event, ...args) {\n    const set = this.listeners.get(event);\n    if (!set) return;\n    for (const handler of [...set]) {\n      try {\n        handler(...args);\n      } catch (err) {\n        console.error('listener error:', err);\n      }\n    }\n  }\n\n  once(event, handler) {\n    const wrapper = (...args) => {\n      this.off(event, wrapper);\n      handler(...args);\n    };\n    this.on(event, wrapper);\n  }\n}\n\nconst bus = new EventEmitter();\nconst stop = bus.on('greet', name => console.log('hello', name));\nbus.emit('greet', 'Alice');\nstop();\n```\n\nNotes: returns an unsubscribe function; `once` removes the handler after the first call; handler errors are caught so one failure does not stop others.",
+    "keywords": ["javascript", "event emitter", "pubsub", "observer"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["event emitter javascript", "pub sub js", "custom event system"]
+  },
+  {
+    "question": "write a javascript promise pool",
+    "answer": "Running tasks with a concurrency limit:\n\n```javascript\nasync function promisePool(tasks, limit = 5) {\n  const results = new Array(tasks.length);\n  let nextIndex = 0;\n\n  async function worker() {\n    while (true) {\n      const i = nextIndex++;\n      if (i >= tasks.length) return;\n      try {\n        results[i] = { status: 'ok', value: await tasks[i]() };\n      } catch (err) {\n        results[i] = { status: 'error', error: err };\n      }\n    }\n  }\n\n  const workers = Array.from({ length: Math.min(limit, tasks.length) }, worker);\n  await Promise.all(workers);\n  return results;\n}\n\nconst makeTask = n => () => new Promise(res => setTimeout(() => res(n * 2), 100));\n\npromisePool([makeTask(1), makeTask(2), makeTask(3), makeTask(4), makeTask(5)], 2)\n  .then(res => console.log(res));\n```\n\nNotes: keeps at most `limit` promises alive at once — useful when calling rate-limited APIs.",
+    "keywords": ["javascript", "promise", "concurrency", "pool", "async"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["promise pool javascript", "concurrency limit js", "async pool"]
+  },
+  {
+    "question": "write javascript retry with backoff",
+    "answer": "Retry an async function with exponential backoff:\n\n```javascript\nasync function retry(fn, { retries = 5, baseDelay = 200, maxDelay = 5000 } = {}) {\n  let attempt = 0;\n  while (true) {\n    try {\n      return await fn();\n    } catch (err) {\n      attempt++;\n      if (attempt > retries) throw err;\n      const delay = Math.min(maxDelay, baseDelay * 2 ** (attempt - 1));\n      const jitter = Math.random() * delay * 0.1;\n      await new Promise(r => setTimeout(r, delay + jitter));\n    }\n  }\n}\n\nlet count = 0;\nconst flaky = async () => {\n  count++;\n  if (count < 3) throw new Error('temporary failure');\n  return 'success';\n};\n\nretry(flaky).then(console.log).catch(console.error);\n```\n\nNotes: exponential backoff with jitter reduces thundering-herd effects. Cap delay with `maxDelay`.",
+    "keywords": ["javascript", "retry", "backoff", "async", "resilience"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["retry javascript", "exponential backoff js", "async retry"]
+  },
+  {
+    "question": "write a javascript form validation example",
+    "answer": "Client-side validation with HTML5 and JavaScript:\n\n```html\n<form id='signup' novalidate>\n  <input name='email' type='email' required>\n  <input name='password' type='password' required minlength='8'>\n  <button>Submit</button>\n  <p id='msg'></p>\n</form>\n<script>\n  const form = document.getElementById('signup');\n  const msg = document.getElementById('msg');\n\n  form.addEventListener('submit', e => {\n    e.preventDefault();\n    msg.textContent = '';\n    const email = form.email.value.trim();\n    const password = form.password.value;\n\n    if (!/^[^@\\\\s]+@[^@\\\\s]+\\\\.[^@\\\\s]+$/.test(email)) {\n      msg.textContent = 'Invalid email address';\n      return;\n    }\n    if (password.length < 8) {\n      msg.textContent = 'Password must be at least 8 characters';\n      return;\n    }\n    if (!/[A-Z]/.test(password) || !/[0-9]/.test(password)) {\n      msg.textContent = 'Password must contain an uppercase letter and a number';\n      return;\n    }\n    msg.textContent = 'Looks good!';\n    form.reset();\n  });\n</script>\n```\n\nNotes: `novalidate` disables native browser validation so custom checks run; always validate on the server too.",
+    "keywords": ["javascript", "form", "validation", "html"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["form validation js", "validate form javascript", "client side validation"]
+  },
+  {
+    "question": "write a javascript localstorage wrapper",
+    "answer": "A safe localStorage wrapper with JSON serialization and expiry:\n\n```javascript\nconst store = {\n  set(key, value, ttlMs = null) {\n    const item = { value, expires: ttlMs ? Date.now() + ttlMs : null };\n    try {\n      localStorage.setItem(key, JSON.stringify(item));\n      return true;\n    } catch (err) {\n      console.error('storage set failed:', err);\n      return false;\n    }\n  },\n  get(key, fallback = null) {\n    try {\n      const raw = localStorage.getItem(key);\n      if (!raw) return fallback;\n      const item = JSON.parse(raw);\n      if (item.expires && Date.now() > item.expires) {\n        localStorage.removeItem(key);\n        return fallback;\n      }\n      return item.value;\n    } catch (err) {\n      return fallback;\n    }\n  },\n  remove(key) { localStorage.removeItem(key); },\n  clear() { localStorage.clear(); }\n};\n\nstore.set('theme', 'dark', 24 * 60 * 60 * 1000);\nconsole.log(store.get('theme'));\n```\n\nNotes: JSON serialization handles objects and arrays; TTL lets items auto-expire.",
+    "keywords": ["javascript", "localstorage", "storage", "json"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["localstorage wrapper", "save to browser", "browser storage js"]
+  },
+  {
+    "question": "write a javascript websocket client",
+    "answer": "WebSocket client with reconnect logic:\n\n```javascript\nclass ReconnectingSocket {\n  constructor(url, { maxRetries = 10 } = {}) {\n    this.url = url;\n    this.maxRetries = maxRetries;\n    this.attempt = 0;\n    this.handlers = { message: [], open: [], close: [] };\n    this.connect();\n  }\n\n  on(event, handler) {\n    this.handlers[event] = this.handlers[event] || [];\n    this.handlers[event].push(handler);\n  }\n\n  emit(event, data) {\n    for (const h of this.handlers[event] || []) h(data);\n  }\n\n  connect() {\n    this.ws = new WebSocket(this.url);\n    this.ws.onopen = () => {\n      this.attempt = 0;\n      this.emit('open');\n    };\n    this.ws.onmessage = e => this.emit('message', e.data);\n    this.ws.onclose = () => {\n      this.emit('close');\n      if (this.attempt < this.maxRetries) {\n        const delay = Math.min(30000, 500 * 2 ** this.attempt);\n        this.attempt++;\n        setTimeout(() => this.connect(), delay);\n      }\n    };\n  }\n\n  send(data) {\n    if (this.ws.readyState === WebSocket.OPEN) this.ws.send(data);\n  }\n}\n\nconst sock = new ReconnectingSocket('wss://echo.websocket.org');\nsock.on('message', m => console.log('got', m));\nsock.on('open', () => sock.send('hello'));\n```\n\nNotes: reconnects with exponential backoff; caps retries.",
+    "keywords": ["javascript", "websocket", "reconnect", "real-time"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["websocket client js", "reconnecting websocket", "javascript websocket"]
+  },
+  {
+    "question": "write typescript typed fetch function",
+    "answer": "A generic typed fetch wrapper:\n\n```typescript\ninterface ApiError {\n  status: number;\n  message: string;\n}\n\nasync function fetchJson<T>(\n  url: string,\n  options: RequestInit = {}\n): Promise<T> {\n  const res = await fetch(url, {\n    ...options,\n    headers: {\n      'Content-Type': 'application/json',\n      ...(options.headers || {}),\n    },\n  });\n\n  if (!res.ok) {\n    const err: ApiError = {\n      status: res.status,\n      message: await res.text().catch(() => res.statusText),\n    };\n    throw err;\n  }\n\n  return (await res.json()) as T;\n}\n\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nasync function main() {\n  const user = await fetchJson<User>('https://jsonplaceholder.typicode.com/users/1');\n  console.log(user.name);\n}\n```\n\nNotes: `<T>` is the type parameter, so callers get full autocomplete on the result.",
+    "keywords": ["typescript", "fetch", "generics", "typed", "api"],
+    "category": "TypeScript Requests",
+    "language": "en",
+    "aliases": ["typescript fetch typed", "typed api call ts", "generic fetch"]
+  },
+  {
+    "question": "write typescript discriminated union example",
+    "answer": "Discriminated unions model states safely:\n\n```typescript\ntype Result<T> =\n  | { kind: 'ok'; value: T }\n  | { kind: 'error'; message: string }\n  | { kind: 'loading' };\n\nfunction render(result: Result<string>): string {\n  switch (result.kind) {\n    case 'ok':\n      return `Success: ${result.value}`;\n    case 'error':\n      return `Failure: ${result.message}`;\n    case 'loading':\n      return 'Loading…';\n  }\n}\n\nconsole.log(render({ kind: 'ok', value: 'data' }));\nconsole.log(render({ kind: 'error', message: 'timeout' }));\nconsole.log(render({ kind: 'loading' }));\n```\n\nNotes: TypeScript narrows the type inside each `case`, so `result.value` is only accessible when `kind` is `'ok'`. Exhaustive switch is checked automatically.",
+    "keywords": ["typescript", "discriminated union", "types", "result"],
+    "category": "TypeScript Requests",
+    "language": "en",
+    "aliases": ["discriminated union ts", "typescript union types", "result type typescript"]
+  },
+  {
+    "question": "write go http server",
+    "answer": "A minimal HTTP server in Go:\n\n```go\npackage main\n\nimport (\n    \"encoding/json\"\n    \"log\"\n    \"net/http\"\n    \"time\"\n)\n\ntype Response struct {\n    Message string    `json:\"message\"`\n    Time    time.Time `json:\"time\"`\n}\n\nfunc hello(w http.ResponseWriter, r *http.Request) {\n    w.Header().Set(\"Content-Type\", \"application/json\")\n    json.NewEncoder(w).Encode(Response{Message: \"hello\", Time: time.Now()})\n}\n\nfunc main() {\n    mux := http.NewServeMux()\n    mux.HandleFunc(\"/hello\", hello)\n    log.Println(\"listening on :8080\")\n    log.Fatal(http.ListenAndServe(\":8080\", mux))\n}\n```\n\nRun with `go run main.go`. Notes: `json.NewEncoder` writes directly to the response; struct tags name the JSON fields.",
+    "keywords": ["go", "http", "server", "json", "golang"],
+    "category": "Go Requests",
+    "language": "en",
+    "aliases": ["golang http server", "go web server", "go server example"]
+  },
+  {
+    "question": "write go goroutines and channels example",
+    "answer": "Concurrency with goroutines, channels, and WaitGroup:\n\n```go\npackage main\n\nimport (\n    \"fmt\"\n    \"sync\"\n)\n\nfunc worker(id int, jobs <-chan int, results chan<- int, wg *sync.WaitGroup) {\n    defer wg.Done()\n    for j := range jobs {\n        results <- j * j\n    }\n}\n\nfunc main() {\n    jobs := make(chan int, 10)\n    results := make(chan int, 10)\n    var wg sync.WaitGroup\n\n    for w := 1; w <= 3; w++ {\n        wg.Add(1)\n        go worker(w, jobs, results, &wg)\n    }\n\n    for i := 1; i <= 5; i++ {\n        jobs <- i\n    }\n    close(jobs)\n\n    go func() {\n        wg.Wait()\n        close(results)\n    }()\n\n    for r := range results {\n        fmt.Println(r)\n    }\n}\n```\n\nNotes: `<-chan int` is a receive-only channel; `chan<- int` is send-only. The WaitGroup waits for all workers to finish before closing results.",
+    "keywords": ["go", "goroutines", "channels", "concurrency", "golang"],
+    "category": "Go Requests",
+    "language": "en",
+    "aliases": ["go channels example", "goroutines go", "golang concurrency"]
+  },
+  {
+    "question": "write rust hello world with cargo",
+    "answer": "A basic Rust program and its Cargo setup:\n\n```rust\n// src/main.rs\nfn main() {\n    println!(\"Hello, world!\");\n}\n```\n\n`Cargo.toml`:\n\n```toml\n[package]\nname = \"myapp\"\nversion = \"0.1.0\"\nedition = \"2021\"\n```\n\nRun:\n\n```bash\ncargo run\ncargo build --release\n```\n\nNotes: `println!` is a macro (hence the `!`). `cargo run` compiles and executes; `cargo build --release` produces an optimized binary in `target/release/`.",
+    "keywords": ["rust", "cargo", "hello world", "systems"],
+    "category": "Rust Requests",
+    "language": "en",
+    "aliases": ["rust hello world", "cargo new", "rust starter"]
+  },
+  {
+    "question": "write rust function with Result error handling",
+    "answer": "Using `Result` for recoverable errors:\n\n```rust\nuse std::fs;\nuse std::io;\n\nfn read_file(path: &str) -> Result<String, io::Error> {\n    fs::read_to_string(path)\n}\n\nfn parse_number(s: &str) -> Result<i32, std::num::ParseIntError> {\n    s.trim().parse::<i32>()\n}\n\nfn main() {\n    match read_file(\"data.txt\") {\n        Ok(content) => println!(\"read {} bytes\", content.len()),\n        Err(e) => println!(\"error: {}\", e),\n    }\n\n    let n = parse_number(\"42\").unwrap_or(0);\n    println!(\"parsed: {}\", n);\n\n    if let Ok(v) = parse_number(\"not a number\") {\n        println!(\"got {}\", v);\n    } else {\n        println!(\"parse failed\");\n    }\n}\n```\n\nNotes: `?` propagates errors in functions returning `Result`; `unwrap` panics; `unwrap_or` provides a fallback.",
+    "keywords": ["rust", "result", "error handling", "match"],
+    "category": "Rust Requests",
+    "language": "en",
+    "aliases": ["rust result type", "rust error handling", "rust match result"]
+  },
+  {
+    "question": "write a c program to compute fibonacci",
+    "answer": "Iterative and recursive Fibonacci in C:\n\n```c\n#include <stdio.h>\n\nlong fib_iter(int n) {\n    long a = 0, b = 1, temp;\n    for (int i = 0; i < n; i++) {\n        temp = a + b;\n        a = b;\n        b = temp;\n    }\n    return a;\n}\n\nlong fib_rec(int n) {\n    if (n < 2) return n;\n    return fib_rec(n - 1) + fib_rec(n - 2);\n}\n\nint main(void) {\n    for (int i = 0; i < 10; i++) {\n        printf(\"%d: %ld %ld\\\\n\", i, fib_iter(i), fib_rec(i));\n    }\n    return 0;\n}\n```\n\nNotes: `long` is used because Fibonacci numbers grow quickly; `fib_rec` is exponential and only for small `n`.",
+    "keywords": ["c", "fibonacci", "recursion", "iteration"],
+    "category": "C Requests",
+    "language": "en",
+    "aliases": ["c fibonacci", "fibonacci in c", "c program fibonacci"]
+  },
+  {
+    "question": "write a c program with a linked list",
+    "answer": "Singly linked list with insert and print:\n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct Node {\n    int value;\n    struct Node *next;\n} Node;\n\nNode* new_node(int value) {\n    Node *n = malloc(sizeof(Node));\n    if (!n) { perror(\"malloc\"); exit(1); }\n    n->value = value;\n    n->next = NULL;\n    return n;\n}\n\nvoid append(Node **head, int value) {\n    Node *n = new_node(value);\n    if (!*head) { *head = n; return; }\n    Node *cur = *head;\n    while (cur->next) cur = cur->next;\n    cur->next = n;\n}\n\nvoid print_list(Node *head) {\n    for (Node *cur = head; cur; cur = cur->next)\n        printf(\"%d -> \", cur->value);\n    printf(\"NULL\\\\n\");\n}\n\nvoid free_list(Node *head) {\n    while (head) {\n        Node *next = head->next;\n        free(head);\n        head = next;\n    }\n}\n\nint main(void) {\n    Node *head = NULL;\n    append(&head, 1);\n    append(&head, 2);\n    append(&head, 3);\n    print_list(head);\n    free_list(head);\n    return 0;\n}\n```\n\nNotes: always `free` every allocation; `Node**` is used in `append` so the head can be modified.",
+    "keywords": ["c", "linked list", "pointers", "memory"],
+    "category": "C Requests",
+    "language": "en",
+    "aliases": ["c linked list", "linked list in c", "singly linked list c"]
+  },
+  {
+    "question": "write a c++ program using std::vector",
+    "answer": "Basic vector operations in C++:\n\n```cpp\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nint main() {\n    std::vector<int> nums = {5, 2, 9, 1, 7};\n\n    nums.push_back(3);\n    std::sort(nums.begin(), nums.end());\n\n    for (int n : nums) std::cout << n << ' ';\n    std::cout << '\\\\n';\n\n    auto it = std::find(nums.begin(), nums.end(), 7);\n    if (it != nums.end()) {\n        std::cout << \"found 7 at index \" << (it - nums.begin()) << '\\\\n';\n    }\n\n    int total = 0;\n    for (int n : nums) total += n;\n    std::cout << \"sum: \" << total << '\\\\n';\n\n    return 0;\n}\n```\n\nNotes: `vector` is the standard dynamic array; `sort` and `find` come from `<algorithm>`; range-based `for` makes iteration clean.",
+    "keywords": ["c++", "vector", "stl", "sort"],
+    "category": "C++ Requests",
+    "language": "en",
+    "aliases": ["cpp vector", "c++ vector example", "std vector"]
+  },
+  {
+    "question": "write a c++ class example",
+    "answer": "A class with constructor, methods, and operator overloading:\n\n```cpp\n#include <iostream>\n#include <string>\n\nclass Person {\npublic:\n    Person(std::string name, int age) : name_(std::move(name)), age_(age) {}\n\n    const std::string& name() const { return name_; }\n    int age() const { return age_; }\n\n    void birthday() { ++age_; }\n\n    friend std::ostream& operator<<(std::ostream& os, const Person& p) {\n        os << p.name_ << \" (\" << p.age_ << ')';\n        return os;\n    }\n\nprivate:\n    std::string name_;\n    int age_;\n};\n\nint main() {\n    Person p(\"Alice\", 30);\n    p.birthday();\n    std::cout << p << '\\\\n';\n    return 0;\n}\n```\n\nNotes: initializer lists avoid double construction; `const` methods cannot modify the object; `friend` allows `operator<<` to access private members.",
+    "keywords": ["c++", "class", "oop", "operator"],
+    "category": "C++ Requests",
+    "language": "en",
+    "aliases": ["cpp class example", "c++ class", "oop c++"]
+  },
+  {
+    "question": "write a c# console program",
+    "answer": "Basic C# console program with LINQ:\n\n```csharp\nusing System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        int[] numbers = { 5, 2, 9, 1, 7, 3 };\n\n        var evens = numbers.Where(n => n % 2 == 0).OrderBy(n => n).ToList();\n        Console.WriteLine(\"Even numbers: \" + string.Join(\", \", evens));\n\n        var squares = numbers.Select(n => n * n).ToArray();\n        Console.WriteLine(\"Squares: \" + string.Join(\", \", squares));\n\n        int sum = numbers.Sum();\n        double avg = numbers.Average();\n        Console.WriteLine($\"Sum={sum}, Average={avg:F2}\");\n    }\n}\n```\n\nNotes: LINQ methods (`Where`, `Select`, `Sum`, `Average`) work on any `IEnumerable<T>`. String interpolation with `$` is the modern way to format output.",
+    "keywords": ["c#", "console", "linq", "dotnet"],
+    "category": "C# Requests",
+    "language": "en",
+    "aliases": ["csharp console app", "c# linq example", "c sharp program"]
+  },
+  {
+    "question": "write a c# async method",
+    "answer": "Async/await in C#:\n\n```csharp\nusing System;\nusing System.Net.Http;\nusing System.Threading.Tasks;\n\nclass Program {\n    static readonly HttpClient http = new HttpClient();\n\n    static async Task<string> FetchAsync(string url) {\n        try {\n            var response = await http.GetAsync(url);\n            response.EnsureSuccessStatusCode();\n            return await response.Content.ReadAsStringAsync();\n        } catch (HttpRequestException ex) {\n            Console.WriteLine($\"Error: {ex.Message}\");\n            return string.Empty;\n        }\n    }\n\n    static async Task Main() {\n        string content = await FetchAsync(\"https://example.com\");\n        Console.WriteLine($\"Downloaded {content.Length} characters\");\n    }\n}\n```\n\nNotes: `async Task` is the standard async return type; `await` yields control back to the caller while the operation runs.",
+    "keywords": ["c#", "async", "await", "task", "http"],
+    "category": "C# Requests",
+    "language": "en",
+    "aliases": ["c# async await", "csharp async example", "task based async"]
+  },
+  {
+    "question": "write a kotlin data class",
+    "answer": "Data classes and collections in Kotlin:\n\n```kotlin\ndata class User(val id: Int, val name: String, val email: String? = null)\n\nfun main() {\n    val users = listOf(\n        User(1, \"Alice\", \"alice@example.com\"),\n        User(2, \"Bob\"),\n        User(3, \"Carol\", \"carol@example.com\")\n    )\n\n    val withEmail = users.filter { it.email != null }\n    withEmail.forEach { println(it) }\n\n    val names = users.map { it.name.uppercase() }\n    println(names)\n\n    val byId = users.associateBy { it.id }\n    println(byId[2])\n\n    val grouped = users.groupBy { it.email != null }\n    println(grouped)\n}\n```\n\nNotes: `data class` auto-generates `equals`, `hashCode`, `toString`, and `copy`. `?` marks a nullable type.",
+    "keywords": ["kotlin", "data class", "collections", "functional"],
+    "category": "Kotlin Requests",
+    "language": "en",
+    "aliases": ["kotlin data class", "kotlin example", "kotlin collections"]
+  },
+  {
+    "question": "write a kotlin coroutine example",
+    "answer": "Kotlin coroutines for concurrency:\n\n```kotlin\nimport kotlinx.coroutines.*\n\nsuspend fun fetchData(id: Int): String {\n    delay(500)\n    return \"data-$id\"\n}\n\nfun main() = runBlocking {\n    val results = coroutineScope {\n        (1..5).map { id ->\n            async { fetchData(id) }\n        }.awaitAll()\n    }\n    println(results)\n\n    val single = withContext(Dispatchers.IO) { fetchData(99) }\n    println(single)\n}\n```\n\nNotes: `coroutineScope` waits for all children; `async` returns a `Deferred` you `await`. `Dispatchers.IO` is for blocking I/O.",
+    "keywords": ["kotlin", "coroutines", "async", "concurrency"],
+    "category": "Kotlin Requests",
+    "language": "en",
+    "aliases": ["kotlin coroutines", "kotlin async example", "coroutine kotlin"]
+  },
+  {
+    "question": "write a swift struct and closure",
+    "answer": "Structs, closures, and optionals in Swift:\n\n```swift\nstruct User {\n    let id: Int\n    var name: String\n    var email: String?\n}\n\nfunc filterUsers(_ users: [User], using predicate: (User) -> Bool) -> [User] {\n    return users.filter(predicate)\n}\n\nlet users = [\n    User(id: 1, name: \"Alice\", email: \"alice@example.com\"),\n    User(id: 2, name: \"Bob\", email: nil),\n    User(id: 3, name: \"Carol\", email: \"carol@example.com\")\n]\n\nlet withEmail = filterUsers(users) { $0.email != nil }\nprint(withEmail)\n\nif let firstEmail = users.first?.email {\n    print(\"First email: \\(firstEmail)\")\n} else {\n    print(\"No email\")\n}\n```\n\nNotes: `?` marks optionals; `if let` safely unwraps. Closures use `$0`, `$1`, etc. for shorthand arguments.",
+    "keywords": ["swift", "struct", "closure", "optional"],
+    "category": "Swift Requests",
+    "language": "en",
+    "aliases": ["swift struct example", "swift closure", "swift optional"]
+  },
+  {
+    "question": "write ruby class example",
+    "answer": "A Ruby class with modules and blocks:\n\n```ruby\nmodule Greeting\n  def greet\n    \"Hello, #{name}!\"\n  end\nend\n\nclass Person\n  include Greeting\n  attr_reader :name, :age\n\n  def initialize(name, age)\n    @name = name\n    @age = age\n  end\n\n  def birthday\n    @age += 1\n    self\n  end\n\n  def to_s\n    \"#{name} (#{age})\"\n  end\nend\n\npeople = [Person.new('Alice', 30), Person.new('Bob', 25)]\npeople.each { |p| puts p.greet }\npeople.map(&:birthday).each { |p| puts p }\n\nadults = people.select { |p| p.age >= 30 }\nputs adults\n```\n\nNotes: `attr_reader` creates getter methods; `include` mixes in a module; blocks use `{ |x| ... }` or `do ... end`.",
+    "keywords": ["ruby", "class", "modules", "blocks"],
+    "category": "Ruby Requests",
+    "language": "en",
+    "aliases": ["ruby class", "ruby example", "ruby oop"]
+  },
+  {
+    "question": "write a php database connection with PDO",
+    "answer": "Secure database access using PDO with prepared statements:\n\n```php\n<?php\n$dsn = 'mysql:host=localhost;dbname=app;charset=utf8mb4';\n$user = 'appuser';\n$pass = 'secret';\n\ntry {\n    $pdo = new PDO($dsn, $user, $pass, [\n        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,\n        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,\n        PDO::ATTR_EMULATE_PREPARES => false,\n    ]);\n\n    // Insert\n    $stmt = $pdo->prepare('INSERT INTO users (name, email) VALUES (?, ?)');\n    $stmt->execute(['Alice', 'alice@example.com']);\n\n    // Select\n    $stmt = $pdo->prepare('SELECT id, name, email FROM users WHERE id = ?');\n    $stmt->execute([1]);\n    $user = $stmt->fetch();\n\n    if ($user) {\n        echo \"User: \" . htmlspecialchars($user['name']) . \"\\n\";\n    }\n} catch (PDOException $e) {\n    error_log('Database error: ' . $e->getMessage());\n    echo 'Something went wrong.';\n}\n```\n\nNotes: `EMULATE_PREPARES => false` uses real server-side prepared statements; always escape output with `htmlspecialchars`.",
+    "keywords": ["php", "pdo", "database", "mysql", "prepared"],
+    "category": "PHP Requests",
+    "language": "en",
+    "aliases": ["php database", "pdo example", "php mysql connection"]
+  },
+  {
+    "question": "write a bash script to backup a folder",
+    "answer": "A safe backup script with timestamps and rotation:\n\n```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\nSRC=\"${1:-/home/user/data}\"\nDEST=\"${2:-/backups}\"\nSTAMP=$(date +%Y-%m-%d_%H-%M-%S)\nARCHIVE=\"$DEST/backup_$STAMP.tar.gz\"\nKEEP=7\n\nif [ ! -d \"$SRC\" ]; then\n  echo \"Source not found: $SRC\" >&2\n  exit 1\nfi\n\nmkdir -p \"$DEST\"\ntar -czf \"$ARCHIVE\" -C \"$(dirname \"$SRC\")\" \"$(basename \"$SRC\")\"\necho \"Created $ARCHIVE\"\n\n# Remove backups older than $KEEP days\nfind \"$DEST\" -name 'backup_*.tar.gz' -type f -mtime +\"$KEEP\" -delete\necho \"Rotated: kept the last $KEEP days\"\n```\n\nRun: `chmod +x backup.sh && ./backup.sh /var/www /backups`.\n\nNotes: `set -euo pipefail` stops on any error, undefined variable, or failed pipe — essential for safety.",
+    "keywords": ["bash", "backup", "script", "automation", "tar"],
+    "category": "Bash Requests",
+    "language": "en",
+    "aliases": ["bash backup script", "shell backup", "folder backup script"]
+  },
+  {
+    "question": "write a bash loop over files",
+    "answer": "Iterating files safely in bash:\n\n```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\nshopt -s nullglob\n\n# Loop over .txt files in the current directory\nfor file in *.txt; do\n  echo \"Processing: $file\"\n  wc -l \"$file\"\ndone\n\n# Loop over lines in a file\nwhile IFS= read -r line; do\n  echo \"Line: $line\"\ndone < input.txt\n\n# Loop over command output\nfind . -type f -name '*.log' -print0 |\n  while IFS= read -r -d '' logfile; do\n    echo \"Log: $logfile\"\n  done\n```\n\nNotes: `nullglob` makes `*.txt` expand to nothing when no match; `IFS= read -r` preserves backslashes and whitespace; `-print0`/`-d ''` handle filenames with spaces.",
+    "keywords": ["bash", "loop", "files", "shell"],
+    "category": "Bash Requests",
+    "language": "en",
+    "aliases": ["bash for loop files", "loop over files bash", "shell loop"]
+  },
+  {
+    "question": "write sql query with joins and grouping",
+    "answer": "Joining and aggregating with GROUP BY:\n\n```sql\n-- Schema: users(id, name), orders(id, user_id, total, created_at)\n\nSELECT\n    u.id,\n    u.name,\n    COUNT(o.id)        AS order_count,\n    COALESCE(SUM(o.total), 0) AS total_spent,\n    MIN(o.created_at)  AS first_order,\n    MAX(o.created_at)  AS last_order\nFROM users u\nLEFT JOIN orders o ON o.user_id = u.id\nWHERE o.created_at >= '2024-01-01' OR o.id IS NULL\nGROUP BY u.id, u.name\nHAVING COUNT(o.id) > 0\nORDER BY total_spent DESC\nLIMIT 20;\n```\n\nNotes: `LEFT JOIN` keeps users with no orders; `COALESCE` handles NULL totals; `HAVING` filters groups (after aggregation), `WHERE` filters rows (before aggregation).",
+    "keywords": ["sql", "join", "group by", "aggregate", "query"],
+    "category": "SQL Requests",
+    "language": "en",
+    "aliases": ["sql join group by", "sql aggregation query", "sql report query"]
+  },
+  {
+    "question": "write a sql window function example",
+    "answer": "Window functions for ranking and running totals:\n\n```sql\n-- Rank employees by salary within each department\nSELECT\n    name,\n    department,\n    salary,\n    ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) AS row_num,\n    RANK()       OVER (PARTITION BY department ORDER BY salary DESC) AS rank_in_dept,\n    SUM(salary)  OVER (PARTITION BY department ORDER BY hire_date)  AS running_total,\n    salary - AVG(salary) OVER (PARTITION BY department)            AS diff_from_avg\nFROM employees\nORDER BY department, salary DESC;\n```\n\nNotes: `OVER (PARTITION BY ... ORDER BY ...)` defines the window. `ROW_NUMBER` gives a unique row number; `RANK` leaves gaps after ties; `DENSE_RANK` does not. Window functions do not collapse rows like `GROUP BY`.",
+    "keywords": ["sql", "window function", "rank", "partition", "analytics"],
+    "category": "SQL Requests",
+    "language": "en",
+    "aliases": ["sql window function", "row_number sql", "rank over partition"]
+  },
+  {
+    "question": "write a responsive html page with flexbox",
+    "answer": "A responsive card layout using flexbox:\n\n```html\n<!DOCTYPE html>\n<html lang='en'>\n<head>\n<meta charset='utf-8'>\n<meta name='viewport' content='width=device-width, initial-scale=1'>\n<title>Cards</title>\n<style>\n  * { box-sizing: border-box; }\n  body {\n    margin: 0;\n    font-family: system-ui, sans-serif;\n    background: #f4f6fa;\n    color: #111;\n  }\n  .container {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 16px;\n    padding: 16px;\n    max-width: 960px;\n    margin: 0 auto;\n  }\n  .card {\n    flex: 1 1 260px;\n    background: white;\n    border-radius: 12px;\n    padding: 20px;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.08);\n  }\n  h2 { margin: 0 0 8px; font-size: 18px; }\n  p  { margin: 0; color: #555; line-height: 1.5; }\n\n  @media (max-width: 600px) {\n    .container { padding: 12px; gap: 12px; }\n    .card { padding: 16px; }\n  }\n</style>\n</head>\n<body>\n  <div class='container'>\n    <div class='card'><h2>Card 1</h2><p>Resizes with the viewport.</p></div>\n    <div class='card'><h2>Card 2</h2><p>Flexbox handles the layout.</p></div>\n    <div class='card'><h2>Card 3</h2><p>No media queries needed for the base.</p></div>\n  </div>\n</body>\n</html>\n```\n\nNotes: `flex: 1 1 260px` makes cards grow, shrink, and prefer 260px width. `flex-wrap` allows rows to break onto new lines.",
+    "keywords": ["html", "css", "flexbox", "responsive", "layout"],
+    "category": "HTML CSS Requests",
+    "language": "en",
+    "aliases": ["flexbox layout", "responsive html", "css card layout"]
+  },
+  {
+    "question": "write css grid layout",
+    "answer": "A responsive CSS grid with auto-fit:\n\n```html\n<div class='grid'>\n  <div>1</div><div>2</div><div>3</div>\n  <div>4</div><div>5</div><div>6</div>\n</div>\n\n<style>\n  .grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    gap: 16px;\n    padding: 16px;\n  }\n  .grid > div {\n    background: #3563e9;\n    color: white;\n    padding: 24px;\n    border-radius: 8px;\n    font-size: 20px;\n    text-align: center;\n  }\n</style>\n```\n\nNotes: `auto-fit` + `minmax` fits as many columns as will fit at least 200px wide — no media queries needed.",
+    "keywords": ["css", "grid", "responsive", "layout"],
+    "category": "HTML CSS Requests",
+    "language": "en",
+    "aliases": ["css grid", "grid layout", "responsive grid css"]
+  },
+  {
+    "question": "write a react counter component with hooks",
+    "answer": "A React functional component using `useState` and `useEffect`:\n\n```jsx\nimport { useState, useEffect } from 'react';\n\nexport default function Counter() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    document.title = `Count: ${count}`;\n  }, [count]);\n\n  return (\n    <div style={{ fontFamily: 'system-ui', padding: 16 }}>\n      <h1>Count: {count}</h1>\n      <button onClick={() => setCount(c => c - 1)}>−</button>\n      <button onClick={() => setCount(0)}>Reset</button>\n      <button onClick={() => setCount(c => c + 1)}>+</button>\n    </div>\n  );\n}\n```\n\nNotes: use the functional form `setCount(c => c + 1)` when the new value depends on the old one. The second argument to `useEffect` is the dependency array.",
+    "keywords": ["react", "hooks", "usestate", "useeffect", "component"],
+    "category": "React Requests",
+    "language": "en",
+    "aliases": ["react counter", "react hooks example", "usestate example"]
+  },
+  {
+    "question": "write a react fetch component with loading state",
+    "answer": "Fetching data in React with loading and error states:\n\n```jsx\nimport { useEffect, useState } from 'react';\n\nexport default function Users() {\n  const [users, setUsers] = useState([]);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(null);\n\n  useEffect(() => {\n    const controller = new AbortController();\n    async function load() {\n      try {\n        const res = await fetch('https://jsonplaceholder.typicode.com/users', {\n          signal: controller.signal,\n        });\n        if (!res.ok) throw new Error(`HTTP ${res.status}`);\n        setUsers(await res.json());\n      } catch (err) {\n        if (err.name !== 'AbortError') setError(err.message);\n      } finally {\n        setLoading(false);\n      }\n    }\n    load();\n    return () => controller.abort();\n  }, []);\n\n  if (loading) return <p>Loading…</p>;\n  if (error) return <p role='alert'>Error: {error}</p>;\n\n  return (\n    <ul>\n      {users.map(u => <li key={u.id}>{u.name}</li>)}\n    </ul>\n  );\n}\n```\n\nNotes: `AbortController` cancels the request if the component unmounts. Always give list items a stable `key`.",
+    "keywords": ["react", "fetch", "loading", "hooks", "async"],
+    "category": "React Requests",
+    "language": "en",
+    "aliases": ["react fetch api", "react data loading", "react usestate fetch"]
+  },
+  {
+    "question": "write a vue 3 composition api component",
+    "answer": "A Vue 3 component using the Composition API:\n\n```vue\n<template>\n  <div class='counter'>\n    <p>Count: {{ count }}</p>\n    <button @click='increment'>+1</button>\n    <button @click='reset'>Reset</button>\n    <input v-model='name' placeholder='Your name'>\n    <p v-if='name'>Hello, {{ name }}!</p>\n  </div>\n</template>\n\n<script setup>\nimport { ref, computed } from 'vue';\n\nconst count = ref(0);\nconst name = ref('');\n\nconst doubled = computed(() => count.value * 2);\n\nfunction increment() {\n  count.value++;\n  console.log('Doubled:', doubled.value);\n}\n\nfunction reset() {\n  count.value = 0;\n}\n</script>\n\n<style scoped>\n.counter { font-family: system-ui; padding: 16px; }\nbutton { margin-right: 8px; }\n</style>\n```\n\nNotes: `ref` creates reactive values; access with `.value` in script but not in template. `computed` derives a value that updates automatically. `<script setup>` is the modern shorthand.",
+    "keywords": ["vue", "composition api", "ref", "reactive", "component"],
+    "category": "Vue Requests",
+    "language": "en",
+    "aliases": ["vue 3 component", "vue composition api", "vue ref example"]
+  },
+  {
+    "question": "write a nodejs express server",
+    "answer": "A small Express server with routes and middleware:\n\n```javascript\nconst express = require('express');\nconst app = express();\n\napp.use(express.json());\n\n// Logger middleware\napp.use((req, res, next) => {\n  console.log(`${req.method} ${req.url}`);\n  next();\n});\n\nconst users = [{ id: 1, name: 'Alice' }];\n\napp.get('/users', (req, res) => {\n  res.json(users);\n});\n\napp.get('/users/:id', (req, res) => {\n  const user = users.find(u => u.id === Number(req.params.id));\n  if (!user) return res.status(404).json({ error: 'not found' });\n  res.json(user);\n});\n\napp.post('/users', (req, res) => {\n  const { name } = req.body || {};\n  if (!name) return res.status(400).json({ error: 'name required' });\n  const user = { id: users.length + 1, name };\n  users.push(user);\n  res.status(201).json(user);\n});\n\n// Error handler (must have 4 args)\napp.use((err, req, res, next) => {\n  console.error(err);\n  res.status(500).json({ error: 'server error' });\n});\n\nconst PORT = process.env.PORT || 3000;\napp.listen(PORT, () => console.log(`http://localhost:${PORT}`));\n```\n\nNotes: `express.json()` parses JSON bodies. Error-handling middleware has exactly four arguments.",
+    "keywords": ["node", "express", "server", "rest", "api"],
+    "category": "Node Requests",
+    "language": "en",
+    "aliases": ["express server", "nodejs server", "node rest api"]
+  },
+  {
+    "question": "write a nodejs file reader with streams",
+    "answer": "Reading a large file line-by-line with streams:\n\n```javascript\nconst fs = require('fs');\nconst readline = require('readline');\n\nasync function processFile(path) {\n  const stream = fs.createReadStream(path, { encoding: 'utf-8' });\n  const rl = readline.createInterface({ input: stream, crlfDelay: Infinity });\n\n  let count = 0;\n  for await (const line of rl) {\n    count++;\n    if (line.includes('ERROR')) {\n      console.log(`Line ${count}: ${line}`);\n    }\n  }\n  return count;\n}\n\nprocessFile('app.log')\n  .then(n => console.log(`Processed ${n} lines`))\n  .catch(err => console.error('Failed:', err.message));\n```\n\nNotes: streams keep memory flat regardless of file size. `for await` works on any async iterable.",
+    "keywords": ["node", "streams", "readline", "file", "large"],
+    "category": "Node Requests",
+    "language": "en",
+    "aliases": ["node read large file", "nodejs streams", "read file line by line"]
+  },
+  {
+    "question": "write a python function to implement binary search",
+    "answer": "Iterative and recursive binary search:\n\n```python\ndef binary_search(arr, target):\n    lo, hi = 0, len(arr) - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        if arr[mid] == target:\n            return mid\n        if arr[mid] < target:\n            lo = mid + 1\n        else:\n            hi = mid - 1\n    return -1\n\ndef binary_search_recursive(arr, target, lo=0, hi=None):\n    if hi is None:\n        hi = len(arr) - 1\n    if lo > hi:\n        return -1\n    mid = (lo + hi) // 2\n    if arr[mid] == target:\n        return mid\n    if arr[mid] < target:\n        return binary_search_recursive(arr, target, mid + 1, hi)\n    return binary_search_recursive(arr, target, lo, mid - 1)\n\nif __name__ == '__main__':\n    data = [1, 3, 5, 7, 9, 11, 13]\n    print(binary_search(data, 7))\n    print(binary_search_recursive(data, 7))\n    print(binary_search(data, 4))\n```\n\nNotes: works only on sorted data. Complexity is O(log n) time, O(1) space for iterative.",
+    "keywords": ["python", "binary search", "algorithm", "search"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["binary search python", "binary search code", "search sorted array"]
+  },
+  {
+    "question": "write a python function to compute the edit distance",
+    "answer": "Levenshtein distance with dynamic programming:\n\n```python\ndef edit_distance(a, b):\n    m, n = len(a), len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i-1] == b[j-1]:\n                dp[i][j] = dp[i-1][j-1]\n            else:\n                dp[i][j] = 1 + min(\n                    dp[i-1][j],      # deletion\n                    dp[i][j-1],      # insertion\n                    dp[i-1][j-1],    # substitution\n                )\n    return dp[m][n]\n\nif __name__ == '__main__':\n    print(edit_distance('kitten', 'sitting'))  # 3\n    print(edit_distance('python', 'pyton'))    # 1\n```\n\nNotes: complexity is O(m × n) time and space. Used in spell checkers, DNA comparison, and fuzzy matching.",
+    "keywords": ["python", "levenshtein", "edit distance", "dynamic programming"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["edit distance python", "levenshtein python", "string similarity"]
+  },
+  {
+    "question": "write a python breadth first search",
+    "answer": "BFS on a graph using a queue:\n\n```python\nfrom collections import deque\n\ndef bfs(graph, start):\n    visited = {start}\n    order = []\n    queue = deque([start])\n    while queue:\n        node = queue.popleft()\n        order.append(node)\n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n    return order\n\ndef shortest_path(graph, start, goal):\n    if start == goal:\n        return [start]\n    visited = {start}\n    queue = deque([(start, [start])])\n    while queue:\n        node, path = queue.popleft()\n        for neighbor in graph.get(node, []):\n            if neighbor == goal:\n                return path + [neighbor]\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append((neighbor, path + [neighbor]))\n    return None\n\nif __name__ == '__main__':\n    g = {'A': ['B', 'C'], 'B': ['D'], 'C': ['E'], 'D': [], 'E': ['F'], 'F': []}\n    print(bfs(g, 'A'))\n    print(shortest_path(g, 'A', 'F'))\n```\n\nNotes: BFS finds the shortest path in unweighted graphs. Complexity is O(V + E).",
+    "keywords": ["python", "bfs", "graph", "traversal", "algorithm"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["bfs python", "breadth first search", "graph traversal python"]
+  },
+  {
+    "question": "write a python depth first search",
+    "answer": "DFS iteratively and recursively:\n\n```python\ndef dfs_recursive(graph, node, visited=None):\n    if visited is None:\n        visited = set()\n    if node in visited:\n        return []\n    visited.add(node)\n    order = [node]\n    for neighbor in graph.get(node, []):\n        order.extend(dfs_recursive(graph, neighbor, visited))\n    return order\n\ndef dfs_iterative(graph, start):\n    visited = set()\n    order = []\n    stack = [start]\n    while stack:\n        node = stack.pop()\n        if node in visited:\n            continue\n        visited.add(node)\n        order.append(node)\n        for neighbor in reversed(graph.get(node, [])):\n            if neighbor not in visited:\n                stack.append(neighbor)\n    return order\n\nif __name__ == '__main__':\n    g = {'A': ['B', 'C'], 'B': ['D', 'E'], 'C': ['F'], 'D': [], 'E': [], 'F': []}\n    print(dfs_recursive(g, 'A'))\n    print(dfs_iterative(g, 'A'))\n```\n\nNotes: recursion uses the call stack; iteration uses an explicit stack. Complexity is O(V + E).",
+    "keywords": ["python", "dfs", "graph", "traversal", "algorithm"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["dfs python", "depth first search", "graph dfs"]
+  },
+  {
+    "question": "write a python program to solve knapsack problem",
+    "answer": "0/1 knapsack with dynamic programming:\n\n```python\ndef knapsack(weights, values, capacity):\n    n = len(weights)\n    dp = [[0] * (capacity + 1) for _ in range(n + 1)]\n\n    for i in range(1, n + 1):\n        w, v = weights[i-1], values[i-1]\n        for cap in range(capacity + 1):\n            dp[i][cap] = dp[i-1][cap]\n            if w <= cap:\n                dp[i][cap] = max(dp[i][cap], dp[i-1][cap - w] + v)\n    return dp[n][capacity]\n\ndef knapsack_items(weights, values, capacity):\n    n = len(weights)\n    dp = [[0] * (capacity + 1) for _ in range(n + 1)]\n    for i in range(1, n + 1):\n        w, v = weights[i-1], values[i-1]\n        for cap in range(capacity + 1):\n            dp[i][cap] = dp[i-1][cap]\n            if w <= cap:\n                dp[i][cap] = max(dp[i][cap], dp[i-1][cap - w] + v)\n\n    chosen = []\n    cap = capacity\n    for i in range(n, 0, -1):\n        if dp[i][cap] != dp[i-1][cap]:\n            chosen.append(i - 1)\n            cap -= weights[i-1]\n    return dp[n][capacity], list(reversed(chosen))\n\nif __name__ == '__main__':\n    weights = [2, 3, 4, 5]\n    values = [3, 4, 5, 6]\n    print(knapsack(weights, values, 5))\n    print(knapsack_items(weights, values, 5))\n```\n\nNotes: O(n × capacity) time and space. The item reconstruction walks backward through the table to find which items were chosen.",
+    "keywords": ["python", "knapsack", "dynamic programming", "optimization"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["knapsack python", "0/1 knapsack", "dynamic programming knapsack"]
+  },
+  {
+    "question": "write a python class for a stack",
+    "answer": "A stack implemented with a list:\n\n```python\nclass Stack:\n    def __init__(self):\n        self._items = []\n\n    def push(self, item):\n        self._items.append(item)\n\n    def pop(self):\n        if self.is_empty():\n            raise IndexError('pop from empty stack')\n        return self._items.pop()\n\n    def peek(self):\n        if self.is_empty():\n            raise IndexError('peek from empty stack')\n        return self._items[-1]\n\n    def is_empty(self):\n        return len(self._items) == 0\n\n    def __len__(self):\n        return len(self._items)\n\n    def __repr__(self):\n        return f'Stack({self._items})'\n\nif __name__ == '__main__':\n    s = Stack()\n    s.push(1)\n    s.push(2)\n    s.push(3)\n    print(s)\n    print(s.pop())\n    print(s.peek())\n    print(len(s))\n```\n\nNotes: LIFO order; `pop` and `peek` raise on empty rather than returning `None`.",
+    "keywords": ["python", "stack", "data structure", "lifo"],
+    "category": "Data Structures",
+    "language": "en",
+    "aliases": ["python stack class", "stack implementation", "lifo python"]
+  },
+  {
+    "question": "write a python class for a queue",
+    "answer": "A queue using `collections.deque` for O(1) operations:\n\n```python\nfrom collections import deque\n\nclass Queue:\n    def __init__(self):\n        self._items = deque()\n\n    def enqueue(self, item):\n        self._items.append(item)\n\n    def dequeue(self):\n        if self.is_empty():\n            raise IndexError('dequeue from empty queue')\n        return self._items.popleft()\n\n    def front(self):\n        if self.is_empty():\n            raise IndexError('front of empty queue')\n        return self._items[0]\n\n    def is_empty(self):\n        return len(self._items) == 0\n\n    def __len__(self):\n        return len(self._items)\n\nif __name__ == '__main__':\n    q = Queue()\n    q.enqueue('a')\n    q.enqueue('b')\n    q.enqueue('c')\n    print(q.dequeue())\n    print(q.front())\n    print(len(q))\n```\n\nNotes: `deque.popleft()` is O(1); using `list.pop(0)` would be O(n).",
+    "keywords": ["python", "queue", "data structure", "fifo", "deque"],
+    "category": "Data Structures",
+    "language": "en",
+    "aliases": ["python queue class", "queue implementation", "fifo python"]
+  },
+  {
+    "question": "write a python trie data structure",
+    "answer": "A trie (prefix tree) for fast string lookup:\n\n```python\nclass Trie:\n    def __init__(self):\n        self.root = {}\n        self.end = '__end__'\n\n    def insert(self, word):\n        node = self.root\n        for ch in word:\n            node = node.setdefault(ch, {})\n        node[self.end] = True\n\n    def search(self, word):\n        node = self.root\n        for ch in word:\n            if ch not in node:\n                return False\n            node = node[ch]\n        return self.end in node\n\n    def starts_with(self, prefix):\n        node = self.root\n        for ch in prefix:\n            if ch not in node:\n                return False\n            node = node[ch]\n        return True\n\n    def autocomplete(self, prefix):\n        node = self.root\n        for ch in prefix:\n            if ch not in node:\n                return []\n            node = node[ch]\n        results = []\n        def walk(n, path):\n            if self.end in n:\n                results.append(prefix + path)\n            for ch, child in n.items():\n                if ch != self.end:\n                    walk(child, path + ch)\n        walk(node, '')\n        return results\n\nif __name__ == '__main__':\n    t = Trie()\n    for w in ['cat', 'car', 'card', 'care', 'dog']:\n        t.insert(w)\n    print(t.search('card'))\n    print(t.starts_with('ca'))\n    print(t.autocomplete('car'))\n```\n\nNotes: O(k) per operation where k is the word length. `autocomplete` walks the subtree under a prefix.",
+    "keywords": ["python", "trie", "prefix tree", "autocomplete", "data structure"],
+    "category": "Data Structures",
+    "language": "en",
+    "aliases": ["trie python", "prefix tree", "autocomplete trie"]
+  },
+  {
+    "question": "write a python min heap",
+    "answer": "A min heap using `heapq` and a custom class:\n\n```python\nimport heapq\n\ndef min_heap_demo():\n    h = []\n    for n in [5, 3, 8, 1, 4]:\n        heapq.heappush(h, n)\n    result = []\n    while h:\n        result.append(heapq.heappop(h))\n    return result\n\ndef k_smallest(values, k):\n    return heapq.nsmallest(k, values)\n\ndef k_largest(values, k):\n    return heapq.nlargest(k, values)\n\nif __name__ == '__main__':\n    print(min_heap_demo())\n    data = [9, 3, 7, 1, 5, 8, 2]\n    print(k_smallest(data, 3))\n    print(k_largest(data, 3))\n```\n\nNotes: `heapq` gives a min heap by default. For a max heap, push negatives. Push/pop are O(log n); peek is O(1).",
+    "keywords": ["python", "heap", "heapq", "priority queue"],
+    "category": "Data Structures",
+    "language": "en",
+    "aliases": ["python heap", "min heap", "heapq example"]
+  },
+  {
+    "question": "write the singleton pattern in python",
+    "answer": "Three ways to implement singleton in Python:\n\n```python\n# Method 1: __new__ override\nclass Singleton1:\n    _instance = None\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n\n# Method 2: module-level instance (simplest and most Pythonic)\nclass _Config:\n    def __init__(self):\n        self.settings = {}\n\nconfig = _Config()  # import this\n\n# Method 3: metaclass\nclass SingletonMeta(type):\n    _instances = {}\n    def __call__(cls, *args, **kwargs):\n        if cls not in cls._instances:\n            cls._instances[cls] = super().__call__(*args, **kwargs)\n        return cls._instances[cls]\n\nclass Singleton3(metaclass=SingletonMeta):\n    pass\n\nif __name__ == '__main__':\n    a = Singleton1()\n    b = Singleton1()\n    print(a is b)  # True\n    print(Singleton3() is Singleton3())  # True\n```\n\nNotes: prefer a module-level instance over a class-based singleton in Python — simpler and more explicit.",
+    "keywords": ["python", "singleton", "pattern", "design"],
+    "category": "Design Patterns",
+    "language": "en",
+    "aliases": ["singleton python", "singleton pattern", "python design pattern"]
+  },
+  {
+    "question": "write the factory pattern in python",
+    "answer": "Factory pattern with a registry:\n\n```python\nfrom abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self): ...\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    def area(self):\n        return 3.14159 * self.radius ** 2\n\nclass Rectangle(Shape):\n    def __init__(self, w, h):\n        self.w, self.h = w, h\n    def area(self):\n        return self.w * self.h\n\nclass ShapeFactory:\n    _registry = {}\n\n    @classmethod\n    def register(cls, name, shape_cls):\n        cls._registry[name] = shape_cls\n\n    @classmethod\n    def create(cls, name, *args, **kwargs):\n        if name not in cls._registry:\n            raise ValueError(f'Unknown shape: {name}')\n        return cls._registry[name](*args, **kwargs)\n\nShapeFactory.register('circle', Circle)\nShapeFactory.register('rectangle', Rectangle)\n\nif __name__ == '__main__':\n    for name, args in [('circle', (5,)), ('rectangle', (4, 6))]:\n        shape = ShapeFactory.create(name, *args)\n        print(name, shape.area())\n```\n\nNotes: the registry makes the factory extensible — new shapes register themselves without changing the factory.",
+    "keywords": ["python", "factory", "pattern", "design", "abstract"],
+    "category": "Design Patterns",
+    "language": "en",
+    "aliases": ["factory pattern python", "factory method", "python factory"]
+  },
+  {
+    "question": "write the observer pattern in python",
+    "answer": "Observer pattern for event notification:\n\n```python\nclass Observable:\n    def __init__(self):\n        self._observers = []\n\n    def subscribe(self, observer):\n        self._observers.append(observer)\n        return lambda: self._observers.remove(observer)\n\n    def notify(self, event):\n        for observer in list(self._observers):\n            observer(event)\n\nclass Store(Observable):\n    def __init__(self):\n        super().__init__()\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n        self.notify({'type': 'added', 'item': item, 'count': len(self.items)})\n\nif __name__ == '__main__':\n    store = Store()\n    unsubscribe = store.subscribe(lambda e: print('Logger:', e))\n    store.subscribe(lambda e: print('UI updated, total:', e['count']))\n\n    store.add('apple')\n    store.add('banana')\n\n    unsubscribe()\n    store.add('cherry')\n```\n\nNotes: `subscribe` returns an unsubscribe function — a clean way to detach. Always iterate over a copy of the list so unsubscribes during notification are safe.",
+    "keywords": ["python", "observer", "pattern", "events", "pubsub"],
+    "category": "Design Patterns",
+    "language": "en",
+    "aliases": ["observer pattern python", "pubsub pattern", "event pattern python"]
+  },
+  {
+    "question": "write a unit test in python with pytest",
+    "answer": "Pytest tests with fixtures and parametrize:\n\n```python\n# math_utils.py\nimport pytest\nfrom math import sqrt\n\ndef is_prime(n):\n    if n < 2: return False\n    for i in range(2, int(sqrt(n)) + 1):\n        if n % i == 0: return False\n    return True\n\n# test_math_utils.py\n@pytest.mark.parametrize('n,expected', [\n    (1, False),\n    (2, True),\n    (3, True),\n    (4, False),\n    (17, True),\n    (100, False),\n])\ndef test_is_prime(n, expected):\n    assert is_prime(n) is expected\n\n@pytest.fixture\ndef sample_numbers():\n    return [2, 3, 5, 7, 11]\n\ndef test_all_prime(sample_numbers):\n    assert all(is_prime(n) for n in sample_numbers)\n\ndef test_raises_on_invalid():\n    with pytest.raises(TypeError):\n        is_prime('hello')\n```\n\nRun with `pytest -v`. Notes: `parametrize` runs the test once per tuple; `fixture` injects reusable setup; `pytest.raises` asserts an exception is raised.",
+    "keywords": ["python", "pytest", "testing", "unit test", "fixture"],
+    "category": "Testing",
+    "language": "en",
+    "aliases": ["pytest example", "python unit test", "write tests python"]
+  },
+  {
+    "question": "write a javascript jest test",
+    "answer": "Testing a function with Jest:\n\n```javascript\n// math.js\nexport function add(a, b) {\n  return a + b;\n}\n\nexport function divide(a, b) {\n  if (b === 0) throw new Error('Division by zero');\n  return a / b;\n}\n\n// math.test.js\nimport { add, divide } from './math';\n\ndescribe('add', () => {\n  test('adds positive numbers', () => {\n    expect(add(2, 3)).toBe(5);\n  });\n\n  test('handles negatives', () => {\n    expect(add(-2, 3)).toBe(1);\n  });\n\n  test.each([\n    [1, 1, 2],\n    [5, 10, 15],\n    [0, 0, 0],\n  ])('add(%i, %i) = %i', (a, b, expected) => {\n    expect(add(a, b)).toBe(expected);\n  });\n});\n\ndescribe('divide', () => {\n  test('divides', () => {\n    expect(divide(10, 2)).toBe(5);\n  });\n\n  test('throws on zero', () => {\n    expect(() => divide(1, 0)).toThrow('Division by zero');\n  });\n});\n```\n\nRun with `npx jest`. Notes: `test.each` runs a table of cases; `toThrow` asserts an exception.",
+    "keywords": ["javascript", "jest", "testing", "unit test"],
+    "category": "Testing",
+    "language": "en",
+    "aliases": ["jest test example", "javascript unit test", "js test"]
+  },
+  {
+    "question": "write common git commands",
+    "answer": "Essential Git workflow commands:\n\n```bash\n# Setup\ngit config --global user.name 'Your Name'\ngit config --global user.email 'you@example.com'\n\n# Start a repo\ngit init\ngit clone https://github.com/user/repo.git\n\n# Daily work\ngit status\ngit add file.txt\ngit add .\ngit commit -m 'Add feature'\ngit diff\ngit log --oneline --graph\n\n# Branching\ngit branch feature\ngit checkout feature        # or: git switch feature\ngit checkout -b new-branch\ngit merge feature\ngit branch -d feature\n\n# Remote\ngit remote -v\ngit pull origin main\ngit push origin main\ngit push -u origin feature\n\n# Fixing\ngit restore file.txt        # discard changes\ngit reset HEAD~1            # uncommit last (keep changes)\ngit reset --hard HEAD~1     # uncommit and discard\ngit revert <commit>         # create a new commit that undoes\ngit stash\ngit stash pop\n\n# Inspecting\ngit show <commit>\ngit blame file.txt\ngit bisect start\n```\n\nNotes: `git pull` is `fetch + merge`. Prefer `git pull --rebase` to keep history linear.",
+    "keywords": ["git", "commands", "version control", "workflow"],
+    "category": "Tools",
+    "language": "en",
+    "aliases": ["git cheat sheet", "git commands", "essential git"]
+  },
+  {
+    "question": "write a dockerfile for a node app",
+    "answer": "A production-ready Dockerfile for Node.js:\n\n```dockerfile\nFROM node:20-alpine AS base\nWORKDIR /app\n\n# Install dependencies first (better layer caching)\nCOPY package*.json ./\nRUN npm ci --only=production\n\n# Copy source\nCOPY . .\n\n# Create non-root user\nRUN addgroup -S app && adduser -S app -G app\nUSER app\n\nENV NODE_ENV=production\nEXPOSE 3000\n\nCMD [\"node\", \"server.js\"]\n```\n\nBuild and run:\n\n```bash\ndocker build -t myapp:1.0 .\ndocker run -p 3000:3000 -d --name myapp myapp:1.0\ndocker logs myapp\ndocker stop myapp\n```\n\nNotes: `npm ci` uses the lockfile for reproducible installs. `alpine` is small. Always run as a non-root user in production.",
+    "keywords": ["docker", "dockerfile", "node", "container", "devops"],
+    "category": "DevOps",
+    "language": "en",
+    "aliases": ["dockerfile node", "docker node app", "nodejs dockerfile"]
+  },
+  {
+    "question": "write a docker-compose file for web and database",
+    "answer": "Multi-container setup with a web app and PostgreSQL:\n\n```yaml\nversion: '3.9'\n\nservices:\n  web:\n    build: .\n    ports:\n      - '3000:3000'\n    environment:\n      DATABASE_URL: postgres://user:secret@db:5432/app\n      NODE_ENV: production\n    depends_on:\n      db:\n        condition: service_healthy\n    restart: unless-stopped\n\n  db:\n    image: postgres:16-alpine\n    environment:\n      POSTGRES_USER: user\n      POSTGRES_PASSWORD: secret\n      POSTGRES_DB: app\n    volumes:\n      - pgdata:/var/lib/postgresql/data\n    healthcheck:\n      test: ['CMD-SHELL', 'pg_isready -U user']\n      interval: 5s\n      timeout: 3s\n      retries: 5\n\nvolumes:\n  pgdata:\n```\n\nRun:\n\n```bash\ndocker compose up -d\ndocker compose logs -f web\ndocker compose down\n```\n\nNotes: the named volume `pgdata` persists database data between restarts. `depends_on` with `condition: service_healthy` waits for the DB to be ready.",
+    "keywords": ["docker", "compose", "postgres", "web", "devops"],
+    "category": "DevOps",
+    "language": "en",
+    "aliases": ["docker compose example", "docker web database", "compose file"]
+  },
+  {
+    "question": "write common regex patterns",
+    "answer": "A collection of useful regex patterns with explanations:\n\n```javascript\n// Email (simple, not full RFC)\n/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/\n\n// URL\n/^https?:\\/\\/[^\\s]+$/\n\n// Phone (US)\n/^\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}$/\n\n// Date YYYY-MM-DD\n/^(\\d{4})-(\\d{2})-(\\d{2})$/\n\n// Time HH:MM (24h)\n/^([01]\\d|2[0-3]):[0-5]\\d$/\n\n// Hex color\n/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/\n\n// Strong password (8+ chars, upper, lower, digit)\n/^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$/\n\n// Slug (kebab-case)\n/^[a-z0-9]+(?:-[a-z0-9]+)*$/\n\n// IPv4\n/^(\\d{1,3}\\.){3}\\d{1,3}$/\n\n// Test them\nconst tests = [\n  ['email', /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/, 'a@b.com'],\n  ['date', /^(\\d{4})-(\\d{2})-(\\d{2})$/, '2024-05-14'],\n];\ntests.forEach(([name, re, sample]) => console.log(name, re.test(sample)));\n```\n\nNotes: `^` and `$` anchor to start/end. `\\d` is a digit, `\\w` is a word character, `\\s` is whitespace. Lookaheads `(?=...)` assert without consuming.",
+    "keywords": ["regex", "javascript", "patterns", "validation"],
+    "category": "Regex",
+    "language": "en",
+    "aliases": ["regex patterns", "common regex", "regex examples"]
+  },
+  {
+    "question": "write a python script to generate a qr code",
+    "answer": "Generating a QR code with the `qrcode` library:\n\n```python\nimport qrcode\nfrom qrcode.image.styledpil import StyledPilImage\n\ndef make_qr(data, path='qr.png'):\n    qr = qrcode.QRCode(\n        version=None,\n        error_correction=qrcode.constants.ERROR_CORRECT_M,\n        box_size=10,\n        border=4,\n    )\n    qr.add_data(data)\n    qr.make(fit=True)\n    img = qr.make_image(fill_color='black', back_color='white')\n    img.save(path)\n    print(f'Saved {path}')\n\nif __name__ == '__main__':\n    make_qr('https://example.com')\n```\n\nInstall with `pip install qrcode[pil]`. Notes: higher `error_correction` allows the QR to still scan if partially damaged; `box_size` controls pixel density.",
+    "keywords": ["python", "qr code", "image", "qrcode"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["qr code python", "generate qr", "python qr"]
+  },
+  {
+    "question": "write a python script to send an http request",
+    "answer": "HTTP requests with `requests`:\n\n```python\nimport requests\nfrom requests.exceptions import RequestException, Timeout\n\ndef fetch_json(url, timeout=10):\n    try:\n        response = requests.get(url, timeout=timeout, headers={\n            'User-Agent': 'MyApp/1.0',\n            'Accept': 'application/json',\n        })\n        response.raise_for_status()\n        return response.json()\n    except Timeout:\n        print('Request timed out')\n    except RequestException as e:\n        print(f'Request failed: {e}')\n    return None\n\ndef post_json(url, payload):\n    response = requests.post(url, json=payload, timeout=10)\n    response.raise_for_status()\n    return response.json()\n\nif __name__ == '__main__':\n    data = fetch_json('https://jsonplaceholder.typicode.com/users/1')\n    if data:\n        print(data['name'])\n```\n\nInstall with `pip install requests`. Notes: always set a timeout — otherwise requests can hang forever. `raise_for_status()` throws on 4xx/5xx.",
+    "keywords": ["python", "requests", "http", "api", "client"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python http request", "requests library", "python api call"]
+  },
+  {
+    "question": "write a python script to send an email",
+    "answer": "Sending email over SMTP with the standard library:\n\n```python\nimport smtplib\nimport ssl\nfrom email.message import EmailMessage\nfrom getpass import getpass\n\ndef send_email(smtp_server, port, sender, password, recipient, subject, body):\n    msg = EmailMessage()\n    msg['From'] = sender\n    msg['To'] = recipient\n    msg['Subject'] = subject\n    msg.set_content(body)\n\n    context = ssl.create_default_context()\n    with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:\n        server.login(sender, password)\n        server.send_message(msg)\n    print('Email sent')\n\nif __name__ == '__main__':\n    send_email(\n        smtp_server='smtp.gmail.com',\n        port=465,\n        sender='you@gmail.com',\n        password=getpass('App password: '),\n        recipient='friend@example.com',\n        subject='Hello',\n        body='This is a test.',\n    )\n```\n\nNotes: for Gmail, use an app password, not your account password. Never hardcode credentials — read them from environment variables.",
+    "keywords": ["python", "email", "smtp", "ssl"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python send email", "smtp python", "email script"]
+  },
+  {
+    "question": "write a python script to hash a password",
+    "answer": "Password hashing with `bcrypt`:\n\n```python\nimport bcrypt\n\ndef hash_password(password):\n    if not isinstance(password, str) or len(password) < 8:\n        raise ValueError('Password must be at least 8 characters')\n    salt = bcrypt.gensalt(rounds=12)\n    return bcrypt.hashpw(password.encode('utf-8'), salt)\n\ndef verify_password(password, hashed):\n    try:\n        return bcrypt.checkpw(password.encode('utf-8'), hashed)\n    except ValueError:\n        return False\n\nif __name__ == '__main__':\n    hashed = hash_password('correct horse battery staple')\n    print(hashed)\n    print(verify_password('correct horse battery staple', hashed))\n    print(verify_password('wrong', hashed))\n```\n\nInstall with `pip install bcrypt`. Notes: never use MD5 or SHA-1 for passwords — they are too fast. bcrypt is slow on purpose to resist brute force.",
+    "keywords": ["python", "bcrypt", "password", "hash", "security"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["bcrypt python", "password hashing", "secure password hash"]
+  },
+  {
+    "question": "write a python program to split a list into chunks",
+    "answer": "Splitting a list into fixed-size chunks:\n\n```python\ndef chunk_list(values, size):\n    if size < 1:\n        raise ValueError('size must be at least 1')\n    return [values[i:i + size] for i in range(0, len(values), size)]\n\ndef chunk_iter(values, size):\n    for i in range(0, len(values), size):\n        yield values[i:i + size]\n\nif __name__ == '__main__':\n    nums = list(range(10))\n    print(chunk_list(nums, 3))\n    for c in chunk_iter(nums, 4):\n        print(c)\n```\n\nNotes: the generator version is lazy and memory-friendly for large lists.",
+    "keywords": ["python", "list", "chunk", "split"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["chunk list python", "split list", "python chunks"]
+  },
+  {
+    "question": "write a python program to find duplicate elements",
+    "answer": "Finding duplicates in a list with several methods:\n\n```python\nfrom collections import Counter\n\ndef duplicates_counter(values):\n    counts = Counter(values)\n    return [item for item, count in counts.items() if count > 1]\n\ndef duplicates_set(values):\n    seen = set()\n    dupes = set()\n    for v in values:\n        if v in seen:\n            dupes.add(v)\n        seen.add(v)\n    return list(dupes)\n\ndef first_duplicate(values):\n    seen = set()\n    for v in values:\n        if v in seen:\n            return v\n        seen.add(v)\n    return None\n\nif __name__ == '__main__':\n    data = [1, 2, 3, 2, 4, 5, 3, 6, 3]\n    print(duplicates_counter(data))\n    print(duplicates_set(data))\n    print(first_duplicate(data))\n```\n\nNotes: `Counter` gives you the full count in one pass; `duplicates_set` is O(n) but loses order; `first_duplicate` returns as soon as a duplicate is found.",
+    "keywords": ["python", "duplicates", "list", "counter"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["find duplicates python", "duplicate elements", "python duplicates"]
+  },
+  {
+    "question": "write a python program to flatten a nested list",
+    "answer": "Flattening nested lists with several approaches:\n\n```python\ndef flatten_recursive(values):\n    result = []\n    for v in values:\n        if isinstance(v, list):\n            result.extend(flatten_recursive(v))\n        else:\n            result.append(v)\n    return result\n\ndef flatten_iterative(values):\n    stack = list(values)\n    result = []\n    while stack:\n        item = stack.pop()\n        if isinstance(item, list):\n            stack.extend(reversed(item))\n        else:\n            result.append(item)\n    return result\n\ndef flatten_any_depth(values, max_depth=None):\n    def _walk(node, depth):\n        for v in node:\n            if isinstance(v, list) and (max_depth is None or depth < max_depth):\n                yield from _walk(v, depth + 1)\n            else:\n                yield v\n    return list(_walk(values, 0))\n\nif __name__ == '__main__':\n    data = [1, [2, 3, [4, 5]], 6, [7, [8, [9]]]]\n    print(flatten_recursive(data))\n    print(flatten_iterative(data))\n    print(flatten_any_depth(data, max_depth=1))\n```\n\nNotes: recursive is simplest; iterative avoids stack overflow; `max_depth` allows partial flattening.",
+    "keywords": ["python", "flatten", "nested list", "recursion"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["flatten list python", "nested list flatten", "python flatten"]
+  },
+  {
+    "question": "write a python program to remove duplicates from a list while preserving order",
+    "answer": "Order-preserving deduplication:\n\n```python\ndef dedupe(values):\n    seen = set()\n    result = []\n    for v in values:\n        if v not in seen:\n            seen.add(v)\n            result.append(v)\n    return result\n\ndef dedupe_hashable(values):\n    return list(dict.fromkeys(values))\n\ndef dedupe_by_key(values, key_fn):\n    seen = set()\n    result = []\n    for v in values:\n        k = key_fn(v)\n        if k not in seen:\n            seen.add(k)\n            result.append(v)\n    return result\n\nif __name__ == '__main__':\n    data = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]\n    print(dedupe(data))\n    print(dedupe_hashable(data))\n\n    people = [{'id': 1, 'name': 'Alice'}, {'id': 2, 'name': 'Bob'}, {'id': 1, 'name': 'Alice2'}]\n    print(dedupe_by_key(people, lambda p: p['id']))\n```\n\nNotes: `dict.fromkeys` is the fastest one-liner for hashable items; `dedupe_by_key` handles non-hashable dicts by choosing a key.",
+    "keywords": ["python", "dedupe", "unique", "order"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["remove duplicates list", "python unique list", "dedupe python"]
+  },
+  {
+    "question": "write a python asyncio example",
+    "answer": "Concurrent I/O with `asyncio`:\n\n```python\nimport asyncio\nimport time\n\nasync def fetch(name, delay):\n    print(f'start {name}')\n    await asyncio.sleep(delay)\n    print(f'done {name}')\n    return f'{name}:{delay}'\n\nasync def main():\n    start = time.perf_counter()\n\n    # Sequential\n    await fetch('A', 0.3)\n    await fetch('B', 0.3)\n    seq = time.perf_counter() - start\n\n    # Concurrent\n    start = time.perf_counter()\n    results = await asyncio.gather(\n        fetch('X', 0.3),\n        fetch('Y', 0.3),\n        fetch('Z', 0.3),\n    )\n    con = time.perf_counter() - start\n\n    print(f'Sequential: {seq:.2f}s')\n    print(f'Concurrent: {con:.2f}s')\n    print(results)\n\nif __name__ == '__main__':\n    asyncio.run(main())\n```\n\nNotes: `asyncio.gather` runs coroutines concurrently. Sequential takes ~0.6s; concurrent takes ~0.3s. Use for network I/O, not CPU work.",
+    "keywords": ["python", "asyncio", "async", "concurrency", "await"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["asyncio python", "python async", "asyncio gather"]
+  },
+  {
+    "question": "write a python dataclass example",
+    "answer": "Using `@dataclass` for simple data containers:\n\n```python\nfrom dataclasses import dataclass, field\nfrom typing import List\nfrom datetime import datetime\n\n@dataclass\nclass Product:\n    id: int\n    name: str\n    price: float\n    tags: List[str] = field(default_factory=list)\n    created: datetime = field(default_factory=datetime.now)\n\n    def __post_init__(self):\n        if self.price < 0:\n            raise ValueError('Price cannot be negative')\n\n    @property\n    def discounted(self):\n        return self.price * 0.9\n\n@dataclass(frozen=True)\nclass Point:\n    x: float\n    y: float\n\nif __name__ == '__main__':\n    p = Product(1, 'Widget', 9.99, ['sale', 'new'])\n    print(p)\n    print(p.discounted)\n\n    pt = Point(1.0, 2.0)\n    # pt.x = 3  # raises FrozenInstanceError\n    print(pt)\n```\n\nNotes: `@dataclass` generates `__init__`, `__repr__`, and `__eq__`. `frozen=True` makes it immutable. Use `field(default_factory=...)` for mutable defaults.",
+    "keywords": ["python", "dataclass", "typing", "immutable"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python dataclass", "dataclass example", "python data class"]
+  },
+  {
+    "question": "write a python type hints example",
+    "answer": "Using type hints for clarity and tooling:\n\n```python\nfrom typing import Optional, Union, List, Dict, Callable, Iterable\n\ndef greet(name: str, age: Optional[int] = None) -> str:\n    if age is None:\n        return f'Hello, {name}!'\n    return f'Hello, {name}! You are {age}.'\n\ndef process(items: Iterable[int], transform: Callable[[int], int]) -> List[int]:\n    return [transform(x) for x in items]\n\ndef config() -> Dict[str, Union[str, int, bool]]:\n    return {'debug': True, 'port': 8080, 'host': 'localhost'}\n\nclass User:\n    def __init__(self, name: str, age: int) -> None:\n        self.name = name\n        self.age = age\n\nif __name__ == '__main__':\n    print(greet('Alice', 30))\n    print(process([1, 2, 3], lambda x: x * 2))\n    print(config())\n```\n\nNotes: type hints are not enforced at runtime but checked by tools like mypy, pyright, and modern IDEs.",
+    "keywords": ["python", "typing", "type hints", "mypy"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python type hints", "typing python", "python annotations"]
+  },
+  {
+    "question": "write a python logging setup",
+    "answer": "Proper logging configuration:\n\n```python\nimport logging\nfrom logging.handlers import RotatingFileHandler\nimport sys\n\ndef setup_logging(level=logging.INFO, log_file='app.log'):\n    logger = logging.getLogger()\n    logger.setLevel(level)\n\n    # Console handler\n    console = logging.StreamHandler(sys.stdout)\n    console.setLevel(level)\n    console.setFormatter(logging.Formatter(\n        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\n    ))\n\n    # Rotating file handler\n    file_handler = RotatingFileHandler(\n        log_file, maxBytes=10 * 1024 * 1024, backupCount=5\n    )\n    file_handler.setFormatter(logging.Formatter(\n        '%(asctime)s - %(name)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s'\n    ))\n\n    logger.addHandler(console)\n    logger.addHandler(file_handler)\n    return logger\n\nif __name__ == '__main__':\n    log = setup_logging()\n    log.debug('This is a debug message')\n    log.info('Application started')\n    log.warning('Something looks off')\n    log.error('Something failed')\n    try:\n        1 / 0\n    except ZeroDivisionError:\n        log.exception('Caught an exception')\n```\n\nNotes: `RotatingFileHandler` caps file size and keeps `backupCount` backups. `log.exception` automatically includes the traceback.",
+    "keywords": ["python", "logging", "log", "rotating", "debug"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python logging", "logging setup", "python log file"]
+  },
+  {
+    "question": "write a python script to download a file from url",
+    "answer": "Downloading a file with progress reporting:\n\n```python\nimport requests\nfrom pathlib import Path\n\ndef download(url, dest, chunk_size=8192):\n    dest = Path(dest)\n    with requests.get(url, stream=True, timeout=30) as r:\n        r.raise_for_status()\n        total = int(r.headers.get('content-length', 0))\n        downloaded = 0\n        with dest.open('wb') as f:\n            for chunk in r.iter_content(chunk_size=chunk_size):\n                if chunk:\n                    f.write(chunk)\n                    downloaded += len(chunk)\n                    if total:\n                        pct = downloaded / total * 100\n                        print(f'\\r{pct:5.1f}% ({downloaded}/{total})', end='', flush=True)\n    print()\n    print(f'Saved to {dest}')\n\nif __name__ == '__main__':\n    download('https://example.com/file.zip', 'file.zip')\n```\n\nNotes: `stream=True` downloads in chunks instead of buffering the whole file in memory. Always set a timeout.",
+    "keywords": ["python", "download", "http", "file", "requests"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["download file python", "python download url", "file downloader"]
+  },
+  {
+    "question": "write a python script to parse command line arguments with click",
+    "answer": "Using `click` for a nice CLI:\n\n```python\nimport click\n\n@click.group()\n@click.option('--verbose', '-v', is_flag=True, help='Enable verbose output')\n@click.pass_context\ndef cli(ctx, verbose):\n    ctx.ensure_object(dict)\n    ctx.obj['verbose'] = verbose\n\n@cli.command()\n@click.argument('name')\n@click.option('--count', '-c', default=1, help='Number of greetings')\n@click.pass_context\ndef hello(ctx, name, count):\n    if ctx.obj['verbose']:\n        click.echo(f'Verbose mode on, count={count}')\n    for _ in range(count):\n        click.echo(f'Hello, {name}!')\n\n@cli.command()\n@click.argument('path', type=click.Path(exists=True))\n@click.option('--lines', default=10, type=int)\ndef head(path, lines):\n    with open(path) as f:\n        for _ in range(lines):\n            line = f.readline()\n            if not line:\n                break\n            click.echo(line, nl=False)\n\nif __name__ == '__main__':\n    cli(obj={})\n```\n\nRun with `pip install click`. Usage: `python cli.py -v hello Alice -c 3` or `python cli.py head data.txt --lines 5`.",
+    "keywords": ["python", "click", "cli", "arguments", "commands"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python click cli", "click example", "python command line"]
+  },
+  {
+    "question": "write a python script to test an api with pytest",
+    "answer": "Testing an API using pytest and httpx:\n\n```python\nimport pytest\nfrom httpx import AsyncClient, ASGITransport\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get('/items')\ndef list_items():\n    return [{'id': 1, 'name': 'apple'}]\n\n@app.post('/items')\ndef create_item(item: dict):\n    return {'id': 2, **item}\n\n@pytest.mark.asyncio\nasync def test_list_items():\n    async with AsyncClient(transport=ASGITransport(app=app), base_url='http://test') as client:\n        res = await client.get('/items')\n    assert res.status_code == 200\n    assert res.json() == [{'id': 1, 'name': 'apple'}]\n\n@pytest.mark.asyncio\nasync def test_create_item():\n    async with AsyncClient(transport=ASGITransport(app=app), base_url='http://test') as client:\n        res = await client.post('/items', json={'name': 'banana'})\n    assert res.status_code == 200\n    assert res.json()['name'] == 'banana'\n```\n\nInstall with `pip install pytest httpx fastapi asyncio`. Notes: `ASGITransport` runs the FastAPI app in-process — no server needed.",
+    "keywords": ["python", "pytest", "api", "testing", "fastapi"],
+    "category": "Testing",
+    "language": "en",
+    "aliases": ["test api python", "pytest api example", "python api test"]
+  },
+  {
+    "question": "write a python script to parse html",
+    "answer": "Parsing HTML with BeautifulSoup:\n\n```python\nfrom bs4 import BeautifulSoup\nimport requests\n\nHTML = '''\n<html>\n  <body>\n    <h1>Title</h1>\n    <ul>\n      <li><a href='/a'>Link A</a></li>\n      <li><a href='/b'>Link B</a></li>\n      <li><a href='/c'>Link C</a></li>\n    </ul>\n  </body>\n</html>\n'''\n\ndef parse(html):\n    soup = BeautifulSoup(html, 'html.parser')\n    title = soup.find('h1').get_text(strip=True)\n    links = [(a.get_text(strip=True), a['href']) for a in soup.find_all('a', href=True)]\n    return title, links\n\nif __name__ == '__main__':\n    title, links = parse(HTML)\n    print('Title:', title)\n    for text, href in links:\n        print(f'{text} -> {href}')\n```\n\nInstall with `pip install beautifulsoup4`. Notes: `'html.parser'` is built into Python; for malformed HTML use `lxml` for speed and robustness.",
+    "keywords": ["python", "html", "beautifulsoup", "parsing", "scraping"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["parse html python", "beautifulsoup example", "python html scraper"]
+  },
+  {
+    "question": "write a python script to schedule a task",
+    "answer": "Running tasks on a schedule with `schedule` and with `threading.Timer`:\n\n```python\nimport schedule\nimport time\nfrom datetime import datetime\n\ndef job():\n    print('Running job at', datetime.now())\n\ndef with_schedule():\n    schedule.every(5).seconds.do(job)\n    schedule.every().day.at('09:00').do(job)\n    schedule.every().monday.at('12:00').do(job)\n\n    while True:\n        schedule.run_pending()\n        time.sleep(1)\n\n# Alternative without extra library\nimport threading\n\ndef repeat(interval, fn):\n    fn()\n    threading.Timer(interval, repeat, args=[interval, fn]).start()\n\nif __name__ == '__main__':\n    # repeat(5, job)\n    with_schedule()\n```\n\nInstall with `pip install schedule`. Notes: for production use a proper scheduler like APScheduler, or system cron.",
+    "keywords": ["python", "schedule", "task", "timer", "cron"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["schedule task python", "python timer", "scheduled job"]
+  },
+  {
+    "question": "write a python script to generate random data",
+    "answer": "Generating random test data with `faker`:\n\n```python\nfrom faker import Faker\nimport random\n\nfake = Faker()\nFaker.seed(42)\nrandom.seed(42)\n\ndef make_users(n=5):\n    users = []\n    for _ in range(n):\n        users.append({\n            'name': fake.name(),\n            'email': fake.email(),\n            'address': fake.address().replace('\\n', ', '),\n            'phone': fake.phone_number(),\n            'company': fake.company(),\n            'birthdate': fake.date_of_birth(minimum_age=18, maximum_age=80).isoformat(),\n            'age': random.randint(18, 80),\n            'score': round(random.uniform(0, 100), 2),\n        })\n    return users\n\nif __name__ == '__main__':\n    for u in make_users(3):\n        print(u)\n```\n\nInstall with `pip install faker`. Notes: seeding makes output reproducible — handy for tests.",
+    "keywords": ["python", "faker", "random", "test data", "mock"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["generate fake data python", "faker example", "random test data"]
+  },
+  {
+    "question": "write a python script for simple encryption",
+    "answer": "Symmetric encryption with `cryptography`:\n\n```python\nfrom cryptography.fernet import Fernet\nimport os\n\ndef generate_key():\n    return Fernet.generate_key()\n\ndef encrypt(message, key):\n    f = Fernet(key)\n    return f.encrypt(message.encode('utf-8'))\n\ndef decrypt(token, key):\n    f = Fernet(key)\n    return f.decrypt(token).decode('utf-8')\n\nif __name__ == '__main__':\n    key = generate_key()\n    print('Key:', key.decode())\n\n    plaintext = 'Secret message'\n    token = encrypt(plaintext, key)\n    print('Encrypted:', token.decode())\n    print('Decrypted:', decrypt(token, key))\n```\n\nInstall with `pip install cryptography`. Notes: Fernet uses AES-128 in CBC mode with HMAC authentication. Keep the key safe — losing it loses the data. Never hardcode keys.",
+    "keywords": ["python", "encryption", "cryptography", "fernet", "security"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["encrypt python", "fernet example", "python cryptography"]
+  },
+  {
+    "question": "write a python script to compress files",
+    "answer": "Creating and reading zip and tar.gz archives:\n\n```python\nimport zipfile\nimport tarfile\nfrom pathlib import Path\n\ndef zip_folder(source, output):\n    source = Path(source)\n    with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as zf:\n        for path in source.rglob('*'):\n            if path.is_file():\n                zf.write(path, path.relative_to(source))\n\ndef unzip(archive, dest):\n    with zipfile.ZipFile(archive) as zf:\n        zf.extractall(dest)\n\ndef tar_gz(source, output):\n    with tarfile.open(output, 'w:gz') as tar:\n        tar.add(source, arcname=Path(source).name)\n\ndef extract_tar(archive, dest):\n    with tarfile.open(archive, 'r:gz') as tar:\n        tar.extractall(dest)\n\nif __name__ == '__main__':\n    zip_folder('src', 'archive.zip')\n    tar_gz('src', 'archive.tar.gz')\n    print('Done')\n```\n\nNotes: `ZIP_DEFLATED` enables compression. Always validate archive paths when extracting untrusted files to prevent path traversal.",
+    "keywords": ["python", "zip", "tar", "compression", "archive"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["compress files python", "zip python", "tar python"]
+  },
+  {
+    "question": "write a python script to work with datetime",
+    "answer": "Common datetime operations:\n\n```python\nfrom datetime import datetime, timedelta, timezone\nfrom zoneinfo import ZoneInfo\n\n# Current time\nnow = datetime.now()\nutc = datetime.now(timezone.utc)\nny = datetime.now(ZoneInfo('America/New_York'))\n\n# Formatting\nformatted = now.strftime('%Y-%m-%d %H:%M:%S')\n\n# Parsing\nparsed = datetime.strptime('2024-05-14 12:30:00', '%Y-%m-%d %H:%M:%S')\n\n# Arithmetic\ntomorrow = now + timedelta(days=1)\nlast_week = now - timedelta(weeks=1)\ndiff = tomorrow - now\n\n# Timestamps\nts = now.timestamp()\nfrom_ts = datetime.fromtimestamp(ts)\n\n# ISO format\niso = now.isoformat()\nfrom_iso = datetime.fromisoformat(iso)\n\nif __name__ == '__main__':\n    print('Local:', now)\n    print('UTC:', utc)\n    print('NY:', ny)\n    print('Formatted:', formatted)\n    print('Tomorrow:', tomorrow.date())\n    print('Diff:', diff)\n    print('ISO:', iso)\n```\n\nNotes: always store timestamps in UTC and convert to local for display. Use `zoneinfo` (Python 3.9+) for time zones.",
+    "keywords": ["python", "datetime", "time", "timezone", "date"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python datetime", "python time", "date python"]
+  },
+  {
+    "question": "write a python script to call an external command",
+    "answer": "Running external commands with `subprocess`:\n\n```python\nimport subprocess\nfrom pathlib import Path\n\ndef run_capture(cmd):\n    result = subprocess.run(\n        cmd, shell=False, capture_output=True, text=True, timeout=30\n    )\n    if result.returncode != 0:\n        raise RuntimeError(f'Command failed: {result.stderr}')\n    return result.stdout\n\ndef run_stream(cmd):\n    with subprocess.Popen(cmd, stdout=subprocess.PIPE, text=True) as proc:\n        for line in proc.stdout:\n            print('>', line.rstrip())\n        proc.wait()\n\nif __name__ == '__main__':\n    print(run_capture(['ls', '-la']))\n    # Avoid: subprocess.run('ls -la', shell=True)  # shell injection risk\n```\n\nNotes: never pass user input through `shell=True`. Pass arguments as a list so no shell interprets them. Always set a `timeout`.",
+    "keywords": ["python", "subprocess", "shell", "command"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["run command python", "subprocess example", "python shell command"]
+  },
+  {
+    "question": "write a python script to measure execution time",
+    "answer": "Timing code with `time` and `timeit`:\n\n```python\nimport time\nimport timeit\nfrom contextlib import contextmanager\n\n@contextmanager\ndef timer(label='block'):\n    start = time.perf_counter()\n    try:\n        yield\n    finally:\n        elapsed = time.perf_counter() - start\n        print(f'{label}: {elapsed * 1000:.3f} ms')\n\nif __name__ == '__main__':\n    with timer('list comprehension'):\n        [x * x for x in range(100000)]\n\n    with timer('generator'):\n        list(x * x for x in range(100000))\n\n    # Micro-benchmark with timeit\n    t = timeit.timeit(\n        'sum(range(100))',\n        number=10000\n    )\n    print(f'timeit: {t * 1000:.3f} ms for 10000 runs')\n```\n\nNotes: `perf_counter` is the highest-resolution clock. `timeit` disables garbage collection during measurement for more consistent results.",
+    "keywords": ["python", "timing", "performance", "timeit", "benchmark"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["measure time python", "timeit example", "python benchmark"]
+  },
+  {
+    "question": "write a python script to interact with sqlite",
+    "answer": "SQLite with the standard library:\n\n```python\nimport sqlite3\nfrom contextlib import closing\n\nDB = 'app.db'\n\ndef init_db():\n    with closing(sqlite3.connect(DB)) as conn:\n        conn.execute('''\n            CREATE TABLE IF NOT EXISTS users (\n                id INTEGER PRIMARY KEY AUTOINCREMENT,\n                name TEXT NOT NULL,\n                email TEXT UNIQUE NOT NULL\n            )\n        ''')\n        conn.commit()\n\ndef add_user(name, email):\n    with closing(sqlite3.connect(DB)) as conn:\n        try:\n            cur = conn.execute(\n                'INSERT INTO users (name, email) VALUES (?, ?)',\n                (name, email)\n            )\n            conn.commit()\n            return cur.lastrowid\n        except sqlite3.IntegrityError:\n            return None\n\ndef list_users():\n    with closing(sqlite3.connect(DB)) as conn:\n        conn.row_factory = sqlite3.Row\n        return [dict(row) for row in conn.execute('SELECT * FROM users')]\n\nif __name__ == '__main__':\n    init_db()\n    add_user('Alice', 'alice@example.com')\n    add_user('Bob', 'bob@example.com')\n    for u in list_users():\n        print(u)\n```\n\nNotes: `?` is a parameter placeholder — always use it, never string formatting. `sqlite3.Row` gives dict-like access.",
+    "keywords": ["python", "sqlite", "database", "sql"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["sqlite python", "python database", "sqlite example"]
+  },
+  {
+    "question": "write javascript code to sort an array of objects",
+    "answer": "Sorting objects by one or more keys:\n\n```javascript\nconst people = [\n  { name: 'Alice', age: 30 },\n  { name: 'Bob', age: 25 },\n  { name: 'Carol', age: 30 },\n  { name: 'Dave', age: 20 },\n];\n\n// By age ascending\nconst byAge = [...people].sort((a, b) => a.age - b.age);\nconsole.log(byAge);\n\n// By name descending\nconst byName = [...people].sort((a, b) => b.name.localeCompare(a.name));\nconsole.log(byName);\n\n// Multi-key: age ascending, then name ascending\nconst multi = [...people].sort((a, b) =>\n  a.age - b.age || a.name.localeCompare(b.name)\n);\nconsole.log(multi);\n\n// Generic multi-key helper\nfunction sortBy(keys) {\n  return (a, b) => {\n    for (const [key, dir] of keys) {\n      const av = a[key], bv = b[key];\n      const cmp = typeof av === 'string' ? av.localeCompare(bv) : av - bv;\n      if (cmp !== 0) return dir === 'desc' ? -cmp : cmp;\n    }\n    return 0;\n  };\n}\nconsole.log([...people].sort(sortBy([['age', 'asc'], ['name', 'desc']])));\n```\n\nNotes: `Array.sort` mutates in place — copy with `[...arr]` first. Always return a number from the comparator.",
+    "keywords": ["javascript", "sort", "array", "objects", "compare"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["sort objects js", "javascript sort array", "sort by key"]
+  },
+  {
+    "question": "write javascript code to group an array",
+    "answer": "Grouping array elements by a key:\n\n```javascript\nfunction groupBy(array, keyFn) {\n  return array.reduce((acc, item) => {\n    const key = keyFn(item);\n    (acc[key] = acc[key] || []).push(item);\n    return acc;\n  }, {});\n}\n\nconst orders = [\n  { id: 1, customer: 'Alice', total: 50 },\n  { id: 2, customer: 'Bob', total: 75 },\n  { id: 3, customer: 'Alice', total: 30 },\n  { id: 4, customer: 'Carol', total: 100 },\n];\n\nconst byCustomer = groupBy(orders, o => o.customer);\nconsole.log(byCustomer.Alice);\n\n// Using Object.groupBy (Node 21+, modern browsers)\nconst grouped = Object.groupBy(orders, o => o.customer);\nconsole.log(grouped);\n\n// Group and sum\nconst totals = orders.reduce((acc, o) => {\n  acc[o.customer] = (acc[o.customer] || 0) + o.total;\n  return acc;\n}, {});\nconsole.log(totals);\n```\n\nNotes: `Object.groupBy` is the modern built-in. The `reduce` version works everywhere.",
+    "keywords": ["javascript", "group by", "array", "reduce"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["group array js", "javascript groupby", "group by key"]
+  },
+  {
+    "question": "write javascript code to deep flatten an array",
+    "answer": "Flattening nested arrays:\n\n```javascript\nfunction flattenDeep(arr) {\n  const result = [];\n  const stack = [...arr];\n  while (stack.length) {\n    const item = stack.pop();\n    if (Array.isArray(item)) stack.push(...item);\n    else result.push(item);\n  }\n  return result.reverse();\n}\n\nconst nested = [1, [2, [3, [4, 5]]], 6];\n\nconsole.log(nested.flat());          // [1, 2, [3, [4, 5]], 6]  (depth 1)\nconsole.log(nested.flat(2));         // [1, 2, 3, [4, 5], 6]\nconsole.log(nested.flat(Infinity));  // [1, 2, 3, 4, 5, 6]\nconsole.log(flattenDeep(nested));    // [1, 2, 3, 4, 5, 6]\n```\n\nNotes: `Array.prototype.flat(depth)` is built in — use it unless you need a custom implementation. `flat(Infinity)` flattens all levels.",
+    "keywords": ["javascript", "flatten", "array", "nested"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["flatten array js", "deep flatten", "javascript flat"]
+  },
+  {
+    "question": "write javascript code to implement curry",
+    "answer": "Currying transforms a function so it takes one argument at a time:\n\n```javascript\nfunction curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn.apply(this, args);\n    }\n    return function (...more) {\n      return curried.apply(this, args.concat(more));\n    };\n  };\n}\n\nfunction add3(a, b, c) {\n  return a + b + c;\n}\n\nconst curried = curry(add3);\nconsole.log(curried(1)(2)(3));       // 6\nconsole.log(curried(1, 2)(3));       // 6\nconsole.log(curried(1)(2, 3));       // 6\nconsole.log(curried(1, 2, 3));       // 6\n\n// Real-world: partial application\nfunction log(level, message, timestamp) {\n  return `[${timestamp}] ${level}: ${message}`;\n}\nconst withTime = curry(log);\nconst errorLog = withTime('ERROR');\nconsole.log(errorLog('Something broke')('2024-01-01'));\n```\n\nNotes: uses `fn.length` to know how many arguments are needed. Curry is useful for building reusable partial functions.",
+    "keywords": ["javascript", "curry", "functional", "partial"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["curry javascript", "currying js", "partial application"]
+  },
+  {
+    "question": "write javascript code for a simple state store",
+    "answer": "A minimal observable state store:\n\n```javascript\nfunction createStore(initialState) {\n  let state = initialState;\n  const listeners = new Set();\n\n  return {\n    getState: () => state,\n\n    setState(updater) {\n      const next = typeof updater === 'function' ? updater(state) : updater;\n      if (next === state) return;\n      state = { ...state, ...next };\n      for (const listener of listeners) listener(state);\n    },\n\n    subscribe(listener) {\n      listeners.add(listener);\n      return () => listeners.delete(listener);\n    },\n  };\n}\n\nconst store = createStore({ count: 0, name: 'Alice' });\n\nconst unsubscribe = store.subscribe(s => console.log('changed:', s));\nstore.setState({ count: 1 });\nstore.setState(prev => ({ count: prev.count + 1 }));\nunsubscribe();\nstore.setState({ name: 'Bob' });\n\nconsole.log('final:', store.getState());\n```\n\nNotes: `setState` accepts an object or a function of the previous state. The subscribe function returns an unsubscribe.",
+    "keywords": ["javascript", "state", "store", "observer", "reactive"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["state store js", "simple store javascript", "observable state"]
+  },
+  {
+    "question": "write javascript code to parse a url",
+    "answer": "Parsing and building URLs with the URL API:\n\n```javascript\nconst url = new URL('https://example.com:8080/path/to/page?q=hello&lang=en#section');\n\nconsole.log('Protocol:', url.protocol);     // https:\nconsole.log('Host:', url.host);             // example.com:8080\nconsole.log('Hostname:', url.hostname);     // example.com\nconsole.log('Port:', url.port);             // 8080\nconsole.log('Path:', url.pathname);         // /path/to/page\nconsole.log('Search:', url.search);         // ?q=hello&lang=en\nconsole.log('Hash:', url.hash);             // #section\n\n// Query parameters\nconsole.log(url.searchParams.get('q'));     // hello\nurl.searchParams.set('page', '2');\nurl.searchParams.append('sort', 'desc');\n\n// Building a URL\nconst built = new URL('https://api.example.com');\nbuilt.pathname = '/users';\nbuilt.searchParams.set('limit', '10');\nconsole.log(built.toString()); // https://api.example.com/users?limit=10\n```\n\nNotes: `URL` handles encoding automatically. Never concatenate query strings by hand — use `searchParams`.",
+    "keywords": ["javascript", "url", "parse", "query", "api"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["parse url js", "url parameters", "javascript url"]
+  },
+  {
+    "question": "write javascript code to format dates",
+    "answer": "Date formatting with `Intl.DateTimeFormat`:\n\n```javascript\nconst now = new Date();\n\n// Built-in locales\nconsole.log(new Intl.DateTimeFormat('en-US').format(now));\nconsole.log(new Intl.DateTimeFormat('en-GB').format(now));\nconsole.log(new Intl.DateTimeFormat('de-DE').format(now));\nconsole.log(new Intl.DateTimeFormat('ja-JP').format(now));\n\n// Custom format\nconst fmt = new Intl.DateTimeFormat('en-US', {\n  year: 'numeric',\n  month: 'long',\n  day: 'numeric',\n  weekday: 'long',\n  hour: '2-digit',\n  minute: '2-digit',\n});\nconsole.log(fmt.format(now));\n\n// Relative time\nconst rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });\nconsole.log(rtf.format(-1, 'day'));    // yesterday\nconsole.log(rtf.format(2, 'hour'));    // in 2 hours\n\n// Duration\nconst list = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });\nconsole.log(list.format(['apples', 'oranges', 'bananas']));\n```\n\nNotes: `Intl` respects the user's locale automatically. Avoid hardcoding date formats — use `Intl.DateTimeFormat`.",
+    "keywords": ["javascript", "date", "format", "intl", "localization"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["format date js", "javascript date format", "intl date"]
+  },
+  {
+    "question": "write javascript code to make a canvas drawing",
+    "answer": "Drawing on an HTML canvas:\n\n```html\n<canvas id='c' width='400' height='200'></canvas>\n<script>\n  const canvas = document.getElementById('c');\n  const ctx = canvas.getContext('2d');\n\n  // Background\n  ctx.fillStyle = '#f0f0f0';\n  ctx.fillRect(0, 0, canvas.width, canvas.height);\n\n  // Circle\n  ctx.beginPath();\n  ctx.arc(100, 100, 50, 0, Math.PI * 2);\n  ctx.fillStyle = '#3563e9';\n  ctx.fill();\n\n  // Rectangle\n  ctx.fillStyle = '#e33';\n  ctx.fillRect(200, 50, 100, 100);\n\n  // Line\n  ctx.beginPath();\n  ctx.moveTo(20, 20);\n  ctx.lineTo(380, 20);\n  ctx.strokeStyle = '#333';\n  ctx.lineWidth = 2;\n  ctx.stroke();\n\n  // Text\n  ctx.font = '20px system-ui';\n  ctx.fillStyle = '#111';\n  ctx.fillText('Hello canvas', 20, 180);\n</script>\n```\n\nNotes: use `requestAnimationFrame` for animation loops, and clear with `ctx.clearRect(0, 0, w, h)` before each frame.",
+    "keywords": ["javascript", "canvas", "drawing", "graphics"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["canvas example", "draw with js", "html canvas"]
+  },
+  {
+    "question": "write javascript code to build a promise",
+    "answer": "Creating and composing promises:\n\n```javascript\n// Create a promise\nfunction delay(ms) {\n  return new Promise(resolve => setTimeout(resolve, ms));\n}\n\nfunction fetchValue(shouldFail) {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      if (shouldFail) reject(new Error('failed'));\n      else resolve('ok');\n    }, 100);\n  });\n}\n\n// Compose\nasync function run() {\n  await delay(200);\n  console.log('after 200ms');\n\n  // Sequential\n  const a = await fetchValue(false);\n  console.log('a:', a);\n\n  // Parallel\n  const [b, c] = await Promise.all([\n    fetchValue(false),\n    fetchValue(false),\n  ]);\n  console.log('b, c:', b, c);\n\n  // Race — fastest wins\n  const first = await Promise.race([\n    delay(100).then(() => 'slow'),\n    delay(50).then(() => 'fast'),\n  ]);\n  console.log('winner:', first);\n\n  // allSettled — never rejects\n  const results = await Promise.allSettled([\n    fetchValue(false),\n    fetchValue(true),\n  ]);\n  console.log(results);\n\n  // Error handling\n  try {\n    await fetchValue(true);\n  } catch (err) {\n    console.log('caught:', err.message);\n  }\n}\n\nrun();\n```\n\nNotes: `Promise.all` rejects on first error; `Promise.allSettled` never rejects; `Promise.any` resolves with first success; `Promise.race` resolves with first settled.",
+    "keywords": ["javascript", "promise", "async", "await", "concurrency"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["promise example js", "javascript promise", "async promises"]
+  },
+  {
+    "question": "write a python script to implement a simple neural network",
+    "answer": "A single-layer perceptron from scratch (no libraries):\n\n```python\nimport random\n\ndef sigmoid(x):\n    return 1 / (1 + math.exp(-x))\n\nimport math\n\ndef train_perceptron(X, y, epochs=100, lr=0.1):\n    n_features = len(X[0])\n    weights = [random.uniform(-0.1, 0.1) for _ in range(n_features)]\n    bias = 0.0\n\n    for epoch in range(epochs):\n        total_error = 0.0\n        for xi, yi in zip(X, y):\n            z = sum(w * x for w, x in zip(weights, xi)) + bias\n            pred = sigmoid(z)\n            error = yi - pred\n            total_error += error ** 2\n            for j in range(n_features):\n                weights[j] += lr * error * xi[j]\n            bias += lr * error\n        if epoch % 10 == 0:\n            print(f'epoch {epoch}: loss={total_error:.4f}')\n    return weights, bias\n\ndef predict(xi, weights, bias):\n    z = sum(w * x for w, x in zip(weights, xi)) + bias\n    return sigmoid(z)\n\nif __name__ == '__main__':\n    X = [[0, 0], [0, 1], [1, 0], [1, 1]]\n    y = [0, 1, 1, 0]  # XOR — this simple net cannot learn it, only illustrative\n    weights, bias = train_perceptron(X, y)\n    for xi in X:\n        print(xi, '->', predict(xi, weights, bias))\n```\n\nNotes: this is a single-layer perceptron. It cannot solve XOR — you need a hidden layer. For real work use PyTorch or TensorFlow.",
+    "keywords": ["python", "neural network", "perceptron", "machine learning"],
+    "category": "Machine Learning",
+    "language": "en",
+    "aliases": ["simple neural network python", "perceptron from scratch", "python ml"]
+  },
+  {
+    "question": "write python pandas data analysis example",
+    "answer": "Basic pandas workflow: load, clean, group, and analyze:\n\n```python\nimport pandas as pd\n\ndef main():\n    # Load\n    df = pd.read_csv('sales.csv')\n\n    # Inspect\n    print(df.head())\n    print(df.info())\n    print(df.describe())\n\n    # Clean\n    df = df.dropna(subset=['amount'])\n    df['date'] = pd.to_datetime(df['date'])\n    df['month'] = df['date'].dt.to_period('M')\n\n    # Filter\n    recent = df[df['date'] >= '2024-01-01']\n\n    # Group and aggregate\n    by_month = recent.groupby('month').agg(\n        total=('amount', 'sum'),\n        count=('amount', 'count'),\n        avg=('amount', 'mean'),\n    ).reset_index()\n\n    # Sort and save\n    by_month = by_month.sort_values('total', ascending=False)\n    by_month.to_csv('monthly_summary.csv', index=False)\n    print(by_month)\n\nif __name__ == '__main__':\n    main()\n```\n\nInstall with `pip install pandas`. Notes: `groupby().agg()` is the standard aggregation pattern; `.reset_index()` turns the group key back into a column.",
+    "keywords": ["python", "pandas", "data analysis", "csv", "dataframe"],
+    "category": "Data Science",
+    "language": "en",
+    "aliases": ["pandas example", "python data analysis", "pandas dataframe"]
+  },
+  {
+    "question": "write numpy array operations example",
+    "answer": "Common NumPy operations:\n\n```python\nimport numpy as np\n\ndef main():\n    # Creating arrays\n    a = np.array([1, 2, 3, 4])\n    b = np.zeros((2, 3))\n    c = np.arange(0, 10, 2)\n    d = np.linspace(0, 1, 5)\n\n    print('a:', a)\n    print('b:', b)\n    print('c:', c)\n    print('d:', d)\n\n    # Element-wise operations\n    print('a * 2:', a * 2)\n    print('a + a:', a + a)\n    print('a squared:', a ** 2)\n\n    # Aggregations\n    print('sum:', a.sum())\n    print('mean:', a.mean())\n    print('std:', a.std())\n    print('max:', a.max())\n    print('argmax:', a.argmax())\n\n    # Reshape\n    m = np.arange(12).reshape(3, 4)\n    print('m shape:', m.shape)\n    print('transpose:', m.T.shape)\n\n    # Slicing\n    print('m[1, 2]:', m[1, 2])\n    print('m[:, 1]:', m[:, 1])\n    print('m[1:3, :2]:', m[1:3, :2])\n\n    # Broadcasting\n    print('m + [10, 20, 30, 40]:', m + np.array([10, 20, 30, 40]))\n\nif __name__ == '__main__':\n    main()\n```\n\nNotes: `reshape` returns a view if possible; `m.T` is the transpose. Broadcasting aligns shapes from the right.",
+    "keywords": ["python", "numpy", "arrays", "scientific", "vectorized"],
+    "category": "Data Science",
+    "language": "en",
+    "aliases": ["numpy example", "python numpy", "numpy tutorial"]
+  },
+  {
+    "question": "write a python script to make a matplotlib chart",
+    "answer": "Creating a line plot and saving to a file:\n\n```python\nimport matplotlib\nmatplotlib.use('Agg')  # headless backend\nimport matplotlib.pyplot as plt\nimport numpy as np\n\ndef make_plot(path='chart.png'):\n    x = np.linspace(0, 2 * np.pi, 100)\n\n    fig, ax = plt.subplots(figsize=(8, 5))\n    ax.plot(x, np.sin(x), label='sin(x)', linewidth=2)\n    ax.plot(x, np.cos(x), label='cos(x)', linestyle='--')\n    ax.set_title('Trigonometric functions')\n    ax.set_xlabel('x')\n    ax.set_ylabel('y')\n    ax.grid(True, alpha=0.3)\n    ax.legend()\n    fig.tight_layout()\n    fig.savefig(path, dpi=120)\n    plt.close(fig)\n    print('Saved', path)\n\nif __name__ == '__main__':\n    make_plot()\n```\n\nInstall with `pip install matplotlib`. Notes: use the `Agg` backend for scripts that only save files (no display). `fig.tight_layout()` prevents label clipping.",
+    "keywords": ["python", "matplotlib", "plot", "chart", "visualization"],
+    "category": "Data Science",
+    "language": "en",
+    "aliases": ["matplotlib example", "python plot", "make chart python"]
+  },
+  {
+    "question": "write a python script for a simple web scraper",
+    "answer": "A respectful web scraper with rate limiting:\n\n```python\nimport time\nimport requests\nfrom bs4 import BeautifulSoup\nfrom urllib.parse import urljoin, urlparse\n\ndef scrape(base_url, max_pages=10, delay=1.0):\n    visited = set()\n    to_visit = [base_url]\n    domain = urlparse(base_url).netloc\n    results = []\n\n    headers = {'User-Agent': 'MyScraper/1.0 (contact@example.com)'}\n\n    while to_visit and len(visited) < max_pages:\n        url = to_visit.pop(0)\n        if url in visited:\n            continue\n        visited.add(url)\n\n        try:\n            res = requests.get(url, headers=headers, timeout=10)\n            res.raise_for_status()\n        except requests.RequestException as e:\n            print(f'Failed {url}: {e}')\n            continue\n\n        soup = BeautifulSoup(res.text, 'html.parser')\n        title = soup.find('title')\n        results.append({'url': url, 'title': title.get_text(strip=True) if title else ''})\n\n        for a in soup.find_all('a', href=True):\n            next_url = urljoin(url, a['href'])\n            if urlparse(next_url).netloc == domain and next_url not in visited:\n                to_visit.append(next_url)\n\n        time.sleep(delay)\n\n    return results\n\nif __name__ == '__main__':\n    for page in scrape('https://example.com', max_pages=3):\n        print(page)\n```\n\nNotes: check `robots.txt` and terms of service before scraping. Always set a User-Agent, rate limit requests, and only scrape public content.",
+    "keywords": ["python", "scraping", "requests", "beautifulsoup", "crawler"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["web scraper python", "crawl website python", "scrape site python"]
+  },
+  {
+    "question": "write a python script to compare two files",
+    "answer": "Comparing files and reporting differences:\n\n```python\nimport difflib\nfrom pathlib import Path\n\ndef unified_diff(file1, file2, context=3):\n    a = Path(file1).read_text(encoding='utf-8').splitlines(keepends=True)\n    b = Path(file2).read_text(encoding='utf-8').splitlines(keepends=True)\n    return ''.join(difflib.unified_diff(\n        a, b,\n        fromfile=file1,\n        tofile=file2,\n        n=context,\n    ))\n\ndef files_equal(file1, file2):\n    return Path(file1).read_bytes() == Path(file2).read_bytes()\n\nif __name__ == '__main__':\n    print(files_equal('a.txt', 'a.txt'))\n    print(unified_diff('a.txt', 'b.txt'))\n```\n\nNotes: `unified_diff` gives git-style output with context lines. Compare bytes for exact equality, text for content equality.",
+    "keywords": ["python", "diff", "compare", "files", "difflib"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["compare files python", "diff python", "file comparison"]
+  },
+  {
+    "question": "write a python script to monitor a folder",
+    "answer": "Watching a folder for changes with `watchdog`:\n\n```python\nimport time\nfrom watchdog.observers import Observer\nfrom watchdog.events import FileSystemEventHandler\n\nclass Handler(FileSystemEventHandler):\n    def on_created(self, event):\n        if not event.is_directory:\n            print(f'CREATED: {event.src_path}')\n\n    def on_modified(self, event):\n        if not event.is_directory:\n            print(f'MODIFIED: {event.src_path}')\n\n    def on_deleted(self, event):\n        if not event.is_directory:\n            print(f'DELETED: {event.src_path}')\n\n    def on_moved(self, event):\n        if not event.is_directory:\n            print(f'MOVED: {event.src_path} -> {event.dest_path}')\n\ndef watch(path):\n    observer = Observer()\n    observer.schedule(Handler(), path, recursive=True)\n    observer.start()\n    print(f'Watching {path}... (Ctrl+C to stop)')\n    try:\n        while True:\n            time.sleep(1)\n    except KeyboardInterrupt:\n        observer.stop()\n    observer.join()\n\nif __name__ == '__main__':\n    watch('.')\n```\n\nInstall with `pip install watchdog`. Notes: `recursive=True` watches subfolders too. Runs on Linux, macOS, and Windows.",
+    "keywords": ["python", "watchdog", "monitor", "filesystem", "watch"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["watch folder python", "file monitor", "filesystem events python"]
+  },
+  {
+    "question": "write a python script to retry with backoff",
+    "answer": "Retry helper with exponential backoff:\n\n```python\nimport time\nimport random\nfrom functools import wraps\n\ndef retry(max_attempts=5, base_delay=0.5, max_delay=30.0, exceptions=(Exception,)):\n    def decorator(func):\n        @wraps(func)\n        def wrapper(*args, **kwargs):\n            for attempt in range(1, max_attempts + 1):\n                try:\n                    return func(*args, **kwargs)\n                except exceptions as e:\n                    if attempt == max_attempts:\n                        raise\n                    delay = min(max_delay, base_delay * 2 ** (attempt - 1))\n                    jitter = random.uniform(0, delay * 0.1)\n                    print(f'{func.__name__} failed ({e}), retrying in {delay + jitter:.2f}s')\n                    time.sleep(delay + jitter)\n        return wrapper\n    return decorator\n\n@retry(max_attempts=4, exceptions=(ValueError,))\ndef flaky():\n    import random\n    if random.random() < 0.7:\n        raise ValueError('not this time')\n    return 'success'\n\nif __name__ == '__main__':\n    print(flaky())\n```\n\nNotes: exponential backoff with jitter prevents thundering herd. Only retry on transient errors, not logic errors.",
+    "keywords": ["python", "retry", "backoff", "resilience", "decorator"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python retry", "retry decorator", "backoff python"]
+  },
+  {
+    "question": "write a python function to parse command line arguments manually",
+    "answer": "Reading `sys.argv` directly, plus a clean pattern:\n\n```python\nimport sys\n\ndef parse_args(argv):\n    options = {'verbose': False, 'output': None, 'files': []}\n    i = 1  # skip script name\n    while i < len(argv):\n        arg = argv[i]\n        if arg in ('-v', '--verbose'):\n            options['verbose'] = True\n        elif arg in ('-o', '--output'):\n            i += 1\n            if i >= len(argv):\n                raise ValueError('--output needs a value')\n            options['output'] = argv[i]\n        elif arg.startswith('--'):\n            raise ValueError(f'Unknown option: {arg}')\n        elif arg.startswith('-'):\n            raise ValueError(f'Unknown flag: {arg}')\n        else:\n            options['files'].append(arg)\n        i += 1\n    return options\n\nif __name__ == '__main__':\n    try:\n        opts = parse_args(sys.argv)\n        print(opts)\n    except ValueError as e:\n        print(f'Error: {e}', file=sys.stderr)\n        sys.exit(1)\n```\n\nNotes: for anything nontrivial, use `argparse`. This is only for simple scripts where you want zero dependencies.",
+    "keywords": ["python", "sys.argv", "arguments", "cli", "parse"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python argv", "read cli args python", "python args"]
+  },
+  {
+    "question": "write javascript code to create an element dynamically",
+    "answer": "Creating and appending elements safely:\n\n```javascript\nfunction createCard({ title, body, tags = [] }) {\n  const card = document.createElement('article');\n  card.className = 'card';\n\n  const h = document.createElement('h2');\n  h.textContent = title;\n  card.appendChild(h);\n\n  const p = document.createElement('p');\n  p.textContent = body;\n  card.appendChild(p);\n\n  const tagList = document.createElement('div');\n  tagList.className = 'tags';\n  for (const tag of tags) {\n    const span = document.createElement('span');\n    span.className = 'tag';\n    span.textContent = tag;\n    tagList.appendChild(span);\n  }\n  card.appendChild(tagList);\n\n  card.addEventListener('click', () => console.log('clicked:', title));\n  return card;\n}\n\nconst container = document.getElementById('cards');\ncontainer.appendChild(createCard({\n  title: 'Hello',\n  body: 'This is a card.',\n  tags: ['js', 'dom'],\n}));\n```\n\nNotes: use `textContent` for user data, never `innerHTML` — that prevents XSS. `createElement` + `appendChild` builds the DOM safely.",
+    "keywords": ["javascript", "dom", "createelement", "element", "safe"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["create element js", "dom manipulation", "javascript create element"]
+  },
+  {
+    "question": "write javascript code to detect a click outside an element",
+    "answer": "Detecting clicks outside using event delegation:\n\n```javascript\nfunction onClickOutside(element, callback) {\n  function handler(event) {\n    if (!element.contains(event.target)) {\n      callback(event);\n    }\n  }\n  document.addEventListener('click', handler, true);\n  return () => document.removeEventListener('click', handler, true);\n}\n\n// Usage\nconst modal = document.getElementById('modal');\nconst stop = onClickOutside(modal, () => {\n  console.log('clicked outside modal');\n  modal.classList.add('hidden');\n});\n\n// Later: stop();\n```\n\nNotes: the `true` third argument enables capture phase, which fires before stopPropagation in the target. Returns a cleanup function.",
+    "keywords": ["javascript", "click outside", "events", "dom"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["click outside js", "dismiss on outside click", "outside click detect"]
+  },
+  {
+    "question": "write javascript code for a simple router",
+    "answer": "A hash-based SPA router:\n\n```javascript\nclass Router {\n  constructor() {\n    this.routes = new Map();\n    this.fallback = () => console.log('404');\n    window.addEventListener('hashchange', () => this.resolve());\n    window.addEventListener('load', () => this.resolve());\n  }\n\n  on(pattern, handler) {\n    this.routes.set(pattern, handler);\n    return this;\n  }\n\n  otherwise(handler) {\n    this.fallback = handler;\n    return this;\n  }\n\n  resolve() {\n    const path = window.location.hash.slice(1) || '/';\n    for (const [pattern, handler] of this.routes) {\n      const params = this.match(pattern, path);\n      if (params) return handler(params);\n    }\n    this.fallback(path);\n  }\n\n  match(pattern, path) {\n    const pParts = pattern.split('/').filter(Boolean);\n    const tParts = path.split('/').filter(Boolean);\n    if (pParts.length !== tParts.length) return null;\n    const params = {};\n    for (let i = 0; i < pParts.length; i++) {\n      if (pParts[i].startsWith(':')) {\n        params[pParts[i].slice(1)] = decodeURIComponent(tParts[i]);\n      } else if (pParts[i] !== tParts[i]) {\n        return null;\n      }\n    }\n    return params;\n  }\n\n  navigate(path) {\n    window.location.hash = path;\n  }\n}\n\nconst router = new Router();\nrouter\n  .on('/', () => console.log('home'))\n  .on('/users/:id', ({ id }) => console.log('user', id))\n  .otherwise(path => console.log('not found:', path));\n\n// router.navigate('/users/42');\n```\n\nNotes: hash routing works without server configuration. For history-based routing, use the History API and configure your server to fall back to index.html.",
+    "keywords": ["javascript", "router", "spa", "routing", "hash"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["simple router js", "spa router", "hash router"]
+  },
+  {
+    "question": "write python code to build a REST API with FastAPI",
+    "answer": "A FastAPI app with request validation and automatic docs:\n\n```python\nfrom fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel, Field, EmailStr\nfrom typing import List, Optional\n\napp = FastAPI(title='Users API', version='1.0')\n\nclass UserIn(BaseModel):\n    name: str = Field(..., min_length=1, max_length=100)\n    email: EmailStr\n    age: Optional[int] = Field(None, ge=0, le=150)\n\nclass UserOut(UserIn):\n    id: int\n\nusers: List[UserOut] = []\n\n@app.get('/users', response_model=List[UserOut])\ndef list_users():\n    return users\n\n@app.get('/users/{user_id}', response_model=UserOut)\ndef get_user(user_id: int):\n    for u in users:\n        if u.id == user_id:\n            return u\n    raise HTTPException(status_code=404, detail='User not found')\n\n@app.post('/users', response_model=UserOut, status_code=201)\ndef create_user(payload: UserIn):\n    new = UserOut(id=len(users) + 1, **payload.dict())\n    users.append(new)\n    return new\n\n@app.delete('/users/{user_id}', status_code=204)\ndef delete_user(user_id: int):\n    global users\n    users = [u for u in users if u.id != user_id]\n    return None\n```\n\nRun with `uvicorn main:app --reload`. Visit `/docs` for auto-generated OpenAPI documentation. Notes: `pydantic` validates request bodies automatically.",
+    "keywords": ["python", "fastapi", "api", "rest", "pydantic"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["fastapi example", "python fastapi", "modern rest api python"]
+  },
+  {
+    "question": "write javascript code to implement a linked list",
+    "answer": "A singly linked list with common operations:\n\n```javascript\nclass ListNode {\n  constructor(value) {\n    this.value = value;\n    this.next = null;\n  }\n}\n\nclass LinkedList {\n  constructor() {\n    this.head = null;\n    this.size = 0;\n  }\n\n  append(value) {\n    const node = new ListNode(value);\n    if (!this.head) {\n      this.head = node;\n    } else {\n      let cur = this.head;\n      while (cur.next) cur = cur.next;\n      cur.next = node;\n    }\n    this.size++;\n    return this;\n  }\n\n  prepend(value) {\n    const node = new ListNode(value);\n    node.next = this.head;\n    this.head = node;\n    this.size++;\n    return this;\n  }\n\n  remove(value) {\n    if (!this.head) return false;\n    if (this.head.value === value) {\n      this.head = this.head.next;\n      this.size--;\n      return true;\n    }\n    let cur = this.head;\n    while (cur.next && cur.next.value !== value) cur = cur.next;\n    if (cur.next) {\n      cur.next = cur.next.next;\n      this.size--;\n      return true;\n    }\n    return false;\n  }\n\n  toArray() {\n    const out = [];\n    for (let cur = this.head; cur; cur = cur.next) out.push(cur.value);\n    return out;\n  }\n\n  reverse() {\n    let prev = null, cur = this.head;\n    while (cur) {\n      const next = cur.next;\n      cur.next = prev;\n      prev = cur;\n      cur = next;\n    }\n    this.head = prev;\n    return this;\n  }\n}\n\nconst list = new LinkedList();\nlist.append(1).append(2).append(3);\nconsole.log(list.toArray());\nlist.reverse();\nconsole.log(list.toArray());\n```\n\nNotes: reverse is a classic interview problem. Remember to save `next` before reassigning `cur.next`.",
+    "keywords": ["javascript", "linked list", "data structure", "class"],
+    "category": "Data Structures",
+    "language": "en",
+    "aliases": ["linked list javascript", "singly linked list js", "linked list js"]
+  },
+  {
+    "question": "write javascript code to implement a binary search tree",
+    "answer": "A BST with insert, search, and inorder traversal:\n\n```javascript\nclass TreeNode {\n  constructor(value) {\n    this.value = value;\n    this.left = null;\n    this.right = null;\n  }\n}\n\nclass BST {\n  constructor() {\n    this.root = null;\n  }\n\n  insert(value) {\n    const node = new TreeNode(value);\n    if (!this.root) { this.root = node; return this; }\n    let cur = this.root;\n    while (true) {\n      if (value < cur.value) {\n        if (!cur.left) { cur.left = node; return this; }\n        cur = cur.left;\n      } else if (value > cur.value) {\n        if (!cur.right) { cur.right = node; return this; }\n        cur = cur.right;\n      } else {\n        return this;  // duplicate, ignore\n      }\n    }\n  }\n\n  has(value) {\n    let cur = this.root;\n    while (cur) {\n      if (value === cur.value) return true;\n      cur = value < cur.value ? cur.left : cur.right;\n    }\n    return false;\n  }\n\n  inorder(node = this.root, out = []) {\n    if (!node) return out;\n    this.inorder(node.left, out);\n    out.push(node.value);\n    this.inorder(node.right, out);\n    return out;\n  }\n\n  height(node = this.root) {\n    if (!node) return 0;\n    return 1 + Math.max(this.height(node.left), this.height(node.right));\n  }\n}\n\nconst tree = new BST();\n[5, 3, 8, 1, 4, 7, 9].forEach(v => tree.insert(v));\nconsole.log('inorder:', tree.inorder());\nconsole.log('has 4:', tree.has(4));\nconsole.log('height:', tree.height());\n```\n\nNotes: sorted insertion gives O(n) height (worst case). Self-balancing variants (AVL, Red-Black) fix this.",
+    "keywords": ["javascript", "bst", "binary search tree", "tree", "data structure"],
+    "category": "Data Structures",
+    "language": "en",
+    "aliases": ["bst javascript", "binary search tree js", "tree data structure js"]
+  },
+  {
+    "question": "write javascript code for debounce with leading edge",
+    "answer": "Debounce variants including leading and trailing edge:\n\n```javascript\nfunction debounce(fn, delay, { leading = false, trailing = true } = {}) {\n  let timer = null;\n  let lastArgs = null;\n\n  function invoke() {\n    if (trailing && lastArgs) {\n      fn.apply(this, lastArgs);\n      lastArgs = null;\n    }\n    timer = null;\n  }\n\n  return function (...args) {\n    lastArgs = args;\n    const callNow = leading && !timer;\n\n    if (timer) clearTimeout(timer);\n    timer = setTimeout(invoke.bind(this), delay);\n\n    if (callNow) {\n      fn.apply(this, args);\n      lastArgs = null;\n    }\n  };\n}\n\n// Leading only (fires at the start)\nconst onDragStart = debounce(console.log, 300, { leading: true, trailing: false });\n\n// Trailing only (fires at the end)\nconst onSearch = debounce(console.log, 300, { leading: false, trailing: true });\n\nonSearch('a');\nonSearch('ab');\nonSearch('abc');\n```\n\nNotes: leading fires on the first call; trailing fires after silence. Combining both fires at start and end.",
+    "keywords": ["javascript", "debounce", "leading", "trailing", "events"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["debounce advanced", "leading debounce", "trailing debounce"]
+  },
+  {
+    "question": "write a python script to build a chat server with sockets",
+    "answer": "A multi-client chat server using `selectors`:\n\n```python\nimport selectors\nimport socket\nimport sys\n\nsel = selectors.DefaultSelector()\nclients = {}\n\ndef accept(sock):\n    conn, addr = sock.accept()\n    conn.setblocking(False)\n    print(f'Connected: {addr}')\n    clients[conn] = addr\n    sel.register(conn, selectors.EVENT_READ, data=handle_client)\n\ndef handle_client(conn):\n    try:\n        data = conn.recv(1024)\n    except ConnectionResetError:\n        data = b''\n\n    if data:\n        print(f'{clients[conn]}: {data.decode().strip()}')\n        broadcast(conn, data)\n    else:\n        print(f'Disconnected: {clients[conn]}')\n        sel.unregister(conn)\n        conn.close()\n        del clients[conn]\n\ndef broadcast(sender, data):\n    for conn in list(clients):\n        if conn is sender:\n            continue\n        try:\n            conn.sendall(data)\n        except Exception:\n            sel.unregister(conn)\n            conn.close()\n            clients.pop(conn, None)\n\nif __name__ == '__main__':\n    host, port = '0.0.0.0', 9999\n    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)\n    server.bind((host, port))\n    server.listen()\n    server.setblocking(False)\n    sel.register(server, selectors.EVENT_READ, data=accept)\n    print(f'Listening on {host}:{port}')\n\n    try:\n        while True:\n            events = sel.select(timeout=1)\n            for key, _ in events:\n                key.data(key.fileobj)\n    except KeyboardInterrupt:\n        print('shutting down')\n    finally:\n        for conn in list(clients):\n            conn.close()\n        server.close()\n        sel.close()\n```\n\nNotes: `selectors` handles many clients on one thread. Test with `nc localhost 9999` from multiple terminals.",
+    "keywords": ["python", "sockets", "chat", "server", "selectors", "network"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["python chat server", "socket chat", "multi client chat"]
+  },
+  {
+    "question": "write a python script to make a simple web crawler",
+    "answer": "A polite breadth-first crawler with deduplication:\n\n```python\nimport requests\nfrom bs4 import BeautifulSoup\nfrom urllib.parse import urljoin, urlparse\nfrom collections import deque\nfrom time import sleep\n\ndef crawl(start_url, max_pages=20, same_domain=True, delay=0.5):\n    domain = urlparse(start_url).netloc\n    visited = set()\n    queue = deque([start_url])\n    results = []\n    headers = {'User-Agent': 'PoliteCrawler/1.0'}\n\n    while queue and len(visited) < max_pages:\n        url = queue.popleft()\n        if url in visited:\n            continue\n        visited.add(url)\n\n        try:\n            res = requests.get(url, headers=headers, timeout=10)\n            if 'text/html' not in res.headers.get('Content-Type', ''):\n                continue\n            res.raise_for_status()\n        except requests.RequestException as e:\n            print(f'Skip {url}: {e}')\n            continue\n\n        soup = BeautifulSoup(res.text, 'html.parser')\n        title = (soup.title.string if soup.title else '').strip()\n        results.append({'url': url, 'title': title})\n        print(f'[{len(results)}] {title} — {url}')\n\n        for a in soup.find_all('a', href=True):\n            link = urljoin(url, a['href']).split('#')[0]\n            if same_domain and urlparse(link).netloc != domain:\n                continue\n            if link not in visited:\n                queue.append(link)\n\n        sleep(delay)\n\n    return results\n\nif __name__ == '__main__':\n    crawl('https://example.com')\n```\n\nNotes: honor `robots.txt` and rate limit requests. Never crawl at high speed — it can get you blocked or harm the target site.",
+    "keywords": ["python", "crawler", "web crawler", "spider", "bfs"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["web crawler python", "spider python", "crawl site python"]
+  },
+  {
+    "question": "write a python script to process images",
+    "answer": "Basic image processing with Pillow:\n\n```python\nfrom PIL import Image, ImageFilter, ImageEnhance\nfrom pathlib import Path\n\ndef process(input_path, output_dir='output'):\n    Path(output_dir).mkdir(exist_ok=True)\n    img = Image.open(input_path)\n    print('Original:', img.size, img.mode)\n\n    # Resize\n    thumb = img.copy()\n    thumb.thumbnail((200, 200))\n    thumb.save(f'{output_dir}/thumb.jpg', quality=85)\n\n    # Convert to grayscale\n    gray = img.convert('L')\n    gray.save(f'{output_dir}/gray.jpg')\n\n    # Rotate\n    rotated = img.rotate(90, expand=True)\n    rotated.save(f'{output_dir}/rotated.jpg')\n\n    # Apply blur and enhance\n    blurred = img.filter(ImageFilter.GaussianBlur(radius=2))\n    blurred.save(f'{output_dir}/blurred.jpg')\n\n    # Brightness adjustment\n    bright = ImageEnhance.Brightness(img).enhance(1.3)\n    bright.save(f'{output_dir}/bright.jpg')\n\n    print('Saved to', output_dir)\n\nif __name__ == '__main__':\n    process('input.jpg')\n```\n\nInstall with `pip install Pillow`. Notes: `thumbnail()` preserves aspect ratio; always save a copy to avoid modifying the original.",
+    "keywords": ["python", "image", "pillow", "pil", "resize"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["image processing python", "pillow example", "python resize image"]
+  },
+  {
+    "question": "write a python script to build a CLI todo app",
+    "answer": "A simple todo list with file persistence:\n\n```python\nimport json\nimport sys\nfrom pathlib import Path\n\nDATA_FILE = Path.home() / '.todos.json'\n\ndef load():\n    if not DATA_FILE.exists():\n        return []\n    try:\n        return json.loads(DATA_FILE.read_text())\n    except json.JSONDecodeError:\n        return []\n\ndef save(items):\n    DATA_FILE.write_text(json.dumps(items, indent=2))\n\ndef add(text):\n    items = load()\n    items.append({'id': len(items) + 1, 'text': text, 'done': False})\n    save(items)\n    print(f'Added: {text}')\n\ndef list_items():\n    items = load()\n    if not items:\n        print('No todos')\n        return\n    for item in items:\n        mark = 'x' if item['done'] else ' '\n        print(f'[{mark}] {item[\"id\"]}. {item[\"text\"]}')\n\ndef done(item_id):\n    items = load()\n    for item in items:\n        if item['id'] == item_id:\n            item['done'] = True\n            save(items)\n            print('Marked done')\n            return\n    print('Not found')\n\ndef remove(item_id):\n    items = [i for i in load() if i['id'] != item_id]\n    save(items)\n    print('Removed')\n\ndef main():\n    if len(sys.argv) < 2:\n        print('Usage: todo [add|list|done|remove] [args]')\n        return\n    cmd = sys.argv[1]\n    if cmd == 'add' and len(sys.argv) >= 3:\n        add(' '.join(sys.argv[2:]))\n    elif cmd == 'list':\n        list_items()\n    elif cmd == 'done' and len(sys.argv) >= 3:\n        done(int(sys.argv[2]))\n    elif cmd == 'remove' and len(sys.argv) >= 3:\n        remove(int(sys.argv[2]))\n    else:\n        print('Unknown command')\n\nif __name__ == '__main__':\n    main()\n```\n\nUsage: `python todo.py add \"Buy milk\"`, `python todo.py list`, `python todo.py done 1`. Notes: stores in the home directory so it works from any folder.",
+    "keywords": ["python", "todo", "cli", "json", "persistence"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["todo app python", "python todo list", "cli todo"]
+  },
+  {
+    "question": "write javascript code to detect browser features",
+    "answer": "Feature detection instead of user-agent sniffing:\n\n```javascript\nconst features = {\n  localStorage: (() => {\n    try {\n      localStorage.setItem('__t', '1');\n      localStorage.removeItem('__t');\n      return true;\n    } catch { return false; }\n  })(),\n\n  indexedDB: 'indexedDB' in window,\n  serviceWorker: 'serviceWorker' in navigator,\n  fetch: typeof fetch === 'function',\n  webWorker: typeof Worker !== 'undefined',\n  notifications: 'Notification' in window,\n  geolocation: 'geolocation' in navigator,\n  camera: !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia),\n  clipboard: !!(navigator.clipboard && navigator.clipboard.writeText),\n  webAssembly: typeof WebAssembly === 'object',\n  sharedArrayBuffer: typeof SharedArrayBuffer === 'function',\n  bigInt: typeof BigInt === 'function',\n  optionalChaining: (() => {\n    try { new Function('return ({})?.x'); return true; } catch { return false; }\n  })(),\n};\n\nconsole.log(features);\n\n// CSS support\nconst css = {\n  grid: CSS.supports('display', 'grid'),\n  flex: CSS.supports('display', 'flex'),\n  gap: CSS.supports('gap', '1rem'),\n  containerQueries: CSS.supports('container-type', 'inline-size'),\n};\nconsole.log(css);\n```\n\nNotes: use `CSS.supports` and `'x' in obj` checks. User-agent strings lie and are unstable.",
+    "keywords": ["javascript", "feature detection", "browser", "css.supports"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["feature detection js", "browser support", "detect features"]
+  },
+  {
+    "question": "write python code to implement an LRU cache",
+    "answer": "LRU cache with a doubly linked list and dictionary:\n\n```python\nfrom collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity):\n        if capacity < 1:\n            raise ValueError('capacity must be at least 1')\n        self.capacity = capacity\n        self.data = OrderedDict()\n\n    def get(self, key):\n        if key not in self.data:\n            return None\n        self.data.move_to_end(key)\n        return self.data[key]\n\n    def put(self, key, value):\n        if key in self.data:\n            self.data.move_to_end(key)\n        self.data[key] = value\n        if len(self.data) > self.capacity:\n            self.data.popitem(last=False)\n\n    def __len__(self):\n        return len(self.data)\n\n    def __repr__(self):\n        return f'LRUCache({dict(self.data)})'\n\nif __name__ == '__main__':\n    cache = LRUCache(2)\n    cache.put('a', 1)\n    cache.put('b', 2)\n    print(cache.get('a'))  # 1\n    cache.put('c', 3)\n    print(cache.get('b'))  # None (evicted)\n    print(cache.get('c'))  # 3\n```\n\nNotes: `OrderedDict.move_to_end` gives O(1) reordering. Python's `functools.lru_cache` is faster for function memoization.",
+    "keywords": ["python", "lru cache", "cache", "ordereddict", "algorithms"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["lru cache python", "cache implementation", "python cache"]
+  },
+  {
+    "question": "write a python script to implement quicksort",
+    "answer": "Quicksort with Lomuto and Hoare partitions:\n\n```python\nimport random\n\ndef quicksort_simple(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort_simple(left) + mid + quicksort_simple(right)\n\ndef quicksort_inplace(arr, lo=0, hi=None):\n    if hi is None:\n        hi = len(arr) - 1\n    if lo >= hi:\n        return arr\n    pivot_idx = partition(arr, lo, hi)\n    quicksort_inplace(arr, lo, pivot_idx - 1)\n    quicksort_inplace(arr, pivot_idx + 1, hi)\n    return arr\n\ndef partition(arr, lo, hi):\n    # Random pivot to avoid worst case\n    rand = random.randint(lo, hi)\n    arr[rand], arr[hi] = arr[hi], arr[rand]\n    pivot = arr[hi]\n    i = lo - 1\n    for j in range(lo, hi):\n        if arr[j] <= pivot:\n            i += 1\n            arr[i], arr[j] = arr[j], arr[i]\n    arr[i + 1], arr[hi] = arr[hi], arr[i + 1]\n    return i + 1\n\nif __name__ == '__main__':\n    data = [5, 2, 9, 1, 5, 6, 3, 8]\n    print(quicksort_simple(data))\n    arr = data.copy()\n    quicksort_inplace(arr)\n    print(arr)\n```\n\nNotes: random pivot avoids the O(n²) worst case on already-sorted input. Average O(n log n).",
+    "keywords": ["python", "quicksort", "sorting", "algorithm", "partition"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["quicksort python", "quicksort implementation", "quick sort algorithm"]
+  },
+  {
+    "question": "write python code for A* pathfinding",
+    "answer": "A* pathfinding on a 2D grid:\n\n```python\nimport heapq\n\ndef heuristic(a, b):\n    return abs(a[0] - b[0]) + abs(a[1] - b[1])  # Manhattan\n\ndef astar(grid, start, goal):\n    rows, cols = len(grid), len(grid[0])\n    open_set = [(0, start)]\n    came_from = {}\n    g_score = {start: 0}\n\n    while open_set:\n        _, current = heapq.heappop(open_set)\n\n        if current == goal:\n            path = [current]\n            while current in came_from:\n                current = came_from[current]\n                path.append(current)\n            return path[::-1]\n\n        for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:\n            nx, ny = current[0] + dx, current[1] + dy\n            if not (0 <= nx < rows and 0 <= ny < cols):\n                continue\n            if grid[nx][ny] == 1:  # wall\n                continue\n            neighbor = (nx, ny)\n            tentative = g_score[current] + 1\n            if tentative < g_score.get(neighbor, float('inf')):\n                came_from[neighbor] = current\n                g_score[neighbor] = tentative\n                f = tentative + heuristic(neighbor, goal)\n                heapq.heappush(open_set, (f, neighbor))\n\n    return None\n\nif __name__ == '__main__':\n    grid = [\n        [0, 0, 0, 0, 0],\n        [0, 1, 1, 1, 0],\n        [0, 0, 0, 0, 0],\n        [0, 1, 0, 1, 0],\n        [0, 0, 0, 0, 0],\n    ]\n    path = astar(grid, (0, 0), (4, 4))\n    print(path)\n```\n\nNotes: 1 = wall, 0 = free. Manhattan heuristic works for 4-directional movement. For diagonal movement, use Euclidean or Chebyshev.",
+    "keywords": ["python", "astar", "pathfinding", "graph", "algorithm"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["a star python", "pathfinding python", "astar algorithm"]
+  },
+  {
+    "question": "write javascript code to build a promise-based queue",
+    "answer": "Sequential execution queue for async tasks:\n\n```javascript\nclass TaskQueue {\n  constructor(concurrency = 1) {\n    this.concurrency = concurrency;\n    this.running = 0;\n    this.queue = [];\n  }\n\n  add(task) {\n    return new Promise((resolve, reject) => {\n      this.queue.push({ task, resolve, reject });\n      this.next();\n    });\n  }\n\n  next() {\n    if (this.running >= this.concurrency || this.queue.length === 0) return;\n    const { task, resolve, reject } = this.queue.shift();\n    this.running++;\n    Promise.resolve()\n      .then(task)\n      .then(resolve, reject)\n      .finally(() => {\n        this.running--;\n        this.next();\n      });\n  }\n\n  size() {\n    return this.queue.length + this.running;\n  }\n}\n\nconst q = new TaskQueue(2);\nfor (let i = 1; i <= 5; i++) {\n  q.add(async () => {\n    await new Promise(r => setTimeout(r, 200));\n    console.log('task', i);\n    return i;\n  }).then(v => console.log('done', v));\n}\n```\n\nNotes: useful for rate-limiting HTTP requests. Increase `concurrency` to run more tasks in parallel.",
+    "keywords": ["javascript", "queue", "async", "concurrency", "promise"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["async queue js", "promise queue", "task queue javascript"]
+  },
+  {
+    "question": "write javascript code to parse csv",
+    "answer": "Parsing CSV text with proper quote handling:\n\n```javascript\nfunction parseCSV(text) {\n  const rows = [];\n  let row = [];\n  let field = '';\n  let inQuotes = false;\n\n  for (let i = 0; i < text.length; i++) {\n    const ch = text[i];\n\n    if (inQuotes) {\n      if (ch === '\"' && text[i + 1] === '\"') {\n        field += '\"';\n        i++;\n      } else if (ch === '\"') {\n        inQuotes = false;\n      } else {\n        field += ch;\n      }\n    } else {\n      if (ch === '\"') {\n        inQuotes = true;\n      } else if (ch === ',') {\n        row.push(field);\n        field = '';\n      } else if (ch === '\\n') {\n        row.push(field);\n        rows.push(row);\n        row = [];\n        field = '';\n      } else if (ch === '\\r') {\n        // ignore\n      } else {\n        field += ch;\n      }\n    }\n  }\n\n  if (field || row.length) {\n    row.push(field);\n    rows.push(row);\n  }\n\n  return rows;\n}\n\nconst csv = `name,age,note\nAlice,30,\"Hello, world\"\nBob,25,Simple\n`;\nconsole.log(parseCSV(csv));\n```\n\nNotes: handles quoted fields, escaped quotes (`\"\"`), and both `\\n` and `\\r\\n` line endings.",
+    "keywords": ["javascript", "csv", "parse", "text"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["parse csv js", "javascript csv", "csv parser"]
+  },
+  {
+    "question": "write a python script to compare strings for similarity",
+    "answer": "Several string similarity algorithms:\n\n```python\nimport difflib\nfrom collections import Counter\n\ndef similarity_ratio(a, b):\n    return difflib.SequenceMatcher(None, a, b).ratio()\n\ndef jaccard_word_similarity(a, b):\n    a_words = set(a.lower().split())\n    b_words = set(b.lower().split())\n    if not a_words and not b_words:\n        return 1.0\n    return len(a_words & b_words) / len(a_words | b_words)\n\ndef cosine_char_similarity(a, b):\n    a_chars = Counter(a)\n    b_chars = Counter(b)\n    common = set(a_chars) & set(b_chars)\n    dot = sum(a_chars[c] * b_chars[c] for c in common)\n    norm_a = sum(v * v for v in a_chars.values()) ** 0.5\n    norm_b = sum(v * v for v in b_chars.values()) ** 0.5\n    return dot / (norm_a * norm_b) if norm_a and norm_b else 0\n\ndef fuzzy_contains(needle, haystack, threshold=0.75):\n    needle = needle.lower()\n    haystack = haystack.lower()\n    if needle in haystack:\n        return True\n    words = haystack.split()\n    for i, word in enumerate(words):\n        for length in range(len(needle.split()) + 1):\n            chunk = ' '.join(words[i:i+length+1])\n            if chunk and difflib.SequenceMatcher(None, needle, chunk).ratio() >= threshold:\n                return True\n    return False\n\nif __name__ == '__main__':\n    pairs = [('python', 'pyton'), ('hello world', 'hello word'), ('python', 'java')]\n    for a, b in pairs:\n        print(f'{a!r} vs {b!r}: {similarity_ratio(a, b):.3f}')\n```\n\nNotes: `SequenceMatcher` uses Ratcliff-Obershelp. For production, use RapidFuzz or thefuzz (formerly fuzzywuzzy).",
+    "keywords": ["python", "similarity", "fuzzy", "difflib", "string"],
+    "category": "Algorithms",
+    "language": "en",
+    "aliases": ["string similarity python", "fuzzy match python", "compare strings"]
+  },
+  {
+    "question": "write javascript code to implement a set difference union intersection",
+    "answer": "Set operations on arrays:\n\n```javascript\nfunction union(...arrays) {\n  return [...new Set(arrays.flat())];\n}\n\nfunction intersection(a, b) {\n  const setB = new Set(b);\n  return [...new Set(a.filter(x => setB.has(x)))];\n}\n\nfunction difference(a, b) {\n  const setB = new Set(b);\n  return [...new Set(a.filter(x => !setB.has(x)))];\n}\n\nfunction symmetricDifference(a, b) {\n  return [...new Set([...difference(a, b), ...difference(b, a)])];\n}\n\nfunction isSubset(a, b) {\n  const setB = new Set(b);\n  return a.every(x => setB.has(x));\n}\n\nconst a = [1, 2, 3, 4];\nconst b = [3, 4, 5, 6];\n\nconsole.log('union:', union(a, b));                    // [1,2,3,4,5,6]\nconsole.log('intersection:', intersection(a, b));       // [3,4]\nconsole.log('difference:', difference(a, b));           // [1,2]\nconsole.log('symmetric:', symmetricDifference(a, b));   // [1,2,5,6]\nconsole.log('subset:', isSubset([1, 2], a));            // true\n```\n\nNotes: use a `Set` for O(1) lookups. These functions return new arrays without duplicates.",
+    "keywords": ["javascript", "set", "union", "intersection", "array"],
+    "category": "JavaScript Requests",
+    "language": "en",
+    "aliases": ["array union js", "intersection javascript", "set operations"]
+  },
+  {
+    "question": "write python code to convert between data formats",
+    "answer": "Converting between JSON, CSV, YAML, and dictionaries:\n\n```python\nimport json\nimport csv\nimport io\nfrom pathlib import Path\n\ndef json_to_csv(json_path, csv_path, fieldnames=None):\n    data = json.loads(Path(json_path).read_text())\n    if not data:\n        return\n    if fieldnames is None:\n        fieldnames = list(data[0].keys())\n    with open(csv_path, 'w', newline='', encoding='utf-8') as f:\n        writer = csv.DictWriter(f, fieldnames=fieldnames)\n        writer.writeheader()\n        writer.writerows(data)\n\ndef csv_to_json(csv_path, json_path):\n    with open(csv_path, 'r', encoding='utf-8', newline='') as f:\n        rows = list(csv.DictReader(f))\n    Path(json_path).write_text(json.dumps(rows, indent=2, ensure_ascii=False))\n\ndef csv_string_to_json(csv_string):\n    reader = csv.DictReader(io.StringIO(csv_string))\n    return json.dumps(list(reader), indent=2)\n\ndef json_to_dict_list(json_string):\n    return json.loads(json_string)\n\nif __name__ == '__main__':\n    sample_csv = 'name,age\\nAlice,30\\nBob,25\\n'\n    print(csv_string_to_json(sample_csv))\n```\n\nNotes: `newline=''` is required when writing CSV to avoid blank lines on Windows. Use `ensure_ascii=False` to keep non-ASCII characters readable.",
+    "keywords": ["python", "json", "csv", "convert", "format"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["convert json csv python", "format conversion", "data conversion"]
+  },
+  {
+    "question": "write a python script to clean text data",
+    "answer": "Text cleaning for NLP and search:\n\n```python\nimport re\nimport unicodedata\nfrom html import unescape\n\ndef clean_text(text):\n    if not isinstance(text, str):\n        return ''\n\n    # Decode HTML entities\n    text = unescape(text)\n\n    # Normalize Unicode (NFKC: 'ﬁ' -> 'fi', '²' -> '2')\n    text = unicodedata.normalize('NFKC', text)\n\n    # Remove control characters (except newline, tab, carriage return)\n    text = ''.join(ch for ch in text if unicodedata.category(ch)[0] != 'C' or ch in '\\n\\t\\r')\n\n    # Collapse whitespace\n    text = re.sub(r'[ \\t]+', ' ', text)\n    text = re.sub(r'\\n{3,}', '\\n\\n', text)\n    text = text.strip()\n\n    return text\n\ndef remove_urls(text):\n    return re.sub(r'https?://\\S+', '', text)\n\ndef remove_emails(text):\n    return re.sub(r'\\S+@\\S+\\.\\S+', '', text)\n\ndef normalize_case(text, lower=True):\n    return text.lower() if lower else text.upper()\n\nif __name__ == '__main__':\n    messy = '  Hello\\u00a0\\u00a0World!  \\n\\n\\n  Visit https://example.com   Email: a@b.com  '\n    print(repr(clean_text(messy)))\n    print(repr(remove_emails(remove_urls(clean_text(messy)))))\n```\n\nNotes: NFKC normalization also converts full-width characters. Removing control characters prevents weird artifacts when saving to files or logs.",
+    "keywords": ["python", "text", "clean", "normalize", "nlp"],
+    "category": "Python Requests",
+    "language": "en",
+    "aliases": ["clean text python", "text preprocessing", "normalize text"]
+  }
+]

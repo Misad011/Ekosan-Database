@@ -1,0 +1,2250 @@
+[
+  {
+    "question": "What is nature?",
+    "answer": "Nature refers to the physical world and everything in it that is not made by humans. This includes plants, animals, landscapes, oceans, weather, and all natural phenomena. Nature operates through physical, chemical, and biological processes that have existed for billions of years.",
+    "keywords": ["nature", "natural world", "environment", "physical world"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is the natural world?", "Explain nature", "Define nature"]
+  },
+  {
+    "question": "What is an ecosystem?",
+    "answer": "An ecosystem is a community of living organisms interacting with each other and with their non-living environment. It includes plants, animals, microorganisms, soil, water, and air. Ecosystems can be as small as a pond or as large as a rainforest. Energy flows through them and nutrients cycle within them.",
+    "keywords": ["ecosystem", "ecology", "habitat", "environment"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is ecology?", "Explain ecosystem", "Define ecosystem"]
+  },
+  {
+    "question": "What is biodiversity?",
+    "answer": "Biodiversity is the variety of life on Earth. It includes the diversity of species, the genetic diversity within species, and the diversity of ecosystems. High biodiversity makes ecosystems more resilient to change and disease. Tropical rainforests and coral reefs are the most biodiverse places on Earth.",
+    "keywords": ["biodiversity", "species", "variety", "life"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is biological diversity?", "Explain biodiversity"]
+  },
+  {
+    "question": "What is photosynthesis?",
+    "answer": "Photosynthesis is the process by which green plants, algae, and some bacteria convert sunlight, carbon dioxide, and water into glucose and oxygen. It takes place in the chloroplasts, using the green pigment chlorophyll. Photosynthesis is the foundation of almost all life on Earth because it produces oxygen and organic matter.",
+    "keywords": ["photosynthesis", "plants", "chlorophyll", "sunlight", "oxygen"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["How do plants make food?", "Explain photosynthesis"]
+  },
+  {
+    "question": "What is the water cycle?",
+    "answer": "The water cycle is the continuous movement of water on, above, and below the Earth's surface. It includes evaporation (water turning to vapor), condensation (vapor turning to clouds), precipitation (rain, snow, hail), and collection (water gathering in rivers, lakes, and oceans). The sun provides the energy that drives the cycle.",
+    "keywords": ["water cycle", "evaporation", "condensation", "precipitation", "rain"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["Explain the water cycle", "How does rain form?"]
+  },
+  {
+    "question": "What is the carbon cycle?",
+    "answer": "The carbon cycle is the movement of carbon between the atmosphere, oceans, land, and living organisms. Plants absorb carbon dioxide during photosynthesis. Animals release it during respiration. When organisms die and decompose, carbon returns to the soil. Burning fossil fuels releases large amounts of carbon dioxide into the atmosphere.",
+    "keywords": ["carbon cycle", "carbon dioxide", "atmosphere", "climate"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["Explain the carbon cycle"]
+  },
+  {
+    "question": "What causes rain?",
+    "answer": "Rain forms when water vapor in the atmosphere condenses into tiny droplets that combine to form clouds. When droplets become heavy enough, they fall as rain. Warm air rises, cools, and loses its ability to hold moisture. This is why rain often follows warm, humid weather.",
+    "keywords": ["rain", "precipitation", "clouds", "weather"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["How does rain form?", "Why does it rain?"]
+  },
+  {
+    "question": "What is a rainforest?",
+    "answer": "A rainforest is a dense forest with high rainfall, usually over 200 cm per year. Tropical rainforests are near the equator and are warm year-round. They contain more than half of the world's plant and animal species. The Amazon, Congo, and Southeast Asian rainforests are the largest.",
+    "keywords": ["rainforest", "forest", "tropical", "jungle"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is a jungle?", "Explain rainforest"]
+  },
+  {
+    "question": "What is a desert?",
+    "answer": "A desert is a dry region that receives very little precipitation, usually less than 25 cm per year. Deserts can be hot, like the Sahara, or cold, like Antarctica. Plants and animals in deserts have special adaptations to survive with little water, such as storing water, being nocturnal, or having thick skin.",
+    "keywords": ["desert", "dry", "arid", "Sahara"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is a dry place called?", "Explain deserts"]
+  },
+  {
+    "question": "What is a mountain?",
+    "answer": "A mountain is a large natural elevation of the Earth's surface that rises abruptly above the surrounding land. Mountains form through tectonic plate collisions, volcanic activity, or erosion. They influence climate, weather, and water supply. The highest mountain on Earth is Mount Everest at 8,848 meters.",
+    "keywords": ["mountain", "elevation", "Everest", "peak"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is a peak?", "Explain mountains"]
+  },
+  {
+    "question": "What is a volcano?",
+    "answer": "A volcano is an opening in the Earth's crust through which lava, ash, and gases escape from below. Volcanoes form when magma rises from the mantle. They can be active, dormant, or extinct. Eruptions can be explosive or gentle. Volcanic soil is often very fertile.",
+    "keywords": ["volcano", "lava", "eruption", "magma"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is lava?", "Explain volcanoes"]
+  },
+  {
+    "question": "What is an earthquake?",
+    "answer": "An earthquake is a sudden shaking of the ground caused by the movement of tectonic plates along fault lines. The point underground where it starts is called the focus, and the point on the surface is the epicenter. Earthquakes are measured using the Richter or moment magnitude scale.",
+    "keywords": ["earthquake", "tectonic", "seismic", "fault"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What causes earthquakes?", "Explain earthquakes"]
+  },
+  {
+    "question": "What is a tsunami?",
+    "answer": "A tsunami is a series of large ocean waves caused by underwater earthquakes, volcanic eruptions, or landslides. Tsunami waves can travel across oceans at hundreds of kilometers per hour and grow very tall when they reach shallow coastlines. Warning systems save lives by giving people time to move to higher ground.",
+    "keywords": ["tsunami", "wave", "ocean", "earthquake"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is a tidal wave?", "Explain tsunami"]
+  },
+  {
+    "question": "What is a hurricane?",
+    "answer": "A hurricane is a powerful tropical storm with strong winds rotating around a low-pressure center called the eye. Hurricanes form over warm ocean water. They are called typhoons in the western Pacific and cyclones in the Indian Ocean. They bring heavy rain, strong winds, and storm surges.",
+    "keywords": ["hurricane", "typhoon", "cyclone", "storm"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is a typhoon?", "What is a cyclone?", "Explain hurricanes"]
+  },
+  {
+    "question": "What is lightning?",
+    "answer": "Lightning is a giant electrical discharge that occurs during thunderstorms. It happens when electrical charges build up in clouds and separate. When the difference becomes large enough, a spark jumps between clouds or between a cloud and the ground. Thunder is the sound of the rapidly expanding air heated by lightning.",
+    "keywords": ["lightning", "thunder", "storm", "electricity"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What causes lightning?", "What is thunder?"]
+  },
+  {
+    "question": "What is the atmosphere?",
+    "answer": "The atmosphere is the layer of gases surrounding the Earth. It is mostly nitrogen (78%) and oxygen (21%), with small amounts of argon, carbon dioxide, and water vapor. It protects life by absorbing harmful radiation, trapping heat, and burning up most meteors before they reach the ground.",
+    "keywords": ["atmosphere", "air", "oxygen", "nitrogen", "gases"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is air made of?", "Explain the atmosphere"]
+  },
+  {
+    "question": "What is climate change?",
+    "answer": "Climate change is the long-term shift in global temperatures and weather patterns. Since the 1800s, human activities, mainly burning fossil fuels, have released greenhouse gases that trap heat in the atmosphere. This causes rising temperatures, melting ice, rising sea levels, and more extreme weather events.",
+    "keywords": ["climate change", "global warming", "greenhouse", "environment"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is global warming?", "Explain climate change"]
+  },
+  {
+    "question": "What is a food chain?",
+    "answer": "A food chain shows how energy passes from one living thing to another. Producers like plants make their own food. Herbivores eat plants. Carnivores eat other animals. Decomposers break down dead matter. Many food chains connected together form a food web.",
+    "keywords": ["food chain", "predator", "prey", "energy"],
+    "category": "Nature",
+    "language": "en",
+    "aliases": ["What is a food web?", "Explain food chains"]
+  },
+  {
+    "question": "What is an animal?",
+    "answer": "An animal is a living organism that belongs to the kingdom Animalia. Animals are multicellular, cannot make their own food, and usually move at some stage of life. They eat other organisms for energy. Animals range from tiny insects to giant whales.",
+    "keywords": ["animal", "organism", "wildlife"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are animals?", "Define animal"]
+  },
+  {
+    "question": "What is a mammal?",
+    "answer": "A mammal is a warm-blooded animal with hair or fur that produces milk to feed its young. Mammals have lungs, a backbone, and a four-chambered heart. Most mammals give birth to live young. Examples include humans, dogs, whales, bats, and elephants.",
+    "keywords": ["mammal", "warm-blooded", "milk", "fur"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are mammals?", "Define mammal"]
+  },
+  {
+    "question": "What is a bird?",
+    "answer": "A bird is a warm-blooded animal with feathers, wings, a beak, and a backbone. All birds lay eggs. Most birds can fly, though some like ostriches and penguins cannot. Birds have hollow bones that make them lighter. There are about 10,000 species of birds.",
+    "keywords": ["bird", "feathers", "wings", "eggs"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are birds?", "Define bird"]
+  },
+  {
+    "question": "What is a reptile?",
+    "answer": "A reptile is a cold-blooded animal with dry, scaly skin and a backbone. Most reptiles lay eggs on land. They include snakes, lizards, turtles, crocodiles, and alligators. Reptiles control their body temperature by moving between sun and shade.",
+    "keywords": ["reptile", "snake", "lizard", "cold-blooded"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are reptiles?", "Define reptile"]
+  },
+  {
+    "question": "What is an amphibian?",
+    "answer": "An amphibian is a cold-blooded animal that lives part of its life in water and part on land. Amphibians have moist skin and lay eggs in water. They include frogs, toads, salamanders, and newts. Their skin absorbs oxygen, which is why they must stay moist.",
+    "keywords": ["amphibian", "frog", "toad", "salamander"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are amphibians?", "Define amphibian"]
+  },
+  {
+    "question": "What is a fish?",
+    "answer": "A fish is a cold-blooded animal that lives in water and breathes through gills. Fish have a backbone, fins, and scales. Most fish lay eggs. There are over 30,000 species, making fish the most diverse group of vertebrates.",
+    "keywords": ["fish", "gills", "fins", "water"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are fish?", "Define fish"]
+  },
+  {
+    "question": "What is an insect?",
+    "answer": "An insect is a small animal with six legs, three body parts (head, thorax, abdomen), and usually wings. Insects have an exoskeleton and breathe through tiny tubes called spiracles. They make up more than half of all known animal species. Examples include ants, bees, butterflies, and beetles.",
+    "keywords": ["insect", "bug", "six legs", "exoskeleton"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are insects?", "Define insect"]
+  },
+  {
+    "question": "What is a spider?",
+    "answer": "A spider is an arachnid with eight legs, two body parts, and no wings. Spiders produce silk from glands in their abdomen and use it to build webs, wrap prey, or make egg sacs. Almost all spiders are venomous, but only a few are dangerous to humans.",
+    "keywords": ["spider", "arachnid", "web", "eight legs"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["Are spiders insects?", "Explain spiders"]
+  },
+  {
+    "question": "What is the largest animal in the world?",
+    "answer": "The blue whale is the largest animal ever known to have lived. It can grow up to 30 meters long and weigh over 150 tonnes. Its heart alone can weigh as much as a small car. Blue whales feed almost entirely on tiny shrimp-like animals called krill.",
+    "keywords": ["blue whale", "largest", "biggest", "whale"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What is the biggest animal?", "Largest animal on Earth"]
+  },
+  {
+    "question": "What is the fastest land animal?",
+    "answer": "The cheetah is the fastest land animal, reaching speeds of up to 110 km/h in short bursts. Cheetahs have long legs, a flexible spine, and non-retractable claws that grip the ground. They can only maintain top speed for about 30 seconds.",
+    "keywords": ["cheetah", "fastest", "speed", "land animal"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["Which animal runs fastest?", "Fastest animal on land"]
+  },
+  {
+    "question": "What is the tallest animal?",
+    "answer": "The giraffe is the tallest living animal, reaching up to 5.8 meters. Its long neck has only seven vertebrae, the same number as a human neck. Giraffes use their height to reach leaves other animals cannot eat. They are native to Africa.",
+    "keywords": ["giraffe", "tallest", "tall", "neck"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["Which animal is tallest?", "Tallest animal in the world"]
+  },
+  {
+    "question": "What do lions eat?",
+    "answer": "Lions are carnivores that eat meat. They hunt zebras, wildebeest, buffalo, antelopes, and other large animals. Lions usually hunt in groups called prides. Females do most of the hunting while males defend the territory.",
+    "keywords": ["lion", "carnivore", "predator", "hunting"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What does a lion eat?", "Lion diet"]
+  },
+  {
+    "question": "What is a predator?",
+    "answer": "A predator is an animal that hunts and eats other animals. Predators have adaptations such as sharp teeth, claws, speed, or stealth. Examples include lions, wolves, eagles, sharks, and spiders. They are important for keeping prey populations healthy.",
+    "keywords": ["predator", "hunter", "carnivore", "prey"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are predators?", "Define predator"]
+  },
+  {
+    "question": "What is prey?",
+    "answer": "Prey is an animal that is hunted and eaten by predators. Prey animals often have adaptations like camouflage, speed, sharp senses, or living in groups to avoid being caught. Examples include rabbits, deer, mice, and small fish.",
+    "keywords": ["prey", "hunted", "food", "survival"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are prey animals?", "Define prey"]
+  },
+  {
+    "question": "What is camouflage?",
+    "answer": "Camouflage is the ability of an animal to blend into its surroundings to avoid being seen. It is used by both predators to sneak up on prey and by prey to hide from predators. Examples include chameleons changing color, stick insects looking like twigs, and snowshoe hares turning white in winter.",
+    "keywords": ["camouflage", "blend", "hide", "adaptation"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What is blending in?", "Explain camouflage"]
+  },
+  {
+    "question": "What is migration?",
+    "answer": "Migration is the seasonal movement of animals from one region to another, usually to find food, warmer weather, or breeding grounds. Many birds, whales, butterflies, and land animals migrate. The Arctic tern migrates farther than any other animal, traveling from the Arctic to the Antarctic and back each year.",
+    "keywords": ["migration", "seasonal", "movement", "birds"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What is animal migration?", "Why do animals migrate?"]
+  },
+  {
+    "question": "What is hibernation?",
+    "answer": "Hibernation is a state of deep sleep some animals enter during cold months to save energy when food is scarce. Body temperature, heart rate, and breathing slow down dramatically. Bears, bats, hedgehogs, and ground squirrels hibernate. Some animals enter a lighter state called torpor.",
+    "keywords": ["hibernation", "sleep", "winter", "energy"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What is winter sleep?", "Explain hibernation"]
+  },
+  {
+    "question": "What is a habitat?",
+    "answer": "A habitat is the natural environment where an animal or plant lives. It provides food, water, shelter, and space. Examples include forests, grasslands, deserts, oceans, and wetlands. When a habitat is destroyed, the species that depend on it may decline or become extinct.",
+    "keywords": ["habitat", "home", "environment", "species"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What is a natural habitat?", "Define habitat"]
+  },
+  {
+    "question": "What is extinction?",
+    "answer": "Extinction is when a species no longer exists anywhere on Earth. It can happen naturally, but human activities like habitat destruction, pollution, overhunting, and climate change are causing extinctions much faster than normal. The dodo, passenger pigeon, and woolly mammoth are extinct.",
+    "keywords": ["extinction", "species", "endangered", "gone"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What does extinct mean?", "Explain extinction"]
+  },
+  {
+    "question": "What is an endangered species?",
+    "answer": "An endangered species is a type of animal or plant that is at risk of becoming extinct. This can happen because of habitat loss, hunting, disease, or climate change. Examples include tigers, pandas, gorillas, and blue whales. Conservation efforts try to protect them.",
+    "keywords": ["endangered", "species", "protect", "conservation"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What does endangered mean?", "Explain endangered species"]
+  },
+  {
+    "question": "How do bees make honey?",
+    "answer": "Bees collect nectar from flowers using their long tongues. They store the nectar in a special stomach where enzymes break down complex sugars. Back at the hive, they pass the nectar to other bees, who fan it with their wings to evaporate water. The thick, sweet result is honey, stored in wax cells as food for winter.",
+    "keywords": ["bees", "honey", "nectar", "hive"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["How is honey made?", "Where does honey come from?"]
+  },
+  {
+    "question": "What is the difference between a crocodile and an alligator?",
+    "answer": "Crocodiles have narrower, V-shaped snouts and a visible lower tooth when their mouths are closed. Alligators have wider, U-shaped snouts, and their lower teeth are hidden. Crocodiles are usually more aggressive and live in saltwater and freshwater, while alligators prefer freshwater.",
+    "keywords": ["crocodile", "alligator", "reptile", "difference"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["Crocodile vs alligator", "How to tell a crocodile from an alligator"]
+  },
+  {
+    "question": "What do sharks eat?",
+    "answer": "Sharks eat fish, seals, sea lions, dolphins, turtles, and even other sharks. Different species have different diets. The largest shark, the whale shark, eats only tiny plankton. Sharks use their strong jaws and rows of replaceable teeth to catch and tear food.",
+    "keywords": ["shark", "diet", "ocean", "predator"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["Shark diet", "What do sharks eat?"]
+  },
+  {
+    "question": "Are sharks dangerous to humans?",
+    "answer": "Most sharks are not dangerous to humans. Out of over 500 species, only a handful attack people, and attacks are rare. You are far more likely to be killed by a lightning strike or a bee sting than by a shark. Sharks are important for ocean health and are themselves threatened by overfishing.",
+    "keywords": ["shark", "dangerous", "attack", "ocean"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["Are sharks dangerous?", "Shark attacks"]
+  },
+  {
+    "question": "What is an octopus?",
+    "answer": "An octopus is a sea animal with eight arms, a soft body, and no bones. It is one of the most intelligent invertebrates. Octopuses can change color and texture to camouflage, squeeze through tiny gaps, and use tools. They have three hearts and blue blood.",
+    "keywords": ["octopus", "ocean", "intelligent", "eight arms"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are octopuses?", "Explain octopus"]
+  },
+  {
+    "question": "What is a dolphin?",
+    "answer": "A dolphin is a highly intelligent marine mammal. Dolphins breathe air through a blowhole, give birth to live young, and live in groups called pods. They use echolocation to find food and communicate with clicks and whistles. Dolphins are known for being social and playful.",
+    "keywords": ["dolphin", "mammal", "ocean", "echolocation"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are dolphins?", "Explain dolphins"]
+  },
+  {
+    "question": "What is a whale?",
+    "answer": "A whale is a large marine mammal that breathes air and gives birth to live young. Whales are divided into baleen whales, which filter food from water, and toothed whales, which hunt prey. The blue whale is the largest animal on Earth. Whales communicate with complex songs.",
+    "keywords": ["whale", "mammal", "ocean", "baleen"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are whales?", "Explain whales"]
+  },
+  {
+    "question": "What is an elephant?",
+    "answer": "An elephant is the largest land animal. It has a long trunk, large ears, tusks, and thick skin. Elephants are highly intelligent and live in family groups led by older females. They use their trunks to breathe, smell, drink, grab objects, and make sounds. There are African and Asian elephants.",
+    "keywords": ["elephant", "trunk", "largest", "land"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are elephants?", "Explain elephants"]
+  },
+  {
+    "question": "What is a wolf?",
+    "answer": "A wolf is a wild canine that lives and hunts in packs. Wolves are highly social and communicate through howls, body language, and scent. They are apex predators in many ecosystems. Wolves were once widespread but are now found mainly in remote parts of North America, Europe, and Asia.",
+    "keywords": ["wolf", "pack", "canine", "predator"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are wolves?", "Explain wolves"]
+  },
+  {
+    "question": "What is a bear?",
+    "answer": "A bear is a large, powerful mammal with thick fur, a short tail, and a plantigrade walk (walking on the whole foot). Bears are found in North America, Europe, Asia, and South America. They eat both plants and meat. Some bears hibernate in winter. Examples include brown bears, polar bears, and pandas.",
+    "keywords": ["bear", "mammal", "hibernation", "powerful"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are bears?", "Explain bears"]
+  },
+  {
+    "question": "What is a snake?",
+    "answer": "A snake is a long, legless reptile with scales and a flexible body. Snakes are carnivores and swallow their prey whole. Some are venomous, others kill by constriction. Snakes shed their skin as they grow. They live on every continent except Antarctica.",
+    "keywords": ["snake", "reptile", "venom", "scales"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are snakes?", "Explain snakes"]
+  },
+  {
+    "question": "What is a frog?",
+    "answer": "A frog is an amphibian with moist skin, long hind legs for jumping, and webbed feet for swimming. Frogs live near water and eat insects. They start life as tadpoles with gills and tails, then metamorphose into adults with lungs and legs. Frogs absorb oxygen through their skin.",
+    "keywords": ["frog", "amphibian", "tadpole", "jump"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are frogs?", "Explain frogs"]
+  },
+  {
+    "question": "What is an ant?",
+    "answer": "An ant is a small social insect that lives in colonies. Ants have six legs, strong jaws, and a segmented body. Colonies have queens, workers, and males. Ants communicate with chemicals called pheromones. They can carry many times their own body weight.",
+    "keywords": ["ant", "insect", "colony", "social"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are ants?", "Explain ants"]
+  },
+  {
+    "question": "What is a butterfly?",
+    "answer": "A butterfly is an insect with large, often colorful wings and a coiled drinking tube called a proboscis. Butterflies go through complete metamorphosis: egg, larva (caterpillar), pupa (chrysalis), and adult. They feed on nectar and help pollinate flowers.",
+    "keywords": ["butterfly", "insect", "metamorphosis", "wings"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are butterflies?", "Explain butterflies"]
+  },
+  {
+    "question": "What is a penguin?",
+    "answer": "A penguin is a flightless bird that lives in the Southern Hemisphere, especially Antarctica. Penguins have flippers for swimming, thick feathers for insulation, and a layer of blubber. They eat fish, squid, and krill. Emperor penguins survive extreme cold by huddling together.",
+    "keywords": ["penguin", "bird", "Antarctica", "swimming"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are penguins?", "Explain penguins"]
+  },
+  {
+    "question": "What is an eagle?",
+    "answer": "An eagle is a large bird of prey with a hooked beak, strong talons, and excellent eyesight. Eagles hunt fish, small mammals, and other birds. They build large nests called eyries. The bald eagle is the national bird of the United States.",
+    "keywords": ["eagle", "bird of prey", "hunt", "talons"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are eagles?", "Explain eagles"]
+  },
+  {
+    "question": "What is a parrot?",
+    "answer": "A parrot is a colorful, intelligent bird with a curved beak and grasping feet. Parrots live in tropical regions and eat fruit, seeds, and nuts. Some species, like the African grey, can mimic human speech. Parrots form strong bonds with their mates.",
+    "keywords": ["parrot", "bird", "talk", "tropical"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are parrots?", "Explain parrots"]
+  },
+  {
+    "question": "What is a horse?",
+    "answer": "A horse is a large, strong mammal with hooves, a long mane, and a tail. Horses have been domesticated for thousands of years for riding, work, and sport. They are herbivores and live in herds. Horses can sleep standing up.",
+    "keywords": ["horse", "mammal", "ride", "herbivore"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are horses?", "Explain horses"]
+  },
+  {
+    "question": "What is a dog?",
+    "answer": "A dog is a domesticated mammal descended from wolves. Dogs are loyal, social, and highly trainable. They have an excellent sense of smell and hearing. Dogs are kept as pets, working animals, and assistance animals. There are hundreds of breeds.",
+    "keywords": ["dog", "pet", "canine", "loyal"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are dogs?", "Explain dogs"]
+  },
+  {
+    "question": "What is a cat?",
+    "answer": "A cat is a small domesticated carnivorous mammal. Cats have retractable claws, sharp teeth, and excellent night vision. They are independent but social animals. Cats purr, meow, and use body language to communicate. They are popular pets worldwide.",
+    "keywords": ["cat", "pet", "feline", "independent"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are cats?", "Explain cats"]
+  },
+  {
+    "question": "What is a cow?",
+    "answer": "A cow is a large domesticated mammal raised for milk, meat, and leather. Cows are ruminants with a four-chambered stomach that lets them digest grass. They chew cud to break down plant material. Female cows produce milk after giving birth.",
+    "keywords": ["cow", "cattle", "milk", "farm"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are cows?", "Explain cows"]
+  },
+  {
+    "question": "What is a chicken?",
+    "answer": "A chicken is a domesticated bird raised for eggs and meat. Chickens have feathers, a beak, a comb, and wattles. Hens lay eggs, usually one per day. Chickens are omnivores and eat seeds, insects, and small plants. They live in flocks with a pecking order.",
+    "keywords": ["chicken", "bird", "eggs", "farm"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are chickens?", "Explain chickens"]
+  },
+  {
+    "question": "What is a rabbit?",
+    "answer": "A rabbit is a small mammal with long ears, a short tail, and strong hind legs for hopping. Rabbits are herbivores and eat grass, leaves, and vegetables. They live in burrows called warrens. Rabbits are prey animals and breed quickly.",
+    "keywords": ["rabbit", "mammal", "hop", "prey"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are rabbits?", "Explain rabbits"]
+  },
+  {
+    "question": "What is a mouse?",
+    "answer": "A mouse is a small rodent with a pointed snout, large ears, and a long tail. Mice are found almost everywhere humans live. They eat seeds, grains, and insects. Mice are prey for many animals and breed rapidly. They are also used in scientific research.",
+    "keywords": ["mouse", "rodent", "small", "mammal"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are mice?", "Explain mice"]
+  },
+  {
+    "question": "What is a squirrel?",
+    "answer": "A squirrel is a small to medium rodent with a bushy tail, sharp claws, and strong hind legs. Squirrels live in trees and eat nuts, seeds, and fruit. They bury nuts in the fall and dig them up in winter, sometimes forgetting some and helping new trees grow.",
+    "keywords": ["squirrel", "rodent", "nuts", "tree"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are squirrels?", "Explain squirrels"]
+  },
+  {
+    "question": "What is a monkey?",
+    "answer": "A monkey is a primate with a tail, forward-facing eyes, and grasping hands. Monkeys live in tropical forests and savannas. They are intelligent and social animals that live in groups. Monkeys eat fruit, leaves, insects, and small animals. There are Old World and New World monkeys.",
+    "keywords": ["monkey", "primate", "intelligent", "social"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are monkeys?", "Explain monkeys"]
+  },
+  {
+    "question": "What is a gorilla?",
+    "answer": "A gorilla is the largest living primate. Gorillas are herbivores that live in African forests. They are highly intelligent and live in family groups led by a dominant male called a silverback. Gorillas share about 98% of their DNA with humans and are endangered.",
+    "keywords": ["gorilla", "primate", "silverback", "endangered"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are gorillas?", "Explain gorillas"]
+  },
+  {
+    "question": "What is a tiger?",
+    "answer": "A tiger is the largest wild cat species. Tigers have orange fur with black stripes and white underparts. They are solitary hunters and excellent swimmers. Tigers live in forests and grasslands of Asia. They are endangered due to habitat loss and poaching.",
+    "keywords": ["tiger", "cat", "stripes", "endangered"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are tigers?", "Explain tigers"]
+  },
+  {
+    "question": "What is a leopard?",
+    "answer": "A leopard is a large wild cat with a spotted coat. Leopards are agile climbers and often drag their prey into trees to keep it from scavengers. They are solitary and nocturnal. Leopards live in Africa and Asia and can adapt to many habitats.",
+    "keywords": ["leopard", "cat", "spots", "climber"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are leopards?", "Explain leopards"]
+  },
+  {
+    "question": "What is a zebra?",
+    "answer": "A zebra is an African mammal with black-and-white striped fur, related to horses and donkeys. Each zebra has a unique stripe pattern. Zebras live in herds and graze on grass. Their stripes may help confuse predators and repel insects.",
+    "keywords": ["zebra", "stripes", "Africa", "herd"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are zebras?", "Explain zebras"]
+  },
+  {
+    "question": "What is a kangaroo?",
+    "answer": "A kangaroo is a marsupial from Australia with strong hind legs, a long tail, and a pouch for carrying young. Kangaroos hop to move and can reach high speeds. Baby kangaroos, called joeys, live in the mother's pouch for months after birth.",
+    "keywords": ["kangaroo", "marsupial", "Australia", "pouch"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are kangaroos?", "Explain kangaroos"]
+  },
+  {
+    "question": "What is a koala?",
+    "answer": "A koala is a marsupial from Australia that lives in eucalyptus trees. Koalas eat eucalyptus leaves, which are toxic to most animals. They sleep up to 20 hours a day because their food gives them little energy. Koalas carry their young in a pouch.",
+    "keywords": ["koala", "marsupial", "eucalyptus", "Australia"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are koalas?", "Explain koalas"]
+  },
+  {
+    "question": "What is a panda?",
+    "answer": "A giant panda is a bear native to China with distinctive black-and-white fur. Pandas eat mostly bamboo, which they must consume in large amounts because it provides little nutrition. Pandas are endangered and are a symbol of wildlife conservation.",
+    "keywords": ["panda", "bear", "bamboo", "China"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are pandas?", "Explain pandas"]
+  },
+  {
+    "question": "What is a polar bear?",
+    "answer": "A polar bear is a large white bear that lives in the Arctic. Polar bears are excellent swimmers and hunt seals on sea ice. They have thick fur and a layer of blubber for insulation. Climate change is melting their sea ice habitat, threatening their survival.",
+    "keywords": ["polar bear", "Arctic", "sea ice", "seal"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are polar bears?", "Explain polar bears"]
+  },
+  {
+    "question": "What is a camel?",
+    "answer": "A camel is a large mammal adapted to desert life. Camels have humps that store fat, not water, and can go for long periods without drinking. They have thick eyelashes and nostrils that close to keep out sand. Camels are used for transport in desert regions.",
+    "keywords": ["camel", "desert", "hump", "survival"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are camels?", "Explain camels"]
+  },
+  {
+    "question": "What is a turtle?",
+    "answer": "A turtle is a reptile with a hard shell that protects its body. Turtles live in water or on land and lay eggs on land. Sea turtles migrate long distances. Some species can live over 100 years. Turtles have no teeth, using a beak to bite food.",
+    "keywords": ["turtle", "shell", "reptile", "sea"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are turtles?", "Explain turtles"]
+  },
+  {
+    "question": "What is a tortoise?",
+    "answer": "A tortoise is a land-dwelling reptile with a hard shell and sturdy legs. Tortoises are slow-moving herbivores that eat grass, leaves, and fruit. They can live for over 150 years. Tortoises are different from turtles, which mostly live in water.",
+    "keywords": ["tortoise", "land", "reptile", "slow"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are tortoises?", "Explain tortoises"]
+  },
+  {
+    "question": "What is a lizard?",
+    "answer": "A lizard is a reptile with scaly skin, four legs (usually), and a long tail. Lizards are cold-blooded and bask in the sun to warm up. Most lizards eat insects. Some can drop their tails to escape predators and regrow them. Examples include iguanas, geckos, and chameleons.",
+    "keywords": ["lizard", "reptile", "scales", "cold-blooded"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are lizards?", "Explain lizards"]
+  },
+  {
+    "question": "What is a chameleon?",
+    "answer": "A chameleon is a type of lizard known for changing color, having independently moving eyes, and a long, sticky tongue for catching insects. Chameleons use color to communicate and regulate temperature, not just to camouflage. They live mostly in Africa and Madagascar.",
+    "keywords": ["chameleon", "lizard", "color", "tongue"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are chameleons?", "Explain chameleons"]
+  },
+  {
+    "question": "What is a crab?",
+    "answer": "A crab is a crustacean with a hard shell, ten legs, and two claws. Crabs live in oceans, freshwater, and on land. They walk sideways, molt to grow, and eat almost anything. There are thousands of species, from tiny pea crabs to giant Japanese spider crabs.",
+    "keywords": ["crab", "crustacean", "shell", "ocean"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are crabs?", "Explain crabs"]
+  },
+  {
+    "question": "What is a lobster?",
+    "answer": "A lobster is a large marine crustacean with a hard shell, claws, and long antennae. Lobsters live on the ocean floor and are mostly nocturnal. They grow by molting. Lobsters can live for decades and are considered a delicacy in many cultures.",
+    "keywords": ["lobster", "crustacean", "claws", "ocean"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are lobsters?", "Explain lobsters"]
+  },
+  {
+    "question": "What is a jellyfish?",
+    "answer": "A jellyfish is a sea animal with a soft, bell-shaped body and trailing tentacles. Jellyfish are not true fish; they are invertebrates. Tentacles contain stinging cells used to catch prey. Some jellyfish are harmless, but others can cause painful stings.",
+    "keywords": ["jellyfish", "ocean", "sting", "invertebrate"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are jellyfish?", "Explain jellyfish"]
+  },
+  {
+    "question": "What is a starfish?",
+    "answer": "A starfish, also called a sea star, is a marine animal with a central body and usually five arms. Starfish can regrow lost arms. They move using tiny tube feet and feed on mollusks by pushing their stomach out of their mouth. There are about 2,000 species.",
+    "keywords": ["starfish", "sea star", "ocean", "arms"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are starfish?", "Explain starfish"]
+  },
+  {
+    "question": "What is a coral?",
+    "answer": "Coral is a small marine animal that lives in colonies and builds hard skeletons of calcium carbonate. Coral reefs are among the most diverse ecosystems on Earth. Corals get energy from algae that live inside them. Warming oceans cause coral bleaching, which can kill reefs.",
+    "keywords": ["coral", "reef", "ocean", "colony"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are corals?", "Explain coral reefs"]
+  },
+  {
+    "question": "What is a worm?",
+    "answer": "A worm is a long, soft-bodied animal without legs. There are many types of worms, including earthworms, roundworms, and flatworms. Earthworms are important for soil health because they break down organic matter and improve soil structure. Some worms are parasites.",
+    "keywords": ["worm", "earthworm", "soil", "soft body"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are worms?", "Explain worms"]
+  },
+  {
+    "question": "What is a snail?",
+    "answer": "A snail is a small mollusk with a coiled shell and a soft body. Snails move slowly using a muscular foot that secretes slime. They eat plants, algae, and decaying matter. Some snails live on land, others in water. Slugs are snails without shells.",
+    "keywords": ["snail", "mollusk", "shell", "slow"],
+    "category": "Animals",
+    "language": "en",
+    "aliases": ["What are snails?", "Explain snails"]
+  },
+  {
+    "question": "What is matter?",
+    "answer": "Matter is anything that has mass and takes up space. Everything around you is made of matter, including air, water, rocks, and living things. Matter exists in different states: solid, liquid, gas, and plasma. It is made of tiny particles called atoms and molecules.",
+    "keywords": ["matter", "mass", "space", "atoms"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is matter made of?", "Define matter"]
+  },
+  {
+    "question": "What is an atom?",
+    "answer": "An atom is the smallest unit of matter that retains the properties of an element. Atoms have a nucleus of protons and neutrons surrounded by electrons. Atoms are incredibly small — about 100 million atoms would fit across a human hair. Atoms combine to form molecules.",
+    "keywords": ["atom", "nucleus", "proton", "electron"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What are atoms?", "Explain atoms"]
+  },
+  {
+    "question": "What is a molecule?",
+    "answer": "A molecule is a group of two or more atoms bonded together. For example, a water molecule is made of two hydrogen atoms and one oxygen atom (H2O). Molecules can be simple, like oxygen gas (O2), or very complex, like proteins. Molecules are the building blocks of matter.",
+    "keywords": ["molecule", "atoms", "bond", "compound"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What are molecules?", "Explain molecules"]
+  },
+  {
+    "question": "What is an element?",
+    "answer": "An element is a pure substance made of only one type of atom. There are 118 known elements, arranged in the periodic table. Examples include hydrogen, oxygen, gold, iron, and carbon. Elements cannot be broken down into simpler substances by chemical means.",
+    "keywords": ["element", "periodic table", "atom", "pure"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What are elements?", "Explain elements"]
+  },
+  {
+    "question": "What is a compound?",
+    "answer": "A compound is a substance made of two or more different elements chemically bonded together in fixed proportions. For example, water (H2O) is a compound of hydrogen and oxygen. Compounds have properties different from the elements that make them.",
+    "keywords": ["compound", "element", "chemical", "bond"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What are compounds?", "Explain compounds"]
+  },
+  {
+    "question": "What is energy?",
+    "answer": "Energy is the ability to do work or cause change. It comes in many forms: kinetic (motion), potential (stored), thermal (heat), chemical, electrical, nuclear, and radiant (light). Energy cannot be created or destroyed, only converted from one form to another.",
+    "keywords": ["energy", "work", "motion", "heat"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is energy made of?", "Define energy"]
+  },
+  {
+    "question": "What is gravity?",
+    "answer": "Gravity is the force that attracts objects with mass toward each other. On Earth, gravity pulls everything toward the center of the planet, which is why things fall down. The strength of gravity depends on mass and distance. Gravity keeps planets in orbit around the sun.",
+    "keywords": ["gravity", "force", "mass", "attraction"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is gravitational force?", "Explain gravity"]
+  },
+  {
+    "question": "What is friction?",
+    "answer": "Friction is the force that resists motion when two surfaces rub against each other. It converts kinetic energy into heat. Friction can be useful, like when it helps you walk without slipping, or unwanted, like when it wears down machine parts. Smooth surfaces have less friction.",
+    "keywords": ["friction", "force", "motion", "heat"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is friction?", "Explain friction"]
+  },
+  {
+    "question": "What is light?",
+    "answer": "Light is a form of electromagnetic radiation that our eyes can detect. It travels in waves and also behaves like particles called photons. Light travels at about 300,000 kilometers per second in a vacuum, the fastest speed possible. White light contains all colors of the rainbow.",
+    "keywords": ["light", "photon", "wave", "radiation"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is light made of?", "Explain light"]
+  },
+  {
+    "question": "What is sound?",
+    "answer": "Sound is a vibration that travels through a medium like air, water, or solids as a wave. Sound cannot travel through a vacuum. The speed of sound in air is about 343 meters per second. Higher frequencies produce higher pitches. Loudness depends on the amplitude of the wave.",
+    "keywords": ["sound", "vibration", "wave", "frequency"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is sound made of?", "Explain sound"]
+  },
+  {
+    "question": "What is heat?",
+    "answer": "Heat is the transfer of thermal energy from a hotter object to a colder one. It flows until both reach the same temperature. Heat can transfer by conduction (direct contact), convection (moving fluids), or radiation (electromagnetic waves). Temperature measures how hot or cold something is.",
+    "keywords": ["heat", "temperature", "thermal", "energy"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is thermal energy?", "Explain heat"]
+  },
+  {
+    "question": "What is electricity?",
+    "answer": "Electricity is the flow of electric charge, usually carried by electrons moving through a conductor like copper wire. It can be static (built-up charge) or current (flowing charge). Electricity powers most modern technology, from lights to computers. It is measured in volts, amps, and watts.",
+    "keywords": ["electricity", "electron", "current", "charge"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is electric current?", "Explain electricity"]
+  },
+  {
+    "question": "What is magnetism?",
+    "answer": "Magnetism is a force that attracts or repels certain materials, especially iron, nickel, and cobalt. Magnets have north and south poles. Like poles repel, opposite poles attract. Magnetism is caused by the motion of electric charges. Earth itself acts like a giant magnet.",
+    "keywords": ["magnetism", "magnet", "pole", "force"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is a magnet?", "Explain magnetism"]
+  },
+  {
+    "question": "What is a solid?",
+    "answer": "A solid is a state of matter with a fixed shape and volume. The particles in a solid are packed tightly together and vibrate in place. Solids can be crystalline (like salt) or amorphous (like glass). Examples include ice, wood, metal, and rock.",
+    "keywords": ["solid", "state of matter", "fixed shape", "particles"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What are solids?", "Explain solids"]
+  },
+  {
+    "question": "What is a liquid?",
+    "answer": "A liquid is a state of matter with a fixed volume but no fixed shape. Liquids take the shape of their container and flow. Their particles are close together but can move past each other. Examples include water, oil, milk, and mercury.",
+    "keywords": ["liquid", "state of matter", "flow", "volume"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What are liquids?", "Explain liquids"]
+  },
+  {
+    "question": "What is a gas?",
+    "answer": "A gas is a state of matter with no fixed shape or volume. Gas particles are far apart and move freely, filling any container. Gases are compressible. Examples include oxygen, nitrogen, carbon dioxide, and helium. The air we breathe is a mixture of gases.",
+    "keywords": ["gas", "state of matter", "particles", "air"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What are gases?", "Explain gases"]
+  },
+  {
+    "question": "What is water?",
+    "answer": "Water is a chemical compound made of two hydrogen atoms and one oxygen atom (H2O). It is essential for all known life. Water exists as solid (ice), liquid (water), and gas (water vapor). It is called the universal solvent because it dissolves many substances.",
+    "keywords": ["water", "H2O", "liquid", "essential"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is H2O?", "Explain water"]
+  },
+  {
+    "question": "What is air?",
+    "answer": "Air is the mixture of gases that makes up Earth's atmosphere. It is about 78% nitrogen, 21% oxygen, and 1% other gases like argon, carbon dioxide, and water vapor. Air is essential for breathing, weather, and flight. It has weight and exerts pressure.",
+    "keywords": ["air", "atmosphere", "oxygen", "nitrogen"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is air made of?", "Explain air"]
+  },
+  {
+    "question": "What is temperature?",
+    "answer": "Temperature is a measure of how hot or cold something is. It reflects the average kinetic energy of the particles in a substance. Temperature is measured in Celsius, Fahrenheit, or Kelvin. Absolute zero (-273.15°C) is the lowest possible temperature.",
+    "keywords": ["temperature", "hot", "cold", "kelvin"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["How is temperature measured?", "Explain temperature"]
+  },
+  {
+    "question": "What is pressure?",
+    "answer": "Pressure is the force applied over a given area. It is measured in pascals, atmospheres, or pounds per square inch. In gases, pressure comes from particles hitting the container walls. Atmospheric pressure at sea level is about 101,325 pascals. Pressure increases with depth in water.",
+    "keywords": ["pressure", "force", "area", "atmosphere"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is air pressure?", "Explain pressure"]
+  },
+  {
+    "question": "What is density?",
+    "answer": "Density is how much mass is packed into a given volume. It is calculated as mass divided by volume. Objects with higher density feel heavier for their size. Water has a density of about 1 gram per cubic centimeter. Objects less dense than water float.",
+    "keywords": ["density", "mass", "volume", "float"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is density?", "Explain density"]
+  },
+  {
+    "question": "What is a chemical reaction?",
+    "answer": "A chemical reaction is a process where substances (reactants) change into new substances (products) by breaking and forming chemical bonds. Signs include color change, gas production, temperature change, or precipitate formation. Reactions can release energy (exothermic) or absorb it (endothermic).",
+    "keywords": ["chemical reaction", "reactant", "product", "bond"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is a chemical change?", "Explain chemical reactions"]
+  },
+  {
+    "question": "What is an acid?",
+    "answer": "An acid is a substance that donates hydrogen ions (H+) in water, has a pH below 7, tastes sour, and turns blue litmus paper red. Examples include lemon juice, vinegar, and stomach acid. Strong acids can burn skin and corrode metals.",
+    "keywords": ["acid", "pH", "sour", "hydrogen"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What are acids?", "Explain acids"]
+  },
+  {
+    "question": "What is a base?",
+    "answer": "A base (or alkali) is a substance that accepts hydrogen ions, has a pH above 7, tastes bitter, feels slippery, and turns red litmus paper blue. Examples include soap, baking soda, and bleach. Strong bases can also burn skin.",
+    "keywords": ["base", "alkali", "pH", "bitter"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is an alkali?", "Explain bases"]
+  },
+  {
+    "question": "What is pH?",
+    "answer": "pH is a scale from 0 to 14 that measures how acidic or basic a solution is. A pH of 7 is neutral, like pure water. Below 7 is acidic; above 7 is basic. The scale is logarithmic, so pH 4 is ten times more acidic than pH 5.",
+    "keywords": ["pH", "acid", "base", "scale"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is the pH scale?", "Explain pH"]
+  },
+  {
+    "question": "What is the periodic table?",
+    "answer": "The periodic table is a chart that organizes all known chemical elements by increasing atomic number. Elements in the same column (group) have similar properties. Rows are called periods. The table was first published by Dmitri Mendeleev in 1869 and now has 118 confirmed elements.",
+    "keywords": ["periodic table", "elements", "atomic number", "chemistry"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["Explain the periodic table", "What is the periodic table of elements?"]
+  },
+  {
+    "question": "What is oxygen?",
+    "answer": "Oxygen is a chemical element with symbol O and atomic number 8. It is a gas at room temperature and makes up about 21% of Earth's atmosphere. Oxygen is essential for respiration in most living things and for combustion. It was discovered by Carl Wilhelm Scheele and Joseph Priestley.",
+    "keywords": ["oxygen", "element", "gas", "breathing"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is O2?", "Explain oxygen"]
+  },
+  {
+    "question": "What is carbon?",
+    "answer": "Carbon is a chemical element with symbol C and atomic number 6. It is the basis of all known life because it can form long chains and complex molecules. Carbon exists as diamond, graphite, and graphene. It cycles through the atmosphere, oceans, and living things.",
+    "keywords": ["carbon", "element", "life", "diamond"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is carbon?", "Explain carbon"]
+  },
+  {
+    "question": "What is hydrogen?",
+    "answer": "Hydrogen is the lightest and most abundant element in the universe, with symbol H and atomic number 1. It is a gas at room temperature and is the main fuel of stars like the sun. On Earth, hydrogen is mostly found combined with oxygen in water and with carbon in organic compounds.",
+    "keywords": ["hydrogen", "element", "lightest", "universe"],
+    "category": "Physical",
+    "language": "en",
+    "aliases": ["What is hydrogen?", "Explain hydrogen"]
+  },
+  {
+    "question": "What is the human body made of?",
+    "answer": "The human body is made mostly of water (about 60%), proteins, fats, carbohydrates, minerals, and vitamins. It is organized into cells, tissues, organs, and systems. The main elements are oxygen, carbon, hydrogen, and nitrogen. The body contains trillions of cells.",
+    "keywords": ["human body", "cells", "water", "organs"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What is the human body made of?", "Explain the human body"]
+  },
+  {
+    "question": "How many bones are in the human body?",
+    "answer": "An adult human has 206 bones. Babies are born with about 270 bones, but many fuse together as they grow. Bones provide structure, protect organs, store minerals, and produce blood cells in the bone marrow. The smallest bone is the stapes in the ear.",
+    "keywords": ["bones", "skeleton", "human body", "206"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How many bones do humans have?", "Human skeleton"]
+  },
+  {
+    "question": "What is the human heart?",
+    "answer": "The human heart is a muscular organ about the size of a fist. It pumps blood through the body, delivering oxygen and nutrients and removing waste. The heart has four chambers: two atria and two ventricles. It beats about 60 to 100 times per minute at rest.",
+    "keywords": ["heart", "blood", "pump", "organ"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How does the heart work?", "Explain the human heart"]
+  },
+  {
+    "question": "What is blood?",
+    "answer": "Blood is a fluid that circulates through the body, carrying oxygen, nutrients, hormones, and waste. It is made of plasma, red blood cells, white blood cells, and platelets. Red blood cells carry oxygen using hemoglobin. White blood cells fight infection. Platelets help blood clot.",
+    "keywords": ["blood", "plasma", "cells", "circulation"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What is blood made of?", "Explain blood"]
+  },
+  {
+    "question": "What is the brain?",
+    "answer": "The brain is the control center of the nervous system. It processes information from the senses, controls movement, stores memories, and generates thoughts and emotions. The human brain has about 86 billion neurons. It is divided into regions including the cerebrum, cerebellum, and brainstem.",
+    "keywords": ["brain", "nervous system", "neurons", "control"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How does the brain work?", "Explain the brain"]
+  },
+  {
+    "question": "What are the lungs?",
+    "answer": "The lungs are a pair of organs in the chest that allow breathing. They take in oxygen and remove carbon dioxide. Air travels through the windpipe into bronchi and then into tiny air sacs called alveoli, where gas exchange happens. The right lung has three lobes; the left has two.",
+    "keywords": ["lungs", "breathing", "oxygen", "respiration"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How do lungs work?", "Explain the lungs"]
+  },
+  {
+    "question": "What is the digestive system?",
+    "answer": "The digestive system breaks down food into nutrients the body can absorb. It includes the mouth, esophagus, stomach, small intestine, large intestine, and anus, along with the liver, pancreas, and gallbladder. Digestion starts in the mouth with chewing and saliva.",
+    "keywords": ["digestion", "stomach", "intestines", "food"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How does digestion work?", "Explain the digestive system"]
+  },
+  {
+    "question": "What is the nervous system?",
+    "answer": "The nervous system is the body's electrical wiring. It includes the brain, spinal cord, and nerves. It senses the environment, processes information, and controls muscles and organs. It is divided into the central nervous system (brain and spinal cord) and the peripheral nervous system.",
+    "keywords": ["nervous system", "brain", "nerves", "signals"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How does the nervous system work?", "Explain the nervous system"]
+  },
+  {
+    "question": "What is the immune system?",
+    "answer": "The immune system defends the body against disease. It includes white blood cells, antibodies, the lymph system, and organs like the spleen and thymus. It remembers past infections so the body can respond faster the next time. Vaccines train the immune system safely.",
+    "keywords": ["immune system", "defense", "white blood cells", "antibodies"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How does the immune system work?", "Explain immunity"]
+  },
+  {
+    "question": "What is DNA?",
+    "answer": "DNA (deoxyribonucleic acid) is the molecule that carries genetic instructions for all living things. It has a double helix shape made of two strands of nucleotides. DNA is organized into genes and chromosomes. It determines traits like eye color and is passed from parents to children.",
+    "keywords": ["DNA", "genes", "genetics", "chromosomes"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What is DNA made of?", "Explain DNA"]
+  },
+  {
+    "question": "What are genes?",
+    "answer": "Genes are sections of DNA that contain instructions for making proteins. Proteins determine traits and control nearly every process in the body. Humans have about 20,000 to 25,000 genes. Genes are inherited from both parents. Variations in genes cause differences between people.",
+    "keywords": ["genes", "DNA", "inheritance", "proteins"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What are genes?", "Explain genes"]
+  },
+  {
+    "question": "What are chromosomes?",
+    "answer": "Chromosomes are thread-like structures made of DNA and protein that carry genes. Humans have 46 chromosomes in 23 pairs. One pair determines sex: XX for females, XY for males. Chromosomes are found in the nucleus of every cell.",
+    "keywords": ["chromosomes", "DNA", "genes", "cells"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What are chromosomes?", "Explain chromosomes"]
+  },
+  {
+    "question": "What is the human eye?",
+    "answer": "The human eye is an organ that detects light and allows us to see. Light enters through the cornea and pupil, is focused by the lens, and hits the retina, which sends signals to the brain through the optic nerve. The eye can distinguish millions of colors and adapt to different light levels.",
+    "keywords": ["eye", "vision", "retina", "light"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How does the eye work?", "Explain the human eye"]
+  },
+  {
+    "question": "What is the human ear?",
+    "answer": "The human ear is the organ of hearing and balance. Sound waves enter the outer ear, vibrate the eardrum, and pass through tiny bones to the cochlea, which converts vibrations into nerve signals. The inner ear also senses head position for balance.",
+    "keywords": ["ear", "hearing", "balance", "sound"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How does the ear work?", "Explain the human ear"]
+  },
+  {
+    "question": "What is skin?",
+    "answer": "Skin is the largest organ of the human body. It protects against injury, infection, and UV radiation, regulates temperature, and senses touch. Skin has three layers: epidermis, dermis, and hypodermis. It constantly renews itself.",
+    "keywords": ["skin", "organ", "protection", "touch"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What is the largest organ?", "Explain skin"]
+  },
+  {
+    "question": "What is the human skeleton?",
+    "answer": "The human skeleton is the framework of bones that supports the body, protects organs, allows movement, stores minerals, and produces blood cells. It has 206 bones in adults, connected by joints and held together by ligaments. The spine, skull, and ribcage are key parts.",
+    "keywords": ["skeleton", "bones", "support", "protection"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What is the skeleton?", "Explain the human skeleton"]
+  },
+  {
+    "question": "What are muscles?",
+    "answer": "Muscles are tissues that contract to produce movement. The human body has over 600 muscles. There are three types: skeletal (voluntary movement), smooth (in organs), and cardiac (heart). Muscles work in pairs — one contracts while the other relaxes.",
+    "keywords": ["muscles", "movement", "skeletal", "cardiac"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How do muscles work?", "Explain muscles"]
+  },
+  {
+    "question": "What is sleep?",
+    "answer": "Sleep is a natural state of rest during which the body and brain recover. It is essential for memory, learning, mood, and physical health. Adults need about 7 to 9 hours per night. Sleep has stages, including REM (dreaming) and non-REM sleep. Lack of sleep harms health.",
+    "keywords": ["sleep", "rest", "REM", "recovery"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["Why do we sleep?", "Explain sleep"]
+  },
+  {
+    "question": "What is the human life cycle?",
+    "answer": "The human life cycle has stages: infant, child, adolescent, adult, and elderly. Humans grow and develop over about 18 to 20 years before reaching adulthood. The average global life expectancy is around 73 years. Each stage has physical, mental, and social changes.",
+    "keywords": ["life cycle", "growth", "stages", "aging"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What are the stages of human life?", "Explain the human life cycle"]
+  },
+  {
+    "question": "What is emotion?",
+    "answer": "Emotion is a complex mental and physical response to a situation. Basic emotions include happiness, sadness, fear, anger, surprise, and disgust. Emotions involve thoughts, physical sensations, and behavior. They help us respond to challenges and connect with others.",
+    "keywords": ["emotion", "feelings", "psychology", "response"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What are emotions?", "Explain emotions"]
+  },
+  {
+    "question": "What is memory?",
+    "answer": "Memory is the ability to store and recall information. There are three main types: sensory memory (very short), short-term memory (seconds to minutes), and long-term memory (days to a lifetime). The hippocampus is key for forming new memories. Sleep helps consolidate memories.",
+    "keywords": ["memory", "brain", "recall", "learning"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["How does memory work?", "Explain memory"]
+  },
+  {
+    "question": "What is language?",
+    "answer": "Language is a system of communication using sounds, symbols, or gestures that have agreed meanings. Humans have about 7,000 languages. Language allows us to share ideas, tell stories, and pass knowledge between generations. Children learn language naturally from exposure.",
+    "keywords": ["language", "communication", "speech", "words"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What is language?", "Explain language"]
+  },
+  {
+    "question": "What is culture?",
+    "answer": "Culture is the shared beliefs, values, customs, arts, and knowledge of a group of people. It is learned and passed down through generations. Culture shapes how people eat, dress, celebrate, and interact. It includes language, religion, food, music, and social norms.",
+    "keywords": ["culture", "society", "traditions", "beliefs"],
+    "category": "Humans",
+    "language": "en",
+    "aliases": ["What is culture?", "Explain culture"]
+  },
+  {
+    "question": "What is survival?",
+    "answer": "Survival means staying alive in a difficult or dangerous situation. It usually depends on four priorities: shelter, water, fire, and food — in roughly that order. Mindset matters as much as skill; staying calm, thinking clearly, and not panicking greatly improves your chances.",
+    "keywords": ["survival", "staying alive", "emergency", "wilderness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What is survival?", "Explain survival"]
+  },
+  {
+    "question": "What are the basic rules of survival?",
+    "answer": "The rule of threes says you can survive about 3 minutes without air, 3 hours without shelter in extreme conditions, 3 days without water, and 3 weeks without food. In an emergency: stay calm, stay put if lost, signal for help, and prioritize shelter, water, fire, then food.",
+    "keywords": ["survival rules", "rule of threes", "emergency", "priorities"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What are the survival priorities?", "Explain the rule of threes"]
+  },
+  {
+    "question": "How do I find water in the wild?",
+    "answer": "Look for water in streams, rivers, lakes, and springs. Rainwater, dew, and water from melting snow or ice are usually safe to drink after boiling. You can collect water by tying plastic bags around leafy branches or by digging a solar still. Always purify water before drinking.",
+    "keywords": ["water", "survival", "wilderness", "finding water"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to find water in the wild", "Finding water survival"]
+  },
+  {
+    "question": "How do I purify water?",
+    "answer": "The safest method is boiling water for at least 1 minute (3 minutes at high altitude). You can also use water purification tablets, a filter, or a few drops of unscented bleach (about 2 drops per liter, wait 30 minutes). Distillation — collecting evaporated water — removes almost all contaminants.",
+    "keywords": ["purify water", "boil", "filter", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to make water safe to drink", "Water purification survival"]
+  },
+  {
+    "question": "How do I start a fire without matches?",
+    "answer": "Use a fire steel, magnifying glass, or friction methods like a bow drill or hand drill. Gather tinder (dry grass, bark, birch shavings), kindling (small twigs), and fuel (larger wood). Build a small teepee or lean-to shape. Shelter the flame from wind. Practice before you need it.",
+    "keywords": ["fire", "survival", "matches", "friction", "fire steel"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to start a fire", "Starting fire survival"]
+  },
+  {
+    "question": "How do I build a shelter in the wild?",
+    "answer": "Choose a dry, level spot away from dead trees, flash-flood areas, and insect nests. Use a lean-to, debris hut, or snow cave depending on the environment. Insulate from the ground — the ground pulls heat from your body. Add leaves, pine needles, or dry grass for insulation.",
+    "keywords": ["shelter", "survival", "wilderness", "lean-to"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to build a shelter", "Wilderness shelter"]
+  },
+  {
+    "question": "What should I do if I get lost?",
+    "answer": "Stop, stay calm, and think. If you have a plan or a group, stay put so rescuers can find you. If you must move, follow water downstream — it usually leads to people. Mark your trail. Signal with a whistle, mirror, or bright clothing. Build a shelter before dark.",
+    "keywords": ["lost", "survival", "rescue", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do when lost", "Lost in the woods"]
+  },
+  {
+    "question": "How do I signal for rescue?",
+    "answer": "Use the rule of three: three whistle blasts, three fires, three flashes, or three of any signal. A signal mirror can be seen for many kilometers. Wave bright clothing. Make a large X or SOS in an open area. At night, build three fires in a triangle. Stay near a clearing.",
+    "keywords": ["rescue", "signal", "SOS", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to signal for help", "Emergency signals"]
+  },
+  {
+    "question": "What is edible in the wild?",
+    "answer": "Safe bets include dandelion, clover, cattail, acorns (after leaching), berries that are blue, black, or red and grow on bushes, and most fish and small game cooked thoroughly. Avoid mushrooms unless you are an expert, white berries, plants with milky sap, and anything with a bitter almond smell.",
+    "keywords": ["edible plants", "foraging", "survival", "wild food"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What can I eat in the wild?", "Foraging survival"]
+  },
+  {
+    "question": "What is the universal edible plant test?",
+    "answer": "The universal edibility test is a careful method to check if a plant is safe: separate it into parts, smell it, rub it on your skin, then on your lips, then a tiny bit on your tongue, then chew a small piece and wait 8 hours. If no reaction, swallow a small amount and wait another 8 hours. Never test mushrooms this way.",
+    "keywords": ["edible test", "survival", "plants", "testing"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to test if a plant is edible", "Universal edibility test"]
+  },
+  {
+    "question": "How do I treat a wound in the wild?",
+    "answer": "Stop the bleeding by applying firm pressure with a clean cloth. Clean the wound with boiled, cooled water. Remove dirt and debris. Cover with a clean bandage or cloth. Change it daily. Watch for redness, swelling, warmth, or pus, which indicate infection. Seek medical help when possible.",
+    "keywords": ["wound", "first aid", "survival", "infection"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a wound", "Wilderness first aid"]
+  },
+  {
+    "question": "What is hypothermia?",
+    "answer": "Hypothermia happens when body temperature drops below 35°C (95°F). Symptoms include shivering, confusion, slurred speech, and drowsiness. Treatment: get out of the wind and rain, remove wet clothes, wrap in dry layers, and warm the core (chest, neck, groin). Avoid rapid rewarming of limbs.",
+    "keywords": ["hypothermia", "cold", "survival", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What is hypothermia?", "Treating hypothermia"]
+  },
+  {
+    "question": "What is heatstroke?",
+    "answer": "Heatstroke is a life-threatening condition when the body overheats, usually above 40°C (104°F). Symptoms include hot dry skin, confusion, and loss of consciousness. Treatment: move to shade, cool the body with water and fans, and get medical help immediately. Do not give fluids to an unconscious person.",
+    "keywords": ["heatstroke", "heat", "emergency", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What is heat stroke?", "Treating heatstroke"]
+  },
+  {
+    "question": "How do I perform CPR?",
+    "answer": "CPR (cardiopulmonary resuscitation) keeps blood flowing when the heart stops. Call emergency services. Place the heel of your hand on the center of the chest, press down hard and fast (100–120 compressions per minute, about 5 cm deep). If trained, give 2 rescue breaths after every 30 compressions. Use an AED if available.",
+    "keywords": ["CPR", "first aid", "rescue", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to do CPR", "Cardiopulmonary resuscitation"]
+  },
+  {
+    "question": "What is the recovery position?",
+    "answer": "The recovery position is used for an unconscious person who is breathing. Roll them onto their side, tilt the head back slightly, and place the upper knee forward to keep them stable. This keeps the airway open and prevents choking on vomit. Monitor breathing until help arrives.",
+    "keywords": ["recovery position", "unconscious", "first aid", "airway"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What is the recovery position?", "First aid recovery position"]
+  },
+  {
+    "question": "How do I treat a snake bite?",
+    "answer": "Keep the person calm and still. Remove tight clothing or jewelry near the bite. Do not cut, suck, or apply ice. Immobilize the limb below heart level if possible. Note the time and appearance of the snake. Get medical help immediately. Antivenom is the only real treatment.",
+    "keywords": ["snake bite", "first aid", "venom", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Snake bite treatment", "What to do for a snake bite"]
+  },
+  {
+    "question": "What is a tourniquet and when should I use one?",
+    "answer": "A tourniquet is a tight band used to stop severe bleeding from a limb when pressure does not work. Apply it 5–7 cm above the wound, tighten until bleeding stops, and note the time. Do not loosen it. Tourniquets save lives but can cause tissue damage if left too long, so get medical help fast.",
+    "keywords": ["tourniquet", "bleeding", "first aid", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["When to use a tourniquet", "Tourniquet first aid"]
+  },
+  {
+    "question": "What is the safest way to cross a river?",
+    "answer": "Find a shallow, wide section with a gentle current. Unbuckle your pack so you can drop it if you fall. Face upstream and shuffle sideways. Use a strong stick for balance. Cross as a group by linking arms. Never cross fast, deep, or muddy water if you can avoid it.",
+    "keywords": ["river crossing", "survival", "water", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to cross a river safely", "River crossing survival"]
+  },
+  {
+    "question": "How do I survive a rip current?",
+    "answer": "Do not fight the current directly. Swim parallel to the shore until you escape the current, then swim back at an angle. If you cannot swim out, float and conserve energy, and call for help. Rip currents are narrow and usually do not pull you underwater.",
+    "keywords": ["rip current", "ocean", "swimming", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do in a rip current", "Rip tide survival"]
+  },
+  {
+    "question": "What should be in a basic survival kit?",
+    "answer": "A basic kit should include: water and a way to purify more, high-energy food, a knife or multi-tool, fire starters, a whistle, a small first aid kit, a flashlight or headlamp, a space blanket, cordage, a map and compass, and any personal medications. Keep it small enough to carry.",
+    "keywords": ["survival kit", "emergency", "gear", "preparedness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to put in a survival kit", "Bug out bag contents"]
+  },
+  {
+    "question": "What is the 10 essentials for hiking?",
+    "answer": "The classic 10 essentials are: navigation (map, compass), sun protection, insulation, illumination, first aid supplies, fire, repair kit and tools, nutrition, hydration, and emergency shelter. Add a whistle and a fully charged phone. These help you respond to unexpected situations.",
+    "keywords": ["10 essentials", "hiking", "safety", "preparedness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What are the ten essentials?", "Hiking essentials"]
+  },
+  {
+    "question": "How do I survive a bear encounter?",
+    "answer": "Identify the bear. For a black bear: stand tall, make noise, back away slowly, do not run. If attacked, fight back. For a grizzly: play dead by lying face down with hands over your neck, unless the attack is prolonged. Carry bear spray where legal and know how to use it.",
+    "keywords": ["bear", "survival", "encounter", "wilderness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do if you see a bear", "Bear attack survival"]
+  },
+  {
+    "question": "How do I survive a mountain lion encounter?",
+    "answer": "Do not run. Make yourself look big by raising your arms and opening your jacket. Speak loudly and firmly. Maintain eye contact. Back away slowly. If attacked, fight back with anything you can — sticks, rocks, bare hands. Report the sighting to local authorities.",
+    "keywords": ["mountain lion", "cougar", "survival", "encounter"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do if you see a mountain lion", "Cougar attack survival"]
+  },
+  {
+    "question": "How do I survive a shark encounter?",
+    "answer": "Stay calm and do not splash. Most sharks are curious, not hunting. If a shark approaches, back away slowly facing it. If attacked, fight back — hit the eyes, gills, or snout. Get out of the water as soon as possible. Shark attacks are extremely rare.",
+    "keywords": ["shark", "survival", "ocean", "encounter"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do if you see a shark", "Shark attack survival"]
+  },
+  {
+    "question": "What should I do in a flood?",
+    "answer": "Move to higher ground immediately. Never walk or drive through floodwater — just 15 cm of moving water can knock you down and 60 cm can float a car. Avoid contact with floodwater, which can carry disease. Follow evacuation orders. Wait for official word before returning.",
+    "keywords": ["flood", "emergency", "survival", "water"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do in a flood", "Flood survival"]
+  },
+  {
+    "question": "What should I do in an earthquake?",
+    "answer": "Drop, cover, and hold on. Get under a sturdy table or desk, protect your head and neck, and hold on until shaking stops. Stay away from windows and tall furniture. If outdoors, move to an open area away from buildings and power lines. After shaking stops, check for injuries and gas leaks.",
+    "keywords": ["earthquake", "emergency", "survival", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do in an earthquake", "Earthquake safety"]
+  },
+  {
+    "question": "What should I do in a fire?",
+    "answer": "Get out, stay out, call for help. If trapped, close doors behind you, seal gaps with cloth, and stay low where air is cleaner. Never use elevators. If your clothes catch fire, stop, drop, and roll. Once out, never go back inside a burning building.",
+    "keywords": ["fire", "emergency", "survival", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do in a fire", "Fire survival"]
+  },
+  {
+    "question": "What should I do in a hurricane?",
+    "answer": "Follow evacuation orders. If staying, secure windows, stock water and food, and have a battery radio. Stay indoors away from windows. After the storm, avoid floodwater, downed power lines, and damaged buildings. Hurricanes can spawn tornadoes and cause severe flooding.",
+    "keywords": ["hurricane", "emergency", "survival", "storm"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do in a hurricane", "Hurricane safety"]
+  },
+  {
+    "question": "What is an emergency kit for a car?",
+    "answer": "A car emergency kit should include: jumper cables, a spare tire and jack, a flashlight, first aid supplies, blankets, water, non-perishable snacks, a phone charger, a small shovel, sand or kitty litter for traction, reflective triangles, and a basic tool kit. Keep it in the trunk.",
+    "keywords": ["car kit", "emergency", "roadside", "preparedness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What should be in a car emergency kit", "Roadside emergency kit"]
+  },
+  {
+    "question": "How long can a human survive without water?",
+    "answer": "Most people can survive about 3 days without water, but this depends on the climate and activity level. In extreme heat or with heavy exertion, death can occur in hours. In cool conditions with rest, some people have survived up to a week. Never ration water if you are already dehydrated — drink it.",
+    "keywords": ["water", "survival", "dehydration", "how long"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How long without water?", "Surviving without water"]
+  },
+  {
+    "question": "How long can a human survive without food?",
+    "answer": "A healthy adult can usually survive 3 to 4 weeks without food, depending on body fat, hydration, and health. The body first uses stored glycogen, then fat, then muscle. Water is far more critical than food in the short term. After a few days without food, weakness and confusion begin.",
+    "keywords": ["food", "survival", "starvation", "how long"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How long without food?", "Surviving without food"]
+  },
+  {
+    "question": "What is a debris shelter?",
+    "answer": "A debris shelter is a survival shelter made from natural materials. Build a frame of branches, then pile on leaves, pine needles, ferns, and other dead plant matter until the walls are at least 60 cm thick. Add a thick layer of debris for the floor. The debris traps air, which insulates.",
+    "keywords": ["debris shelter", "survival", "shelter", "wilderness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to build a debris shelter", "Debris hut"]
+  },
+  {
+    "question": "How do I build a snow cave?",
+    "answer": "Find a deep snowdrift. Dig a tunnel into the side and hollow out a dome-shaped chamber. Make the ceiling smooth and domed to prevent drips. Keep the entrance lower than the sleeping area so cold air sinks away. Poke a small ventilation hole for fresh air. Insulate the floor with branches or a mat.",
+    "keywords": ["snow cave", "survival", "shelter", "winter"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to build a snow cave", "Snow shelter"]
+  },
+  {
+    "question": "What is a solar still?",
+    "answer": "A solar still collects drinking water from the ground and plants using the sun's heat. Dig a pit, place a container in the center, add moist vegetation around it, cover the pit with plastic, and put a small stone in the middle so the plastic dips above the container. Water evaporates, condenses on the plastic, and drips into the container.",
+    "keywords": ["solar still", "water", "survival", "purification"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to make a solar still", "Solar still survival"]
+  },
+  {
+    "question": "How do I find direction without a compass?",
+    "answer": "In the daytime, use the sun: it rises in the east and sets in the west, and at noon in the northern hemisphere it points south. At night, find the North Star (Polaris) using the Big Dipper. You can also use a shadow stick or the crescent of the moon.",
+    "keywords": ["navigation", "compass", "direction", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to find north without a compass", "Navigation survival"]
+  },
+  {
+    "question": "What is the North Star?",
+    "answer": "The North Star, or Polaris, is a star that appears almost directly above the Earth's north pole. It stays nearly still in the sky while other stars rotate around it. To find it, locate the Big Dipper and follow the two stars at the end of its bowl about five times their distance. It points north.",
+    "keywords": ["North Star", "Polaris", "navigation", "stars"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to find the North Star", "Polaris"]
+  },
+  {
+    "question": "How do I treat a sprained ankle?",
+    "answer": "Use RICE: Rest, Ice, Compression, Elevation. Rest the ankle, apply ice for 15–20 minutes every few hours, wrap it with an elastic bandage (not too tight), and keep it elevated above heart level. Avoid heat and alcohol in the first 48 hours. See a doctor if you cannot bear weight.",
+    "keywords": ["sprain", "first aid", "ankle", "RICE"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a sprain", "RICE method"]
+  },
+  {
+    "question": "How do I treat a burn?",
+    "answer": "Cool the burn with running water for at least 10 minutes. Remove jewelry or tight clothing near the burn. Cover with a clean, non-stick bandage. Do not apply butter, ice, or toothpaste. Do not pop blisters. Seek medical help for large, deep, or infected burns.",
+    "keywords": ["burn", "first aid", "treatment", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a burn", "Burn first aid"]
+  },
+  {
+    "question": "How do I treat a broken bone?",
+    "answer": "Keep the person still. Do not try to realign the bone. Immobilize the injured area with a splint using sticks, rolled cloth, or a magazine. Apply a cold pack wrapped in cloth to reduce swelling. Treat for shock by keeping the person warm and calm. Get medical help immediately.",
+    "keywords": ["broken bone", "fracture", "first aid", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a fracture", "Broken bone first aid"]
+  },
+  {
+    "question": "What is shock and how do I treat it?",
+    "answer": "Shock is a life-threatening condition where the body's organs do not get enough blood. Symptoms include pale skin, rapid pulse, confusion, and weakness. Treatment: lay the person down, raise the legs slightly, keep them warm with blankets, and do not give food or drink. Get emergency help.",
+    "keywords": ["shock", "first aid", "emergency", "circulation"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What is shock?", "Treating shock"]
+  },
+  {
+    "question": "How do I make a splint?",
+    "answer": "A splint keeps an injured limb still. Use a rigid object (stick, board, rolled magazine) longer than the injury. Pad it with cloth. Place it along the limb and secure with strips of cloth or tape above and below the injury — not over it. Check that circulation is not cut off.",
+    "keywords": ["splint", "first aid", "broken bone", "fracture"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to make a splint", "Splinting a fracture"]
+  },
+  {
+    "question": "What is frostbite?",
+    "answer": "Frostbite is damage to skin and tissue from extreme cold. Symptoms: numbness, pale or waxy skin, and hardness. Treatment: move to a warm place, remove wet clothing, and warm the area slowly in warm (not hot) water. Do not rub the area or use direct heat. Get medical help.",
+    "keywords": ["frostbite", "cold", "first aid", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What is frostbite?", "Treating frostbite"]
+  },
+  {
+    "question": "What is the best way to stay warm in cold weather?",
+    "answer": "Dress in layers: a base layer that wicks moisture, an insulating middle layer (fleece or wool), and a windproof/waterproof outer layer. Keep your head, hands, and feet covered. Stay dry — wet clothes lose insulation. Eat high-energy food and stay hydrated. Avoid alcohol, which increases heat loss.",
+    "keywords": ["cold", "warmth", "survival", "layers"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to stay warm", "Cold weather survival"]
+  },
+  {
+    "question": "How do I stay cool in extreme heat?",
+    "answer": "Drink water often, even if you do not feel thirsty. Wear light-colored, loose, breathable clothing. Stay in shade or indoors during the hottest hours. Avoid alcohol and caffeine. Use a wet cloth on your neck and wrists. Watch for signs of heat exhaustion: dizziness, nausea, and heavy sweating.",
+    "keywords": ["heat", "cooling", "survival", "summer"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to stay cool in hot weather", "Heat survival"]
+  },
+  {
+    "question": "How do I escape quicksand?",
+    "answer": "Stay calm and avoid struggling. Slowly lean back and spread your arms to distribute your weight. Quicksand is usually shallow. Once you stop sinking, carefully work your legs free by pulling one at a time. Crawl or roll to solid ground rather than trying to stand.",
+    "keywords": ["quicksand", "survival", "escape", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do in quicksand", "Quicksand survival"]
+  },
+  {
+    "question": "What is a dust storm and how do I survive one?",
+    "answer": "A dust storm is a wall of wind carrying sand and dust. If caught in one, cover your nose and mouth with cloth, protect your eyes, and crouch behind a large object with your back to the wind. Do not lie flat — you may be buried. Wait until it passes before moving.",
+    "keywords": ["dust storm", "survival", "desert", "weather"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Dust storm survival", "What to do in a dust storm"]
+  },
+  {
+    "question": "How do I survive a lightning storm outdoors?",
+    "answer": "If you hear thunder, you are in danger. Move to a building or a car. If caught outside, crouch low on the balls of your feet, keep your head down, and do not lie flat. Stay away from tall trees, water, metal fences, and open fields. Wait 30 minutes after the last thunder.",
+    "keywords": ["lightning", "storm", "survival", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do in a lightning storm", "Lightning safety"]
+  },
+  {
+    "question": "What is the safest place in a tornado?",
+    "answer": "The safest place is an underground shelter or a basement. If none is available, go to an interior room on the lowest floor, away from windows. Crouch low and cover your head with your arms and a blanket or mattress. Avoid mobile homes, cars, and large open rooms like gyms.",
+    "keywords": ["tornado", "emergency", "survival", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do in a tornado", "Tornado safety"]
+  },
+  {
+    "question": "What is the difference between a watch and a warning?",
+    "answer": "A watch means conditions are favorable for a hazard — be prepared and keep an eye on the news. A warning means the hazard is happening or imminent — take action immediately. This applies to tornadoes, severe thunderstorms, flash floods, and other weather emergencies.",
+    "keywords": ["weather", "watch", "warning", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Watch vs warning", "What is a weather warning?"]
+  },
+  {
+    "question": "How do I treat a tick bite?",
+    "answer": "Remove the tick with fine-tipped tweezers, grabbing it close to the skin and pulling straight up. Do not twist or squeeze. Clean the bite with soap and water. Note the date. Watch for a rash, fever, or joint pain over the next few weeks and see a doctor if any appear.",
+    "keywords": ["tick", "bite", "first aid", "Lyme"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to remove a tick", "Tick bite treatment"]
+  },
+  {
+    "question": "How do I treat a bee sting?",
+    "answer": "Remove the stinger by scraping it with a fingernail or card — do not squeeze. Wash with soap and water. Apply a cold pack to reduce swelling. Take an antihistamine if needed. Seek emergency help if the person has trouble breathing, swelling of the face, or a known allergy.",
+    "keywords": ["bee sting", "first aid", "allergy", "insect"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a bee sting", "Bee sting first aid"]
+  },
+  {
+    "question": "What should I do if I fall through ice?",
+    "answer": "Do not try to climb out immediately — the ice around the hole is weak. Kick your legs to stay horizontal, get your arms onto the ice, and roll away from the hole instead of standing. Get to warm shelter and dry clothes fast. Watch for hypothermia.",
+    "keywords": ["ice", "fall", "survival", "cold"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do if you fall through ice", "Ice survival"]
+  },
+  {
+    "question": "How do I survive a car in cold water?",
+    "answer": "Unbuckle your seatbelt immediately. Open or break a window — the door will not open until the pressure equalizes. Help children out first. If you cannot open a window, wait for the car to fill with water, take a deep breath, and push the door open. Then swim to the surface.",
+    "keywords": ["car", "water", "emergency", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Car in water survival", "What to do if your car goes in water"]
+  },
+  {
+    "question": "What is the best way to avoid getting lost?",
+    "answer": "Tell someone where you are going and when you will be back. Carry a map and compass (and know how to use them). Pay attention to landmarks. Stop and look back often. Mark your trail. Stay on marked paths. Carry a fully charged phone and a backup power bank.",
+    "keywords": ["navigation", "lost", "prevention", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to not get lost", "Avoid getting lost"]
+  },
+  {
+    "question": "What is a signal fire?",
+    "answer": "A signal fire is a fire built to attract attention. Build three fires in a triangle or a straight line. During the day, add green branches or leaves to make white smoke; at night, keep the fire burning bright. Choose a high, open location. Be careful not to start a wildfire.",
+    "keywords": ["signal fire", "rescue", "survival", "signal"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to make a signal fire", "Signal fire survival"]
+  },
+  {
+    "question": "How do I purify water with a filter?",
+    "answer": "Push water through a filter with a hand pump or gravity system. Most filters remove bacteria and protozoa but not viruses. If viruses are a concern, combine filtration with boiling or chemical treatment. Follow the manufacturer's instructions and replace cartridges on schedule.",
+    "keywords": ["water filter", "purification", "survival", "safe water"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to filter water", "Water filter survival"]
+  },
+  {
+    "question": "How do I make a water filter?",
+    "answer": "Cut the bottom off a plastic bottle. Layer the neck with cloth, then charcoal, sand, and gravel. Pour water in the top and let it drip through. This removes dirt and some chemicals but not all pathogens. Always boil or chemically treat the water afterwards.",
+    "keywords": ["water filter", "DIY", "survival", "purification"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to make a water filter", "DIY water filter"]
+  },
+  {
+    "question": "What is hypothermia vs frostbite?",
+    "answer": "Hypothermia is a drop in core body temperature; the whole body is affected. Frostbite is localized freezing of skin and tissue, usually on fingers, toes, ears, and nose. Hypothermia is more dangerous and requires warming the core. Both are emergencies.",
+    "keywords": ["hypothermia", "frostbite", "cold", "difference"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Hypothermia vs frostbite", "Cold injuries"]
+  },
+  {
+    "question": "What are the signs of dehydration?",
+    "answer": "Signs include thirst, dry mouth, dark yellow urine, headache, dizziness, fatigue, and confusion. Severe dehydration causes rapid heartbeat, sunken eyes, and loss of consciousness. Drink water in small sips if nauseous. Add a pinch of salt and sugar to water for better absorption.",
+    "keywords": ["dehydration", "water", "symptoms", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Signs of dehydration", "What is dehydration"]
+  },
+  {
+    "question": "What is an oral rehydration solution?",
+    "answer": "An oral rehydration solution (ORS) replaces lost water and salts. Mix 1 liter of clean water with 6 level teaspoons of sugar and 1/2 teaspoon of salt. Stir until dissolved. Sip frequently. Do not add more salt or sugar than this. It is used to treat dehydration from diarrhea, vomiting, or heat.",
+    "keywords": ["ORS", "dehydration", "first aid", "rehydration"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to make ORS", "Oral rehydration solution"]
+  },
+  {
+    "question": "How do I signal an aircraft?",
+    "answer": "Use a mirror to flash sunlight toward the aircraft. Wave bright clothing in a wide arc. If you have a signal fire, keep smoke going. Stamp an X or SOS in snow or sand. Move to an open area. Stay visible — rescue crews look for contrast against the ground.",
+    "keywords": ["rescue", "signal", "aircraft", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to signal a plane", "Aircraft signaling"]
+  },
+  {
+    "question": "What is a survival whistle used for?",
+    "answer": "A survival whistle is a small, loud, lightweight signal tool. A whistle can be heard farther than the human voice and uses less energy. Three blasts is the universal distress signal. Carry one on a lanyard around your neck whenever you are outdoors.",
+    "keywords": ["whistle", "signal", "survival", "rescue"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Survival whistle", "What is a survival whistle"]
+  },
+  {
+    "question": "How do I build a fire in wet conditions?",
+    "answer": "Look for dry tinder under logs, inside bark, or in the crotch of trees. Birch bark, pine resin, and dry grass work well. Split wet wood to reach the dry inside. Use a fire steel instead of matches. Build the fire on a platform of logs or rocks to keep it off the wet ground.",
+    "keywords": ["fire", "wet", "survival", "tinder"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to start a fire in the rain", "Wet weather fire"]
+  },
+  {
+    "question": "What are the survival uses of a plastic bag?",
+    "answer": "A plastic bag can collect water from plants, protect a splint, act as a rain hat, make a solar still, keep tinder dry, and be used as a signaling flag. A clear bag over green leaves in sunlight produces drinking water. Always carry at least one large, thick plastic bag.",
+    "keywords": ["plastic bag", "survival", "water", "tool"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Uses of a plastic bag in survival", "Survival plastic bag"]
+  },
+  {
+    "question": "What is the survival use of a bandana?",
+    "answer": "A bandana can be a filter, a sun hat, a sling, a bandage, a dust mask, a signal flag, a pot holder, a tourniquet, and a face cover for smoke. It weighs almost nothing and dries quickly. A large cotton bandana is a classic survival item.",
+    "keywords": ["bandana", "survival", "tool", "multi-use"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Uses of a bandana in survival", "Survival bandana"]
+  },
+  {
+    "question": "What is a signal mirror?",
+    "answer": "A signal mirror is a small, durable mirror used to reflect sunlight toward aircraft or distant people. Aim by holding the mirror near your eye and sighting the target through a hole or notch. A signal mirror can be seen from over 30 kilometers on a clear day.",
+    "keywords": ["signal mirror", "rescue", "survival", "signal"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to use a signal mirror", "Survival mirror"]
+  },
+  {
+    "question": "What is the rule of threes in survival?",
+    "answer": "The rule of threes is a memory aid: you can survive about 3 minutes without air, 3 hours without shelter in harsh weather, 3 days without water, and 3 weeks without food. It highlights priorities: air, shelter, water, food. Extreme conditions can shorten each time.",
+    "keywords": ["rule of threes", "survival", "priorities", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What is the rule of threes?", "Survival rule of 3"]
+  },
+  {
+    "question": "What is the best way to find food in the wild?",
+    "answer": "Start with plants you are 100% sure are safe: dandelion, cattail, clover, acorns (after leaching), and many berries. Fish and small game provide more calories. Set snares for rabbits, fish with a line and hook, and look under rocks for insects. Never eat anything you cannot positively identify.",
+    "keywords": ["food", "foraging", "survival", "wild"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to find food in the wild", "Wild food survival"]
+  },
+  {
+    "question": "How do I catch fish without a rod?",
+    "answer": "Use a hand line with a hook and bait, a spear, or a fish trap. A simple gorge hook can be carved from bone or wood. Bait with worms, insects, or small pieces of fish. Fish are more active at dawn and dusk. In a survival situation, fish can be eaten raw if absolutely necessary, but cooking is safer.",
+    "keywords": ["fishing", "survival", "food", "wilderness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to fish without a rod", "Survival fishing"]
+  },
+  {
+    "question": "How do I set a snare?",
+    "answer": "Find a game trail. Make a loop of wire or cord about the size of your fist, positioned a few centimeters above the ground on the trail. Anchor the snare to a strong branch or stake. Check it daily. Snaring is regulated in many places, so only use it in a true survival emergency.",
+    "keywords": ["snare", "trapping", "survival", "food"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to set a snare", "Survival trapping"]
+  },
+  {
+    "question": "What is a solar still and how does it work?",
+    "answer": "A solar still uses the sun to evaporate water from soil or plants and collect it as condensation. Dig a pit, place a cup in the center, cover the pit with plastic, and weigh down the middle with a stone. Water vapor condenses on the plastic and drips into the cup. It produces small amounts of clean water.",
+    "keywords": ["solar still", "water", "survival", "purification"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How does a solar still work?", "Solar still water"]
+  },
+  {
+    "question": "How do I survive a night in the cold without a sleeping bag?",
+    "answer": "Build a thick bed of dry leaves, pine needles, or branches for insulation. Build a lean-to or debris shelter. Use a space blanket or any reflective material. Wear all your dry clothes. Do not sleep directly on the ground. Place hot rocks (not wet) near — but not touching — your body. Sleep in short intervals if needed.",
+    "keywords": ["cold", "night", "survival", "shelter"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to survive a cold night", "Cold night survival"]
+  },
+  {
+    "question": "What is a space blanket?",
+    "answer": "A space blanket is a thin, lightweight sheet of reflective plastic that reflects body heat. It is used to prevent hypothermia, to signal for rescue, and as a shelter. It folds down to the size of a wallet and is an essential item in any survival kit or first aid kit.",
+    "keywords": ["space blanket", "survival", "hypothermia", "shelter"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What is a Mylar blanket?", "Space blanket uses"]
+  },
+  {
+    "question": "How do I use a knife safely in the wild?",
+    "answer": "Keep the blade sharp — a dull knife is more dangerous. Cut away from your body. Do not cut toward yourself or with your fingers in the path of the blade. Use a cutting board or log. Keep the sheath on when not in use. Pass a knife handle-first. Never throw a knife.",
+    "keywords": ["knife", "safety", "survival", "tool"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Knife safety", "How to use a knife safely"]
+  },
+  {
+    "question": "What is a paracord bracelet used for?",
+    "answer": "A paracord bracelet is made of strong, lightweight cord. When unwoven, it provides several meters of cord that can be used for shelter building, snares, fishing line, tourniquets, repairing gear, and securing loads. It is a popular survival accessory because it is always with you.",
+    "keywords": ["paracord", "survival", "cord", "bracelet"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What is a paracord bracelet?", "Paracord survival"]
+  },
+  {
+    "question": "What is the best way to store water?",
+    "answer": "Store water in food-grade plastic or glass containers, in a cool, dark place. Rotate stored water every 6 to 12 months. Do not store water in containers that held milk or juice — they can harbor bacteria. Label containers with the date. A family of four needs about 12 liters per day for drinking and basic hygiene.",
+    "keywords": ["water storage", "preparedness", "survival", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to store water", "Water storage survival"]
+  },
+  {
+    "question": "How much water should I store?",
+    "answer": "Store at least 4 liters per person per day for drinking and basic sanitation. A two-week supply for one person is about 56 liters. Add more for pets, cooking, and hot climates. Rotate your supply every 6 to 12 months. Store in food-grade containers in a cool, dark place.",
+    "keywords": ["water storage", "preparedness", "emergency", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How much water to store", "Emergency water supply"]
+  },
+  {
+    "question": "What is the best way to signal SOS?",
+    "answer": "SOS is three short, three long, three short signals in Morse code (... --- ...). You can signal with a flashlight, whistle, mirror, or by stamping the letters SOS in snow or sand. It is the internationally recognized distress signal. Use any means available.",
+    "keywords": ["SOS", "signal", "rescue", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to signal SOS", "SOS signal"]
+  },
+  {
+    "question": "What is the survival use of a condom?",
+    "answer": "An unrolled condom can be used as a water container (holds about 1 liter), a waterproof cover for a flashlight or matches, a fire starter (as a container for water), or a sling. It is lightweight and compact, making it a classic item in minimalist survival kits.",
+    "keywords": ["condom", "survival", "water", "kit"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Survival uses of a condom", "Condom survival tool"]
+  },
+  {
+    "question": "What is the best way to treat blisters?",
+    "answer": "Do not pop a blister unless it is large and painful. Clean it with water and soap. If you must drain it, use a sterilized needle and leave the skin on. Apply a blister bandage or moleskin. Keep the area dry. Prevent blisters with properly fitted shoes and moisture-wicking socks.",
+    "keywords": ["blister", "first aid", "foot care", "hiking"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a blister", "Blister first aid"]
+  },
+  {
+    "question": "What is the best way to prevent blisters?",
+    "answer": "Wear properly fitted shoes that are broken in. Use moisture-wicking socks (wool or synthetic, not cotton). Change socks when they get wet. Apply moleskin or tape to hot spots before they become blisters. Keep toenails trimmed. Stop and treat hot spots immediately.",
+    "keywords": ["blister", "prevention", "hiking", "foot care"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to prevent blisters", "Blister prevention"]
+  },
+  {
+    "question": "How do I survive being stranded in a car in winter?",
+    "answer": "Stay with the car — it is easier to find than a person. Run the engine for 10 minutes per hour to stay warm, but keep a window slightly open to prevent carbon monoxide buildup, and make sure the exhaust pipe is not blocked by snow. Tie a bright cloth to the antenna. Run the heater and dome light occasionally.",
+    "keywords": ["car", "winter", "stranded", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Stranded in car in winter", "Winter car survival"]
+  },
+  {
+    "question": "What should I do if I am caught in a rip current?",
+    "answer": "Do not try to swim against it. Swim parallel to the beach until you are out of the current, then swim diagonally back to shore. If you cannot swim out, float on your back and call for help. Rip currents are usually narrow and do not pull you under.",
+    "keywords": ["rip current", "ocean", "swimming", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do in a rip current", "Rip current survival"]
+  },
+  {
+    "question": "What is the survival use of a mirror?",
+    "answer": "A mirror can signal for rescue by reflecting sunlight, help you check yourself for injuries, start a fire by focusing sunlight on tinder, and be used as a signaling device for aircraft. Any small mirror works — even one from a makeup compact.",
+    "keywords": ["mirror", "survival", "signal", "fire"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Survival uses of a mirror", "Mirror survival tool"]
+  },
+  {
+    "question": "What is the best way to carry water in the wild?",
+    "answer": "Use a water bottle or hydration bladder as your primary container. Carry a backup like a collapsible bag or a plastic bag. You can also use a large leaf folded into a cone, a bamboo section, or an animal bladder. Always have a way to purify water with you.",
+    "keywords": ["water container", "survival", "hydration", "wilderness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to carry water in the wild", "Water carrier survival"]
+  },
+  {
+    "question": "How do I make a shelter in the desert?",
+    "answer": "Find shade or create it with a tarp or cloth. Dig a trench to lie in during the day to escape the sun. Insulate from the ground. In cold desert nights, build a debris shelter or use rocks to retain heat. Stay near your shelter during the day and travel only at night or early morning.",
+    "keywords": ["desert", "shelter", "survival", "heat"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Desert shelter", "How to build a desert shelter"]
+  },
+  {
+    "question": "How do I survive a sandstorm?",
+    "answer": "Cover your nose and mouth with a cloth. Protect your eyes with goggles or sunglasses. Crouch behind a large rock or vehicle with your back to the wind. Do not lie flat — you may be buried. Wait for the storm to pass. Move only when visibility improves.",
+    "keywords": ["sandstorm", "survival", "desert", "weather"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Sandstorm survival", "What to do in a sandstorm"]
+  },
+  {
+    "question": "What is the best way to find water in the desert?",
+    "answer": "Look for water at the base of cliffs, in dry riverbeds (dig at the lowest point on the outside of a bend), and in rock crevices. Collect dew with a cloth before sunrise. Look for green vegetation, which indicates water nearby. Never drink cactus water — it can cause vomiting.",
+    "keywords": ["desert", "water", "survival", "finding water"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Finding water in the desert", "Desert water survival"]
+  },
+  {
+    "question": "What is the best way to survive extreme cold?",
+    "answer": "Stay dry, stay out of the wind, and insulate from the ground. Wear layers, including a hat and gloves. Keep moving to generate heat, but avoid sweating. Eat high-energy food. Drink water. Build a shelter before dark. If you have a fire, keep it small and controlled.",
+    "keywords": ["cold", "survival", "winter", "extreme"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Extreme cold survival", "How to survive extreme cold"]
+  },
+  {
+    "question": "What is the best way to survive extreme heat?",
+    "answer": "Drink water often. Stay in shade or indoors during the hottest hours. Wear light, loose clothing that covers the skin. Avoid strenuous activity in the heat of the day. Use wet cloths on your neck and wrists. Watch for signs of heat exhaustion and heatstroke.",
+    "keywords": ["heat", "survival", "summer", "extreme"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Extreme heat survival", "How to survive extreme heat"]
+  },
+  {
+    "question": "What is a survival shelter?",
+    "answer": "A survival shelter protects you from wind, rain, snow, and cold. The five basic types are: lean-to, debris hut, snow cave, tarp shelter, and natural shelter (cave, rock overhang). The best shelter is the one you can build quickly with the materials around you.",
+    "keywords": ["shelter", "survival", "wilderness", "types"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Survival shelter types", "What is a survival shelter"]
+  },
+  {
+    "question": "What is a lean-to shelter?",
+    "answer": "A lean-to is a simple shelter made of a horizontal ridge pole supported by two trees or posts, with branches and leaves sloping down one side. It blocks wind and rain from one direction. Build it with the open side facing a fire or the sun. Add a thick layer of debris for insulation.",
+    "keywords": ["lean-to", "shelter", "survival", "wilderness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to build a lean-to", "Lean-to shelter"]
+  },
+  {
+    "question": "What is a tarp shelter?",
+    "answer": "A tarp shelter is a lightweight shelter made from a waterproof sheet. It can be set up in many shapes: A-frame, lean-to, plow point, or hammock. It is fast to build, light to carry, and very versatile. Use cordage and stakes or tie it to trees.",
+    "keywords": ["tarp", "shelter", "survival", "camping"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Tarp shelter", "How to set up a tarp"]
+  },
+  {
+    "question": "What is the best way to start a fire with a fire steel?",
+    "answer": "Place a small pile of dry tinder (char cloth, birch bark, cotton with petroleum jelly) on the ground. Hold the striker steady and scrape the fire steel down toward the tinder with firm, fast strokes. Sparks land on the tinder and ignite it. Add small kindling, then larger wood.",
+    "keywords": ["fire steel", "fire", "survival", "ferro rod"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to use a fire steel", "Ferro rod fire"]
+  },
+  {
+    "question": "What is the best tinder for starting a fire?",
+    "answer": "The best tinder is dry, fluffy, and catches a spark easily. Examples include char cloth, birch bark, dry grass, cattail fluff, cotton balls with petroleum jelly, pine resin, and fine wood shavings. Keep tinder dry in a waterproof container. Always carry more than you think you need.",
+    "keywords": ["tinder", "fire", "survival", "kindling"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Best tinder for fire", "Fire tinder"]
+  },
+  {
+    "question": "What is the difference between tinder, kindling, and fuel?",
+    "answer": "Tinder is fine, dry material that catches a spark easily. Kindling is small twigs and thin branches that catch fire from the tinder. Fuel is larger wood that sustains the fire. Build the fire from smallest to largest, adding each stage as the previous one is burning well.",
+    "keywords": ["fire", "tinder", "kindling", "fuel"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Tinder vs kindling", "Fire stages"]
+  },
+  {
+    "question": "What is a fire lay?",
+    "answer": "A fire lay is the arrangement of wood and tinder for a fire. Common lays include teepee, log cabin, star, and lean-to. Each is suited to different conditions. In windy or wet weather, use a lay that protects the flame. In calm weather, a star fire uses less wood.",
+    "keywords": ["fire lay", "fire", "survival", "wood"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Fire lay types", "Fire building techniques"]
+  },
+  {
+    "question": "What is the best way to cook over a fire?",
+    "answer": "Use a tripod with a hanging pot, a grill over coals, or a spit for roasting. Let the fire burn down to coals for even heat. Cook meat thoroughly to an internal temperature of at least 75°C (165°F). Wrap vegetables in foil or leaves. Always have water nearby to control the fire.",
+    "keywords": ["cooking", "fire", "survival", "campfire"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to cook over a fire", "Campfire cooking"]
+  },
+  {
+    "question": "What is a hobo stove?",
+    "answer": "A hobo stove is a simple stove made from a metal can. Cut a door at the bottom for air and fuel, and holes near the top for the pot. It burns small twigs, pine cones, and wood chips. It is lightweight, efficient, and easy to make. Never use a can that has held chemicals.",
+    "keywords": ["hobo stove", "DIY", "survival", "cooking"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to make a hobo stove", "DIY survival stove"]
+  },
+  {
+    "question": "What is a rocket stove?",
+    "answer": "A rocket stove is a highly efficient wood-burning stove that uses insulated vertical and horizontal channels to burn small wood at very high temperatures. It produces less smoke and uses less fuel. You can build one from cans, bricks, or metal tubing.",
+    "keywords": ["rocket stove", "DIY", "survival", "cooking"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to make a rocket stove", "Rocket stove"]
+  },
+  {
+    "question": "What is a solar oven?",
+    "answer": "A solar oven uses sunlight to cook food without fuel. It typically has an insulated box, a dark interior to absorb heat, a transparent lid, and reflective panels to concentrate sunlight. It can reach temperatures of 120°C (250°F) or more. It is slow but requires no fuel.",
+    "keywords": ["solar oven", "cooking", "survival", "sun"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to make a solar oven", "Solar cooking"]
+  },
+  {
+    "question": "What is a survival fishing kit?",
+    "answer": "A small survival fishing kit contains hooks, fishing line, sinkers, and lures. It fits in a small tin or container. You can add a small spool of line, split shot, and a few flies or small lures. Bait with worms, insects, or small pieces of fish. Fish are more active at dawn and dusk.",
+    "keywords": ["fishing kit", "survival", "food", "wilderness"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Survival fishing kit", "How to make a fishing kit"]
+  },
+  {
+    "question": "What is the best way to catch a fish by hand?",
+    "answer": "Find a shallow pool with fish. Slowly move your hands into the water and gently surround the fish. Corner it against a rock or the bank. Grab it firmly behind the gills. Tickling — gently stroking a fish's belly — can calm it enough to grab. This works best in small streams.",
+    "keywords": ["fishing", "survival", "hand", "catching fish"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to catch a fish by hand", "Hand fishing survival"]
+  },
+  {
+    "question": "How do I clean a fish?",
+    "answer": "Lay the fish on a clean surface. Cut from the vent to the gills along the belly. Remove the guts. Scrape out the dark line along the spine. Cut off the head if desired. Rinse with clean water. Cook thoroughly. Keep the fish cool until cooked.",
+    "keywords": ["fish", "cleaning", "survival", "food"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to clean a fish", "Cleaning fish survival"]
+  },
+  {
+    "question": "What is the best way to cook a fish over a fire?",
+    "answer": "Clean the fish and remove the guts. Skewer it on a green stick and prop it over coals. Turn often. The fish is done when the flesh flakes easily with a fork. You can also wrap it in leaves and place it in the coals. Cook thoroughly to kill parasites.",
+    "keywords": ["fish", "cooking", "fire", "survival"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to cook a fish over a fire", "Campfire fish"]
+  },
+  {
+    "question": "What is a foraging rule for berries?",
+    "answer": "Only eat berries you can positively identify. Avoid white and yellow berries, which are often poisonous. Aggregate berries (like raspberries and blackberries) are usually safe. Do not eat berries from plants with milky sap. When in doubt, do not eat it.",
+    "keywords": ["berries", "foraging", "survival", "poison"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Berry foraging rules", "Safe berries survival"]
+  },
+  {
+    "question": "What is a foraging rule for mushrooms?",
+    "answer": "Never eat a mushroom unless you are 100% sure of its identity. Many deadly mushrooms look like edible ones. Do not rely on the universal edibility test for mushrooms. Do not eat mushrooms that are white, have white gills, or grow from a cup. When in doubt, throw it out.",
+    "keywords": ["mushrooms", "foraging", "survival", "poison"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Mushroom foraging rules", "Safe mushrooms survival"]
+  },
+  {
+    "question": "What is the best way to identify a poisonous plant?",
+    "answer": "There is no single test. Avoid plants with milky sap, umbrella-shaped flowers (parsley family), white or yellow berries, and bitter almond smell. Do not eat plants with spiny leaves or bulbs. Learn the poisonous plants in your area before you go out.",
+    "keywords": ["poisonous plants", "foraging", "survival", "identification"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to identify poisonous plants", "Poisonous plant rules"]
+  },
+  {
+    "question": "What are the most common poisonous plants?",
+    "answer": "Common poisonous plants include poison ivy, poison oak, poison sumac, hemlock, nightshade, foxglove, oleander, and castor bean. The rule 'leaves of three, let it be' helps identify poison ivy and oak. Never eat a plant you cannot positively identify.",
+    "keywords": ["poisonous plants", "poison ivy", "survival", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["List of poisonous plants", "Common poisonous plants"]
+  },
+  {
+    "question": "How do I treat poison ivy?",
+    "answer": "Wash the skin with soap and cool water as soon as possible. Rinse with rubbing alcohol. Apply calamine lotion or hydrocortisone cream. Take an antihistamine for itching. Do not scratch — it can cause infection. See a doctor if the rash is severe or on the face.",
+    "keywords": ["poison ivy", "first aid", "rash", "plant"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat poison ivy", "Poison ivy treatment"]
+  },
+  {
+    "question": "What is the best way to avoid insects?",
+    "answer": "Wear long sleeves and pants. Use insect repellent with DEET or picaridin. Sleep in a tent or under a mosquito net. Avoid standing water and dense vegetation at dawn and dusk. Treat clothing with permethrin. Check for ticks after being outdoors.",
+    "keywords": ["insects", "prevention", "survival", "camping"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to avoid insects", "Insect prevention"]
+  },
+  {
+    "question": "How do I treat a mosquito bite?",
+    "answer": "Wash the bite with soap and water. Apply calamine lotion, hydrocortisone cream, or a cold pack to reduce itching. Take an antihistamine if needed. Do not scratch — it can cause infection. Seek medical help if you develop a fever or severe swelling.",
+    "keywords": ["mosquito bite", "first aid", "itch", "insect"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a mosquito bite", "Mosquito bite relief"]
+  },
+  {
+    "question": "What is the best way to prevent mosquito bites?",
+    "answer": "Use insect repellent with DEET or picaridin. Wear long sleeves and pants. Sleep under a mosquito net. Remove standing water near your campsite. Avoid being outdoors at dawn and dusk when mosquitoes are most active. Treat clothing with permethrin.",
+    "keywords": ["mosquito", "prevention", "survival", "repellent"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to prevent mosquito bites", "Mosquito prevention"]
+  },
+  {
+    "question": "What is the best way to treat a sunburn?",
+    "answer": "Cool the skin with a cool shower or compress. Apply aloe vera or a moisturizing lotion. Drink water to stay hydrated. Take an anti-inflammatory like ibuprofen. Do not pop blisters. Stay out of the sun until healed. Prevent sunburn with sunscreen, hats, and shade.",
+    "keywords": ["sunburn", "first aid", "skin", "sun"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a sunburn", "Sunburn relief"]
+  },
+  {
+    "question": "What is the best way to prevent sunburn?",
+    "answer": "Use broad-spectrum sunscreen with SPF 30 or higher. Reapply every two hours and after swimming. Wear a wide-brimmed hat, sunglasses, and long sleeves. Seek shade during peak hours (10 a.m. to 4 p.m.). Remember that water, snow, and sand reflect UV rays.",
+    "keywords": ["sunburn", "prevention", "sunscreen", "sun"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to prevent sunburn", "Sunburn prevention"]
+  },
+  {
+    "question": "What is the best way to treat a jellyfish sting?",
+    "answer": "Rinse with seawater, not fresh water. Remove tentacles with tweezers or a gloved hand. Soak the area in hot water (as hot as tolerable) for 20 minutes. Do not use urine or vinegar unless you know the species. Seek medical help for severe reactions.",
+    "keywords": ["jellyfish", "sting", "first aid", "ocean"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a jellyfish sting", "Jellyfish sting treatment"]
+  },
+  {
+    "question": "What is the best way to treat a sea urchin spine?",
+    "answer": "Remove visible spines with tweezers. Soak the area in hot water for 30 to 90 minutes. Apply an antibiotic ointment. See a doctor if spines are deep, if the wound is near a joint, or if there are signs of infection. Do not try to dig out deep spines yourself.",
+    "keywords": ["sea urchin", "first aid", "ocean", "spine"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a sea urchin sting", "Sea urchin spine treatment"]
+  },
+  {
+    "question": "What is the best way to treat a stingray sting?",
+    "answer": "Rinse the wound with seawater. Soak the area in hot water (as hot as tolerable) for 30 to 90 minutes to break down the venom. Remove any visible spine. Clean the wound and apply an antibiotic ointment. Seek medical help, especially for deep wounds.",
+    "keywords": ["stingray", "sting", "first aid", "ocean"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to treat a stingray sting", "Stingray sting treatment"]
+  },
+  {
+    "question": "What is the best way to survive a wildfire?",
+    "answer": "Follow evacuation orders immediately. If trapped, move to an area with little vegetation, like a rocky outcrop or a wide road. Lie face down in a ditch and cover yourself with dirt or a fire-resistant blanket. Breathe through a wet cloth to filter smoke. Do not try to outrun a fire uphill.",
+    "keywords": ["wildfire", "fire", "survival", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Wildfire survival", "How to survive a wildfire"]
+  },
+  {
+    "question": "What is the best way to survive a mudslide?",
+    "answer": "Move to higher ground quickly. If you cannot escape, curl into a tight ball and protect your head. After the slide, move away from the path — more slides may follow. Watch for flooding, downed power lines, and damaged buildings. Do not return until authorities say it is safe.",
+    "keywords": ["mudslide", "landslide", "survival", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to survive a mudslide", "Landslide survival"]
+  },
+  {
+    "question": "What is the best way to survive an avalanche?",
+    "answer": "If caught, move diagonally across the slope to escape. If buried, cup your hands over your mouth to create an air pocket. Stay calm and conserve oxygen. Try to dig toward the surface if you know which way is up. Carry an avalanche beacon, probe, and shovel if traveling in avalanche terrain.",
+    "keywords": ["avalanche", "snow", "survival", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to survive an avalanche", "Avalanche survival"]
+  },
+  {
+    "question": "What is the best way to survive a falling through ice?",
+    "answer": "Do not try to climb out immediately. Kick your legs to stay horizontal, get your arms onto the ice, and roll away from the hole instead of standing. Get to warm shelter and dry clothes fast. Watch for hypothermia.",
+    "keywords": ["ice", "fall", "survival", "cold"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["What to do if you fall through ice", "Ice survival"]
+  },
+  {
+    "question": "What is the best way to survive a plane crash?",
+    "answer": "Wear your seatbelt low and tight. Listen to the safety briefing. Count the rows to the nearest exit. In a crash, assume the brace position, protect your head, and be ready to move fast. After the crash, get out quickly and move away from the wreckage.",
+    "keywords": ["plane crash", "survival", "emergency", "aviation"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to survive a plane crash", "Plane crash survival"]
+  },
+  {
+    "question": "What is the best way to survive a car crash?",
+    "answer": "Wear your seatbelt. Keep your hands at 9 and 3 on the wheel. Do not use your phone. If a crash is imminent, brace for impact, protect your head, and stay in your seat. After the crash, turn off the engine, check for injuries, and call for help.",
+    "keywords": ["car crash", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["How to survive a car crash", "Car crash survival"]
+  },
+  {
+    "question": "What is the best way to survive a home invasion?",
+    "answer": "Stay calm and quiet. Lock yourself in a room and call emergency services. Barricade the door. Do not confront the intruder unless you have no other choice. If you can escape safely, do so. Do not hang up until help arrives.",
+    "keywords": ["home invasion", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Home invasion survival", "What to do in a home invasion"]
+  },
+  {
+    "question": "What is the best way to survive a mass shooting?",
+    "answer": "Run, hide, fight — in that order. Run if you can escape safely. Hide if you cannot. Fight only as a last resort, using anything as a weapon. Call emergency services when safe. Follow police instructions exactly when they arrive.",
+    "keywords": ["mass shooting", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Run hide fight", "Active shooter survival"]
+  },
+  {
+    "question": "What is the best way to survive a kidnapping?",
+    "answer": "Stay calm and do not resist violently. Try to humanize yourself with the kidnapper. Pay attention to sounds, smells, and time. Look for opportunities to escape, but only if you are confident. Leave clues if possible. Do not attempt heroics unless you are sure.",
+    "keywords": ["kidnapping", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Kidnapping survival", "What to do if kidnapped"]
+  },
+  {
+    "question": "What is the best way to survive being lost at sea?",
+    "answer": "Stay with the boat or raft. Drink only when thirsty — seawater is deadly. Collect rainwater with a tarp or cloth. Catch fish with improvised hooks. Keep out of the sun. Signal for rescue with a mirror, whistle, or bright cloth. Do not drink urine or seawater.",
+    "keywords": ["lost at sea", "survival", "ocean", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Lost at sea survival", "How to survive being lost at sea"]
+  },
+  {
+    "question": "What is the best way to survive being stranded on a desert island?",
+    "answer": "Find fresh water first — dig for it or collect rain. Build a shelter. Start a fire. Signal for rescue with a large X or SOS on the beach. Eat coconuts, fish, shellfish, and edible plants. Do not eat unknown plants. Stay positive and keep signaling.",
+    "keywords": ["desert island", "survival", "stranded", "ocean"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Desert island survival", "How to survive on a desert island"]
+  },
+  {
+    "question": "What is the best way to survive a hostage situation?",
+    "answer": "Stay calm and do not make sudden movements. Follow the captor's instructions. Do not try to be a hero. Observe details — faces, voices, smells, times. When rescue comes, drop to the floor, keep your hands visible, and follow police commands exactly.",
+    "keywords": ["hostage", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Hostage survival", "What to do in a hostage situation"]
+  },
+  {
+    "question": "What is the best way to survive a riot?",
+    "answer": "Leave the area immediately. Avoid crowds, especially in narrow streets. Do not run — walk away calmly. Do not engage with police or protesters. If tear gas is used, move upwind and rinse your eyes with water. If trapped, find a building and lock yourself inside.",
+    "keywords": ["riot", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Riot survival", "What to do in a riot"]
+  },
+  {
+    "question": "What is the best way to survive a nuclear explosion?",
+    "answer": "If you see a bright flash, drop to the ground and cover your head. Do not look at the blast. Get inside a sturdy building as fast as possible. Move to the basement or center of the building, away from windows. Stay inside for at least 24 hours. Remove outer clothing and shower if possible.",
+    "keywords": ["nuclear", "explosion", "survival", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Nuclear explosion survival", "How to survive a nuclear blast"]
+  },
+  {
+    "question": "What is the best way to survive a chemical attack?",
+    "answer": "Get out of the area fast. Move upwind and uphill. Cover your nose and mouth with a wet cloth. Remove contaminated clothing and seal it in a bag. Wash your skin with soap and water. Seek medical help as soon as possible. Do not touch contaminated surfaces.",
+    "keywords": ["chemical attack", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Chemical attack survival", "What to do in a chemical attack"]
+  },
+  {
+    "question": "What is the best way to survive a biological attack?",
+    "answer": "Get indoors quickly and close windows and doors. Turn off ventilation. Cover your nose and mouth. Listen to emergency broadcasts. Do not go outside until authorities say it is safe. Follow instructions for decontamination and medical care.",
+    "keywords": ["biological attack", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Biological attack survival", "What to do in a biological attack"]
+  },
+  {
+    "question": "What is the best way to survive a terrorist attack?",
+    "answer": "Run, hide, fight. Get away from the danger if you can. Hide if you cannot escape. Fight only as a last resort. Call emergency services when safe. Follow police instructions exactly. Do not pick up suspicious objects. Be aware of your surroundings.",
+    "keywords": ["terrorist attack", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Terrorist attack survival", "What to do in a terrorist attack"]
+  },
+  {
+    "question": "What is the best way to survive an active shooter?",
+    "answer": "Run, hide, fight. Run if you can escape safely. Hide if you cannot. Fight only as a last resort. Call emergency services when safe. Follow police instructions exactly. Do not pull a fire alarm — it may draw people into the danger.",
+    "keywords": ["active shooter", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Active shooter survival", "What to do in an active shooter situation"]
+  },
+  {
+    "question": "What is the best way to survive a stampede?",
+    "answer": "Stay on your feet. Move with the crowd, not against it. Keep your arms up to protect your chest. Move diagonally toward the edge. Do not bend down to pick up anything. If you fall, curl into a ball and protect your head and neck.",
+    "keywords": ["stampede", "survival", "crowd", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Stampede survival", "How to survive a crowd crush"]
+  },
+  {
+    "question": "What is the best way to survive a building collapse?",
+    "answer": "If you are inside, get under a sturdy table or desk. Cover your head and neck. Stay away from windows and exterior walls. If trapped, do not shout — it wastes oxygen and you may inhale dust. Tap on a pipe or wall so rescuers can hear you. Cover your mouth with cloth.",
+    "keywords": ["building collapse", "survival", "emergency", "rescue"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Building collapse survival", "What to do in a building collapse"]
+  },
+  {
+    "question": "What is the best way to survive a bridge collapse?",
+    "answer": "If you are on the bridge, get out of your car and move to solid ground. If you fall into water, unbuckle your seatbelt, escape through a window, and swim to the surface. If you are on land, move away from the collapse and watch for falling debris.",
+    "keywords": ["bridge collapse", "survival", "emergency", "rescue"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Bridge collapse survival", "What to do in a bridge collapse"]
+  },
+  {
+    "question": "What is the best way to survive a train crash?",
+    "answer": "Brace for impact by leaning forward and protecting your head. Stay in your seat until the train stops. Then exit through the nearest door or window. Move away from the tracks and watch for other trains. Help others if safe. Call emergency services.",
+    "keywords": ["train crash", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Train crash survival", "What to do in a train crash"]
+  },
+  {
+    "question": "What is the best way to survive a bus crash?",
+    "answer": "Brace for impact and protect your head. After the crash, exit through the nearest door or break a window with the emergency hammer. Move away from the bus. Help others if safe. Call emergency services. Watch for fire or fuel leaks.",
+    "keywords": ["bus crash", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Bus crash survival", "What to do in a bus crash"]
+  },
+  {
+    "question": "What is the best way to survive a subway emergency?",
+    "answer": "Stay calm and follow instructions from staff. If the train stops in a tunnel, do not exit unless told to. If evacuation is necessary, walk along the walkway, not on the tracks. Watch for the third rail — it carries deadly voltage. Move to the nearest exit.",
+    "keywords": ["subway", "survival", "emergency", "safety"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Subway emergency survival", "What to do in a subway emergency"]
+  },
+  {
+    "question": "What is the best way to survive a ship sinking?",
+    "answer": "Put on a life jacket immediately. Move to the deck and stay calm. Follow crew instructions. If you must jump, jump feet first and hold your nose. Swim away from the ship to avoid being pulled under. Get into a lifeboat or raft if possible. Conserve energy and stay warm.",
+    "keywords": ["ship sinking", "survival", "emergency", "ocean"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Ship sinking survival", "What to do if a ship sinks"]
+  },
+  {
+    "question": "What is the best way to survive a ferry accident?",
+    "answer": "Put on a life jacket. Move to the deck and follow crew instructions. If you must jump, jump feet first and hold your nose. Swim away from the ferry. Get into a lifeboat or raft if possible. Conserve energy and stay warm. Signal for rescue.",
+    "keywords": ["ferry", "accident", "survival", "emergency"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Ferry accident survival", "What to do in a ferry accident"]
+  },
+  {
+    "question": "What is the best way to survive a cruise ship emergency?",
+    "answer": "Go to your muster station immediately. Put on a life jacket. Follow crew instructions. Do not use elevators. If you must abandon ship, get into a lifeboat. Stay with the group. Conserve energy and stay warm. Signal for rescue.",
+    "keywords": ["cruise ship", "emergency", "survival", "ocean"],
+    "category": "Surviving",
+    "language": "en",
+    "aliases": ["Cruise ship emergency survival", "What to do on a cruise ship emergency"]
+  }
+]

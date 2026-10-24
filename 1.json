@@ -1,0 +1,4416 @@
+{
+  "title": "Offline IT, Programming, and Computer Science Knowledge Base",
+  "version": "1.0.0",
+  "language": "en",
+  "description": "A curated starter knowledge base for offline question answering and search. Contains concise explanations across programming, web development, operating systems, networking, databases, cybersecurity, AI, DevOps, and IT support. This is a useful foundation, not an exhaustive collection of all computing knowledge.",
+  "format": "qa-knowledge-base",
+  "entry_count": 329,
+  "categories": [
+    "AI and Data",
+    "Accessibility",
+    "Algorithms",
+    "Cloud and DevOps",
+    "Command Line",
+    "Computer Fundamentals",
+    "Computer Hardware",
+    "Computer Science",
+    "Cybersecurity",
+    "Data Formats",
+    "Data Structures",
+    "Databases",
+    "Design",
+    "Digital Citizenship",
+    "File Formats",
+    "IT Fundamentals",
+    "IT Support",
+    "Identity and Access",
+    "JavaScript",
+    "Learning and Careers",
+    "Linux",
+    "Mobile Technology",
+    "Networking",
+    "Operating Systems",
+    "Programming Fundamentals",
+    "Programming Languages",
+    "Programming Paradigms",
+    "Programming Tools",
+    "Python",
+    "Secure Development",
+    "Security Architecture",
+    "Software Architecture",
+    "Software Development",
+    "Software Engineering",
+    "Software Licensing",
+    "Software Testing",
+    "Software Tools",
+    "Web APIs",
+    "Web Development",
+    "Web Fundamentals",
+    "Web Security"
+  ],
+  "entries": [
+    {
+      "question": "What is a computer?",
+      "answer": "A computer is an electronic device that accepts input, processes data according to instructions, stores information, and produces output.",
+      "keywords": [
+        "computer",
+        "hardware",
+        "software"
+      ],
+      "category": "Computer Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is information technology (IT)?",
+      "answer": "Information technology is the use of computers, software, networks, and related systems to store, process, secure, and communicate information.",
+      "keywords": [
+        "IT",
+        "information technology",
+        "systems"
+      ],
+      "category": "IT Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is computer science?",
+      "answer": "Computer science studies computation, algorithms, data structures, programming languages, computer architecture, operating systems, and the theory of computing.",
+      "keywords": [
+        "CS",
+        "computer science",
+        "algorithms"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is hardware?",
+      "answer": "Hardware is the physical equipment in a computer system, such as the CPU, RAM, motherboard, storage drive, display, keyboard, and network adapter.",
+      "keywords": [
+        "hardware",
+        "CPU",
+        "RAM"
+      ],
+      "category": "Computer Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is software?",
+      "answer": "Software is a set of programs and data that tells a computer what to do. Examples include operating systems, browsers, games, and text editors.",
+      "keywords": [
+        "software",
+        "programs",
+        "applications"
+      ],
+      "category": "Computer Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is firmware?",
+      "answer": "Firmware is software stored in or close to hardware that provides low-level control, such as firmware in routers, keyboards, and device controllers.",
+      "keywords": [
+        "firmware",
+        "BIOS",
+        "embedded"
+      ],
+      "category": "Computer Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is data?",
+      "answer": "Data is a representation of facts or observations, such as numbers, text, images, measurements, or events, that can be processed or interpreted.",
+      "keywords": [
+        "data",
+        "information",
+        "records"
+      ],
+      "category": "Computer Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is binary?",
+      "answer": "Binary is a base-2 number system that uses only 0 and 1. Digital computers represent and process information using physical states that can be encoded as binary values.",
+      "keywords": [
+        "binary",
+        "bits",
+        "base 2"
+      ],
+      "category": "Computer Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a bit?",
+      "answer": "A bit is a binary digit: either 0 or 1. It is the smallest standard unit of digital information.",
+      "keywords": [
+        "bit",
+        "binary",
+        "data units"
+      ],
+      "category": "Computer Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a byte?",
+      "answer": "A byte is commonly eight bits. It is a standard unit for measuring digital data and often represents a small character or part of a larger value.",
+      "keywords": [
+        "byte",
+        "bits",
+        "storage"
+      ],
+      "category": "Computer Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is the difference between RAM and storage?",
+      "answer": "RAM is fast working memory used by active programs and is normally volatile, meaning its contents disappear when power is lost. Storage, such as an SSD, keeps files when the device is turned off.",
+      "keywords": [
+        "RAM",
+        "SSD",
+        "memory",
+        "storage"
+      ],
+      "category": "Computer Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a CPU?",
+      "answer": "The central processing unit executes instructions, performs arithmetic and logic operations, and coordinates many tasks required by programs.",
+      "keywords": [
+        "CPU",
+        "processor",
+        "computer architecture"
+      ],
+      "category": "Computer Hardware",
+      "language": "en",
+      "aliases": [
+        "what is a processor",
+        "cpu meaning",
+        "what does cpu do"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is a GPU?",
+      "answer": "A graphics processing unit is designed to perform many operations in parallel. It is used for graphics, video processing, scientific computing, and many machine-learning workloads.",
+      "keywords": [
+        "GPU",
+        "graphics",
+        "parallel computing"
+      ],
+      "category": "Computer Hardware",
+      "language": "en",
+      "aliases": [
+        "what is a graphics card",
+        "gpu meaning",
+        "what does gpu do"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is a motherboard?",
+      "answer": "A motherboard is the main circuit board that connects components such as the CPU, memory, storage interfaces, expansion cards, and external ports.",
+      "keywords": [
+        "motherboard",
+        "components",
+        "hardware"
+      ],
+      "category": "Computer Hardware",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an operating system?",
+      "answer": "An operating system manages hardware resources and provides services for applications. Examples include Windows, macOS, Linux, Android, and iOS.",
+      "keywords": [
+        "OS",
+        "operating system",
+        "Linux",
+        "Windows"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [
+        "what is os",
+        "os meaning",
+        "what does an operating system do"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is a process?",
+      "answer": "A process is a running instance of a program, usually with its own virtual address space and operating-system-managed resources.",
+      "keywords": [
+        "process",
+        "operating system",
+        "execution"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a thread?",
+      "answer": "A thread is a sequence of execution within a process. Threads in the same process commonly share memory and other process resources.",
+      "keywords": [
+        "thread",
+        "concurrency",
+        "process"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is virtual memory?",
+      "answer": "Virtual memory gives each process an abstraction of memory addresses and lets the operating system manage mappings to physical RAM and, when configured, disk-backed pages.",
+      "keywords": [
+        "virtual memory",
+        "paging",
+        "RAM"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a file system?",
+      "answer": "A file system organizes data into files and directories and tracks metadata such as names, sizes, permissions, and storage locations.",
+      "keywords": [
+        "filesystem",
+        "files",
+        "directories"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a command-line interface?",
+      "answer": "A command-line interface lets users interact with a system by entering text commands in a terminal or shell.",
+      "keywords": [
+        "CLI",
+        "terminal",
+        "shell"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is programming?",
+      "answer": "Programming is the process of designing and writing instructions that a computer can execute to perform tasks or solve problems.",
+      "keywords": [
+        "programming",
+        "coding",
+        "software"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a programming language?",
+      "answer": "A programming language defines syntax and semantics for expressing computations and instructions. Examples include Python, JavaScript, C, C++, Java, and Rust.",
+      "keywords": [
+        "programming language",
+        "syntax",
+        "code"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is source code?",
+      "answer": "Source code is the human-readable text written in a programming language before or during translation into a form the computer can execute.",
+      "keywords": [
+        "source code",
+        "programming",
+        "compiler"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an algorithm?",
+      "answer": "An algorithm is a finite, well-defined sequence of steps for solving a problem or performing a computation.",
+      "keywords": [
+        "algorithm",
+        "logic",
+        "problem solving"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a variable?",
+      "answer": "A variable is a named reference or storage location used to represent a value in a program. Exact behavior depends on the language.",
+      "keywords": [
+        "variable",
+        "values",
+        "programming"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a constant?",
+      "answer": "A constant is a value or binding intended not to change during a specified part of a program. Languages differ in how strictly they enforce constancy.",
+      "keywords": [
+        "constant",
+        "immutable",
+        "variables"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a data type?",
+      "answer": "A data type describes the kind of value an expression can represent and the operations that are valid for it, such as integers, strings, booleans, and lists.",
+      "keywords": [
+        "data types",
+        "integer",
+        "string",
+        "boolean"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a string?",
+      "answer": "A string is a sequence of text characters or code units. Languages differ in how strings are encoded and indexed.",
+      "keywords": [
+        "string",
+        "text",
+        "characters"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an integer?",
+      "answer": "An integer is a whole number with no fractional part, such as -3, 0, or 42. Supported ranges depend on the language and representation.",
+      "keywords": [
+        "integer",
+        "int",
+        "numbers"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a boolean?",
+      "answer": "A boolean is a logical value with two states, commonly true and false.",
+      "keywords": [
+        "boolean",
+        "true",
+        "false",
+        "logic"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a function?",
+      "answer": "A function is a reusable unit of code that can accept inputs, perform operations, and optionally return a result.",
+      "keywords": [
+        "function",
+        "method",
+        "parameters"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a parameter?",
+      "answer": "A parameter is a named input specified in a function or method definition. An argument is the value supplied when the function is called.",
+      "keywords": [
+        "parameter",
+        "argument",
+        "function"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a loop?",
+      "answer": "A loop repeats a block of code while a condition holds or for each item in a sequence. Common forms include for and while loops.",
+      "keywords": [
+        "loop",
+        "for",
+        "while",
+        "iteration"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a conditional statement?",
+      "answer": "A conditional statement chooses which code to execute based on a condition, commonly using if, else if, and else.",
+      "keywords": [
+        "if",
+        "else",
+        "condition",
+        "branching"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is recursion?",
+      "answer": "Recursion occurs when a function or procedure calls itself, directly or indirectly. A correct recursive solution needs a stopping condition and progress toward it.",
+      "keywords": [
+        "recursion",
+        "recursive function",
+        "base case"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an array?",
+      "answer": "An array stores an ordered collection of elements, often in contiguous memory. Indexing rules and resizing behavior vary by language.",
+      "keywords": [
+        "array",
+        "index",
+        "collection"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a list?",
+      "answer": "A list is an ordered collection of items. In some languages it is a dynamic array; in others, the term refers to a different data structure.",
+      "keywords": [
+        "list",
+        "collection",
+        "sequence"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a dictionary or map?",
+      "answer": "A dictionary or map stores key-value associations so that a value can be retrieved using its key. Names and implementation details vary across languages.",
+      "keywords": [
+        "dictionary",
+        "map",
+        "key value"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a set?",
+      "answer": "A set is a collection designed to contain distinct elements, commonly supporting efficient membership checks and set operations.",
+      "keywords": [
+        "set",
+        "unique values",
+        "data structures"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an object in programming?",
+      "answer": "In object-oriented programming, an object combines state and behavior. In JavaScript, the term also refers broadly to keyed collections of properties.",
+      "keywords": [
+        "object",
+        "OOP",
+        "properties"
+      ],
+      "category": "Programming Paradigms",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a class?",
+      "answer": "A class is a construct used in many object-oriented languages to define the data and behavior of instances. Some languages use prototypes or other models instead.",
+      "keywords": [
+        "class",
+        "object-oriented programming",
+        "instance"
+      ],
+      "category": "Programming Paradigms",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is inheritance?",
+      "answer": "Inheritance is an object-oriented mechanism in which a type derives or reuses behavior from another type. Composition is often an alternative.",
+      "keywords": [
+        "inheritance",
+        "OOP",
+        "subclass"
+      ],
+      "category": "Programming Paradigms",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is polymorphism?",
+      "answer": "Polymorphism lets code use a common interface with different underlying implementations, such as different objects responding to the same method call.",
+      "keywords": [
+        "polymorphism",
+        "OOP",
+        "interfaces"
+      ],
+      "category": "Programming Paradigms",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is encapsulation?",
+      "answer": "Encapsulation groups related data and behavior and controls access to internal details through an interface.",
+      "keywords": [
+        "encapsulation",
+        "OOP",
+        "abstraction"
+      ],
+      "category": "Programming Paradigms",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is abstraction in programming?",
+      "answer": "Abstraction exposes essential behavior while hiding unnecessary implementation details, helping people reason about complex systems.",
+      "keywords": [
+        "abstraction",
+        "interfaces",
+        "design"
+      ],
+      "category": "Programming Paradigms",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a compiler?",
+      "answer": "A compiler translates source code or an intermediate representation into another form, such as machine code or bytecode, often performing checks and optimizations.",
+      "keywords": [
+        "compiler",
+        "compilation",
+        "machine code"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an interpreter?",
+      "answer": "An interpreter executes a program through a runtime that evaluates instructions or an intermediate representation. Many modern language implementations combine interpretation and compilation.",
+      "keywords": [
+        "interpreter",
+        "runtime",
+        "execution"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is debugging?",
+      "answer": "Debugging is the process of finding, understanding, and fixing defects in software using techniques such as reproduction, logging, breakpoints, and tests.",
+      "keywords": [
+        "debugging",
+        "bugs",
+        "testing"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an exception?",
+      "answer": "An exception is a mechanism for representing an unusual or error condition during execution. Programs can often catch and handle exceptions.",
+      "keywords": [
+        "exception",
+        "error handling",
+        "try catch"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an API?",
+      "answer": "An application programming interface defines how software components communicate, including available operations, inputs, outputs, and rules.",
+      "keywords": [
+        "API",
+        "interface",
+        "software integration"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [
+        "what does api mean",
+        "api meaning",
+        "explain api"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is a library?",
+      "answer": "A software library is reusable code that a program can call to perform tasks without implementing everything from scratch.",
+      "keywords": [
+        "library",
+        "package",
+        "dependency"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a framework?",
+      "answer": "A framework provides reusable structure and conventions for building an application. Unlike a library, it often controls part of the application's flow.",
+      "keywords": [
+        "framework",
+        "library",
+        "application"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a package manager?",
+      "answer": "A package manager installs, updates, removes, and resolves software packages and dependencies. Examples include npm, pip, Cargo, and apt.",
+      "keywords": [
+        "package manager",
+        "npm",
+        "pip",
+        "dependencies"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is version control?",
+      "answer": "Version control records changes to files over time so people can inspect history, compare revisions, collaborate, and restore earlier states.",
+      "keywords": [
+        "version control",
+        "Git",
+        "history"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Git?",
+      "answer": "Git is a distributed version-control system used to track changes and support branching and collaboration in software projects.",
+      "keywords": [
+        "Git",
+        "version control",
+        "repository"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [
+        "what is git used for",
+        "git meaning",
+        "explain git"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is a repository?",
+      "answer": "A repository is a managed collection of project files and, in version control, their tracked history and metadata.",
+      "keywords": [
+        "repository",
+        "repo",
+        "Git"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a code review?",
+      "answer": "A code review is the examination of proposed code changes to find defects, improve maintainability, share knowledge, and check consistency with project standards.",
+      "keywords": [
+        "code review",
+        "quality",
+        "software engineering"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is unit testing?",
+      "answer": "Unit testing checks a small, isolated part of a program, such as a function or class, against expected behavior.",
+      "keywords": [
+        "unit test",
+        "testing",
+        "quality assurance"
+      ],
+      "category": "Software Testing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is integration testing?",
+      "answer": "Integration testing checks whether multiple components work together correctly, including their interfaces and data exchange.",
+      "keywords": [
+        "integration testing",
+        "testing",
+        "components"
+      ],
+      "category": "Software Testing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a regression test?",
+      "answer": "A regression test checks that previously working behavior still works after a change or bug fix.",
+      "keywords": [
+        "regression testing",
+        "testing",
+        "bugs"
+      ],
+      "category": "Software Testing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Big O notation?",
+      "answer": "Big O notation describes an asymptotic upper bound on how an algorithm's resource use grows with input size, commonly time or memory.",
+      "keywords": [
+        "Big O",
+        "complexity",
+        "algorithms"
+      ],
+      "category": "Algorithms",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is time complexity?",
+      "answer": "Time complexity describes how an algorithm's running work grows as the input size increases, often expressed using asymptotic notation such as O(n) or O(log n).",
+      "keywords": [
+        "time complexity",
+        "Big O",
+        "algorithms"
+      ],
+      "category": "Algorithms",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a hash table?",
+      "answer": "A hash table uses a hash function to map keys to storage locations and commonly provides average-case fast insertion, lookup, and deletion.",
+      "keywords": [
+        "hash table",
+        "hashing",
+        "data structures"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a stack?",
+      "answer": "A stack is a last-in, first-out data structure. Common operations are push to add an item and pop to remove the most recently added item.",
+      "keywords": [
+        "stack",
+        "LIFO",
+        "data structures"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a queue?",
+      "answer": "A queue is commonly a first-in, first-out data structure. Items are added at one end and removed from the other.",
+      "keywords": [
+        "queue",
+        "FIFO",
+        "data structures"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a linked list?",
+      "answer": "A linked list stores elements in nodes connected by references. Insertion can be efficient when the relevant node is known, but indexed access is generally slower than in an array.",
+      "keywords": [
+        "linked list",
+        "nodes",
+        "data structures"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a tree data structure?",
+      "answer": "A tree is a hierarchical structure of nodes connected by edges, typically with a root and child relationships. Trees are used in parsing, indexing, and many algorithms.",
+      "keywords": [
+        "tree",
+        "nodes",
+        "data structures"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a graph in computer science?",
+      "answer": "A graph consists of vertices and edges that represent relationships. Graphs may be directed or undirected and weighted or unweighted.",
+      "keywords": [
+        "graph",
+        "vertices",
+        "edges",
+        "algorithms"
+      ],
+      "category": "Data Structures",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Python?",
+      "answer": "Python is a high-level, general-purpose programming language known for readable syntax and a large ecosystem. It is used in automation, web development, data analysis, education, and machine learning.",
+      "keywords": [
+        "Python",
+        "py",
+        "programming language"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [
+        "What is py?",
+        "Explain Python",
+        "What is pyton?",
+        "what is py",
+        "what's py",
+        "what is pyton",
+        "tell me python",
+        "python meaning",
+        "explain py",
+        "what does python do"
+      ],
+      "related": []
+    },
+    {
+      "question": "How do I print text in Python?",
+      "answer": "Use print(), for example: print('Hello, world!'). The function writes a representation of its arguments to the standard output stream.",
+      "keywords": [
+        "Python",
+        "print",
+        "output"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I create a variable in Python?",
+      "answer": "Assign a value with an equals sign, for example: name = 'Alex' or count = 3. Python determines the runtime type from the assigned object.",
+      "keywords": [
+        "Python",
+        "variable",
+        "assignment"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I define a function in Python?",
+      "answer": "Use def followed by a name, parameters, and an indented body. Example: def greet(name): return f'Hello, {name}!'.",
+      "keywords": [
+        "Python",
+        "def",
+        "function"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a Python list?",
+      "answer": "A Python list is an ordered, mutable sequence that can contain items of different types. Example: values = [1, 2, 3].",
+      "keywords": [
+        "Python",
+        "list",
+        "sequence"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a Python tuple?",
+      "answer": "A tuple is an ordered sequence that is generally immutable after creation. Example: point = (3, 4).",
+      "keywords": [
+        "Python",
+        "tuple",
+        "immutable"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a Python dictionary?",
+      "answer": "A Python dict maps hashable keys to values. Example: person = {'name': 'Alex', 'age': 20}.",
+      "keywords": [
+        "Python",
+        "dict",
+        "dictionary",
+        "key value"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I handle errors in Python?",
+      "answer": "Use try and except to handle selected exceptions. Use finally for cleanup that must run regardless of whether an exception occurred, and avoid catching overly broad exceptions without a reason.",
+      "keywords": [
+        "Python",
+        "try",
+        "except",
+        "errors"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a Python virtual environment?",
+      "answer": "A virtual environment creates an isolated Python environment for a project, helping keep its installed packages separate from other projects. It is commonly created with python -m venv .venv.",
+      "keywords": [
+        "Python",
+        "venv",
+        "dependencies"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is pip?",
+      "answer": "pip is a package installer commonly used to install Python packages from package indexes or other supported sources. Check package names and sources before installing software.",
+      "keywords": [
+        "Python",
+        "pip",
+        "package manager"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is PEP 8?",
+      "answer": "PEP 8 is the Python style guide that recommends conventions for formatting and naming Python code.",
+      "keywords": [
+        "Python",
+        "PEP 8",
+        "style"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a Python module?",
+      "answer": "A Python module is a file or importable unit that defines code such as functions, classes, and variables. A package groups modules under a package structure.",
+      "keywords": [
+        "Python",
+        "module",
+        "import"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is the difference between == and is in Python?",
+      "answer": "== compares values for equality according to the objects' comparison behavior. is checks whether two references point to the same object. Use is None to test for None.",
+      "keywords": [
+        "Python",
+        "equality",
+        "identity"
+      ],
+      "category": "Python",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is HTML?",
+      "answer": "HTML (HyperText Markup Language) defines the structure and meaning of content on web pages using elements such as headings, paragraphs, links, images, forms, and sections.",
+      "keywords": [
+        "HTML",
+        "web development",
+        "markup"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [
+        "What is hypertext markup language?",
+        "what is html used for",
+        "html meaning",
+        "explain html",
+        "what is hypertext markup language"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is CSS?",
+      "answer": "CSS (Cascading Style Sheets) controls the presentation of HTML and other document formats, including layout, colors, typography, spacing, and responsive design.",
+      "keywords": [
+        "CSS",
+        "stylesheets",
+        "web design"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [
+        "css meaning",
+        "what does css do",
+        "explain css"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is JavaScript?",
+      "answer": "JavaScript is a programming language widely used to add behavior to web pages and also used on servers and in other environments.",
+      "keywords": [
+        "JavaScript",
+        "JS",
+        "web programming"
+      ],
+      "category": "JavaScript",
+      "language": "en",
+      "aliases": [
+        "What is js?",
+        "What is javascript?",
+        "what is js",
+        "what's javascript",
+        "javascript meaning",
+        "what does js do"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is the DOM?",
+      "answer": "The Document Object Model is a programming interface that represents a document as a tree of objects. JavaScript can use it to inspect and modify page content and structure.",
+      "keywords": [
+        "DOM",
+        "HTML",
+        "JavaScript"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is responsive web design?",
+      "answer": "Responsive web design adapts a site's layout and content to different screen sizes and device capabilities, using flexible layouts, media queries, and appropriately sized media.",
+      "keywords": [
+        "responsive",
+        "mobile",
+        "CSS"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is semantic HTML?",
+      "answer": "Semantic HTML uses elements that convey the meaning and role of content, such as nav, main, article, and button, improving structure and often accessibility.",
+      "keywords": [
+        "semantic HTML",
+        "accessibility",
+        "HTML"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is JSON?",
+      "answer": "JSON (JavaScript Object Notation) is a text-based data format that represents objects, arrays, strings, numbers, booleans, and null. JSON object keys and strings use double quotes.",
+      "keywords": [
+        "JSON",
+        "data format",
+        "serialization"
+      ],
+      "category": "Data Formats",
+      "language": "en",
+      "aliases": [
+        "json meaning",
+        "what is a json file",
+        "how does json work"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is the difference between JSON and JavaScript objects?",
+      "answer": "JSON is a text serialization format with strict syntax. A JavaScript object is a runtime value and may contain features that JSON cannot represent, such as functions, undefined values, and cyclic references.",
+      "keywords": [
+        "JSON",
+        "JavaScript",
+        "objects"
+      ],
+      "category": "Data Formats",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is fetch() in JavaScript?",
+      "answer": "fetch() is a browser API for making network requests and receiving a Promise for a Response. Code should check response.ok and handle network errors and response parsing.",
+      "keywords": [
+        "JavaScript",
+        "fetch",
+        "HTTP"
+      ],
+      "category": "JavaScript",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is localStorage?",
+      "answer": "localStorage is a browser storage API that stores string key-value pairs persistently across sessions in the same origin, subject to browser policies and storage limits. It is synchronous and not suitable for huge databases.",
+      "keywords": [
+        "browser storage",
+        "localStorage",
+        "web development"
+      ],
+      "category": "Web APIs",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is IndexedDB?",
+      "answer": "IndexedDB is an asynchronous browser database for storing significant amounts of structured data, including objects and indexes. It is generally more suitable than localStorage for large offline datasets.",
+      "keywords": [
+        "IndexedDB",
+        "offline",
+        "browser database"
+      ],
+      "category": "Web APIs",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a service worker?",
+      "answer": "A service worker is a script that can run separately from a web page and mediate requests, enabling features such as offline caching and push messaging where supported. Registration generally requires a secure context such as HTTPS or localhost.",
+      "keywords": [
+        "service worker",
+        "PWA",
+        "offline"
+      ],
+      "category": "Web APIs",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a Progressive Web App?",
+      "answer": "A Progressive Web App is a web application built with capabilities and practices that can make it installable, responsive, reliable under poor connectivity, and integrated with supported platform features.",
+      "keywords": [
+        "PWA",
+        "web app",
+        "offline"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an HTML form?",
+      "answer": "An HTML form collects user input through controls such as input, select, textarea, and button. Server-side applications must validate submitted data rather than trusting client-side validation alone.",
+      "keywords": [
+        "HTML",
+        "forms",
+        "input"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is accessibility in web design?",
+      "answer": "Web accessibility aims to make websites usable by people with varied abilities and assistive technologies. Useful practices include semantic HTML, keyboard support, clear focus indicators, labels, and sufficient contrast.",
+      "keywords": [
+        "accessibility",
+        "WCAG",
+        "inclusive design"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is C?",
+      "answer": "C is a general-purpose compiled programming language often used for operating systems, embedded systems, libraries, and performance-sensitive software. It provides low-level control but requires careful memory handling.",
+      "keywords": [
+        "C",
+        "systems programming"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is C++?",
+      "answer": "C++ is a general-purpose language that supports procedural, object-oriented, and generic programming. It is used in games, high-performance software, embedded systems, and infrastructure.",
+      "keywords": [
+        "C++",
+        "cpp",
+        "programming"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Java?",
+      "answer": "Java is a general-purpose, class-based language commonly compiled to bytecode that runs on the Java Virtual Machine. It is used in enterprise systems, Android-related development, and many backend applications.",
+      "keywords": [
+        "Java",
+        "JVM",
+        "programming"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is C#?",
+      "answer": "C# is a modern, strongly typed language in the .NET ecosystem, used for web services, desktop applications, games, and business software.",
+      "keywords": [
+        "C#",
+        "C sharp",
+        ".NET"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Rust?",
+      "answer": "Rust is a systems programming language focused on memory safety and performance, using ownership and borrowing rules to prevent many classes of memory errors without a traditional garbage collector.",
+      "keywords": [
+        "Rust",
+        "systems",
+        "memory safety"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is SQL?",
+      "answer": "SQL is a language used to define, query, and manipulate data in relational database systems. Exact syntax and features vary among database products.",
+      "keywords": [
+        "SQL",
+        "database",
+        "queries"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [
+        "sql meaning",
+        "what does sql do",
+        "explain sql"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is PHP?",
+      "answer": "PHP is a server-side scripting language commonly used for web development and content-management systems.",
+      "keywords": [
+        "PHP",
+        "backend",
+        "web"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is TypeScript?",
+      "answer": "TypeScript extends JavaScript with a static type system and tooling. Type annotations are generally removed during compilation, and the resulting code runs in JavaScript environments.",
+      "keywords": [
+        "TypeScript",
+        "TS",
+        "JavaScript"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Go?",
+      "answer": "Go, also called Golang, is a compiled language designed for simplicity and efficient development of network services, command-line tools, and infrastructure software.",
+      "keywords": [
+        "Go",
+        "Golang",
+        "backend"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Kotlin?",
+      "answer": "Kotlin is a statically typed language used for Android development and other JVM or multiplatform applications.",
+      "keywords": [
+        "Kotlin",
+        "Android",
+        "JVM"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Swift?",
+      "answer": "Swift is a programming language developed for Apple's platforms and also used in other contexts. It emphasizes safety, performance, and modern language features.",
+      "keywords": [
+        "Swift",
+        "iOS",
+        "Apple"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Lua?",
+      "answer": "Lua is a lightweight scripting language often embedded in applications and game engines to provide customization and scripting.",
+      "keywords": [
+        "Lua",
+        "scripting",
+        "games"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Bash?",
+      "answer": "Bash is a Unix shell and scripting language used to run commands, automate tasks, and connect command-line tools on compatible systems.",
+      "keywords": [
+        "Bash",
+        "shell",
+        "Linux"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is assembly language?",
+      "answer": "Assembly language uses symbolic instructions that correspond closely to a processor's instruction set. It is architecture-specific and generally more difficult to write portably than high-level code.",
+      "keywords": [
+        "assembly",
+        "machine code",
+        "CPU"
+      ],
+      "category": "Programming Languages",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a database?",
+      "answer": "A database is an organized collection of data managed so that it can be stored, queried, updated, and maintained reliably.",
+      "keywords": [
+        "database",
+        "data",
+        "storage"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [
+        "database meaning",
+        "what does a database do"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is a relational database?",
+      "answer": "A relational database organizes data into tables with rows and columns and uses relationships and constraints to maintain structure. SQL is commonly used to query relational databases.",
+      "keywords": [
+        "relational database",
+        "SQL",
+        "tables"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a primary key?",
+      "answer": "A primary key uniquely identifies each row in a table. It must be unique and not null under standard relational database rules.",
+      "keywords": [
+        "primary key",
+        "database",
+        "constraints"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a foreign key?",
+      "answer": "A foreign key is a constraint that links a column or set of columns to a key in another or the same table, helping enforce referential integrity.",
+      "keywords": [
+        "foreign key",
+        "relationships",
+        "SQL"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is database normalization?",
+      "answer": "Normalization organizes relational data to reduce unnecessary duplication and update anomalies. The appropriate design depends on requirements and workload.",
+      "keywords": [
+        "normalization",
+        "database design",
+        "tables"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a database index?",
+      "answer": "A database index is an auxiliary structure that can speed up selected queries, usually at the cost of storage and additional work during writes.",
+      "keywords": [
+        "index",
+        "query performance",
+        "database"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a SQL JOIN?",
+      "answer": "A JOIN combines rows from tables based on a related condition. Common forms include INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN, though support varies by database.",
+      "keywords": [
+        "SQL",
+        "JOIN",
+        "tables"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a transaction in a database?",
+      "answer": "A transaction is a group of database operations treated as a unit. ACID properties describe atomicity, consistency, isolation, and durability.",
+      "keywords": [
+        "transaction",
+        "ACID",
+        "database"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is NoSQL?",
+      "answer": "NoSQL is a broad category of database systems that use models beyond or alongside traditional relational tables, including document, key-value, wide-column, and graph databases.",
+      "keywords": [
+        "NoSQL",
+        "document database",
+        "database"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is SQLite?",
+      "answer": "SQLite is an embedded relational database engine that stores a database in a file and does not require a separate database server for typical use.",
+      "keywords": [
+        "SQLite",
+        "embedded database",
+        "SQL"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a database migration?",
+      "answer": "A database migration is a versioned change to a database schema or data, such as creating a table or adding a column, applied in a controlled sequence.",
+      "keywords": [
+        "migration",
+        "schema",
+        "database"
+      ],
+      "category": "Databases",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a computer network?",
+      "answer": "A computer network connects devices so they can exchange data and share resources using communication links and protocols.",
+      "keywords": [
+        "network",
+        "LAN",
+        "WAN"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is the internet?",
+      "answer": "The internet is a global network of interconnected networks that communicate using the Internet Protocol suite.",
+      "keywords": [
+        "internet",
+        "TCP/IP",
+        "network"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an IP address?",
+      "answer": "An IP address identifies a network interface for communication using the Internet Protocol. IPv4 uses 32-bit addresses and IPv6 uses 128-bit addresses.",
+      "keywords": [
+        "IP",
+        "IPv4",
+        "IPv6"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is DNS?",
+      "answer": "The Domain Name System translates domain names into records such as IP addresses and provides other naming-related information.",
+      "keywords": [
+        "DNS",
+        "domain names",
+        "networking"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is HTTP?",
+      "answer": "HTTP is an application-layer protocol used for transferring web resources. HTTPS is HTTP protected by TLS, which helps provide confidentiality, integrity, and server authentication.",
+      "keywords": [
+        "HTTP",
+        "HTTPS",
+        "web"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is TCP?",
+      "answer": "TCP is a transport protocol that provides a reliable, ordered byte stream between endpoints, using mechanisms such as acknowledgments and retransmission.",
+      "keywords": [
+        "TCP",
+        "transport protocol",
+        "networking"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is UDP?",
+      "answer": "UDP is a connectionless transport protocol with low overhead. It does not itself guarantee delivery, ordering, or retransmission.",
+      "keywords": [
+        "UDP",
+        "transport protocol",
+        "networking"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a router?",
+      "answer": "A router forwards packets between networks using routing information. Home routers often combine routing, Wi-Fi, firewall, and network-address-translation functions.",
+      "keywords": [
+        "router",
+        "network",
+        "Wi-Fi"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a switch?",
+      "answer": "A network switch connects devices within a local network and commonly forwards Ethernet frames based on MAC addresses.",
+      "keywords": [
+        "switch",
+        "Ethernet",
+        "LAN"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a MAC address?",
+      "answer": "A MAC address is a link-layer identifier used by network interfaces on supported link technologies. It is not a reliable identity for a person or a permanent global tracking identifier in every context.",
+      "keywords": [
+        "MAC address",
+        "Ethernet",
+        "network"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a VPN?",
+      "answer": "A virtual private network creates a protected tunnel between a device and a VPN endpoint or network. A VPN does not automatically make a user anonymous or protect against every threat.",
+      "keywords": [
+        "VPN",
+        "privacy",
+        "network"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [
+        "vpn meaning",
+        "what does vpn do",
+        "is vpn anonymous"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is a firewall?",
+      "answer": "A firewall applies rules to allow, block, or inspect network traffic. It can be implemented in software, hardware, or network infrastructure.",
+      "keywords": [
+        "firewall",
+        "security",
+        "network"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is bandwidth?",
+      "answer": "Bandwidth describes a communication channel's capacity to carry data per unit time, often measured in bits per second. It differs from latency.",
+      "keywords": [
+        "bandwidth",
+        "speed",
+        "network"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is latency?",
+      "answer": "Latency is the delay between an action or request and its corresponding response or arrival. Network latency is often measured in milliseconds.",
+      "keywords": [
+        "latency",
+        "ping",
+        "network"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Wi-Fi?",
+      "answer": "Wi-Fi is a family of wireless networking technologies based on IEEE 802.11 standards that allows devices to communicate over radio links.",
+      "keywords": [
+        "Wi-Fi",
+        "wireless",
+        "802.11"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a port in networking?",
+      "answer": "A transport-layer port number helps identify a service or endpoint on a host. TCP and UDP have separate port spaces; a port number alone does not guarantee a service is safe or available.",
+      "keywords": [
+        "port",
+        "TCP",
+        "UDP"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is localhost?",
+      "answer": "localhost is a hostname that normally refers to the local device, commonly resolving to loopback addresses such as 127.0.0.1 for IPv4 and ::1 for IPv6.",
+      "keywords": [
+        "localhost",
+        "loopback",
+        "development"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a CDN?",
+      "answer": "A content delivery network distributes content through geographically or topologically distributed servers to improve delivery performance and resilience.",
+      "keywords": [
+        "CDN",
+        "web performance",
+        "network"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is cybersecurity?",
+      "answer": "Cybersecurity is the practice of protecting systems, networks, applications, and data against unauthorized access, disruption, damage, and misuse.",
+      "keywords": [
+        "cybersecurity",
+        "security",
+        "IT"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [
+        "cyber security meaning",
+        "how do i protect computers"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is authentication?",
+      "answer": "Authentication verifies a claimed identity, for example with a password, security key, passkey, or biometric check.",
+      "keywords": [
+        "authentication",
+        "login",
+        "identity"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is authorization?",
+      "answer": "Authorization determines what an authenticated identity or process is allowed to access or do.",
+      "keywords": [
+        "authorization",
+        "permissions",
+        "access control"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is multi-factor authentication?",
+      "answer": "Multi-factor authentication requires two or more different categories of evidence, such as something you know, something you have, or something you are. Two passwords are not two different factors.",
+      "keywords": [
+        "MFA",
+        "2FA",
+        "account security"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is encryption?",
+      "answer": "Encryption transforms readable data into ciphertext using an algorithm and key so that only parties with the appropriate decryption capability can recover the original data.",
+      "keywords": [
+        "encryption",
+        "cryptography",
+        "privacy"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is hashing?",
+      "answer": "A cryptographic hash function maps input data to a fixed-size digest and is designed to make certain attacks, such as finding collisions, computationally difficult. Passwords should be stored with a purpose-built password-hashing scheme and unique salts.",
+      "keywords": [
+        "hashing",
+        "hash function",
+        "passwords"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is phishing?",
+      "answer": "Phishing is a social-engineering attack that tries to trick people into revealing information, opening malicious content, or approving harmful actions. Check domains, avoid unexpected attachments, and verify requests through a trusted channel.",
+      "keywords": [
+        "phishing",
+        "scams",
+        "social engineering"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is malware?",
+      "answer": "Malware is software designed to perform harmful or unauthorized actions, including stealing data, disrupting systems, or gaining unauthorized access.",
+      "keywords": [
+        "malware",
+        "virus",
+        "trojan"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is ransomware?",
+      "answer": "Ransomware is malware that can block access to data or systems, often by encrypting files, and demand payment. Defensive measures include tested offline backups, updates, least privilege, and incident-response planning.",
+      "keywords": [
+        "ransomware",
+        "backup",
+        "security"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a software vulnerability?",
+      "answer": "A vulnerability is a weakness in software or configuration that may be exploited to violate security or reliability requirements.",
+      "keywords": [
+        "vulnerability",
+        "patching",
+        "security"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is patch management?",
+      "answer": "Patch management is the process of evaluating, testing, and applying software updates that fix defects or security vulnerabilities.",
+      "keywords": [
+        "patching",
+        "updates",
+        "security"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is the principle of least privilege?",
+      "answer": "The principle of least privilege gives each user, program, and service only the permissions needed to perform its legitimate tasks.",
+      "keywords": [
+        "least privilege",
+        "permissions",
+        "security"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a backup?",
+      "answer": "A backup is a separate copy of data used to recover from loss, corruption, or disaster. Backups should be tested and protected from the same threats as the original data.",
+      "keywords": [
+        "backup",
+        "recovery",
+        "data protection"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a zero-day vulnerability?",
+      "answer": "A zero-day vulnerability is a software weakness for which effective remediation may not yet be available or widely deployed when it becomes known or exploited. The exact term can vary by context.",
+      "keywords": [
+        "zero-day",
+        "vulnerability",
+        "security"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is responsible disclosure?",
+      "answer": "Responsible disclosure is a coordinated process for reporting a security vulnerability to the affected organization and allowing time for investigation and remediation before public details are released.",
+      "keywords": [
+        "responsible disclosure",
+        "security research",
+        "ethics"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How can I make a strong password?",
+      "answer": "Use a long, unique password or passphrase for each account, preferably generated and stored by a reputable password manager. Enable multi-factor authentication where possible and never share verification codes.",
+      "keywords": [
+        "password",
+        "account security",
+        "MFA"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How can I recognize a suspicious email?",
+      "answer": "Look for unexpected urgency, mismatched sender domains, unusual payment or login requests, unexpected attachments, and links whose destination differs from their displayed text. Verify important requests through a known independent channel.",
+      "keywords": [
+        "email security",
+        "phishing",
+        "scams"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is cloud computing?",
+      "answer": "Cloud computing provides computing resources such as servers, storage, databases, and services over a network, often with on-demand provisioning and usage-based pricing.",
+      "keywords": [
+        "cloud",
+        "servers",
+        "IT"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is virtualization?",
+      "answer": "Virtualization abstracts physical computing resources so multiple isolated virtual systems or environments can share hardware.",
+      "keywords": [
+        "virtualization",
+        "VM",
+        "hypervisor"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a virtual machine?",
+      "answer": "A virtual machine is a software-defined computer environment that runs an operating system and applications using virtualized hardware resources.",
+      "keywords": [
+        "VM",
+        "virtual machine",
+        "virtualization"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a container?",
+      "answer": "A container packages an application and its dependencies into an isolated runtime environment while sharing the host operating-system kernel in common container implementations.",
+      "keywords": [
+        "container",
+        "Docker",
+        "deployment"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Docker?",
+      "answer": "Docker is a platform and ecosystem for building, distributing, and running containers. Containers can help make application environments more consistent across development and deployment.",
+      "keywords": [
+        "Docker",
+        "containers",
+        "DevOps"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Kubernetes?",
+      "answer": "Kubernetes is a system for orchestrating containerized workloads, including deployment, scaling, service discovery, and recovery from certain failures.",
+      "keywords": [
+        "Kubernetes",
+        "K8s",
+        "containers"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is CI/CD?",
+      "answer": "CI/CD commonly refers to continuous integration and continuous delivery or deployment. Automated workflows build, test, and prepare or release changes more consistently.",
+      "keywords": [
+        "CI/CD",
+        "automation",
+        "DevOps"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a deployment?",
+      "answer": "Deployment is the process of making a software version available in a target environment, such as testing, staging, or production.",
+      "keywords": [
+        "deployment",
+        "release",
+        "software"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a server?",
+      "answer": "A server is a computer or software process that provides services or resources to other programs or devices called clients.",
+      "keywords": [
+        "server",
+        "client-server",
+        "network"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is serverless computing?",
+      "answer": "Serverless computing lets developers run code or use managed services without directly managing the underlying server infrastructure. Servers still exist, and providers handle much of the provisioning and scaling.",
+      "keywords": [
+        "serverless",
+        "cloud",
+        "functions"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is monitoring in IT?",
+      "answer": "Monitoring collects and evaluates signals such as metrics, logs, and traces to understand system health, performance, and failures.",
+      "keywords": [
+        "monitoring",
+        "logs",
+        "observability"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is observability?",
+      "answer": "Observability is the ability to infer a system's internal state from its outputs, commonly using logs, metrics, and distributed traces.",
+      "keywords": [
+        "observability",
+        "logs",
+        "metrics",
+        "traces"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is artificial intelligence?",
+      "answer": "Artificial intelligence is a field concerned with systems that perform tasks associated with capabilities such as perception, reasoning, language, planning, and decision-making.",
+      "keywords": [
+        "AI",
+        "artificial intelligence",
+        "machine learning"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [
+        "what is ai",
+        "ai meaning",
+        "explain artificial intelligence"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is machine learning?",
+      "answer": "Machine learning develops methods that allow systems to learn patterns from data and use them to make predictions or decisions, rather than relying only on explicitly hand-written rules.",
+      "keywords": [
+        "ML",
+        "machine learning",
+        "AI"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [
+        "what is ml",
+        "ml meaning",
+        "explain machine learning"
+      ],
+      "related": []
+    },
+    {
+      "question": "What is deep learning?",
+      "answer": "Deep learning is a branch of machine learning that uses neural networks with multiple layers to learn representations from data.",
+      "keywords": [
+        "deep learning",
+        "neural networks",
+        "AI"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a neural network?",
+      "answer": "A neural network is a model composed of interconnected computational units and parameters that are adjusted during training to learn patterns from examples.",
+      "keywords": [
+        "neural network",
+        "AI",
+        "model"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a large language model?",
+      "answer": "A large language model is a model trained on large amounts of text or related data to predict or generate sequences. Its fluent output can still contain mistakes and should be verified for important uses.",
+      "keywords": [
+        "LLM",
+        "language model",
+        "generative AI"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a token in language models?",
+      "answer": "A token is a unit used by a language model to represent text. Depending on the tokenizer, tokens may correspond to words, word parts, punctuation, or other character sequences.",
+      "keywords": [
+        "token",
+        "LLM",
+        "tokenization"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a prompt?",
+      "answer": "A prompt is the input or instruction supplied to a model or system to guide its response. Clear goals, context, constraints, and output formats often improve results.",
+      "keywords": [
+        "prompt",
+        "AI",
+        "instructions"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is hallucination in AI?",
+      "answer": "An AI hallucination is an output that appears confident or plausible but is false, unsupported, or inconsistent with the available evidence.",
+      "keywords": [
+        "hallucination",
+        "AI reliability",
+        "verification"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a dataset?",
+      "answer": "A dataset is a collection of related data organized for analysis, processing, or model training and evaluation.",
+      "keywords": [
+        "dataset",
+        "data",
+        "machine learning"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is supervised learning?",
+      "answer": "Supervised learning trains a model using examples that include target labels or values, such as labeled images or historical prices.",
+      "keywords": [
+        "supervised learning",
+        "labels",
+        "ML"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is unsupervised learning?",
+      "answer": "Unsupervised learning seeks patterns or structure in data without using target labels in the same way as supervised learning. Clustering and dimensionality reduction are common examples.",
+      "keywords": [
+        "unsupervised learning",
+        "clustering",
+        "ML"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is overfitting?",
+      "answer": "Overfitting occurs when a model learns details or noise specific to training data and performs poorly on new data. Validation data, regularization, and suitable evaluation practices can help detect or reduce it.",
+      "keywords": [
+        "overfitting",
+        "model evaluation",
+        "ML"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a training set?",
+      "answer": "A training set is the portion of data used to fit a model's parameters. Separate validation and test data help evaluate generalization when used correctly.",
+      "keywords": [
+        "training set",
+        "dataset",
+        "ML"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an embedding?",
+      "answer": "An embedding maps an item such as text, an image, or a user into a numeric vector intended to represent useful features or relationships.",
+      "keywords": [
+        "embedding",
+        "vector",
+        "AI"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is semantic search?",
+      "answer": "Semantic search attempts to find content related in meaning to a query, not just content containing the exact same words. It may use embeddings or other language-processing methods.",
+      "keywords": [
+        "semantic search",
+        "embeddings",
+        "search"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is retrieval-augmented generation?",
+      "answer": "Retrieval-augmented generation, or RAG, retrieves relevant external or local information and supplies it to a generative model to help ground the response in that information.",
+      "keywords": [
+        "RAG",
+        "retrieval",
+        "LLM"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a hallucination-resistant offline QA system?",
+      "answer": "An offline question-answering system can reduce unsupported answers by retrieving evidence from a local knowledge base, showing sources, setting confidence thresholds, and saying when no reliable match is found. These measures reduce risk but cannot guarantee perfect accuracy.",
+      "keywords": [
+        "offline QA",
+        "retrieval",
+        "reliability"
+      ],
+      "category": "AI and Data",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "Why is my computer slow?",
+      "answer": "Common causes include too many running applications, low available memory, limited storage space, background updates, overheating, malware, or a failing drive. Check task or activity monitoring, free storage, updates, temperatures, and reputable security scans before making major changes.",
+      "keywords": [
+        "slow computer",
+        "performance",
+        "troubleshooting"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What should I do if an application freezes?",
+      "answer": "Wait briefly if the app may be busy, then try its normal close command. If necessary, use the operating system's task manager to end it, understanding that unsaved work may be lost. Update the app and check logs if the issue repeats.",
+      "keywords": [
+        "frozen app",
+        "crash",
+        "troubleshooting"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What should I do if Wi-Fi is not working?",
+      "answer": "Check whether other devices can connect, confirm Wi-Fi is enabled, verify the selected network and password, and restart the router only if appropriate. If only one device fails, inspect its network settings and updates. Avoid resetting all network settings until simpler checks fail.",
+      "keywords": [
+        "Wi-Fi troubleshooting",
+        "internet",
+        "network"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an IP conflict?",
+      "answer": "An IP conflict occurs when two devices on the same network are assigned the same IP address, which can interrupt connectivity. A properly configured DHCP server and network settings usually prevent or resolve it.",
+      "keywords": [
+        "IP conflict",
+        "DHCP",
+        "network"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a driver?",
+      "answer": "A device driver is software that allows an operating system to communicate with and control a hardware device.",
+      "keywords": [
+        "driver",
+        "hardware",
+        "operating system"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is BIOS or UEFI?",
+      "answer": "BIOS and UEFI are firmware interfaces involved in initializing hardware and starting the operating system. UEFI is the modern successor to the traditional BIOS interface in most contemporary PCs.",
+      "keywords": [
+        "BIOS",
+        "UEFI",
+        "boot"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is booting?",
+      "answer": "Booting is the process of starting a computer and loading the operating system. Firmware initializes hardware and selects a boot target before the operating system takes over.",
+      "keywords": [
+        "boot",
+        "startup",
+        "operating system"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a blue screen error?",
+      "answer": "A blue screen in Windows indicates a serious system error that caused Windows to stop. Record the stop code, check recent driver or hardware changes, install trusted updates, and use diagnostic tools; repeated errors may require professional assistance.",
+      "keywords": [
+        "BSOD",
+        "Windows",
+        "troubleshooting"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a log file?",
+      "answer": "A log file records events, diagnostic messages, or activity from an application or system. Logs help investigate errors, but they may contain sensitive information and should be shared carefully.",
+      "keywords": [
+        "logs",
+        "debugging",
+        "IT support"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a checksum?",
+      "answer": "A checksum is a value computed from data to help detect accidental changes or corruption. Cryptographic hashes provide stronger properties than simple checksums but still need a trusted reference value.",
+      "keywords": [
+        "checksum",
+        "integrity",
+        "hash"
+      ],
+      "category": "IT Support",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is software engineering?",
+      "answer": "Software engineering applies systematic methods to designing, building, testing, deploying, operating, and maintaining software with attention to quality, cost, risk, and user needs.",
+      "keywords": [
+        "software engineering",
+        "development",
+        "quality"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is the software development life cycle?",
+      "answer": "The software development life cycle describes stages such as requirements, design, implementation, testing, deployment, and maintenance. Real teams may use iterative or overlapping processes rather than a strict sequence.",
+      "keywords": [
+        "SDLC",
+        "software development",
+        "lifecycle"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Agile development?",
+      "answer": "Agile development emphasizes iterative delivery, feedback, collaboration, and adapting plans as requirements change. Scrum and Kanban are commonly used approaches within the broader Agile ecosystem.",
+      "keywords": [
+        "Agile",
+        "Scrum",
+        "software"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Scrum?",
+      "answer": "Scrum is an Agile framework that organizes work into time-boxed sprints and defines accountabilities, events, and artifacts to help teams inspect progress and adapt.",
+      "keywords": [
+        "Scrum",
+        "Agile",
+        "sprints"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is technical debt?",
+      "answer": "Technical debt is the future cost or constraint created by choosing a quick or imperfect technical solution. Some debt is intentional, but unmanaged debt can make future changes slower and riskier.",
+      "keywords": [
+        "technical debt",
+        "maintenance",
+        "architecture"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is clean code?",
+      "answer": "Clean code is code that communicates intent clearly, uses appropriate abstractions, follows consistent conventions, and is reasonably easy to test and maintain. There is no single universal definition.",
+      "keywords": [
+        "clean code",
+        "readability",
+        "maintenance"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is refactoring?",
+      "answer": "Refactoring changes a program's internal structure while aiming to preserve its externally observable behavior, often making the code easier to understand or modify.",
+      "keywords": [
+        "refactoring",
+        "code quality",
+        "maintenance"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is design pattern?",
+      "answer": "A design pattern is a reusable general approach to a recurring software design problem. Patterns are tools, not rules that must be applied everywhere.",
+      "keywords": [
+        "design pattern",
+        "architecture",
+        "software design"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is MVC?",
+      "answer": "Model-View-Controller is an architectural pattern that separates application data and logic, presentation, and input/control responsibilities. Implementations vary by framework.",
+      "keywords": [
+        "MVC",
+        "architecture",
+        "web development"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is SOLID?",
+      "answer": "SOLID is a group of five object-oriented design principles: Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.",
+      "keywords": [
+        "SOLID",
+        "OOP",
+        "design principles"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an APK file?",
+      "answer": "An APK is an Android application package used to distribute and install Android apps. Opening an APK on a device does not guarantee it is compatible or safe; install apps only from sources you trust.",
+      "keywords": [
+        "APK",
+        "Android",
+        "application"
+      ],
+      "category": "Mobile Technology",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an IPA file?",
+      "answer": "An IPA is a package format used for iOS and iPadOS applications. Installation is governed by Apple's platform security and distribution rules.",
+      "keywords": [
+        "IPA",
+        "iOS",
+        "application"
+      ],
+      "category": "Mobile Technology",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an emulator?",
+      "answer": "An emulator reproduces aspects of another system's behavior so software intended for that system can run in an emulated environment. Compatibility and performance vary.",
+      "keywords": [
+        "emulator",
+        "virtualization",
+        "testing"
+      ],
+      "category": "Software Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a simulator?",
+      "answer": "A simulator models the behavior or environment of a system without necessarily reproducing the underlying hardware or instruction set exactly.",
+      "keywords": [
+        "simulator",
+        "testing",
+        "emulator"
+      ],
+      "category": "Software Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an executable file?",
+      "answer": "An executable file contains code or instructions that an operating system or runtime can launch. The required format depends on the platform, and unknown executables should not be run casually.",
+      "keywords": [
+        "executable",
+        "EXE",
+        "program"
+      ],
+      "category": "File Formats",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a file extension?",
+      "answer": "A file extension is the suffix in a filename, such as .txt, .json, or .html, commonly used to indicate a file's intended format. An extension alone does not prove the file contents or safety.",
+      "keywords": [
+        "extension",
+        "file type",
+        "formats"
+      ],
+      "category": "File Formats",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is UTF-8?",
+      "answer": "UTF-8 is a variable-length character encoding for Unicode that represents text from many writing systems and is widely used on the web.",
+      "keywords": [
+        "UTF-8",
+        "Unicode",
+        "encoding"
+      ],
+      "category": "File Formats",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is compression?",
+      "answer": "Compression represents data using fewer bits. Lossless compression preserves the original data exactly, while lossy compression discards some information to reduce size.",
+      "keywords": [
+        "compression",
+        "ZIP",
+        "media"
+      ],
+      "category": "File Formats",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an archive file?",
+      "answer": "An archive file bundles one or more files and often their directory structure and metadata. ZIP and TAR are common archive formats; compression may or may not be applied.",
+      "keywords": [
+        "archive",
+        "ZIP",
+        "TAR"
+      ],
+      "category": "File Formats",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a regular expression?",
+      "answer": "A regular expression is a pattern language used to match, search, or transform text. Syntax and features vary among implementations.",
+      "keywords": [
+        "regex",
+        "regular expression",
+        "text processing"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a URL?",
+      "answer": "A URL is a Uniform Resource Locator that identifies a resource and commonly includes a scheme, host, path, and optional query or fragment.",
+      "keywords": [
+        "URL",
+        "web",
+        "address"
+      ],
+      "category": "Web Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a domain name?",
+      "answer": "A domain name is a human-readable name in the Domain Name System, such as example.com, that can be associated with network services through DNS records.",
+      "keywords": [
+        "domain",
+        "DNS",
+        "website"
+      ],
+      "category": "Web Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is web hosting?",
+      "answer": "Web hosting provides infrastructure or services that make a website or application accessible over a network. Hosting options range from static file hosting to managed platforms and virtual servers.",
+      "keywords": [
+        "hosting",
+        "website",
+        "server"
+      ],
+      "category": "Web Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a static website?",
+      "answer": "A static website serves files whose content is generally prepared ahead of each request. Client-side JavaScript can still provide interactive behavior, and static sites may use APIs for dynamic data.",
+      "keywords": [
+        "static website",
+        "HTML",
+        "hosting"
+      ],
+      "category": "Web Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a dynamic website?",
+      "answer": "A dynamic website changes content or behavior based on user input, data, or application logic, often using server-side code, databases, client-side code, or a combination.",
+      "keywords": [
+        "dynamic website",
+        "backend",
+        "database"
+      ],
+      "category": "Web Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I comment code?",
+      "answer": "Comment syntax depends on the language. JavaScript, Java, C, C++, and many related languages use // for a single-line comment and /* ... */ for a block comment. Python uses # for a single-line comment. HTML uses <!-- ... -->.",
+      "keywords": [
+        "comments",
+        "syntax",
+        "programming"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an environment variable?",
+      "answer": "An environment variable is a named value supplied to a process by its environment, often used for configuration such as paths or service settings. Secrets should be handled carefully and not exposed in logs or client-side code.",
+      "keywords": [
+        "environment variable",
+        "configuration",
+        "security"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a dependency?",
+      "answer": "A dependency is software or a component that a project relies on. Projects should track dependencies and update them thoughtfully because changes can introduce compatibility or security issues.",
+      "keywords": [
+        "dependency",
+        "package",
+        "software"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is semantic versioning?",
+      "answer": "Semantic Versioning commonly uses MAJOR.MINOR.PATCH numbers. Under its convention, a major version signals incompatible API changes, a minor version adds backward-compatible functionality, and a patch version fixes backward-compatible bugs.",
+      "keywords": [
+        "semver",
+        "versioning",
+        "releases"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a race condition?",
+      "answer": "A race condition occurs when behavior depends on the timing or ordering of concurrent operations in a way that can produce incorrect results. Synchronization or redesign may be needed to prevent it.",
+      "keywords": [
+        "race condition",
+        "concurrency",
+        "bugs"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is asynchronous programming?",
+      "answer": "Asynchronous programming allows an operation to start without requiring the caller to block until it finishes. Promises, async/await, callbacks, and event loops are common mechanisms, depending on the language.",
+      "keywords": [
+        "async",
+        "await",
+        "concurrency"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a promise in JavaScript?",
+      "answer": "A JavaScript Promise represents the eventual completion or failure of an asynchronous operation and may be pending, fulfilled, or rejected.",
+      "keywords": [
+        "JavaScript",
+        "Promise",
+        "async"
+      ],
+      "category": "JavaScript",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is event bubbling in JavaScript?",
+      "answer": "Event bubbling is a DOM event-propagation phase in which an event can travel from the target element up through its ancestors. Handlers can inspect the target and may stop propagation when appropriate.",
+      "keywords": [
+        "JavaScript",
+        "DOM",
+        "events"
+      ],
+      "category": "JavaScript",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is CORS?",
+      "answer": "Cross-Origin Resource Sharing is a browser security mechanism in which servers use HTTP headers to indicate which cross-origin requests browsers may allow. CORS is not a substitute for server-side authorization.",
+      "keywords": [
+        "CORS",
+        "browser security",
+        "HTTP"
+      ],
+      "category": "Web Security",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is SQL injection?",
+      "answer": "SQL injection is a vulnerability caused when untrusted input changes the structure of a SQL query. Use parameterized queries or prepared statements and apply least-privilege database permissions.",
+      "keywords": [
+        "SQL injection",
+        "database security",
+        "secure coding"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is cross-site scripting?",
+      "answer": "Cross-site scripting (XSS) occurs when an application causes untrusted content to execute as script in another user's browser context. Context-aware output encoding, safe DOM APIs, and appropriate content-security controls help reduce risk.",
+      "keywords": [
+        "XSS",
+        "web security",
+        "secure coding"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is CSRF?",
+      "answer": "Cross-site request forgery tricks a browser into sending an unwanted authenticated request to a site. Defenses can include anti-CSRF tokens, appropriate SameSite cookie settings, and checking request context.",
+      "keywords": [
+        "CSRF",
+        "web security",
+        "cookies"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is input validation?",
+      "answer": "Input validation checks that data meets expected rules before it is used. Validate on the server or trusted processing layer even when the client also validates, and use context-appropriate output encoding.",
+      "keywords": [
+        "validation",
+        "security",
+        "forms"
+      ],
+      "category": "Secure Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a REST API?",
+      "answer": "A REST-style API exposes resources through HTTP semantics and commonly uses methods such as GET, POST, PUT, PATCH, and DELETE. Real APIs vary in how closely they follow REST constraints.",
+      "keywords": [
+        "REST",
+        "API",
+        "HTTP"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is GraphQL?",
+      "answer": "GraphQL is a query language and runtime for APIs that lets clients request specific fields from a typed schema. It requires thoughtful authorization, validation, and resource limits.",
+      "keywords": [
+        "GraphQL",
+        "API",
+        "queries"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is WebSocket?",
+      "answer": "WebSocket is a protocol that provides a persistent, bidirectional communication channel between a client and server over a single connection after an opening handshake.",
+      "keywords": [
+        "WebSocket",
+        "real-time",
+        "network"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a cookie in a browser?",
+      "answer": "A cookie is a small piece of data stored by a browser and sent with matching requests according to its attributes. Secure, HttpOnly, and SameSite settings can help protect session cookies.",
+      "keywords": [
+        "cookies",
+        "browser",
+        "sessions"
+      ],
+      "category": "Web APIs",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a session?",
+      "answer": "A session is a way to associate multiple requests or interactions with a continuous user or client context. Implementations may use server-side state, signed tokens, or other mechanisms.",
+      "keywords": [
+        "session",
+        "authentication",
+        "web"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is OAuth?",
+      "answer": "OAuth is an authorization framework that lets a client obtain limited access to resources through delegated authorization. It is distinct from an authentication protocol, though it is often used alongside OpenID Connect.",
+      "keywords": [
+        "OAuth",
+        "authorization",
+        "identity"
+      ],
+      "category": "Identity and Access",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is OpenID Connect?",
+      "answer": "OpenID Connect is an identity layer built on OAuth 2.0 that enables clients to verify user authentication and obtain standardized identity information.",
+      "keywords": [
+        "OIDC",
+        "authentication",
+        "OAuth"
+      ],
+      "category": "Identity and Access",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a compiler error?",
+      "answer": "A compiler error is reported when a compiler cannot translate code because of problems such as invalid syntax, incompatible types, or unresolved names. The exact causes depend on the language and compiler.",
+      "keywords": [
+        "compiler error",
+        "debugging",
+        "programming"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a runtime error?",
+      "answer": "A runtime error occurs while a program is running, for example when it attempts an invalid operation, accesses unavailable data, or encounters an unhandled exception.",
+      "keywords": [
+        "runtime error",
+        "debugging",
+        "programming"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a memory leak?",
+      "answer": "A memory leak occurs when a program retains memory or resources it no longer needs, preventing them from being reclaimed. Long-running applications may become slower or run out of memory as leaks accumulate.",
+      "keywords": [
+        "memory leak",
+        "RAM",
+        "debugging"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is garbage collection?",
+      "answer": "Garbage collection is automatic memory management that reclaims objects no longer reachable or otherwise considered live by a runtime's collection rules.",
+      "keywords": [
+        "garbage collection",
+        "memory",
+        "runtime"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a pointer?",
+      "answer": "A pointer is a value that refers to a memory location or object, depending on the language. Incorrect pointer use in low-level languages can cause memory-safety problems.",
+      "keywords": [
+        "pointer",
+        "memory",
+        "C"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a reference?",
+      "answer": "A reference is a language-dependent mechanism for referring to an object or value. Its exact semantics differ among languages, and it is not always equivalent to a raw memory pointer.",
+      "keywords": [
+        "reference",
+        "memory",
+        "programming"
+      ],
+      "category": "Programming Fundamentals",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a compiler optimization?",
+      "answer": "Compiler optimization transforms code to improve properties such as speed or size while preserving required program behavior under the language's rules.",
+      "keywords": [
+        "optimization",
+        "compiler",
+        "performance"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a linter?",
+      "answer": "A linter analyzes source code to identify likely bugs, suspicious patterns, style issues, or violations of project rules without necessarily executing the program.",
+      "keywords": [
+        "linter",
+        "static analysis",
+        "code quality"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is static analysis?",
+      "answer": "Static analysis examines code without running it to detect certain defects, security issues, or maintainability problems. It complements rather than replaces testing.",
+      "keywords": [
+        "static analysis",
+        "security",
+        "testing"
+      ],
+      "category": "Software Testing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a mock in testing?",
+      "answer": "A mock is a test double that imitates a dependency and can verify interactions. Stubs, fakes, and spies are related test doubles with different purposes.",
+      "keywords": [
+        "mock",
+        "unit testing",
+        "test doubles"
+      ],
+      "category": "Software Testing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is test-driven development?",
+      "answer": "Test-driven development is a workflow in which a developer writes a failing test, implements enough code to pass it, and then refactors while keeping tests passing.",
+      "keywords": [
+        "TDD",
+        "testing",
+        "development"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a requirement in software development?",
+      "answer": "A requirement describes a capability, constraint, or quality the system must satisfy. Clear requirements are testable, understandable, and traceable to user or business needs.",
+      "keywords": [
+        "requirements",
+        "software design",
+        "SDLC"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a user story?",
+      "answer": "A user story is a concise description of a capability from a user's perspective, often accompanied by acceptance criteria that clarify expected behavior.",
+      "keywords": [
+        "user story",
+        "Agile",
+        "requirements"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a prototype?",
+      "answer": "A prototype is an early representation of a product or feature used to explore ideas, validate assumptions, or collect feedback. It may not be suitable for production use.",
+      "keywords": [
+        "prototype",
+        "design",
+        "development"
+      ],
+      "category": "Software Engineering",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Linux?",
+      "answer": "Linux is technically the kernel used by many operating systems. In everyday usage, Linux often refers to complete distributions that combine the kernel with system tools, applications, and package management.",
+      "keywords": [
+        "Linux",
+        "kernel",
+        "operating system"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a Linux distribution?",
+      "answer": "A Linux distribution packages the Linux kernel with system software, package management, configuration, and selected applications. Examples include Debian, Ubuntu, Fedora, and Arch Linux.",
+      "keywords": [
+        "distro",
+        "Linux",
+        "operating system"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a shell?",
+      "answer": "A shell provides an interface for running commands and often supports scripting, pipes, variables, and job control. Examples include Bash, Zsh, and PowerShell.",
+      "keywords": [
+        "shell",
+        "terminal",
+        "CLI"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What does chmod do?",
+      "answer": "On Unix-like systems, chmod changes file permission bits. Use it carefully because permissions that are too broad can expose or alter files unintentionally.",
+      "keywords": [
+        "chmod",
+        "Linux",
+        "permissions"
+      ],
+      "category": "Linux",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is SSH?",
+      "answer": "SSH is a protocol for securely accessing remote systems and running commands or transferring data over an encrypted connection. Verify host keys and protect private keys.",
+      "keywords": [
+        "SSH",
+        "remote access",
+        "security"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a package repository?",
+      "answer": "A package repository is a source of software packages and metadata used by a package manager. Prefer trusted repositories and verify package authenticity where supported.",
+      "keywords": [
+        "repository",
+        "packages",
+        "Linux"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a kernel?",
+      "answer": "The kernel is the core part of an operating system that manages resources such as CPU scheduling, memory, device access, and system calls.",
+      "keywords": [
+        "kernel",
+        "operating system",
+        "hardware"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a system call?",
+      "answer": "A system call is a controlled interface through which a program requests services from the operating-system kernel, such as reading files or creating processes.",
+      "keywords": [
+        "system call",
+        "kernel",
+        "OS"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a permission in an operating system?",
+      "answer": "A permission specifies what an identity or process may do with a resource, such as reading, modifying, executing, or administering it.",
+      "keywords": [
+        "permissions",
+        "access control",
+        "OS"
+      ],
+      "category": "Operating Systems",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a sandbox?",
+      "answer": "A sandbox is a restricted execution environment intended to limit what code can access or affect. Its protection depends on the implementation and the strength of its isolation boundaries.",
+      "keywords": [
+        "sandbox",
+        "security",
+        "isolation"
+      ],
+      "category": "Security Architecture",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I list files in Linux?",
+      "answer": "Use ls to list directory contents. Common options include ls -l for a detailed listing and ls -a to include hidden names. Exact options can vary between implementations.",
+      "keywords": [
+        "Linux",
+        "ls",
+        "terminal"
+      ],
+      "category": "Command Line",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I change directories in a terminal?",
+      "answer": "Use cd followed by a directory path, for example cd Documents. Use cd .. to move to the parent directory in common shells, and pwd to display the current directory on Unix-like systems.",
+      "keywords": [
+        "cd",
+        "terminal",
+        "paths"
+      ],
+      "category": "Command Line",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I create a directory in Linux?",
+      "answer": "Use mkdir directory_name to create a directory. The -p option commonly creates missing parent directories as needed.",
+      "keywords": [
+        "mkdir",
+        "Linux",
+        "directories"
+      ],
+      "category": "Command Line",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I find the current directory?",
+      "answer": "On Unix-like systems, run pwd. In Windows Command Prompt, use cd without a path; in PowerShell, use Get-Location.",
+      "keywords": [
+        "pwd",
+        "terminal",
+        "paths"
+      ],
+      "category": "Command Line",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is PowerShell?",
+      "answer": "PowerShell is a command-line shell and scripting language with structured objects and extensive system-administration capabilities, available on Windows and other platforms.",
+      "keywords": [
+        "PowerShell",
+        "Windows",
+        "shell"
+      ],
+      "category": "Command Line",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is the difference between Command Prompt and PowerShell?",
+      "answer": "Command Prompt is the traditional Windows command interpreter with text-oriented commands. PowerShell is a more capable shell and scripting environment that commonly passes structured objects through pipelines.",
+      "keywords": [
+        "CMD",
+        "PowerShell",
+        "Windows"
+      ],
+      "category": "Command Line",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is npm?",
+      "answer": "npm is a package manager and registry ecosystem commonly used with JavaScript and Node.js projects. Review dependencies and scripts before installing or running unfamiliar packages.",
+      "keywords": [
+        "npm",
+        "JavaScript",
+        "packages"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Node.js?",
+      "answer": "Node.js is a JavaScript runtime built around the V8 engine and used to run JavaScript outside a browser, including for servers, command-line tools, and automation.",
+      "keywords": [
+        "Node.js",
+        "JavaScript",
+        "runtime"
+      ],
+      "category": "JavaScript",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a package.json file?",
+      "answer": "In many JavaScript projects, package.json stores project metadata, scripts, dependencies, and package configuration used by npm and related tools.",
+      "keywords": [
+        "package.json",
+        "npm",
+        "JavaScript"
+      ],
+      "category": "JavaScript",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a lockfile?",
+      "answer": "A lockfile records resolved dependency versions and related metadata to improve repeatability of installations. Keep the appropriate lockfile under version control for many application projects.",
+      "keywords": [
+        "lockfile",
+        "dependencies",
+        "npm"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is digital privacy?",
+      "answer": "Digital privacy concerns how information about people is collected, used, stored, shared, and protected in digital systems. Minimize unnecessary collection and review app permissions and privacy settings.",
+      "keywords": [
+        "privacy",
+        "personal data",
+        "security"
+      ],
+      "category": "Digital Citizenship",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is personal data?",
+      "answer": "Personal data is information that relates to an identified or identifiable person, with exact legal definitions varying by jurisdiction. Examples may include names, contact details, identifiers, or location information.",
+      "keywords": [
+        "personal data",
+        "privacy",
+        "data protection"
+      ],
+      "category": "Digital Citizenship",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is data minimization?",
+      "answer": "Data minimization means collecting and retaining only the information needed for a defined legitimate purpose, reducing unnecessary exposure and storage risk.",
+      "keywords": [
+        "data minimization",
+        "privacy",
+        "security"
+      ],
+      "category": "Digital Citizenship",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is open-source software?",
+      "answer": "Open-source software is distributed under a license that grants rights to access, use, modify, and redistribute source code under stated conditions. Open source does not automatically mean free of cost or risk.",
+      "keywords": [
+        "open source",
+        "license",
+        "software"
+      ],
+      "category": "Software Licensing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a software license?",
+      "answer": "A software license defines the permissions and conditions under which software may be used, modified, distributed, or incorporated into other works.",
+      "keywords": [
+        "license",
+        "copyright",
+        "open source"
+      ],
+      "category": "Software Licensing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is copyright in software?",
+      "answer": "Copyright can protect original software code and other creative works. The exact rules and exceptions vary by jurisdiction, and using third-party code requires attention to its license and applicable law.",
+      "keywords": [
+        "copyright",
+        "software",
+        "licensing"
+      ],
+      "category": "Software Licensing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an accessibility feature?",
+      "answer": "An accessibility feature helps people use technology in ways that suit their needs, such as screen readers, captions, keyboard navigation, text scaling, and voice control.",
+      "keywords": [
+        "accessibility",
+        "assistive technology",
+        "UX"
+      ],
+      "category": "Accessibility",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is UX?",
+      "answer": "User experience (UX) concerns how people perceive and use a product, including its usefulness, usability, accessibility, and overall interaction.",
+      "keywords": [
+        "UX",
+        "usability",
+        "design"
+      ],
+      "category": "Design",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is UI?",
+      "answer": "User interface (UI) is the part of a system through which people interact, including controls, menus, text, visual layout, and feedback.",
+      "keywords": [
+        "UI",
+        "interface",
+        "design"
+      ],
+      "category": "Design",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is responsive design for mobile apps?",
+      "answer": "Responsive design adjusts layout and interaction to screen size, orientation, and input method. On mobile, it also requires readable text, accessible controls, and careful use of screen space.",
+      "keywords": [
+        "mobile",
+        "responsive",
+        "UI"
+      ],
+      "category": "Design",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I start learning programming?",
+      "answer": "Choose one beginner-friendly language and learn variables, conditions, loops, functions, collections, debugging, and basic problem-solving. Build small projects, read error messages, and practice regularly. Python is often approachable for general programming; JavaScript is useful if your goal is web development.",
+      "keywords": [
+        "beginner",
+        "learn coding",
+        "roadmap"
+      ],
+      "category": "Learning and Careers",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "Which programming language should a beginner learn?",
+      "answer": "Choose based on your goal. Python is a common choice for general learning and automation, JavaScript for web development, C or C++ for low-level concepts and performance, and Kotlin or Swift for certain mobile-development paths. Fundamentals transfer between languages.",
+      "keywords": [
+        "beginner",
+        "Python",
+        "JavaScript",
+        "learning"
+      ],
+      "category": "Learning and Careers",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "How do I learn HTML, CSS, and JavaScript?",
+      "answer": "Start with HTML structure, then CSS layout and responsive styling, then JavaScript variables, functions, DOM events, and asynchronous code. Build a small page, inspect errors, use browser developer tools, and progressively add features.",
+      "keywords": [
+        "web development",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "category": "Learning and Careers",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is the difference between frontend and backend?",
+      "answer": "Frontend is the part of an application users interact with, often running in a browser or app. Backend handles server-side logic, data access, authentication, and other services. Many applications use both.",
+      "keywords": [
+        "frontend",
+        "backend",
+        "full stack"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is full-stack development?",
+      "answer": "Full-stack development involves working across both client-facing interfaces and server-side systems, often including APIs, databases, testing, and deployment.",
+      "keywords": [
+        "full stack",
+        "frontend",
+        "backend"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an IDE?",
+      "answer": "An integrated development environment combines tools such as a code editor, debugger, build system, and project navigation in one application. Examples include Visual Studio, IntelliJ IDEA, and PyCharm.",
+      "keywords": [
+        "IDE",
+        "editor",
+        "programming tools"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a code editor?",
+      "answer": "A code editor is an application for writing and modifying source code. Modern editors may provide syntax highlighting, autocomplete, extensions, debugging, and version-control integration.",
+      "keywords": [
+        "code editor",
+        "IDE",
+        "programming"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is syntax highlighting?",
+      "answer": "Syntax highlighting colors or styles parts of source code according to their lexical or syntactic role, helping people visually distinguish keywords, strings, comments, and other elements.",
+      "keywords": [
+        "syntax highlighting",
+        "editor",
+        "code"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is autocomplete in a code editor?",
+      "answer": "Code completion suggests identifiers, expressions, or snippets while a developer types. Suggestions may be based on language analysis, project symbols, static rules, or AI models.",
+      "keywords": [
+        "autocomplete",
+        "IDE",
+        "programming"
+      ],
+      "category": "Programming Tools",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an HTTP status code?",
+      "answer": "An HTTP status code indicates the outcome of an HTTP request. Broad groups include 2xx success, 3xx redirection, 4xx client errors, and 5xx server errors.",
+      "keywords": [
+        "HTTP",
+        "status code",
+        "web"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What does HTTP 404 mean?",
+      "answer": "HTTP 404 Not Found indicates that the server did not find a current representation for the requested resource, or is not willing to disclose that one exists.",
+      "keywords": [
+        "404",
+        "HTTP",
+        "web troubleshooting"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What does HTTP 500 mean?",
+      "answer": "HTTP 500 Internal Server Error is a generic response indicating that the server encountered an unexpected condition. Server logs are often needed to identify the cause.",
+      "keywords": [
+        "500",
+        "HTTP",
+        "server"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What does HTTP 403 mean?",
+      "answer": "HTTP 403 Forbidden means the server understood the request but refuses to fulfill it. The reason may involve permissions, policy, or configuration.",
+      "keywords": [
+        "403",
+        "HTTP",
+        "permissions"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What does HTTP 401 mean?",
+      "answer": "HTTP 401 Unauthorized indicates that valid authentication credentials are missing or not accepted for the requested resource; the name can be confusing because it relates to authentication.",
+      "keywords": [
+        "401",
+        "HTTP",
+        "authentication"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is caching?",
+      "answer": "Caching stores copies of data or results so future requests can be served faster or with less work. Cached data may become stale, so expiration and invalidation rules matter.",
+      "keywords": [
+        "cache",
+        "performance",
+        "web"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a CDN cache?",
+      "answer": "A CDN cache stores copies of eligible content at edge locations closer to users. Cache-control headers and invalidation strategies determine how fresh cached content remains.",
+      "keywords": [
+        "CDN",
+        "cache",
+        "web performance"
+      ],
+      "category": "Networking",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a load balancer?",
+      "answer": "A load balancer distributes requests or traffic across multiple servers or service instances to improve availability, scalability, or performance.",
+      "keywords": [
+        "load balancer",
+        "servers",
+        "scaling"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is horizontal scaling?",
+      "answer": "Horizontal scaling increases capacity by adding more machines or service instances. It often requires load balancing and attention to shared state and coordination.",
+      "keywords": [
+        "scaling",
+        "distributed systems",
+        "cloud"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is vertical scaling?",
+      "answer": "Vertical scaling increases the resources of one machine, such as CPU or RAM. It can be simpler than horizontal scaling but is limited by available hardware and architecture.",
+      "keywords": [
+        "scaling",
+        "CPU",
+        "RAM"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is high availability?",
+      "answer": "High availability is the design goal of keeping a system operational despite certain failures, often through redundancy, health checks, failover, and careful maintenance.",
+      "keywords": [
+        "availability",
+        "reliability",
+        "infrastructure"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is disaster recovery?",
+      "answer": "Disaster recovery is the planning and process for restoring systems and data after a major disruption. Plans should define recovery objectives and be tested regularly.",
+      "keywords": [
+        "disaster recovery",
+        "backup",
+        "business continuity"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an SLA?",
+      "answer": "A service-level agreement defines measurable service commitments between a provider and customer, such as availability targets, support response, and remedies.",
+      "keywords": [
+        "SLA",
+        "service level",
+        "cloud"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a REST endpoint?",
+      "answer": "A REST-style endpoint is a network address through which an API exposes a resource or operation, often using an HTTP method and path. The exact design depends on the API.",
+      "keywords": [
+        "endpoint",
+        "REST",
+        "API"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a webhook?",
+      "answer": "A webhook is an HTTP callback in which one system sends an event notification to another system's configured URL. Receivers should verify authenticity and handle retries and duplicate deliveries.",
+      "keywords": [
+        "webhook",
+        "API",
+        "events"
+      ],
+      "category": "Web Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a message queue?",
+      "answer": "A message queue stores messages so producers and consumers can communicate asynchronously. Queues can help absorb bursts and decouple services, but delivery and ordering guarantees vary.",
+      "keywords": [
+        "queue",
+        "messaging",
+        "distributed systems"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an event-driven architecture?",
+      "answer": "An event-driven architecture structures software around the production, detection, and handling of events. It can improve decoupling but introduces concerns such as retries, ordering, and eventual consistency.",
+      "keywords": [
+        "events",
+        "architecture",
+        "distributed systems"
+      ],
+      "category": "Software Architecture",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is eventual consistency?",
+      "answer": "Eventual consistency means replicas may temporarily disagree but are expected to converge if no new updates occur and communication and processing eventually succeed.",
+      "keywords": [
+        "distributed systems",
+        "consistency",
+        "databases"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a distributed system?",
+      "answer": "A distributed system consists of multiple independent computers or processes that communicate over a network to coordinate work or provide a service.",
+      "keywords": [
+        "distributed systems",
+        "network",
+        "architecture"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a deadlock?",
+      "answer": "A deadlock occurs when processes or threads wait indefinitely for resources held by one another. Prevention, avoidance, detection, or recovery strategies depend on the system.",
+      "keywords": [
+        "deadlock",
+        "concurrency",
+        "operating systems"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a mutex?",
+      "answer": "A mutex is a synchronization primitive that allows only one thread or process at a time to hold a particular lock, protecting shared state when used correctly.",
+      "keywords": [
+        "mutex",
+        "threads",
+        "synchronization"
+      ],
+      "category": "Computer Science",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is an API key?",
+      "answer": "An API key is a credential used to identify or authorize a client for an API. Treat it as sensitive, limit its permissions, rotate it when exposed, and never embed privileged secrets in public client-side code.",
+      "keywords": [
+        "API key",
+        "credentials",
+        "security"
+      ],
+      "category": "Cybersecurity",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a secret in DevOps?",
+      "answer": "A secret is sensitive configuration such as a password, private key, or access token. Store secrets in an appropriate secret-management system, restrict access, rotate them, and avoid committing them to source control.",
+      "keywords": [
+        "secrets",
+        "DevOps",
+        "security"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is infrastructure as code?",
+      "answer": "Infrastructure as code defines and manages infrastructure through version-controlled configuration files or programs, enabling repeatable provisioning and reviewable changes.",
+      "keywords": [
+        "IaC",
+        "infrastructure",
+        "DevOps"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is Terraform?",
+      "answer": "Terraform is an infrastructure-as-code tool that describes desired infrastructure and plans changes before applying them through supported providers.",
+      "keywords": [
+        "Terraform",
+        "IaC",
+        "cloud"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a container image?",
+      "answer": "A container image is a packaged filesystem and metadata used to create container instances. Images are commonly built in layers and should be sourced and updated carefully.",
+      "keywords": [
+        "container image",
+        "Docker",
+        "containers"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a Dockerfile?",
+      "answer": "A Dockerfile contains instructions used by Docker-compatible build tools to build a container image, such as selecting a base image, copying files, and defining startup behavior.",
+      "keywords": [
+        "Dockerfile",
+        "Docker",
+        "containers"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a Git branch?",
+      "answer": "A Git branch is a movable reference to a commit, commonly used to develop a feature or fix separately before integrating changes.",
+      "keywords": [
+        "Git",
+        "branch",
+        "version control"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a merge conflict?",
+      "answer": "A merge conflict occurs when version-control tools cannot automatically reconcile competing changes. A developer must inspect the affected files, choose the intended combined result, and test it.",
+      "keywords": [
+        "Git",
+        "merge conflict",
+        "version control"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a pull request?",
+      "answer": "A pull request is a platform workflow for proposing, discussing, reviewing, and integrating changes from one branch or fork into another.",
+      "keywords": [
+        "pull request",
+        "code review",
+        "Git"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is continuous integration?",
+      "answer": "Continuous integration is the practice of frequently integrating changes into a shared codebase and running automated checks to detect problems early.",
+      "keywords": [
+        "CI",
+        "testing",
+        "DevOps"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is continuous deployment?",
+      "answer": "Continuous deployment automatically releases changes that pass the required pipeline checks to production. It requires suitable testing, monitoring, and rollback or recovery practices.",
+      "keywords": [
+        "CD",
+        "deployment",
+        "DevOps"
+      ],
+      "category": "Cloud and DevOps",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a release candidate?",
+      "answer": "A release candidate is a version believed to be close to final and made available for additional testing before a general release.",
+      "keywords": [
+        "release",
+        "software testing",
+        "versioning"
+      ],
+      "category": "Software Development",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a bug report?",
+      "answer": "A useful bug report includes a concise summary, environment, steps to reproduce, expected behavior, actual behavior, and relevant logs or screenshots with sensitive information removed.",
+      "keywords": [
+        "bug report",
+        "testing",
+        "debugging"
+      ],
+      "category": "Software Testing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a reproduction case?",
+      "answer": "A reproduction case is a minimal sequence of steps or small example that reliably demonstrates a bug, making investigation and verification easier.",
+      "keywords": [
+        "reproduce bug",
+        "debugging",
+        "testing"
+      ],
+      "category": "Software Testing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    },
+    {
+      "question": "What is a minimum reproducible example?",
+      "answer": "A minimum reproducible example is the smallest self-contained code and input that still demonstrates a problem, excluding unrelated components and private information.",
+      "keywords": [
+        "MRE",
+        "debugging",
+        "code"
+      ],
+      "category": "Software Testing",
+      "language": "en",
+      "aliases": [],
+      "related": []
+    }
+  ]
+}

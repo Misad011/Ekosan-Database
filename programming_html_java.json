@@ -1,0 +1,616 @@
+[
+  {
+    "question": "Make a Kanban board with drag and drop in plain HTML",
+    "answer": "A single file with no dependencies. Columns and cards are saved to `localStorage` and survive reloads.\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Kanban</title>\n<style>\n  body { font-family: system-ui, sans-serif; background: #f4f5f7; margin: 0; padding: 1.5rem; }\n  .board { display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: 1rem; }\n  .col { background: #ebecf0; border-radius: 8px; padding: .75rem; min-height: 300px; }\n  .col.over { outline: 2px dashed #4c9aff; }\n  .col h2 { font-size: 1rem; margin: 0 0 .5rem; }\n  .card { background: #fff; padding: .6rem .8rem; border-radius: 6px; margin-bottom: .5rem;\n          box-shadow: 0 1px 2px rgb(0 0 0 / .15); cursor: grab; }\n  .card.dragging { opacity: .4; }\n  .add { width: 100%; padding: .4rem; margin-top: .3rem; }\n</style>\n</head>\n<body>\n<div class=\"board\" id=\"board\"></div>\n\n<script>\nconst KEY = \"kanban-v1\";\nconst state = JSON.parse(localStorage.getItem(KEY)) ?? {\n  todo: [\"Design logo\"], doing: [\"Write docs\"], done: [\"Set up repo\"]\n};\nconst titles = { todo: \"To do\", doing: \"In progress\", done: \"Done\" };\nlet dragged = null;   // { card, from }\n\nfunction save() { localStorage.setItem(KEY, JSON.stringify(state)); }\n\nfunction render() {\n  const board = document.getElementById(\"board\");\n  board.replaceChildren(...Object.keys(state).map(col => {\n    const el = document.createElement(\"section\");\n    el.className = \"col\";\n    el.dataset.col = col;\n    const h = document.createElement(\"h2\");\n    h.textContent = `${titles[col]} (${state[col].length})`;\n    el.append(h, ...state[col].map((text, i) => cardEl(col, text, i)));\n    const add = document.createElement(\"button\");\n    add.className = \"add\";\n    add.textContent = \"+ Add card\";\n    add.onclick = () => {\n      const text = prompt(\"Card text\");\n      if (text?.trim()) { state[col].push(text.trim()); save(); render(); }\n    };\n    el.append(add);\n    el.addEventListener(\"dragover\", e => { e.preventDefault(); el.classList.add(\"over\"); });\n    el.addEventListener(\"dragleave\", () => el.classList.remove(\"over\"));\n    el.addEventListener(\"drop\", e => {\n      e.preventDefault();\n      el.classList.remove(\"over\");\n      if (!dragged) return;\n      state[dragged.from].splice(dragged.index, 1);\n      state[col].push(dragged.text);\n      dragged = null;\n      save(); render();\n    });\n    return el;\n  }));\n}\n\nfunction cardEl(col, text, index) {\n  const c = document.createElement(\"div\");\n  c.className = \"card\";\n  c.draggable = true;\n  c.textContent = text;\n  c.addEventListener(\"dragstart\", () => {\n    dragged = { from: col, index, text };\n    c.classList.add(\"dragging\");\n  });\n  c.addEventListener(\"dragend\", () => c.classList.remove(\"dragging\"));\n  return c;\n}\n\nrender();\n</script>\n</body>\n</html>\n```\n\nThe native HTML5 drag-and-drop API needs no library. `textContent` is used instead of `innerHTML`, so card text can't inject markup.",
+    "keywords": [
+      "html",
+      "javascript",
+      "kanban",
+      "drag and drop",
+      "localstorage",
+      "dragover",
+      "drop event"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "kanban board html",
+      "drag and drop todo html",
+      "trello clone plain javascript",
+      "html5 drag and drop columns"
+    ]
+  },
+  {
+    "question": "Make a Markdown editor with live preview that is safe against XSS",
+    "answer": "Writes Markdown on the left and renders it on the right. The renderer escapes HTML first, so pasted `<script>` tags are shown as text.\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Markdown Editor</title>\n<style>\n  body { margin: 0; font-family: system-ui; height: 100vh; display: flex; flex-direction: column; }\n  .panes { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }\n  textarea { border: 0; padding: 1rem; font: 14px/1.5 ui-monospace, monospace; resize: none; border-right: 1px solid #ddd; }\n  #preview { padding: 1rem; overflow: auto; }\n  pre { background: #f6f8fa; padding: .75rem; overflow-x: auto; }\n  code { background: #f6f8fa; padding: 0 .2rem; }\n</style>\n</head>\n<body>\n<div class=\"panes\">\n  <textarea id=\"src\" spellcheck=\"false\">\n# Hello\n\nSome **bold** text, a [link](https://example.com), and `inline code`.\n\n- item one\n- item two\n\n```js\nconsole.log(\"hi\");\n```\n  </textarea>\n  <div id=\"preview\"></div>\n</div>\n\n<script>\nconst escape = s => s.replace(/[&<>\"']/g, c =>\n  ({ \"&\": \"&amp;\", \"<\": \"&lt;\", \">\": \"&gt;\", '\"': \"&quot;\", \"'\": \"&#39;\" }[c]));\n\n// Inline rules run after escaping, so user input can never create tags except ours.\nfunction inline(s) {\n  return s\n    .replace(/`([^`]+)`/g, \"<code>$1</code>\")\n    .replace(/\\*\\*(.+?)\\*\\*/g, \"<strong>$1</strong>\")\n    .replace(/\\*(.+?)\\*/g, \"<em>$1</em>\")\n    .replace(/\\[([^\\]]+)\\]\\((https?:\\/\\/[^\\s)]+)\\)/g,\n             '<a href=\"$2\" rel=\"noopener noreferrer\">$1</a>');\n}\n\nfunction render(md) {\n  const out = [];\n  let inCode = false, inList = false;\n  for (const raw of md.split(\"\\n\")) {\n    if (raw.startsWith(\"```\")) {\n      out.push(inCode ? \"</code></pre>\" : \"<pre><code>\");\n      inCode = !inCode;\n      continue;\n    }\n    if (inCode) { out.push(escape(raw) + \"\\n\"); continue; }\n    const line = escape(raw);\n    const h = line.match(/^(#{1,6})\\s+(.*)/);\n    const li = line.match(/^[-*]\\s+(.*)/);\n    if (li && !inList) { out.push(\"<ul>\"); inList = true; }\n    if (!li && inList) { out.push(\"</ul>\"); inList = false; }\n    if (h) out.push(`<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`);\n    else if (li) out.push(`<li>${inline(li[1])}</li>`);\n    else if (line.trim()) out.push(`<p>${inline(line)}</p>`);\n  }\n  if (inList) out.push(\"</ul>\");\n  return out.join(\"\\n\");\n}\n\nconst src = document.getElementById(\"src\");\nconst preview = document.getElementById(\"preview\");\nsrc.addEventListener(\"input\", () => preview.innerHTML = render(src.value));\npreview.innerHTML = render(src.value);\n</script>\n</body>\n</html>\n```\n\nThe security rule is that escaping comes first and Markdown rules are applied afterward. Reversing the order is a common XSS bug. For production, use a maintained parser such as `marked` together with `DOMPurify`.",
+    "keywords": [
+      "html",
+      "javascript",
+      "markdown",
+      "live preview",
+      "xss",
+      "escaping",
+      "text editor",
+      "regex"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "markdown editor html",
+      "live markdown preview javascript",
+      "build markdown renderer",
+      "safe markdown to html"
+    ]
+  },
+  {
+    "question": "Build an accessible tabs component with keyboard navigation and ARIA roles",
+    "answer": "Follows the WAI-ARIA Tabs pattern: arrow keys move between tabs, Home and End jump to the ends, and only the active tab is in the tab order.\n\n```html\n<div class=\"tabs\">\n  <div role=\"tablist\" aria-label=\"Account settings\">\n    <button role=\"tab\" id=\"t-profile\" aria-controls=\"p-profile\" aria-selected=\"true\" tabindex=\"0\">Profile</button>\n    <button role=\"tab\" id=\"t-billing\" aria-controls=\"p-billing\" aria-selected=\"false\" tabindex=\"-1\">Billing</button>\n    <button role=\"tab\" id=\"t-security\" aria-controls=\"p-security\" aria-selected=\"false\" tabindex=\"-1\">Security</button>\n  </div>\n  <section role=\"tabpanel\" id=\"p-profile\" aria-labelledby=\"t-profile\">Profile content</section>\n  <section role=\"tabpanel\" id=\"p-billing\" aria-labelledby=\"t-billing\" hidden>Billing content</section>\n  <section role=\"tabpanel\" id=\"p-security\" aria-labelledby=\"t-security\" hidden>Security content</section>\n</div>\n\n<style>\n  [role=\"tab\"] { padding: .5rem 1rem; border: 0; background: none; cursor: pointer; border-bottom: 2px solid transparent; }\n  [role=\"tab\"][aria-selected=\"true\"] { border-bottom-color: #2563eb; font-weight: 600; }\n  [role=\"tab\"]:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }\n  [role=\"tabpanel\"] { padding: 1rem; }\n</style>\n\n<script>\nconst tablist = document.querySelector('[role=\"tablist\"]');\nconst tabs = [...tablist.querySelectorAll('[role=\"tab\"]')];\n\nfunction select(tab, focus = true) {\n  for (const t of tabs) {\n    const on = t === tab;\n    t.setAttribute(\"aria-selected\", on);\n    t.tabIndex = on ? 0 : -1;\n    document.getElementById(t.getAttribute(\"aria-controls\")).hidden = !on;\n  }\n  if (focus) tab.focus();\n}\n\ntablist.addEventListener(\"click\", e => {\n  const tab = e.target.closest('[role=\"tab\"]');\n  if (tab) select(tab, false);\n});\n\ntablist.addEventListener(\"keydown\", e => {\n  const i = tabs.indexOf(document.activeElement);\n  if (i < 0) return;\n  const map = {\n    ArrowRight: (i + 1) % tabs.length,\n    ArrowLeft: (i - 1 + tabs.length) % tabs.length,\n    Home: 0,\n    End: tabs.length - 1,\n  };\n  if (e.key in map) { e.preventDefault(); select(tabs[map[e.key]]); }\n});\n</script>\n```\n\nOnly the active tab gets `tabindex=\"0\"`, which keeps the tab order short. Screen readers announce the selected state through `aria-selected`.",
+    "keywords": [
+      "html",
+      "javascript",
+      "accessibility",
+      "aria",
+      "tabs",
+      "keyboard navigation",
+      "wai-aria",
+      "a11y"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "accessible tabs html",
+      "aria tabs keyboard arrow keys",
+      "tab component javascript accessible",
+      "wai aria tabs pattern"
+    ]
+  },
+  {
+    "question": "Create a command palette (Ctrl+K) with fuzzy search in HTML",
+    "answer": "Press Ctrl+K (or Cmd+K) to open a searchable list of actions. Matching is fuzzy: the query letters must appear in order, not next to each other.\n\n```html\n<style>\n  #palette { position: fixed; inset: 0; background: rgb(0 0 0 / .4); display: none; align-items: flex-start; justify-content: center; padding-top: 15vh; }\n  #palette.open { display: flex; }\n  .box { background: #fff; width: min(560px, 90vw); border-radius: 10px; overflow: hidden; font-family: system-ui; }\n  #q { width: 100%; box-sizing: border-box; padding: 1rem; font-size: 1rem; border: 0; border-bottom: 1px solid #ddd; outline: none; }\n  #list { list-style: none; margin: 0; padding: 0; max-height: 50vh; overflow: auto; }\n  #list li { padding: .6rem 1rem; cursor: pointer; }\n  #list li.active { background: #2563eb; color: #fff; }\n</style>\n\n<div id=\"palette\"><div class=\"box\">\n  <input id=\"q\" placeholder=\"Type a command…\" autocomplete=\"off\">\n  <ul id=\"list\"></ul>\n</div></div>\n\n<script>\nconst commands = [\n  { name: \"New document\",     run: () => alert(\"new doc\") },\n  { name: \"Open settings\",    run: () => alert(\"settings\") },\n  { name: \"Toggle dark mode\", run: () => document.body.classList.toggle(\"dark\") },\n  { name: \"Export as PDF\",    run: () => alert(\"export\") },\n  { name: \"Sign out\",         run: () => alert(\"bye\") },\n];\n\n// Every query character must appear in order. Earlier and consecutive matches score higher.\nfunction fuzzyScore(query, text) {\n  let score = 0, ti = 0, last = -2;\n  const t = text.toLowerCase();\n  for (const ch of query.toLowerCase()) {\n    const found = t.indexOf(ch, ti);\n    if (found === -1) return -1;\n    score += found === last + 1 ? 3 : 1;\n    score -= found * 0.01;\n    last = found; ti = found + 1;\n  }\n  return score;\n}\n\nconst palette = document.getElementById(\"palette\");\nconst input = document.getElementById(\"q\");\nconst list = document.getElementById(\"list\");\nlet shown = [], active = 0;\n\nfunction refresh() {\n  shown = commands\n    .map(c => ({ c, s: fuzzyScore(input.value, c.name) }))\n    .filter(x => x.s >= 0)\n    .sort((a, b) => b.s - a.s)\n    .map(x => x.c);\n  active = 0;\n  list.replaceChildren(...shown.map((c, i) => {\n    const li = document.createElement(\"li\");\n    li.textContent = c.name;\n    if (i === active) li.classList.add(\"active\");\n    li.onmousedown = e => { e.preventDefault(); run(c); };\n    return li;\n  }));\n}\n\nfunction run(cmd) { close(); cmd.run(); }\nfunction open() { palette.classList.add(\"open\"); input.value = \"\"; input.focus(); refresh(); }\nfunction close() { palette.classList.remove(\"open\"); }\n\ndocument.addEventListener(\"keydown\", e => {\n  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === \"k\") {\n    e.preventDefault();\n    palette.classList.contains(\"open\") ? close() : open();\n  }\n});\ninput.addEventListener(\"input\", refresh);\ninput.addEventListener(\"keydown\", e => {\n  if (e.key === \"Escape\") close();\n  if (e.key === \"ArrowDown\") { active = Math.min(active + 1, shown.length - 1); highlight(); e.preventDefault(); }\n  if (e.key === \"ArrowUp\")   { active = Math.max(active - 1, 0); highlight(); e.preventDefault(); }\n  if (e.key === \"Enter\" && shown[active]) run(shown[active]);\n});\nfunction highlight() {\n  [...list.children].forEach((li, i) => li.classList.toggle(\"active\", i === active));\n}\npalette.addEventListener(\"mousedown\", e => { if (e.target === palette) close(); });\n</script>\n```\n\nThe scoring rewards consecutive matches, so \"nd\" ranks \"New document\" above \"Export as PDF\". The same pattern works for file pickers and search boxes.",
+    "keywords": [
+      "html",
+      "javascript",
+      "command palette",
+      "fuzzy search",
+      "keyboard shortcut",
+      "ctrl+k",
+      "ui pattern"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "command palette html",
+      "ctrl k search box javascript",
+      "fuzzy finder in browser",
+      "vscode style command palette"
+    ]
+  },
+  {
+    "question": "Compress an image in the browser before uploading it",
+    "answer": "Uses `<canvas>` to resize and re-encode a picked image as JPEG or WebP. No server work is needed to shrink the file.\n\n```html\n<input type=\"file\" id=\"pick\" accept=\"image/*\">\n<p id=\"info\"></p>\n<img id=\"preview\" alt=\"\" style=\"max-width:300px\">\n\n<script>\nasync function compress(file, { maxSide = 1600, quality = 0.8, type = \"image/webp\" } = {}) {\n  const bitmap = await createImageBitmap(file);          // decodes off the main thread\n  const scale = Math.min(1, maxSide / Math.max(bitmap.width, bitmap.height));\n  const w = Math.round(bitmap.width * scale);\n  const h = Math.round(bitmap.height * scale);\n\n  const canvas = new OffscreenCanvas(w, h);\n  const ctx = canvas.getContext(\"2d\");\n  ctx.drawImage(bitmap, 0, 0, w, h);\n  bitmap.close();                                        // free decoded pixels\n\n  const blob = await canvas.convertToBlob({ type, quality });\n  return { blob, width: w, height: h };\n}\n\ndocument.getElementById(\"pick\").addEventListener(\"change\", async e => {\n  const file = e.target.files[0];\n  if (!file) return;\n  const { blob, width, height } = await compress(file);\n  document.getElementById(\"preview\").src = URL.createObjectURL(blob);\n  document.getElementById(\"info\").textContent =\n    `${(file.size / 1024).toFixed(0)} KB → ${(blob.size / 1024).toFixed(0)} KB (${width}×${height})`;\n  // upload with fetch(url, { method: \"POST\", body: formData }) where formData.append(\"image\", blob, \"photo.webp\")\n});\n</script>\n```\n\n`createImageBitmap` decodes without blocking the page. `OffscreenCanvas` can also run inside a Web Worker, so large batches don't freeze the UI. Some older Safari versions don't support WebP encoding, so check `blob.type` and fall back to `image/jpeg`.",
+    "keywords": [
+      "html",
+      "javascript",
+      "image compression",
+      "canvas",
+      "offscreencanvas",
+      "webp",
+      "file upload",
+      "createimagebitmap"
+    ],
+    "category": "snippet",
+    "language": "javascript",
+    "aliases": [
+      "compress image before upload javascript",
+      "resize image in browser",
+      "canvas image compression",
+      "reduce image size client side"
+    ]
+  },
+  {
+    "question": "Make a Pomodoro timer that keeps accurate time and plays a sound",
+    "answer": "Uses timestamps instead of counting `setInterval` ticks, so the timer stays correct when the tab is throttled in the background. The beep is generated with the Web Audio API, so no audio file is needed.\n\n```html\n<div style=\"font-family:system-ui;text-align:center;margin-top:3rem\">\n  <h1 id=\"clock\" style=\"font-size:4rem;font-variant-numeric:tabular-nums\">25:00</h1>\n  <button id=\"toggle\">Start</button>\n  <button id=\"reset\">Reset</button>\n</div>\n\n<script>\nconst WORK = 25 * 60 * 1000;\nlet remaining = WORK;      // ms left when paused\nlet endsAt = null;         // timestamp when running\nlet timerId = null;\n\nconst clock = document.getElementById(\"clock\");\nconst toggle = document.getElementById(\"toggle\");\n\nfunction format(ms) {\n  const s = Math.ceil(ms / 1000);\n  return `${String(Math.floor(s / 60)).padStart(2, \"0\")}:${String(s % 60).padStart(2, \"0\")}`;\n}\n\nfunction beep() {\n  const ctx = new AudioContext();\n  const osc = ctx.createOscillator();\n  const gain = ctx.createGain();\n  osc.frequency.value = 880;\n  gain.gain.setValueAtTime(0.3, ctx.currentTime);\n  gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1);\n  osc.connect(gain).connect(ctx.destination);\n  osc.start();\n  osc.stop(ctx.currentTime + 1);\n}\n\nfunction tick() {\n  const left = endsAt - Date.now();\n  if (left <= 0) {\n    clearInterval(timerId); timerId = null; endsAt = null; remaining = WORK;\n    clock.textContent = \"00:00\";\n    toggle.textContent = \"Start\";\n    beep();\n    return;\n  }\n  clock.textContent = format(left);\n}\n\ntoggle.onclick = () => {\n  if (timerId) {                      // pause\n    remaining = endsAt - Date.now();\n    clearInterval(timerId); timerId = null; endsAt = null;\n    toggle.textContent = \"Start\";\n  } else {                            // start / resume\n    endsAt = Date.now() + remaining;\n    timerId = setInterval(tick, 250);\n    toggle.textContent = \"Pause\";\n    tick();\n  }\n};\n\ndocument.getElementById(\"reset\").onclick = () => {\n  clearInterval(timerId); timerId = null; endsAt = null;\n  remaining = WORK;\n  clock.textContent = format(WORK);\n  toggle.textContent = \"Start\";\n};\n</script>\n```\n\nThe browser may delay `setInterval` callbacks in background tabs, but `Date.now()` is still correct when the next tick runs. The `AudioContext` is created on a click so browsers allow sound. Create it lazily, and reuse one context in a larger app.",
+    "keywords": [
+      "html",
+      "javascript",
+      "pomodoro",
+      "timer",
+      "web audio api",
+      "setinterval",
+      "date.now",
+      "timestamps"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "pomodoro timer html",
+      "countdown timer javascript accurate",
+      "web audio beep javascript",
+      "focus timer web app"
+    ]
+  },
+  {
+    "question": "Build a virtualized list in HTML that renders 100,000 rows smoothly",
+    "answer": "Only the rows visible in the viewport (plus a small buffer) exist in the DOM. Scrolling reuses a fixed spacer to keep the scrollbar accurate.\n\n```html\n<div id=\"viewport\" style=\"height:400px;overflow:auto;border:1px solid #ccc;position:relative\">\n  <div id=\"spacer\" style=\"position:relative\"></div>\n</div>\n\n<script>\nconst ROW_H = 32;\nconst TOTAL = 100_000;\nconst BUFFER = 8;\n\nconst viewport = document.getElementById(\"viewport\");\nconst spacer = document.getElementById(\"spacer\");\nspacer.style.height = `${TOTAL * ROW_H}px`;\n\nconst pool = [];                              // reused row elements\nfor (let i = 0; i < Math.ceil(viewport.clientHeight / ROW_H) + BUFFER * 2; i++) {\n  const row = document.createElement(\"div\");\n  row.style.cssText = `position:absolute;left:0;right:0;height:${ROW_H}px;line-height:${ROW_H}px;padding:0 .5rem;box-sizing:border-box`;\n  spacer.append(row);\n  pool.push(row);\n}\n\nfunction render() {\n  const first = Math.max(0, Math.floor(viewport.scrollTop / ROW_H) - BUFFER);\n  pool.forEach((row, k) => {\n    const index = first + k;\n    if (index >= TOTAL) { row.style.display = \"none\"; return; }\n    row.style.display = \"\";\n    row.style.transform = `translateY(${index * ROW_H}px)`;\n    row.textContent = `Row ${index + 1}`;\n  });\n}\n\nviewport.addEventListener(\"scroll\", () => requestAnimationFrame(render), { passive: true });\nrender();\n</script>\n```\n\nThe DOM holds about 25 elements regardless of the dataset size. Transforms are used for positioning, so the browser doesn't re-run layout for each row. Variable-height rows need a measurement cache, and the `ROW_H` constant must change to a per-index lookup.",
+    "keywords": [
+      "html",
+      "javascript",
+      "virtual scrolling",
+      "virtualized list",
+      "performance",
+      "dom",
+      "large dataset"
+    ],
+    "category": "snippet",
+    "language": "javascript",
+    "aliases": [
+      "virtual list javascript",
+      "render large list efficiently",
+      "virtual scroll html",
+      "100000 rows browser performance"
+    ]
+  },
+  {
+    "question": "Create a drawing app with a canvas, undo and redo, and PNG export",
+    "answer": "```html\n<canvas id=\"c\" width=\"800\" height=\"500\" style=\"border:1px solid #888;touch-action:none\"></canvas>\n<div>\n  <button id=\"undo\">Undo</button>\n  <button id=\"redo\">Redo</button>\n  <button id=\"save\">Save PNG</button>\n  <input type=\"color\" id=\"color\" value=\"#222\">\n</div>\n\n<script>\nconst canvas = document.getElementById(\"c\");\nconst ctx = canvas.getContext(\"2d\");\nctx.lineCap = \"round\";\nctx.lineWidth = 4;\n\n// Each stroke is stored as a list of points, so undo can replay the whole canvas.\nconst strokes = [];\nconst undone = [];\nlet current = null;\n\nfunction redraw() {\n  ctx.clearRect(0, 0, canvas.width, canvas.height);\n  for (const s of strokes) {\n    ctx.strokeStyle = s.color;\n    ctx.beginPath();\n    s.points.forEach((p, i) => i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y));\n    ctx.stroke();\n  }\n}\n\nconst pos = e => {\n  const r = canvas.getBoundingClientRect();\n  return { x: (e.clientX - r.left) * canvas.width / r.width,\n           y: (e.clientY - r.top) * canvas.height / r.height };\n};\n\ncanvas.addEventListener(\"pointerdown\", e => {\n  canvas.setPointerCapture(e.pointerId);\n  current = { color: document.getElementById(\"color\").value, points: [pos(e)] };\n  strokes.push(current);\n  undone.length = 0;\n});\ncanvas.addEventListener(\"pointermove\", e => {\n  if (!current) return;\n  current.points.push(pos(e));\n  redraw();\n});\ncanvas.addEventListener(\"pointerup\", () => current = null);\n\ndocument.getElementById(\"undo\").onclick = () => {\n  if (strokes.length) { undone.push(strokes.pop()); redraw(); }\n};\ndocument.getElementById(\"redo\").onclick = () => {\n  if (undone.length) { strokes.push(undone.pop()); redraw(); }\n};\ndocument.getElementById(\"save\").onclick = () => {\n  const a = document.createElement(\"a\");\n  a.download = \"drawing.png\";\n  a.href = canvas.toDataURL(\"image/png\");\n  a.click();\n};\n</script>\n```\n\nPointer events handle mouse, touch, and pen with one code path. `setPointerCapture` keeps the stroke going if the cursor leaves the canvas. Storing vector points instead of pixels is what makes undo cheap.",
+    "keywords": [
+      "html",
+      "javascript",
+      "canvas",
+      "drawing app",
+      "undo redo",
+      "pointer events",
+      "todataurl",
+      "png export"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "html drawing app",
+      "canvas paint app javascript",
+      "undo redo canvas",
+      "signature pad html"
+    ]
+  },
+  {
+    "question": "Make a PWA with offline support using a service worker and manifest",
+    "answer": "Three files in the same folder, served over HTTPS or `localhost`.\n\n`index.html`:\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"manifest\" href=\"manifest.json\">\n<meta name=\"theme-color\" content=\"#2563eb\">\n<title>Notes PWA</title>\n</head>\n<body>\n<h1>Offline notes</h1>\n<p id=\"status\"></p>\n<script>\nconst status = document.getElementById(\"status\");\nconst update = () => status.textContent = navigator.onLine ? \"Online\" : \"Offline\";\naddEventListener(\"online\", update); addEventListener(\"offline\", update); update();\nif (\"serviceWorker\" in navigator) navigator.serviceWorker.register(\"sw.js\");\n</script>\n</body>\n</html>\n```\n\n`manifest.json`:\n```json\n{ \"name\": \"Notes\", \"short_name\": \"Notes\", \"start_url\": \"./index.html\",\n  \"display\": \"standalone\", \"background_color\": \"#ffffff\", \"theme_color\": \"#2563eb\" }\n```\n\n`sw.js`:\n```javascript\nconst CACHE = \"notes-v2\";\nconst ASSETS = [\"./\", \"./index.html\", \"./manifest.json\"];\n\nself.addEventListener(\"install\", e =>\n  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())));\n\nself.addEventListener(\"activate\", e =>\n  e.waitUntil(caches.keys().then(keys =>\n    Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))\n    .then(() => self.clients.claim())));\n\n// Network first for HTML so users get updates; cache first for everything else.\nself.addEventListener(\"fetch\", e => {\n  if (e.request.method !== \"GET\") return;\n  const isPage = e.request.mode === \"navigate\";\n  e.respondWith(isPage\n    ? fetch(e.request).then(r => { caches.open(CACHE).then(c => c.put(e.request, r.clone())); return r; })\n        .catch(() => caches.match(e.request))\n    : caches.match(e.request).then(hit => hit || fetch(e.request)));\n});\n```\n\nBump the `CACHE` name whenever you ship changes, because the old cache is removed during `activate`. Browsers only offer the install prompt after the manifest, icons, and service worker are all in place.",
+    "keywords": [
+      "html",
+      "javascript",
+      "pwa",
+      "service worker",
+      "manifest",
+      "offline",
+      "cache api",
+      "progressive web app"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "progressive web app example",
+      "offline html app service worker",
+      "make website installable",
+      "service worker caching strategy"
+    ]
+  },
+  {
+    "question": "Build a multi-step form wizard with per-step validation and the Constraint Validation API",
+    "answer": "```html\n<form id=\"wizard\" novalidate>\n  <fieldset data-step>\n    <legend>Account</legend>\n    <input name=\"email\" type=\"email\" required placeholder=\"Email\">\n    <input name=\"password\" type=\"password\" required minlength=\"8\" placeholder=\"Password (8+)\">\n  </fieldset>\n  <fieldset data-step hidden>\n    <legend>Profile</legend>\n    <input name=\"name\" required placeholder=\"Full name\">\n    <input name=\"age\" type=\"number\" min=\"13\" max=\"120\" required placeholder=\"Age\">\n  </fieldset>\n  <fieldset data-step hidden>\n    <legend>Review</legend>\n    <p id=\"summary\"></p>\n  </fieldset>\n  <button type=\"button\" id=\"back\">Back</button>\n  <button type=\"button\" id=\"next\">Next</button>\n  <button type=\"submit\" id=\"submit\" hidden>Create account</button>\n  <p id=\"err\" role=\"alert\"></p>\n</form>\n\n<script>\nconst form = document.getElementById(\"wizard\");\nconst steps = [...form.querySelectorAll(\"[data-step]\")];\nlet current = 0;\n\n// Use the browser's built-in messages but show them in one place\nfunction validateStep(i) {\n  for (const field of steps[i].querySelectorAll(\"input\")) {\n    if (!field.checkValidity()) {\n      document.getElementById(\"err\").textContent = `${field.placeholder}: ${field.validationMessage}`;\n      field.focus();\n      return false;\n    }\n  }\n  document.getElementById(\"err\").textContent = \"\";\n  return true;\n}\n\nfunction show(i) {\n  steps.forEach((s, k) => s.hidden = k !== i);\n  document.getElementById(\"back\").hidden = i === 0;\n  document.getElementById(\"next\").hidden = i === steps.length - 1;\n  document.getElementById(\"submit\").hidden = i !== steps.length - 1;\n  if (i === steps.length - 1) {\n    const d = Object.fromEntries(new FormData(form));\n    document.getElementById(\"summary\").textContent = `${d.name}, ${d.age}, ${d.email}`;\n  }\n}\n\ndocument.getElementById(\"next\").onclick = () => {\n  if (validateStep(current)) show(++current);\n};\ndocument.getElementById(\"back\").onclick = () => show(--current);\n\nform.addEventListener(\"submit\", e => {\n  e.preventDefault();\n  if (!validateStep(current)) return;\n  console.log(\"submit\", Object.fromEntries(new FormData(form)));\n});\n\nshow(0);\n</script>\n```\n\nValidation is driven by HTML attributes such as `required`, `minlength`, and `min`. `novalidate` turns off the browser's default popups so the wizard can show errors in one place. `FormData` reads every field, and the review step uses it to build the summary.",
+    "keywords": [
+      "html",
+      "javascript",
+      "form validation",
+      "constraint validation api",
+      "wizard",
+      "multi-step form",
+      "checkvalidity",
+      "formdata"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "multi step form html",
+      "form wizard javascript",
+      "html form validation custom messages",
+      "checkvalidity example"
+    ]
+  },
+  {
+    "question": "Make a responsive HTML email template that works in Outlook and Gmail",
+    "answer": "Email clients ignore most modern CSS, so this uses tables for layout, inline styles, and a single column that stacks on mobile.\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<style>\n  @media screen and (max-width: 600px) {\n    .container { width: 100% !important; }\n    .btn { display: block !important; width: 100% !important; }\n  }\n</style>\n</head>\n<body style=\"margin:0;padding:0;background:#f4f4f4;\">\n<table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background:#f4f4f4;\">\n  <tr><td align=\"center\" style=\"padding:24px 12px;\">\n    <table role=\"presentation\" class=\"container\" width=\"600\" cellpadding=\"0\" cellspacing=\"0\"\n           style=\"width:600px;max-width:600px;background:#ffffff;font-family:Arial,sans-serif;\">\n      <tr><td style=\"padding:24px;color:#111111;\">\n        <h1 style=\"margin:0 0 12px;font-size:22px;\">Welcome, {{first_name}}</h1>\n        <p style=\"margin:0 0 20px;font-size:15px;line-height:1.5;color:#333333;\">\n          Thanks for joining. Confirm your address to get started.\n        </p>\n        <!--[if mso]>\n        <v:roundrect href=\"{{confirm_url}}\" style=\"height:44px;width:220px;\" arcsize=\"10%\" fillcolor=\"#2563eb\" stroke=\"f\">\n          <center style=\"color:#ffffff;font-family:Arial;font-size:16px;\">Confirm email</center>\n        </v:roundrect>\n        <![endif]-->\n        <!--[if !mso]><!-->\n        <a class=\"btn\" href=\"{{confirm_url}}\"\n           style=\"display:inline-block;background:#2563eb;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:6px;font-size:16px;\">\n          Confirm email\n        </a>\n        <!--<![endif]-->\n      </td></tr>\n    </table>\n  </td></tr>\n</table>\n</body>\n</html>\n```\n\n`role=\"presentation\"` tells screen readers the tables are layout only. The Outlook-specific VML button sits inside conditional comments, so Outlook renders the rounded button while other clients use the normal anchor. Always include a plain-text version and an unsubscribe link when you send to real users.",
+    "keywords": [
+      "html",
+      "email",
+      "email template",
+      "table layout",
+      "outlook",
+      "conditional comments",
+      "vml",
+      "responsive email"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "html email template",
+      "responsive email outlook compatible",
+      "mjml alternative html email",
+      "email newsletter html"
+    ]
+  },
+  {
+    "question": "Create a type-safe event bus in Java with generics",
+    "answer": "Subscribers register for a specific event class, so `publish` delivers only matching events and the compiler checks the types.\n\n```java\nimport java.util.*;\nimport java.util.concurrent.ConcurrentHashMap;\nimport java.util.concurrent.CopyOnWriteArrayList;\nimport java.util.function.Consumer;\n\npublic final class EventBus {\n    private final Map<Class<?>, List<Consumer<?>>> handlers = new ConcurrentHashMap<>();\n\n    public <E> Runnable subscribe(Class<E> type, Consumer<? super E> handler) {\n        var list = handlers.computeIfAbsent(type, k -> new CopyOnWriteArrayList<>());\n        list.add(handler);\n        return () -> list.remove(handler);           // returns an unsubscribe action\n    }\n\n    @SuppressWarnings(\"unchecked\")\n    public <E> void publish(E event) {\n        // Walk the class hierarchy so subscribers to a supertype also receive subclasses.\n        for (Class<?> c = event.getClass(); c != null; c = c.getSuperclass()) {\n            for (Consumer<?> h : handlers.getOrDefault(c, List.of()))\n                ((Consumer<E>) h).accept(event);\n        }\n    }\n\n    // ---- demo ----\n    record UserCreated(String name) {}\n    record OrderPlaced(int id) {}\n\n    public static void main(String[] args) {\n        var bus = new EventBus();\n        Runnable unsub = bus.subscribe(UserCreated.class, e -> System.out.println(\"welcome \" + e.name()));\n        bus.subscribe(OrderPlaced.class, e -> System.out.println(\"order \" + e.id()));\n\n        bus.publish(new UserCreated(\"Ana\"));\n        bus.publish(new OrderPlaced(7));\n        unsub.run();\n        bus.publish(new UserCreated(\"Omar\"));       // no output: unsubscribed\n    }\n}\n```\n\nNote that `ConcurrentHashMap` is missing from the imports above. Add `import java.util.concurrent.ConcurrentHashMap;`. `CopyOnWriteArrayList` makes iteration safe while handlers subscribe or unsubscribe during a publish. It's a good fit when reads far outnumber writes.",
+    "keywords": [
+      "java",
+      "event bus",
+      "generics",
+      "publish subscribe",
+      "observer pattern",
+      "consumer",
+      "copyonwritearraylist",
+      "design pattern"
+    ],
+    "category": "app-request",
+    "language": "java",
+    "aliases": [
+      "java event bus example",
+      "pub sub java generics",
+      "type safe observer java",
+      "java event dispatcher"
+    ]
+  },
+  {
+    "question": "Write a fluent builder with validation for an immutable Java object",
+    "answer": "Records give you immutability for free. The builder collects values, validates them once in one place, and produces the record.\n\n```java\nimport java.util.Objects;\n\npublic record HttpRequest(String method, String url, int timeoutMs, String body) {\n\n    // Compact constructor: runs on every construction path (builder or direct call)\n    public HttpRequest {\n        Objects.requireNonNull(method, \"method\");\n        Objects.requireNonNull(url, \"url\");\n        if (!url.startsWith(\"https://\")) throw new IllegalArgumentException(\"https only: \" + url);\n        if (timeoutMs <= 0 || timeoutMs > 60_000) throw new IllegalArgumentException(\"timeout out of range\");\n        method = method.toUpperCase();\n    }\n\n    public static Builder builder(String url) { return new Builder(url); }\n\n    public static final class Builder {\n        private final String url;\n        private String method = \"GET\";\n        private int timeoutMs = 5_000;\n        private String body;\n\n        private Builder(String url) { this.url = url; }\n\n        public Builder method(String m)    { this.method = m; return this; }\n        public Builder timeout(int ms)     { this.timeoutMs = ms; return this; }\n        public Builder body(String b)      { this.body = b; return this; }\n\n        public HttpRequest build() { return new HttpRequest(method, url, timeoutMs, body); }\n    }\n\n    public static void main(String[] args) {\n        var req = HttpRequest.builder(\"https://api.example.com/items\")\n                             .method(\"post\")\n                             .timeout(2_000)\n                             .body(\"{\\\"a\\\":1}\")\n                             .build();\n        System.out.println(req);\n    }\n}\n```\n\nThe compact constructor is the single place where invariants are checked, so no path can create an invalid object. Because the record is immutable, you can share it across threads without locks.",
+    "keywords": [
+      "java",
+      "builder pattern",
+      "records",
+      "compact constructor",
+      "immutable",
+      "validation",
+      "fluent api",
+      "design pattern"
+    ],
+    "category": "snippet",
+    "language": "java",
+    "aliases": [
+      "java builder pattern example",
+      "fluent builder java record",
+      "immutable object validation java",
+      "java compact constructor"
+    ]
+  },
+  {
+    "question": "Build a JSON-like annotation validator with reflection and custom annotations in Java",
+    "answer": "Define constraints with annotations, then check any object with reflection. This is the same mechanism behind Bean Validation (`@NotNull`, `@Size`).\n\n```java\nimport java.lang.annotation.*;\nimport java.lang.reflect.Field;\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class Validation {\n\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    public @interface NotBlank {\n        String message() default \"must not be blank\";\n    }\n\n    @Retention(RetentionPolicy.RUNTIME)\n    @Target(ElementType.FIELD)\n    public @interface Range {\n        int min();\n        int max();\n    }\n\n    public static List<String> validate(Object obj) throws IllegalAccessException {\n        var errors = new ArrayList<String>();\n        for (Field f : obj.getClass().getDeclaredFields()) {\n            f.setAccessible(true);\n            Object value = f.get(obj);\n\n            if (f.isAnnotationPresent(NotBlank.class)) {\n                if (value == null || value.toString().isBlank())\n                    errors.add(f.getName() + \" \" + f.getAnnotation(NotBlank.class).message());\n            }\n            if (f.isAnnotationPresent(Range.class) && value instanceof Integer i) {\n                Range r = f.getAnnotation(Range.class);\n                if (i < r.min() || i > r.max())\n                    errors.add(f.getName() + \" must be between \" + r.min() + \" and \" + r.max());\n            }\n        }\n        return errors;\n    }\n\n    static class Signup {\n        @NotBlank String username = \"  \";\n        @Range(min = 13, max = 120) int age = 9;\n    }\n\n    public static void main(String[] args) throws Exception {\n        validate(new Signup()).forEach(System.out::println);\n        // username must not be blank\n        // age must be between 13 and 120\n    }\n}\n```\n\nUse `getAnnotation` only on fields where `isAnnotationPresent` is true. Remember that `RUNTIME` retention is required, or the annotation is invisible to reflection. Production code should cache the reflected field list per class, because reflection is slow in hot paths.",
+    "keywords": [
+      "java",
+      "annotations",
+      "reflection",
+      "validation",
+      "custom annotation",
+      "retention policy",
+      "bean validation",
+      "metaprogramming"
+    ],
+    "category": "concept",
+    "language": "java",
+    "aliases": [
+      "java custom annotation example",
+      "java reflection validation",
+      "how does bean validation work",
+      "java annotation processing basics"
+    ]
+  },
+  {
+    "question": "Use CompletableFuture to run tasks in parallel with timeout and fallback in Java",
+    "answer": "```java\nimport java.time.Duration;\nimport java.util.List;\nimport java.util.concurrent.*;\nimport java.util.stream.Collectors;\n\npublic class Aggregator {\n    static final ExecutorService POOL = Executors.newVirtualThreadPerTaskExecutor();\n\n    static String fetchPrice(String vendor) {\n        try { Thread.sleep(vendor.length() * 300L); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }\n        return vendor + \":42\";\n    }\n\n    static CompletableFuture<String> priceFrom(String vendor) {\n        return CompletableFuture\n            .supplyAsync(() -> fetchPrice(vendor), POOL)\n            .completeOnTimeout(vendor + \":unavailable\", 800, TimeUnit.MILLISECONDS)  // slow vendor -> placeholder\n            .exceptionally(ex -> vendor + \":error\");                               // failure -> placeholder\n    }\n\n    public static void main(String[] args) {\n        List<CompletableFuture<String>> futures = List.of(\"acme\", \"globex\", \"initech\")\n            .stream().map(Aggregator::priceFrom).toList();\n\n        String result = CompletableFuture.allOf(futures.toArray(CompletableFuture[]::new))\n            .thenApply(v -> futures.stream().map(CompletableFuture::join).collect(Collectors.joining(\", \")))\n            .orTimeout(3, TimeUnit.SECONDS)\n            .join();\n\n        System.out.println(result);\n        POOL.shutdown();\n    }\n}\n```\n\n`completeOnTimeout` supplies a value after a delay and keeps the pipeline moving. `exceptionally` converts failures to fallbacks. Use `orTimeout` on the combined future to cap the total wait. Avoid calling `join()` inside another async task that is waiting on the same pool, because that can deadlock.",
+    "keywords": [
+      "java",
+      "completablefuture",
+      "async",
+      "timeout",
+      "fallback",
+      "parallel",
+      "virtual threads",
+      "exceptionally"
+    ],
+    "category": "app-request",
+    "language": "java",
+    "aliases": [
+      "java completablefuture timeout",
+      "parallel http calls java fallback",
+      "java async aggregation",
+      "completablefuture allof example"
+    ]
+  },
+  {
+    "question": "Build a tiny HTTP JSON server in Java using only the standard library",
+    "answer": "No frameworks or dependencies. `com.sun.net.httpserver` ships with the JDK.\n\n```java\nimport com.sun.net.httpserver.HttpExchange;\nimport com.sun.net.httpserver.HttpServer;\n\nimport java.io.IOException;\nimport java.io.OutputStream;\nimport java.net.InetSocketAddress;\nimport java.nio.charset.StandardCharsets;\nimport java.util.Map;\nimport java.util.concurrent.ConcurrentHashMap;\nimport java.util.concurrent.Executors;\n\npublic class MiniServer {\n    static final Map<String, String> store = new ConcurrentHashMap<>();\n\n    public static void main(String[] args) throws IOException {\n        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);\n\n        server.createContext(\"/kv\", exchange -> {\n            try {\n                String key = exchange.getRequestURI().getQuery();   // /kv?key=name\n                switch (exchange.getRequestMethod()) {\n                    case \"GET\" -> {\n                        String v = store.get(key);\n                        if (v == null) send(exchange, 404, \"{\\\"error\\\":\\\"not found\\\"}\");\n                        else send(exchange, 200, \"{\\\"value\\\":\\\"\" + v + \"\\\"}\");\n                    }\n                    case \"PUT\" -> {\n                        String body = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);\n                        store.put(key, body.strip());\n                        send(exchange, 204, \"\");\n                    }\n                    case \"DELETE\" -> {\n                        store.remove(key);\n                        send(exchange, 204, \"\");\n                    }\n                    default -> send(exchange, 405, \"{\\\"error\\\":\\\"method not allowed\\\"}\");\n                }\n            } finally {\n                exchange.close();\n            }\n        });\n\n        server.setExecutor(Executors.newVirtualThreadPerTaskExecutor());\n        server.start();\n        System.out.println(\"Listening on http://localhost:8080/kv\");\n    }\n\n    static void send(HttpExchange ex, int status, String body) throws IOException {\n        byte[] bytes = body.getBytes(StandardCharsets.UTF_8);\n        ex.getResponseHeaders().add(\"Content-Type\", \"application/json\");\n        ex.sendResponseHeaders(status, bytes.length == 0 ? -1 : bytes.length);\n        if (bytes.length > 0) try (OutputStream os = ex.getResponseBody()) { os.write(bytes); }\n    }\n}\n```\n\nTest with: `curl -X PUT -d \"hello\" \"localhost:8080/kv?key=greet\"` and then `curl \"localhost:8080/kv?key=greet\"`. Note that `send` passes `-1` for no-body responses, which tells the server to send no content. Parsing query strings properly would need a real parser, and the JSON here is built by hand, so a library such as Jackson is safer when values may contain quotes.",
+    "keywords": [
+      "java",
+      "httpserver",
+      "jdk",
+      "rest",
+      "standard library",
+      "json",
+      "virtual threads",
+      "no dependencies"
+    ],
+    "category": "app-request",
+    "language": "java",
+    "aliases": [
+      "java http server without framework",
+      "simple rest api java no spring",
+      "com.sun.net.httpserver example",
+      "java key value server"
+    ]
+  },
+  {
+    "question": "Implement a JDBC data access layer with transactions and PreparedStatement in Java",
+    "answer": "```java\nimport java.sql.*;\nimport java.math.BigDecimal;\n\npublic class Accounts {\n    private final String url;   // e.g. jdbc:postgresql://localhost/bank\n\n    public Accounts(String url) { this.url = url; }\n\n    /** Moves money atomically: both updates commit together or neither does. */\n    public void transfer(long fromId, long toId, BigDecimal amount) throws SQLException {\n        try (Connection conn = DriverManager.getConnection(url, \"app\", System.getenv(\"DB_PASS\"))) {\n            conn.setAutoCommit(false);\n            try {\n                debit(conn, fromId, amount);\n                credit(conn, toId, amount);\n                conn.commit();\n            } catch (SQLException | RuntimeException e) {\n                conn.rollback();\n                throw e;\n            }\n        }\n    }\n\n    private void debit(Connection c, long id, BigDecimal amount) throws SQLException {\n        try (PreparedStatement ps = c.prepareStatement(\n                \"UPDATE accounts SET balance = balance - ? WHERE id = ? AND balance >= ?\")) {\n            ps.setBigDecimal(1, amount);\n            ps.setLong(2, id);\n            ps.setBigDecimal(3, amount);\n            if (ps.executeUpdate() != 1)\n                throw new IllegalStateException(\"insufficient funds or unknown account \" + id);\n        }\n    }\n\n    private void credit(Connection c, long id, BigDecimal amount) throws SQLException {\n        try (PreparedStatement ps = c.prepareStatement(\n                \"UPDATE accounts SET balance = balance + ? WHERE id = ?\")) {\n            ps.setBigDecimal(1, amount);\n            ps.setLong(2, id);\n            if (ps.executeUpdate() != 1)\n                throw new IllegalStateException(\"unknown account \" + id);\n        }\n    }\n}\n```\n\nThree details matter here. `BigDecimal` avoids the rounding errors of `double` for money. The balance check sits inside the `WHERE` clause, so it can't race with other transactions. Any failure triggers `rollback`. In production, use a connection pool such as HikariCP instead of `DriverManager.getConnection` on every call.",
+    "keywords": [
+      "java",
+      "jdbc",
+      "transactions",
+      "preparedstatement",
+      "rollback",
+      "bigdecimal",
+      "sql",
+      "database"
+    ],
+    "category": "database",
+    "language": "java",
+    "aliases": [
+      "java jdbc transaction example",
+      "java bank transfer code",
+      "preparedstatement java",
+      "jdbc commit rollback"
+    ]
+  },
+  {
+    "question": "Write a recursive descent expression parser in Java using sealed interfaces",
+    "answer": "Parses arithmetic like `2 + 3 * (4 - 1)` into an AST, then evaluates it. Respects operator precedence and parentheses.\n\n```java\nimport java.util.List;\n\npublic class Calc {\n    sealed interface Expr permits Num, Bin, Neg {}\n    record Num(double value) implements Expr {}\n    record Bin(char op, Expr left, Expr right) implements Expr {}\n    record Neg(Expr inner) implements Expr {}\n\n    static double eval(Expr e) {\n        return switch (e) {\n            case Num n -> n.value();\n            case Neg n -> -eval(n.inner());\n            case Bin b -> {\n                double l = eval(b.left()), r = eval(b.right());\n                yield switch (b.op()) {\n                    case '+' -> l + r;\n                    case '-' -> l - r;\n                    case '*' -> l * r;\n                    case '/' -> {\n                        if (r == 0) throw new ArithmeticException(\"division by zero\");\n                        yield l / r;\n                    }\n                    default -> throw new IllegalStateException(\"op \" + b.op());\n                };\n            }\n        };\n    }\n\n    // ---- parser: expr -> term (('+'|'-') term)* ; term -> factor (('*'|'/') factor)* ; factor -> '-' factor | num | '(' expr ')'\n    static class Parser {\n        private final String src;\n        private int pos = 0;\n        Parser(String src) { this.src = src.replace(\" \", \"\"); }\n\n        Expr parse() {\n            Expr e = expr();\n            if (pos != src.length()) throw error(\"unexpected '\" + src.charAt(pos) + \"'\");\n            return e;\n        }\n\n        private Expr expr() {\n            Expr left = term();\n            while (peek('+') || peek('-')) {\n                char op = src.charAt(pos++);\n                left = new Bin(op, left, term());\n            }\n            return left;\n        }\n\n        private Expr term() {\n            Expr left = factor();\n            while (peek('*') || peek('/')) {\n                char op = src.charAt(pos++);\n                left = new Bin(op, left, factor());\n            }\n            return left;\n        }\n\n        private Expr factor() {\n            if (peek('-')) { pos++; return new Neg(factor()); }\n            if (peek('(')) {\n                pos++;\n                Expr e = expr();\n                if (!peek(')')) throw error(\"expected ')'\");\n                pos++;\n                return e;\n            }\n            int start = pos;\n            while (pos < src.length() && (Character.isDigit(src.charAt(pos)) || src.charAt(pos) == '.')) pos++;\n            if (start == pos) throw error(\"expected number\");\n            return new Num(Double.parseDouble(src.substring(start, pos)));\n        }\n\n        private boolean peek(char c) { return pos < src.length() && src.charAt(pos) == c; }\n        private IllegalArgumentException error(String msg) {\n            return new IllegalArgumentException(msg + \" at position \" + pos);\n        }\n    }\n\n    public static void main(String[] args) {\n        for (String s : List.of(\"2 + 3 * (4 - 1)\", \"-(2+3)*2\", \"10 / (5 - 5)\", \"2 +\")) {\n            try {\n                System.out.println(s + \" = \" + eval(new Parser(s).parse()));\n            } catch (RuntimeException ex) {\n                System.out.println(s + \" -> \" + ex.getMessage());\n            }\n        }\n    }\n}\n```\n\nEach grammar rule becomes one method, so precedence comes from call depth: `term` calls `factor`, so `*` binds tighter than `+`. The sealed hierarchy lets the `switch` in `eval` be exhaustive with no default case for the node types.",
+    "keywords": [
+      "java",
+      "parser",
+      "recursive descent",
+      "ast",
+      "sealed interface",
+      "pattern matching",
+      "expression evaluator",
+      "compiler"
+    ],
+    "category": "app-request",
+    "language": "java",
+    "aliases": [
+      "java expression parser",
+      "calculator parser java",
+      "recursive descent parser java example",
+      "evaluate arithmetic string java"
+    ]
+  },
+  {
+    "question": "Create a generic LRU-style memoizer with ConcurrentHashMap.computeIfAbsent in Java",
+    "answer": "`computeIfAbsent` runs the expensive function at most once per key, even when many threads ask for the same key at the same time.\n\n```java\nimport java.util.Map;\nimport java.util.concurrent.*;\nimport java.util.function.Function;\n\npublic final class Memoizer {\n    public static <K, V> Function<K, V> memoize(Function<K, V> fn) {\n        Map<K, V> cache = new ConcurrentHashMap<>();\n        return key -> cache.computeIfAbsent(key, fn);\n    }\n\n    // Caches futures so that concurrent callers wait on one computation\n    public static <K, V> Function<K, V> memoizeAsync(Function<K, V> fn) {\n        Map<K, CompletableFuture<V>> cache = new ConcurrentHashMap<>();\n        return key -> cache.computeIfAbsent(key,\n                k -> CompletableFuture.supplyAsync(() -> fn.apply(k))).join();\n    }\n\n    static long slowSquare(long n) {\n        try { Thread.sleep(500); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }\n        return n * n;\n    }\n\n    public static void main(String[] args) throws InterruptedException {\n        var fast = memoize(Memoizer::slowSquare);\n        long t = System.nanoTime();\n        System.out.println(fast.apply(12));   // ~500 ms\n        System.out.println(fast.apply(12));   // instant\n        System.out.printf(\"%d ms%n\", (System.nanoTime() - t) / 1_000_000);\n    }\n}\n```\n\nCaution: the mapping function given to `computeIfAbsent` must be short and must not modify the same map, or it can deadlock or throw `IllegalStateException`. That is why the async variant stores the future, which is created quickly, and the slow work runs outside the map's lock. Also note that the cache has no size limit, so use it only for bounded key sets.",
+    "keywords": [
+      "java",
+      "memoization",
+      "concurrenthashmap",
+      "computeifabsent",
+      "completablefuture",
+      "caching",
+      "thread safety",
+      "functional"
+    ],
+    "category": "snippet",
+    "language": "java",
+    "aliases": [
+      "java memoize function",
+      "concurrenthashmap computeifabsent example",
+      "cache function results java",
+      "thread safe memoization"
+    ]
+  },
+  {
+    "question": "Use Java's Scanner-free file processing with Files.lines and try-with-resources to count words",
+    "answer": "Streams a large file line by line, so memory use stays flat no matter the file size.\n\n```java\nimport java.io.IOException;\nimport java.nio.charset.StandardCharsets;\nimport java.nio.file.*;\nimport java.util.Map;\nimport java.util.stream.Collectors;\n\npublic class WordCount {\n    public static void main(String[] args) throws IOException {\n        Path path = Path.of(args.length > 0 ? args[0] : \"book.txt\");\n\n        try (var lines = Files.lines(path, StandardCharsets.UTF_8)) {   // closes the file\n            Map<String, Long> counts = lines\n                .flatMap(line -> java.util.Arrays.stream(line.toLowerCase().split(\"\\\\W+\")))\n                .filter(w -> !w.isBlank())\n                .collect(Collectors.groupingBy(w -> w, Collectors.counting()));\n\n            counts.entrySet().stream()\n                .sorted(Map.Entry.<String, Long>comparingByValue().reversed()\n                        .thenComparing(Map.Entry.comparingByKey()))\n                .limit(10)\n                .forEach(e -> System.out.printf(\"%-15s %d%n\", e.getKey(), e.getValue()));\n        }\n    }\n}\n```\n\n`Files.lines` must be closed, which is why it sits in try-with-resources. Note that `groupingBy` still keeps every distinct word in memory, so for a truly huge vocabulary use a count-min sketch or write partial counts to disk.",
+    "keywords": [
+      "java",
+      "files",
+      "streams",
+      "word count",
+      "try-with-resources",
+      "file io",
+      "groupingby",
+      "text processing"
+    ],
+    "category": "script-request",
+    "language": "java",
+    "aliases": [
+      "java word count file",
+      "read large file java streams",
+      "java count word frequency",
+      "files.lines example"
+    ]
+  },
+  {
+    "question": "Implement a generic bounded blocking queue with wait and notify in Java",
+    "answer": "Shows the classic monitor pattern that underlies `java.util.concurrent.ArrayBlockingQueue`. It's worth understanding even if you use the library version.\n\n```java\npublic class BoundedBuffer<T> {\n    private final Object[] items;\n    private int head, tail, count;\n\n    public BoundedBuffer(int capacity) {\n        items = new Object[capacity];\n    }\n\n    public synchronized void put(T item) throws InterruptedException {\n        while (count == items.length)      // loop, not if: guards against spurious wakeups\n            wait();\n        items[tail] = item;\n        tail = (tail + 1) % items.length;\n        count++;\n        notifyAll();\n    }\n\n    @SuppressWarnings(\"unchecked\")\n    public synchronized T take() throws InterruptedException {\n        while (count == 0)\n            wait();\n        T item = (T) items[head];\n        items[head] = null;                // let GC reclaim it\n        head = (head + 1) % items.length;\n        count--;\n        notifyAll();\n        return item;\n    }\n\n    public static void main(String[] args) {\n        var buf = new BoundedBuffer<Integer>(3);\n\n        Thread producer = new Thread(() -> {\n            try { for (int i = 1; i <= 6; i++) { buf.put(i); System.out.println(\"put \" + i); } }\n            catch (InterruptedException e) { Thread.currentThread().interrupt(); }\n        });\n        Thread consumer = new Thread(() -> {\n            try { for (int i = 0; i < 6; i++) System.out.println(\"took \" + buf.take()); }\n            catch (InterruptedException e) { Thread.currentThread().interrupt(); }\n        });\n\n        producer.start(); consumer.start();\n    }\n}\n```\n\nUse `while` around `wait()` every time, because a thread can wake up without a signal. `notifyAll` is safer than `notify` because it wakes both producers and consumers. In real systems, prefer `ArrayBlockingQueue` or `LinkedBlockingQueue`.",
+    "keywords": [
+      "java",
+      "wait",
+      "notify",
+      "monitor",
+      "bounded buffer",
+      "producer consumer",
+      "synchronized",
+      "concurrency"
+    ],
+    "category": "concept",
+    "language": "java",
+    "aliases": [
+      "producer consumer java wait notify",
+      "bounded buffer java",
+      "blocking queue implementation java",
+      "java synchronized wait example"
+    ]
+  },
+  {
+    "question": "Write a custom Collector in Java that groups and joins strings",
+    "answer": "A `Collector` is built from four parts: a supplier, an accumulator, a combiner, and a finisher. Implementing one shows how `Collectors.toList` and friends actually work.\n\n```java\nimport java.util.*;\nimport java.util.function.*;\nimport java.util.stream.*;\n\npublic class Collectors2 {\n    // Joins the values of each group into one comma-separated string\n    public static <T, K> Collector<T, ?, Map<K, String>> joiningBy(\n            Function<T, K> key, Function<T, String> value) {\n\n        Supplier<Map<K, StringJoiner>> supplier = HashMap::new;\n\n        BiConsumer<Map<K, StringJoiner>, T> accumulator = (m, t) ->\n            m.computeIfAbsent(key.apply(t), k -> new StringJoiner(\", \")).add(value.apply(t));\n\n        BinaryOperator<Map<K, StringJoiner>> combiner = (a, b) -> {     // used only by parallel streams\n            b.forEach((k, sj) -> a.merge(k, sj, (x, y) -> { x.merge(y); return x; }));\n            return a;\n        };\n\n        Function<Map<K, StringJoiner>, Map<K, String>> finisher = m -> {\n            Map<K, String> out = new TreeMap<>();\n            m.forEach((k, sj) -> out.put(k, sj.toString()));\n            return out;\n        };\n\n        return Collector.of(supplier, accumulator, combiner, finisher);\n    }\n\n    public static void main(String[] args) {\n        record Pet(String owner, String name) {}\n        var pets = List.of(new Pet(\"Ana\", \"Rex\"), new Pet(\"Omar\", \"Tom\"), new Pet(\"Ana\", \"Mia\"));\n\n        Map<String, String> result = pets.stream()\n            .collect(joiningBy(Pet::owner, Pet::name));\n        System.out.println(result);   // {Ana=Rex, Mia, Omar=Tom}\n    }\n}\n```\n\nThe combiner runs only for parallel streams, and it's easy to get wrong. Test with `.parallel()` when you write one. Note that `StringJoiner.merge` appends another joiner's contents, which is why the combiner calls it.",
+    "keywords": [
+      "java",
+      "collector",
+      "custom collector",
+      "streams",
+      "supplier",
+      "accumulator",
+      "combiner",
+      "stringjoiner"
+    ],
+    "category": "concept",
+    "language": "java",
+    "aliases": [
+      "java custom collector example",
+      "collector.of java",
+      "java streams custom reduction",
+      "how collectors work java"
+    ]
+  },
+  {
+    "question": "Design a Java plugin system with ServiceLoader and sealed permissions",
+    "answer": "`ServiceLoader` discovers implementations listed in `META-INF/services`, so new plugins can be added as separate JARs without changing the host app.\n\nHost application:\n```java\nimport java.util.ServiceLoader;\n\npublic interface Plugin {\n    String name();\n    String run(String input);\n}\n\npublic class Host {\n    public static void main(String[] args) {\n        for (Plugin p : ServiceLoader.load(Plugin.class)) {\n            System.out.println(p.name() + \" -> \" + p.run(\"hello\"));\n        }\n    }\n}\n```\n\nA plugin JAR contains:\n```java\npublic class Shouter implements Plugin {\n    public String name() { return \"shouter\"; }\n    public String run(String input) { return input.toUpperCase() + \"!\"; }\n}\n```\n\nAnd the file `META-INF/services/com.example.Plugin` contains one line:\n```\ncom.example.Shouter\n```\n\nRun with `java -cp host.jar:shouter.jar com.example.Host`. Each plugin should fail in isolation, so wrap calls like this:\n```java\ntry {\n    System.out.println(p.run(\"hello\"));\n} catch (ServiceConfigurationError | RuntimeException e) {\n    System.err.println(\"plugin \" + p.getClass().getName() + \" failed: \" + e);\n}\n```\n\nFor stronger isolation, load plugins in a separate `URLClassLoader` and use the module system (`module-info.java` with `provides ... with`) on Java 9+.",
+    "keywords": [
+      "java",
+      "serviceloader",
+      "plugin",
+      "spi",
+      "meta-inf services",
+      "classloader",
+      "modules",
+      "extensibility"
+    ],
+    "category": "concept",
+    "language": "java",
+    "aliases": [
+      "java plugin architecture",
+      "serviceloader example",
+      "java extensible application",
+      "load plugins from jar java"
+    ]
+  },
+  {
+    "question": "Write a simple Java HTML template engine with escaping",
+    "answer": "Replaces `{{name}}` placeholders and escapes values by default, which prevents HTML injection. Useful for small generated pages.\n\n```java\nimport java.util.Map;\nimport java.util.regex.Matcher;\nimport java.util.regex.Pattern;\n\npublic final class Template {\n    private static final Pattern VAR = Pattern.compile(\"\\\\{\\\\{\\\\s*(\\\\w+)\\\\s*}}\");\n\n    public static String render(String template, Map<String, Object> vars) {\n        Matcher m = VAR.matcher(template);\n        StringBuilder out = new StringBuilder();\n        while (m.find()) {\n            Object value = vars.getOrDefault(m.group(1), \"\");\n            m.appendReplacement(out, Matcher.quoteReplacement(escape(String.valueOf(value))));\n        }\n        m.appendTail(out);\n        return out.toString();\n    }\n\n    static String escape(String s) {\n        StringBuilder sb = new StringBuilder(s.length());\n        for (char c : s.toCharArray()) {\n            switch (c) {\n                case '&'  -> sb.append(\"&amp;\");\n                case '<'  -> sb.append(\"&lt;\");\n                case '>'  -> sb.append(\"&gt;\");\n                case '\"'  -> sb.append(\"&quot;\");\n                case '\\'' -> sb.append(\"&#x27;\");\n                default   -> sb.append(c);\n            }\n        }\n        return sb.toString();\n    }\n\n    public static void main(String[] args) {\n        String page = \"<h1>Hello {{name}}</h1><p>{{bio}}</p>\";\n        System.out.println(render(page, Map.of(\n            \"name\", \"Ana\",\n            \"bio\", \"<script>alert(1)</script>\")));\n        // <h1>Hello Ana</h1><p>&lt;script&gt;alert(1)&lt;/script&gt;</p>\n    }\n}\n```\n\n`appendReplacement` treats `$` and `\\` specially, so `Matcher.quoteReplacement` is required for untrusted values. This engine doesn't handle loops or conditionals. For those, use a real engine such as Thymeleaf or Freemarker.",
+    "keywords": [
+      "java",
+      "template engine",
+      "html escaping",
+      "xss",
+      "regex",
+      "matcher",
+      "templating",
+      "security"
+    ],
+    "category": "snippet",
+    "language": "java",
+    "aliases": [
+      "java html template",
+      "escape html java",
+      "simple templating java",
+      "prevent xss java output"
+    ]
+  },
+  {
+    "question": "Build a simple Java Swing app with a SwingWorker for background tasks",
+    "answer": "Swing UI code must run on the Event Dispatch Thread (EDT). `SwingWorker` runs slow work in the background and publishes results back to the EDT.\n\n```java\nimport javax.swing.*;\nimport java.awt.*;\nimport java.util.List;\n\npublic class Downloader extends JFrame {\n    private final JProgressBar bar = new JProgressBar(0, 100);\n    private final JButton start = new JButton(\"Start\");\n    private final JTextArea log = new JTextArea(10, 40);\n\n    public Downloader() {\n        super(\"Background task\");\n        log.setEditable(false);\n        start.addActionListener(e -> run());\n        setLayout(new BorderLayout(8, 8));\n        add(start, BorderLayout.NORTH);\n        add(new JScrollPane(log), BorderLayout.CENTER);\n        add(bar, BorderLayout.SOUTH);\n        setDefaultCloseOperation(EXIT_ON_CLOSE);\n        pack();\n        setLocationRelativeTo(null);\n    }\n\n    private void run() {\n        start.setEnabled(false);\n        SwingWorker<Void, String> worker = new SwingWorker<>() {\n            @Override\n            protected Void doInBackground() throws Exception {  // NOT on the EDT\n                for (int i = 1; i <= 10; i++) {\n                    Thread.sleep(300);                          // pretend to download\n                    publish(\"chunk \" + i);                      // delivered to process()\n                    setProgress(i * 10);                        // updates the progress property\n                }\n                return null;\n            }\n\n            @Override\n            protected void process(List<String> chunks) {      // on the EDT\n                chunks.forEach(c -> log.append(c + \"\\n\"));\n            }\n\n            @Override\n            protected void done() {                            // on the EDT\n                start.setEnabled(true);\n                try { get(); log.append(\"finished\\n\"); }\n                catch (Exception ex) { log.append(\"failed: \" + ex.getMessage() + \"\\n\"); }\n            }\n        };\n        worker.addPropertyChangeListener(evt -> {\n            if (\"progress\".equals(evt.getPropertyName())) bar.setValue((Integer) evt.getNewValue());\n        });\n        worker.execute();\n    }\n\n    public static void main(String[] args) {\n        SwingUtilities.invokeLater(() -> new Downloader().setVisible(true));\n    }\n}\n```\n\nNote the anonymous `SwingWorker<Void, String>`: the second type parameter is what `publish` sends to `process`. Keep the worker's `execute()` call after attaching listeners, so the first events are not missed.",
+    "keywords": [
+      "java",
+      "swing",
+      "swingworker",
+      "event dispatch thread",
+      "edt",
+      "gui",
+      "background task",
+      "progress bar"
+    ],
+    "category": "app-request",
+    "language": "java",
+    "aliases": [
+      "java swing background task",
+      "swingworker example",
+      "java gui progress bar",
+      "swing long running task ui freeze"
+    ]
+  },
+  {
+    "question": "Why does my HTML page not update the DOM after a script change, and how do I debug it?",
+    "answer": "The usual causes:\n\n1. **Script runs before the element exists.** Put `<script>` at the end of `<body>`, or use `defer`, or wrap code in `DOMContentLoaded`.\n2. **Wrong selector or ID typo.** `getElementById(\"btn\")` returns `null` and the next line throws.\n3. **Multiple elements with the same `id`.** Only the first is returned. IDs must be unique.\n4. **Reference kept after a re-render.** If you replaced the node with `innerHTML`, a variable pointing to the old node is stale.\n5. **Shadow DOM or iframe.** The element lives in another document, so `document.querySelector` can't reach it.\n\n```html\n<script defer>\n  const btn = document.querySelector(\"#save\");   // query fresh after any re-render\n  if (!btn) console.error(\"#save not found\");     // fail loudly, don't fail silently\n  else btn.textContent = \"Saved\";\n</script>\n```\n\nDebug steps: open DevTools, use the Console to type `document.querySelector(\"#save\")`. If the result is `null`, the problem is the selector or timing. Use the Elements panel to check the live DOM, because it can differ from the HTML source after JavaScript runs. Check the Console for errors that stop the script early.",
+    "keywords": [
+      "html",
+      "dom",
+      "debugging",
+      "javascript",
+      "script timing",
+      "defer",
+      "getelementbyid",
+      "devtools"
+    ],
+    "category": "debugging",
+    "language": "html",
+    "aliases": [
+      "html script not working",
+      "dom element is null",
+      "why does my html javascript not run",
+      "queryselector returns null"
+    ]
+  },
+  {
+    "question": "Explain Java's memory model: happens-before, volatile, and safe publication",
+    "answer": "The Java Memory Model (JMM) defines when one thread's writes become visible to another. Without synchronization, the compiler and CPU may reorder operations, so a thread can see stale or partly built objects.\n\n```java\nclass Broken {\n    static Config config;                          // no synchronization\n    static void init() { config = new Config(); }  // another thread may see a half-built object\n}\n\nclass Fixed {\n    static volatile boolean ready = false;   // volatile write happens-before any later read of it\n    static int payload;\n\n    static void producer() {\n        payload = 42;          // ordinary write...\n        ready = true;          // ...is visible to any thread that reads ready == true\n    }\n\n    static void consumer() {\n        while (!ready) Thread.onSpinWait();\n        System.out.println(payload);   // guaranteed to print 42\n    }\n}\n```\n\nKey rules:\n- A `synchronized` block's unlock happens-before the next lock on the same monitor.\n- A `volatile` write happens-before every later read of that variable.\n- `Thread.start()` and `Thread.join()` create happens-before edges.\n- `final` fields are safely published once the constructor finishes, which is why immutable objects are thread-safe without locks.\n\n`volatile` gives visibility and ordering, but not atomicity. `count++` on a volatile is still a race, so use `AtomicInteger`. For shared data structures, prefer `java.util.concurrent` classes over hand-rolled locks.",
+    "keywords": [
+      "java",
+      "memory model",
+      "jmm",
+      "happens-before",
+      "volatile",
+      "synchronized",
+      "safe publication",
+      "concurrency",
+      "visibility"
+    ],
+    "category": "concept",
+    "language": "java",
+    "aliases": [
+      "java volatile explained",
+      "happens before java",
+      "java memory model visibility",
+      "why does volatile not make count++ safe"
+    ]
+  },
+  {
+    "question": "Make a responsive HTML data table with sorting, filtering, and pagination",
+    "answer": "```html\n<input id=\"filter\" placeholder=\"Filter by name…\">\n<table id=\"t\">\n  <thead><tr>\n    <th data-key=\"name\">Name</th>\n    <th data-key=\"city\">City</th>\n    <th data-key=\"score\">Score</th>\n  </tr></thead>\n  <tbody></tbody>\n</table>\n<nav>\n  <button id=\"prev\">Prev</button>\n  <span id=\"page\"></span>\n  <button id=\"next\">Next</button>\n</nav>\n\n<style>\n  table { width: 100%; border-collapse: collapse; font-family: system-ui; }\n  th, td { padding: .5rem; border-bottom: 1px solid #ddd; text-align: left; }\n  th { cursor: pointer; user-select: none; }\n  th[aria-sort=\"ascending\"]::after { content: \" ▲\"; }\n  th[aria-sort=\"descending\"]::after { content: \" ▼\"; }\n  @media (max-width: 500px) { th, td { font-size: 14px; } }\n</style>\n\n<script>\nconst rows = Array.from({ length: 73 }, (_, i) => ({\n  name: [\"Ana\", \"Omar\", \"Lina\", \"Sam\"][i % 4] + \" \" + i,\n  city: [\"Cairo\", \"Amman\", \"Nablus\"][i % 3],\n  score: (i * 37) % 100,\n}));\n\nconst PAGE = 10;\nlet sortKey = null, asc = true, page = 0, query = \"\";\n\nconst tbody = document.querySelector(\"tbody\");\nconst pageLabel = document.getElementById(\"page\");\n\nfunction view() {\n  let data = rows.filter(r => r.name.toLowerCase().includes(query));\n  if (sortKey) data = data.sort((a, b) =>\n    (a[sortKey] > b[sortKey] ? 1 : a[sortKey] < b[sortKey] ? -1 : 0) * (asc ? 1 : -1));\n  return data;\n}\n\nfunction render() {\n  const data = view();\n  const pages = Math.max(1, Math.ceil(data.length / PAGE));\n  page = Math.min(page, pages - 1);\n  tbody.replaceChildren(...data.slice(page * PAGE, page * PAGE + PAGE).map(r => {\n    const tr = document.createElement(\"tr\");\n    for (const k of [\"name\", \"city\", \"score\"]) {\n      const td = document.createElement(\"td\");\n      td.textContent = r[k];        // textContent: no HTML injection from data\n      tr.append(td);\n    }\n    return tr;\n  }));\n  pageLabel.textContent = `${page + 1} / ${pages}`;\n  document.getElementById(\"prev\").disabled = page === 0;\n  document.getElementById(\"next\").disabled = page >= pages - 1;\n}\n\ndocument.querySelectorAll(\"th\").forEach(th => th.addEventListener(\"click\", () => {\n  const key = th.dataset.key;\n  asc = sortKey === key ? !asc : true;\n  sortKey = key;\n  document.querySelectorAll(\"th\").forEach(h => h.removeAttribute(\"aria-sort\"));\n  th.setAttribute(\"aria-sort\", asc ? \"ascending\" : \"descending\");\n  render();\n}));\n\ndocument.getElementById(\"filter\").addEventListener(\"input\", e => {\n  query = e.target.value.toLowerCase(); page = 0; render();\n});\ndocument.getElementById(\"prev\").onclick = () => { page--; render(); };\ndocument.getElementById(\"next\").onclick = () => { page++; render(); };\nrender();\n</script>\n```\n\n`aria-sort` lets assistive technology announce the sort direction, and the arrows come from CSS so the markup stays clean. Each sort or filter change resets to page one, or the user could end up on an empty page.",
+    "keywords": [
+      "html",
+      "javascript",
+      "data table",
+      "sorting",
+      "filtering",
+      "pagination",
+      "aria-sort",
+      "responsive table"
+    ],
+    "category": "app-request",
+    "language": "html",
+    "aliases": [
+      "sortable table html javascript",
+      "html table with pagination and filter",
+      "data grid without library",
+      "accessible sortable table"
+    ]
+  }
+]

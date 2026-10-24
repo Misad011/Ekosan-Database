@@ -1,0 +1,2346 @@
+[
+  {
+    "question": "What is addition?",
+    "answer": "Addition is one of the four basic arithmetic operations. It combines two or more numbers into a single sum. The symbol is '+'. Example: 3 + 5 = 8. Addition is commutative (a + b = b + a) and associative ((a + b) + c = a + (b + c)). The identity element is 0, because a + 0 = a.",
+    "keywords": ["addition", "sum", "plus", "arithmetic"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is adding?", "How do you add numbers?", "Explain addition"]
+  },
+  {
+    "question": "What is subtraction?",
+    "answer": "Subtraction finds the difference between two numbers. The symbol is '-'. Example: 9 - 4 = 5. Subtraction is NOT commutative: a - b is not the same as b - a (unless a = b). It is the inverse of addition. Result can be negative if the second number is larger.",
+    "keywords": ["subtraction", "difference", "minus", "arithmetic"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is subtracting?", "How do you subtract?", "Explain subtraction"]
+  },
+  {
+    "question": "What is multiplication?",
+    "answer": "Multiplication is repeated addition. The symbol is '×' or '*'. Example: 4 × 3 = 12, which means 4 + 4 + 4. It is commutative (a × b = b × a) and associative. The identity element is 1 (a × 1 = a). Multiplying by 0 gives 0. Multiplication is used in word problems when you see 'each', 'per', 'every', or 'times'.",
+    "keywords": ["multiplication", "product", "times", "arithmetic", "each"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is multiplying?", "How do you multiply?", "Explain multiplication"]
+  },
+  {
+    "question": "What is division?",
+    "answer": "Division splits a number into equal parts. The symbol is '÷' or '/'. Example: 12 ÷ 4 = 3. It is the inverse of multiplication. Division is NOT commutative (a ÷ b ≠ b ÷ a). Division by zero is undefined. Vocabulary: dividend ÷ divisor = quotient. If there is a remainder, 13 ÷ 4 = 3 remainder 1.",
+    "keywords": ["division", "quotient", "divide", "arithmetic"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is dividing?", "How do you divide?", "Explain division"]
+  },
+  {
+    "question": "What is the order of operations?",
+    "answer": "The order of operations is the rule for which calculation to do first. Remember PEMDAS: Parentheses, Exponents, Multiplication and Division (left to right), Addition and Subtraction (left to right). Example: 2 + 3 × 4 = 2 + 12 = 14 (NOT 20). But (2 + 3) × 4 = 5 × 4 = 20. Other names: BODMAS (UK), BIDMAS, GEMDAS.",
+    "keywords": ["order of operations", "pemdas", "bodmas", "precedence"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is PEMDAS?", "What is BODMAS?", "Which operation first?"]
+  },
+  {
+    "question": "How do you solve a word problem with 'each'?",
+    "answer": "When a word problem says 'each', 'per', or 'every', that is a signal to MULTIPLY. Example: 'Sam has 3 boxes. Each box has 2 apples. How many apples?' Step 1: identify the count of groups (3 boxes). Step 2: identify the count in each group (2 apples). Step 3: multiply: 3 × 2 = 6 apples. If the problem asks 'how many in each', you divide instead.",
+    "keywords": ["word problem", "each", "per", "multiply", "how many"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["How to solve 'each' problems", "Each means multiply", "Word problem with each"]
+  },
+  {
+    "question": "How do you solve 'Sam has boxes of apples' type problems?",
+    "answer": "Use this method for 'each' problems: 1) Find the total number of containers (e.g. 3 boxes). 2) Find the number inside each container (e.g. 2 apples per box). 3) Multiply: 3 × 2 = 6. 4) Check the unit asked ('how many apples?') and answer with that unit. If a container has 1 item, the total is just the number of containers (3 boxes × 1 apple = 3 apples). If asked 'how many per box', divide instead.",
+    "keywords": ["each problem", "sam", "boxes", "apples", "multiplication word problem"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["How to solve Sam's box problem", "Each box problem", "Containers and items problem"]
+  },
+  {
+    "question": "What is a fraction?",
+    "answer": "A fraction represents a part of a whole. It is written as a/b where 'a' is the numerator (top) and 'b' is the denominator (bottom). Example: 3/4 means 3 parts out of 4 equal parts. Rules: 1/2 = 2/4 = 0.5. To add fractions with the same denominator: a/c + b/c = (a+b)/c. To add with different denominators, find a common denominator first.",
+    "keywords": ["fraction", "numerator", "denominator", "part of whole"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What are fractions?", "Explain fractions"]
+  },
+  {
+    "question": "How do you add fractions?",
+    "answer": "To add fractions: 1) If denominators are the same, add numerators: 1/5 + 2/5 = 3/5. 2) If denominators differ, find the least common denominator (LCD). Example: 1/2 + 1/3 → LCD is 6 → 3/6 + 2/6 = 5/6. 3) Simplify the result. Example: 2/4 + 2/4 = 4/4 = 1.",
+    "keywords": ["add fractions", "fraction addition", "common denominator", "lcd"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["Adding fractions", "How to add fractions"]
+  },
+  {
+    "question": "What is a decimal?",
+    "answer": "A decimal is a number written in base 10 using a decimal point. Example: 3.14 means 3 whole units and 14 hundredths. Places after the decimal point: tenths (0.1), hundredths (0.01), thousandths (0.001), etc. Decimals and fractions convert: 0.25 = 1/4, 0.5 = 1/2, 0.75 = 3/4, 0.1 = 1/10.",
+    "keywords": ["decimal", "decimal point", "tenths", "hundredths"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What are decimals?", "Explain decimals"]
+  },
+  {
+    "question": "What is a percentage?",
+    "answer": "A percentage is a fraction out of 100. The symbol is %. Example: 25% means 25/100 = 0.25. To convert a percentage to a decimal, divide by 100: 45% = 0.45. To find 20% of 50: 0.20 × 50 = 10. Percentages are used for discounts, taxes, interest, statistics, and comparisons.",
+    "keywords": ["percentage", "percent", "out of 100"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is percent?", "Explain percentages"]
+  },
+  {
+    "question": "How do you calculate a percentage of a number?",
+    "answer": "To calculate X% of a number N: multiply N by (X ÷ 100). Example: 15% of 80 = 80 × 0.15 = 12. Shortcut for common ones: 10% = divide by 10, 25% = divide by 4, 50% = divide by 2. To find what percent A is of B: (A ÷ B) × 100. Example: 15 is what percent of 60? (15 ÷ 60) × 100 = 25%.",
+    "keywords": ["percentage calculation", "percent of", "how to find percent"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to find a percentage", "Percent of a number"]
+  },
+  {
+    "question": "What is an exponent?",
+    "answer": "An exponent tells how many times to multiply a number by itself. Written a^n, where 'a' is the base and 'n' the exponent. Example: 2^3 = 2 × 2 × 2 = 8. Rules: a^m × a^n = a^(m+n). a^m ÷ a^n = a^(m−n). (a^m)^n = a^(mn). a^0 = 1 (for a ≠ 0). a^(−n) = 1/a^n. a^(1/2) = √a.",
+    "keywords": ["exponent", "power", "base", "squared", "cubed"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What are exponents?", "What is a power?", "Explain exponents"]
+  },
+  {
+    "question": "What is a square root?",
+    "answer": "The square root of a number n is the value that, when multiplied by itself, equals n. Symbol: √. Example: √9 = 3, because 3 × 3 = 9. √16 = 4. √2 ≈ 1.41421356. √0 = 0. √1 = 1. The square root of a negative number is not a real number (it is imaginary, written i). Perfect squares: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.",
+    "keywords": ["square root", "sqrt", "radical", "perfect square"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a square root?", "Explain square roots"]
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "A variable is a symbol (usually a letter) that represents an unknown or changing value. Common variables: x, y, z, a, b, n. Example: in the equation x + 3 = 7, the variable x equals 4. Variables let us write general rules like the area of a circle A = πr².",
+    "keywords": ["variable", "unknown", "algebra", "letter", "symbol"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a variable in math?", "Explain variables"]
+  },
+  {
+    "question": "How do you solve a linear equation?",
+    "answer": "To solve a linear equation like 2x + 5 = 13: 1) Isolate x by doing the same operation on both sides. 2) Subtract 5: 2x = 8. 3) Divide by 2: x = 4. 4) Check: 2(4) + 5 = 13 ✓. Rule: whatever you do to one side, do to the other. This keeps the equation balanced.",
+    "keywords": ["linear equation", "solve for x", "algebra", "isolate"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["How to solve an equation", "Solve for x", "Solving linear equations"]
+  },
+  {
+    "question": "What is the quadratic formula?",
+    "answer": "The quadratic formula solves equations of the form ax² + bx + c = 0: x = (−b ± √(b² − 4ac)) / (2a). The discriminant Δ = b² − 4ac tells you the nature of the roots: if Δ > 0, two real roots; if Δ = 0, one repeated root; if Δ < 0, two complex roots. Example: x² − 5x + 6 = 0 → a=1, b=−5, c=6 → x = (5 ± √(25−24))/2 = (5 ± 1)/2 → x = 3 or x = 2.",
+    "keywords": ["quadratic formula", "quadratic equation", "discriminant", "roots"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["How to solve quadratics?", "Quadratic equation formula"]
+  },
+  {
+    "question": "What is a function?",
+    "answer": "A function is a rule that assigns exactly one output to each input. Written f(x) = ..., where x is the input. Example: f(x) = 2x + 1. Then f(3) = 2(3) + 1 = 7. Every input has one output, but two different inputs can share an output. Functions are graphed with input on the x-axis and output on the y-axis.",
+    "keywords": ["function", "f(x)", "input", "output", "mapping"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a function in math?", "Explain functions"]
+  },
+  {
+    "question": "What is the slope of a line?",
+    "answer": "The slope measures how steep a line is. Formula: m = (y₂ − y₁) / (x₂ − x₁), often called 'rise over run'. Positive slope rises left to right; negative slope falls. A horizontal line has slope 0. A vertical line has undefined slope. The equation of a line: y = mx + b, where m is slope and b is the y-intercept. Parallel lines have equal slopes; perpendicular lines have slopes that multiply to −1.",
+    "keywords": ["slope", "gradient", "rise over run", "line"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a slope?", "Explain slope"]
+  },
+  {
+    "question": "What is the Pythagorean theorem?",
+    "answer": "For a right triangle, a² + b² = c², where c is the hypotenuse (the side opposite the right angle), and a and b are the other two sides. Example: legs 3 and 4 → c² = 9 + 16 = 25 → c = 5. This is the 3-4-5 triangle. Common Pythagorean triples: (3,4,5), (5,12,13), (8,15,17), (7,24,25).",
+    "keywords": ["pythagorean theorem", "right triangle", "hypotenuse", "a2 b2 c2"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["What is a²+b²=c²?", "Right triangle rule", "Pythagoras"]
+  },
+  {
+    "question": "What is the area of a rectangle?",
+    "answer": "Area of a rectangle = length × width. Example: a rectangle 5 m by 3 m has area 5 × 3 = 15 square meters. For a square, area = side × side = s². Perimeter of a rectangle = 2 × (length + width). Perimeter of a square = 4 × side.",
+    "keywords": ["area of rectangle", "area", "length times width", "perimeter"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["How to find area of a rectangle", "Rectangle area formula"]
+  },
+  {
+    "question": "What is the area of a triangle?",
+    "answer": "Area of a triangle = ½ × base × height. Example: base 6 cm, height 4 cm → area = ½ × 6 × 4 = 12 cm². The height must be perpendicular to the base. Heron's formula (when you know all three sides a, b, c): s = (a+b+c)/2, area = √(s(s−a)(s−b)(s−c)).",
+    "keywords": ["area of triangle", "triangle", "half base height", "heron"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["How to find area of a triangle", "Triangle area formula"]
+  },
+  {
+    "question": "What is the area of a circle?",
+    "answer": "Area of a circle = π × r², where r is the radius. Example: radius 3 cm → area = π × 9 ≈ 28.27 cm². Circumference (distance around) = 2 × π × r = π × d (where d is diameter = 2r). π ≈ 3.14159265... A circle has no corners or straight edges.",
+    "keywords": ["area of circle", "circle", "radius", "pi", "circumference"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Circle area formula", "How to find area of a circle"]
+  },
+  {
+    "question": "What is the volume of a cube?",
+    "answer": "Volume of a cube = side³ = s × s × s. Example: side 4 cm → volume = 4³ = 64 cm³. Volume is measured in cubic units. Surface area of a cube = 6 × s².",
+    "keywords": ["volume of cube", "cube", "cubic", "volume"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Cube volume formula", "How to find volume of a cube"]
+  },
+  {
+    "question": "What is the volume of a rectangular box?",
+    "answer": "Volume of a rectangular prism (box) = length × width × height. Example: 5 × 3 × 2 = 30 cubic units. Surface area = 2(lw + lh + wh). If the box is a cube, all three dimensions are equal.",
+    "keywords": ["volume of box", "rectangular prism", "volume"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Box volume formula", "Volume of rectangular prism"]
+  },
+  {
+    "question": "What is the volume of a cylinder?",
+    "answer": "Volume of a cylinder = π × r² × h, where r is the radius of the base circle and h is the height. Example: r = 2 cm, h = 5 cm → V = π × 4 × 5 = 20π ≈ 62.83 cm³. Lateral surface area = 2πrh. Total surface area = 2πr² + 2πrh.",
+    "keywords": ["volume of cylinder", "cylinder", "radius", "height"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Cylinder volume formula"]
+  },
+  {
+    "question": "What is the volume of a sphere?",
+    "answer": "Volume of a sphere = (4/3) × π × r³. Example: r = 3 cm → V = (4/3) × π × 27 = 36π ≈ 113.10 cm³. Surface area of a sphere = 4 × π × r². A sphere has no edges or vertices.",
+    "keywords": ["volume of sphere", "sphere", "ball"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Sphere volume formula"]
+  },
+  {
+    "question": "What is the sum of angles in a triangle?",
+    "answer": "The three interior angles of any triangle always add up to 180° (or π radians). Example: if two angles are 60° and 70°, the third is 180 − 60 − 70 = 50°. For a quadrilateral (4 sides), angles add to 360°. For a polygon with n sides, the sum is (n−2) × 180°.",
+    "keywords": ["angles in triangle", "sum of angles", "polygon angles"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Angles of a triangle add to?", "Triangle angle sum"]
+  },
+  {
+    "question": "What is the Pythagorean triple 3-4-5?",
+    "answer": "3-4-5 is the smallest integer Pythagorean triple: 3² + 4² = 9 + 16 = 25 = 5². Any multiple also works: 6-8-10, 9-12-15, 30-40-50. Knowing triples helps solve right triangle problems without calculation.",
+    "keywords": ["3-4-5 triangle", "pythagorean triple", "right triangle"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["3 4 5 triangle", "Pythagorean triples"]
+  },
+  {
+    "question": "What is sine, cosine, tangent?",
+    "answer": "In a right triangle: sin(θ) = opposite / hypotenuse; cos(θ) = adjacent / hypotenuse; tan(θ) = opposite / adjacent. Remember SOH-CAH-TOA. Common values: sin(30°)=0.5, cos(60°)=0.5, tan(45°)=1. Inverses: arcsin, arccos, arctan. Also: sin²θ + cos²θ = 1 (Pythagorean identity).",
+    "keywords": ["sine", "cosine", "tangent", "trigonometry", "sohcahtoa"],
+    "category": "Trigonometry",
+    "language": "en",
+    "aliases": ["What is sin cos tan?", "Explain trigonometry", "SOH CAH TOA"]
+  },
+  {
+    "question": "What is the law of sines?",
+    "answer": "For any triangle with sides a, b, c and opposite angles A, B, C: a / sin(A) = b / sin(B) = c / sin(C). Useful when you know two angles and one side (AAS or ASA) or two sides and a non-included angle (SSA).",
+    "keywords": ["law of sines", "sine rule", "triangle"],
+    "category": "Trigonometry",
+    "language": "en",
+    "aliases": ["Sine rule"]
+  },
+  {
+    "question": "What is the law of cosines?",
+    "answer": "For any triangle with sides a, b, c and angle C opposite side c: c² = a² + b² − 2ab·cos(C). It generalizes the Pythagorean theorem — when C = 90°, cos(C)=0 and c² = a² + b². Use when you know three sides (SSS) or two sides and the included angle (SAS).",
+    "keywords": ["law of cosines", "cosine rule", "triangle"],
+    "category": "Trigonometry",
+    "language": "en",
+    "aliases": ["Cosine rule"]
+  },
+  {
+    "question": "What is a limit in calculus?",
+    "answer": "A limit describes the value a function approaches as the input approaches some number. Notation: lim(x→a) f(x) = L. Example: lim(x→0) sin(x)/x = 1. Limits are used to define derivatives and integrals. A function can have a limit even if it is undefined at the point. Some limits are one-sided: from the left (x→a⁻) or right (x→a⁺).",
+    "keywords": ["limit", "calculus", "approaches", "converges"],
+    "category": "Calculus",
+    "language": "en",
+    "aliases": ["What is a limit?", "Explain limits"]
+  },
+  {
+    "question": "What is a derivative?",
+    "answer": "A derivative measures how fast a function changes. It is the slope of the tangent line at a point. Notation: f'(x), dy/dx, or d/dx. Definition: f'(x) = lim(h→0) [f(x+h) − f(x)] / h. Common rules: d/dx(x^n) = n·x^(n−1); d/dx(sin x) = cos x; d/dx(e^x) = e^x; d/dx(ln x) = 1/x. Product rule: (uv)' = u'v + uv'. Chain rule: d/dx f(g(x)) = f'(g(x))·g'(x).",
+    "keywords": ["derivative", "calculus", "rate of change", "slope"],
+    "category": "Calculus",
+    "language": "en",
+    "aliases": ["What is a derivative?", "Explain derivatives"]
+  },
+  {
+    "question": "What is an integral?",
+    "answer": "An integral measures the accumulated area under a curve. The definite integral ∫[a→b] f(x) dx gives the signed area between the curve and the x-axis from a to b. The indefinite integral ∫f(x) dx = F(x) + C, where F' = f. Fundamental Theorem of Calculus: ∫[a→b] f(x) dx = F(b) − F(a). Rules: ∫x^n dx = x^(n+1)/(n+1) + C (n ≠ −1); ∫1/x dx = ln|x| + C; ∫e^x dx = e^x + C.",
+    "keywords": ["integral", "calculus", "area under curve", "antiderivative"],
+    "category": "Calculus",
+    "language": "en",
+    "aliases": ["What is an integral?", "Explain integrals"]
+  },
+  {
+    "question": "What is the mean (average)?",
+    "answer": "The mean is the sum of all values divided by how many values there are. Formula: mean = (sum of values) / (count). Example: numbers 3, 7, 5, 9 → sum 24, count 4 → mean = 6. The mean is sensitive to outliers: if one value is very large, the mean is pulled toward it. Other averages: median (middle value when sorted) and mode (most frequent).",
+    "keywords": ["mean", "average", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["How to calculate average", "What is the mean?"]
+  },
+  {
+    "question": "What is the median?",
+    "answer": "The median is the middle value when numbers are sorted from smallest to largest. If the count is odd, it's the middle number. If even, it's the average of the two middle numbers. Example: [1, 3, 5, 7, 9] → median is 5. [1, 3, 5, 7] → median is (3+5)/2 = 4. Median is robust to outliers.",
+    "keywords": ["median", "middle value", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is median?", "How to find median"]
+  },
+  {
+    "question": "What is the mode?",
+    "answer": "The mode is the value that appears most often in a data set. Example: [2, 3, 3, 5, 7] → mode is 3. A data set can have no mode (all values appear once), one mode, or more than one mode (bimodal, multimodal). Mode works for numbers and for categories (e.g., most common color).",
+    "keywords": ["mode", "most frequent", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is mode?", "How to find mode"]
+  },
+  {
+    "question": "What is standard deviation?",
+    "answer": "Standard deviation measures how spread out numbers are around the mean. Small value = values are close to the mean. Large value = values are spread out. Steps: 1) find the mean; 2) subtract mean from each value; 3) square each result; 4) average those squares (variance); 5) take the square root → standard deviation. Population SD uses N; sample SD uses (n−1).",
+    "keywords": ["standard deviation", "spread", "variance", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is SD?", "Explain standard deviation"]
+  },
+  {
+    "question": "What is probability?",
+    "answer": "Probability measures how likely an event is. Formula: P(event) = (number of favorable outcomes) / (total possible outcomes). Always between 0 and 1. P=0 means impossible; P=1 means certain. Example: probability of rolling a 3 on a fair die = 1/6 ≈ 0.167. Probability of getting heads on a fair coin = 1/2 = 0.5. Complementary event: P(not A) = 1 − P(A).",
+    "keywords": ["probability", "chance", "likelihood", "outcomes"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["What is probability?", "Explain probability"]
+  },
+  {
+    "question": "What is the probability of two independent events?",
+    "answer": "For two independent events A and B: P(A and B) = P(A) × P(B). Example: probability of flipping heads twice in a row = 0.5 × 0.5 = 0.25. P(A or B) = P(A) + P(B) − P(A and B). If mutually exclusive: P(A or B) = P(A) + P(B). Example: probability of rolling a 1 or 2 on a die = 1/6 + 1/6 = 1/3.",
+    "keywords": ["probability", "independent events", "and or", "multiplication rule"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["Probability of two events", "Independent probability"]
+  },
+  {
+    "question": "What is a prime number?",
+    "answer": "A prime number has exactly two positive divisors: 1 and itself. Primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97. 1 is NOT prime. 2 is the only even prime. There are infinitely many primes (Euclid's proof).",
+    "keywords": ["prime number", "primes", "divisor", "factor"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is a prime?", "Explain prime numbers"]
+  },
+  {
+    "question": "How do you find the greatest common divisor (GCD)?",
+    "answer": "The GCD is the largest number that divides two or more numbers without a remainder. Example: GCD(12, 18) = 6. Methods: 1) List all divisors and find the largest common one. 2) Prime factorization: 12 = 2²·3, 18 = 2·3² → GCD = 2·3 = 6. 3) Euclidean algorithm: GCD(a, b) = GCD(b, a mod b), repeating until remainder is 0. Example: GCD(48, 18) = GCD(18, 12) = GCD(12, 6) = GCD(6, 0) = 6.",
+    "keywords": ["gcd", "greatest common divisor", "hcf", "euclidean"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is GCD?", "Greatest common factor", "HCF"]
+  },
+  {
+    "question": "How do you find the least common multiple (LCM)?",
+    "answer": "The LCM is the smallest number that is a multiple of two or more numbers. Example: LCM(4, 6) = 12. Methods: 1) List multiples: 4→4,8,12; 6→6,12; the first shared is 12. 2) Use prime factorization. 3) Formula: LCM(a,b) = (a × b) / GCD(a,b). Example: LCM(4,6) = (4×6)/GCD(4,6) = 24/2 = 12.",
+    "keywords": ["lcm", "least common multiple", "lowest common multiple"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is LCM?", "Lowest common multiple"]
+  },
+  {
+    "question": "What are factors of a number?",
+    "answer": "Factors are numbers that divide evenly into a given number (no remainder). Example: factors of 12 are 1, 2, 3, 4, 6, 12. Factors of 20: 1, 2, 4, 5, 10, 20. Every number has at least two factors (1 and itself, unless it's 1). A prime number has exactly two factors. To find factors, test integers from 1 up to the square root.",
+    "keywords": ["factors", "divisors", "factorization"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What are factors?", "Explain factors"]
+  },
+  {
+    "question": "What is the Fibonacci sequence?",
+    "answer": "The Fibonacci sequence starts 0, 1, and each next term is the sum of the two previous terms: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... Formula: F(n) = F(n−1) + F(n−2). Ratios of consecutive terms approach the golden ratio φ ≈ 1.618. Fibonacci numbers appear in nature (petals, spirals, branching).",
+    "keywords": ["fibonacci", "sequence", "golden ratio"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is the Fibonacci sequence?", "Explain Fibonacci"]
+  },
+  {
+    "question": "How many centimeters in a meter?",
+    "answer": "1 meter = 100 centimeters. 1 centimeter = 10 millimeters. 1 meter = 1000 millimeters. 1 kilometer = 1000 meters. Length conversions: km → m (×1000), m → cm (×100), cm → mm (×10). Reverse: mm ÷ 10 = cm, cm ÷ 100 = m, m ÷ 1000 = km.",
+    "keywords": ["centimeters", "meter", "length conversion", "metric"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["How many cm in a meter?", "Meters to centimeters"]
+  },
+  {
+    "question": "How many grams in a kilogram?",
+    "answer": "1 kilogram = 1000 grams. 1 gram = 1000 milligrams. 1 metric ton (tonne) = 1000 kilograms. 1 kg ≈ 2.20462 pounds. Mass conversions: kg → g (×1000), g → mg (×1000). Reverse: mg ÷ 1000 = g, g ÷ 1000 = kg.",
+    "keywords": ["grams", "kilogram", "mass conversion", "metric"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["How many grams in a kg?", "Kilograms to grams"]
+  },
+  {
+    "question": "How many liters in a cubic meter?",
+    "answer": "1 cubic meter (m³) = 1000 liters. 1 liter = 1000 milliliters. 1 liter = 1000 cm³. 1 cubic centimeter = 1 milliliter. 1 US gallon ≈ 3.78541 liters. 1 UK gallon ≈ 4.54609 liters.",
+    "keywords": ["liters", "cubic meter", "volume conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Liters to cubic meters"]
+  },
+  {
+    "question": "How do you convert Celsius to Fahrenheit?",
+    "answer": "Formula: °F = (°C × 9/5) + 32. Example: 25°C → (25 × 1.8) + 32 = 45 + 32 = 77°F. Common: 0°C = 32°F, 100°C = 212°F, 37°C = 98.6°F (body temperature), −40°C = −40°F.",
+    "keywords": ["celsius", "fahrenheit", "temperature conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert Celsius to Fahrenheit", "C to F"]
+  },
+  {
+    "question": "How do you convert Fahrenheit to Celsius?",
+    "answer": "Formula: °C = (°F − 32) × 5/9. Example: 68°F → (68 − 32) × 5/9 = 36 × 5/9 = 20°C. Common: 32°F = 0°C, 212°F = 100°C, 98.6°F = 37°C.",
+    "keywords": ["fahrenheit", "celsius", "temperature conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert Fahrenheit to Celsius", "F to C"]
+  },
+  {
+    "question": "How do you convert Celsius to Kelvin?",
+    "answer": "Formula: K = °C + 273.15. Example: 25°C = 298.15 K. 0°C = 273.15 K. Absolute zero is 0 K = −273.15°C = −459.67°F. Kelvin has no degree symbol and never uses 'degrees'.",
+    "keywords": ["kelvin", "celsius", "temperature conversion", "absolute zero"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Celsius to Kelvin", "C to K"]
+  },
+  {
+    "question": "How many inches in a foot?",
+    "answer": "1 foot = 12 inches. 1 yard = 3 feet = 36 inches. 1 mile = 5280 feet = 1760 yards. 1 mile ≈ 1.60934 kilometers. 1 inch = 2.54 centimeters exactly. 1 foot = 30.48 centimeters.",
+    "keywords": ["inches", "foot", "feet", "imperial", "length"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["How many inches in a foot?", "Feet to inches"]
+  },
+  {
+    "question": "How do you turn 7 pounds into kilograms?",
+    "answer": "1 pound ≈ 0.453592 kilograms. 7 pounds × 0.453592 = 3.175 kilograms. Formula: mass_kg = mass_lb × 0.453592. Reverse: 1 kg ≈ 2.20462 lb. So 7 lb ≈ 3.18 kg.",
+    "keywords": ["pounds to kilograms", "lb to kg", "mass conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["7 pounds in kg", "Convert pounds to kg"]
+  },
+  {
+    "question": "How do you turn a number into kilograms when the unit is not specified?",
+    "answer": "You cannot convert a number to kilograms without knowing its current unit. Ask: kilograms of what? 7 kilograms of what? If the user says 'turn 7 into kilograms', the unit is missing. Possibilities: 7 grams = 0.007 kg; 7 milligrams = 0.000007 kg; 7 pounds = 3.175 kg; 7 ounces = 0.198 kg; 7 stone = 44.452 kg; 7 metric tons = 7000 kg. The right response is to ask for the source unit, or to list the possible conversions. Never guess.",
+    "keywords": ["kilograms", "unit missing", "ambiguous conversion", "turn into kg"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Turn 7 into kg", "Convert 7 to kilograms", "Ambiguous mass conversion"]
+  },
+  {
+    "question": "How do you turn 7 into meters?",
+    "answer": "The source unit is not specified. 7 millimeters = 0.007 m; 7 centimeters = 0.07 m; 7 kilometers = 7000 m; 7 inches = 0.1778 m; 7 feet = 2.1336 m; 7 yards = 6.4008 m; 7 miles = 11265 m. Ask the user to specify the source unit, or provide all conversions.",
+    "keywords": ["meters", "unit missing", "length conversion", "turn into meters"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Turn 7 into meters", "Convert 7 to meters"]
+  },
+  {
+    "question": "How do you convert speed units?",
+    "answer": "Common conversions: 1 km/h ≈ 0.2778 m/s. 1 m/s = 3.6 km/h. 1 mph ≈ 1.609 km/h. 1 mile/h ≈ 0.44704 m/s. 1 knot ≈ 1.852 km/h. Example: 60 km/h → 60 × 0.2778 = 16.67 m/s. Example: 10 m/s → 10 × 3.6 = 36 km/h.",
+    "keywords": ["speed conversion", "km/h", "m/s", "mph", "knot"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert speed units", "Speed conversion"]
+  },
+  {
+    "question": "How many seconds in a day?",
+    "answer": "1 minute = 60 seconds. 1 hour = 3600 seconds. 1 day = 24 hours = 86,400 seconds. 1 week = 7 days = 604,800 seconds. 1 year (non-leap) = 365 days = 31,536,000 seconds. 1 leap year = 366 days.",
+    "keywords": ["seconds", "day", "time conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["How many seconds in a day?", "Time conversions"]
+  },
+  {
+    "question": "What is the mathematical constant pi?",
+    "answer": "Pi (π) is the ratio of a circle's circumference to its diameter. π ≈ 3.14159265358979323846... It is an irrational number (cannot be written as a fraction) and transcendental. Used in geometry, trigonometry, physics, engineering. Common approximations: 22/7, 3.14, 3.14159. Formulas: circumference = 2πr; area = πr²; volume of sphere = (4/3)πr³.",
+    "keywords": ["pi", "3.14", "circle constant", "irrational"],
+    "category": "Mathematical Constants",
+    "language": "en",
+    "aliases": ["What is pi?", "Explain pi"]
+  },
+  {
+    "question": "What is Euler's number e?",
+    "answer": "Euler's number, e ≈ 2.718281828459045..., is the base of natural logarithms. It is irrational and transcendental. Definition: e = lim(n→∞) (1 + 1/n)^n. Used in exponential growth, decay, compound interest, calculus. Property: d/dx(e^x) = e^x. Natural log: ln(e) = 1.",
+    "keywords": ["euler number", "e", "2.718", "natural log"],
+    "category": "Mathematical Constants",
+    "language": "en",
+    "aliases": ["What is e in math?", "Explain Euler's number"]
+  },
+  {
+    "question": "What is the golden ratio?",
+    "answer": "The golden ratio φ ≈ 1.618033988749895... It satisfies φ = (1 + √5) / 2 and φ² = φ + 1. It is the limit of consecutive Fibonacci ratios. Appears in art, architecture, nature (sunflower seeds, nautilus shells). The reciprocal 1/φ ≈ 0.618 is also called the golden ratio.",
+    "keywords": ["golden ratio", "phi", "1.618", "fibonacci"],
+    "category": "Mathematical Constants",
+    "language": "en",
+    "aliases": ["What is the golden ratio?", "Explain phi"]
+  },
+  {
+    "question": "What is Avogadro's number?",
+    "answer": "Avogadro's number is 6.02214076 × 10²³, the number of particles (atoms, molecules, ions) in one mole of a substance. It relates the mass of a substance to the number of particles. Example: 1 mole of carbon-12 has a mass of exactly 12 grams and contains 6.022 × 10²³ atoms.",
+    "keywords": ["avogadro", "mole", "6.022", "chemistry constant"],
+    "category": "Mathematical Constants",
+    "language": "en",
+    "aliases": ["What is Avogadro's number?"]
+  },
+  {
+    "question": "What is the speed of light?",
+    "answer": "The speed of light in a vacuum is exactly 299,792,458 meters per second (about 3 × 10⁸ m/s). Symbol: c. It is the universal speed limit — nothing can travel faster. Light travels about 300,000 km per second. Used in E=mc² and in the definition of the meter.",
+    "keywords": ["speed of light", "c", "299792458", "physics constant"],
+    "category": "Mathematical Constants",
+    "language": "en",
+    "aliases": ["What is the speed of light?", "Explain c"]
+  },
+  {
+    "question": "What are the basic math symbols?",
+    "answer": "+ addition; − subtraction; × or * multiplication; ÷ or / division; = equals; ≠ not equal; < less than; > greater than; ≤ less or equal; ≥ greater or equal; ± plus-minus; √ square root; ∑ sum; ∏ product; ∫ integral; ∂ partial derivative; ∞ infinity; ≈ approximately equal; ≡ identical; ∴ therefore; ∈ element of; ∪ union; ∩ intersection; Δ delta (change).",
+    "keywords": ["math symbols", "notation", "operators", "signs"],
+    "category": "Mathematical Symbols",
+    "language": "en",
+    "aliases": ["Math symbols list", "Mathematical notation"]
+  },
+  {
+    "question": "What does the sum symbol Σ mean?",
+    "answer": "Σ (capital sigma) means 'sum of'. Notation: Σ(i=1 to n) aᵢ = a₁ + a₂ + ... + aₙ. Example: Σ(i=1 to 4) i = 1 + 2 + 3 + 4 = 10. Σ(i=1 to n) i = n(n+1)/2. Σ(i=1 to n) i² = n(n+1)(2n+1)/6. Used in statistics, calculus, discrete math, physics.",
+    "keywords": ["sigma", "sum symbol", "summation"],
+    "category": "Mathematical Symbols",
+    "language": "en",
+    "aliases": ["What does Σ mean?", "Summation notation"]
+  },
+  {
+    "question": "How do you solve a simple interest problem?",
+    "answer": "Simple interest formula: I = P × r × t, where P is principal, r is the rate (as a decimal), t is time in years. Example: $1000 at 5% for 3 years → I = 1000 × 0.05 × 3 = $150. Total amount = P + I = $1150.",
+    "keywords": ["simple interest", "interest", "principal", "rate"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["How to calculate simple interest", "Interest formula"]
+  },
+  {
+    "question": "How do you solve a compound interest problem?",
+    "answer": "Compound interest formula: A = P(1 + r/n)^(nt), where P is principal, r is annual rate, n is compounds per year, t is years. Example: $1000 at 5% compounded annually for 3 years: A = 1000(1.05)³ = $1157.63. If compounded monthly (n=12): A = 1000(1 + 0.05/12)^36 ≈ $1161.47. More frequent compounding = slightly more interest.",
+    "keywords": ["compound interest", "interest", "compounding"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["Compound interest formula", "How to calculate compound interest"]
+  },
+  {
+    "question": "How do you calculate a discount?",
+    "answer": "To find the sale price: sale price = original × (1 − discount). Example: $80 with 25% off → 80 × 0.75 = $60. To find the discount amount: original × discount rate. Example: 80 × 0.25 = $20. You can also compute the amount saved and subtract from the original.",
+    "keywords": ["discount", "sale price", "percent off"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["How to calculate discount", "Percent off"]
+  },
+  {
+    "question": "How do you calculate a tip?",
+    "answer": "For a 15% tip: multiply the bill by 0.15. For 20%: multiply by 0.20. Quick mental method: 10% is bill ÷ 10; 20% is double that; 15% is 10% plus half of 10%. Example: $40 bill → 20% tip = $8, total $48.",
+    "keywords": ["tip", "restaurant", "percent tip"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["How to calculate a tip", "Tip percentage"]
+  },
+  {
+    "question": "How many minutes in an hour?",
+    "answer": "1 hour = 60 minutes. 1 minute = 60 seconds. 1 day = 24 hours = 1440 minutes. 1 week = 10,080 minutes. 1 year ≈ 525,600 minutes (non-leap). To convert minutes to hours: divide by 60. Example: 150 minutes = 2.5 hours.",
+    "keywords": ["minutes", "hour", "time conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["How many minutes in an hour?", "Minutes and hours"]
+  },
+  {
+    "question": "How do you convert minutes to hours?",
+    "answer": "Divide the number of minutes by 60. Example: 90 minutes = 90 ÷ 60 = 1.5 hours (1 hour 30 minutes). 120 minutes = 2 hours. 45 minutes = 0.75 hours. If there is a remainder: 100 minutes = 1 hour 40 minutes (since 100 − 60 = 40).",
+    "keywords": ["minutes to hours", "time conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert minutes to hours"]
+  },
+  {
+    "question": "What are the eight planets in our solar system?",
+    "answer": "In order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. Mercury, Venus, Earth, and Mars are rocky (terrestrial) planets. Jupiter and Saturn are gas giants. Uranus and Neptune are ice giants. Earth is the only known planet with life. Jupiter is the largest planet. Mercury is the smallest planet and closest to the Sun.",
+    "keywords": ["planets", "solar system", "astronomy", "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"],
+    "category": "Astronomy",
+    "language": "en",
+    "aliases": ["How many planets are there?", "List the planets", "Planets in order"]
+  },
+  {
+    "question": "Is Pluto a planet?",
+    "answer": "No. Pluto was reclassified as a dwarf planet by the International Astronomical Union (IAU) in 2006. To be a planet, a body must: (1) orbit the Sun, (2) have enough mass to be nearly spherical, and (3) have cleared its orbital neighborhood of other objects. Pluto fails rule 3 — it shares its orbit with many Kuiper Belt objects. There are therefore 8 planets, not 9. If someone says 'the 9 planets', that was the pre-2006 count. Modern science: 8 planets + 5 recognized dwarf planets (Ceres, Pluto, Haumea, Makemake, Eris).",
+    "keywords": ["pluto", "dwarf planet", "8 planets", "9 planets", "IAU"],
+    "category": "Astronomy",
+    "language": "en",
+    "aliases": ["Is Pluto a planet?", "Are there 8 or 9 planets?", "Why is Pluto not a planet?"]
+  },
+  {
+    "question": "How do I check if a claim about planets is real?",
+    "answer": "Verify these facts: (1) There are exactly 8 planets in our solar system. (2) Names must match the official IAU list: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. (3) Any name not on this list (e.g., 'Vulcan', 'Planet X', 'Nibiru', 'Zorgon') is not a real planet in our solar system. (4) Pluto is a dwarf planet, not a planet. (5) Scientists occasionally discover planets orbiting other stars (exoplanets), but those have catalog designations, not mythological names, unless approved by the IAU. If a user claims an invented planet, the correct response is to say it is not a real planet and explain how planets are officially classified.",
+    "keywords": ["fact check", "planet verification", "fake planet", "real planet"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["How to check if a planet is real", "Verify planet claim"]
+  },
+  {
+    "question": "What are the continents on Earth?",
+    "answer": "There are 7 continents: Asia, Africa, North America, South America, Antarctica, Europe, and Australia (sometimes called Oceania). By area (largest to smallest): Asia, Africa, North America, South America, Antarctica, Europe, Australia. By population: Asia, Africa, Europe, North America, South America, Australia, Antarctica (no permanent population). Antarctica is the coldest continent. Africa has the most countries.",
+    "keywords": ["continents", "geography", "earth", "asia", "africa", "europe"],
+    "category": "Geography Facts",
+    "language": "en",
+    "aliases": ["How many continents?", "List the continents"]
+  },
+  {
+    "question": "What are the oceans of the world?",
+    "answer": "There are 5 oceans: Pacific, Atlantic, Indian, Southern (Antarctic), Arctic. The Pacific is the largest and deepest. The Arctic is the smallest and shallowest. The Mariana Trench in the Pacific is the deepest known point on Earth (about 11,034 m).",
+    "keywords": ["oceans", "pacific", "atlantic", "indian", "arctic"],
+    "category": "Geography Facts",
+    "language": "en",
+    "aliases": ["How many oceans?", "List the oceans"]
+  },
+  {
+    "question": "How many days in each month?",
+    "answer": "January 31, February 28 (29 in leap years), March 31, April 30, May 31, June 30, July 31, August 31, September 30, October 31, November 30, December 31. Memory trick: '30 days hath September, April, June, and November. All the rest have 31, except February alone.' Leap years occur every 4 years (divisible by 4, except centuries not divisible by 400): 2024, 2028, 2032.",
+    "keywords": ["months", "days in month", "calendar", "leap year"],
+    "category": "Facts",
+    "language": "en",
+    "aliases": ["Days in each month", "How many days in February?"]
+  },
+  {
+    "question": "Is the Earth round or flat?",
+    "answer": "The Earth is an oblate spheroid — approximately spherical, slightly flattened at the poles and bulging at the equator. Its equatorial diameter (12,756 km) is about 43 km larger than its polar diameter (12,714 km). Direct evidence: satellite photos, ship horizon, shadows at different latitudes, time zones, Foucault pendulum, circumnavigation, gravity measurements. The flat-Earth claim is false; it has been disproven for over 2,000 years (Eratosthenes measured Earth's circumference around 240 BC).",
+    "keywords": ["earth shape", "oblate spheroid", "flat earth", "science fact"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["Is the Earth flat?", "What shape is the Earth?"]
+  },
+  {
+    "question": "How do I know if a scientific claim is real?",
+    "answer": "Test a claim against these criteria: (1) Is it supported by peer-reviewed scientific literature? (2) Has it been independently replicated? (3) Is it consistent with established physics, chemistry, biology? (4) Is the source reputable (universities, journals, government agencies)? (5) Does it make testable predictions? (6) Does it use scientific language correctly? Red flags: appeals to secret knowledge, claims that 'they' are hiding the truth, no supporting evidence, contradictions with well-established facts, reliance on a single source. Example: a claim that 'a new planet called Xorb exists between Earth and Mars' contradicts the fact that we would see it — false. A claim that 'Earth is 4.5 billion years old' matches radiometric dating — true.",
+    "keywords": ["fact check", "verify claim", "science check", "real or fake"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["How to verify a scientific claim", "Check if a fact is real"]
+  },
+  {
+    "question": "How do I answer a math word problem step by step?",
+    "answer": "Use the RUCSAC method: 1) Read the problem carefully. 2) Underline the numbers and key words. 3) Choose the operation (add, subtract, multiply, divide). 4) Solve step by step. 5) Answer with the correct unit. 6) Check your work. Key word signals: 'total', 'sum', 'altogether' → add. 'difference', 'left', 'remain' → subtract. 'each', 'per', 'times', 'groups' → multiply. 'split', 'shared', 'per person' → divide. Example: 'Sam has 3 boxes, each with 2 apples, how many apples?' — 'each' signals multiply: 3 × 2 = 6.",
+    "keywords": ["word problem", "how to solve", "rucsac", "problem solving", "steps"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["How to solve word problems", "Math problem steps"]
+  },
+  {
+    "question": "What is the difference between mean and median?",
+    "answer": "Mean is the arithmetic average (sum ÷ count). Median is the middle value in a sorted list. Mean is affected by outliers; median is not. Example: data [1, 2, 3, 4, 100]. Mean = 110/5 = 22. Median = 3. The median better represents the 'typical' value when there are extreme outliers. Mean is used in most statistics when data is symmetric; median is used for skewed data or when outliers exist (e.g., house prices, income).",
+    "keywords": ["mean vs median", "average", "statistics", "outliers"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["Mean vs median", "Difference between mean and median"]
+  },
+  {
+    "question": "How do you calculate distance, speed, and time?",
+    "answer": "The three formulas: distance = speed × time; speed = distance ÷ time; time = distance ÷ speed. Keep units consistent: if speed is km/h, time must be in hours and distance in km. Example: a car travels 120 km at 60 km/h → time = 120 ÷ 60 = 2 hours. Example: 2 hours at 50 km/h → distance = 50 × 2 = 100 km. Remember the triangle D = S × T.",
+    "keywords": ["distance", "speed", "time", "formula", "rate"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Speed distance time", "How to calculate speed"]
+  },
+  {
+    "question": "How do you calculate work, force, and power?",
+    "answer": "Work = force × distance (W = F × d), measured in joules (J). Force = mass × acceleration (F = m × a), measured in newtons (N). Power = work ÷ time (P = W ÷ t), measured in watts (W). Example: 10 N of force moves an object 5 m → work = 50 J. If that takes 2 seconds → power = 25 W. Gravity on Earth: g ≈ 9.81 m/s².",
+    "keywords": ["work", "force", "power", "physics", "joule", "newton", "watt"],
+    "category": "Physics Math",
+    "language": "en",
+    "aliases": ["How to calculate work", "Work force power formulas"]
+  },
+  {
+    "question": "How do you calculate density?",
+    "answer": "Density = mass ÷ volume (ρ = m/V). Units: kg/m³ or g/cm³. Example: mass 200 g, volume 50 cm³ → density = 4 g/cm³. Water has density 1 g/cm³ (1000 kg/m³). Objects less dense than water float; more dense sink. Rearranged: mass = density × volume; volume = mass ÷ density.",
+    "keywords": ["density", "mass", "volume", "physics"],
+    "category": "Physics Math",
+    "language": "en",
+    "aliases": ["How to calculate density", "Density formula"]
+  },
+  {
+    "question": "What is the difference between area and perimeter?",
+    "answer": "Area measures the space inside a 2D shape, in square units (cm², m²). Perimeter measures the distance around the shape, in linear units (cm, m). Example: a 4×3 rectangle has area 12 m² and perimeter 14 m. Formulas: rectangle A = l × w, P = 2(l+w). Square A = s², P = 4s. Circle A = πr², C = 2πr. Triangle A = ½bh.",
+    "keywords": ["area", "perimeter", "geometry", "difference"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Area vs perimeter", "Difference between area and perimeter"]
+  },
+  {
+    "question": "How do I answer a question that has no numbers?",
+    "answer": "If a math question has no numbers, look for: (1) implied quantities (e.g., 'a dozen' = 12; 'a score' = 20; 'a couple' = 2; 'a few' = 3-4; 'half' = 0.5). (2) Variables (e.g., 'if x is a number, what is x + x?' → 2x). (3) Symbolic answers. Example: 'What is twice a number plus three?' → 2n + 3. If the question truly has no numeric or symbolic content, it may not be a math question — reclassify it as a general/definitional query.",
+    "keywords": ["no numbers", "math question", "variables", "implied quantities"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Question without numbers", "Math with variables"]
+  },
+  {
+    "question": "What does 'per' mean in math?",
+    "answer": "'Per' means 'for each' or 'divided by'. Signals: 60 km per hour = 60 km / 1 h (a rate). $5 per item = $5 for each item. In a word problem, 'per' often signals multiplication (if you know the count) or division (if you know the total). Example: 'The car travels 60 km per hour for 3 hours' → 60 × 3 = 180 km. 'A worker earns $15 per hour. How many hours to earn $120?' → 120 ÷ 15 = 8 hours.",
+    "keywords": ["per", "each", "rate", "unit rate"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["What does per mean?", "Meaning of per in math"]
+  },
+  {
+    "question": "What does 'each' mean in a math problem?",
+    "answer": "'Each' means every single one of a group, implying multiplication when you know the group size. Example: '3 boxes, each with 4 apples' = 3 × 4 = 12 apples. If 'each' is followed by a quantity in the question ('how many in each?'), it implies division instead. Watch out: 'each' plus 'how many total' → multiply. 'each' plus 'how many per group' → divide.",
+    "keywords": ["each", "word problem", "multiply", "group"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["What does each mean?", "Each meaning in math"]
+  },
+  {
+    "question": "How do I check if my math answer is reasonable?",
+    "answer": "Check reasonableness: 1) Estimate first: round numbers to the nearest 10 or 100 and compute mentally. Example: 47 × 8 ≈ 50 × 8 = 400 (actual 376, close ✓). 2) Check units match the question. 3) Check sign (negative or positive makes sense?). 4) Reverse the operation: if a + b = c, then c − b should equal a. 5) Sanity-check order of magnitude: a phone bill should not be $10,000; a highway speed should not be 10,000 km/h. 6) If using a formula, verify you substituted correctly.",
+    "keywords": ["check answer", "reasonable answer", "verify math"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["How to check math answer", "Is my answer reasonable?"]
+  },
+  {
+    "question": "What is a ratio?",
+    "answer": "A ratio compares two quantities. Written a:b, a/b, or 'a to b'. Example: 3 red balls and 5 blue balls → ratio 3:5. Ratios can be simplified like fractions: 6:9 = 2:3. A proportion says two ratios are equal: a/b = c/d, solved by cross-multiplication (a × d = b × c). Example: if 2 apples cost $1, how much for 6 apples? 2/1 = 6/x → 2x = 6 → x = $3.",
+    "keywords": ["ratio", "proportion", "compare", "cross multiply"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is a ratio?", "Explain ratios"]
+  },
+  {
+    "question": "What is a proportion?",
+    "answer": "A proportion states that two ratios are equal: a/b = c/d. Solve by cross-multiplication: a × d = b × c. Example: if 4 workers build 8 walls, how many walls do 6 workers build? 4/8 = 6/x → 4x = 48 → x = 12 walls. Used for scaling, unit conversion, map scale, recipes.",
+    "keywords": ["proportion", "ratio", "scale", "cross multiply"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is a proportion?", "Explain proportions"]
+  },
+  {
+    "question": "What is scientific notation?",
+    "answer": "Scientific notation writes very large or very small numbers as a × 10^n, where 1 ≤ |a| < 10. Example: 3,000,000 = 3 × 10⁶. 0.00045 = 4.5 × 10⁻⁴. 299,792,458 = 2.99792458 × 10⁸. Multiplication: (a × 10^m)(b × 10^n) = (ab) × 10^(m+n). Division: (a × 10^m) / (b × 10^n) = (a/b) × 10^(m−n).",
+    "keywords": ["scientific notation", "power of ten", "exponent notation"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is scientific notation?", "How to write scientific notation"]
+  },
+  {
+    "question": "What is a vector?",
+    "answer": "A vector has both magnitude (size) and direction. Written as (x, y) in 2D or (x, y, z) in 3D, or with an arrow over a letter. Magnitude of 2D vector (a,b): √(a² + b²). Example: (3, 4) has magnitude 5. Vectors add component-wise: (1, 2) + (3, 4) = (4, 6). Scalar multiplication: 2 × (1, 2) = (2, 4). Used in physics for force, velocity, acceleration.",
+    "keywords": ["vector", "magnitude", "direction", "physics"],
+    "category": "Linear Algebra",
+    "language": "en",
+    "aliases": ["What is a vector?", "Explain vectors"]
+  },
+  {
+    "question": "What is a matrix?",
+    "answer": "A matrix is a rectangular array of numbers in rows and columns. Written as A = [[a, b], [c, d]]. Dimensions m × n (m rows, n columns). Matrix multiplication requires inner dimensions to match: (m×n) × (n×p) = (m×p). Identity matrix I has 1s on the diagonal. Used in graphics, machine learning, solving linear systems, transformations.",
+    "keywords": ["matrix", "matrices", "linear algebra", "rows", "columns"],
+    "category": "Linear Algebra",
+    "language": "en",
+    "aliases": ["What is a matrix?", "Explain matrices"]
+  },
+  {
+    "question": "What is a logarithm?",
+    "answer": "A logarithm answers: to what power must the base be raised to get a number? If b^x = y, then log_b(y) = x. Example: log₁₀(1000) = 3, because 10³ = 1000. log₂(8) = 3, because 2³ = 8. Natural log uses base e: ln(x) = log_e(x). Rules: log(ab) = log(a) + log(b). log(a/b) = log(a) − log(b). log(a^n) = n·log(a). log(1) = 0.",
+    "keywords": ["logarithm", "log", "ln", "exponent", "base"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a logarithm?", "Explain logarithms"]
+  },
+  {
+    "question": "What is a permutation?",
+    "answer": "A permutation is an ordered arrangement. The number of permutations of n items chosen r at a time: P(n, r) = n! / (n − r)!. Example: how many ways to arrange 3 books out of 5 on a shelf? P(5,3) = 5! / 2! = 120 / 2 = 60. Order matters. Factorial n! = n × (n−1) × ... × 1. 0! = 1.",
+    "keywords": ["permutation", "arrangement", "order matters", "combinatorics"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["What is a permutation?", "Explain permutations"]
+  },
+  {
+    "question": "What is a combination?",
+    "answer": "A combination is a selection where order does NOT matter. The number of combinations of n items chosen r at a time: C(n, r) = n! / (r! × (n − r)!). Example: how many 3-person committees from 10 people? C(10,3) = 10! / (3! × 7!) = 120. Also written as 'n choose r' or ᵖCᵣ. Difference from permutations: P(n,r) = r! × C(n,r).",
+    "keywords": ["combination", "choose", "order does not matter", "combinatorics"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["What is a combination?", "Explain combinations"]
+  },
+  {
+    "question": "What is the difference between permutations and combinations?",
+    "answer": "Permutations: order matters. Combinations: order does not matter. Example: how many ways to pick a president and vice-president from 5 people? P(5,2) = 20 (order matters — different roles). How many ways to pick 2 committee members from 5? C(5,2) = 10 (order irrelevant). Formula: P(n,r) = n! / (n−r)!; C(n,r) = n! / (r! (n−r)!).",
+    "keywords": ["permutation vs combination", "order matters", "combinatorics"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["Permutation vs combination", "Difference permutation combination"]
+  },
+  {
+    "question": "What is the quadratic equation form?",
+    "answer": "Standard form: ax² + bx + c = 0, where a ≠ 0. Solutions: x = (−b ± √(b² − 4ac)) / (2a). Vertex form: y = a(x − h)² + k with vertex (h, k). Factored form: y = a(x − r₁)(x − r₂), where r₁, r₂ are the roots. Sum of roots = −b/a. Product of roots = c/a. The parabola opens up if a > 0, down if a < 0.",
+    "keywords": ["quadratic", "parabola", "standard form", "vertex"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Quadratic equation form", "Parabola equation"]
+  },
+  {
+    "question": "How do you factor a quadratic?",
+    "answer": "To factor x² + bx + c: find two numbers that multiply to c and add to b. Example: x² + 5x + 6 → numbers 2 and 3 (2×3=6, 2+3=5) → (x + 2)(x + 3). For ax² + bx + c with a ≠ 1: use the AC method or quadratic formula. If it does not factor with integers, use the quadratic formula or complete the square. Difference of squares: a² − b² = (a − b)(a + b).",
+    "keywords": ["factor quadratic", "factoring", "difference of squares", "algebra"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["How to factor", "Factoring quadratics"]
+  },
+  {
+    "question": "What is an inequality?",
+    "answer": "An inequality compares two expressions that are not necessarily equal. Symbols: < (less than), > (greater than), ≤ (less or equal), ≥ (greater or equal), ≠ (not equal). Solve like equations but: multiplying or dividing both sides by a NEGATIVE number flips the inequality sign. Example: −2x > 6 → x < −3. When graphing on a number line: open circle for < or >, filled circle for ≤ or ≥.",
+    "keywords": ["inequality", "less than", "greater than", "algebra"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is an inequality?", "Explain inequalities"]
+  },
+  {
+    "question": "What is a system of equations?",
+    "answer": "Two or more equations with the same variables. Solve by: 1) Substitution (solve one equation for one variable, plug into other). 2) Elimination (add or subtract equations to eliminate a variable). 3) Graphing (find the intersection point). Example: x + y = 5; x − y = 1 → add: 2x = 6 → x = 3 → y = 2. Solution is the point (3, 2).",
+    "keywords": ["system of equations", "simultaneous equations", "solve"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["How to solve system of equations", "Simultaneous equations"]
+  },
+  {
+    "question": "What is the distance formula?",
+    "answer": "Distance between two points (x₁, y₁) and (x₂, y₂) in a plane: d = √((x₂ − x₁)² + (y₂ − y₁)²). Example: distance between (1, 2) and (4, 6) = √((4−1)² + (6−2)²) = √(9 + 16) = √25 = 5. This comes from the Pythagorean theorem. In 3D: d = √((x₂−x₁)² + (y₂−y₁)² + (z₂−z₁)²).",
+    "keywords": ["distance formula", "points", "coordinate geometry"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Distance between two points", "Distance formula"]
+  },
+  {
+    "question": "What is the midpoint formula?",
+    "answer": "Midpoint between (x₁, y₁) and (x₂, y₂): M = ((x₁ + x₂)/2, (y₁ + y₂)/2). Example: midpoint of (2, 4) and (6, 10) = ((2+6)/2, (4+10)/2) = (4, 7). It is the average of the coordinates.",
+    "keywords": ["midpoint formula", "midpoint", "coordinate geometry"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Midpoint of two points", "Midpoint formula"]
+  },
+  {
+    "question": "What is a number line?",
+    "answer": "A number line is a horizontal line with numbers placed at equal intervals. Zero is at the center; positive numbers are to the right; negative numbers to the left. Used to visualize addition (move right), subtraction (move left), inequalities, and comparisons. Example: 3 + (−5): start at 3, move 5 left → −2.",
+    "keywords": ["number line", "positive", "negative", "integers"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is a number line?"]
+  },
+  {
+    "question": "What are integers?",
+    "answer": "Integers are whole numbers and their negatives: ..., −3, −2, −1, 0, 1, 2, 3, ... They do not include fractions or decimals. Symbol: ℤ. Integers are closed under addition, subtraction, and multiplication. Division can produce non-integers (e.g., 5 ÷ 2 = 2.5). 0 is an integer. Integers extend infinitely in both directions.",
+    "keywords": ["integers", "whole numbers", "negative", "positive"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What are integers?", "Explain integers"]
+  },
+  {
+    "question": "What are rational and irrational numbers?",
+    "answer": "Rational numbers can be written as a fraction a/b where a, b are integers and b ≠ 0. Examples: 1/2, 3, −5/7, 0.25. Their decimal expansion either ends (0.5) or repeats (0.333...). Irrational numbers cannot be written as a fraction. Examples: √2, π, e. Their decimal expansions neither end nor repeat. Both are subsets of real numbers (ℝ).",
+    "keywords": ["rational", "irrational", "real numbers", "fractions"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What are rational numbers?", "Rational vs irrational"]
+  },
+  {
+    "question": "What are real numbers?",
+    "answer": "Real numbers (ℝ) include all rational and irrational numbers — every point on the number line. Real numbers are ordered: given any two, one is smaller. They are closed under addition, subtraction, multiplication (division by nonzero). Not real: square roots of negative numbers (those are imaginary: √−1 = i). Complex numbers combine real and imaginary parts.",
+    "keywords": ["real numbers", "number system", "rational", "irrational"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What are real numbers?"]
+  },
+  {
+    "question": "What are complex numbers?",
+    "answer": "Complex numbers have the form a + bi, where a and b are real numbers and i is the imaginary unit with i² = −1. Example: 3 + 4i. Real part: 3. Imaginary part: 4. Conjugate of a + bi is a − bi. Used in electrical engineering, quantum mechanics, signal processing. Every complex number can be plotted on the complex plane (x = real, y = imaginary).",
+    "keywords": ["complex numbers", "imaginary", "i", "real part"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What are complex numbers?"]
+  },
+  {
+    "question": "What is absolute value?",
+    "answer": "Absolute value of a number is its distance from 0 on the number line, always non-negative. Notation: |x|. Example: |5| = 5, |−5| = 5, |0| = 0. Rules: |a × b| = |a| × |b|. |a + b| ≤ |a| + |b| (triangle inequality). Used in distance, error measurement, and inequalities.",
+    "keywords": ["absolute value", "distance from zero", "modulus"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is absolute value?"]
+  },
+  {
+    "question": "How do you calculate the average of several numbers?",
+    "answer": "Add all values, then divide by how many values there are. Example: average of 4, 8, 6, 10, 2: sum = 30, count = 5, mean = 30 ÷ 5 = 6. Weighted average: sum of (value × weight) divided by sum of weights. Example: grades 90 (weight 2) and 80 (weight 1): weighted = (90×2 + 80×1) / (2+1) = 260/3 ≈ 86.67.",
+    "keywords": ["average", "mean", "weighted average"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["How to find average", "Calculate mean"]
+  },
+  {
+    "question": "How do you calculate profit and loss?",
+    "answer": "Profit = selling price − cost price (if positive). Loss = cost price − selling price (if negative). Profit percentage = (profit / cost price) × 100. Loss percentage = (loss / cost price) × 100. Example: buy for $50, sell for $65 → profit = $15, profit% = 15/50 × 100 = 30%. Break-even: selling price = cost price.",
+    "keywords": ["profit", "loss", "selling price", "cost price"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["Profit and loss formula", "How to calculate profit"]
+  },
+  {
+    "question": "What is tax calculation?",
+    "answer": "Tax is a percentage added to a price. Formula: tax amount = price × tax rate. Total price = price × (1 + tax rate). Example: item $100, tax 8% → tax = $8, total = $108. To find pre-tax price when you know the total: price = total / (1 + tax rate). Example: total $108, tax 8% → price = 108 / 1.08 = $100.",
+    "keywords": ["tax", "sales tax", "vat", "percentage"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["How to calculate tax", "Sales tax formula"]
+  },
+  {
+    "question": "How do you split a bill evenly?",
+    "answer": "Divide the total by the number of people. Example: $120 bill, 4 people → $30 each. If a tip is included: total = bill × 1.20 (for 20%) → 120 × 1.20 = $144 → $36 each. If some people did not order equally, itemize their portions first, then divide the shared items (tax, tip, appetizers).",
+    "keywords": ["split bill", "evenly", "divide", "restaurant"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["Split a bill", "Divide bill evenly"]
+  },
+  {
+    "question": "How many square feet in a square meter?",
+    "answer": "1 square meter ≈ 10.7639 square feet. 1 square foot ≈ 0.092903 square meters. 1 acre = 43,560 square feet = 4046.86 square meters. 1 hectare = 10,000 square meters = 2.47105 acres. Always multiply for larger-to-smaller units; divide for smaller-to-larger.",
+    "keywords": ["square feet", "square meter", "area conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert square meters to square feet", "Area conversion"]
+  },
+  {
+    "question": "How do you convert miles to kilometers?",
+    "answer": "1 mile = 1.609344 kilometers. To convert miles to km: multiply by 1.609344. Example: 5 miles = 5 × 1.609344 = 8.04672 km. To convert km to miles: divide by 1.609344, or multiply by 0.621371. Example: 10 km ≈ 6.21371 miles. Common: 1 km ≈ 0.62 mi, 100 km ≈ 62 mi.",
+    "keywords": ["miles", "kilometers", "distance conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert miles to km", "Miles to kilometers"]
+  },
+  {
+    "question": "How do you convert ounces to grams?",
+    "answer": "1 ounce (oz) = 28.3495 grams. 1 pound (lb) = 16 ounces = 453.592 grams. Example: 8 oz = 8 × 28.3495 = 226.796 g. Reverse: 1 g ≈ 0.03527 oz. 1 kg ≈ 35.27 oz.",
+    "keywords": ["ounces", "grams", "mass conversion", "oz"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert ounces to grams"]
+  },
+  {
+    "question": "How do you convert gallons to liters?",
+    "answer": "1 US gallon ≈ 3.78541 liters. 1 UK (imperial) gallon ≈ 4.54609 liters. Example: 5 US gallons = 5 × 3.78541 = 18.9271 L. 1 liter ≈ 0.264172 US gallons. Common: 1 quart = 0.946353 L, 1 pint = 0.473176 L, 1 cup = 0.236588 L.",
+    "keywords": ["gallons", "liters", "volume conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert gallons to liters"]
+  },
+  {
+    "question": "How do you convert acres to hectares?",
+    "answer": "1 acre ≈ 0.404686 hectares. 1 hectare = 100 ares = 10,000 m² ≈ 2.47105 acres. Example: 10 acres = 10 × 0.404686 = 4.04686 ha. Used for land area measurements.",
+    "keywords": ["acres", "hectares", "land area"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert acres to hectares"]
+  },
+  {
+    "question": "What is the rule of three?",
+    "answer": "The rule of three is a method for solving proportional problems: if a corresponds to b, then c corresponds to x, so x = (b × c) / a. Example: 3 apples cost $1.50; how much do 5 apples cost? x = (1.50 × 5) / 3 = $2.50. This is direct proportion. For inverse proportion, x = (a × b) / c.",
+    "keywords": ["rule of three", "proportion", "ratio"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is the rule of three?"]
+  },
+  {
+    "question": "How do you calculate a percentage increase or decrease?",
+    "answer": "Percentage change = ((new value − old value) / old value) × 100. Example: price goes from $50 to $60 → change = (60−50)/50 × 100 = 20% increase. From $80 to $60 → (60−80)/80 × 100 = −25% (decrease). Negative result means a decrease. To increase by X%: multiply by (1 + X/100). To decrease by X%: multiply by (1 − X/100).",
+    "keywords": ["percentage change", "increase", "decrease", "percent"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["Percent increase", "Percent decrease", "How to calculate percentage change"]
+  },
+  {
+    "question": "What is a factorial?",
+    "answer": "Factorial of a non-negative integer n, written n!, is the product of all positive integers up to n. Example: 5! = 5 × 4 × 3 × 2 × 1 = 120. 3! = 6. 1! = 1. 0! = 1 (by definition). Factorials grow very fast: 10! = 3,628,800. Used in permutations, combinations, Taylor series, probability.",
+    "keywords": ["factorial", "n!", "product", "combinatorics"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is factorial?", "Explain factorial"]
+  },
+  {
+    "question": "What is the sum of the first n natural numbers?",
+    "answer": "The sum 1 + 2 + 3 + ... + n = n(n + 1) / 2. Example: 1 + 2 + ... + 100 = 100 × 101 / 2 = 5050. Also called the triangular number formula. Related: sum of first n odd numbers = n². Sum of first n even numbers = n(n+1).",
+    "keywords": ["sum of natural numbers", "triangular number", "series"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["Sum 1 to n", "Formula for sum of numbers"]
+  },
+  {
+    "question": "What is a geometric series?",
+    "answer": "A geometric series is a sum where each term is multiplied by a constant ratio r: a + ar + ar² + ar³ + ... Formula for the first n terms: S = a(1 − rⁿ) / (1 − r), for r ≠ 1. Infinite sum (when |r| < 1): S = a / (1 − r). Example: 1 + 1/2 + 1/4 + 1/8 + ... = 1 / (1 − 1/2) = 2.",
+    "keywords": ["geometric series", "ratio", "sum of series"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a geometric series?"]
+  },
+  {
+    "question": "What is an arithmetic sequence?",
+    "answer": "An arithmetic sequence has a constant difference d between consecutive terms. Formula for the nth term: aₙ = a₁ + (n − 1)d. Sum of first n terms: S = n(a₁ + aₙ)/2. Example: 2, 5, 8, 11, ... (d=3). The 10th term: a₁₀ = 2 + 9 × 3 = 29. Sum of first 10 terms: 10 × (2+29)/2 = 155.",
+    "keywords": ["arithmetic sequence", "arithmetic progression", "common difference"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is arithmetic sequence?", "Arithmetic progression"]
+  },
+  {
+    "question": "What is the compound interest rule of 72?",
+    "answer": "The Rule of 72 estimates how long it takes money to double at a given interest rate: years to double ≈ 72 / (interest rate in %). Example: 6% annual interest → 72 / 6 = 12 years to double. At 9% → 8 years. At 3% → 24 years. It is approximate but useful for mental math.",
+    "keywords": ["rule of 72", "compound interest", "doubling time"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["What is the rule of 72?"]
+  },
+  {
+    "question": "What is the difference between mass and weight?",
+    "answer": "Mass is the amount of matter in an object, measured in kilograms (kg). Weight is the force of gravity on that mass, measured in newtons (N). On Earth, 1 kg has a weight of about 9.81 N (g ≈ 9.81 m/s²). Weight = mass × gravitational acceleration (W = mg). Your mass stays the same on the Moon, but your weight is about 1/6 of Earth's. In everyday speech, 'weight' often means mass, but in physics they are different.",
+    "keywords": ["mass", "weight", "difference", "kg", "newton", "gravity"],
+    "category": "Physics Math",
+    "language": "en",
+    "aliases": ["Difference between mass and weight", "Mass vs weight"]
+  },
+  {
+    "question": "How do I know if a math operation is needed?",
+    "answer": "Look for signals: addition — total, sum, altogether, combined, in all, more. Subtraction — difference, fewer, left, remain, minus, take away, how many more. Multiplication — each, per, times, groups of, total of equal groups. Division — split, share, per person, average, how many in each, divide, rate. If the problem combines quantities into a bigger one, add. If it compares or removes, subtract. If it repeats equal groups, multiply. If it breaks into equal parts, divide.",
+    "keywords": ["math operation", "signal words", "which operation", "word problem"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Which operation to use", "Math key words"]
+  },
+  {
+    "question": "What is an expression vs an equation?",
+    "answer": "An expression is a mathematical phrase with numbers, variables, and operations — no equals sign. Example: 3x + 5. An equation has an equals sign and states that two things are equal. Example: 3x + 5 = 20. Expressions are simplified; equations are solved. You cannot 'solve' an expression — you can only evaluate or simplify it.",
+    "keywords": ["expression", "equation", "difference", "algebra"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Expression vs equation", "Difference between expression and equation"]
+  },
+  {
+    "question": "How do you evaluate an expression?",
+    "answer": "Replace each variable with its given value and compute using order of operations. Example: evaluate 3x + 2y when x = 4, y = 5. Step 1: 3(4) + 2(5) = 12 + 10 = 22. Always use parentheses when substituting to avoid mistakes (e.g., if x = −2, then 3(−2) = −6, not −3×2).",
+    "keywords": ["evaluate expression", "substitute", "algebra"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["How to evaluate expressions"]
+  },
+  {
+    "question": "What is the FOIL method?",
+    "answer": "FOIL is a method for multiplying two binomials: First, Outer, Inner, Last. Example: (x + 3)(x + 5) = x·x + x·5 + 3·x + 3·5 = x² + 5x + 3x + 15 = x² + 8x + 15. Useful for expanding products of the form (a + b)(c + d). Not for larger polynomials — use the distributive property instead.",
+    "keywords": ["foil", "binomial", "multiply", "algebra"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is FOIL?", "How to multiply binomials"]
+  },
+  {
+    "question": "What is the difference of squares?",
+    "answer": "a² − b² = (a − b)(a + b). Example: x² − 9 = (x − 3)(x + 3). 16 − y² = (4 − y)(4 + y). Used for factoring, simplifying fractions, and mental math. Example: 51 × 49 = (50 + 1)(50 − 1) = 2500 − 1 = 2499.",
+    "keywords": ["difference of squares", "factoring", "identity"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a²−b²?", "Difference of two squares"]
+  },
+  {
+    "question": "What is the quadratic formula used for?",
+    "answer": "It solves any quadratic equation ax² + bx + c = 0 when factoring is difficult or impossible. Formula: x = (−b ± √(b² − 4ac)) / (2a). The ± means there are usually two solutions. The discriminant (b² − 4ac) tells you: > 0 two real solutions; = 0 one repeated solution; < 0 two complex solutions. Example: 2x² + 5x − 3 = 0 → x = (−5 ± √(25 + 24)) / 4 = (−5 ± 7) / 4 → x = 0.5 or x = −3.",
+    "keywords": ["quadratic formula", "solve quadratic", "discriminant"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["How to solve quadratic equations", "Quadratic formula example"]
+  },
+  {
+    "question": "What is a real-world use of math?",
+    "answer": "Math is used everywhere: cooking (ratios, scaling recipes), shopping (discounts, tax, tips), travel (speed, distance, time, currency conversion), construction (area, volume, angles), finances (interest, loans, budgeting), medicine (dosage calculations), sports (statistics), computer graphics (matrices, vectors), games (probability), navigation (GPS uses trigonometry and vectors), and science (physics, chemistry, biology). Even daily decisions like comparing unit prices involve math.",
+    "keywords": ["real life math", "everyday math", "applications"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Where is math used?", "Real life applications of math"]
+  },
+  {
+    "question": "How do you calculate unit price?",
+    "answer": "Unit price = total price / quantity. Used to compare products of different sizes. Example: 2-liter bottle for $3.50 → $1.75 per liter. 1.5-liter bottle for $2.85 → $1.90 per liter. The 2-liter is cheaper per liter. Always convert to the same units before comparing.",
+    "keywords": ["unit price", "per unit", "compare prices", "shopping math"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["How to find unit price", "Price per unit"]
+  },
+  {
+    "question": "What is a histogram?",
+    "answer": "A histogram is a graph showing the frequency of data values grouped into bins (ranges). The x-axis shows bins (e.g., 0–10, 10–20), and the y-axis shows frequency. Unlike a bar chart, histograms have no gaps between bars because the x-axis is continuous. Used to visualize the distribution of data.",
+    "keywords": ["histogram", "frequency", "distribution", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is a histogram?"]
+  },
+  {
+    "question": "What is a scatter plot?",
+    "answer": "A scatter plot shows pairs of values as points on a 2D graph. Used to detect correlation between two variables. If points rise together: positive correlation. If they fall: negative correlation. If they form no pattern: no correlation. The closer the points lie to a straight line, the stronger the correlation. Correlation does NOT imply causation.",
+    "keywords": ["scatter plot", "correlation", "graph", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is a scatter plot?"]
+  },
+  {
+    "question": "What is the normal distribution?",
+    "answer": "The normal distribution (bell curve) is a symmetric probability distribution. Mean = median = mode, at the center. About 68% of values fall within 1 standard deviation of the mean, 95% within 2, 99.7% within 3 (the 68-95-99.7 rule). Many natural measurements (height, weight, test scores) approximately follow a normal distribution.",
+    "keywords": ["normal distribution", "bell curve", "standard deviation"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is a bell curve?", "Normal distribution"]
+  },
+  {
+    "question": "How do you find the mode of a data set?",
+    "answer": "Count how often each value appears; the mode is the value with the highest count. Example: [2, 3, 3, 4, 5, 3, 2] → 3 appears three times, 2 twice, so mode is 3. A data set can be: unimodal (one mode), bimodal (two), multimodal (more than two), or have no mode. Mode works with any kind of data, including categories.",
+    "keywords": ["mode", "most frequent", "data set"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["How to find the mode"]
+  },
+  {
+    "question": "What is a bar chart vs a line graph?",
+    "answer": "Bar chart uses rectangular bars to compare categories (e.g., number of pets per household). Line graph shows change over time by connecting points with a line (e.g., temperature over a day). Bar charts are for categories; line graphs are for continuous data like time. A pie chart shows parts of a whole. Choosing the right chart depends on what the data represents.",
+    "keywords": ["bar chart", "line graph", "graph types", "charts"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["Bar chart vs line graph", "Types of charts"]
+  },
+  {
+    "question": "How do you calculate percentage error?",
+    "answer": "Percentage error = |experimental − theoretical| / |theoretical| × 100. Example: expected 50 g, measured 47 g → error = |47 − 50| / 50 × 100 = 3/50 × 100 = 6%. Used in science to compare measured values to true values.",
+    "keywords": ["percentage error", "error calculation", "measurement"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["How to calculate percentage error"]
+  },
+  {
+    "question": "What is the difference between discrete and continuous data?",
+    "answer": "Discrete data takes specific, countable values. Example: number of students (must be integer). Continuous data can take any value in a range. Example: height (5.432 m), temperature. Discrete usually uses bar charts; continuous uses line graphs or histograms. Discrete: you can list the values. Continuous: between any two values there is always another.",
+    "keywords": ["discrete", "continuous", "data types", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["Discrete vs continuous data"]
+  },
+  {
+    "question": "How do you calculate the slope between two points?",
+    "answer": "Slope m = (y₂ − y₁) / (x₂ − x₁). Example: points (1, 3) and (4, 9) → m = (9 − 3) / (4 − 1) = 6 / 3 = 2. Positive slope means the line goes up left to right; negative means down. Zero slope = horizontal line. Undefined slope = vertical line.",
+    "keywords": ["slope", "two points", "rise over run"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Slope between two points", "How to find slope"]
+  },
+  {
+    "question": "What is the equation of a line?",
+    "answer": "Common forms: Slope-intercept: y = mx + b (m = slope, b = y-intercept). Point-slope: y − y₁ = m(x − x₁). Standard: Ax + By = C. Two-point form: (y − y₁)/(y₂ − y₁) = (x − x₁)/(x₂ − x₁). Use slope-intercept when you know the slope and y-intercept; use point-slope when you know a point and the slope.",
+    "keywords": ["equation of line", "slope intercept", "linear equation"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Line equation forms", "y=mx+b"]
+  },
+  {
+    "question": "What is a linear equation?",
+    "answer": "A linear equation is an equation whose graph is a straight line. Standard form: y = mx + b or Ax + By = C. Highest exponent of any variable is 1. Examples: y = 2x + 3, 4x − 7y = 10, x = 5. Nonlinear: y = x², y = 1/x, y = sin(x). Linear equations have exactly one solution (for one variable), no solution (parallel), or infinitely many (same line).",
+    "keywords": ["linear equation", "straight line", "linear"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a linear equation?"]
+  },
+  {
+    "question": "What is the difference between a function and a relation?",
+    "answer": "A relation is any set of ordered pairs (x, y). A function is a relation in which each input x maps to exactly ONE output y. Example: {(1,2),(2,3),(3,4)} is a function. {(1,2),(1,3),(2,4)} is NOT a function (input 1 maps to two outputs). Vertical line test: if any vertical line crosses the graph more than once, it is not a function.",
+    "keywords": ["function", "relation", "vertical line test"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Function vs relation", "Difference function relation"]
+  },
+  {
+    "question": "What is function notation?",
+    "answer": "Function notation writes functions as f(x), g(x), h(x), etc., where f is the name and x is the input. Example: f(x) = x² + 1. Then f(3) = 3² + 1 = 10. f is applied to the input in parentheses. Do NOT confuse f(x) with f multiplied by x. Composite functions: (f∘g)(x) = f(g(x)). Inverse function f⁻¹ reverses f.",
+    "keywords": ["function notation", "f(x)", "composite", "inverse"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is f(x)?"]
+  },
+  {
+    "question": "How do you solve an inequality?",
+    "answer": "Solve like a linear equation, but flip the inequality sign when multiplying or dividing by a negative number. Example: −3x > 12 → x < −4 (sign flips). For ≤ and ≥, use a filled circle on a number line; for < and >, use an open circle. Compound inequalities use AND (both must be true, intersection) or OR (either can be true, union).",
+    "keywords": ["inequality", "solve", "flip sign", "number line"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["How to solve inequalities"]
+  },
+  {
+    "question": "What is the commutative property?",
+    "answer": "Commutative property: changing the order of numbers in an operation does not change the result. Addition: a + b = b + a (3 + 5 = 5 + 3). Multiplication: a × b = b × a (4 × 7 = 7 × 4). NOT true for subtraction (5 − 3 ≠ 3 − 5) or division (8 ÷ 2 ≠ 2 ÷ 8).",
+    "keywords": ["commutative", "order", "property", "arithmetic"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is commutative property?"]
+  },
+  {
+    "question": "What is the associative property?",
+    "answer": "Associative property: grouping does not affect the result. Addition: (a + b) + c = a + (b + c). Multiplication: (a × b) × c = a × (b × c). Example: (2 + 3) + 4 = 2 + (3 + 4) = 9. NOT true for subtraction or division. Example: (8 − 3) − 2 = 3, but 8 − (3 − 2) = 7.",
+    "keywords": ["associative", "grouping", "property"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is associative property?"]
+  },
+  {
+    "question": "What is the distributive property?",
+    "answer": "Distributive property: a(b + c) = ab + ac. Example: 3(4 + 5) = 3 × 4 + 3 × 5 = 12 + 15 = 27. Also works with subtraction: a(b − c) = ab − ac. Used to expand expressions and factor. Reverse: ab + ac = a(b + c) is factoring.",
+    "keywords": ["distributive", "expand", "factor", "property"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is distributive property?"]
+  },
+  {
+    "question": "What is an identity in math?",
+    "answer": "An identity is an equation that is true for ALL values of the variables. Example: (a + b)² = a² + 2ab + b². sin²θ + cos²θ = 1. a + 0 = a. Identities are used to simplify expressions and prove other results. Unlike equations, you do not 'solve' identities — you prove them.",
+    "keywords": ["identity", "equation", "true for all values"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a math identity?"]
+  },
+  {
+    "question": "What is the Pythagorean identity?",
+    "answer": "For any angle θ: sin²θ + cos²θ = 1. Derived from the Pythagorean theorem on the unit circle. Related identities: 1 + tan²θ = sec²θ; 1 + cot²θ = csc²θ. Used heavily in trigonometry to simplify expressions.",
+    "keywords": ["pythagorean identity", "trig identity", "sin cos"],
+    "category": "Trigonometry",
+    "language": "en",
+    "aliases": ["What is sin² + cos² = 1?", "Pythagorean identity"]
+  },
+  {
+    "question": "How many degrees in a radian?",
+    "answer": "180° = π radians. So 1 radian = 180°/π ≈ 57.2958°. 1° = π/180 ≈ 0.0174533 radians. Conversions: multiply degrees by π/180 to get radians; multiply radians by 180/π to get degrees. Common: 30° = π/6, 45° = π/4, 60° = π/3, 90° = π/2, 180° = π, 360° = 2π.",
+    "keywords": ["radians", "degrees", "conversion", "trigonometry"],
+    "category": "Trigonometry",
+    "language": "en",
+    "aliases": ["Convert degrees to radians", "Radians vs degrees"]
+  },
+  {
+    "question": "What is the unit circle?",
+    "answer": "The unit circle is a circle of radius 1 centered at the origin (0,0). Points on it have coordinates (cos θ, sin θ) for angle θ. Common points: (1, 0) at 0°; (0, 1) at 90°; (−1, 0) at 180°; (0, −1) at 270°. Used to define trigonometric functions for all angles and to solve trigonometric equations.",
+    "keywords": ["unit circle", "trigonometry", "sine", "cosine"],
+    "category": "Trigonometry",
+    "language": "en",
+    "aliases": ["What is the unit circle?"]
+  },
+  {
+    "question": "What is a factorial used for?",
+    "answer": "Factorials (n!) count arrangements and selections: permutations use n! / (n−r)!, combinations use n! / (r!(n−r)!). Also appear in the binomial theorem, Taylor series, probability distributions (Poisson, binomial), and combinatorics. Example: how many ways to arrange 4 books? 4! = 24.",
+    "keywords": ["factorial uses", "permutations", "combinations", "combinatorics"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is factorial used for?"]
+  },
+  {
+    "question": "How do you round a number?",
+    "answer": "Look at the digit right after the place you are rounding to. If it is 5 or more, round up (increase the previous digit by 1). If it is 4 or less, round down (keep the previous digit). Example: 3.78 rounded to 1 decimal → 3.8 (look at 8, ≥ 5, round up). 3.42 rounded to 1 decimal → 3.4 (look at 2, < 5, keep). 125 rounded to nearest 10 → 130. 124 → 120. Banker's rounding (round half to even) is used in some finance contexts.",
+    "keywords": ["rounding", "round", "nearest", "approximate"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to round numbers"]
+  },
+  {
+    "question": "What is significant figures?",
+    "answer": "Significant figures are the meaningful digits in a measurement. Rules: (1) All non-zero digits are significant. (2) Zeros between non-zero digits are significant. (3) Leading zeros are not significant (0.0025 has 2 sig figs). (4) Trailing zeros after a decimal point are significant (2.50 has 3). (5) In multiplication/division, the result has the same number of sig figs as the value with the fewest. (6) In addition/subtraction, the result matches the fewest decimal places.",
+    "keywords": ["significant figures", "sig figs", "measurement", "precision"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What are significant figures?", "Sig figs"]
+  },
+  {
+    "question": "What is a real-world example of exponential growth?",
+    "answer": "Exponential growth: quantity increases by a fixed percentage each period. Formula: A = P(1 + r)^t. Examples: population growth (2% per year), compound interest, viral spread, bacterial growth (doubling every 20 minutes). Bacteria example: starting with 1, doubling every 20 min → after 2 hours (6 doublings) = 2⁶ = 64 bacteria. Growth is slow at first, then very fast.",
+    "keywords": ["exponential growth", "growth rate", "doubling", "compound"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is exponential growth?", "Examples of exponential growth"]
+  },
+  {
+    "question": "What is exponential decay?",
+    "answer": "Exponential decay: quantity decreases by a fixed percentage each period. Formula: A = P(1 − r)^t. Examples: radioactive decay (half-life), cooling (Newton's law), depreciation, medicine leaving the bloodstream. Half-life is the time for half to decay: A = P(1/2)^(t/T) where T is half-life. Example: 100 g with half-life 5 years → 50 g after 5 y, 25 g after 10 y.",
+    "keywords": ["exponential decay", "half life", "decay", "radioactive"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is exponential decay?", "Half-life formula"]
+  },
+  {
+    "question": "How do I solve a problem with fractions, decimals, and percentages together?",
+    "answer": "Convert everything to the same form first. Fractions to decimals: divide numerator by denominator (3/4 = 0.75). Decimals to percentages: multiply by 100 (0.75 = 75%). Percentages to fractions: divide by 100 (75% = 75/100 = 3/4). Example: '25% of 3/4 of 80' → (25/100) × (3/4) × 80 = 0.25 × 0.75 × 80 = 15. Order does not matter in multiplication.",
+    "keywords": ["fractions decimals percentages", "convert", "mixed"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["Mixed fractions decimals percentages"]
+  },
+  {
+    "question": "What is the sum of the angles in a polygon?",
+    "answer": "For a polygon with n sides, the sum of interior angles is (n − 2) × 180°. Triangle (n=3): 180°. Quadrilateral (n=4): 360°. Pentagon (n=5): 540°. Hexagon (n=6): 720°. For a regular polygon, each angle = sum / n. Example: hexagon has 720/6 = 120° per angle. Exterior angles of a polygon always sum to 360°.",
+    "keywords": ["polygon angles", "interior angles", "sum of angles"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Sum of angles in polygon"]
+  },
+  {
+    "question": "What is a parallelogram?",
+    "answer": "A parallelogram is a quadrilateral with both pairs of opposite sides parallel. Properties: opposite sides are equal, opposite angles are equal, diagonals bisect each other. Area = base × height. Perimeter = 2(a + b). Special parallelograms: rectangle (right angles), rhombus (equal sides), square (both).",
+    "keywords": ["parallelogram", "geometry", "quadrilateral"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["What is a parallelogram?"]
+  },
+  {
+    "question": "What is a trapezoid?",
+    "answer": "A trapezoid (UK: trapezium) is a quadrilateral with at least one pair of parallel sides. Area = (a + b) / 2 × h, where a and b are the parallel sides, and h is the height (perpendicular distance between them). Example: parallel sides 6 cm and 4 cm, height 3 cm → area = (6+4)/2 × 3 = 15 cm².",
+    "keywords": ["trapezoid", "trapezium", "geometry", "area"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["What is a trapezoid?", "Trapezium area"]
+  },
+  {
+    "question": "What is circumference?",
+    "answer": "Circumference is the perimeter of a circle. Formula: C = 2 × π × r = π × d, where r is radius and d is diameter. Example: radius 5 cm → C = 2π(5) = 10π ≈ 31.416 cm. Ratio of circumference to diameter is always π for any circle.",
+    "keywords": ["circumference", "circle", "perimeter", "pi"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["What is circumference?", "How to find circumference"]
+  },
+  {
+    "question": "What is a cone's volume?",
+    "answer": "Volume of a cone = (1/3) × π × r² × h, where r is base radius and h is height. Example: r = 3 cm, h = 6 cm → V = (1/3)π × 9 × 6 = 18π ≈ 56.55 cm³. A cone is 1/3 the volume of a cylinder with the same base and height. Surface area = πr(r + √(r² + h²)).",
+    "keywords": ["cone volume", "cone", "volume formula"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Cone volume formula"]
+  },
+  {
+    "question": "What is a pyramid's volume?",
+    "answer": "Volume of a pyramid = (1/3) × base area × height. Example: square base 4 m × 4 m, height 6 m → V = (1/3) × 16 × 6 = 32 m³. General formula works for any base shape. A pyramid is 1/3 the volume of a prism with the same base and height.",
+    "keywords": ["pyramid volume", "pyramid", "volume formula"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Pyramid volume formula"]
+  },
+  {
+    "question": "What is a real number line?",
+    "answer": "The real number line is a straight line where every point corresponds to a unique real number. Zero is the origin; positive numbers to the right, negative to the left. It is continuous — between any two points there are infinitely many others. Used to visualize ordering, intervals, absolute value, and inequalities.",
+    "keywords": ["real number line", "number line", "continuity"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is the real number line?"]
+  },
+  {
+    "question": "What is set notation?",
+    "answer": "A set is a collection of distinct objects. Notation: {1, 2, 3}, {x | x > 0}, [0, 1]. Symbols: ∈ means 'is in'; ∉ 'is not in'; ∅ empty set; ∪ union; ∩ intersection; ⊆ subset. Example: A = {1, 2, 3}, B = {2, 3, 4} → A ∪ B = {1, 2, 3, 4}; A ∩ B = {2, 3}. Intervals: (a, b) open; [a, b] closed.",
+    "keywords": ["set notation", "union", "intersection", "subset"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is set notation?"]
+  },
+  {
+    "question": "What is a probability tree?",
+    "answer": "A probability tree is a diagram showing all possible outcomes of a sequence of events. Each branch is labelled with a probability. Multiply along branches for a specific path; add across branches for all paths that give a desired event. Example: flipping a coin twice → P(HH) = 0.5 × 0.5 = 0.25. P(one head) = P(HT) + P(TH) = 0.25 + 0.25 = 0.5.",
+    "keywords": ["probability tree", "tree diagram", "outcomes"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["What is a probability tree?"]
+  },
+  {
+    "question": "What is expected value?",
+    "answer": "Expected value is the long-run average outcome. Formula: E(X) = Σ (value × probability). Example: a fair die → E = 1(1/6) + 2(1/6) + ... + 6(1/6) = 21/6 = 3.5. If a game has positive expected value, on average you win over many plays; negative, you lose. Used in insurance, gambling, finance, and decision theory.",
+    "keywords": ["expected value", "probability", "average outcome"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["What is expected value?"]
+  },
+  {
+    "question": "What is the binomial distribution?",
+    "answer": "The binomial distribution models the number of successes in n independent trials, each with success probability p. Formula: P(X = k) = C(n,k) × p^k × (1−p)^(n−k). Example: flip a fair coin 10 times; probability of exactly 6 heads = C(10,6) × 0.5^10 = 210 × 0.000977 ≈ 0.205. Mean = np. Variance = np(1−p).",
+    "keywords": ["binomial distribution", "probability", "successes", "trials"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["What is binomial distribution?"]
+  },
+  {
+    "question": "What is the Poisson distribution?",
+    "answer": "The Poisson distribution models the number of events happening in a fixed interval of time or space, when events are independent and occur at a constant rate λ. Formula: P(X = k) = (λ^k × e^(−λ)) / k!. Example: 3 calls per hour on average; probability of 5 calls in an hour = (3⁵ × e^−3) / 5! ≈ 0.1008. Mean = variance = λ.",
+    "keywords": ["poisson distribution", "rate", "rare events"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["What is Poisson distribution?"]
+  },
+  {
+    "question": "What is the difference between permutation and combination in real life?",
+    "answer": "Real-life examples: permutations — the order of finishers in a race (gold/silver/bronze); the PIN code on a phone (order matters); arrangement of books on a shelf. Combinations — choosing 5 cards from a deck; picking a committee of 3 from 10 people; lottery numbers. Rule: if swapping two items changes the outcome, use permutations. If not, use combinations.",
+    "keywords": ["permutation real life", "combination real life", "order matters"],
+    "category": "Probability",
+    "language": "en",
+    "aliases": ["Real life permutations and combinations"]
+  },
+  {
+    "question": "What is a coordinate plane?",
+    "answer": "The coordinate plane (Cartesian plane) has two perpendicular number lines: x-axis (horizontal) and y-axis (vertical), crossing at the origin (0, 0). Points are written (x, y). Quadrants: I (+, +), II (−, +), III (−, −), IV (+, −). Used for graphing functions, plotting data, geometry with coordinates. Invented by René Descartes.",
+    "keywords": ["coordinate plane", "cartesian", "x axis", "y axis"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["What is the coordinate plane?", "Cartesian plane"]
+  },
+  {
+    "question": "What is the transitive property?",
+    "answer": "If a = b and b = c, then a = c. Also for inequalities: if a < b and b < c, then a < c. Used in proofs, algebra, and logic. Example: x = y and y = 5, so x = 5. Also works with congruence: if A ≅ B and B ≅ C, then A ≅ C.",
+    "keywords": ["transitive property", "equality", "logic"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is transitive property?"]
+  },
+  {
+    "question": "What is a proof in mathematics?",
+    "answer": "A proof is a logical argument showing that a statement must be true based on axioms, definitions, and previously proven results. Types: direct proof, proof by contradiction, proof by induction, proof by contrapositive. Example of proof by induction: 1 + 2 + ... + n = n(n+1)/2. Basis: true for n=1. Inductive step: assume true for n=k, show true for n=k+1.",
+    "keywords": ["proof", "mathematics", "logic", "induction"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is a math proof?"]
+  },
+  {
+    "question": "How do you solve a problem with time zones?",
+    "answer": "A time zone is a region where the same standard time is used. UTC (Coordinated Universal Time) is the reference. Example: New York is UTC−5 (EST) or UTC−4 (EDT). London is UTC+0 (GMT) or UTC+1 (BST). To convert: add the target offset, subtract the local offset. If it is 3 PM UTC, it is 10 AM in New York (UTC−5). Time zones are not always whole hours: India is UTC+5:30, Nepal UTC+5:45.",
+    "keywords": ["time zone", "utc", "convert time", "world clock"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["How to convert time zones"]
+  },
+  {
+    "question": "How do you solve a problem involving dates?",
+    "answer": "Count days carefully. 1 week = 7 days. 1 month varies (28-31 days). 1 year = 365 days (366 in leap years). A leap year occurs every 4 years, except centuries not divisible by 400. Example: how many days from Jan 15 to Mar 10? Jan remaining = 16 days (31−15). All of Feb = 28 (or 29). Mar up to 10 = 10. Total = 16 + 28 + 10 = 54 days (or 55 in leap year). Exclude the start date, include the end date, or clarify the convention.",
+    "keywords": ["date calculation", "days between dates", "leap year"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["How to calculate days between dates"]
+  },
+  {
+    "question": "What is an arithmetic mean vs geometric mean?",
+    "answer": "Arithmetic mean = sum / count (regular average). Geometric mean = nth root of the product of n numbers. Use geometric mean for growth rates, ratios, and multiplicative quantities. Example: for numbers 2 and 8, arithmetic mean = 5, geometric mean = √(2×8) = 4. For investment returns of +10% and −10%: geometric mean reflects the actual compound return.",
+    "keywords": ["arithmetic mean", "geometric mean", "average", "growth"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["Geometric mean vs arithmetic mean"]
+  },
+  {
+    "question": "How do you find the sum of the first n terms of an arithmetic series?",
+    "answer": "Formula: Sₙ = n/2 × (a₁ + aₙ), where a₁ is the first term and aₙ is the nth term. Alternative: Sₙ = n/2 × (2a₁ + (n−1)d), where d is the common difference. Example: sum of 2, 5, 8, ..., 29 (10 terms): S₁₀ = 10/2 × (2 + 29) = 5 × 31 = 155.",
+    "keywords": ["arithmetic series", "sum of terms", "progression"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Sum of arithmetic series"]
+  },
+  {
+    "question": "What is the median of an even data set?",
+    "answer": "For an even number of values, sort the data and average the two middle values. Example: [3, 5, 7, 9] → middle values are 5 and 7 → median = (5+7)/2 = 6. For [1, 2, 4, 5, 8, 10] → middle values are 4 and 5 → median = 4.5. This ensures the median splits the data into two equal halves.",
+    "keywords": ["median even data set", "median", "middle value"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["How to find median with even numbers"]
+  },
+  {
+    "question": "What is an outlier?",
+    "answer": "An outlier is a data value that is much smaller or larger than the rest of the data. Detection: values below Q1 − 1.5 × IQR or above Q3 + 1.5 × IQR are often considered outliers. Effect: outliers can significantly affect the mean and standard deviation but not the median or IQR. Example: in [1, 2, 3, 4, 100], 100 is an outlier. Median stays 3; mean jumps to 22.",
+    "keywords": ["outlier", "data point", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is an outlier?"]
+  },
+  {
+    "question": "What is a variable in statistics?",
+    "answer": "In statistics, a variable is a characteristic being measured. Types: categorical (colors, names) vs quantitative (numbers). Quantitative: discrete (counts) or continuous (measurements). Independent variable: the cause or input. Dependent variable: the effect or output. Example: in a study of plant growth vs water, water is independent, growth is dependent.",
+    "keywords": ["variable in statistics", "independent", "dependent", "categorical"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is a variable in stats?"]
+  },
+  {
+    "question": "What is a sample vs a population?",
+    "answer": "A population is the entire group you want to study. A sample is a smaller subset selected from the population. We usually study samples because studying the whole population is impractical. Statistics computed on the sample (mean, SD) estimate the population parameters (μ, σ). Good samples are random and representative. Sample notation uses Latin letters (x̄, s); population uses Greek (μ, σ).",
+    "keywords": ["sample", "population", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["Sample vs population"]
+  },
+  {
+    "question": "What is correlation vs causation?",
+    "answer": "Correlation: two variables change together (positive, negative, or none). Causation: one variable directly causes the change in another. Correlation does NOT prove causation. Example: ice cream sales correlate with drowning deaths — but the real cause is summer heat, not ice cream. To establish causation, you need a controlled experiment, not just observational data.",
+    "keywords": ["correlation", "causation", "statistics", "cause and effect"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["Correlation vs causation", "Does correlation imply causation?"]
+  },
+  {
+    "question": "How do you calculate the IQR?",
+    "answer": "IQR (interquartile range) = Q3 − Q1, where Q1 is the first quartile (25th percentile) and Q3 is the third (75th percentile). Steps: sort data, find median, split data into lower and upper halves, Q1 = median of lower half, Q3 = median of upper half. Example: [1, 2, 3, 4, 5, 6, 7, 8] → median = 4.5, Q1 = 2.5, Q3 = 6.5, IQR = 4. IQR is robust to outliers.",
+    "keywords": ["iqr", "interquartile range", "quartile", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is IQR?", "Interquartile range"]
+  },
+  {
+    "question": "What is a box plot?",
+    "answer": "A box plot (box-and-whisker) displays the minimum, Q1, median, Q3, and maximum. The box spans Q1 to Q3 (IQR). A line inside the box is the median. Whiskers extend to the minimum and maximum (or to 1.5 × IQR beyond the box for outlier-tolerant versions). Used to compare distributions quickly.",
+    "keywords": ["box plot", "box and whisker", "quartile"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What is a box plot?"]
+  },
+  {
+    "question": "How do you use a scientific calculator?",
+    "answer": "Common buttons: = evaluates; AC clears; sin, cos, tan for trigonometric functions (check mode: DEG or RAD); ln natural log; log base-10 log; x^y or ^ for exponents; √ for square root; π for pi; x! for factorial; 1/x for reciprocal; (, ) for parentheses; STO for storing. Tip: check the angle mode before using trig functions. Order of operations applies inside the calculator.",
+    "keywords": ["scientific calculator", "how to use", "calculator buttons"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["How to use a calculator", "Calculator guide"]
+  },
+  {
+    "question": "What is a formula?",
+    "answer": "A formula is a mathematical rule written with symbols. Examples: area of a circle A = πr²; speed = distance / time; compound interest A = P(1 + r/n)^(nt). To use a formula: (1) write it down, (2) substitute known values, (3) solve for the unknown, (4) check units. Formulas save time and reduce errors.",
+    "keywords": ["formula", "math formula", "equation", "rule"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["What is a formula in math?"]
+  },
+  {
+    "question": "What is the difference between algebra and geometry?",
+    "answer": "Algebra uses symbols and equations to represent and solve problems with unknown quantities. Geometry studies shapes, sizes, positions, and properties of space. They overlap in coordinate geometry (using algebra on shapes) and analytic geometry. Algebra example: solve 2x + 3 = 11 → x = 4. Geometry example: find the area of a circle with radius 5 → A = πr² = 25π. Both are branches of mathematics.",
+    "keywords": ["algebra vs geometry", "branches of math", "difference"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Difference between algebra and geometry"]
+  },
+  {
+    "question": "What is the difference between pure and applied mathematics?",
+    "answer": "Pure mathematics studies abstract concepts for their own sake (number theory, topology, abstract algebra). Applied mathematics uses math to solve real-world problems (physics, engineering, statistics, finance, computer science). The two often cross-fertilize: number theory, once 'useless', is now the basis of modern cryptography. Both are essential.",
+    "keywords": ["pure math", "applied math", "branches"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Pure vs applied math"]
+  },
+  {
+    "question": "How do I solve an equation with fractions?",
+    "answer": "Clear the fractions by multiplying both sides by the least common denominator (LCD). Example: x/2 + x/3 = 5 → LCD is 6 → multiply both sides by 6 → 3x + 2x = 30 → 5x = 30 → x = 6. Check: 6/2 + 6/3 = 3 + 2 = 5 ✓. Always check your answer by substituting.",
+    "keywords": ["equation with fractions", "lcd", "solve", "clear fractions"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["How to solve equations with fractions"]
+  },
+  {
+    "question": "What is a rate?",
+    "answer": "A rate is a ratio that compares two different kinds of quantities with different units. Example: 60 km/hour (distance per time), $15/hour (money per time), 5 L/100 km (fuel per distance). Unit rate: a rate with denominator 1, e.g. 60 km per 1 hour. To find a unit rate, divide the numerator by the denominator.",
+    "keywords": ["rate", "unit rate", "ratio", "per"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is a rate?", "Explain rates"]
+  },
+  {
+    "question": "How do you solve a distance-rate-time problem?",
+    "answer": "Use D = R × T. Example: a train travels at 80 km/h for 3 hours. Distance = 80 × 3 = 240 km. If two objects move toward each other, add speeds. If in the same direction, subtract. If one catches up to another, equate total distances at the meeting time. Always keep units consistent: km/h with hours, m/s with seconds.",
+    "keywords": ["distance rate time", "d=rt", "train problem", "speed"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Distance rate time problem"]
+  },
+  {
+    "question": "How do you solve a work problem?",
+    "answer": "Use the formula: work rate × time = total work (often 1 job). If person A can do a job in a hours and person B in b hours, together their rate is 1/a + 1/b, and combined time t satisfies: t × (1/a + 1/b) = 1 → t = 1 / (1/a + 1/b) = ab / (a + b). Example: A takes 4 h, B takes 6 h → t = 24/10 = 2.4 hours together.",
+    "keywords": ["work problem", "work rate", "together", "combined time"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Work rate problems"]
+  },
+  {
+    "question": "How do you solve a mixture problem?",
+    "answer": "Track total quantities and concentrations. Formula: concentration × volume = amount of substance. Example: mix 3 L of 20% solution with 2 L of 50% → total = 5 L; substance = 0.20×3 + 0.50×2 = 0.6 + 1.0 = 1.6 L; final concentration = 1.6/5 = 32%. Set up as (C1 × V1 + C2 × V2) / (V1 + V2) = Cf.",
+    "keywords": ["mixture problem", "concentration", "solution"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Mixture problems"]
+  },
+  {
+    "question": "How do you solve a percentage problem with an unknown?",
+    "answer": "Write the equation: part = percent × whole. Example: 45 is 30% of what number? 45 = 0.30 × x → x = 45 / 0.30 = 150. Example: what percent of 80 is 24? 24 = p × 80 → p = 24/80 = 0.30 = 30%. Example: 15% of what is 12? 0.15x = 12 → x = 80. Always identify the three values (part, percent, whole) and set up the equation.",
+    "keywords": ["percentage unknown", "percent equation", "solve percent"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Percent word problems"]
+  },
+  {
+    "question": "How do you compare two fractions?",
+    "answer": "Method 1: give them a common denominator and compare numerators. Example: 3/4 vs 5/7 → LCD 28 → 21/28 vs 20/28 → 3/4 > 5/7. Method 2: convert to decimals. 3/4 = 0.75, 5/7 ≈ 0.714 → 3/4 larger. Method 3: cross-multiply. a/b vs c/d: compare a×d vs c×b. If a×d > c×b, then a/b > c/d.",
+    "keywords": ["compare fractions", "which fraction is larger", "fraction comparison"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to compare fractions"]
+  },
+  {
+    "question": "What is a reciprocal?",
+    "answer": "The reciprocal of a number is 1 divided by that number. Reciprocal of x is 1/x. Reciprocal of a fraction a/b is b/a. Example: reciprocal of 4 is 1/4; reciprocal of 3/5 is 5/3. Multiplication by a reciprocal equals division: a ÷ b = a × (1/b). Zero has no reciprocal. Used in solving equations and simplifying expressions.",
+    "keywords": ["reciprocal", "inverse", "1/x"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is a reciprocal?"]
+  },
+  {
+    "question": "How do you multiply fractions?",
+    "answer": "Multiply the numerators, multiply the denominators, then simplify. Example: 2/3 × 4/5 = (2×4)/(3×5) = 8/15. To simplify before multiplying (cross-cancel): 4/6 × 3/8 = (4×3)/(6×8) → cancel 4 and 8 (÷4) → (1×3)/(6×2) = 3/12 = 1/4. Always check for common factors.",
+    "keywords": ["multiply fractions", "fraction multiplication", "cross cancel"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to multiply fractions"]
+  },
+  {
+    "question": "How do you divide fractions?",
+    "answer": "Multiply by the reciprocal: a/b ÷ c/d = a/b × d/c. Example: 2/3 ÷ 4/5 = 2/3 × 5/4 = 10/12 = 5/6. 'Flip and multiply' or 'multiply by the reciprocal'. Alternative phrase: 'dividing by a fraction is the same as multiplying by its reciprocal.'",
+    "keywords": ["divide fractions", "reciprocal", "flip and multiply"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to divide fractions"]
+  },
+  {
+    "question": "How do you simplify a fraction?",
+    "answer": "Divide numerator and denominator by their GCD. Example: 18/24 → GCD(18,24) = 6 → 18÷6 / 24÷6 = 3/4. If the numerator and denominator have no common factor besides 1, the fraction is in simplest form. Equivalent fractions: 1/2 = 2/4 = 3/6 = 4/8.",
+    "keywords": ["simplify fraction", "reduce fraction", "lowest terms"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to simplify fractions"]
+  },
+  {
+    "question": "What is an improper fraction?",
+    "answer": "An improper fraction has a numerator greater than or equal to the denominator. Example: 7/4. A mixed number writes it as whole + fraction: 7/4 = 1 3/4. To convert improper to mixed: divide numerator by denominator; quotient is the whole, remainder over denominator is the fraction. Example: 11/3 = 3 remainder 2 = 3 2/3. To convert mixed to improper: whole × denominator + numerator, all over denominator.",
+    "keywords": ["improper fraction", "mixed number", "convert"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What is an improper fraction?"]
+  },
+  {
+    "question": "What is a decimal place?",
+    "answer": "Each digit after the decimal point has a place value. First place: tenths (0.1). Second: hundredths (0.01). Third: thousandths (0.001). Example: 3.456 → 4 tenths, 5 hundredths, 6 thousandths. To round: look at the next digit; ≥ 5 rounds up. To compare decimals, align decimal points and compare digit by digit from left.",
+    "keywords": ["decimal place", "tenths", "hundredths", "thousandths"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["What are decimal places?"]
+  },
+  {
+    "question": "How do you add or subtract decimals?",
+    "answer": "Align the decimal points, then add or subtract as usual, keeping the decimal point in the same vertical position. Pad with zeros if needed. Example: 4.5 + 2.75 → align: 4.50 + 2.75 = 7.25. Example: 10 − 3.6 → 10.0 − 3.6 = 6.4. If the top number has fewer decimal places, add zeros.",
+    "keywords": ["add decimals", "subtract decimals", "align decimal point"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to add decimals"]
+  },
+  {
+    "question": "How do you multiply decimals?",
+    "answer": "Multiply as if there were no decimal points. Count total decimal places in both factors. Place the decimal point in the answer with that many decimal places. Example: 0.3 × 0.4 → 3 × 4 = 12 → two decimal places → 0.12. Example: 2.5 × 1.2 → 25 × 12 = 300 → two decimal places → 3.00 = 3. Rewrite trailing zeros if needed.",
+    "keywords": ["multiply decimals", "decimal multiplication"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to multiply decimals"]
+  },
+  {
+    "question": "How do you divide decimals?",
+    "answer": "Move the decimal point in the divisor to the right to make it a whole number. Move the decimal in the dividend the same number of places. Divide as usual. Place the decimal in the quotient directly above where it now sits in the dividend. Example: 4.5 ÷ 0.15 → move 2 places → 450 ÷ 15 = 30.",
+    "keywords": ["divide decimals", "decimal division"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to divide decimals"]
+  },
+  {
+    "question": "What is a math function?",
+    "answer": "A math function is a rule that assigns each input exactly one output. Examples: f(x) = x + 1 (add 1); g(x) = x² (square); h(x) = 2x (double). Functions can be represented as tables, graphs, equations, or verbal rules. Domain: set of all valid inputs. Range: set of all possible outputs. Test with vertical line test on a graph.",
+    "keywords": ["math function", "input output", "domain range"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a math function?"]
+  },
+  {
+    "question": "What is the domain of a function?",
+    "answer": "Domain is the set of all valid inputs. Restrictions: (1) Cannot divide by zero — exclude values that make denominator zero. (2) Cannot take square root of negative — restrict to values where expression ≥ 0. (3) Cannot take log of zero or negative. Example: f(x) = 1/(x − 2) has domain all x ≠ 2. g(x) = √(x) has domain x ≥ 0. If no restrictions, domain is usually all real numbers.",
+    "keywords": ["domain", "function", "valid input", "restrictions"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is domain?", "Domain of a function"]
+  },
+  {
+    "question": "What is the range of a function?",
+    "answer": "Range is the set of all possible outputs. Example: f(x) = x² has range y ≥ 0 (never negative). g(x) = sin(x) has range [−1, 1]. Linear f(x) = 2x has range all real numbers. To find the range: graph the function, or solve y = f(x) for x and see which y values work.",
+    "keywords": ["range", "function", "output"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is range of a function?"]
+  },
+  {
+    "question": "What is a composite function?",
+    "answer": "A composite function applies one function to the output of another. Notation: (f ∘ g)(x) = f(g(x)). Apply the inside function first. Example: f(x) = x + 1, g(x) = x². Then (f∘g)(3) = f(g(3)) = f(9) = 10. (g∘f)(3) = g(f(3)) = g(4) = 16. Order matters — f∘g is not necessarily the same as g∘f.",
+    "keywords": ["composite function", "f of g", "function composition"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a composite function?"]
+  },
+  {
+    "question": "What is an inverse function?",
+    "answer": "An inverse function reverses the original function. If f(a) = b, then f⁻¹(b) = a. To find the inverse: write y = f(x), swap x and y, solve for y. Example: f(x) = 2x + 3 → y = 2x + 3 → swap → x = 2y + 3 → y = (x − 3)/2 → f⁻¹(x) = (x − 3)/2. Check: f(f⁻¹(x)) = x. Not every function has an inverse (must be one-to-one).",
+    "keywords": ["inverse function", "reverse", "f inverse"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is an inverse function?"]
+  },
+  {
+    "question": "What is a one-to-one function?",
+    "answer": "A one-to-one function maps distinct inputs to distinct outputs. No two different inputs give the same output. Test: horizontal line test — if any horizontal line crosses the graph more than once, the function is not one-to-one. Example: f(x) = 2x is one-to-one; f(x) = x² is not (2² = 4 and (−2)² = 4). Only one-to-one functions have inverse functions.",
+    "keywords": ["one to one", "injective", "horizontal line test"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a one-to-one function?"]
+  },
+  {
+    "question": "What is a polynomial?",
+    "answer": "A polynomial is a sum of terms with variables raised to non-negative integer powers. Examples: 3x² + 2x − 5; x⁴ − 1; 7. Degree is the highest exponent. Terms have coefficients and variables. Names by number of terms: monomial (1), binomial (2), trinomial (3), polynomial (many). Operations: add, subtract, multiply, divide (long/synthetic), factor, find roots.",
+    "keywords": ["polynomial", "degree", "terms", "coefficient"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a polynomial?"]
+  },
+  {
+    "question": "What is the degree of a polynomial?",
+    "answer": "The degree is the highest power of the variable. Examples: 5x³ + 2x − 1 has degree 3. 7x² has degree 2. 4 has degree 0. The degree tells you: the maximum number of roots (real or complex), the general shape of the graph, and the number of turning points (degree − 1).",
+    "keywords": ["degree of polynomial", "highest power", "leading term"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is the degree of a polynomial?"]
+  },
+  {
+    "question": "What is the remainder theorem?",
+    "answer": "When a polynomial f(x) is divided by (x − a), the remainder is f(a). Example: divide f(x) = x² + 2x + 1 by (x − 1) → remainder = f(1) = 1 + 2 + 1 = 4. If f(a) = 0, then (x − a) is a factor. This is the factor theorem.",
+    "keywords": ["remainder theorem", "factor theorem", "polynomial"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is remainder theorem?"]
+  },
+  {
+    "question": "What is the fundamental theorem of algebra?",
+    "answer": "Every non-constant polynomial of degree n has exactly n roots in the complex numbers (counting multiplicity). Example: x² + 1 = 0 has two complex roots: i and −i. x³ − 1 = 0 has three roots: 1 and two complex cube roots of unity. This means you can always factor a polynomial completely if you allow complex numbers.",
+    "keywords": ["fundamental theorem of algebra", "roots", "polynomial"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Fundamental theorem of algebra"]
+  },
+  {
+    "question": "What is a rational function?",
+    "answer": "A rational function is a ratio of two polynomials: f(x) = P(x)/Q(x) where Q(x) ≠ 0. Domain excludes values where Q(x) = 0 (vertical asymptotes or holes). Examples: f(x) = 1/x; g(x) = (x²+1)/(x−2). Horizontal asymptotes depend on degrees of P and Q. If deg P < deg Q → y = 0. If deg P = deg Q → y = leading coefficients ratio. If deg P > deg Q → no horizontal asymptote (may have slant).",
+    "keywords": ["rational function", "fraction of polynomials", "asymptote"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a rational function?"]
+  },
+  {
+    "question": "What is an exponential function?",
+    "answer": "An exponential function has the form f(x) = a × b^x, where a ≠ 0 and b > 0, b ≠ 1. The variable is in the exponent. Example: f(x) = 2^x → 1, 2, 4, 8, 16, ... Growth if b > 1; decay if 0 < b < 1. Property: multiplying by constant when x increases by 1. Used for population growth, radioactive decay, compound interest.",
+    "keywords": ["exponential function", "growth", "decay", "b to the x"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is an exponential function?"]
+  },
+  {
+    "question": "What is a logarithm's inverse relationship with exponents?",
+    "answer": "Logarithms and exponents are inverses. If b^x = y, then log_b(y) = x. So log_b(b^x) = x and b^(log_b y) = y. Example: 10³ = 1000 → log₁₀(1000) = 3. e² ≈ 7.389 → ln(7.389) ≈ 2. This is why logarithms can 'undo' exponentials when solving equations.",
+    "keywords": ["logarithm inverse", "exponent", "log and exponential"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Log and exponent relationship"]
+  },
+  {
+    "question": "What is the change of base formula for logarithms?",
+    "answer": "log_b(x) = log_c(x) / log_c(b). Used to compute logarithms in any base with a calculator that only has ln or log₁₀. Example: log₂(8) = ln(8)/ln(2) ≈ 2.079/0.693 ≈ 3. Special cases: log_b(b) = 1; log_b(1) = 0; log_b(1/x) = −log_b(x).",
+    "keywords": ["change of base", "logarithm formula", "log base"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Change of base formula"]
+  },
+  {
+    "question": "What is a binomial?",
+    "answer": "A binomial is a polynomial with two terms. Examples: x + 3; 2a − 5b; x² + 1. Binomials can be multiplied using FOIL, expanded using the binomial theorem, or factored. The binomial theorem: (a + b)^n = Σ C(n,k) a^(n−k) b^k for k = 0 to n. Example: (a + b)² = a² + 2ab + b². (a + b)³ = a³ + 3a²b + 3ab² + b³.",
+    "keywords": ["binomial", "two terms", "binomial theorem"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is a binomial?"]
+  },
+  {
+    "question": "What is Pascal's triangle?",
+    "answer": "Pascal's triangle is a triangular array where each number is the sum of the two above it. Rows: 1; 1 1; 1 2 1; 1 3 3 1; 1 4 6 4 1; ... Row n gives the coefficients of (a + b)^n. Example: (a + b)⁴ = a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴. Each entry C(n, k) is the binomial coefficient. Diagonal sums give Fibonacci numbers.",
+    "keywords": ["pascal triangle", "binomial coefficients", "expansion"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["What is Pascal's triangle?"]
+  },
+  {
+    "question": "What is a real-world use of logarithms?",
+    "answer": "Logarithms appear in: pH scale (acidity, logarithmic), Richter scale (earthquakes), decibels (sound), measuring star brightness (magnitude), compound interest time calculations, population models, algorithms (log n complexity), and signal processing. Example: an earthquake of magnitude 7 is 10 times stronger than magnitude 6 (because it's base 10).",
+    "keywords": ["logarithms real life", "pH", "richter", "decibel"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Real life uses of logarithms"]
+  },
+  {
+    "question": "How do I answer a question about a topic I don't have in the dataset?",
+    "answer": "If the topic is not in the knowledge base and not a computable question (like arithmetic or a simple calculation), be honest: say you do not have information on that topic in the imported dataset. Do not invent facts or pretend to know. You can suggest the user import more files or rephrase the question. Never fabricate sources, references, or content that is not in the dataset. The correct response is something like: 'I do not have a reliable entry for that in your knowledge base.'",
+    "keywords": ["no knowledge", "unknown topic", "honesty", "no answer"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["What to say when I don't know", "Unknown topic response"]
+  },
+  {
+    "question": "How do I verify if a number claim is real?",
+    "answer": "Check these: (1) Does the source exist and is it reputable? (2) Can it be reproduced or independently verified? (3) Does it contradict well-established facts? (4) Is the number plausible given the context? Example: 'There are 8 planets in our solar system' — verifiable, from IAU. 'The Moon is made of cheese' — contradicts known science. 'Humans have 206 bones' — verifiable in anatomy. If a claim contradicts verified knowledge, flag it. If it cannot be verified, say so.",
+    "keywords": ["verify number", "fact check", "real or fake number"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["How to verify a number", "Check number claim"]
+  },
+  {
+    "question": "How do I recognize a fake math fact?",
+    "answer": "Common signs: (1) Numbers that contradict established facts (e.g., 9 planets when there are 8). (2) Formulae that don't check out (e.g., area of circle = 2πr, which is circumference not area). (3) Impossible results (probability > 1 or < 0). (4) Non-existent constants or invented symbols. (5) Claims that 'math says X' without a derivation. (6) Made-up formulas. Always cross-check against basic known truths.",
+    "keywords": ["fake math", "false fact", "recognize fake", "check math"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["How to spot fake math facts"]
+  },
+  {
+    "question": "What is a mathematical proof?",
+    "answer": "A proof is a logical argument that a statement is true. Types: direct proof (assume hypothesis, derive conclusion), proof by contradiction (assume false, derive contradiction), proof by contrapositive (prove ¬Q → ¬P), proof by induction (base case + inductive step). Proofs use axioms, definitions, and previously proven theorems. Example: prove √2 is irrational by assuming it equals p/q in lowest terms, then deriving a contradiction.",
+    "keywords": ["proof", "mathematical argument", "logic", "theorem"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is a proof?"]
+  },
+  {
+    "question": "What is a theorem vs a lemma vs a corollary?",
+    "answer": "A theorem is a proven mathematical statement of importance. A lemma is a smaller proven statement used to prove a bigger theorem. A corollary is a result that follows easily from a theorem. An axiom is assumed true without proof. A conjecture is a statement believed true but not yet proven (e.g., Goldbach, Riemann Hypothesis).",
+    "keywords": ["theorem", "lemma", "corollary", "axiom", "conjecture"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["Theorem vs lemma vs corollary"]
+  },
+  {
+    "question": "What are some famous math theorems?",
+    "answer": "Pythagorean theorem: a² + b² = c² for right triangles. Fermat's Last Theorem: xⁿ + yⁿ = zⁿ has no positive integer solutions for n > 2 (proved 1994). Fundamental theorem of calculus: differentiation and integration are inverses. Fundamental theorem of arithmetic: every integer > 1 is a unique product of primes. Gödel's incompleteness theorems: any consistent formal system has true statements it cannot prove. Four color theorem: any map can be colored with 4 colors.",
+    "keywords": ["famous theorems", "math theorems", "list"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["Famous math theorems"]
+  },
+  {
+    "question": "What is a counterexample?",
+    "answer": "A counterexample is a specific instance that disproves a general statement. Example: the claim 'all primes are odd' is false — 2 is prime and even. If a single counterexample exists, the universal statement is false. To disprove 'for all x, P(x)', it suffices to find one x where P(x) is false.",
+    "keywords": ["counterexample", "disprove", "false statement"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is a counterexample?"]
+  },
+  {
+    "question": "What is mathematical induction?",
+    "answer": "A proof technique for statements about all positive integers n. Two steps: (1) Base case: show the statement is true for n = 1 (or the smallest value). (2) Inductive step: assume true for n = k, prove true for n = k+1. If both hold, the statement is true for all n. Example: prove 1 + 2 + ... + n = n(n+1)/2. Base: n=1 → 1 = 1×2/2 ✓. Inductive: assume 1+2+...+k = k(k+1)/2; then 1+...+k+(k+1) = k(k+1)/2 + (k+1) = (k+1)(k+2)/2 ✓.",
+    "keywords": ["induction", "proof technique", "base case", "inductive step"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is induction?", "Proof by induction"]
+  },
+  {
+    "question": "How do I handle a question about something impossible?",
+    "answer": "State honestly that it is impossible and why. Example: 'What is the square root of a negative number in real numbers?' → it is undefined in ℝ; the answer is imaginary (uses i). 'What is 5 divided by 0?' → undefined; division by zero is not allowed in arithmetic. 'What is the largest prime number?' → there is no largest; Euclid proved infinitely many. Never invent an answer to an impossible question.",
+    "keywords": ["impossible question", "undefined", "no answer"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["How to answer impossible math questions"]
+  },
+  {
+    "question": "What is the largest known prime number?",
+    "answer": "There is no largest prime — Euclid proved there are infinitely many primes. The largest KNOWN prime (as of 2024) is 2^82,589,933 − 1, a Mersenne prime with 24,862,048 digits, discovered in December 2018 by the Great Internet Mersenne Prime Search (GIMPS). It will eventually be surpassed. Do NOT claim there is a 'largest prime.'",
+    "keywords": ["largest prime", "mersenne prime", "infinite primes"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is the biggest prime number?"]
+  },
+  {
+    "question": "Is zero even or odd?",
+    "answer": "Zero is even. Definition: an integer is even if it is divisible by 2 (i.e., n = 2k for some integer k). 0 = 2 × 0, so 0 is even. It is also an integer, neither positive nor negative. 0 is the additive identity. 0 is NOT prime (primes must have exactly two divisors; 0 has infinitely many).",
+    "keywords": ["is zero even", "zero odd", "even number"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["Is 0 even?", "Zero even or odd?"]
+  },
+  {
+    "question": "What is 0 divided by 0?",
+    "answer": "0 ÷ 0 is undefined in standard arithmetic. If 0/0 = x, then x × 0 = 0, which is true for every x, so x is not uniquely determined. In calculus, this is called an 'indeterminate form' and limits involving 0/0 must be evaluated carefully (L'Hôpital's rule). In most computer languages, 0/0 with integers throws an error; with floating-point, it gives NaN (not a number).",
+    "keywords": ["0 divided by 0", "undefined", "indeterminate"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["What is 0/0?"]
+  },
+  {
+    "question": "What is 1 divided by 0?",
+    "answer": "1 ÷ 0 is undefined. There is no number that, multiplied by 0, gives 1. In limits, 1/0 from the positive side tends to +∞ and from the negative side tends to −∞. But 'undefined' is the correct answer in arithmetic. Some programming languages return Infinity or throw a DivisionByZeroError. Correct response: undefined.",
+    "keywords": ["1 divided by 0", "undefined", "infinity"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["What is 1/0?"]
+  },
+  {
+    "question": "Is infinity a number?",
+    "answer": "Infinity (∞) is a concept, not a real number. You cannot do arithmetic with it in the usual way: ∞ + 1 = ∞, ∞ − ∞ is undefined, ∞/∞ is undefined, 1/∞ → 0 in the limit. In set theory, different sizes of infinity exist (cardinal numbers, e.g., ℵ₀ countable vs uncountable). In calculus, ∞ is a useful shorthand for limits.",
+    "keywords": ["infinity", "∞", "number", "concept"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["Is infinity a number?"]
+  },
+  {
+    "question": "Is 1 a prime number?",
+    "answer": "No. 1 is not a prime number. A prime must have exactly two positive divisors: 1 and itself. Since 1 has only one divisor (itself), it is neither prime nor composite. It is called a 'unit'. The first prime is 2. This definition is important because it makes the fundamental theorem of arithmetic (unique prime factorization) work.",
+    "keywords": ["1 prime", "is 1 prime", "prime definition"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["Is 1 a prime number?"]
+  },
+  {
+    "question": "How do I check if a number is prime?",
+    "answer": "Test divisibility by integers from 2 up to √n. If none divide evenly, the number is prime. Example: is 29 prime? √29 ≈ 5.4 → test 2, 3, 5. None divide 29, so 29 is prime. Is 91 prime? √91 ≈ 9.5 → test 2, 3, 5, 7 → 91 = 7 × 13, not prime. For large numbers, use probabilistic tests (Miller-Rabin) or deterministic tests (AKS).",
+    "keywords": ["prime test", "check prime", "primality"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["How to test if a number is prime"]
+  },
+  {
+    "question": "What is the difference between a number and a numeral?",
+    "answer": "A number is a mathematical concept (the idea of 'three'). A numeral is a written symbol or name for that number (3, III, three, ٣ in Arabic). Different numerals can represent the same number. Roman numerals: I=1, V=5, X=10, L=50, C=100, D=500, M=1000. Binary uses 0-1; hexadecimal uses 0-9 and A-F.",
+    "keywords": ["number vs numeral", "representation", "digit"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["Difference between number and numeral"]
+  },
+  {
+    "question": "What are common math mistakes to avoid?",
+    "answer": "(1) Forgetting order of operations: 2 + 3 × 4 is 14, not 20. (2) Adding fractions without a common denominator: 1/2 + 1/3 ≠ 2/5. (3) Distributing incorrectly: (a + b)² ≠ a² + b². (4) Dividing by zero. (5) Dropping negative signs. (6) Forgetting to flip inequality when multiplying by a negative. (7) Rounding too early. (8) Mixing units. (9) Confusing area and perimeter. (10) Forgetting + C in indefinite integrals.",
+    "keywords": ["common mistakes", "math errors", "avoid"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Common math mistakes"]
+  },
+  {
+    "question": "What is a word problem strategy?",
+    "answer": "Strategy: (1) Read the whole problem carefully. (2) Identify what is asked. (3) List given information. (4) Choose a strategy (draw a diagram, work backward, make a table, guess and check, look for a pattern). (5) Solve step by step. (6) Check reasonableness. (7) Write the answer with units. (8) Verify by substituting back. For complex problems, break into smaller parts. Use estimation to catch mistakes.",
+    "keywords": ["word problem", "strategy", "how to solve", "steps"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["How to solve word problems", "Problem solving strategy"]
+  },
+  {
+    "question": "How do I convert between units?",
+    "answer": "Use the conversion factor as a fraction: multiply by (new unit / old unit). Example: convert 5 km to meters → 5 km × (1000 m / 1 km) = 5000 m. The unit 'km' cancels. Convert 12 inches to cm → 12 in × (2.54 cm / 1 in) = 30.48 cm. Chain conversions: 2 hours → seconds = 2 h × (60 min/1 h) × (60 s/1 min) = 7200 s. Always check the unit cancels to the right one.",
+    "keywords": ["unit conversion", "dimensional analysis", "conversion factor"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["How to convert units", "Dimensional analysis"]
+  },
+  {
+    "question": "What is scientific notation used for?",
+    "answer": "Scientific notation writes very large or very small numbers compactly. Used in science, engineering, and computing. Example: the mass of an electron is about 9.109 × 10^(−31) kg. The distance to the Sun is about 1.496 × 10⁸ km. Rules: number before × must be between 1 and 10. This makes numbers easier to compare, multiply, and divide.",
+    "keywords": ["scientific notation uses", "large numbers", "small numbers"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["Why use scientific notation?"]
+  },
+  {
+    "question": "What is the difference between exact and approximate?",
+    "answer": "Exact values are precise with no rounding (e.g., 1/3, π symbol, √2 symbol). Approximate values are rounded decimals (e.g., 0.333, 3.14, 1.41). Use exact when possible for algebraic work; convert to approximate only for final answers. Example: 1/3 + 1/3 + 1/3 = 1 exactly, but 0.333 + 0.333 + 0.333 = 0.999 ≈ 1. Round only at the end to avoid accumulating errors.",
+    "keywords": ["exact", "approximate", "rounding", "precision"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Exact vs approximate"]
+  },
+  {
+    "question": "What is the mathematical meaning of average?",
+    "answer": "Average usually means the arithmetic mean: sum of values divided by count. But 'average' can be ambiguous: arithmetic mean (most common), median, mode, geometric mean, or weighted average. In math contexts, 'average' usually refers to the arithmetic mean. Example: average of 4, 8, 6 is (4+8+6)/3 = 6. Always specify which type of average if the distinction matters.",
+    "keywords": ["average", "mean", "ambiguous"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["What does average mean?"]
+  },
+  {
+    "question": "How do I interpret a graph?",
+    "answer": "(1) Read the title and axes labels. (2) Note the units. (3) Check the scale (each tick = ?). (4) Identify the trend (increasing, decreasing, flat, cyclical). (5) Find specific values (interpolate between points). (6) Identify key points: maxima, minima, intercepts, peaks. (7) Consider outliers. (8) Distinguish correlation from causation. Example: a line going up from left to right indicates increase over time.",
+    "keywords": ["interpret graph", "read graph", "chart"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["How to read a graph"]
+  },
+  {
+    "question": "What is a mathematical model?",
+    "answer": "A mathematical model uses math to describe a real-world system. Examples: population growth (exponential), projectile motion (quadratic), spread of disease (SIR model), economic supply/demand (linear), climate (complex systems). Models simplify reality and are useful if they predict accurately. 'All models are wrong, but some are useful' — George Box.",
+    "keywords": ["mathematical model", "simulation", "real world"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["What is a math model?"]
+  },
+  {
+    "question": "How do I check if my math answer is realistic?",
+    "answer": "Sanity check: (1) Is the size reasonable? A person's height is not 15 m. (2) Are the units correct? (3) Does the sign make sense (negative distance?)? (4) Estimate: 47 × 8 ≈ 50 × 8 = 400. Actual 376 ✓. (5) Reverse the operation: if a + b = c, then c − b should equal a. (6) Check order of magnitude. (7) Consider the context of the problem.",
+    "keywords": ["realistic answer", "check answer", "sanity check"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Is my answer realistic?"]
+  },
+  {
+    "question": "What does it mean to 'solve' a math problem?",
+    "answer": "'Solve' means to find the value(s) of the unknown that make a statement true. For equations, find x. For word problems, answer the specific question asked. Types of solutions: unique (one answer), infinite (many answers), none (no solution). Always check your solution by substituting back. Report the answer with the correct units and in the form requested.",
+    "keywords": ["solve", "solution", "answer"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["What does solve mean?"]
+  },
+  {
+    "question": "How do I approach an unfamiliar math problem?",
+    "answer": "(1) Do not panic — unfamiliar problems often combine familiar steps. (2) Restate the problem in your own words. (3) Identify what is given and what is asked. (4) Draw a diagram if it helps. (5) Look for similar problems or patterns. (6) Try simpler cases first (use smaller numbers). (7) Break it into smaller sub-problems. (8) Use estimation to bound your answer. (9) If stuck, work backward from the goal. (10) Verify the answer against the original question.",
+    "keywords": ["unfamiliar problem", "approach", "strategy", "how to start"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["How to approach a math problem"]
+  },
+  {
+    "question": "What is a math word problem clue for subtraction?",
+    "answer": "Subtraction clues: 'how many more', 'how many less', 'difference', 'fewer', 'less than', 'take away', 'left', 'remain', 'spent', 'lost', 'gave away', 'change (money)'. Example: 'Sam had 10 apples and gave away 3. How many left?' → 10 − 3 = 7. 'How many more is 15 than 9?' → 15 − 9 = 6. Signal: comparison or removal.",
+    "keywords": ["subtraction word problem", "clue words", "how many more"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Subtraction clues in word problems"]
+  },
+  {
+    "question": "What is a math word problem clue for addition?",
+    "answer": "Addition clues: 'in all', 'total', 'altogether', 'combined', 'sum', 'and', 'plus', 'together', 'both', 'gained'. Example: 'Sam has 5 apples and gets 3 more. How many now?' → 5 + 3 = 8. 'What is the total of 7 and 5?' → 7 + 5 = 12. Signal: combining or gaining.",
+    "keywords": ["addition word problem", "clue words", "total", "in all"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Addition clues in word problems"]
+  },
+  {
+    "question": "What is a math word problem clue for division?",
+    "answer": "Division clues: 'split', 'share equally', 'per person', 'how many in each', 'groups of', 'divide', 'average', 'unit rate', 'ratio'. Example: '12 cookies split among 4 children — how many each?' → 12 ÷ 4 = 3. 'How many groups of 4 can you make from 20?' → 20 ÷ 4 = 5. Signal: sharing or grouping.",
+    "keywords": ["division word problem", "clue words", "split", "share"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Division clues in word problems"]
+  },
+  {
+    "question": "What is a math word problem clue for multiplication?",
+    "answer": "Multiplication clues: 'each', 'per', 'every', 'times', 'groups of', 'product', 'twice', 'triple', 'double', 'total when repeated'. Example: '5 bags each with 8 marbles — how many marbles?' → 5 × 8 = 40. 'Twice 7' → 14. Signal: repeated groups of equal size.",
+    "keywords": ["multiplication word problem", "clue words", "each", "per"],
+    "category": "Word Problems",
+    "language": "en",
+    "aliases": ["Multiplication clues in word problems"]
+  },
+  {
+    "question": "What is the sum of angles around a point?",
+    "answer": "Angles around a point (a full circle) sum to 360°. Example: three angles around a point are 120°, 90°, and x. Then x = 360 − 120 − 90 = 150°. Angles on a straight line sum to 180°. These are called angle facts and are used in geometry problems.",
+    "keywords": ["angles around a point", "360 degrees", "straight line", "geometry"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Angles around a point sum to?"]
+  },
+  {
+    "question": "What is the difference between complementary and supplementary angles?",
+    "answer": "Complementary angles sum to 90°. Supplementary angles sum to 180°. Example: 40° and 50° are complementary. 120° and 60° are supplementary. Mnemonic: 'C' for Corner (90°), 'S' for Straight (180°).",
+    "keywords": ["complementary", "supplementary", "angles", "90", "180"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Complementary vs supplementary"]
+  },
+  {
+    "question": "What is a congruent shape?",
+    "answer": "Two shapes are congruent if they have the same size and shape — one can be moved (translated, rotated, reflected) to exactly overlap the other. Symbol: ≅. Example: two triangles with all three sides equal (SSS) are congruent. Two rectangles with the same width and height are congruent. Congruent ≠ similar: similar shapes have the same shape but can be different sizes.",
+    "keywords": ["congruent", "same size", "shape", "geometry"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["What is congruent?"]
+  },
+  {
+    "question": "What is a similar shape?",
+    "answer": "Two shapes are similar if they have the same shape but may differ in size. Corresponding angles are equal, and corresponding sides are in proportion. Symbol: ~. Example: two triangles with angles 30°, 60°, 90° are similar. Ratio of areas = square of the ratio of side lengths. Used in scale drawings and maps.",
+    "keywords": ["similar shapes", "proportional", "scale", "geometry"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["What is similar?"]
+  },
+  {
+    "question": "What is the area of a trapezoid?",
+    "answer": "Area of a trapezoid = (a + b) / 2 × h, where a and b are the parallel sides and h is the height (perpendicular distance between them). Example: parallel sides 6 and 4, height 3 → area = (6+4)/2 × 3 = 15. This is the average of the parallel sides times the height.",
+    "keywords": ["trapezoid area", "trapezium", "parallel sides"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Trapezoid area formula"]
+  },
+  {
+    "question": "What is a perpendicular line?",
+    "answer": "Two lines are perpendicular if they intersect at a 90° angle. Symbol: ⊥. Slopes of perpendicular lines multiply to −1: if m₁ × m₂ = −1, the lines are perpendicular. Example: y = 2x is perpendicular to y = −1/2 x. Vertical and horizontal lines are perpendicular. In a right triangle, the two legs are perpendicular.",
+    "keywords": ["perpendicular", "90 degrees", "right angle"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["What is perpendicular?"]
+  },
+  {
+    "question": "What is a parallel line?",
+    "answer": "Lines are parallel if they lie in the same plane and never intersect. Symbol: ∥. They have equal slopes and stay the same distance apart. Example: y = 2x + 1 and y = 2x + 5 are parallel. Parallel lines cut by a transversal create equal corresponding angles, alternate interior angles, and alternate exterior angles.",
+    "keywords": ["parallel", "never intersect", "same slope"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["What is parallel?"]
+  },
+  {
+    "question": "How do I calculate the surface area of a cube?",
+    "answer": "Surface area of a cube = 6 × s², where s is the side length. Each face is a square with area s², and there are 6 faces. Example: s = 4 cm → SA = 6 × 16 = 96 cm². Volume = s³ = 64 cm³.",
+    "keywords": ["surface area cube", "cube", "six faces"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Cube surface area formula"]
+  },
+  {
+    "question": "What is a math quiz tip for faster calculation?",
+    "answer": "Tips: (1) Break numbers into tens and ones: 47 + 38 = (40 + 30) + (7 + 8) = 70 + 15 = 85. (2) Round and adjust: 98 × 7 = (100 × 7) − (2 × 7) = 700 − 14 = 686. (3) Use doubles: 7 + 7 = 14, so 7 + 8 = 15. (4) Multiply by 5: × 10 then ÷ 2. (5) Multiply by 25: × 100 then ÷ 4. (6) Square numbers ending in 5: 35² = (3 × 4) followed by 25 = 1225. (7) Percentages: 15% = 10% + 5%. Practice mental arithmetic to speed up.",
+    "keywords": ["mental math", "fast calculation", "tips", "tricks"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Mental math tricks", "Fast math"]
+  },
+  {
+    "question": "What is the doubling and halving strategy?",
+    "answer": "Doubling and halving: if you double one factor and halve the other, the product stays the same. Example: 16 × 25 = 8 × 50 = 4 × 100 = 400. This makes multiplication easier when one factor is even. Also: 24 × 15 = 12 × 30 = 6 × 60 = 3 × 120 = 360.",
+    "keywords": ["doubling halving", "multiplication trick", "mental math"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Doubling and halving trick"]
+  },
+  {
+    "question": "What is a real-world example of estimation?",
+    "answer": "Estimation examples: (1) Grocery bill: 3 items ≈ $2 + $3 + $5 ≈ $10 (before tax). (2) Trip time: 240 km at 80 km/h ≈ 3 hours. (3) Paint needed: room 5×4 m walls, 2.5 m high → ~45 m² → about 5 L. (4) Distance: a step is ~0.75 m, so 1000 steps ≈ 750 m. Estimation is fast, approximate, and useful for quick decisions and error checking.",
+    "keywords": ["estimation", "estimate", "approximate", "real life"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Examples of estimation"]
+  },
+  {
+    "question": "What is a fraction of a number?",
+    "answer": "To find a fraction of a number, multiply the fraction by the number. Example: 3/4 of 20 = 3/4 × 20 = 15. Steps: divide 20 by 4 (denominator) = 5, then multiply by 3 (numerator) = 15. Example: 2/5 of 30 = (30 ÷ 5) × 2 = 12. Fraction of = multiply.",
+    "keywords": ["fraction of a number", "fraction multiplication"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["How to find fraction of a number"]
+  },
+  {
+    "question": "What is the sum of the first n squares?",
+    "answer": "Sum of 1² + 2² + 3² + ... + n² = n(n+1)(2n+1) / 6. Example: 1² + 2² + 3² + 4² = 4 × 5 × 9 / 6 = 180 / 6 = 30. Check: 1 + 4 + 9 + 16 = 30 ✓. Sum of first n cubes = (n(n+1)/2)² = (sum 1 to n)².",
+    "keywords": ["sum of squares", "series", "formula"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["Sum of first n squares"]
+  },
+  {
+    "question": "How do I find a missing angle in a triangle?",
+    "answer": "Angles in a triangle sum to 180°. If two angles are known, subtract them from 180. Example: two angles 45° and 60° → third = 180 − 45 − 60 = 75°. For a right triangle, one angle is 90°, so the other two sum to 90° (complementary).",
+    "keywords": ["missing angle", "triangle angle", "180 degrees"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["How to find missing angle"]
+  },
+  {
+    "question": "What is the surface area of a sphere?",
+    "answer": "Surface area of a sphere = 4 × π × r². Example: r = 5 cm → SA = 4 × π × 25 = 100π ≈ 314.16 cm². Interesting: the surface area equals the area of 4 circles with the same radius. Volume of a sphere = (4/3)πr³. The ratio of volume to surface area is r/3.",
+    "keywords": ["surface area sphere", "sphere", "4 pi r squared"],
+    "category": "Geometry",
+    "language": "en",
+    "aliases": ["Sphere surface area formula"]
+  },
+  {
+    "question": "What is a real-world use of the Pythagorean theorem?",
+    "answer": "Uses: (1) Finding the diagonal of a rectangle or TV screen size. (2) Measuring the height of a building using shadows (similar triangles + Pythagoras). (3) Determining if a corner is square (3-4-5 rule in construction). (4) GPS triangulation. (5) Computer graphics for distance between pixels. Example: a 16:9 TV has width w and height h; the diagonal d satisfies d² = w² + h².",
+    "keywords": ["pythagorean real life", "diagonal", "screen size"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Real life Pythagoras"]
+  },
+  {
+    "question": "What is the difference between velocity and speed?",
+    "answer": "Speed is how fast something moves, a scalar (magnitude only). Velocity is speed with direction, a vector. Example: 60 km/h is a speed; 60 km/h east is a velocity. Average speed = total distance / total time. Average velocity = total displacement / total time. Displacement considers direction; distance does not. A runner going around a track once has nonzero speed but zero average velocity (returns to start).",
+    "keywords": ["velocity", "speed", "difference", "vector", "scalar"],
+    "category": "Physics Math",
+    "language": "en",
+    "aliases": ["Speed vs velocity", "Difference speed velocity"]
+  },
+  {
+    "question": "What is the difference between distance and displacement?",
+    "answer": "Distance is the total path length traveled (scalar, always positive). Displacement is the straight-line change in position from start to end (vector, can be negative). Example: walk 3 m east and 4 m north → distance = 7 m; displacement = √(3² + 4²) = 5 m northeast. Distance ≥ |displacement|.",
+    "keywords": ["distance", "displacement", "physics", "difference"],
+    "category": "Physics Math",
+    "language": "en",
+    "aliases": ["Distance vs displacement"]
+  },
+  {
+    "question": "How do I convert km/h to m/s?",
+    "answer": "Multiply by 1000 (m per km) and divide by 3600 (s per hour), which simplifies to × 5/18. Example: 90 km/h = 90 × 5/18 = 25 m/s. Reverse: m/s × 18/5 = km/h. Example: 10 m/s = 10 × 18/5 = 36 km/h.",
+    "keywords": ["km/h to m/s", "speed conversion"],
+    "category": "Unit Conversion",
+    "language": "en",
+    "aliases": ["Convert km/h to m/s"]
+  },
+  {
+    "question": "What is the difference between mass and volume?",
+    "answer": "Mass is how much matter an object contains (kg). Volume is how much space it takes up (m³ or L). Related by density: density = mass / volume. Example: 1 kg of feathers has the same mass as 1 kg of iron, but a much larger volume because feathers are less dense. Water: 1 L ≈ 1 kg (density 1 g/cm³).",
+    "keywords": ["mass", "volume", "density", "difference"],
+    "category": "Physics Math",
+    "language": "en",
+    "aliases": ["Mass vs volume"]
+  },
+  {
+    "question": "How do I add or subtract mixed numbers?",
+    "answer": "Option 1: convert to improper fractions, add, convert back. Example: 2 1/3 + 1 1/4 = 7/3 + 5/4 = 28/12 + 15/12 = 43/12 = 3 7/12. Option 2: add whole parts and fractions separately, then carry over: 2 + 1 = 3; 1/3 + 1/4 = 4/12 + 3/12 = 7/12 → 3 7/12.",
+    "keywords": ["mixed numbers", "add mixed", "subtract mixed"],
+    "category": "Arithmetic",
+    "language": "en",
+    "aliases": ["Add mixed numbers", "Subtract mixed numbers"]
+  },
+  {
+    "question": "What is a real-life use of percentages?",
+    "answer": "Percentages are used in: discounts (25% off), tax (8% sales tax), tips (15-20%), interest rates (5% APR), test scores (85%), statistics (60% of respondents), sports (shooting 45% from the field), nutrition (20% daily value), battery (50% remaining), polling (candidate leads 52% to 45%). Percentages express any fraction as parts of 100.",
+    "keywords": ["percentages real life", "discounts", "tax", "interest"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Real life percentages"]
+  },
+  {
+    "question": "What is a mean vs median vs mode quiz?",
+    "answer": "Quiz: given [2, 3, 3, 5, 7, 9, 12]. Mean = (2+3+3+5+7+9+12)/7 = 41/7 ≈ 5.86. Median = middle of 7 values = 5. Mode = most common = 3. The median here is closer to 'typical' because the 12 pulls the mean up. Range = 12 − 2 = 10.",
+    "keywords": ["mean median mode quiz", "example", "statistics"],
+    "category": "Statistics",
+    "language": "en",
+    "aliases": ["Mean median mode example"]
+  },
+  {
+    "question": "How do I know if a question is asking for a definition vs a calculation?",
+    "answer": "Definition keywords: 'what is', 'define', 'meaning of', 'explain', 'describe'. Calculation keywords: 'how many', 'calculate', 'find', 'compute', 'solve', 'how much', 'what is the result of'. Comparison keywords: 'difference between', 'vs', 'compare', 'which is greater'. Example: 'What is a fraction?' is a definition. 'What is 3/4 of 20?' is a calculation. 'What is the difference between mean and median?' is a comparison.",
+    "keywords": ["question type", "definition vs calculation", "identify"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["How to tell question type"]
+  },
+  {
+    "question": "How do I identify a math question?",
+    "answer": "Signs of a math question: (1) Contains numbers or quantities. (2) Asks 'how many', 'how much', 'calculate', 'compute', 'solve', 'find'. (3) Involves comparison ('more than', 'less than', 'times'). (4) Uses math symbols. (5) Describes a scenario with quantities (e.g., 'Sam has 3 boxes...'). If a question has no numbers and no math operation requested, it may be a definition, opinion, or chat question.",
+    "keywords": ["identify math question", "question type", "is this math"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["How to identify a math question"]
+  },
+  {
+    "question": "What is a math fact that is often wrong?",
+    "answer": "Commonly wrong beliefs: (1) 'There are 9 planets' — there are 8 (Pluto is a dwarf planet since 2006). (2) 'Multiplication always makes bigger' — false: 0.5 × 0.5 = 0.25. (3) '0 is odd' — it's even. (4) '1 is prime' — it's not. (5) 'Dividing makes smaller' — false: 6 ÷ 0.5 = 12. (6) 'Infinity is a number' — it's a concept. (7) 'Zero divided by zero is 0' — it's undefined. (8) 'The sum of angles in a triangle is always 180°' — true for plane (Euclidean) geometry but not on a sphere.",
+    "keywords": ["math misconceptions", "wrong facts", "common errors"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["Common math misconceptions"]
+  },
+  {
+    "question": "How many digits in a googol?",
+    "answer": "A googol is 10^100 — that is, 1 followed by 100 zeros. A googolplex is 10^(googol) — 1 followed by a googol zeros, far larger than the number of atoms in the observable universe. These names were coined by Milton Sirotta (age 9) in 1920. Googol is not a 'real' mathematical constant but is used to illustrate huge numbers. Google the company name is a misspelling of googol.",
+    "keywords": ["googol", "10^100", "huge number", "googolplex"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["What is a googol?"]
+  },
+  {
+    "question": "What is the difference between weight and mass in physics?",
+    "answer": "Mass (kg) is the amount of matter in an object — stays the same everywhere. Weight (N) is the force of gravity on that mass — depends on location. Weight = mass × gravity (W = mg). Earth: g ≈ 9.81 m/s²; Moon: g ≈ 1.62 m/s² (about 1/6). A 60 kg person weighs about 588 N on Earth but only about 97 N on the Moon. In everyday language, 'weight' often means mass, but in physics they are different.",
+    "keywords": ["weight", "mass", "physics difference", "gravity"],
+    "category": "Physics Math",
+    "language": "en",
+    "aliases": ["Weight vs mass physics"]
+  },
+  {
+    "question": "What is a solution to an inequality in interval notation?",
+    "answer": "Interval notation: use parentheses ( ) for open endpoints (excluded, < or >) and square brackets [ ] for closed endpoints (included, ≤ or ≥). Example: x > 3 is (3, ∞). x ≤ 5 is (−∞, 5]. 2 ≤ x < 7 is [2, 7). Union uses ∪ for 'or'. Example: x < 1 or x ≥ 4 is (−∞, 1) ∪ [4, ∞).",
+    "keywords": ["interval notation", "inequality", "open closed interval"],
+    "category": "Algebra",
+    "language": "en",
+    "aliases": ["Interval notation for inequalities"]
+  },
+  {
+    "question": "How do I solve a compound interest problem with continuous compounding?",
+    "answer": "Formula: A = P × e^(rt), where P is principal, r is annual rate, t is years, e ≈ 2.71828. Example: $1000 at 5% for 10 years: A = 1000 × e^(0.05 × 10) = 1000 × e^0.5 ≈ $1648.72. Continuous compounding gives the maximum possible growth for a given nominal rate. Compare to annual compounding: $1000 × (1.05)^10 ≈ $1628.89.",
+    "keywords": ["continuous compounding", "compound interest", "euler"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["Continuous compound interest formula"]
+  },
+  {
+    "question": "What is the difference between simple and compound interest?",
+    "answer": "Simple interest is calculated only on the original principal: I = Prt. Compound interest is calculated on principal PLUS accumulated interest: A = P(1 + r/n)^(nt). Example: $1000 at 5% for 10 years. Simple: $1000 + 1000×0.05×10 = $1500. Compound (annually): $1000 × 1.05^10 ≈ $1628.89. Compound grows faster because interest earns interest.",
+    "keywords": ["simple vs compound interest", "interest difference"],
+    "category": "Financial Math",
+    "language": "en",
+    "aliases": ["Simple vs compound interest"]
+  },
+  {
+    "question": "What is the Fibonacci ratio in nature?",
+    "answer": "Consecutive Fibonacci numbers ratio to φ ≈ 1.618 (golden ratio). Appears in: sunflower seed spirals (34/55 or 55/89), pinecone scales, nautilus shell (approximate), tree branching, pineapple hexagons, flower petals (3, 5, 8, 13, 21). The ratio is a mathematical pattern, not a mystical force — it emerges from efficient packing and growth dynamics.",
+    "keywords": ["fibonacci nature", "golden ratio nature", "spirals"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Fibonacci in nature"]
+  },
+  {
+    "question": "What is a mathematical proof by contradiction?",
+    "answer": "Proof by contradiction: assume the opposite of what you want to prove, then show that assumption leads to a logical impossibility. Example: prove √2 is irrational. Assume √2 = p/q in lowest terms. Then 2q² = p², so p is even. Write p = 2k → 2q² = 4k² → q² = 2k² → q is also even. Contradiction: p and q are both even, but we assumed lowest terms. Therefore √2 is irrational.",
+    "keywords": ["proof by contradiction", "reductio", "irrational"],
+    "category": "Number Theory",
+    "language": "en",
+    "aliases": ["Proof by contradiction example"]
+  },
+  {
+    "question": "What is a mathematical shortcut for squaring numbers near 100?",
+    "answer": "For n = 100 − a (where a is small): n² = 10000 − 200a + a². Example: 97² = (100 − 3)² = 10000 − 600 + 9 = 9409. For n = 100 + a: n² = 10000 + 200a + a². Example: 103² = 10000 + 600 + 9 = 10609. Similarly for numbers near 50: (50 + a)² = 2500 + 100a + a².",
+    "keywords": ["squaring trick", "mental math", "square numbers"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Square numbers near 100"]
+  },
+  {
+    "question": "How do I multiply numbers close to 100 quickly?",
+    "answer": "For a × b where both are close to 100: write a = 100 − x and b = 100 − y (x, y are small). Then a × b = 10000 − 100(x + y) + xy. Example: 97 × 96 → x = 3, y = 4 → 10000 − 700 + 12 = 9312. Check: 97 × 96 = 9312 ✓. This uses (100 − x)(100 − y) = 10000 − 100(x+y) + xy.",
+    "keywords": ["multiplication trick", "near 100", "mental math"],
+    "category": "Problem Solving",
+    "language": "en",
+    "aliases": ["Multiply numbers near 100"]
+  },
+  {
+    "question": "How do I check whether an answer about planets is correct?",
+    "answer": "Verify: (1) Count: 8 planets (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune). (2) Order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. (3) Jupiter is largest; Mercury smallest. (4) Earth is the only one with known life. (5) Pluto is a dwarf planet. (6) 'Planet 9' does not exist officially; there is a hypothetical 'Planet Nine' that has never been observed. Any other name (X, Zorgon, Vulcan) is fictional and should be flagged as not a real planet.",
+    "keywords": ["check planets", "planet facts", "verify astronomy"],
+    "category": "Fact Checking",
+    "language": "en",
+    "aliases": ["Verify planet facts"]
+  }
+]
