@@ -1,0 +1,594 @@
+[
+  {
+    "question": "What was ancient Egypt?",
+    "answer": "Ancient Egypt was a civilization that flourished along the Nile River in northeastern Africa for over three thousand years, starting around 3100 BCE when Upper and Lower Egypt were united under the first pharaoh. The yearly flooding of the Nile made the land fertile and allowed farming to thrive. Egyptians built monumental tombs and temples, including the pyramids of Giza, with the Great Pyramid built for Pharaoh Khufu around 2560 BCE and once the tallest human-made structure in the world. They developed hieroglyphic writing, mummification, a 365-day calendar and advanced medicine and mathematics. Famous rulers include Hatshepsut, Ramses II, Tutankhamun, whose nearly intact tomb was found by Howard Carter in 1922, and Cleopatra VII, the last active pharaoh. The Rosetta Stone, found in 1799, helped Jean-Francois Champollion decipher hieroglyphs in 1822.",
+    "keywords": [
+      "egypt",
+      "pyramids",
+      "pharaoh",
+      "nile",
+      "hieroglyphs",
+      "tutankhamun",
+      "cleopatra",
+      "rosetta stone"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who built the pyramids",
+      "what is a pharaoh",
+      "who was cleopatra",
+      "what is the rosetta stone",
+      "what are hieroglyphs"
+    ]
+  },
+  {
+    "question": "What was Mesopotamia?",
+    "answer": "Mesopotamia, meaning the land between the rivers, was the region between the Tigris and Euphrates rivers, in what is now mostly Iraq and parts of Syria, Turkey and Iran. It is often called the cradle of civilization. Around 3500 BCE the Sumerians built some of the first cities, such as Uruk and Ur, and developed cuneiform, one of the earliest writing systems, pressed into clay tablets. Mesopotamians invented or improved the wheel, irrigation, the plow, a base-sixty number system that gives us 60 minutes in an hour, and early laws. Later empires included Akkad, Babylon, whose king Hammurabi issued a famous law code around 1754 BCE, and Assyria. The Epic of Gilgamesh, a poem from this region, is among the oldest surviving works of literature.",
+    "keywords": [
+      "mesopotamia",
+      "sumer",
+      "babylon",
+      "cuneiform",
+      "hammurabi",
+      "gilgamesh",
+      "tigris",
+      "euphrates"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "where did writing begin",
+      "what is cuneiform",
+      "who was hammurabi",
+      "what is the cradle of civilization",
+      "who were the sumerians"
+    ]
+  },
+  {
+    "question": "What was ancient Greece?",
+    "answer": "Ancient Greece was a collection of independent city-states that shaped Western culture, flourishing roughly from 800 BCE to 146 BCE. Athens developed an early form of democracy around 508 BCE, while Sparta was known for its military society. The Greeks held the first Olympic Games in 776 BCE in honor of Zeus. Thinkers like Socrates, Plato and Aristotle laid foundations for philosophy and science, Hippocrates is called the father of medicine, Pythagoras and Euclid advanced mathematics, and Homer composed the Iliad and Odyssey. The Parthenon in Athens remains a symbol of Greek architecture. In the 4th century BCE, Alexander the Great of Macedon built a vast empire stretching from Greece to Egypt and India, spreading Greek culture across the known world.",
+    "keywords": [
+      "greece",
+      "athens",
+      "sparta",
+      "olympics",
+      "socrates",
+      "plato",
+      "aristotle",
+      "alexander the great"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who was alexander the great",
+      "what is the parthenon",
+      "who was socrates",
+      "when were the first olympics",
+      "what was athenian democracy"
+    ]
+  },
+  {
+    "question": "What was the Roman Empire?",
+    "answer": "According to tradition Rome was founded in 753 BCE, became a republic in 509 BCE and grew to dominate the Mediterranean. After a period of civil wars and the assassination of Julius Caesar in 44 BCE, his heir Augustus became the first emperor in 27 BCE. At its height, in the early 2nd century CE under Trajan, the empire covered around five million square kilometers and perhaps a quarter of the world's population. Romans were known for engineering, including roads, aqueducts, concrete and the Colosseum, for Roman law and for Latin, which evolved into the Romance languages. The Western Roman Empire fell in 476 CE, while the Eastern Roman or Byzantine Empire, with its capital Constantinople, lasted until 1453.",
+    "keywords": [
+      "rome",
+      "roman empire",
+      "julius caesar",
+      "augustus",
+      "colosseum",
+      "latin",
+      "byzantine",
+      "gladiators"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who was julius caesar",
+      "when did rome fall",
+      "what was the colosseum",
+      "what was the byzantine empire",
+      "who was the first roman emperor"
+    ]
+  },
+  {
+    "question": "What was the Islamic Golden Age?",
+    "answer": "The Islamic Golden Age was a period roughly from the 8th to the 13th century when scholars in the Islamic world made major advances in science, medicine, mathematics, philosophy, art and literature. A center was the House of Wisdom in Baghdad, where books from Greek, Persian and Indian sources were translated and expanded. Muhammad al-Khwarizmi developed algebra, and the word algorithm comes from his name. Ibn al-Haytham pioneered the study of optics and the scientific method, Ibn Sina, known in Europe as Avicenna, wrote The Canon of Medicine, used in universities for centuries, al-Zahrawi advanced surgery, and al-Biruni measured the Earth. Cities such as Baghdad, Cairo, Cordoba and Damascus became great centers of learning, and Arabic numerals reached Europe through this world.",
+    "keywords": [
+      "islamic golden age",
+      "house of wisdom",
+      "al-khwarizmi",
+      "ibn sina",
+      "ibn al-haytham",
+      "algebra",
+      "baghdad",
+      "science"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who invented algebra",
+      "who was ibn sina",
+      "where does the word algorithm come from",
+      "what was the house of wisdom",
+      "who was ibn al-haytham"
+    ]
+  },
+  {
+    "question": "What were the Middle Ages?",
+    "answer": "The Middle Ages, or medieval period, is the era in European history from about the 5th century, after the fall of the Western Roman Empire, to the 15th century. It is often divided into the Early, High and Late Middle Ages. Society was organized by feudalism, in which kings granted land to nobles in return for loyalty and military service, and peasants worked the land. Castles, knights, monasteries and cathedrals are symbols of the era, as are the Crusades and the Viking Age. The Black Death, a plague pandemic from 1347 to 1351, killed tens of millions of people across Europe, Asia and North Africa. It was not a purely dark age, since universities, such as those in Bologna and Oxford, trade fairs and new technologies like the heavy plow and windmills developed.",
+    "keywords": [
+      "middle ages",
+      "medieval",
+      "feudalism",
+      "knights",
+      "castles",
+      "black death",
+      "crusades",
+      "vikings"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "what was the black death",
+      "what is feudalism",
+      "what did knights do",
+      "who were the vikings",
+      "what is the dark ages"
+    ]
+  },
+  {
+    "question": "What was the Silk Road?",
+    "answer": "The Silk Road was a network of trade routes that connected East Asia with the Mediterranean world, active from around the 2nd century BCE until the 15th century CE. It was not one road but many land and sea paths crossing deserts, mountains and oceans. Caravans carried silk from China, spices from India, glass and gold from the West, horses, porcelain, paper and more. Cities like Samarkand, Bukhara, Baghdad and Damascus grew wealthy as trading hubs. Beyond goods, the Silk Road spread religions such as Buddhism and Islam, inventions such as paper and gunpowder, artistic styles and unfortunately diseases, including the plague. Marco Polo and Ibn Battuta are famous travelers who explored these lands.",
+    "keywords": [
+      "silk road",
+      "trade",
+      "caravan",
+      "marco polo",
+      "ibn battuta",
+      "china",
+      "spices",
+      "samarkand"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "what was traded on the silk road",
+      "who was marco polo",
+      "who was ibn battuta",
+      "how did trade spread ideas",
+      "what is the spice trade"
+    ]
+  },
+  {
+    "question": "Who was Genghis Khan and what was the Mongol Empire?",
+    "answer": "Genghis Khan, born Temujin around 1162, united the nomadic Mongol tribes and was proclaimed ruler in 1206, taking the title Chinggis Khan. Using highly mobile horse archers and clever strategy, the Mongols conquered a vast territory. After his death in 1227, his successors expanded the empire until it became the largest contiguous land empire in history, stretching from Korea to Eastern Europe, and covering about 24 million square kilometers at its peak. It was divided into khanates, such as the Yuan dynasty in China under Kublai Khan, the Golden Horde, the Ilkhanate and the Chagatai Khanate. The Mongols promoted trade along the Silk Road, protected travelers in what is known as the Pax Mongolica and tolerated many religions, but their conquests also caused huge destruction and loss of life.",
+    "keywords": [
+      "genghis khan",
+      "mongol empire",
+      "kublai khan",
+      "horse archers",
+      "yuan dynasty",
+      "golden horde",
+      "steppe"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who was kublai khan",
+      "how big was the mongol empire",
+      "what was the pax mongolica",
+      "who were the mongols",
+      "what is a khan"
+    ]
+  },
+  {
+    "question": "What was the Ottoman Empire?",
+    "answer": "The Ottoman Empire was a large state founded around 1299 by Osman I in Anatolia, in present-day Turkey, and it lasted until 1922. In 1453 Sultan Mehmed II captured Constantinople, ending the Byzantine Empire and renaming the city Istanbul. In the 16th century, under Suleiman the Magnificent, the empire reached great power, controlling southeastern Europe, much of the Middle East and North Africa and key trade routes. It was known for powerful armies, including the Janissaries, grand architecture by Mimar Sinan, a multi-religious society organized by the millet system and rich cuisine, music and arts. Over the 19th century it weakened, and after the First World War it was dissolved, with the Republic of Turkey founded in 1923 under Mustafa Kemal Ataturk.",
+    "keywords": [
+      "ottoman empire",
+      "istanbul",
+      "constantinople",
+      "suleiman",
+      "mehmed ii",
+      "janissaries",
+      "sultan",
+      "turkey"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who conquered constantinople",
+      "who was suleiman the magnificent",
+      "when did the ottoman empire end",
+      "what was a sultan",
+      "who was ataturk"
+    ]
+  },
+  {
+    "question": "What was the Renaissance?",
+    "answer": "The Renaissance, meaning rebirth, was a cultural movement that began in Italy in the 14th century and spread across Europe until about the 17th century. It revived interest in classical Greek and Roman learning and emphasized humanism, the value of human potential and achievements. Florence, supported by the wealthy Medici family, became a center of art and ideas. Famous figures include Leonardo da Vinci, painter of the Mona Lisa and inventor, Michelangelo, who painted the Sistine Chapel ceiling and sculpted David, Raphael, Botticelli, the writer Dante and the scientist Galileo Galilei. Around 1440 Johannes Gutenberg introduced the movable-type printing press in Europe, which spread books and ideas quickly. The Renaissance helped pave the way for the Scientific Revolution.",
+    "keywords": [
+      "renaissance",
+      "leonardo da vinci",
+      "michelangelo",
+      "medici",
+      "printing press",
+      "gutenberg",
+      "florence",
+      "humanism"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who painted the mona lisa",
+      "who invented the printing press",
+      "who was leonardo da vinci",
+      "what is humanism",
+      "who was michelangelo"
+    ]
+  },
+  {
+    "question": "What was the Age of Exploration?",
+    "answer": "The Age of Exploration, from the 15th to the 17th century, was a period when European sailors traveled across the oceans seeking new trade routes, wealth and knowledge. Prince Henry of Portugal sponsored voyages along the African coast, Bartolomeu Dias rounded the southern tip of Africa in 1488, and Vasco da Gama reached India by sea in 1498. In 1492 Christopher Columbus, sailing for Spain, reached the Caribbean, beginning lasting contact between Europe and the Americas. Ferdinand Magellan's expedition of 1519 to 1522 completed the first circumnavigation of the globe, although Magellan died on the way. Advances such as the caravel ship, the compass and better maps made this possible. The era brought new foods and exchanges, but also colonization, the destruction of many indigenous societies and the transatlantic slave trade.",
+    "keywords": [
+      "age of exploration",
+      "columbus",
+      "magellan",
+      "vasco da gama",
+      "voyages",
+      "colonization",
+      "navigation"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who discovered america",
+      "who sailed around the world",
+      "what was the columbian exchange",
+      "who was christopher columbus",
+      "what is circumnavigation"
+    ]
+  },
+  {
+    "question": "What were the Maya, Aztec and Inca civilizations?",
+    "answer": "These were three major civilizations of the Americas before European contact. The Maya lived in southern Mexico and Central America, built stone cities such as Tikal and Chichen Itza, used a sophisticated writing system and a very accurate calendar, and made advances in astronomy and mathematics, including the concept of zero. Their classic period peaked between about 250 and 900 CE. The Aztec, or Mexica, founded the island capital Tenochtitlan in 1325, where Mexico City now stands, and ruled a powerful empire in central Mexico until it fell to Spanish forces led by Hernan Cortes in 1521. The Inca built the largest empire in pre-Columbian America in the Andes, with capital Cusco, an extensive road network and the citadel of Machu Picchu, and it fell in the 1530s to Francisco Pizarro.",
+    "keywords": [
+      "maya",
+      "aztec",
+      "inca",
+      "tenochtitlan",
+      "machu picchu",
+      "chichen itza",
+      "pre-columbian",
+      "cortes"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "what is machu picchu",
+      "who were the aztecs",
+      "who were the maya",
+      "what happened to the inca",
+      "what is tenochtitlan"
+    ]
+  },
+  {
+    "question": "What was ancient China like and who built the Great Wall?",
+    "answer": "Chinese civilization is one of the world's oldest, with dynasties such as Shang, Zhou, Qin, Han, Tang, Song, Yuan, Ming and Qing. In 221 BCE Qin Shi Huang unified China and became its first emperor, and he is buried near the famous Terracotta Army of thousands of life-sized clay soldiers. The Great Wall was not built at once. Several states built walls from the 7th century BCE, Qin Shi Huang connected earlier sections, and the best-known stone and brick parts were built mostly during the Ming dynasty, from the 14th to 17th centuries, and stretch thousands of kilometers. China gave the world paper, printing, gunpowder, the compass, silk and porcelain. The Han dynasty opened the Silk Road, and the Tang dynasty was a golden age of poetry and trade.",
+    "keywords": [
+      "china",
+      "great wall",
+      "qin shi huang",
+      "terracotta army",
+      "dynasty",
+      "han",
+      "tang",
+      "ming"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who built the great wall of china",
+      "who was the first emperor of china",
+      "what is the terracotta army",
+      "what did china invent",
+      "what are chinese dynasties"
+    ]
+  },
+  {
+    "question": "What was the French Revolution?",
+    "answer": "The French Revolution was a period of radical political and social change in France from 1789 to 1799. Economic crisis, high food prices, unfair taxes, and Enlightenment ideas about liberty and equality led to anger against the monarchy and the privileges of the nobles and clergy. On July 14, 1789, crowds stormed the Bastille prison, an event celebrated as French national day. The Declaration of the Rights of Man and of the Citizen was adopted in August 1789, and the monarchy was abolished in 1792. King Louis XVI was executed in 1793, followed by the violent Reign of Terror under Robespierre. The revolution ended when Napoleon Bonaparte took power in 1799. Its ideas of liberty, equality and fraternity influenced movements around the world.",
+    "keywords": [
+      "french revolution",
+      "bastille",
+      "napoleon",
+      "louis xvi",
+      "robespierre",
+      "liberty",
+      "1789"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who was napoleon",
+      "what happened at the bastille",
+      "what caused the french revolution",
+      "what is the reign of terror",
+      "what is bastille day"
+    ]
+  },
+  {
+    "question": "What was the Industrial Revolution?",
+    "answer": "The Industrial Revolution was a period of major economic and technological change that began in Britain in the late 18th century and spread to Europe, North America and beyond. Production shifted from hand tools and farms to machines and factories. Key inventions included James Watt's improved steam engine, the spinning jenny, the power loom and railways, such as George Stephenson's locomotive. Coal and iron fueled growth, cities expanded rapidly and the population grew. It increased wealth and goods but also brought crowded cities, pollution and harsh working conditions, including child labor, which led to reforms, labor unions and laws. A Second Industrial Revolution in the late 19th century added electricity, steel and the internal combustion engine, and we often speak of a digital revolution in modern times.",
+    "keywords": [
+      "industrial revolution",
+      "steam engine",
+      "factories",
+      "railways",
+      "james watt",
+      "coal",
+      "urbanization",
+      "child labor"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who invented the steam engine",
+      "what is the industrial revolution",
+      "when did the industrial revolution start",
+      "what changed during the industrial revolution",
+      "what is urbanization"
+    ]
+  },
+  {
+    "question": "What was World War I?",
+    "answer": "World War I, also called the Great War, lasted from 1914 to 1918. It began after the assassination of Archduke Franz Ferdinand of Austria-Hungary in Sarajevo in June 1914, and a web of alliances turned a regional conflict into a global one. The two sides were the Allied Powers, including Britain, France, Russia, Italy and later the United States, and the Central Powers, including Germany, Austria-Hungary and the Ottoman Empire. Much of the fighting on the Western Front was trench warfare, with new weapons such as machine guns, poison gas, tanks and aircraft. About nine to ten million soldiers and many civilians died. The war ended with the armistice on November 11, 1918, and the Treaty of Versailles in 1919. Four great empires collapsed afterwards, the German, Austro-Hungarian, Russian and Ottoman.",
+    "keywords": [
+      "world war 1",
+      "ww1",
+      "great war",
+      "trenches",
+      "franz ferdinand",
+      "treaty of versailles",
+      "armistice",
+      "1914"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "when was world war 1",
+      "what caused world war 1",
+      "who won world war 1",
+      "what was trench warfare",
+      "what was the treaty of versailles"
+    ]
+  },
+  {
+    "question": "What was World War II?",
+    "answer": "World War II lasted from 1939 to 1945 and was the deadliest conflict in human history, with an estimated 70 to 85 million deaths including civilians. It began on September 1, 1939, when Nazi Germany invaded Poland, and Britain and France declared war. The Axis powers, mainly Germany, Italy and Japan, fought the Allies, including the United Kingdom, the Soviet Union, the United States and China. Key events include the Battle of Britain, the German invasion of the Soviet Union in 1941, the attack on Pearl Harbor in December 1941, D-Day on June 6, 1944, and the atomic bombings of Hiroshima and Nagasaki in August 1945. The war in Europe ended in May 1945 and in Asia on September 2, 1945. The Holocaust, the Nazi genocide of six million Jews and millions of others, remains a tragic lesson. The United Nations was created afterwards to promote peace.",
+    "keywords": [
+      "world war 2",
+      "ww2",
+      "nazi germany",
+      "holocaust",
+      "d-day",
+      "pearl harbor",
+      "allies",
+      "axis"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "when was world war 2",
+      "what caused world war 2",
+      "what was the holocaust",
+      "what was d-day",
+      "who won world war 2"
+    ]
+  },
+  {
+    "question": "What was the Cold War?",
+    "answer": "The Cold War was a period of political and military tension between the United States and its allies and the Soviet Union and its allies, lasting from about 1947 to 1991. It was called cold because the two superpowers never fought each other directly, but they competed through an arms race, including nuclear weapons, a space race, propaganda, spying and proxy wars such as in Korea and Vietnam. The world was divided into blocs, with NATO formed in 1949 and the Warsaw Pact in 1955. Key moments included the Berlin Blockade, the building of the Berlin Wall in 1961, the Cuban Missile Crisis of 1962 and the fall of the Berlin Wall in November 1989. The Soviet Union dissolved in December 1991, ending the Cold War.",
+    "keywords": [
+      "cold war",
+      "soviet union",
+      "usa",
+      "berlin wall",
+      "arms race",
+      "space race",
+      "nato",
+      "cuban missile crisis"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "when did the cold war end",
+      "what was the berlin wall",
+      "what was the space race",
+      "what is nato",
+      "what was the cuban missile crisis"
+    ]
+  },
+  {
+    "question": "What is the United Nations?",
+    "answer": "The United Nations, or UN, is an international organization founded on October 24, 1945, after World War II, to maintain peace and security, promote human rights, support development and encourage cooperation between countries. It began with 51 member states, and today has 193 members. Its headquarters is in New York City. Its main bodies include the General Assembly, where each member has one vote, the Security Council, with five permanent members, China, France, Russia, the United Kingdom and the United States, the International Court of Justice in The Hague, the Secretariat led by the Secretary-General and specialized agencies such as UNESCO, UNICEF, the World Health Organization and the World Food Programme. The UN also sets the Sustainable Development Goals, adopted in 2015, with targets to be reached by 2030.",
+    "keywords": [
+      "united nations",
+      "un",
+      "security council",
+      "unicef",
+      "who",
+      "unesco",
+      "peace",
+      "sustainable development goals"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "what is unicef",
+      "what is unesco",
+      "who is in the security council",
+      "what are the sdgs",
+      "when was the un founded"
+    ]
+  },
+  {
+    "question": "How many continents and countries are there?",
+    "answer": "By the most common convention there are seven continents. In order of area they are Asia, Africa, North America, South America, Antarctica, Europe and Australia, also called Oceania. Different countries teach different models, for example some count the Americas as one continent, or Europe and Asia as one landmass called Eurasia. The number of countries depends on definition, but the United Nations has 193 member states and there are two additional observer states, and a few other territories have limited recognition. The largest country by area is Russia, followed by Canada, China, the United States, Brazil, Australia and India. Asia is both the largest continent and the most populated, and Antarctica is the coldest, driest and windiest, with no permanent residents.",
+    "keywords": [
+      "continents",
+      "countries",
+      "asia",
+      "africa",
+      "europe",
+      "antarctica",
+      "oceania",
+      "world map"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "how many countries are in the world",
+      "what is the largest country",
+      "what is the biggest continent",
+      "what is the smallest continent",
+      "how many continents are there"
+    ]
+  },
+  {
+    "question": "What is the most populated country and the smallest country?",
+    "answer": "As of the mid-2020s, India and China are the two most populous countries, each with about 1.4 billion people. India overtook China in 2023 according to United Nations estimates. They are followed by the United States, Indonesia, Pakistan, Nigeria and Brazil. The world population passed 8 billion in November 2022. The smallest country by area is Vatican City, an independent state inside Rome with an area of only about 0.44 square kilometers and a population of under a thousand. Monaco, Nauru and Tuvalu are also tiny. The smallest by population is also Vatican City. The world's population is unevenly spread, with more than half of people living in Asia, and over half living in cities.",
+    "keywords": [
+      "population",
+      "india",
+      "china",
+      "vatican city",
+      "monaco",
+      "smallest country",
+      "urban"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "how many people live on earth",
+      "what is the smallest country",
+      "which country has the most people",
+      "what is the world population",
+      "what is vatican city"
+    ]
+  },
+  {
+    "question": "What are the longest rivers and highest mountains?",
+    "answer": "The Nile in Africa, at about 6,650 kilometers, and the Amazon in South America, at about 6,400 kilometers, compete for the title of the world's longest river, and the answer depends on how the sources and mouths are measured. The Amazon carries the most water by far and drains the largest rainforest basin. Other great rivers include the Yangtze, Mississippi, Yenisei and Congo. The highest mountain above sea level is Mount Everest in the Himalayas, on the border of Nepal and Tibet, at 8,849 meters, according to the 2020 official measurement. The second highest is K2 at 8,611 meters. Measured from base to peak, Mauna Kea in Hawaii is taller, and from Earth's center, Chimborazo in Ecuador is farthest.",
+    "keywords": [
+      "river",
+      "nile",
+      "amazon",
+      "everest",
+      "mountain",
+      "himalayas",
+      "k2",
+      "longest"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "what is the longest river",
+      "how tall is mount everest",
+      "what is the highest mountain",
+      "what is k2",
+      "what is the biggest rainforest"
+    ]
+  },
+  {
+    "question": "What are the largest deserts and how do deserts form?",
+    "answer": "A desert is a region receiving very little precipitation, usually less than 250 millimeters per year. The largest desert in the world is actually Antarctica, a cold desert, followed by the Arctic. The largest hot desert is the Sahara in North Africa, about 9 million square kilometers, roughly the size of the United States. Other well-known deserts are the Arabian Desert, the Gobi in Mongolia and China, the Kalahari, the Atacama in Chile, which is the driest non-polar place on Earth, and the Australian and Sonoran deserts. Deserts form because of dry descending air near 30 degrees latitude, because mountains block rain, called a rain shadow, or because of cold ocean currents. Many animals, such as camels, scorpions and fennec foxes, are adapted to survive with little water.",
+    "keywords": [
+      "desert",
+      "sahara",
+      "gobi",
+      "atacama",
+      "arabian desert",
+      "dry",
+      "camel",
+      "rain shadow"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "what is the biggest desert",
+      "what is the driest place on earth",
+      "how do deserts form",
+      "what is a cold desert",
+      "what animals live in the desert"
+    ]
+  },
+  {
+    "question": "What are time zones and how do they work?",
+    "answer": "Because the Earth rotates once every 24 hours, different places experience noon at different moments, so the world is divided into time zones. Zones are roughly 15 degrees of longitude wide, and each is usually one hour apart. The reference is the Prime Meridian at zero degrees longitude, which passes through Greenwich in London, and time there is called Greenwich Mean Time, now largely replaced by Coordinated Universal Time, or UTC. Moving east adds hours and moving west subtracts them. Some countries use half-hour or 45-minute offsets, such as India and Nepal, and some use daylight saving time to shift clocks in summer. The International Date Line in the Pacific is where the calendar date changes, so crossing it westward moves you a day ahead.",
+    "keywords": [
+      "time zones",
+      "utc",
+      "greenwich",
+      "prime meridian",
+      "date line",
+      "daylight saving",
+      "clock"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "what is utc",
+      "what is gmt",
+      "what is daylight saving time",
+      "what is the international date line",
+      "why do we have time zones"
+    ]
+  },
+  {
+    "question": "Who were the Vikings?",
+    "answer": "The Vikings were seafaring people from Scandinavia, present-day Norway, Sweden and Denmark, who traveled widely from the late 8th century to the mid-11th century in what is known as the Viking Age. They were skilled shipbuilders, and their longships could cross oceans and sail up shallow rivers. Vikings raided monasteries, such as Lindisfarne in England in 793, but they were also traders, farmers, explorers and settlers. They founded settlements in Iceland, Greenland, Ireland, Normandy and parts of England, and Leif Erikson reached North America around the year 1000, centuries before Columbus. Viking society had assemblies called things, runes for writing and a mythology featuring gods such as Odin, Thor and Freya. Contrary to popular images, there is no evidence that they wore horned helmets in battle.",
+    "keywords": [
+      "vikings",
+      "norse",
+      "longship",
+      "leif erikson",
+      "odin",
+      "thor",
+      "scandinavia",
+      "lindisfarne"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "did vikings have horned helmets",
+      "who discovered america first",
+      "who is odin",
+      "what is norse mythology",
+      "what were longships"
+    ]
+  },
+  {
+    "question": "When did women win the right to vote?",
+    "answer": "The movement for women's suffrage grew in the 19th and early 20th centuries. New Zealand became the first self-governing country to grant women the right to vote in national elections, in 1893. Australia followed in 1902 for most women, Finland in 1906, which also allowed women to stand for parliament, and Norway in 1913. Britain granted voting rights to some women over 30 in 1918 and to all women on equal terms in 1928, and the United States ratified the 19th Amendment in 1920. Many other countries acted in the following decades, with Saudi Arabia permitting women to vote in local elections in 2015. Prominent campaigners include Emmeline Pankhurst, Susan B. Anthony, Kate Sheppard and Huda Sha'arawi, who led Egypt's feminist movement.",
+    "keywords": [
+      "suffrage",
+      "women's rights",
+      "vote",
+      "pankhurst",
+      "19th amendment",
+      "new zealand",
+      "equality"
+    ],
+    "category": "History and Geography",
+    "language": "en",
+    "aliases": [
+      "who was susan b anthony",
+      "what is suffrage",
+      "who was emmeline pankhurst",
+      "which country let women vote first",
+      "what is feminism"
+    ]
+  }
+]

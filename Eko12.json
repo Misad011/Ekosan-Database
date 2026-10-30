@@ -1,0 +1,501 @@
+[
+  {
+    "question": "What is a video game?",
+    "answer": "A video game is an interactive electronic game in which a player controls images, characters or systems on a screen using an input device such as a controller, keyboard, mouse, touchscreen or motion sensor. Unlike a film or a book, a video game reacts to what the player does, so the player's choices shape what happens next. Games can be played alone, with friends on the same device, or online with people all over the world. They run on many platforms, including consoles, personal computers, smartphones, tablets, handheld devices and virtual reality headsets. Games can be built for fun, for learning, for fitness, for storytelling or for competition, and today the industry is bigger than film and music in yearly revenue.",
+    "keywords": [
+      "video game",
+      "gaming",
+      "games",
+      "definition",
+      "interactive",
+      "player"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what are video games",
+      "define video game",
+      "what is gaming",
+      "what does gaming mean",
+      "explain video games"
+    ]
+  },
+  {
+    "question": "What is the history of video games?",
+    "answer": "Video games began as science and engineering experiments. In 1958 physicist William Higinbotham built Tennis for Two at Brookhaven National Laboratory, and in 1962 students at MIT created Spacewar! for a room-sized computer. The first home console, the Magnavox Odyssey designed by Ralph Baer, arrived in 1972, the same year Atari released Pong. The late 1970s and early 1980s were the golden age of arcades with Space Invaders in 1978 and Pac-Man in 1980. A market crash hit North America in 1983, but Nintendo revived the industry with the Famicom and the NES. The 1990s brought 3D graphics, CD-ROMs and the original PlayStation, and the 2000s added online play, smartphones and huge digital stores.",
+    "keywords": [
+      "history",
+      "timeline",
+      "pong",
+      "atari",
+      "arcade",
+      "nintendo",
+      "crash of 1983",
+      "origin"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "who made the first video game",
+      "when were video games invented",
+      "how did gaming start",
+      "video game origins",
+      "evolution of gaming"
+    ]
+  },
+  {
+    "question": "What are the main video game genres?",
+    "answer": "Genres group games by how they play rather than by their story or setting. Action games focus on reflexes and combat. Adventure games focus on exploration and puzzles. Role-playing games, often shortened to RPGs, let you build a character who grows stronger. Strategy games reward planning and resource management, and they split into real-time and turn-based styles. Simulation games imitate real activities such as farming, driving or running a city. Sports and racing games recreate competitions. Puzzle games challenge logic. Platformers are about jumping and movement, shooters are about aiming, fighting games are about one-on-one duels, and survival and horror games are about tension and scarcity. Many modern games mix several genres together.",
+    "keywords": [
+      "genres",
+      "action",
+      "adventure",
+      "rpg",
+      "strategy",
+      "simulation",
+      "puzzle",
+      "platformer"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "types of games",
+      "kinds of video games",
+      "game categories",
+      "what genres exist",
+      "list of game genres"
+    ]
+  },
+  {
+    "question": "What is an RPG?",
+    "answer": "An RPG, short for role-playing game, is a game where you take on the role of a character and develop that character over time. The idea comes from tabletop games like Dungeons and Dragons, which inspired early computer titles in the 1970s. In a typical RPG you complete quests, talk to characters, collect gear and earn experience points to level up your stats and skills. Japanese RPGs such as Final Fantasy and Dragon Quest often tell a tightly written story with a set party of heroes and turn-based combat. Western RPGs such as Skyrim, The Witcher 3 and Baldur's Gate 3 lean toward player freedom, dialogue choices and customizable characters. Action RPGs like Elden Ring blend this with fast real-time fighting.",
+    "keywords": [
+      "rpg",
+      "role-playing",
+      "levels",
+      "quests",
+      "stats",
+      "dungeons and dragons",
+      "jrpg"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what does rpg mean",
+      "role playing game meaning",
+      "explain rpgs",
+      "what is a jrpg",
+      "what are role playing games"
+    ]
+  },
+  {
+    "question": "What is an FPS game?",
+    "answer": "FPS stands for first-person shooter, a genre where you see the world through the eyes of your character and fight with ranged weapons. The style was popularized by Wolfenstein 3D in 1992 and Doom in 1993, which proved that fast 3D action could work on home computers. Later landmarks include Half-Life, Halo, Call of Duty, Counter-Strike, Battlefield, Overwatch and Valorant. FPS games reward quick aim, map knowledge and teamwork. Some are story-driven single player campaigns, while others focus on online matches such as team deathmatch, capture the flag or bomb defusal. Sensitivity settings, field of view and frame rate matter a lot, which is why many serious players tune their hardware and controls carefully.",
+    "keywords": [
+      "fps",
+      "first person shooter",
+      "doom",
+      "call of duty",
+      "counter-strike",
+      "aim",
+      "shooter"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what does fps mean in games",
+      "first person shooter meaning",
+      "explain shooter games",
+      "what is a shooter game",
+      "fps genre"
+    ]
+  },
+  {
+    "question": "What is an MMORPG?",
+    "answer": "An MMORPG is a massively multiplayer online role-playing game, a persistent world shared by thousands of players at the same time. Early examples include Ultima Online in 1997 and EverQuest in 1999, and the genre exploded with World of Warcraft in 2004. RuneScape, Final Fantasy XIV, Guild Wars 2 and Lost Ark are other well-known titles. Players create characters, join guilds, trade items, complete quests and take part in group challenges called dungeons and raids. The world keeps running even when you log out, and developers add new content through expansions and seasonal updates. Many MMORPGs are built around social play, so the friendships and communities are often as important as the gameplay itself.",
+    "keywords": [
+      "mmorpg",
+      "mmo",
+      "world of warcraft",
+      "guild",
+      "raid",
+      "online",
+      "multiplayer"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is an mmo",
+      "massively multiplayer online meaning",
+      "explain mmos",
+      "what is wow",
+      "online role playing games"
+    ]
+  },
+  {
+    "question": "What is a battle royale game?",
+    "answer": "A battle royale is a last-player-standing game where many participants are dropped into a large map, must find weapons and supplies, and fight while the safe area shrinks over time. The concept was inspired by the Japanese novel and 2000 film Battle Royale. It reached video games through mods for the Arma series made by Brendan Greene, known as PlayerUnknown, which led to PUBG in 2017. Fortnite Battle Royale launched the same year and became a worldwide phenomenon with its building mechanics and constant live events. Apex Legends added hero abilities in 2019, and Call of Duty Warzone brought the format to a huge shooter audience. Matches usually last twenty to thirty minutes, and only one player or team can win.",
+    "keywords": [
+      "battle royale",
+      "fortnite",
+      "pubg",
+      "apex legends",
+      "warzone",
+      "last man standing"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is br",
+      "explain battle royale",
+      "games like fortnite",
+      "what is a br game",
+      "battle royal meaning"
+    ]
+  },
+  {
+    "question": "What is a roguelike or roguelite game?",
+    "answer": "A roguelike is a game inspired by the 1980 dungeon crawler Rogue. Classic traits are procedurally generated levels, turn-based movement and permadeath, which means that when your character dies you start again from the beginning. The word roguelite describes games that keep some of those ideas but let you carry over upgrades, unlocks or knowledge between runs, which makes failure feel more rewarding. Popular examples include Hades, The Binding of Isaac, Dead Cells, Slay the Spire, Spelunky, Risk of Rain 2 and Vampire Survivors. Because levels and items change every time, no two runs are the same. This gives the genre huge replay value and makes learning the systems the real source of progress.",
+    "keywords": [
+      "roguelike",
+      "roguelite",
+      "permadeath",
+      "procedural generation",
+      "hades",
+      "binding of isaac"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is a roguelite",
+      "rogue like meaning",
+      "what is permadeath",
+      "explain roguelikes",
+      "what does procedural generation mean"
+    ]
+  },
+  {
+    "question": "What are open world and sandbox games?",
+    "answer": "An open world game lets you roam a large map freely instead of following a strict level order. A sandbox game gives you tools and systems to create your own goals, such as building, crafting or experimenting. The two ideas overlap but are not identical. Grand Theft Auto, The Legend of Zelda Breath of the Wild, Red Dead Redemption 2, Skyrim and Elden Ring are open world games with a strong sense of exploration. Minecraft, Terraria, Garry's Mod and Roblox are famous sandboxes where creativity matters most. These games are loved because they respect player choice, but designers must work hard to keep large worlds interesting and avoid empty space or repetitive tasks.",
+    "keywords": [
+      "open world",
+      "sandbox",
+      "exploration",
+      "minecraft",
+      "gta",
+      "freedom"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is an open world game",
+      "what is a sandbox game",
+      "explain open-world",
+      "difference between open world and sandbox",
+      "free roam games"
+    ]
+  },
+  {
+    "question": "What is esports?",
+    "answer": "Esports means organized competitive video gaming, usually played by professional players or teams in front of an audience online or in arenas. Major titles include League of Legends, Dota 2, Counter-Strike 2, Valorant, Rocket League, Overwatch, StarCraft II, fighting games like Street Fighter and Tekken, and mobile games such as Mobile Legends and Honor of Kings. Events like The International for Dota 2 and the League of Legends World Championship draw millions of viewers and offer large prize pools. Pro players practice many hours a day with coaches and analysts, and fans watch on platforms like Twitch and YouTube. Esports also supports a wider ecosystem of commentators, referees, streamers, sponsors and organizers.",
+    "keywords": [
+      "esports",
+      "competitive",
+      "tournament",
+      "pro player",
+      "league of legends",
+      "dota 2",
+      "twitch"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what are esports",
+      "what is e-sports",
+      "professional gaming",
+      "competitive gaming meaning",
+      "how do esports work"
+    ]
+  },
+  {
+    "question": "What are the major video game consoles and companies?",
+    "answer": "The three biggest console makers today are Sony, Microsoft and Nintendo. Nintendo started in 1889 making playing cards and entered video games in the 1970s, later releasing the NES, Game Boy, Wii and Switch. Sony launched the original PlayStation in 1994 and continued with the PS2, which became one of the best-selling consoles ever, through to the PS5 in 2020. Microsoft entered with the Xbox in 2001 and now offers Xbox Series X and S plus Game Pass. Sega, once a major rival, stopped making consoles after the Dreamcast but remains a big publisher known for Sonic. Atari, Commodore and others shaped the early years. Valve's Steam Deck also proved that handheld PCs can succeed.",
+    "keywords": [
+      "console",
+      "playstation",
+      "xbox",
+      "nintendo",
+      "sega",
+      "atari",
+      "switch",
+      "ps5"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what consoles exist",
+      "who makes game consoles",
+      "playstation vs xbox vs nintendo",
+      "list of game consoles",
+      "console companies"
+    ]
+  },
+  {
+    "question": "What is the difference between PC gaming and console gaming?",
+    "answer": "PC gaming offers flexibility. You can upgrade parts such as the graphics card, use a mouse and keyboard, install mods, play at high frame rates and access stores like Steam, Epic and GOG. It usually costs more to start and needs some technical care. Console gaming is simple and consistent. You buy one device that is guaranteed to run every game made for it, often with a controller that feels comfortable on the couch, and exclusive titles such as Zelda, God of War or Halo can be a big draw. Neither is strictly better. Many players own both, and cross-platform play and cloud services are blurring the line more every year.",
+    "keywords": [
+      "pc",
+      "console",
+      "mouse and keyboard",
+      "steam",
+      "controller",
+      "comparison"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "pc or console",
+      "should i play on pc or console",
+      "pc vs console",
+      "which is better pc or console",
+      "console vs computer gaming"
+    ]
+  },
+  {
+    "question": "What are indie games?",
+    "answer": "Indie games are made by individuals or small teams without the financial backing of a large publisher. Because of that freedom they often take creative risks that big studios avoid. Digital stores, easy-to-use engines and crowdfunding made indie development possible on a large scale in the 2000s and 2010s. Famous indie hits include Minecraft, Terraria, Undertale, Celeste, Hollow Knight, Stardew Valley, Cuphead, Hades, Among Us and Lethal Company. Many of these started as passion projects built over years by one or two people and grew into cultural phenomena. Indie games frequently feature distinctive art styles, experimental mechanics and personal stories, and they remind everyone that a great idea matters more than a giant budget.",
+    "keywords": [
+      "indie",
+      "small team",
+      "stardew valley",
+      "undertale",
+      "celeste",
+      "hollow knight"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what does indie mean in games",
+      "what is an indie game",
+      "independent games",
+      "best indie games",
+      "indie game developers"
+    ]
+  },
+  {
+    "question": "What is speedrunning?",
+    "answer": "Speedrunning is the practice of completing a game or a specific goal as fast as possible. Runners study every detail, find shortcuts and glitches, and practice route after route until it is nearly perfect. Common categories include any percent, where only finishing matters, 100 percent, where everything must be collected, and glitchless, where known bugs are forbidden. Tool-assisted speedruns, or TAS, use frame-by-frame input from software to show what is theoretically possible. Communities track records on sites like speedrun.com, and charity marathons such as Games Done Quick have raised millions for good causes. Games like Super Mario Bros, Ocarina of Time, Celeste and Minecraft have especially passionate speedrunning scenes.",
+    "keywords": [
+      "speedrun",
+      "any%",
+      "100%",
+      "glitch",
+      "tas",
+      "games done quick",
+      "world record"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is a speedrun",
+      "what does any percent mean",
+      "what is tas",
+      "how do speedruns work",
+      "speed running meaning"
+    ]
+  },
+  {
+    "question": "What is a game engine?",
+    "answer": "A game engine is the software framework that handles the common technical parts of making a game, such as graphics rendering, physics, sound, input, animation and scripting. Instead of building everything from nothing, developers use an engine so they can focus on gameplay and content. Unreal Engine, created by Epic Games, is known for realistic visuals. Unity is popular for mobile, indie and cross-platform projects. Godot is a free and open-source engine loved by hobbyists and small teams. Others include GameMaker, RPG Maker, CryEngine and many in-house engines made by big studios. Choosing an engine depends on the type of game, the team's skills, the target platforms and the budget.",
+    "keywords": [
+      "engine",
+      "unity",
+      "unreal",
+      "godot",
+      "game development",
+      "gamemaker",
+      "rpg maker"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is unity",
+      "what is unreal engine",
+      "what is godot",
+      "how are games made",
+      "game development tools"
+    ]
+  },
+  {
+    "question": "How does game design work?",
+    "answer": "Game design is the craft of deciding rules, goals, challenges and rewards so that play feels engaging. Designers think about the core loop, which is the repeating cycle of actions the player performs, such as explore, fight, collect, upgrade. They balance difficulty so the game is neither boring nor frustrating, a state often linked to the idea of flow described by psychologist Mihaly Csikszentmihalyi. Good designs give clear feedback, meaningful choices and a steady sense of progress. Playtesting is essential because real players always find surprises. Designers also consider pacing, tutorials, accessibility and story. A simple idea executed with clarity often beats a complicated one that confuses people.",
+    "keywords": [
+      "game design",
+      "core loop",
+      "balance",
+      "flow",
+      "playtesting",
+      "difficulty"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "how are games designed",
+      "what makes a game fun",
+      "what is a game loop",
+      "game designer job",
+      "principles of game design"
+    ]
+  },
+  {
+    "question": "What is mobile gaming?",
+    "answer": "Mobile gaming means playing on smartphones and tablets, and it is now the largest part of the industry by number of players. Early examples include Snake on Nokia phones in the late 1990s, and the touchscreen era began with hits like Angry Birds, Fruit Ninja, Candy Crush Saga, Clash of Clans, Subway Surfers and Pokemon GO. Many mobile games are free to download and earn money through ads or in-app purchases, a model called free-to-play. Big titles such as PUBG Mobile, Genshin Impact, Honor of Kings, Mobile Legends and Call of Duty Mobile prove that phones can handle complex games. Critics worry about aggressive monetization, so it is smart to set spending limits.",
+    "keywords": [
+      "mobile",
+      "smartphone",
+      "free-to-play",
+      "candy crush",
+      "angry birds",
+      "in-app purchases"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what are mobile games",
+      "phone games",
+      "what does free to play mean",
+      "best mobile games",
+      "are mobile games real games"
+    ]
+  },
+  {
+    "question": "What is virtual reality gaming?",
+    "answer": "Virtual reality, or VR, uses a headset with motion tracking to place you inside a 3D world so you can look around, move and interact with your hands. The modern era began with the Oculus Rift prototype in 2012, followed by the HTC Vive, PlayStation VR and the standalone Meta Quest line. Popular VR games include Beat Saber, Half-Life Alyx, Superhot VR, Resident Evil 4 VR and VRChat, a social platform. VR can feel incredibly immersive, but it can cause motion sickness in some people, needs room to move and can be expensive. Augmented reality is related but different, since it overlays digital objects on the real world, as in Pokemon GO.",
+    "keywords": [
+      "vr",
+      "virtual reality",
+      "oculus",
+      "meta quest",
+      "beat saber",
+      "headset",
+      "ar"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is vr",
+      "how does vr work",
+      "explain virtual reality games",
+      "best vr games",
+      "what is augmented reality"
+    ]
+  },
+  {
+    "question": "What are retro games and arcades?",
+    "answer": "Retro gaming means enjoying older games and hardware, usually from the 1970s to the early 2000s. The golden age of arcades, from about 1978 to the mid 1980s, gave the world Space Invaders, Pac-Man, Donkey Kong, Galaga and Street Fighter II. Home consoles like the Atari 2600, NES, Sega Genesis and Super Nintendo carried that spirit into living rooms. Fans collect cartridges, restore old machines and use emulators or official mini consoles to keep classic titles alive. Preservation is a real concern because old games can be lost when hardware fails or companies disappear. Pixel art and chiptune music from the 8-bit and 16-bit era still inspire many modern indie creators.",
+    "keywords": [
+      "retro",
+      "arcade",
+      "8-bit",
+      "16-bit",
+      "pac-man",
+      "nes",
+      "emulator",
+      "preservation"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is retro gaming",
+      "what are arcade games",
+      "old school games",
+      "what does 8-bit mean",
+      "why are retro games popular"
+    ]
+  },
+  {
+    "question": "What are game mods?",
+    "answer": "A mod, short for modification, is a player-made change to a game that adds or alters content. Mods can be small tweaks such as better textures, or total conversions that create a different game. Some mods became so successful that they turned into their own products. Counter-Strike began as a mod for Half-Life, Defense of the Ancients began as a Warcraft III map and inspired League of Legends and Dota 2, and DayZ began as an Arma 2 mod. Skyrim, Minecraft, The Sims, Cities Skylines and Garry's Mod have huge modding communities, often supported by tools like the Steam Workshop and Nexus Mods. Modding is also a great way to learn programming, art and design skills.",
+    "keywords": [
+      "mod",
+      "modding",
+      "skyrim",
+      "steam workshop",
+      "nexus mods",
+      "custom content"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is a mod",
+      "how do mods work",
+      "what does modding mean",
+      "what are total conversions",
+      "best games for mods"
+    ]
+  },
+  {
+    "question": "Can gaming become unhealthy?",
+    "answer": "For most people gaming is a healthy hobby that builds problem-solving, reaction time, teamwork and friendship. However, the World Health Organization included gaming disorder in its International Classification of Diseases in 2019, with the update taking effect in 2022. It describes a pattern where gaming takes priority over other life activities, continues despite negative consequences and lasts for a long period, usually at least twelve months. Warning signs include losing sleep, skipping school or work, dropping friends and feeling angry or anxious when not playing. Healthy habits help a lot, such as taking breaks, drinking water, keeping a regular sleep schedule, setting time limits and balancing screen time with exercise and real-life socializing. If gaming feels out of control, talking to a trusted person or professional is a good step.",
+    "keywords": [
+      "gaming disorder",
+      "addiction",
+      "health",
+      "screen time",
+      "balance",
+      "breaks"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "is gaming bad for you",
+      "video game addiction",
+      "how much gaming is too much",
+      "gaming disorder meaning",
+      "healthy gaming habits"
+    ]
+  },
+  {
+    "question": "What are video game age ratings?",
+    "answer": "Age ratings help parents and players choose suitable games. In North America the ESRB assigns labels such as E for Everyone, E10+, T for Teen, M for Mature 17+ and AO for Adults Only. In Europe the PEGI system uses age numbers 3, 7, 12, 16 and 18 along with content icons for violence, fear, bad language, gambling and more. Germany uses USK, Japan uses CERO, and Australia has its own classification board. Ratings consider violence, sexual content, language, drugs and online interactions. They are guidance, not a guarantee of quality, and parents can also use console parental controls to limit spending, chat and play time.",
+    "keywords": [
+      "esrb",
+      "pegi",
+      "age rating",
+      "parental controls",
+      "mature",
+      "teen"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what does esrb mean",
+      "what is pegi",
+      "what does m rated mean",
+      "game rating system",
+      "are games rated by age"
+    ]
+  },
+  {
+    "question": "What are handheld gaming consoles?",
+    "answer": "Handheld consoles let you play anywhere. The Game and Watch series in 1980 began the idea, and the Game Boy in 1989 made it a global success thanks to Tetris and Pokemon. Later came the Game Boy Advance, Nintendo DS, 3DS, Sony's PSP and PS Vita, and the hybrid Nintendo Switch in 2017, which works both docked to a television and as a portable. Valve's Steam Deck in 2022 proved that a handheld could run a full PC game library, and other companies followed with their own devices. Handhelds usually trade raw power for battery life and portability, but they are loved for quick sessions, travel and playing in bed.",
+    "keywords": [
+      "handheld",
+      "game boy",
+      "switch",
+      "steam deck",
+      "psp",
+      "nintendo ds",
+      "portable"
+    ],
+    "category": "Video Games",
+    "language": "en",
+    "aliases": [
+      "what is a handheld console",
+      "game boy history",
+      "what is the steam deck",
+      "portable gaming",
+      "best handheld consoles"
+    ]
+  }
+]

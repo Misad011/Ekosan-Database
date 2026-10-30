@@ -1,0 +1,541 @@
+[
+  {
+    "question": "What is Minecraft?",
+    "answer": "Minecraft is a sandbox game about exploring, mining, crafting and building in a world made of blocks. It was created by Markus Persson, known as Notch, and developed by Mojang. Early versions were released in 2009, and the full release came in November 2011. Microsoft bought Mojang in 2014 for about 2.5 billion US dollars. Players can survive against monsters like creepers and zombies in Survival mode, or build freely with unlimited resources in Creative mode. The game has dimensions such as the Nether and the End, a final boss called the Ender Dragon, redstone for building machines, and a massive community that makes servers, maps and mods. Minecraft is widely regarded as the best-selling video game of all time.",
+    "keywords": [
+      "minecraft",
+      "mojang",
+      "notch",
+      "creeper",
+      "survival",
+      "creative",
+      "redstone",
+      "blocks"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is minecraft about",
+      "who made minecraft",
+      "minecraft explained",
+      "tell me about minecraft",
+      "is minecraft the best selling game"
+    ]
+  },
+  {
+    "question": "Who is Mario?",
+    "answer": "Mario is Nintendo's famous mascot, an Italian plumber with a red cap, blue overalls and a mustache. He was created by Shigeru Miyamoto and first appeared in the 1981 arcade game Donkey Kong, where he was called Jumpman. He got his own game in Mario Bros in 1983 with his brother Luigi, and Super Mario Bros on the NES in 1985 turned him into a worldwide icon. His adventures usually involve jumping over obstacles, stomping enemies like Goombas, collecting coins and power-ups such as the Super Mushroom and Fire Flower, and rescuing Princess Peach from the villain Bowser. Mario also stars in racing games like Mario Kart, sports games, party games and an animated film released in 2023.",
+    "keywords": [
+      "mario",
+      "nintendo",
+      "miyamoto",
+      "luigi",
+      "bowser",
+      "peach",
+      "super mario bros",
+      "mushroom"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who is super mario",
+      "who created mario",
+      "what is super mario bros",
+      "mario history",
+      "tell me about mario"
+    ]
+  },
+  {
+    "question": "What is The Legend of Zelda?",
+    "answer": "The Legend of Zelda is a fantasy action-adventure series from Nintendo created by Shigeru Miyamoto and Takashi Tezuka. The first game came out in 1986. The hero is Link, a young swordsman who travels across the land of Hyrule to defeat the villain Ganon, also called Ganondorf, and to protect Princess Zelda and the sacred Triforce. Many people mistakenly call the hero Zelda, but Zelda is the princess. The series is known for dungeons, puzzles, items like the boomerang and hookshot, and memorable music. Famous entries include A Link to the Past, Ocarina of Time, Majora's Mask, Breath of the Wild in 2017 and Tears of the Kingdom in 2023, both praised for their freedom of exploration.",
+    "keywords": [
+      "zelda",
+      "link",
+      "hyrule",
+      "ganon",
+      "triforce",
+      "ocarina of time",
+      "breath of the wild"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who is link",
+      "who is zelda",
+      "what is hyrule",
+      "zelda series explained",
+      "is link zelda"
+    ]
+  },
+  {
+    "question": "What is Pokemon?",
+    "answer": "Pokemon is a franchise created by Satoshi Tajiri and developed by Game Freak, with the first games Pokemon Red and Green released in Japan in 1996. Players become Trainers who catch creatures called Pokemon, train them and battle other Trainers, with the goal of becoming a Champion. Each Pokemon has types such as Fire, Water, Grass and Electric, and types have strengths and weaknesses. Pikachu, an Electric type, is the mascot. There are now more than one thousand species. The franchise grew to include a trading card game, an anime, films, mobile games like Pokemon GO and Pokemon Unite, and the Pokemon Company, and it is one of the highest-grossing media franchises in the world.",
+    "keywords": [
+      "pokemon",
+      "pikachu",
+      "trainer",
+      "game freak",
+      "pokeball",
+      "types",
+      "pokemon go",
+      "satoshi tajiri"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is pokemon about",
+      "who made pokemon",
+      "how many pokemon are there",
+      "tell me about pokemon",
+      "what are pokemon types"
+    ]
+  },
+  {
+    "question": "What is Tetris?",
+    "answer": "Tetris is a tile-matching puzzle game created by Soviet software engineer Alexey Pajitnov in 1984. Players rotate and move falling shapes called tetrominoes, each made of four squares, to complete full horizontal lines, which then disappear. If the stack reaches the top, the game is over. The name combines the Greek prefix for four, tetra, with tennis, Pajitnov's favorite sport. Tetris became a global phenomenon after being bundled with the Game Boy in 1989, and the catchy folk tune Korobeiniki became its theme. It has been released on nearly every platform and is one of the best-selling and most ported games ever. Researchers have even studied its effects on attention and memory.",
+    "keywords": [
+      "tetris",
+      "pajitnov",
+      "tetromino",
+      "puzzle",
+      "game boy",
+      "korobeiniki",
+      "falling blocks"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who made tetris",
+      "how does tetris work",
+      "what are tetrominoes",
+      "tetris history",
+      "why is tetris popular"
+    ]
+  },
+  {
+    "question": "What is Fortnite?",
+    "answer": "Fortnite is an online game developed by Epic Games and released in 2017. It started with a cooperative survival mode called Save the World, but it exploded in popularity when the free Battle Royale mode launched in September 2017, where up to one hundred players drop onto an island and fight to be the last one standing. Its signature feature is building walls, ramps and towers during combat. Fortnite is known for colorful art, dances called emotes, a Battle Pass, and live in-game events and concerts. It also features crossovers with companies such as Marvel, Star Wars and many musicians. Today it also includes creative tools and separate modes like Lego Fortnite and Rocket Racing.",
+    "keywords": [
+      "fortnite",
+      "epic games",
+      "battle royale",
+      "building",
+      "battle pass",
+      "emotes",
+      "v-bucks"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who made fortnite",
+      "how do you play fortnite",
+      "what is the fortnite battle pass",
+      "is fortnite free",
+      "fortnite explained"
+    ]
+  },
+  {
+    "question": "What is Among Us?",
+    "answer": "Among Us is a social deduction game developed by the American studio Innersloth and released in 2018. It became a massive hit in 2020 when streamers and YouTubers began playing it during lockdowns. Four to fifteen players are crew members on a spaceship, a map, or base, while one to three of them are secretly impostors. Crewmates complete tasks and try to figure out who is lying, and impostors sabotage the ship and eliminate players without getting caught. When a body is found or a meeting is called, everyone discusses and votes to eject a suspect. The game is simple, cheap, and works on phones and computers, which helped it spread so quickly. The word sus, meaning suspicious, became popular partly because of it.",
+    "keywords": [
+      "among us",
+      "impostor",
+      "crewmate",
+      "sus",
+      "innersloth",
+      "social deduction",
+      "emergency meeting"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is sus",
+      "what does sus mean",
+      "how do you play among us",
+      "who is the impostor",
+      "what is a social deduction game"
+    ]
+  },
+  {
+    "question": "What is Roblox?",
+    "answer": "Roblox is an online platform where users play and create games made by other users. It was founded by David Baszucki and Erik Cassel and launched in 2006. Instead of being one game, it is a huge collection of experiences, including obbies, tycoons, role-playing worlds, simulators and horror games such as Doors and popular hits like Adopt Me, Brookhaven and Blox Fruits. Creators build with Roblox Studio and the Luau scripting language, and they can earn real money through the Developer Exchange program. Players customize avatars and spend the virtual currency Robux. Roblox has a very young audience, so it provides parental controls, chat filters and age settings, and parents are encouraged to review them.",
+    "keywords": [
+      "roblox",
+      "robux",
+      "roblox studio",
+      "obby",
+      "avatar",
+      "user generated",
+      "adopt me"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is robux",
+      "how do you play roblox",
+      "who made roblox",
+      "is roblox safe",
+      "what is an obby"
+    ]
+  },
+  {
+    "question": "Who is Sonic the Hedgehog?",
+    "answer": "Sonic the Hedgehog is the fast blue mascot of Sega, created to compete with Nintendo's Mario. The first Sonic game was released in 1991 for the Sega Genesis, also known as the Mega Drive, and was developed by Yuji Naka, Naoto Ohshima and Hirokazu Yasuhara. Sonic runs at super speed through colorful zones, spins into a ball to defeat robots called badniks and collects golden rings that protect him from damage. His main enemy is the scientist Dr. Eggman, also called Robotnik, and his friends include Tails, Knuckles and Amy Rose. Collecting the seven Chaos Emeralds lets him turn into Super Sonic. The series also includes animated shows and a successful live-action film series that began in 2020.",
+    "keywords": [
+      "sonic",
+      "sega",
+      "tails",
+      "knuckles",
+      "eggman",
+      "chaos emeralds",
+      "rings",
+      "hedgehog"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who made sonic",
+      "what is sonic the hedgehog",
+      "who is dr eggman",
+      "sonic history",
+      "are sonic games good"
+    ]
+  },
+  {
+    "question": "What is Pac-Man?",
+    "answer": "Pac-Man is an arcade classic released by Namco in Japan in 1980 and designed by Toru Iwatani. The player controls a yellow circle with a mouth who moves through a maze eating dots while avoiding four ghosts named Blinky, Pinky, Inky and Clyde. Eating a power pellet lets Pac-Man turn the tables and chase the ghosts for a short time. Each ghost has its own behavior, which makes the game smarter than it first appears. Pac-Man became one of the highest-grossing arcade games ever and one of the most recognizable characters in pop culture. A perfect score of 3,333,360 points, achieved by clearing all 256 levels, was first reached in 1999 by Billy Mitchell.",
+    "keywords": [
+      "pac-man",
+      "pacman",
+      "namco",
+      "ghosts",
+      "blinky",
+      "maze",
+      "arcade",
+      "iwatani"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who made pac-man",
+      "what are the pac-man ghosts",
+      "pac-man history",
+      "how do you play pac-man",
+      "pacman explained"
+    ]
+  },
+  {
+    "question": "What is Grand Theft Auto?",
+    "answer": "Grand Theft Auto, usually called GTA, is a series of open-world action games published by Rockstar Games. The first game came out in 1997 from the Scottish studio DMA Design, which later became Rockstar North. Players take on the role of criminals in fictional versions of real cities, completing missions, driving vehicles and exploring a detailed world full of radio stations, side activities and satire of modern society. Grand Theft Auto III in 2001 brought the series into 3D, Vice City and San Andreas followed, and Grand Theft Auto V in 2013 became one of the best-selling games ever, with the online mode GTA Online still being updated. The games are rated for mature audiences because of violence and adult themes.",
+    "keywords": [
+      "gta",
+      "grand theft auto",
+      "rockstar",
+      "open world",
+      "san andreas",
+      "gta v",
+      "gta online"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who makes gta",
+      "what is gta 5",
+      "gta history",
+      "is gta for kids",
+      "what is gta online"
+    ]
+  },
+  {
+    "question": "What is The Sims?",
+    "answer": "The Sims is a life simulation series created by designer Will Wright and published by Electronic Arts, with the first game released in 2000 by Maxis. Players control virtual people called Sims, guiding their daily lives by managing needs like hunger, energy, hygiene and social interaction, building careers, making friends, falling in love and building houses. The game has no single goal, so players invent their own stories, and it includes a famous fictional language called Simlish. The Sims 2, 3 and 4 added aging, open neighborhoods and expansive customization, and The Sims 4 became free to play in 2022. The Sims is one of the best-selling PC game franchises ever and has a huge community that creates custom content.",
+    "keywords": [
+      "the sims",
+      "will wright",
+      "maxis",
+      "simlish",
+      "life simulation",
+      "ea",
+      "build mode"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who made the sims",
+      "what is simlish",
+      "how do you play the sims",
+      "sims history",
+      "what are sims"
+    ]
+  },
+  {
+    "question": "What is League of Legends?",
+    "answer": "League of Legends is a multiplayer online battle arena game, also called a MOBA, developed by Riot Games and released in 2009. Two teams of five players each choose a champion from a roster of more than one hundred and sixty, and race to destroy the enemy base, called the Nexus, while fighting minions and turrets on the map Summoner's Rift. Matches last around thirty minutes. The game is free to play and earns money through cosmetic skins. It has an enormous esports scene with the annual World Championship, and it inspired the animated series Arcane in 2021, which won an Emmy. League is known for being challenging, so learning roles like top, jungle, mid, bot and support takes time.",
+    "keywords": [
+      "league of legends",
+      "lol",
+      "riot games",
+      "moba",
+      "champions",
+      "summoner's rift",
+      "arcane",
+      "worlds"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is lol",
+      "how do you play league of legends",
+      "what is a moba",
+      "who made league of legends",
+      "is league hard"
+    ]
+  },
+  {
+    "question": "What is Dota 2?",
+    "answer": "Dota 2 is a free-to-play multiplayer online battle arena game developed and published by Valve in 2013. It continues the story of the original Defense of the Ancients, a custom map for Warcraft III. Two teams of five heroes fight to destroy each other's Ancient while moving along three lanes, killing creeps and buying items. With more than one hundred twenty heroes and a deep, complex item system, Dota 2 is known as one of the most challenging competitive games. Its annual tournament, The International, was famous for setting records for esports prize money thanks to crowdfunding through the Battle Pass. The game is loved for its depth, its comebacks and its passionate community.",
+    "keywords": [
+      "dota 2",
+      "valve",
+      "moba",
+      "the international",
+      "heroes",
+      "ancient",
+      "defense of the ancients"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is dota",
+      "who made dota 2",
+      "what is the international",
+      "dota 2 vs league of legends",
+      "how do you play dota"
+    ]
+  },
+  {
+    "question": "What is Counter-Strike?",
+    "answer": "Counter-Strike is a tactical first-person shooter in which two teams, terrorists and counter-terrorists, face off in short rounds. Terrorists try to plant a bomb while counter-terrorists try to stop them, and a player who dies must wait until the next round. It began in 1999 as a mod for Half-Life created by Minh Le and Jess Cliffe, and Valve soon hired them and turned it into an official game. Later versions include Counter-Strike Source, Global Offensive in 2012, and Counter-Strike 2 in 2023. The game is famous for its economy system, precise gunplay and teamwork, and it remains one of the most important esports in the world with events called Majors.",
+    "keywords": [
+      "counter-strike",
+      "cs",
+      "cs2",
+      "csgo",
+      "valve",
+      "half-life",
+      "bomb",
+      "esports"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is csgo",
+      "what is cs2",
+      "who made counter-strike",
+      "how do you play counter-strike",
+      "counter strike history"
+    ]
+  },
+  {
+    "question": "What is Undertale?",
+    "answer": "Undertale is a role-playing game created almost entirely by one developer, Toby Fox, and released in 2015 after a successful crowdfunding campaign. You play a human child who falls into the Underground, a world of monsters, and the big twist is that you can finish the game without killing anyone by choosing to talk, spare or act. Your choices change the story, the characters' reactions and the ending, and the game is known for humor, emotional moments, bullet-hell combat and unforgettable music, including the track Megalovania. Beloved characters include Sans, Papyrus, Toriel, Undyne and Flowey. Undertale became a cultural phenomenon and inspired a huge amount of fan art, remixes and games like Deltarune.",
+    "keywords": [
+      "undertale",
+      "toby fox",
+      "sans",
+      "papyrus",
+      "megalovania",
+      "toriel",
+      "underground",
+      "deltarune"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who is sans",
+      "who made undertale",
+      "what is megalovania",
+      "what is deltarune",
+      "undertale story"
+    ]
+  },
+  {
+    "question": "What is Stardew Valley?",
+    "answer": "Stardew Valley is a farming and life simulation game created by one developer, Eric Barone, who goes by ConcernedApe. It was released in 2016 after about four years of solo work. You inherit your late grandfather's rundown farm in a peaceful town called Pelican Town. You grow crops, raise animals, mine caves, fish, forage, cook, decorate and befriend or marry villagers such as Abigail, Sebastian, Emily and Haley. Seasons change every twenty-eight days, and the community center holds a series of goals to restore the town. The game is cozy, flexible and generous, supports multiplayer, and is one of the best examples of how one person can create a worldwide hit. It has sold tens of millions of copies.",
+    "keywords": [
+      "stardew valley",
+      "farming",
+      "concernedape",
+      "pelican town",
+      "cozy",
+      "life sim",
+      "eric barone"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who made stardew valley",
+      "is stardew valley good",
+      "what is a farming sim",
+      "cozy games",
+      "how do you play stardew valley"
+    ]
+  },
+  {
+    "question": "What is Elden Ring?",
+    "answer": "Elden Ring is an open-world action role-playing game developed by FromSoftware and released in 2022. It was directed by Hidetaka Miyazaki, who also led Dark Souls, and its world was created in collaboration with fantasy author George R. R. Martin. Players are Tarnished, exiled warriors who return to the Lands Between to restore the shattered Elden Ring and become Elden Lord. The game is famous for demanding boss fights, a mysterious story told through item descriptions, and freedom to explore in any order, using the spirit steed Torrent. It won many Game of the Year awards, and its expansion Shadow of the Erdtree released in 2024. Players often describe the feeling of overcoming a hard boss as uniquely rewarding.",
+    "keywords": [
+      "elden ring",
+      "fromsoftware",
+      "miyazaki",
+      "souls",
+      "tarnished",
+      "boss",
+      "dark souls",
+      "soulslike"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is a soulslike",
+      "who made elden ring",
+      "is elden ring hard",
+      "what is dark souls",
+      "elden ring story"
+    ]
+  },
+  {
+    "question": "What is Genshin Impact?",
+    "answer": "Genshin Impact is a free-to-play open-world action role-playing game developed by miHoYo, now called HoYoverse, and released in September 2020. It is set in the fantasy world of Teyvat, where you play as a traveler searching for a lost sibling and collecting a team of characters, each with an elemental power such as Pyro, Hydro, Anemo, Electro, Cryo, Geo or Dendro. Combining elements creates reactions in combat. The game is praised for its beautiful anime-style art and music, and it expands through regions inspired by real cultures, like Mondstadt, Liyue, Inazuma and Sumeru. Characters are obtained through a gacha system called wishes, which is a random chance mechanic, so players are advised to spend carefully.",
+    "keywords": [
+      "genshin impact",
+      "mihoyo",
+      "hoyoverse",
+      "teyvat",
+      "gacha",
+      "wishes",
+      "elements",
+      "traveler"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is gacha",
+      "who made genshin",
+      "what is hoyoverse",
+      "genshin explained",
+      "is genshin free"
+    ]
+  },
+  {
+    "question": "What is Animal Crossing?",
+    "answer": "Animal Crossing is a relaxing life simulation series by Nintendo that began in Japan in 2001. You live in a village populated by friendly animal neighbors, and the game runs in real time, so the seasons, holidays and time of day match your own clock. You catch fish and bugs, collect fossils, decorate your home, pay off loans to the raccoon Tom Nook and design clothes and patterns. Animal Crossing New Horizons, released in March 2020, became a comfort for millions of people during lockdowns, since it let friends visit each other's islands. Its gentle pace and lack of any fail state make it a perfect stress-free game, with no villains and no pressure.",
+    "keywords": [
+      "animal crossing",
+      "new horizons",
+      "nintendo",
+      "tom nook",
+      "island",
+      "villagers",
+      "cozy"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who is tom nook",
+      "what is new horizons",
+      "animal crossing explained",
+      "is animal crossing relaxing",
+      "how do you play animal crossing"
+    ]
+  },
+  {
+    "question": "What is Super Smash Bros?",
+    "answer": "Super Smash Bros is a crossover fighting game series from Nintendo, first released in 1999 for the Nintendo 64 and led by director Masahiro Sakurai. Unlike traditional fighting games, players do not drain health bars. Instead, each hit increases a damage percentage, and the higher it is, the farther a character is launched. You win by knocking opponents off the stage. The roster features characters from many franchises, such as Mario, Link, Pikachu, Kirby, Donkey Kong, Samus, Sonic, Pac-Man and Cloud. Super Smash Bros Ultimate in 2018 includes every fighter from the series' history. It supports up to eight players on one console and has a strong competitive community.",
+    "keywords": [
+      "smash bros",
+      "super smash bros",
+      "nintendo",
+      "sakurai",
+      "fighting game",
+      "kirby",
+      "crossover"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "who made smash bros",
+      "how do you win in smash",
+      "is smash a fighting game",
+      "smash ultimate",
+      "who is in smash bros"
+    ]
+  },
+  {
+    "question": "What is Five Nights at Freddy's?",
+    "answer": "Five Nights at Freddy's, often abbreviated FNAF, is a horror game series created by Scott Cawthon, with the first game released in 2014. You play as a night security guard at a family restaurant called Freddy Fazbear's Pizza, where animatronic mascots such as Freddy, Bonnie, Chica and Foxy move around at night and try to reach you. You cannot fight back. Instead you monitor security cameras, close doors and manage limited power until six in the morning. The series is famous for jump scares and a deep, mysterious lore that fans love to analyze. It inspired many sequels, novels, fan games and a successful film in 2023.",
+    "keywords": [
+      "fnaf",
+      "five nights at freddy's",
+      "freddy",
+      "animatronics",
+      "scott cawthon",
+      "horror",
+      "jump scare"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is fnaf",
+      "who is freddy fazbear",
+      "who made fnaf",
+      "fnaf lore",
+      "is fnaf scary"
+    ]
+  },
+  {
+    "question": "What is Portal?",
+    "answer": "Portal is a first-person puzzle game released by Valve in 2007. You play as Chell, a test subject in the Aperture Science facility who uses a portal gun to create two linked openings, allowing you to walk through one and exit from the other. The game uses momentum, physics and clever level design to build brilliant puzzles. It is also famous for dark humor delivered by the artificial intelligence GLaDOS, the song Still Alive and the meme phrase the cake is a lie. Portal 2 in 2011 added new characters like Wheatley and Cave Johnson, new puzzle elements such as gels and cooperative play. Both are considered among the greatest games ever made.",
+    "keywords": [
+      "portal",
+      "valve",
+      "glados",
+      "chell",
+      "portal gun",
+      "aperture science",
+      "the cake is a lie",
+      "puzzle"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "what is the cake is a lie",
+      "who is glados",
+      "how does the portal gun work",
+      "portal 2",
+      "who made portal"
+    ]
+  },
+  {
+    "question": "What is Terraria?",
+    "answer": "Terraria is a 2D sandbox adventure game developed by Re-Logic and released in 2011. It is often described as a side-scrolling mix of Minecraft and a classic action platformer. You dig, craft, build and fight across randomly generated worlds filled with caves, jungles, deserts and underworld areas, and you face bosses like the Eye of Cthulhu, the Eater of Worlds, Skeletron and the Moon Lord. Its long progression includes hundreds of weapons, armor sets and NPCs who move into houses you build. Terraria supports multiplayer, receives huge free updates, and is loved for its depth and value. The Journey's End update in 2020 was announced as the final major update, although smaller updates have followed.",
+    "keywords": [
+      "terraria",
+      "re-logic",
+      "sandbox",
+      "2d",
+      "bosses",
+      "crafting",
+      "moon lord"
+    ],
+    "category": "Famous Games",
+    "language": "en",
+    "aliases": [
+      "terraria vs minecraft",
+      "who made terraria",
+      "what are terraria bosses",
+      "is terraria good",
+      "how do you play terraria"
+    ]
+  }
+]

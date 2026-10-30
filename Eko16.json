@@ -1,0 +1,470 @@
+[
+  {
+    "question": "What makes a good friend?",
+    "answer": "A good friend is someone you can trust, who respects you and who is there in both good and difficult times. Typical qualities include honesty, loyalty, kindness, good listening, reliability, a shared sense of fun and the ability to forgive mistakes. Friendship works in both directions, so you also need to give attention, keep promises, celebrate other people's successes and support them when things go wrong. Friends do not have to agree on everything, and respectful disagreement is healthy. Warning signs of an unhealthy friendship include constant put-downs, pressure to do things you are uncomfortable with, jealousy that controls you, and gossip about your secrets. Research shows that close friendships improve happiness, health and even longevity.",
+    "keywords": [
+      "friend",
+      "friendship",
+      "trust",
+      "loyalty",
+      "support",
+      "kindness"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "how to be a good friend",
+      "how to make friends",
+      "what is true friendship",
+      "signs of a toxic friend",
+      "how to keep friends"
+    ]
+  },
+  {
+    "question": "What is a family?",
+    "answer": "A family is a group of people connected by blood, marriage, adoption or deep emotional bonds who support and care for each other. Families come in many forms, including nuclear families of parents and children, extended families with grandparents, aunts, uncles and cousins living nearby, single-parent families, blended families, adoptive families and families formed by close friends. The family is usually the first place a person learns language, values, habits and love. Healthy families communicate openly, show respect, share responsibilities and offer a safe place to make mistakes. Cultures differ in how close extended family relations are, but the need for belonging and support is universal. If a family environment is unsafe, trusted adults and community services can help.",
+    "keywords": [
+      "family",
+      "parents",
+      "siblings",
+      "relatives",
+      "nuclear family",
+      "extended family",
+      "home"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what is a nuclear family",
+      "types of families",
+      "why is family important",
+      "what is an extended family",
+      "what makes a family"
+    ]
+  },
+  {
+    "question": "How do healthy romantic relationships work?",
+    "answer": "Healthy romantic relationships are built on respect, trust, honest communication and equality. Partners support each other's goals, respect boundaries, make decisions together and can disagree without insults or fear. Signs of health include feeling safe, being able to be yourself, having time for friends and hobbies and apologizing sincerely when you are wrong. Psychologist John Gottman found that stable couples handle conflict gently, show appreciation regularly and avoid contempt, criticism, defensiveness and stonewalling. Warning signs of an unhealthy relationship include control, constant jealousy, isolation from friends, threats, pressure or any kind of violence, and anyone in that situation should reach out to a trusted person or local support service. Young people should also feel free to take their time and not rush into anything.",
+    "keywords": [
+      "relationship",
+      "romance",
+      "dating",
+      "trust",
+      "communication",
+      "boundaries",
+      "gottman",
+      "respect"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "how to have a healthy relationship",
+      "signs of a toxic relationship",
+      "what is a red flag",
+      "how to communicate in a relationship",
+      "how to handle a breakup"
+    ]
+  },
+  {
+    "question": "How can I communicate better?",
+    "answer": "Good communication has two parts, expressing yourself clearly and listening carefully. To express yourself, be specific, calm and honest, and use I statements such as I feel worried when plans change, instead of blaming phrases like you always ruin things. To listen, give your full attention, avoid interrupting, ask open questions, repeat back what you heard and show you care about the other person's feelings. Body language, such as eye contact, a relaxed posture and tone of voice, makes up a large part of the message. In written chats, tone can be misunderstood, so extra clarity and kindness help, and emojis can add warmth. Difficult conversations go better when you pick a good time and focus on solving the problem rather than winning.",
+    "keywords": [
+      "communication",
+      "listening",
+      "talking",
+      "i statements",
+      "body language",
+      "conversation"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "how to talk to people",
+      "how to be a good listener",
+      "how to start a conversation",
+      "how to express feelings",
+      "what is active listening"
+    ]
+  },
+  {
+    "question": "How can conflicts be resolved peacefully?",
+    "answer": "Conflicts are a normal part of life, and they can be handled in ways that strengthen relationships. The key steps are to stay calm, listen to each side, identify the real problem behind the argument, share feelings without insults, look for solutions that meet both parties' needs and agree on what will be done next. Taking a short break when emotions run high can prevent regret. If you cannot solve it alone, a neutral third person such as a teacher, parent, counselor or trained mediator can help. Compromise means each side gives up something, while a win-win solution aims to satisfy everyone. Apologizing and forgiving are powerful tools, and learning from each conflict makes the next one easier.",
+    "keywords": [
+      "conflict",
+      "argument",
+      "peace",
+      "compromise",
+      "mediation",
+      "apology",
+      "forgiveness"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "how to stop arguing",
+      "how to resolve a fight",
+      "how to make peace",
+      "what is compromise",
+      "how to apologize"
+    ]
+  },
+  {
+    "question": "What is bullying and what can be done about it?",
+    "answer": "Bullying is repeated, intentional harmful behavior toward someone who has difficulty defending themselves, usually involving an imbalance of power. It can be physical, verbal, social, such as spreading rumors or excluding someone, or online, which is called cyberbullying. Bullying can seriously affect mental health, school performance and self-confidence. If you are being bullied, it is not your fault. Helpful steps are to tell a trusted adult, keep records or screenshots of online abuse, block and report accounts, stay near supportive friends and avoid retaliating. Bystanders can help by refusing to join in, checking on the target privately and reporting the behavior. Schools and communities work best when they have clear rules, supportive staff and a culture of respect.",
+    "keywords": [
+      "bullying",
+      "cyberbullying",
+      "harassment",
+      "report",
+      "school",
+      "safety",
+      "bystander"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what is cyberbullying",
+      "what to do if i'm bullied",
+      "how to stop bullying",
+      "how to help a bullied friend",
+      "why do people bully"
+    ]
+  },
+  {
+    "question": "What is culture?",
+    "answer": "Culture is the shared set of beliefs, customs, languages, arts, foods, clothing, values and behaviors of a group of people, passed from generation to generation. It shapes how people greet each other, celebrate, dress, cook, raise children and think about right and wrong. Cultures are not fixed and they constantly change through contact with other cultures, trade, migration, technology and the internet. Anthropologists study cultural differences, and they emphasize that no culture is simply better than another, although every society has to protect basic human rights. Learning about other cultures through travel, books, food, music and friendships builds empathy and reduces prejudice. Each person also belongs to many overlapping cultures, such as family, nation, school, religion and online communities.",
+    "keywords": [
+      "culture",
+      "traditions",
+      "customs",
+      "diversity",
+      "heritage",
+      "values",
+      "anthropology"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what are traditions",
+      "why is culture important",
+      "what is cultural diversity",
+      "what is heritage",
+      "what is culture shock"
+    ]
+  },
+  {
+    "question": "How many languages are there in the world?",
+    "answer": "There are around 7,000 living languages in the world, according to estimates by linguists, though the exact number depends on how dialects and languages are distinguished. The most spoken by total speakers are English, Mandarin Chinese, Hindi, Spanish, French, Standard Arabic, Bengali, Portuguese, Russian and Urdu. Mandarin has the most native speakers. Many languages are spoken by very few people, and roughly 40 percent are considered endangered, with about one language disappearing every few weeks on average. Language families such as Indo-European, Sino-Tibetan, Afro-Asiatic and Niger-Congo group languages with common ancestors. Learning another language improves memory, opens doors to new cultures and can be done effectively with regular daily practice.",
+    "keywords": [
+      "languages",
+      "english",
+      "mandarin",
+      "arabic",
+      "spanish",
+      "endangered languages",
+      "linguistics",
+      "translation"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what is the most spoken language",
+      "how many languages exist",
+      "how to learn a language",
+      "what is a language family",
+      "which languages are endangered"
+    ]
+  },
+  {
+    "question": "What are the major world religions?",
+    "answer": "Religions are systems of belief and practice that explore questions about meaning, morality and the sacred. The largest by number of followers are Christianity and Islam, followed by Hinduism, Buddhism and folk or traditional religions, along with Judaism, Sikhism and many others, and a growing number of people identify as non-religious. Christianity follows the teachings of Jesus, Islam centers on the Quran and the Prophet Muhammad, Judaism is based on the Torah and covenant with God, Hinduism is a diverse tradition with ancient texts like the Vedas, Buddhism follows the teachings of the Buddha on ending suffering and Sikhism was founded by Guru Nanak. Respecting differences in belief and learning about others fosters peace and understanding between communities.",
+    "keywords": [
+      "religion",
+      "christianity",
+      "islam",
+      "judaism",
+      "hinduism",
+      "buddhism",
+      "sikhism",
+      "faith"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what are the biggest religions",
+      "what do muslims believe",
+      "what do christians believe",
+      "what is buddhism",
+      "what is hinduism"
+    ]
+  },
+  {
+    "question": "Why is education important?",
+    "answer": "Education gives people knowledge, skills and the ability to think critically, which helps them find jobs, make informed decisions, stay healthy and take part in society. Studies show that more education is linked to higher income, longer life expectancy and lower poverty rates, and educating girls especially improves family health and community development. Learning also brings personal joy, curiosity and confidence. Education is not limited to schools, since people also learn through books, mentors, experience, online courses and hobbies. The right to education is recognized in the Universal Declaration of Human Rights, though many children around the world still lack access to schooling. Lifelong learning is increasingly important because technology and jobs change quickly.",
+    "keywords": [
+      "education",
+      "school",
+      "learning",
+      "knowledge",
+      "university",
+      "literacy",
+      "skills"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "why do we go to school",
+      "why is learning important",
+      "what is lifelong learning",
+      "how to study effectively",
+      "what is the right to education"
+    ]
+  },
+  {
+    "question": "How do people choose a career?",
+    "answer": "Choosing a career is a process that combines interests, strengths, values and opportunities. Good steps include exploring what you enjoy, noticing what you are good at, researching different jobs and the education they require, talking to people who work in the field, trying internships, volunteering or part-time work, and thinking about the lifestyle and income you hope for. Many people change careers several times in life, so the first choice does not have to be final. Skills that are valuable across almost every job include communication, teamwork, problem-solving, digital literacy and the ability to keep learning. Meaningful work often comes from helping others, solving challenges or expressing creativity, and balancing work with rest and relationships matters just as much.",
+    "keywords": [
+      "career",
+      "job",
+      "work",
+      "profession",
+      "interview",
+      "skills",
+      "future"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what job should i choose",
+      "how to find a career",
+      "what should i study",
+      "how to prepare for a job interview",
+      "what skills are important for work"
+    ]
+  },
+  {
+    "question": "What is money and how does the economy work?",
+    "answer": "Money is anything widely accepted for exchanging goods and services, storing value and measuring prices. Throughout history people used shells, metal coins, paper notes and now digital payments. An economy is the system of producing, distributing and consuming goods and services. In a market economy prices rise or fall depending on supply, how much is available, and demand, how much people want it. Governments collect taxes to pay for services such as roads, schools and healthcare, and central banks influence interest rates and money supply. Inflation is a general rise in prices over time, and unemployment means people who want jobs cannot find them. Basic money skills include budgeting, saving regularly, avoiding unnecessary debt and learning about investing.",
+    "keywords": [
+      "money",
+      "economy",
+      "inflation",
+      "supply and demand",
+      "banks",
+      "taxes",
+      "budget",
+      "saving"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what is inflation",
+      "how does a bank work",
+      "how to save money",
+      "what is supply and demand",
+      "what are taxes"
+    ]
+  },
+  {
+    "question": "What is democracy?",
+    "answer": "Democracy is a system of government in which power comes from the people, who either vote directly or elect representatives to make decisions. The word comes from the Greek words demos, meaning people, and kratos, meaning rule, and it originated in ancient Athens around 500 BCE. Modern democracies usually have free and fair elections, protection of rights such as free speech, an independent judiciary and the rule of law. Types include direct democracy, where citizens vote on laws, and representative democracy, where elected officials decide. Other systems include monarchies, where a king or queen is head of state, and authoritarian systems, where power is concentrated. Many countries combine elements, such as a constitutional monarchy with an elected parliament.",
+    "keywords": [
+      "democracy",
+      "government",
+      "elections",
+      "vote",
+      "constitution",
+      "republic",
+      "monarchy",
+      "rights"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what is a republic",
+      "how does voting work",
+      "types of government",
+      "what is a constitutional monarchy",
+      "what is the rule of law"
+    ]
+  },
+  {
+    "question": "What are human rights?",
+    "answer": "Human rights are basic freedoms and protections that belong to every person simply because they are human, regardless of nationality, gender, race, religion or status. After the Second World War, the United Nations General Assembly adopted the Universal Declaration of Human Rights on 10 December 1948, which lists thirty articles including the right to life, liberty and security, freedom from slavery and torture, equality before the law, freedom of thought, expression and religion, the right to education, work and a fair standard of living. Children's rights are covered by the Convention on the Rights of the Child from 1989. Rights come with responsibilities to respect the rights of others. Human Rights Day is celebrated every year on December 10.",
+    "keywords": [
+      "human rights",
+      "udhr",
+      "united nations",
+      "freedom",
+      "equality",
+      "children's rights",
+      "justice"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what is the udhr",
+      "what rights do i have",
+      "what are children's rights",
+      "when is human rights day",
+      "what is equality"
+    ]
+  },
+  {
+    "question": "What is ethics and how do we decide right from wrong?",
+    "answer": "Ethics is the branch of philosophy that studies right and wrong, good and bad, and how people should live. Major approaches include consequentialism, which judges actions by their results, as in utilitarianism, the idea of creating the greatest good for the greatest number, deontology, associated with Immanuel Kant, which says some duties like honesty must be followed regardless of outcome, and virtue ethics, from Aristotle, which focuses on developing good character traits such as courage, honesty and compassion. Many religions and cultures provide their own moral codes, and most share ideas like fairness and care for others. In daily life, thinking about how your choices affect others, imagining yourself in their place and being willing to admit mistakes are practical ways to act ethically.",
+    "keywords": [
+      "ethics",
+      "morality",
+      "right and wrong",
+      "utilitarianism",
+      "kant",
+      "aristotle",
+      "virtue",
+      "philosophy"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what is morality",
+      "how to know right from wrong",
+      "what is the trolley problem",
+      "what is utilitarianism",
+      "what is virtue"
+    ]
+  },
+  {
+    "question": "How does social media affect people?",
+    "answer": "Social media can connect people, spread information, support creativity and help communities form around shared interests. It can also create problems. Constantly comparing yourself to curated posts can lower self-esteem, endless scrolling can disturb sleep and attention, and online harassment, misinformation and privacy risks are real concerns. Research shows the effects vary by person and how they use it, with active, positive interaction like chatting with friends being healthier than passive scrolling. Useful habits include limiting time with app timers, turning off unnecessary notifications, following accounts that inspire you, keeping personal information private, taking breaks, and remembering that online lives are edited versions of reality. If something online makes you feel bad, it is fine to mute, block or leave.",
+    "keywords": [
+      "social media",
+      "instagram",
+      "tiktok",
+      "screen time",
+      "comparison",
+      "privacy",
+      "misinformation",
+      "online"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "is social media bad",
+      "how to use social media safely",
+      "what is doomscrolling",
+      "how to take a break from social media",
+      "why is tiktok addictive"
+    ]
+  },
+  {
+    "question": "What is good etiquette and manners?",
+    "answer": "Etiquette is a set of social customs that show respect and consideration for others, and it varies between cultures. Common universal manners include saying please and thank you, greeting people politely, listening without interrupting, being on time, keeping promises, respecting personal space and cleaning up after yourself. Table manners, such as chewing with your mouth closed and waiting to start eating until everyone is served, are important in many places. Online etiquette, sometimes called netiquette, includes not typing in all capital letters, avoiding spamming, respecting privacy, being kind in comments and thinking before you post. When visiting another culture, observing how locals behave or asking politely avoids misunderstandings. Good manners are really about making others feel valued and comfortable.",
+    "keywords": [
+      "etiquette",
+      "manners",
+      "politeness",
+      "respect",
+      "netiquette",
+      "table manners",
+      "please and thank you"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "how to be polite",
+      "what is netiquette",
+      "what are good manners",
+      "how to behave at a dinner",
+      "how to greet people"
+    ]
+  },
+  {
+    "question": "What are some major holidays and festivals around the world?",
+    "answer": "People celebrate many festivals tied to religion, seasons and history. Eid al-Fitr marks the end of Ramadan, the Muslim month of fasting, and Eid al-Adha commemorates Ibrahim's willingness to sacrifice. Christmas celebrates the birth of Jesus on December 25 for many Christians, and Easter marks his resurrection. Diwali, the Hindu festival of lights, celebrates the victory of light over darkness, Hanukkah is the Jewish festival of lights, Lunar New Year is celebrated in China and across Asia with family reunions and red envelopes, and Nowruz is the Persian New Year at the spring equinox. Other celebrations include Holi, Thanksgiving, Carnival in Brazil, Oktoberfest in Germany, Independence Days and the secular New Year on January 1.",
+    "keywords": [
+      "holidays",
+      "festivals",
+      "eid",
+      "christmas",
+      "diwali",
+      "lunar new year",
+      "nowruz",
+      "ramadan"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what is eid",
+      "what is ramadan",
+      "what is diwali",
+      "what is lunar new year",
+      "when is christmas"
+    ]
+  },
+  {
+    "question": "What is the difference between generations such as Gen Z and millennials?",
+    "answer": "Generations are groups of people born in a similar period who share certain historical experiences. The commonly used labels are the Silent Generation, born roughly 1928 to 1945, baby boomers, 1946 to 1964, Generation X, 1965 to 1980, millennials or Generation Y, 1981 to 1996, Generation Z, 1997 to 2012, and Generation Alpha, born from about 2010 onward. Generation Z grew up with smartphones and social media, which shapes how they communicate, shop and learn, while millennials remember the shift from dial-up to broadband. The exact dates differ between sources, and generalizations are only rough since individuals vary widely. Differences in values often reflect age and circumstances as much as birth year.",
+    "keywords": [
+      "generation",
+      "gen z",
+      "millennials",
+      "boomers",
+      "gen alpha",
+      "age groups",
+      "gen x"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "what is gen z",
+      "what year is gen alpha",
+      "what is a millennial",
+      "what is a boomer",
+      "generation names"
+    ]
+  },
+  {
+    "question": "How can I be a good leader?",
+    "answer": "A good leader helps a group achieve its goals while caring for its members. Important qualities include clear vision, honesty, fairness, good communication, responsibility and the willingness to listen and learn. Great leaders set an example, give people credit for their work, delegate tasks according to strengths, make decisions even when they are difficult and admit mistakes. Different situations need different styles, whether directive, supportive or collaborative. You can practice leadership in small ways, such as organizing a school project, running a club or helping a friend solve a problem. Leadership does not require a title, and the best leaders are often those who make others feel capable, motivated and respected.",
+    "keywords": [
+      "leadership",
+      "leader",
+      "teamwork",
+      "responsibility",
+      "management",
+      "decision making"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "how to lead a team",
+      "what makes a good leader",
+      "how to be a good teammate",
+      "how to manage people",
+      "what is teamwork"
+    ]
+  },
+  {
+    "question": "What is online privacy and safety?",
+    "answer": "Online privacy means controlling who can see your personal information and activity, and online safety means protecting yourself from harm. Key habits include using strong, unique passwords with a password manager and two-factor authentication, never sharing passwords, addresses or school details with strangers, thinking carefully before posting photos, and checking privacy settings on social apps and games. Be careful of phishing, which means fake messages that try to trick you into giving information or clicking harmful links, and avoid downloading files from unknown sources. Remember that anything posted online can be copied and may stay forever. If someone online makes you uncomfortable, asks for secrets or pictures, or pressures you, stop replying, save evidence, block them and tell a trusted adult or report it to the platform.",
+    "keywords": [
+      "privacy",
+      "safety",
+      "password",
+      "phishing",
+      "two-factor",
+      "scam",
+      "cybersecurity",
+      "strangers"
+    ],
+    "category": "Society and Relationships",
+    "language": "en",
+    "aliases": [
+      "how to stay safe online",
+      "how to make a strong password",
+      "what is phishing",
+      "what is two factor authentication",
+      "how to spot a scam"
+    ]
+  }
+]

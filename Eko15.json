@@ -1,0 +1,546 @@
+[
+  {
+    "question": "What are emotions?",
+    "answer": "Emotions are complex reactions that involve thoughts, body changes and behavior. When something important happens, your brain evaluates it quickly, your body responds with changes in heart rate, muscle tension or hormones, and you feel something like joy, fear or anger that pushes you to act. Psychologist Paul Ekman proposed six basic emotions that appear across cultures, happiness, sadness, fear, anger, surprise and disgust, while Robert Plutchik arranged emotions on a wheel of eight primary types that blend into others. Emotions are not good or bad. They are signals that give information about what matters to us, and they help us connect with others. Learning to notice, name and manage emotions is called emotional intelligence, and it improves relationships and wellbeing.",
+    "keywords": [
+      "emotions",
+      "feelings",
+      "ekman",
+      "plutchik",
+      "basic emotions",
+      "emotional intelligence"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "what are feelings",
+      "why do we have emotions",
+      "what are the basic emotions",
+      "what is the emotion wheel",
+      "what is emotional intelligence"
+    ]
+  },
+  {
+    "question": "What is happiness and how can I be happier?",
+    "answer": "Happiness is a positive state of wellbeing that includes pleasant feelings, a sense of meaning and satisfaction with life. Research in positive psychology suggests that long-term happiness depends less on money or possessions and more on relationships, health, purpose and everyday habits. The Harvard Study of Adult Development, which has followed people for over eighty years, found that strong, warm relationships are one of the best predictors of a happy and healthy life. Practical habits include spending time with people you care about, getting enough sleep, exercising, spending time outdoors, helping others, practicing gratitude, learning new skills and setting small goals. It is also normal not to feel happy all the time, and sadness and stress are part of being human.",
+    "keywords": [
+      "happiness",
+      "joy",
+      "wellbeing",
+      "positive psychology",
+      "gratitude",
+      "habits",
+      "harvard study"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "how to be happy",
+      "what makes people happy",
+      "how can i feel happier",
+      "what is joy",
+      "is money the key to happiness"
+    ]
+  },
+  {
+    "question": "Why do we feel sad?",
+    "answer": "Sadness is a natural emotion that usually appears after loss, disappointment or separation. It tells us that something mattered to us, slows us down so we can process what happened and often invites comfort and support from other people. Crying can be part of this response, and many people feel a bit relieved afterward. Sadness normally fades with time, especially when you talk about it, rest, move your body, or do something kind for yourself. If sadness lasts for weeks, becomes very heavy, makes it hard to function or comes with hopeless thoughts, it may be depression, which is a medical condition that responds well to help from a doctor or therapist. You do not have to deal with it alone, and reaching out to someone you trust is a strong choice.",
+    "keywords": [
+      "sadness",
+      "sad",
+      "crying",
+      "loss",
+      "depression",
+      "grief",
+      "comfort"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "why do i feel sad",
+      "is it ok to cry",
+      "what to do when sad",
+      "why do people cry",
+      "how to deal with sadness"
+    ]
+  },
+  {
+    "question": "Why do we get angry?",
+    "answer": "Anger is an emotion that arises when we feel threatened, treated unfairly, blocked from a goal or hurt. It triggers the body's fight response, raising heart rate, blood pressure and muscle tension and releasing adrenaline, which prepares you to defend yourself or fix the problem. Anger is not bad in itself, since it can motivate us to stand up against injustice, but acting on it without thinking can damage relationships. Helpful strategies include pausing before reacting, taking slow deep breaths, counting to ten, going for a walk, writing down what you feel and using I statements, such as I feel upset when this happens, instead of attacking others. If anger feels out of control or leads to harming people or things, talking to a counselor can teach useful skills.",
+    "keywords": [
+      "anger",
+      "angry",
+      "mad",
+      "rage",
+      "calm down",
+      "adrenaline",
+      "temper"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "how to calm down when angry",
+      "why do i get mad",
+      "is anger bad",
+      "how to control anger",
+      "what is rage"
+    ]
+  },
+  {
+    "question": "What is fear and why do we feel it?",
+    "answer": "Fear is an emotion that protects us from danger. When the brain detects a threat, a small almond-shaped region called the amygdala sets off the fight, flight or freeze response. The heart speeds up, breathing quickens, muscles tense and stress hormones such as adrenaline are released, which is why people tremble or sweat when scared. Fear is useful when the danger is real, but sometimes the alarm goes off when there is no real threat, as in phobias or social fears. Many people enjoy mild fear in a safe setting, like a horror film or a roller coaster, because the body feels excited and then relieved. Facing fears gradually, in small steps, and learning that the feared thing is manageable is one of the best ways to reduce them.",
+    "keywords": [
+      "fear",
+      "scared",
+      "phobia",
+      "amygdala",
+      "fight or flight",
+      "courage",
+      "horror"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "why am i scared",
+      "what is a phobia",
+      "how to overcome fear",
+      "what is the amygdala",
+      "why do people like scary movies"
+    ]
+  },
+  {
+    "question": "What is anxiety?",
+    "answer": "Anxiety is a feeling of worry, nervousness or unease about something that might happen. A little anxiety is normal and can even help you prepare for a test or performance. An anxiety disorder is when worry is intense, constant and disrupts daily life, sometimes with symptoms like a racing heart, trouble breathing, stomach aches, restlessness, trouble sleeping or panic attacks. Anxiety is among the most common mental health conditions in the world, and it is treatable. Helpful steps include slow breathing, regular exercise, sleep, limiting caffeine, writing down worries, grounding exercises such as naming five things you can see, and talking with someone you trust. Therapy, especially cognitive behavioral therapy, and sometimes medication prescribed by a doctor, can make a big difference.",
+    "keywords": [
+      "anxiety",
+      "worry",
+      "panic attack",
+      "nervous",
+      "stress",
+      "therapy",
+      "cbt",
+      "breathing"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "how to stop feeling anxious",
+      "what is a panic attack",
+      "why do i feel nervous",
+      "how to calm anxiety",
+      "is anxiety normal"
+    ]
+  },
+  {
+    "question": "What is love?",
+    "answer": "Love is a deep feeling of care, attachment and affection toward another person, a pet, a place or an idea. Psychologists describe several kinds. Romantic love often combines passion, intimacy and commitment, as in Robert Sternberg's triangular theory. Familial love is the bond between parents, children and siblings. Friendship love is based on trust and shared enjoyment, and self-love means treating yourself with respect and kindness. Biologically, love involves chemicals like dopamine, which creates excitement, oxytocin, which builds bonding and trust, and serotonin. Healthy love includes respect, honesty, support and freedom. Love is shown through actions such as listening, helping and being there, not only through words, and it grows when people keep working at it.",
+    "keywords": [
+      "love",
+      "romance",
+      "attachment",
+      "oxytocin",
+      "affection",
+      "sternberg",
+      "family"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "what does love mean",
+      "what is true love",
+      "types of love",
+      "what is self-love",
+      "how does love work"
+    ]
+  },
+  {
+    "question": "What is loneliness and how can I cope with it?",
+    "answer": "Loneliness is the painful feeling of being disconnected from others, and it is different from being alone, since someone can enjoy solitude or feel lonely in a crowd. It is very common, and studies show it can affect people of every age. Humans are social animals, so long-term loneliness can affect sleep, mood and health. Ways to cope include reaching out to an old friend, joining a club, class or online community around a hobby, volunteering, spending time with pets, taking walks in places where other people are present and being patient with yourself. Quality matters more than quantity, so one or two close friends can be enough. If loneliness feels overwhelming, talking to a counselor or helpline is a good step.",
+    "keywords": [
+      "loneliness",
+      "lonely",
+      "alone",
+      "friends",
+      "connection",
+      "isolation",
+      "social"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "i feel lonely",
+      "how to stop being lonely",
+      "how to make friends",
+      "is it bad to be alone",
+      "what is solitude"
+    ]
+  },
+  {
+    "question": "What is jealousy and envy?",
+    "answer": "Jealousy is the fear of losing something valuable, especially a relationship, to a rival, while envy is the wish to have what someone else has, such as their talent, looks or possessions. In everyday speech people mix the two. Both are normal human emotions and often point to something we care about or want for ourselves. They can cause harm if they lead to controlling behavior, resentment or constant comparison, especially on social media, where people mostly show their best moments. Helpful responses are to name the feeling honestly, ask what it is telling you, talk openly with the person involved if it concerns a relationship, focus on your own goals and practice gratitude. Turning envy into inspiration can motivate you to improve.",
+    "keywords": [
+      "jealousy",
+      "envy",
+      "comparison",
+      "insecurity",
+      "social media",
+      "resentment"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "why do i get jealous",
+      "is jealousy normal",
+      "difference between jealousy and envy",
+      "how to stop being jealous",
+      "what is envy"
+    ]
+  },
+  {
+    "question": "What is empathy?",
+    "answer": "Empathy is the ability to understand and share the feelings of another person. Psychologists often distinguish cognitive empathy, which means understanding what someone is thinking or feeling, from emotional empathy, which means feeling something similar, and compassionate empathy, which means being moved to help. Mirror neurons and brain regions involved in feeling pain may play a part. Empathy builds friendships, improves teamwork and reduces conflict. You can practice it by listening without interrupting, asking questions, imagining the situation from the other person's view, reading fiction and being curious about different life experiences. Too much empathy without boundaries can cause exhaustion, so caring for yourself is also important. Empathy is different from sympathy, which is feeling sorry for someone from a distance.",
+    "keywords": [
+      "empathy",
+      "sympathy",
+      "compassion",
+      "understanding",
+      "listening",
+      "kindness"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "what is sympathy",
+      "how to be more empathetic",
+      "difference between empathy and sympathy",
+      "what is compassion",
+      "why is empathy important"
+    ]
+  },
+  {
+    "question": "What is stress and how can I manage it?",
+    "answer": "Stress is the body's response to pressure or challenge. Short-term stress can help you focus and perform, but long-term stress raises cortisol levels and can lead to headaches, poor sleep, stomach problems, weaker immunity, irritability and burnout. Common sources include exams, work, conflict, money worries and big changes. Useful tools include regular exercise, enough sleep, deep breathing, stretching or yoga, time in nature, planning tasks into small steps, saying no when overloaded, limiting social media, listening to calm music and talking to friends or family. Breaking a problem into what you can control and what you cannot is a powerful technique. If stress feels unmanageable, a doctor or counselor can offer support, and asking for help is a sign of strength.",
+    "keywords": [
+      "stress",
+      "cortisol",
+      "burnout",
+      "relax",
+      "coping",
+      "pressure",
+      "exam stress"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "how to relieve stress",
+      "how to relax",
+      "why am i stressed",
+      "what is burnout",
+      "stress management tips"
+    ]
+  },
+  {
+    "question": "What is depression?",
+    "answer": "Depression is a common but serious medical condition that affects how a person feels, thinks and acts. It is not simply being sad or weak. Symptoms can include persistent low mood, loss of interest in things once enjoyed, tiredness, changes in sleep or appetite, trouble concentrating, feelings of worthlessness and sometimes thoughts of self-harm. It can result from a mix of biology, life events, stress and family history. Depression is treatable with therapy, medication, lifestyle support or a combination. If you think you or someone you know may be depressed, talk to a doctor, school counselor or trusted adult. If someone is in immediate danger or thinking about harming themselves, they should contact local emergency services or a crisis line right away and not stay alone.",
+    "keywords": [
+      "depression",
+      "mental health",
+      "therapy",
+      "sadness",
+      "symptoms",
+      "help",
+      "crisis"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "what are the signs of depression",
+      "am i depressed",
+      "how to help a depressed friend",
+      "is depression real",
+      "what causes depression"
+    ]
+  },
+  {
+    "question": "How does memory work?",
+    "answer": "Memory is the brain's ability to encode, store and retrieve information. Psychologists describe sensory memory, which lasts a few seconds, short-term or working memory, which holds about four to seven items for a short time, and long-term memory, which can last a lifetime. Long-term memory includes explicit memories, such as facts and personal events, and implicit memories, such as riding a bike. The hippocampus plays a key role in forming new memories, and sleep helps strengthen them. Memories are not perfect recordings. They are rebuilt each time we recall them and can change. To remember better, try spaced repetition, active recall, linking new ideas to what you already know, explaining things aloud and getting good sleep.",
+    "keywords": [
+      "memory",
+      "hippocampus",
+      "long-term memory",
+      "working memory",
+      "forgetting",
+      "study tips",
+      "spaced repetition"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "why do we forget",
+      "how to improve memory",
+      "how to study better",
+      "what is short term memory",
+      "how does the brain remember"
+    ]
+  },
+  {
+    "question": "What is personality?",
+    "answer": "Personality is the set of relatively stable patterns in how a person thinks, feels and behaves. One of the most respected scientific models is the Big Five, which measures openness, conscientiousness, extraversion, agreeableness and neuroticism, also called emotional stability. Popular tests like the Myers-Briggs Type Indicator sort people into sixteen types, but many psychologists regard it as less reliable than the Big Five. Personality is shaped by both genes and experiences, and it can change gradually over time. Introverts tend to recharge through quiet time, while extraverts gain energy from social interaction, and most people are somewhere in the middle. There is no best personality, since each type has strengths and challenges.",
+    "keywords": [
+      "personality",
+      "big five",
+      "introvert",
+      "extrovert",
+      "mbti",
+      "traits",
+      "openness"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "what is an introvert",
+      "what is an extrovert",
+      "what are the big five traits",
+      "is mbti accurate",
+      "what makes up a personality"
+    ]
+  },
+  {
+    "question": "What is self-esteem and how can I build confidence?",
+    "answer": "Self-esteem is how you value and feel about yourself overall, while confidence is trust in your ability to handle specific tasks. Low self-esteem can come from criticism, bullying, perfectionism, comparison or past failures, and it may lead to harsh self-talk. You can build healthier self-esteem by treating yourself as you would a good friend, noticing small wins, setting realistic goals, learning new skills, taking care of your body, surrounding yourself with supportive people and challenging negative thoughts by asking whether they are really true. Confidence grows through practice, so trying things in small steps and accepting mistakes as part of learning really helps. Remember that nobody is perfect, and your worth does not depend on grades, looks or likes.",
+    "keywords": [
+      "self-esteem",
+      "confidence",
+      "self-love",
+      "self-talk",
+      "perfectionism",
+      "growth",
+      "worth"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "how to be more confident",
+      "how to love myself",
+      "why do i feel worthless",
+      "how to stop negative thoughts",
+      "what is low self esteem"
+    ]
+  },
+  {
+    "question": "What is motivation?",
+    "answer": "Motivation is the drive that makes people start, continue and finish actions. Psychologists distinguish intrinsic motivation, which comes from enjoying something or finding it meaningful, from extrinsic motivation, which comes from rewards or pressure, like grades or money. Self-determination theory says people feel most motivated when they have autonomy, competence and connection with others. When motivation is low, helpful tricks include breaking a big task into very small steps, using a timer such as the Pomodoro method, setting clear goals, removing distractions, rewarding progress and picking a time of day when you have the most energy. Remember that action often creates motivation, not the other way around, so starting for just five minutes can be enough to get going.",
+    "keywords": [
+      "motivation",
+      "procrastination",
+      "goals",
+      "discipline",
+      "pomodoro",
+      "intrinsic",
+      "productivity"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "how to stay motivated",
+      "how to stop procrastinating",
+      "why am i lazy",
+      "how to be productive",
+      "what is discipline"
+    ]
+  },
+  {
+    "question": "What is grief?",
+    "answer": "Grief is the natural response to loss, most commonly the death of someone loved, but also the end of a relationship, a move, an illness or any major change. It can include sadness, numbness, anger, guilt, confusion, tiredness and sometimes even relief. The five stages of grief, denial, anger, bargaining, depression and acceptance, were described by Elisabeth Kubler-Ross, but experts now stress that people do not follow a fixed order and everyone grieves differently. There is no deadline for healing. It can help to talk about the person, keep routines, rest, eat well, remember them through rituals or memorials, and lean on friends, family or faith communities. If grief becomes overwhelming or lasts a very long time with severe difficulty functioning, a counselor can help.",
+    "keywords": [
+      "grief",
+      "loss",
+      "mourning",
+      "death",
+      "kubler-ross",
+      "stages of grief",
+      "bereavement"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "how to deal with grief",
+      "what are the five stages of grief",
+      "how to cope with losing someone",
+      "is it normal to grieve",
+      "what is mourning"
+    ]
+  },
+  {
+    "question": "What is the difference between guilt and shame?",
+    "answer": "Guilt and shame are both painful emotions related to wrongdoing, but they differ. Guilt is the feeling that I did something bad, and it focuses on a specific action. It can be useful because it encourages apology and repair. Shame is the feeling that I am bad, and it focuses on the whole self. Shame can make people hide, withdraw or become defensive, and it is more strongly linked to anxiety and depression. Researchers such as Brene Brown suggest that talking about shame with someone you trust and practicing self-compassion reduce its power. When you feel guilty, a helpful path is to admit the mistake, say sorry sincerely, make amends and learn from it, then forgive yourself and move on.",
+    "keywords": [
+      "guilt",
+      "shame",
+      "apology",
+      "self-compassion",
+      "brene brown",
+      "forgiveness"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "why do i feel guilty",
+      "what is shame",
+      "how to forgive yourself",
+      "how to say sorry",
+      "guilt vs shame"
+    ]
+  },
+  {
+    "question": "What is gratitude and why does it help?",
+    "answer": "Gratitude is the feeling of appreciation for what you have or for what others have done for you. Studies in positive psychology link gratitude to better mood, stronger relationships, improved sleep and greater resilience. You can practice it by writing down three things you are thankful for each day, telling someone specifically why you appreciate them, writing a thank-you letter or simply pausing to notice small good moments, like a warm meal or a kind word. Gratitude does not mean ignoring problems or pretending to be happy. It means balancing difficulty with the good things that are also true. Over time, the habit trains the brain to notice positive details more easily.",
+    "keywords": [
+      "gratitude",
+      "thankful",
+      "appreciation",
+      "journal",
+      "positive",
+      "thanks"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "why is gratitude important",
+      "how to be grateful",
+      "what is a gratitude journal",
+      "how to be thankful",
+      "benefits of gratitude"
+    ]
+  },
+  {
+    "question": "What is mindfulness and meditation?",
+    "answer": "Mindfulness is the practice of paying attention to the present moment on purpose, without judging. Meditation is a way to train that skill, often by focusing on the breath, bodily sensations or sounds, and gently returning attention whenever the mind wanders, which it will do many times. Mindfulness-based programs developed by Jon Kabat-Zinn have been studied for reducing stress, anxiety and pain and improving focus. A simple exercise is to sit comfortably, breathe slowly and count ten breaths, or to eat a snack slowly noticing taste and texture. Even five minutes a day can help. Meditation has roots in ancient traditions of India and East Asia, but you do not need any religious belief to try it.",
+    "keywords": [
+      "mindfulness",
+      "meditation",
+      "breathing",
+      "present moment",
+      "focus",
+      "relax",
+      "kabat-zinn"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "how to meditate",
+      "what is mindfulness",
+      "how to focus",
+      "what is a breathing exercise",
+      "does meditation work"
+    ]
+  },
+  {
+    "question": "What are cognitive biases?",
+    "answer": "Cognitive biases are systematic patterns in how people think that can lead to mistakes in judgment. Examples include confirmation bias, noticing only information that agrees with what we already believe, the Dunning-Kruger effect, where people with little skill may overestimate their ability, anchoring, where the first number we see strongly affects later estimates, the bandwagon effect, following what others do, and the sunk cost fallacy, continuing something because we already invested in it. They exist because the brain uses mental shortcuts called heuristics to decide quickly, which is often helpful but sometimes wrong. We can reduce their effects by slowing down, looking for evidence against our views, asking others for opinions and checking facts from reliable sources.",
+    "keywords": [
+      "cognitive bias",
+      "confirmation bias",
+      "dunning-kruger",
+      "heuristics",
+      "thinking",
+      "sunk cost",
+      "anchoring"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "what is confirmation bias",
+      "what is the dunning-kruger effect",
+      "why do people make bad decisions",
+      "what is the sunk cost fallacy",
+      "how to think critically"
+    ]
+  },
+  {
+    "question": "What is boredom and why do we feel it?",
+    "answer": "Boredom is an uncomfortable feeling of wanting to do something satisfying but not finding anything engaging. Researchers think it works as a signal that your current activity is not meaningful or challenging enough, nudging you to look for something new. Boredom can lead to creativity, daydreaming and problem-solving, since a wandering mind makes unusual connections. It can also push people to scroll endlessly or take risks. Ways to use boredom well include learning something, going outside, doing a small project, drawing, writing, cooking, exercising or calling a friend. Children benefit from some unstructured time to develop imagination. Constant stimulation from screens may make ordinary quiet moments feel harder to enjoy.",
+    "keywords": [
+      "boredom",
+      "bored",
+      "creativity",
+      "daydreaming",
+      "free time",
+      "activities"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "why am i bored",
+      "what to do when bored",
+      "is boredom good",
+      "how to stop being bored",
+      "what causes boredom"
+    ]
+  },
+  {
+    "question": "What is nostalgia?",
+    "answer": "Nostalgia is a warm, bittersweet longing for the past, such as childhood memories, old games, songs or the smell of a family kitchen. The word comes from Greek roots meaning the pain of returning home, and it was first used in the 1600s as a medical term for homesickness among soldiers. Modern research shows that nostalgia is mostly positive. It can raise mood, increase feelings of belonging, boost meaning in life and give comfort during stress. Sometimes it includes sadness for what cannot return. Looking through old photos, replaying favorite childhood games or talking with old friends are common ways to enjoy it. It becomes unhelpful only when it prevents someone from appreciating the present.",
+    "keywords": [
+      "nostalgia",
+      "memories",
+      "childhood",
+      "past",
+      "bittersweet",
+      "homesick"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "why do i miss my childhood",
+      "what does nostalgia mean",
+      "why do old games feel special",
+      "what is homesickness",
+      "why do old songs make me emotional"
+    ]
+  },
+  {
+    "question": "What is resilience?",
+    "answer": "Resilience is the ability to recover from difficulties, adapt to change and keep going after setbacks. It does not mean never feeling pain, and it is not a fixed trait but a set of skills that can be learned. Factors that build resilience include supportive relationships, a sense of purpose, realistic optimism, problem-solving skills, healthy habits and the ability to ask for help. Practical steps are to accept that change is part of life, break problems into small steps, learn from mistakes, look after sleep and exercise, and reflect on past challenges you overcame to remind yourself of your strength. Psychologist Carol Dweck's idea of a growth mindset, believing abilities can improve with effort, also supports resilience.",
+    "keywords": [
+      "resilience",
+      "growth mindset",
+      "coping",
+      "setbacks",
+      "strength",
+      "recovery",
+      "carol dweck"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "how to be stronger mentally",
+      "what is a growth mindset",
+      "how to bounce back",
+      "how to handle failure",
+      "what is mental toughness"
+    ]
+  },
+  {
+    "question": "What do dreams mean?",
+    "answer": "Dreams are sequences of images, sounds, emotions and ideas experienced during sleep, mostly during REM sleep, though they occur in other stages too. Scientists are still debating why we dream. Theories suggest dreams help process emotions, consolidate memories, rehearse responses to threats or are simply the brain's random activity woven into a story. Sigmund Freud believed dreams reveal hidden wishes, but modern research does not support that dream symbols have fixed meanings. Many dreams reflect the day's events, worries and feelings. Lucid dreaming is when you realize you are dreaming and can sometimes control the story. Nightmares are common, especially during stress, and a calm bedtime routine can reduce them. Most people forget the majority of their dreams quickly.",
+    "keywords": [
+      "dreams",
+      "nightmare",
+      "rem sleep",
+      "lucid dreaming",
+      "freud",
+      "sleep",
+      "subconscious"
+    ],
+    "category": "Feelings and Mind",
+    "language": "en",
+    "aliases": [
+      "why do we dream",
+      "what does it mean when i dream",
+      "what is lucid dreaming",
+      "why do i have nightmares",
+      "do dreams have meaning"
+    ]
+  }
+]

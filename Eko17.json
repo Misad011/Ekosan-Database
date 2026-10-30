@@ -1,0 +1,569 @@
+[
+  {
+    "question": "What was the Big Bang?",
+    "answer": "The Big Bang is the scientific theory that the universe began about 13.8 billion years ago from an extremely hot and dense state and has been expanding ever since. It was not an explosion in space, but an expansion of space itself. In the first fractions of a second the universe cooled enough for particles to form, and after roughly 380,000 years atoms appeared and light could travel freely, leaving a glow still detectable today called the cosmic microwave background, discovered in 1965. Evidence for the theory also includes the observation by Edwin Hubble in the 1920s that distant galaxies are moving away from us, and the measured amounts of hydrogen and helium in the universe. Scientists are still studying what happened before and why the expansion is accelerating.",
+    "keywords": [
+      "big bang",
+      "universe",
+      "expansion",
+      "cosmology",
+      "hubble",
+      "cosmic microwave background",
+      "origin"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "how did the universe begin",
+      "how old is the universe",
+      "what is cosmic microwave background",
+      "is the universe expanding",
+      "what happened before the big bang"
+    ]
+  },
+  {
+    "question": "What are the planets in our solar system?",
+    "answer": "Our solar system has eight planets orbiting the Sun. In order from the Sun they are Mercury, Venus, Earth and Mars, the rocky inner planets, followed by the gas giants Jupiter and Saturn and the ice giants Uranus and Neptune. Jupiter is the largest, with a Great Red Spot storm bigger than Earth, Saturn is famous for its rings, Venus is the hottest planet because of a thick greenhouse atmosphere and Mars has the tallest volcano known, Olympus Mons. Pluto was considered the ninth planet until 2006, when the International Astronomical Union reclassified it as a dwarf planet. The solar system also contains moons, asteroids, comets and the distant Kuiper Belt. It formed about 4.6 billion years ago from a cloud of gas and dust.",
+    "keywords": [
+      "planets",
+      "solar system",
+      "jupiter",
+      "saturn",
+      "mars",
+      "venus",
+      "pluto",
+      "mercury",
+      "neptune"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "how many planets are there",
+      "is pluto a planet",
+      "what is the biggest planet",
+      "which planet is the hottest",
+      "order of the planets"
+    ]
+  },
+  {
+    "question": "What is the Sun?",
+    "answer": "The Sun is a star at the center of our solar system, a giant ball of hot plasma made mostly of hydrogen and helium. It is about 150 million kilometers from Earth, and its light takes roughly eight minutes and twenty seconds to reach us. Its core temperature is around 15 million degrees Celsius, and nuclear fusion there converts hydrogen into helium, releasing the energy that gives us light and heat. The Sun contains about 99.8 percent of the solar system's total mass and is roughly 4.6 billion years old, about halfway through its life. In several billion years it will swell into a red giant before ending as a white dwarf. It is classified as a yellow dwarf star, but its light is actually white, and looking at it directly damages your eyes.",
+    "keywords": [
+      "sun",
+      "star",
+      "fusion",
+      "plasma",
+      "solar",
+      "hydrogen",
+      "light",
+      "red giant"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "how hot is the sun",
+      "how far is the sun",
+      "how old is the sun",
+      "what is the sun made of",
+      "will the sun die"
+    ]
+  },
+  {
+    "question": "How far away is the Moon and how did it form?",
+    "answer": "The Moon is about 384,400 kilometers from Earth on average, and its gravity causes ocean tides. A leading explanation, the giant impact hypothesis, says that about 4.5 billion years ago a Mars-sized object called Theia struck the young Earth and the debris merged to form the Moon. It takes about 27 days to orbit Earth, and it is tidally locked, so we always see the same side. Its phases, new moon, crescent, quarter, gibbous and full, happen because we see different parts of its sunlit half as it orbits. The Moon has no real atmosphere, and temperatures swing from about 120 degrees Celsius in the sun to minus 130 in the shade. It is slowly drifting away from Earth by about 3.8 centimeters each year.",
+    "keywords": [
+      "moon",
+      "tides",
+      "phases",
+      "theia",
+      "giant impact",
+      "lunar",
+      "orbit"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "how did the moon form",
+      "why is the moon changing shape",
+      "what causes tides",
+      "why do we always see the same side of the moon",
+      "how far is the moon"
+    ]
+  },
+  {
+    "question": "What is a black hole?",
+    "answer": "A black hole is a region of space where gravity is so strong that nothing, not even light, can escape once it crosses a boundary called the event horizon. Most stellar black holes form when a very massive star runs out of fuel and collapses, while supermassive black holes, millions or billions of times the mass of the Sun, sit at the centers of most large galaxies, including our own Milky Way, in an object called Sagittarius A star. Black holes cannot be seen directly, but scientists detect them through the motion of nearby stars, hot glowing gas and gravitational waves. The first image of a black hole's shadow, in the galaxy M87, was released in 2019 by the Event Horizon Telescope, and Sagittarius A star followed in 2022. Black holes do not wander around sucking up everything, and they behave like any other object of the same mass from far away.",
+    "keywords": [
+      "black hole",
+      "event horizon",
+      "gravity",
+      "singularity",
+      "galaxy",
+      "space",
+      "event horizon telescope"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what happens if you fall into a black hole",
+      "how do black holes form",
+      "has anyone seen a black hole",
+      "what is a singularity",
+      "is there a black hole in our galaxy"
+    ]
+  },
+  {
+    "question": "What is a galaxy and what is the Milky Way?",
+    "answer": "A galaxy is a huge system of stars, gas, dust and dark matter bound together by gravity. The universe contains hundreds of billions of galaxies, which come in spiral, elliptical and irregular shapes. The Milky Way is the spiral galaxy that contains our solar system. It has an estimated 100 to 400 billion stars and spans about 100,000 light-years across, and we live in one of its spiral arms, called the Orion Arm, roughly 26,000 light-years from the center. The nearest large galaxy is Andromeda, about 2.5 million light-years away, and it is expected to merge with the Milky Way in around 4 to 5 billion years. A light-year is the distance light travels in a year, about 9.46 trillion kilometers.",
+    "keywords": [
+      "galaxy",
+      "milky way",
+      "andromeda",
+      "light-year",
+      "stars",
+      "spiral",
+      "dark matter"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what is the milky way",
+      "how many stars are there",
+      "what is a light-year",
+      "how big is our galaxy",
+      "what is dark matter"
+    ]
+  },
+  {
+    "question": "What is gravity?",
+    "answer": "Gravity is the force by which objects with mass attract one another. Isaac Newton described it in 1687 with his law of universal gravitation, saying that the pull depends on the masses of the objects and the distance between them. Albert Einstein's general theory of relativity, published in 1915, gives a deeper picture, in which mass and energy bend spacetime and objects follow the curves. Gravity keeps us on the ground, makes planets orbit stars and holds galaxies together. On Earth, objects fall with an acceleration of about 9.8 meters per second squared, ignoring air resistance. Gravity is the weakest of the four fundamental forces, yet it dominates at large scales. Astronauts in orbit feel weightless not because there is no gravity but because they are in constant free fall.",
+    "keywords": [
+      "gravity",
+      "newton",
+      "einstein",
+      "relativity",
+      "spacetime",
+      "weight",
+      "free fall",
+      "force"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "why do things fall",
+      "who discovered gravity",
+      "what is general relativity",
+      "why are astronauts weightless",
+      "how strong is gravity"
+    ]
+  },
+  {
+    "question": "What are atoms and elements?",
+    "answer": "Atoms are the tiny building blocks of ordinary matter. Each atom has a nucleus made of positively charged protons and neutral neutrons, surrounded by negatively charged electrons. The number of protons defines the element, for example hydrogen has one, carbon six and oxygen eight. The periodic table, first organized by Dmitri Mendeleev in 1869, arranges all 118 known elements by atomic number and by similar chemical properties. Atoms combine into molecules, such as two hydrogen atoms and one oxygen atom forming water, written H2O. Atoms are mostly empty space, and the nucleus is thousands of times smaller than the atom itself. Most elements lighter than iron were formed in stars, and heavier ones were made in explosions such as supernovae.",
+    "keywords": [
+      "atom",
+      "element",
+      "periodic table",
+      "proton",
+      "electron",
+      "molecule",
+      "mendeleev",
+      "chemistry"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what is an atom made of",
+      "how many elements are there",
+      "what is the periodic table",
+      "what is a molecule",
+      "who made the periodic table"
+    ]
+  },
+  {
+    "question": "What are the states of matter?",
+    "answer": "Matter commonly exists in four states. In a solid, particles are tightly packed and vibrate in place, so it keeps its shape. In a liquid, particles are close but can slide past each other, so it takes the shape of its container. In a gas, particles are far apart and move freely, filling any space. Plasma is a hot, electrically charged gas found in stars, lightning and neon signs, and it is the most common state in the visible universe. Matter changes state when heat is added or removed, for example melting, freezing, boiling, condensation, evaporation and sublimation, which is solid to gas directly, as with dry ice. There are also exotic states such as Bose-Einstein condensates at temperatures near absolute zero, minus 273.15 degrees Celsius.",
+    "keywords": [
+      "states of matter",
+      "solid",
+      "liquid",
+      "gas",
+      "plasma",
+      "melting",
+      "boiling",
+      "evaporation"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what is plasma",
+      "what is the fourth state of matter",
+      "what is sublimation",
+      "why does ice melt",
+      "what is absolute zero"
+    ]
+  },
+  {
+    "question": "How fast is light?",
+    "answer": "Light travels through empty space at exactly 299,792,458 meters per second, roughly 300,000 kilometers per second, which is about 1.08 billion kilometers per hour. According to Einstein's theory of special relativity, nothing with mass can reach or exceed this speed, and it is the universal speed limit. Light from the Sun takes about 8 minutes to reach Earth, light from the Moon takes about 1.3 seconds, and light from the nearest other star, Proxima Centauri, takes about 4.2 years. Light slows down when passing through materials like water or glass, which is why it bends, an effect called refraction and the reason rainbows and lenses work. White light is made of many colors, which can be separated by a prism into the spectrum from red to violet.",
+    "keywords": [
+      "speed of light",
+      "light",
+      "relativity",
+      "refraction",
+      "rainbow",
+      "prism",
+      "spectrum"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "how fast does light travel",
+      "what is the speed of light",
+      "can anything go faster than light",
+      "how do rainbows form",
+      "what is a prism"
+    ]
+  },
+  {
+    "question": "What is energy?",
+    "answer": "Energy is the ability to do work or cause change, and it comes in many forms. Kinetic energy is the energy of motion, potential energy is stored energy such as a ball held high or a stretched spring, thermal energy is heat, chemical energy is stored in food and fuel, electrical energy comes from moving charges, and nuclear energy is stored in atomic nuclei. The law of conservation of energy states that energy cannot be created or destroyed, only transformed from one form to another. Energy is measured in joules. Sources include fossil fuels like coal, oil and gas, which release carbon dioxide, and renewable sources like solar, wind, hydroelectric and geothermal power, which are growing quickly. Einstein's famous equation E equals mc squared shows that mass itself is a form of energy.",
+    "keywords": [
+      "energy",
+      "kinetic",
+      "potential",
+      "joule",
+      "conservation",
+      "renewable",
+      "solar",
+      "e=mc2"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what are the types of energy",
+      "what is renewable energy",
+      "what does e equals mc squared mean",
+      "what is kinetic energy",
+      "how do solar panels work"
+    ]
+  },
+  {
+    "question": "How does electricity work?",
+    "answer": "Electricity is the flow of electric charge, usually electrons moving through a conductor such as a copper wire. A circuit is a closed path that lets current flow from a power source like a battery through devices and back. Voltage, measured in volts, is the push that moves the charge, current, measured in amperes, is the amount of flow and resistance, measured in ohms, is how much the material opposes the flow, and Ohm's law relates them as voltage equals current times resistance. Materials that let charges move easily, such as metals, are conductors, while rubber and plastic are insulators. Power plants generate electricity by spinning turbines in magnetic fields, a principle discovered by Michael Faraday. Safety is important, since electricity can seriously injure people, and water and electricity should never mix.",
+    "keywords": [
+      "electricity",
+      "current",
+      "voltage",
+      "circuit",
+      "battery",
+      "conductor",
+      "faraday",
+      "ohm"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what is voltage",
+      "what is a circuit",
+      "how do batteries work",
+      "what is current",
+      "how is electricity made"
+    ]
+  },
+  {
+    "question": "What is evolution?",
+    "answer": "Evolution is the change in the inherited characteristics of living organisms over many generations. Charles Darwin and Alfred Russel Wallace independently proposed natural selection, and Darwin published On the Origin of Species in 1859. The idea is that individuals vary, some variations help them survive and reproduce in their environment, and those traits become more common over time. Modern biology combines this with genetics, since random mutations in DNA create new variation. Evidence includes fossils, similarities in anatomy and DNA across species, observed changes like bacteria developing antibiotic resistance and the way species are distributed across the planet. Humans share a common ancestor with chimpanzees, and our lineage split from theirs roughly 6 to 7 million years ago. Evolution is a scientific theory supported by overwhelming evidence.",
+    "keywords": [
+      "evolution",
+      "darwin",
+      "natural selection",
+      "mutation",
+      "fossils",
+      "species",
+      "adaptation"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "who is charles darwin",
+      "what is natural selection",
+      "did humans evolve from monkeys",
+      "what is a mutation",
+      "what evidence is there for evolution"
+    ]
+  },
+  {
+    "question": "What is climate change?",
+    "answer": "Climate change refers to long-term shifts in global temperatures and weather patterns. Since the 1800s, human activities, mainly burning coal, oil and gas, have been the main driver, because they release greenhouse gases such as carbon dioxide and methane that trap heat in the atmosphere, strengthening the natural greenhouse effect. Earth has warmed by about 1.1 to 1.3 degrees Celsius compared with the late 1800s. Effects include rising sea levels, melting glaciers, more intense heat waves, droughts, floods and storms, and threats to ecosystems and food supplies. In the Paris Agreement of 2015, countries pledged to limit warming to well below 2 degrees, aiming for 1.5. Solutions include renewable energy, energy efficiency, protecting forests, cleaner transport and individual actions such as reducing waste.",
+    "keywords": [
+      "climate change",
+      "global warming",
+      "greenhouse gas",
+      "carbon dioxide",
+      "paris agreement",
+      "sea level",
+      "renewable"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what is global warming",
+      "what is the greenhouse effect",
+      "what causes climate change",
+      "how can i help the environment",
+      "what is the paris agreement"
+    ]
+  },
+  {
+    "question": "What causes weather and the water cycle?",
+    "answer": "Weather is the state of the atmosphere at a particular time and place, driven by the Sun's uneven heating of Earth. Warm air rises and cooler air sinks, creating winds and pressure systems. The water cycle continuously moves water. The Sun's heat causes evaporation from oceans, lakes and plants, which releases water vapor into the air. As the vapor rises and cools it condenses into tiny droplets that form clouds. When droplets become heavy they fall as precipitation, such as rain, snow, sleet or hail, and flow back to rivers, groundwater and the sea. Thunderstorms occur when strong upward air currents build tall clouds, and lightning is a giant spark of static electricity, about five times hotter than the surface of the Sun.",
+    "keywords": [
+      "weather",
+      "water cycle",
+      "clouds",
+      "rain",
+      "evaporation",
+      "thunderstorm",
+      "lightning",
+      "precipitation"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "why does it rain",
+      "how are clouds formed",
+      "what is lightning",
+      "what is the water cycle",
+      "what causes wind"
+    ]
+  },
+  {
+    "question": "What are earthquakes and volcanoes?",
+    "answer": "Earth's outer shell is divided into large moving pieces called tectonic plates that drift a few centimeters a year. Earthquakes happen when stress built up along faults, where plates meet, is suddenly released as vibrations called seismic waves. Their size is measured by the moment magnitude scale, which replaced the older Richter scale, and each whole number step means about 32 times more energy. Volcanoes form where molten rock called magma reaches the surface, often at plate boundaries or hot spots, as in Hawaii. The Pacific Ring of Fire is a zone with most of the world's earthquakes and volcanic activity. A tsunami is a series of giant waves caused by undersea earthquakes or eruptions. Preparedness, building codes and early warning systems save lives.",
+    "keywords": [
+      "earthquake",
+      "volcano",
+      "tectonic plates",
+      "magma",
+      "tsunami",
+      "ring of fire",
+      "seismic",
+      "richter"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what causes earthquakes",
+      "how do volcanoes erupt",
+      "what is a tsunami",
+      "what is the ring of fire",
+      "what are tectonic plates"
+    ]
+  },
+  {
+    "question": "What is photosynthesis?",
+    "answer": "Photosynthesis is the process by which plants, algae and some bacteria convert light energy into chemical energy stored in sugar. It mainly takes place in chloroplasts, which contain the green pigment chlorophyll that absorbs sunlight. The plant takes in carbon dioxide from the air through tiny pores called stomata and water through its roots. Using light energy, it turns these into glucose and releases oxygen, summarized as carbon dioxide plus water plus light gives glucose plus oxygen. The glucose fuels growth, and the oxygen is released into the air for animals to breathe. Photosynthesis is the basis of nearly every food chain and produces much of Earth's oxygen, with a large share coming from ocean phytoplankton. Leaves turn red and yellow in autumn when chlorophyll breaks down.",
+    "keywords": [
+      "photosynthesis",
+      "chlorophyll",
+      "plants",
+      "oxygen",
+      "carbon dioxide",
+      "glucose",
+      "chloroplast",
+      "leaves"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "how do plants make food",
+      "why are leaves green",
+      "why do leaves change color",
+      "where does oxygen come from",
+      "what is chlorophyll"
+    ]
+  },
+  {
+    "question": "What is the scientific method?",
+    "answer": "The scientific method is a systematic way of investigating questions about the world. It usually begins with an observation and a question, followed by research and the formation of a hypothesis, a testable explanation. Scientists then design experiments that change one variable at a time while controlling others, collect data, analyze results and decide whether the evidence supports the hypothesis. Findings are shared with other scientists for peer review and must be repeatable by others. A scientific theory, such as the theory of evolution or germ theory, is not a guess, but a well-tested explanation supported by large amounts of evidence. Good science welcomes criticism, changes when new evidence appears and separates correlation from causation.",
+    "keywords": [
+      "scientific method",
+      "hypothesis",
+      "experiment",
+      "theory",
+      "peer review",
+      "evidence",
+      "variable"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what is a hypothesis",
+      "what is a scientific theory",
+      "how do experiments work",
+      "what is peer review",
+      "difference between correlation and causation"
+    ]
+  },
+  {
+    "question": "What is quantum mechanics?",
+    "answer": "Quantum mechanics is the branch of physics that describes nature at the scale of atoms and subatomic particles. Developed in the early 20th century by scientists such as Max Planck, Niels Bohr, Werner Heisenberg and Erwin Schrodinger, it shows that energy comes in tiny packets called quanta and that particles can behave like both waves and particles. The Heisenberg uncertainty principle says we cannot know both the exact position and momentum of a particle at the same time. Schrodinger's cat is a thought experiment about superposition, where a system can be in several states until it is measured. Quantum theory is the basis of lasers, transistors, MRI machines and the emerging field of quantum computing, even though many aspects still feel strange and are debated.",
+    "keywords": [
+      "quantum",
+      "quantum mechanics",
+      "schrodinger",
+      "heisenberg",
+      "superposition",
+      "wave-particle",
+      "uncertainty",
+      "quantum computing"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what is schrodinger's cat",
+      "what is superposition",
+      "what is the uncertainty principle",
+      "what is quantum physics",
+      "what is quantum computing"
+    ]
+  },
+  {
+    "question": "What was the first human spaceflight and moon landing?",
+    "answer": "The first human in space was Soviet cosmonaut Yuri Gagarin, who orbited Earth once aboard Vostok 1 on April 12, 1961. The first woman in space was Valentina Tereshkova in 1963. The United States landed the first humans on the Moon with the Apollo 11 mission in July 1969. Neil Armstrong became the first person to step onto the surface on July 20, followed by Buzz Aldrin, while Michael Collins orbited above in the command module. Armstrong's words as he stepped down were about one small step for man and one giant leap for mankind. Between 1969 and 1972, twelve astronauts walked on the Moon in the Apollo program. Space agencies are planning to return people to the Moon through the Artemis program.",
+    "keywords": [
+      "gagarin",
+      "apollo 11",
+      "neil armstrong",
+      "moon landing",
+      "space race",
+      "nasa",
+      "artemis",
+      "tereshkova"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "who was the first man in space",
+      "who walked on the moon",
+      "when was the moon landing",
+      "what is the artemis program",
+      "who was the first woman in space"
+    ]
+  },
+  {
+    "question": "What is the International Space Station?",
+    "answer": "The International Space Station, or ISS, is a large research laboratory that orbits Earth at an altitude of about 400 kilometers, traveling at roughly 28,000 kilometers per hour, which means it circles the planet about every 90 minutes and the crew see around 16 sunrises a day. It was built in space piece by piece by the space agencies of the United States, Russia, Europe, Japan and Canada, with construction starting in 1998, and it has been continuously occupied since November 2, 2000. Astronauts conduct experiments on biology, physics, materials and medicine in microgravity, exercise about two hours a day to protect their bones and muscles, and sometimes perform spacewalks for repairs. It is about the size of a football field and one of the brightest objects in the night sky.",
+    "keywords": [
+      "iss",
+      "space station",
+      "astronaut",
+      "microgravity",
+      "orbit",
+      "nasa",
+      "spacewalk"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what do astronauts do on the iss",
+      "how fast does the space station move",
+      "who built the iss",
+      "can you see the iss",
+      "how do astronauts live in space"
+    ]
+  },
+  {
+    "question": "What happened to the dinosaurs?",
+    "answer": "Non-avian dinosaurs went extinct about 66 million years ago, at the end of the Cretaceous period. Evidence strongly supports that a huge asteroid, roughly 10 kilometers wide, hit what is now the Yucatan Peninsula in Mexico, forming the Chicxulub crater. The impact threw dust and debris into the atmosphere, blocking sunlight, causing wildfires, tsunamis and a rapid drop in temperature, which collapsed food chains. Massive volcanic eruptions in India, known as the Deccan Traps, may also have contributed. Not all dinosaurs vanished, since birds are living descendants of small feathered theropod dinosaurs. Dinosaurs first appeared around 230 million years ago in the Triassic. Famous examples include Tyrannosaurus rex, Triceratops, Velociraptor, Stegosaurus and the giant long-necked Brachiosaurus.",
+    "keywords": [
+      "dinosaurs",
+      "extinction",
+      "asteroid",
+      "chicxulub",
+      "t-rex",
+      "cretaceous",
+      "fossils",
+      "birds"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "why did dinosaurs go extinct",
+      "when did dinosaurs live",
+      "are birds dinosaurs",
+      "what is a t-rex",
+      "how did dinosaurs die"
+    ]
+  },
+  {
+    "question": "Why is the sky blue and why are sunsets red?",
+    "answer": "Sunlight looks white, but it is a mix of all colors. When it enters the atmosphere it collides with gas molecules that scatter short wavelengths such as blue much more strongly than long wavelengths such as red, in a process called Rayleigh scattering. The blue light is scattered in all directions and reaches your eyes from every part of the sky, so the sky looks blue. Violet is scattered even more, but the Sun emits less of it and our eyes are less sensitive to it. At sunrise and sunset, sunlight must pass through much more atmosphere, so most blue light is scattered away, leaving mostly orange and red hues. Clouds look white because water droplets scatter all colors equally. On the Moon, which has no atmosphere, the sky is black even in daytime.",
+    "keywords": [
+      "sky",
+      "blue",
+      "sunset",
+      "rayleigh scattering",
+      "atmosphere",
+      "light",
+      "colors",
+      "clouds"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "why is the sky blue",
+      "why are sunsets orange",
+      "why are clouds white",
+      "what color is the sky on the moon",
+      "how does light scatter"
+    ]
+  },
+  {
+    "question": "What are the oceans and how deep are they?",
+    "answer": "Oceans cover about 71 percent of Earth's surface and hold about 97 percent of its water. There are five named oceans, the Pacific, Atlantic, Indian, Southern and Arctic. The Pacific is the largest and deepest, bigger than all of Earth's land combined. The deepest known point is the Challenger Deep in the Mariana Trench, about 10,900 meters below the surface, deeper than Mount Everest is tall. Seawater is salty because rivers carry dissolved minerals from rocks into the sea and the salt stays behind when water evaporates, averaging about 3.5 percent salt. Oceans regulate climate, produce more than half of the world's oxygen through plankton, and are home to enormous biodiversity, including coral reefs, whales and creatures that live without sunlight. Much of the deep ocean is still unexplored.",
+    "keywords": [
+      "ocean",
+      "pacific",
+      "mariana trench",
+      "salt",
+      "sea",
+      "coral reef",
+      "deep sea",
+      "water"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what is the deepest part of the ocean",
+      "why is the ocean salty",
+      "how many oceans are there",
+      "what is the biggest ocean",
+      "how much of earth is water"
+    ]
+  },
+  {
+    "question": "What is pi?",
+    "answer": "Pi, written with the Greek letter pi, is the ratio of any circle's circumference to its diameter, and it is approximately 3.14159. It is an irrational number, which means its decimal expansion never ends and never repeats, and it is also transcendental, which means it is not the root of any polynomial with whole number coefficients. Ancient civilizations such as the Babylonians, Egyptians and Greeks estimated it, and Archimedes of Syracuse calculated bounds for it around 250 BCE using polygons. Today computers have calculated trillions of its digits. Pi appears in formulas for circles, spheres, waves, probability and physics. People celebrate Pi Day on March 14, since the date is written 3 14 in some countries, and some people memorize hundreds or thousands of digits.",
+    "keywords": [
+      "pi",
+      "3.14",
+      "circle",
+      "math",
+      "archimedes",
+      "irrational",
+      "pi day",
+      "geometry"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "what is pi day",
+      "how many digits of pi are known",
+      "what is an irrational number",
+      "what is a circle's circumference",
+      "who discovered pi"
+    ]
+  }
+]

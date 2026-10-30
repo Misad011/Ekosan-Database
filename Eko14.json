@@ -1,0 +1,516 @@
+[
+  {
+    "question": "How many bones are in the human body?",
+    "answer": "An adult human skeleton usually has 206 bones. Babies are born with around 270 to 300 smaller bones and cartilage pieces, and many of them fuse together as the child grows, which is why the number drops. The skeleton protects organs such as the brain, heart and lungs, supports the body's shape, gives muscles something to pull on, stores minerals like calcium and phosphorus, and produces blood cells inside the bone marrow. The largest bone is the femur in the thigh, and the smallest is the stapes inside the middle ear. Bones are living tissue that constantly rebuild themselves, so eating enough calcium and vitamin D and doing weight-bearing exercise helps keep them strong.",
+    "keywords": [
+      "bones",
+      "skeleton",
+      "206",
+      "femur",
+      "stapes",
+      "calcium",
+      "marrow"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how many bones do humans have",
+      "how many bones do adults have",
+      "what is the biggest bone",
+      "what is the smallest bone",
+      "skeleton facts"
+    ]
+  },
+  {
+    "question": "How do muscles work?",
+    "answer": "Muscles produce movement by contracting, which means shortening and pulling on bones through tendons. There are three main types. Skeletal muscles are attached to bones and are under voluntary control, like those in your arms and legs. Smooth muscles line organs such as the stomach and blood vessels and work automatically. Cardiac muscle forms the heart and beats without you thinking about it. Inside a muscle fiber, proteins called actin and myosin slide past each other when triggered by signals from nerves, using energy from a molecule called ATP. When you exercise, tiny tears form in the fibers, and rest plus protein help them rebuild stronger, which is how muscles grow. The largest muscle by mass is the gluteus maximus in the buttocks.",
+    "keywords": [
+      "muscle",
+      "contract",
+      "tendon",
+      "actin",
+      "myosin",
+      "atp",
+      "exercise",
+      "cardiac"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "what are muscles",
+      "how do muscles grow",
+      "types of muscles",
+      "what is the biggest muscle",
+      "why do muscles get sore"
+    ]
+  },
+  {
+    "question": "How does the human heart work?",
+    "answer": "The heart is a muscular pump about the size of a fist that pushes blood around the body. It has four chambers. The two upper chambers are the atria, which receive blood, and the two lower chambers are the ventricles, which push blood out. The right side sends oxygen-poor blood to the lungs, and the left side sends oxygen-rich blood to the rest of the body. Four valves keep blood flowing in one direction, creating the familiar lub-dub sound. An adult heart beats about sixty to one hundred times a minute at rest, and over a lifetime it can beat more than two billion times. Exercise, a balanced diet, enough sleep and avoiding smoking all help keep the heart healthy.",
+    "keywords": [
+      "heart",
+      "blood",
+      "atria",
+      "ventricles",
+      "heartbeat",
+      "valves",
+      "pulse",
+      "circulation"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how does the heart work",
+      "how many chambers does the heart have",
+      "what is a heartbeat",
+      "how fast does the heart beat",
+      "why does my heart race"
+    ]
+  },
+  {
+    "question": "How does the human brain work?",
+    "answer": "The brain is the control center of the body, made up of roughly 86 billion nerve cells called neurons that communicate through electrical signals and chemical messengers called neurotransmitters. It weighs about 1.3 to 1.4 kilograms and uses around twenty percent of the body's energy. The cerebrum, the largest part, handles thinking, memory, language and voluntary movement and is divided into four lobes, frontal, parietal, temporal and occipital. The cerebellum coordinates balance and movement, and the brainstem controls breathing, heart rate and sleep. The brain is plastic, meaning it keeps changing its connections throughout life as you learn. The common claim that people use only ten percent of their brains is a myth, since nearly all regions are active over a day.",
+    "keywords": [
+      "brain",
+      "neurons",
+      "cerebrum",
+      "cerebellum",
+      "memory",
+      "neuroplasticity",
+      "lobes",
+      "thinking"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how does the brain work",
+      "how many neurons are in the brain",
+      "do we only use 10 percent of our brain",
+      "what does the brain do",
+      "parts of the brain"
+    ]
+  },
+  {
+    "question": "What do the lungs do and how do we breathe?",
+    "answer": "The lungs bring oxygen into the body and remove carbon dioxide. When you inhale, the diaphragm, a dome-shaped muscle under the lungs, contracts and moves down while the rib muscles lift the chest, which lowers pressure in the lungs and pulls air in through the nose or mouth, down the trachea and into branching tubes called bronchi. These end in millions of tiny air sacs called alveoli, where oxygen passes into the blood and carbon dioxide passes out. Exhaling is mostly the relaxation of the same muscles. An adult at rest takes about twelve to twenty breaths per minute. The lungs are not identical, because the left one is slightly smaller to leave room for the heart.",
+    "keywords": [
+      "lungs",
+      "breathing",
+      "oxygen",
+      "diaphragm",
+      "alveoli",
+      "carbon dioxide",
+      "trachea"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how do we breathe",
+      "how do lungs work",
+      "what is the diaphragm",
+      "why do we need oxygen",
+      "how many breaths per minute"
+    ]
+  },
+  {
+    "question": "How does digestion work?",
+    "answer": "Digestion breaks food down into nutrients that the body can absorb. It begins in the mouth, where teeth chew and saliva starts to digest starch. The food travels down the esophagus by wave-like muscle contractions called peristalsis and reaches the stomach, where acid and enzymes turn it into a thick liquid. In the small intestine, which is about six meters long, the pancreas and liver supply enzymes and bile to break down fats, proteins and carbohydrates, and nutrients pass into the blood through tiny finger-like villi. The large intestine absorbs water and forms waste, which leaves the body. The entire process often takes between one and two days, and trillions of gut bacteria help along the way.",
+    "keywords": [
+      "digestion",
+      "stomach",
+      "intestine",
+      "esophagus",
+      "bile",
+      "enzymes",
+      "gut",
+      "peristalsis"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how does the stomach work",
+      "how long does digestion take",
+      "what is peristalsis",
+      "what does the small intestine do",
+      "how is food digested"
+    ]
+  },
+  {
+    "question": "What is the skin and why is it important?",
+    "answer": "Skin is the body's largest organ, covering around two square meters in an adult. It has three main layers: the epidermis on the outside, the dermis in the middle containing nerves, blood vessels, hair follicles and sweat glands, and the hypodermis underneath that stores fat and insulates the body. Skin protects against germs, water loss and ultraviolet light, regulates temperature through sweating, senses touch, pressure, heat and pain, and makes vitamin D when exposed to sunlight. Its color depends mostly on a pigment called melanin, which varies across people and protects against sun damage. Outer skin cells are replaced roughly every month. Using sunscreen, moisturizing and drinking enough water help keep it healthy.",
+    "keywords": [
+      "skin",
+      "epidermis",
+      "dermis",
+      "melanin",
+      "largest organ",
+      "sunscreen",
+      "vitamin d"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "what is the largest organ",
+      "what is melanin",
+      "why do we have skin",
+      "how often does skin renew",
+      "what are the layers of skin"
+    ]
+  },
+  {
+    "question": "What is blood and what are blood types?",
+    "answer": "Blood is a fluid that carries oxygen, nutrients, hormones and waste, and it helps fight infection and stop bleeding. An adult has about five liters. It consists of plasma, a pale yellow liquid, along with red blood cells that carry oxygen using a protein called hemoglobin, white blood cells that defend against germs, and platelets that help form clots. Blood types are determined by markers called antigens on red cells. The main ABO system has types A, B, AB and O, and each can be Rh positive or negative. This matters for transfusions, since mismatched blood can cause dangerous reactions. Type O negative is considered the universal donor for red cells, and AB positive is the universal recipient.",
+    "keywords": [
+      "blood",
+      "red blood cells",
+      "white blood cells",
+      "platelets",
+      "blood type",
+      "abo",
+      "hemoglobin",
+      "plasma"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "what are blood types",
+      "what is the universal donor",
+      "what is in blood",
+      "how much blood is in the body",
+      "what do red blood cells do"
+    ]
+  },
+  {
+    "question": "What is the immune system?",
+    "answer": "The immune system is the body's defense network against bacteria, viruses, fungi and parasites. It has two main parts. The innate immune system reacts quickly and generally, using barriers such as skin and mucus, as well as white blood cells like neutrophils and macrophages that swallow invaders, and it causes inflammation and fever. The adaptive immune system is slower but specific. T cells and B cells learn to recognize particular germs, and B cells produce antibodies. After an infection or a vaccination, memory cells remember the invader so the body can respond faster next time. Sleep, balanced nutrition, exercise, handwashing and keeping up with vaccines all support immune health, while allergies and autoimmune diseases happen when the system overreacts.",
+    "keywords": [
+      "immune system",
+      "antibodies",
+      "white blood cells",
+      "t cells",
+      "b cells",
+      "vaccine",
+      "infection",
+      "fever"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how does the immune system work",
+      "what are antibodies",
+      "how do vaccines work",
+      "what is fever for",
+      "what are white blood cells"
+    ]
+  },
+  {
+    "question": "What is DNA?",
+    "answer": "DNA, short for deoxyribonucleic acid, is the molecule that carries genetic instructions for building and running living things. It has a double-helix shape, like a twisted ladder, whose rungs are made from four chemical bases abbreviated A, T, C and G. The order of these bases forms genes, which tell cells how to build proteins. Humans have 23 pairs of chromosomes, 46 in total, inside the nucleus of nearly every cell, and the human genome has about three billion base pairs. The structure was described in 1953 by James Watson and Francis Crick, with important data from Rosalind Franklin and Maurice Wilkins. Any two people share about 99.9 percent of their DNA, and differences make each person unique.",
+    "keywords": [
+      "dna",
+      "genes",
+      "chromosomes",
+      "double helix",
+      "genome",
+      "watson and crick",
+      "rosalind franklin"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "what are genes",
+      "how many chromosomes do humans have",
+      "who discovered dna",
+      "what is the human genome",
+      "what is dna made of"
+    ]
+  },
+  {
+    "question": "How do our senses work?",
+    "answer": "People have the five classic senses of sight, hearing, smell, taste and touch, plus others such as balance and body position. Each uses special receptor cells that turn information into electrical signals sent to the brain. In the eye, light is focused by the lens onto the retina, where rods handle dim light and cones detect color. The ear collects sound waves, which vibrate the eardrum and tiny bones, and hair cells in the cochlea convert vibrations to signals. The nose has millions of smell receptors, and the tongue has taste buds for sweet, salty, sour, bitter and umami. Touch receptors in the skin detect pressure, temperature and pain. The brain combines everything into your experience of the world.",
+    "keywords": [
+      "senses",
+      "sight",
+      "hearing",
+      "smell",
+      "taste",
+      "touch",
+      "retina",
+      "cochlea"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "what are the five senses",
+      "how do eyes work",
+      "how do ears work",
+      "what is umami",
+      "how do we smell"
+    ]
+  },
+  {
+    "question": "Why do we need sleep?",
+    "answer": "Sleep is essential for physical and mental health. While we sleep, the brain consolidates memories, clears waste products, and processes emotions, and the body repairs tissues, releases growth hormone and strengthens the immune system. Sleep occurs in cycles of about ninety minutes, moving through light sleep, deep sleep and REM sleep, which is when most vivid dreaming occurs. Children and teenagers need more sleep than adults, with teens needing about eight to ten hours, and adults usually need seven to nine. Lack of sleep can cause poor concentration, irritability, weaker immunity and long-term health risks. Helpful habits include a regular schedule, a dark and cool room, avoiding caffeine late in the day and putting screens away before bed.",
+    "keywords": [
+      "sleep",
+      "rem",
+      "dreams",
+      "insomnia",
+      "circadian rhythm",
+      "rest",
+      "memory consolidation"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how much sleep do i need",
+      "what is rem sleep",
+      "why do we dream",
+      "how to sleep better",
+      "what happens if you don't sleep"
+    ]
+  },
+  {
+    "question": "What is the nervous system?",
+    "answer": "The nervous system is the body's communication network. It has two parts. The central nervous system consists of the brain and spinal cord, which process information and make decisions. The peripheral nervous system includes the nerves that connect the central system to the rest of the body, and it carries sensory information in and motor commands out. It also has an autonomic branch that controls automatic functions like heartbeat and digestion, divided into the sympathetic system, which prepares the body for fight or flight, and the parasympathetic system, which supports rest and digest. Signals travel along neurons at speeds up to about 120 meters per second. Reflexes, like pulling your hand from a hot surface, are handled by the spinal cord for speed.",
+    "keywords": [
+      "nervous system",
+      "spinal cord",
+      "neurons",
+      "reflex",
+      "fight or flight",
+      "autonomic",
+      "nerves"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how do nerves work",
+      "what is a reflex",
+      "what is fight or flight",
+      "what does the spinal cord do",
+      "what is the central nervous system"
+    ]
+  },
+  {
+    "question": "What are hormones?",
+    "answer": "Hormones are chemical messengers produced by glands in the endocrine system and released into the bloodstream to control processes in other parts of the body. Examples include insulin from the pancreas, which regulates blood sugar, adrenaline from the adrenal glands, which prepares the body for action, thyroid hormones, which control metabolism, cortisol, which helps manage stress, melatonin, which regulates sleep, and growth hormone from the pituitary gland. Sex hormones such as estrogen and testosterone guide puberty and reproductive development. Because hormones act in tiny amounts, even small imbalances can affect mood, energy, growth and weight. A doctor can test hormone levels if someone has symptoms, and many conditions, such as diabetes and thyroid problems, are manageable with treatment.",
+    "keywords": [
+      "hormones",
+      "insulin",
+      "adrenaline",
+      "cortisol",
+      "melatonin",
+      "endocrine",
+      "thyroid",
+      "puberty"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "what is adrenaline",
+      "what does insulin do",
+      "what is cortisol",
+      "what is the endocrine system",
+      "what are hormones for"
+    ]
+  },
+  {
+    "question": "What do the kidneys and liver do?",
+    "answer": "The kidneys and liver are two vital organs that keep the body clean and balanced. The kidneys are bean-shaped organs about the size of a fist, one on each side of the back. They filter around 180 liters of fluid each day through about a million tiny filters called nephrons, remove waste and extra water as urine, balance salts and help control blood pressure. The liver, the largest internal organ, makes bile for digestion, stores energy as glycogen, breaks down toxins and medicines, and produces proteins needed for blood clotting. The liver is remarkable because it can regrow part of itself after damage. Drinking water, eating balanced meals and avoiding too much alcohol protect both organs.",
+    "keywords": [
+      "kidneys",
+      "liver",
+      "urine",
+      "nephron",
+      "bile",
+      "filter",
+      "detox",
+      "organs"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "what does the liver do",
+      "what do kidneys do",
+      "can the liver regenerate",
+      "how much urine do we make",
+      "why are kidneys important"
+    ]
+  },
+  {
+    "question": "How do our eyes work?",
+    "answer": "The eye works like a living camera. Light enters through the cornea, passes through the pupil, whose size is controlled by the colored iris, and is focused by the lens onto the retina at the back of the eye. The retina contains about 120 million rods, which work in dim light, and around 6 million cones, which detect color and fine detail. These cells convert light into electrical signals that travel through the optic nerve to the visual cortex in the brain, which builds the image. The image on the retina is actually upside down, and the brain flips it. Common vision problems include nearsightedness, farsightedness and astigmatism, which glasses or contact lenses can correct. Resting your eyes from screens is also helpful.",
+    "keywords": [
+      "eyes",
+      "retina",
+      "cornea",
+      "pupil",
+      "rods",
+      "cones",
+      "vision",
+      "glasses"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how does vision work",
+      "what are rods and cones",
+      "why is the image upside down",
+      "what is nearsightedness",
+      "why do we need glasses"
+    ]
+  },
+  {
+    "question": "How many teeth do humans have?",
+    "answer": "Humans usually grow two sets of teeth. Children have 20 baby teeth, also called primary or milk teeth, which start to appear at around six months of age. From about six years old they begin to fall out and are replaced by permanent teeth, and adults normally have 32, including four wisdom teeth that may or may not erupt and are often removed if there is no room. The types are incisors for cutting, canines for tearing, premolars and molars for grinding. Enamel, the outer coating, is the hardest substance in the body. Brushing twice a day with fluoride toothpaste, flossing, limiting sugary snacks and visiting a dentist regularly prevent cavities and gum disease.",
+    "keywords": [
+      "teeth",
+      "baby teeth",
+      "wisdom teeth",
+      "enamel",
+      "dentist",
+      "cavities",
+      "molars"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how many teeth do adults have",
+      "how many baby teeth",
+      "what are wisdom teeth",
+      "what is enamel",
+      "why do we lose baby teeth"
+    ]
+  },
+  {
+    "question": "How does growth and puberty work?",
+    "answer": "Humans grow quickly as babies, slow down in childhood and speed up again during puberty. Puberty is the stage when the body develops from child to adult, usually beginning between about eight and fourteen years of age, and it varies a lot between people. It is triggered by hormones from the brain's hypothalamus and pituitary gland that signal the body to produce sex hormones. Changes may include a growth spurt, body hair, changes in skin and sweat, voice changes, and for girls the beginning of periods. Emotions can feel more intense, and sleep needs increase. All of this is normal, and there is no right schedule. Talking with parents, a doctor, or a school nurse is helpful if someone has questions or worries.",
+    "keywords": [
+      "puberty",
+      "growth",
+      "hormones",
+      "teenager",
+      "growth spurt",
+      "adolescence"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "what is puberty",
+      "when does puberty start",
+      "why do teenagers grow fast",
+      "what is a growth spurt",
+      "is it normal to develop late"
+    ]
+  },
+  {
+    "question": "How and why do we age?",
+    "answer": "Aging is the gradual change in the body over time. Cells accumulate damage, and the tips of chromosomes called telomeres get shorter each time a cell divides, which eventually makes cells stop dividing. The body also repairs itself less efficiently, so skin loses elasticity, bones and muscles weaken, vision and hearing may decline, and the risk of conditions like heart disease and diabetes rises. Genes play a role, but lifestyle matters a lot. Regular exercise, a diet rich in vegetables, fruit and whole grains, good sleep, not smoking, strong friendships and staying mentally active are all linked to a longer and healthier life. Average life expectancy worldwide has risen from about 30 years in 1800 to over 70 years today, thanks to better medicine, sanitation and nutrition.",
+    "keywords": [
+      "aging",
+      "telomeres",
+      "longevity",
+      "life expectancy",
+      "old age",
+      "elderly"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "why do we get old",
+      "what causes aging",
+      "how can i live longer",
+      "what are telomeres",
+      "what is life expectancy"
+    ]
+  },
+  {
+    "question": "How much of the human body is water?",
+    "answer": "Water makes up roughly 60 percent of an adult's body weight, though the percentage varies with age, sex and body composition. Babies are about 75 percent water, while older adults have somewhat less. Water is found inside cells, in blood and in the spaces between tissues. It carries nutrients, controls body temperature through sweat, cushions joints, helps digestion and removes waste. The brain and heart are around 73 percent water, the lungs about 83 percent and bones about 31 percent. People can survive weeks without food but only a few days without water. A common guideline is to drink when thirsty and to aim for roughly two liters a day, more in hot weather or during exercise.",
+    "keywords": [
+      "water",
+      "hydration",
+      "thirst",
+      "60 percent",
+      "drink",
+      "dehydration"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how much water should i drink",
+      "what percentage of the body is water",
+      "what is dehydration",
+      "why do we need water",
+      "how long can you live without water"
+    ]
+  },
+  {
+    "question": "How many cells are in the human body?",
+    "answer": "Scientists estimate that the human body contains around 30 to 40 trillion human cells, with a common estimate of about 37 trillion. There are roughly 200 different cell types, including red blood cells, neurons, muscle cells, skin cells and bone cells. Cells vary enormously in size and lifespan. Some white blood cells live only a day or so, red blood cells live about 120 days, and some neurons last a lifetime. The body also hosts a similar number of microbes, mostly bacteria, many of them in the gut, and most of them are helpful or harmless. Every cell has a nucleus with DNA, except mature red blood cells, which lose theirs to make more room for hemoglobin.",
+    "keywords": [
+      "cells",
+      "trillion",
+      "red blood cell",
+      "nucleus",
+      "microbiome",
+      "bacteria",
+      "cell types"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "how many cells do humans have",
+      "what is a cell",
+      "what is the microbiome",
+      "how long do cells live",
+      "do we have more bacteria than cells"
+    ]
+  },
+  {
+    "question": "What is metabolism?",
+    "answer": "Metabolism is the set of chemical reactions that turn food into energy and building blocks for the body. Catabolism breaks molecules down to release energy, and anabolism uses energy to build and repair tissues. Your basal metabolic rate is the energy you burn at rest just to stay alive, and it accounts for most of the calories you use in a day. It depends on age, body size, muscle mass, genetics and hormones, particularly those from the thyroid. Muscle uses more energy than fat, so strength training can help raise it slightly. Claims of miracle foods that dramatically speed up metabolism are mostly exaggerated. A balanced diet, enough protein, regular movement and good sleep are the reliable ways to support healthy energy use.",
+    "keywords": [
+      "metabolism",
+      "calories",
+      "energy",
+      "bmr",
+      "thyroid",
+      "digestion",
+      "burn"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "what is a fast metabolism",
+      "how to speed up metabolism",
+      "what is bmr",
+      "what are calories",
+      "why do i burn calories"
+    ]
+  },
+  {
+    "question": "How do vaccines protect us?",
+    "answer": "Vaccines train the immune system to recognize a germ without causing the full illness. They contain a harmless piece or version of the pathogen, such as a weakened or inactivated virus, a protein, or instructions for making a protein, as in mRNA vaccines. The body responds by creating antibodies and memory cells, so if the real germ appears later, the immune system acts fast. Vaccination started in 1796 when Edward Jenner used cowpox material to protect against smallpox, a disease that was declared eradicated in 1980. Vaccines have also nearly wiped out polio in most countries and greatly reduced measles and tetanus. Some side effects like a sore arm or mild fever are common and short-lived, and serious reactions are rare.",
+    "keywords": [
+      "vaccine",
+      "immunity",
+      "antibodies",
+      "jenner",
+      "smallpox",
+      "mrna",
+      "polio",
+      "measles"
+    ],
+    "category": "Human Body",
+    "language": "en",
+    "aliases": [
+      "are vaccines safe",
+      "how do vaccines work",
+      "who invented vaccines",
+      "what is mrna",
+      "why do we need vaccines"
+    ]
+  }
+]

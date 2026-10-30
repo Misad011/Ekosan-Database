@@ -1,0 +1,505 @@
+[
+  {
+    "question": "What is the internet and how did it start?",
+    "answer": "The internet is a global network of connected computers that exchange information using shared rules called protocols, mainly TCP/IP. It grew from ARPANET, a research network funded by the United States Department of Defense, whose first message was sent between UCLA and Stanford Research Institute on October 29, 1969. TCP/IP became the standard on January 1, 1983. The internet is not the same thing as the World Wide Web. The web is a system of linked pages that run on top of the internet, invented by Tim Berners-Lee at CERN, who proposed it in 1989, and the first website went live in 1991. Browsers such as Mosaic in 1993 made the web popular. Other internet services include email, messaging, streaming, online games and cloud storage. Today more than five billion people use the internet.",
+    "keywords": [
+      "internet",
+      "arpanet",
+      "tcp/ip",
+      "world wide web",
+      "tim berners-lee",
+      "browser",
+      "network",
+      "cern"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "who invented the internet",
+      "what is the world wide web",
+      "what is the difference between internet and web",
+      "who invented the web",
+      "when did the internet start"
+    ]
+  },
+  {
+    "question": "How does a computer work?",
+    "answer": "A computer is a machine that follows instructions to process data. Its main parts include the CPU, or central processing unit, which carries out instructions and is often called the brain, the RAM, a fast short-term memory that holds data currently in use, storage such as an SSD or hard drive that keeps files permanently, the motherboard that connects everything, a power supply and input and output devices like keyboards, mice, screens and speakers. A graphics card, or GPU, handles images and is also useful for games and artificial intelligence. Computers store everything as binary numbers, ones and zeros, called bits, with eight bits making a byte. Software, such as an operating system and apps, tells the hardware what to do. The first general-purpose electronic computer, ENIAC, was completed in 1945 and filled a large room.",
+    "keywords": [
+      "computer",
+      "cpu",
+      "ram",
+      "gpu",
+      "ssd",
+      "binary",
+      "hardware",
+      "software",
+      "motherboard"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is a cpu",
+      "what is ram",
+      "what is a gpu",
+      "how does a computer work",
+      "what is binary"
+    ]
+  },
+  {
+    "question": "What is artificial intelligence?",
+    "answer": "Artificial intelligence, or AI, is the field of building computer systems that perform tasks that normally require human intelligence, such as understanding language, recognizing images, making decisions and learning from experience. The term was coined at a workshop at Dartmouth College in 1956 by John McCarthy and colleagues. Machine learning is a branch of AI in which systems learn patterns from data instead of following fixed rules, and deep learning uses multi-layered neural networks, inspired loosely by the brain. Modern large language models are trained on huge amounts of text to predict and generate language, which allows chatbots to answer questions and write text. AI is used in translation, medicine, recommendations, self-driving research and games, but it also raises issues of bias, privacy, errors and its impact on jobs, so responsible use matters.",
+    "keywords": [
+      "ai",
+      "artificial intelligence",
+      "machine learning",
+      "neural network",
+      "deep learning",
+      "chatbot",
+      "language model"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is machine learning",
+      "what is a chatbot",
+      "how do language models work",
+      "what is a neural network",
+      "is ai dangerous"
+    ]
+  },
+  {
+    "question": "What are programming languages?",
+    "answer": "A programming language is a formal way of giving instructions to a computer. Each language has syntax, which is its set of rules, and is either compiled or interpreted into machine code that the processor can run. Python, created by Guido van Rossum and first released in 1991, is popular for beginners, data science and automation because of its readable style. JavaScript, created in 1995 by Brendan Eich, runs in web browsers and makes pages interactive. HTML structures web pages and CSS styles them, although they are markup and style languages rather than full programming languages. Other important languages include C, C++, Java, C#, Swift, Kotlin, Rust, Go and SQL for databases. Which one to learn depends on your goal, whether websites, apps, games, bots or data.",
+    "keywords": [
+      "programming",
+      "coding",
+      "python",
+      "javascript",
+      "html",
+      "css",
+      "java",
+      "c++",
+      "code"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "how to learn coding",
+      "what is python",
+      "what is javascript",
+      "what is html",
+      "which programming language should i learn"
+    ]
+  },
+  {
+    "question": "What is Discord?",
+    "answer": "Discord is a free communication platform that began as a place for gamers to chat by text, voice and video, and is now used by all kinds of communities, from study groups to artists and open-source projects. It was launched in May 2015 by Jason Citron and Stanislav Vishnevskiy. Users join servers, which are communities divided into text and voice channels, with roles and permissions that control what members can do. Direct messages allow private conversations, and features include screen sharing, stickers, emojis, threads, forums, stage channels for events, and bots that automate tasks. The paid Nitro subscription offers extras like bigger uploads and custom emojis everywhere. Server owners can set rules and use moderation tools to keep spaces welcoming and safe.",
+    "keywords": [
+      "discord",
+      "server",
+      "channel",
+      "roles",
+      "nitro",
+      "chat",
+      "voice",
+      "community"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is a discord server",
+      "how do i make a discord server",
+      "what is discord nitro",
+      "who made discord",
+      "how do discord roles work"
+    ]
+  },
+  {
+    "question": "What is a Discord bot?",
+    "answer": "A Discord bot is an automated program that joins servers like a special user and performs tasks, such as moderation, welcoming new members, playing music, running games, answering questions, giving roles or sending reminders. Bots are created through the Discord Developer Portal, where you make an application, add a bot user, get a token, which works like a password and must never be shared, and invite the bot to a server using a link with the permissions it needs. They can respond to prefix commands typed in chat, slash commands chosen from a menu, buttons and other interactions. Bots can be coded in languages such as JavaScript with discord.js or Python with discord.py, or built with no-code or low-code tools like Bot Designer for Discord, which lets you create bots from a phone using its BDScript language.",
+    "keywords": [
+      "discord bot",
+      "token",
+      "slash commands",
+      "bdfd",
+      "bot designer for discord",
+      "discord.js",
+      "discord.py",
+      "developer portal"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "how to make a discord bot",
+      "what is bdfd",
+      "what is a slash command",
+      "what is a bot token",
+      "how do bots work"
+    ]
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JSON stands for JavaScript Object Notation, a lightweight text format for storing and exchanging data. It is easy for humans to read and easy for programs to parse, and it became popular through the work of Douglas Crockford in the early 2000s. JSON data is built from two structures, objects, written in curly braces as key and value pairs, and arrays, written in square brackets as ordered lists. Values can be strings in double quotes, numbers, true or false, null, other objects or arrays. For example, an object might hold a name, an age and a list of hobbies. JSON is widely used by web APIs, configuration files and apps, and nearly every programming language can read and write it. A common error is a missing comma or an extra trailing comma, which makes the file invalid.",
+    "keywords": [
+      "json",
+      "data",
+      "api",
+      "object",
+      "array",
+      "format",
+      "parse",
+      "key value"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is a json file",
+      "how to write json",
+      "what does json stand for",
+      "what is an api",
+      "what is json used for"
+    ]
+  },
+  {
+    "question": "What are smartphones and how did they change the world?",
+    "answer": "A smartphone is a mobile phone that works as a pocket computer, with a touchscreen, internet access, apps, a camera and many sensors. The IBM Simon, introduced in 1994, is often called the first smartphone, and Apple's iPhone in 2007 and Android phones from 2008 popularized the modern design. Smartphones replaced many separate devices, including cameras, music players, maps, flashlights and calculators, and made messaging, social media, mobile banking, ride sharing and mobile gaming part of everyday life. They also changed how people work, learn and stay in touch. The downsides include distraction, sleep problems, privacy concerns and e-waste. Using screen time limits, turning off notifications at night and keeping the phone out of reach during meals and study help keep a healthy balance.",
+    "keywords": [
+      "smartphone",
+      "iphone",
+      "android",
+      "apps",
+      "mobile",
+      "touchscreen",
+      "screen time"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what was the first smartphone",
+      "who invented the iphone",
+      "what is android",
+      "what is ios",
+      "how to reduce phone addiction"
+    ]
+  },
+  {
+    "question": "What are operating systems?",
+    "answer": "An operating system, or OS, is the main software that manages a computer's hardware and lets you run programs. It handles files, memory, devices, security and the user interface. Windows by Microsoft, first released in 1985, is the most widely used on desktop computers. macOS is Apple's system for Macs, and iOS and iPadOS run on iPhones and iPads. Android, based on the Linux kernel and developed by Google, runs most of the world's smartphones. Linux, begun by Linus Torvalds in 1991, is open source and powers most servers, supercomputers and many hobbyist desktops, with popular versions called distributions, such as Ubuntu, Fedora and Debian. ChromeOS is designed around the Chrome browser. Updates are important because they fix bugs and security problems.",
+    "keywords": [
+      "operating system",
+      "windows",
+      "macos",
+      "linux",
+      "android",
+      "ios",
+      "ubuntu",
+      "linus torvalds"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is linux",
+      "what is windows",
+      "what is macos",
+      "what is open source",
+      "what is the best operating system"
+    ]
+  },
+  {
+    "question": "What is cybersecurity and how can I protect myself?",
+    "answer": "Cybersecurity is the practice of protecting computers, networks and data from attacks. Common threats include malware, which is harmful software such as viruses, ransomware and spyware, phishing messages that trick people into giving away information, weak passwords and data breaches. Personal protection steps include using long, unique passwords stored in a password manager, turning on two-factor authentication, keeping systems and apps updated, installing apps only from official stores, being careful with links and attachments, using secure Wi-Fi and backing up important files. Encryption scrambles data so only authorized people can read it, and the padlock icon and https in a web address show that a connection is encrypted. A VPN can hide your traffic on public networks, but it does not make you anonymous or immune to scams.",
+    "keywords": [
+      "cybersecurity",
+      "malware",
+      "phishing",
+      "password",
+      "encryption",
+      "vpn",
+      "ransomware",
+      "hacking"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is a virus",
+      "what is ransomware",
+      "what is a vpn",
+      "what is encryption",
+      "how to protect my account"
+    ]
+  },
+  {
+    "question": "What is Bitcoin and cryptocurrency?",
+    "answer": "A cryptocurrency is a digital form of money that uses cryptography and a decentralized network instead of a central bank. Bitcoin, introduced in 2008 in a white paper by the mysterious author or group called Satoshi Nakamoto, started operating in January 2009. Transactions are recorded on a public ledger called a blockchain, a chain of blocks of data that is copied across thousands of computers and is very hard to alter. New coins are created and transactions are verified through processes such as mining in Bitcoin, which uses a lot of energy. Ethereum, launched in 2015, added smart contracts, programs that run on the blockchain. Cryptocurrency prices can be extremely volatile, scams are common, and anyone considering it should learn the risks and never invest money they cannot afford to lose.",
+    "keywords": [
+      "bitcoin",
+      "cryptocurrency",
+      "blockchain",
+      "ethereum",
+      "satoshi nakamoto",
+      "mining",
+      "wallet"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is blockchain",
+      "who created bitcoin",
+      "what is ethereum",
+      "is crypto safe",
+      "what is a nft"
+    ]
+  },
+  {
+    "question": "What is cloud computing?",
+    "answer": "Cloud computing means using remote servers on the internet to store data and run programs instead of relying only on your own device. When you save photos to an online drive, stream a movie or use a web-based document editor, you are using the cloud. Big providers include Amazon Web Services, Microsoft Azure and Google Cloud. Advantages include access from anywhere, automatic backups, easy sharing and the ability to scale up quickly without buying hardware. Risks include dependence on an internet connection, privacy concerns and outages. Cloud services are often described as Infrastructure as a Service, Platform as a Service and Software as a Service. Using strong passwords and two-factor authentication keeps cloud accounts safer.",
+    "keywords": [
+      "cloud",
+      "servers",
+      "aws",
+      "azure",
+      "google cloud",
+      "storage",
+      "saas",
+      "backup"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is the cloud",
+      "what is cloud storage",
+      "what is a server",
+      "what is saas",
+      "where do my files go online"
+    ]
+  },
+  {
+    "question": "What is a search engine and how does Google work?",
+    "answer": "A search engine is a tool that finds information on the internet based on the words you type. Google, founded in 1998 by Larry Page and Sergey Brin, became the most used, and other engines include Bing, DuckDuckGo and Baidu. Search engines work in three steps. Crawlers, also called spiders, follow links across the web and discover pages, the pages are indexed in a huge database and then, when you search, ranking algorithms decide which results are most relevant, using hundreds of signals such as keywords, links from other sites, quality and freshness. To search better, use specific keywords, quotation marks for exact phrases, a minus sign to exclude a word and trusted sources. Always check whether information is reliable, because a high ranking does not guarantee accuracy.",
+    "keywords": [
+      "search engine",
+      "google",
+      "bing",
+      "algorithm",
+      "crawler",
+      "index",
+      "seo",
+      "keywords"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "how does google work",
+      "who founded google",
+      "how to search better",
+      "what is seo",
+      "what is a web crawler"
+    ]
+  },
+  {
+    "question": "What is Wikipedia?",
+    "answer": "Wikipedia is a free online encyclopedia written and edited by volunteers around the world. It was launched on January 15, 2001 by Jimmy Wales and Larry Sanger, and it is run by the nonprofit Wikimedia Foundation, which keeps it free of advertising and funded mainly by donations. It exists in more than 300 languages, and the English edition has over six million articles. Anyone can edit most pages, and a community of editors uses talk pages, citations and policies, such as neutral point of view and verifiability, to improve and correct articles. Because it can be edited by anyone, it is best used as a starting point, checking the references at the bottom for original sources. Other Wikimedia projects include Wiktionary, Wikimedia Commons, Wikibooks and Wikidata.",
+    "keywords": [
+      "wikipedia",
+      "encyclopedia",
+      "wikimedia",
+      "jimmy wales",
+      "volunteers",
+      "free knowledge",
+      "edit"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "who created wikipedia",
+      "is wikipedia reliable",
+      "how many articles does wikipedia have",
+      "who writes wikipedia",
+      "what is wikimedia"
+    ]
+  },
+  {
+    "question": "What are social media platforms and when did they start?",
+    "answer": "Social media platforms are websites and apps where people create, share and react to content. Early examples include Friendster and Myspace in the early 2000s. Facebook began in 2004, YouTube in 2005, Twitter in 2006, which was later renamed X, Instagram in 2010, Snapchat in 2011 and TikTok's international version in 2018. Discord, Reddit, Pinterest, LinkedIn, Telegram and WhatsApp also play important roles for communities and messaging. They help people stay in touch, find information, share creativity and build businesses, but they also use algorithms that keep users scrolling and can spread rumors or harmful content. Many platforms require users to be at least 13 years old, and checking privacy settings, being kind and thinking before posting are good habits.",
+    "keywords": [
+      "social media",
+      "facebook",
+      "youtube",
+      "instagram",
+      "tiktok",
+      "reddit",
+      "snapchat",
+      "twitter"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is tiktok",
+      "when did youtube start",
+      "what is reddit",
+      "what is an algorithm on social media",
+      "how old do you have to be for social media"
+    ]
+  },
+  {
+    "question": "What are memes and where does the word come from?",
+    "answer": "A meme is an idea, image, phrase or behavior that spreads from person to person, usually through imitation and often with humor. The word was coined by evolutionary biologist Richard Dawkins in his 1976 book The Selfish Gene, from the Greek mimema, meaning something imitated, as a cultural analogue of the gene. Internet memes include image macros, like those with bold captions, reaction images, remixed videos, catchphrases and challenges. Examples from internet history include the dancing baby, Rickrolling, Doge, Pepe, Distracted Boyfriend and many more. Memes evolve quickly, and knowing the context is often necessary to understand the joke. They are a form of modern folklore, but it is wise to avoid memes that mock or harm others.",
+    "keywords": [
+      "meme",
+      "dawkins",
+      "internet culture",
+      "humor",
+      "viral",
+      "rickroll",
+      "doge",
+      "image macro"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is a meme",
+      "who invented memes",
+      "what does viral mean",
+      "what is rickrolling",
+      "why do memes spread"
+    ]
+  },
+  {
+    "question": "What are emojis and who invented them?",
+    "answer": "Emojis are small pictographs used in digital messages to express ideas and emotions. The first set of 176 emoji was created in 1999 by Shigetaka Kurita for the Japanese mobile internet platform i-mode at NTT DoCoMo. The word emoji comes from Japanese, e meaning picture and moji meaning character, and it has nothing to do with the word emotion. Emojis were later standardized by the Unicode Consortium, which means they can work across different devices, and thousands now exist, including skin tone options, flags and many professions. Emoticons, like the smiley made of punctuation marks, came earlier, and were suggested by Scott Fahlman in 1982. The face with tears of joy was named the Oxford Dictionaries Word of the Year in 2015.",
+    "keywords": [
+      "emoji",
+      "emoticon",
+      "unicode",
+      "kurita",
+      "smiley",
+      "text",
+      "pictograph"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "who made emojis",
+      "what does emoji mean",
+      "what is unicode",
+      "what was the first emoji",
+      "what is an emoticon"
+    ]
+  },
+  {
+    "question": "What is Git and GitHub?",
+    "answer": "Git is a free, open-source version control system created by Linus Torvalds in 2005 to manage the development of the Linux kernel. It tracks changes to files over time, so developers can go back to earlier versions, work on separate branches and combine changes with merges. GitHub, launched in 2008 and acquired by Microsoft in 2018, is a website that hosts Git repositories online and adds tools for collaboration, such as pull requests, issues, code reviews, project boards and automated workflows. Basic Git commands include clone, add, commit, push and pull. Millions of open-source projects live on GitHub, and it is a great place to share code, find libraries and learn from others. Alternatives include GitLab and Bitbucket.",
+    "keywords": [
+      "git",
+      "github",
+      "version control",
+      "repository",
+      "commit",
+      "open source",
+      "branch",
+      "pull request"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is version control",
+      "what is a repository",
+      "what is open source",
+      "how to use github",
+      "what is a commit"
+    ]
+  },
+  {
+    "question": "What are APIs and databases?",
+    "answer": "An API, or application programming interface, is a set of rules that lets one piece of software talk to another, like a waiter who carries your order to the kitchen and brings back the food. Web APIs often exchange data in JSON format over HTTP, and apps use them for maps, weather, payments and login. For instance, a Discord bot uses the Discord API to read messages and send replies. A database is an organized collection of data that can be stored, searched and updated efficiently. Relational databases such as MySQL, PostgreSQL and SQLite store data in tables and use the SQL language, while NoSQL databases such as MongoDB and Redis store data in other flexible formats. Together, APIs and databases power most modern apps and websites.",
+    "keywords": [
+      "api",
+      "database",
+      "sql",
+      "json",
+      "http",
+      "mongodb",
+      "sqlite",
+      "backend"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is sql",
+      "what is a database",
+      "how do apis work",
+      "what is http",
+      "what is a backend"
+    ]
+  },
+  {
+    "question": "What is Wi-Fi, Bluetooth and how do wireless signals work?",
+    "answer": "Wi-Fi and Bluetooth are wireless technologies that send data using radio waves. Wi-Fi connects devices to a router and the internet using bands such as 2.4 GHz, which has longer range, 5 GHz, which is faster, and newer 6 GHz, and standards like Wi-Fi 6 and Wi-Fi 7 provide higher speeds. Bluetooth is designed for short distances, around ten meters, and low power, connecting headphones, keyboards, controllers and watches. Cellular networks, such as 4G and 5G, use towers to provide mobile internet over wide areas. Signal strength drops with distance and with obstacles such as thick walls. To improve Wi-Fi, place the router in a central, high position, avoid interference from other electronics and use a modern standard. Always secure your network with a strong password.",
+    "keywords": [
+      "wifi",
+      "bluetooth",
+      "router",
+      "5g",
+      "radio waves",
+      "wireless",
+      "signal",
+      "internet speed"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is 5g",
+      "how does wifi work",
+      "how to improve wifi",
+      "what is bluetooth",
+      "what is a router"
+    ]
+  },
+  {
+    "question": "What is robotics and what is 3D printing?",
+    "answer": "Robotics is the field of designing, building and programming machines that can sense their surroundings and carry out tasks. Robots are used in factories for welding and assembly, in surgery, in warehouses, in space exploration, such as the Mars rovers, in vacuum cleaning and in research on walking humanoid machines. Typical parts are sensors, motors called actuators, a controller and software. The word robot was popularized by the Czech writer Karel Capek's 1920 play R.U.R. 3D printing, also called additive manufacturing, builds objects layer by layer from a digital model, using materials such as plastic, resin or metal. It is used for prototypes, medical implants, tools, art, toys and even houses. Hobbyists can learn both subjects with kits like Arduino and Raspberry Pi.",
+    "keywords": [
+      "robotics",
+      "robots",
+      "3d printing",
+      "arduino",
+      "raspberry pi",
+      "sensors",
+      "automation",
+      "capek"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "what is a robot",
+      "how does a 3d printer work",
+      "who invented the word robot",
+      "what is arduino",
+      "what is raspberry pi"
+    ]
+  },
+  {
+    "question": "What is an electric vehicle?",
+    "answer": "An electric vehicle, or EV, uses an electric motor powered by a rechargeable battery, usually lithium-ion, instead of or in addition to a gasoline or diesel engine. Fully electric cars produce no exhaust emissions while driving, are quiet and have fewer moving parts to maintain. Charging takes place at home or at public stations, from a few minutes of fast charging to several hours with slower chargers, and typical ranges today are between 250 and 600 kilometers depending on the model. Hybrids combine an engine with a battery. EVs are cleaner overall when the electricity comes from renewable sources, though battery production has environmental costs and recycling is an important challenge. Electric vehicles are not new, since electric cars existed in the late 1800s before gasoline engines took over.",
+    "keywords": [
+      "electric vehicle",
+      "ev",
+      "battery",
+      "lithium-ion",
+      "charging",
+      "tesla",
+      "hybrid",
+      "emissions"
+    ],
+    "category": "Technology",
+    "language": "en",
+    "aliases": [
+      "are electric cars good",
+      "how do electric cars work",
+      "what is a hybrid car",
+      "how long does it take to charge an ev",
+      "what is a lithium-ion battery"
+    ]
+  }
+]

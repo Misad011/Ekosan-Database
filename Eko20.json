@@ -1,0 +1,647 @@
+[
+  {
+    "question": "Hello, how are you?",
+    "answer": "Hello there! I'm doing great, thank you for asking. I'm Eko, a Discord bot that loves answering questions about all kinds of things, from video games and science to feelings, history and everyday life. How are you feeling today? If you've got a question, a curiosity or just want to chat, go ahead and ask me anything. I'll do my best to give you a clear, friendly and detailed answer, and if I don't know something, I'll tell you honestly instead of making it up.",
+    "keywords": [
+      "hello",
+      "hi",
+      "hey",
+      "greeting",
+      "how are you",
+      "chat",
+      "eko"
+    ],
+    "category": "Small Talk",
+    "language": "en",
+    "aliases": [
+      "hi",
+      "hey",
+      "hi eko",
+      "hello eko",
+      "how are you eko",
+      "what's up",
+      "sup",
+      "good morning",
+      "good evening"
+    ]
+  },
+  {
+    "question": "What can you do?",
+    "answer": "I'm Eko, a knowledge and chat bot for Discord. I can answer questions on a huge range of topics, including video games, famous franchises, the human body, feelings and psychology, relationships, science and space, history and geography, technology, animals, food, music, sports and philosophy. I give detailed answers, so you can learn something new each time, and I can understand different ways of asking the same question. I'm not a replacement for a doctor, a teacher or a trusted friend, but I'm happy to explain things, share fun facts and keep you company. Just type your question and I'll do my best to help.",
+    "keywords": [
+      "help",
+      "abilities",
+      "commands",
+      "features",
+      "bot",
+      "eko",
+      "what can you do"
+    ],
+    "category": "Small Talk",
+    "language": "en",
+    "aliases": [
+      "what are you able to do",
+      "help me",
+      "how do you work",
+      "what do you know",
+      "what are your features",
+      "how can you help"
+    ]
+  },
+  {
+    "question": "Tell me a joke.",
+    "answer": "Here's one for you. Why don't scientists trust atoms? Because they make up everything! And another for the gamers. Why did the gamer bring a ladder to the game? Because they wanted to reach the next level! And one for programmers. A programmer's partner says, please go to the store and buy a loaf of bread, and if they have eggs, get a dozen. The programmer comes home with twelve loaves of bread, because they had eggs. I hope that made you smile. Want another one? Just ask, and I'll try something different.",
+    "keywords": [
+      "joke",
+      "funny",
+      "humor",
+      "pun",
+      "laugh",
+      "gamer joke",
+      "programmer joke"
+    ],
+    "category": "Small Talk",
+    "language": "en",
+    "aliases": [
+      "say something funny",
+      "make me laugh",
+      "do you know any jokes",
+      "tell me a pun",
+      "give me a joke",
+      "tell me something funny"
+    ]
+  },
+  {
+    "question": "Tell me a fun fact.",
+    "answer": "Here are a few. Octopuses have three hearts and blue blood. Honey never spoils, and archaeologists have found edible honey in ancient Egyptian tombs thousands of years old. Bananas are berries in the botanical sense, but strawberries are not. A day on Venus is longer than its year, because it spins so slowly. Wombats produce cube-shaped droppings. The Eiffel Tower can grow taller by around fifteen centimeters in summer because the metal expands in the heat. Your stomach lining replaces itself every few days so it does not digest itself. If you want more fun facts on a certain topic, such as space, animals or games, just tell me.",
+    "keywords": [
+      "fun fact",
+      "trivia",
+      "interesting",
+      "did you know",
+      "random fact",
+      "facts"
+    ],
+    "category": "Small Talk",
+    "language": "en",
+    "aliases": [
+      "tell me something interesting",
+      "give me a random fact",
+      "did you know",
+      "tell me a cool fact",
+      "teach me something",
+      "random trivia"
+    ]
+  },
+  {
+    "question": "Who are you and who made you?",
+    "answer": "I'm Eko, a friendly Discord bot built to answer questions, share knowledge and chat with people in the server. I run on a dataset of questions and detailed answers that my creator put together on many topics, so I respond best when you ask about subjects such as games, science, history, feelings, technology and daily life. I'm a bot, not a human, which means I don't have a body or a personal life, but I'm designed to be helpful, kind and honest. If I don't know something, I'll say so, and I'm always getting new knowledge added.",
+    "keywords": [
+      "eko",
+      "who are you",
+      "bot",
+      "creator",
+      "identity",
+      "name",
+      "about"
+    ],
+    "category": "Small Talk",
+    "language": "en",
+    "aliases": [
+      "what are you",
+      "are you a bot",
+      "who made you",
+      "what is your name",
+      "are you real",
+      "are you human",
+      "who created you"
+    ]
+  },
+  {
+    "question": "What is the meaning of life?",
+    "answer": "People have asked this question for thousands of years, and there is no single agreed answer. Religious traditions often say life's meaning comes from serving a higher purpose or following the will of a creator. Existentialist philosophers like Jean-Paul Sartre argued that life has no built-in meaning, so each person creates their own through choices and actions. Aristotle suggested the goal of life is eudaimonia, often translated as flourishing, living well by developing virtue. Psychologist Viktor Frankl, who survived concentration camps, wrote that meaning can be found through work, love and the way we face unavoidable suffering. For many people, meaning comes from relationships, helping others, creativity, learning and enjoying simple moments. What gives your life meaning is something you get to explore.",
+    "keywords": [
+      "meaning of life",
+      "philosophy",
+      "purpose",
+      "existentialism",
+      "frankl",
+      "aristotle",
+      "happiness"
+    ],
+    "category": "Philosophy",
+    "language": "en",
+    "aliases": [
+      "why are we here",
+      "what is the purpose of life",
+      "what is life about",
+      "why do we exist",
+      "what is the point of life"
+    ]
+  },
+  {
+    "question": "What is philosophy?",
+    "answer": "Philosophy is the study of fundamental questions about existence, knowledge, values, reason, mind and language. The word comes from Greek, meaning love of wisdom. Main branches include metaphysics, which asks what reality is, epistemology, which asks how we know things, ethics, which asks how we should act, logic, which studies correct reasoning, and aesthetics, which asks about beauty and art. Early Greek philosophers such as Socrates, Plato and Aristotle laid foundations, and important thinkers from other cultures include Confucius, Laozi, Avicenna, Averroes, Maimonides, Descartes, Kant and Simone de Beauvoir. Famous ideas include I think, therefore I am from Rene Descartes and Plato's cave allegory. Philosophy trains you to question assumptions, argue clearly and think deeply.",
+    "keywords": [
+      "philosophy",
+      "socrates",
+      "plato",
+      "descartes",
+      "logic",
+      "ethics",
+      "metaphysics",
+      "wisdom"
+    ],
+    "category": "Philosophy",
+    "language": "en",
+    "aliases": [
+      "who was socrates",
+      "what is the allegory of the cave",
+      "what does i think therefore i am mean",
+      "what is metaphysics",
+      "who was confucius"
+    ]
+  },
+  {
+    "question": "What is time?",
+    "answer": "Time is the ongoing sequence of events from past through present to future, and it is one of the most puzzling ideas in science and philosophy. We measure it using regular motions, such as Earth's rotation for days, its orbit for years and vibrations of atoms in atomic clocks for the second. The second is now defined by the radiation of cesium atoms. In Einstein's theory of relativity, time is not absolute. It passes more slowly for objects moving very fast or sitting in stronger gravity, and GPS satellites must correct for this effect. The arrow of time, the fact that we remember the past but not the future, is linked to entropy, the tendency of disorder to increase. Whether time is a fundamental feature of reality or something that emerges is still debated.",
+    "keywords": [
+      "time",
+      "clock",
+      "relativity",
+      "entropy",
+      "arrow of time",
+      "second",
+      "calendar"
+    ],
+    "category": "Philosophy",
+    "language": "en",
+    "aliases": [
+      "what is a second",
+      "does time exist",
+      "why does time only go forward",
+      "can we time travel",
+      "what is a year"
+    ]
+  },
+  {
+    "question": "What are the most popular pets and how do I care for them?",
+    "answer": "The most popular pets worldwide are dogs and cats, followed by fish, birds, rabbits, hamsters, guinea pigs and reptiles. Dogs need exercise, training, social time and regular veterinary care, including vaccines. Cats need a clean litter box, scratching posts, play and a balanced diet, and they should have regular health checks. Small animals need spacious, safe housing, fresh food and water, and a lot of attention. Before getting a pet, consider the cost, time, space and lifespan, since a dog can live 10 to 15 years and a parrot even longer. Adopting from a shelter is a kind choice. Never leave pets in hot cars, and learn which common foods, like chocolate, grapes and onions, are toxic to them.",
+    "keywords": [
+      "pets",
+      "dog",
+      "cat",
+      "care",
+      "vet",
+      "adoption",
+      "hamster",
+      "rabbit"
+    ],
+    "category": "Animals",
+    "language": "en",
+    "aliases": [
+      "how to take care of a dog",
+      "how to care for a cat",
+      "what pet should i get",
+      "can dogs eat chocolate",
+      "what do hamsters eat"
+    ]
+  },
+  {
+    "question": "Which are the biggest and most amazing animals?",
+    "answer": "The blue whale is the largest animal ever known, reaching about 30 meters and weighing up to 150 tons, and its heart is roughly the size of a small car. The largest land animal is the African bush elephant, and the tallest is the giraffe, which can reach about 5.5 meters. The fastest land animal is the cheetah, hitting up to around 100 kilometers per hour in short bursts, while the peregrine falcon dives at over 320 kilometers per hour, making it the fastest animal overall. Octopuses are very intelligent and can solve puzzles, and crows can use tools. Tardigrades, microscopic water bears, can survive extreme conditions, including space. Many species are endangered because of habitat loss, so conservation helps keep this diversity alive.",
+    "keywords": [
+      "animals",
+      "blue whale",
+      "elephant",
+      "cheetah",
+      "giraffe",
+      "octopus",
+      "endangered",
+      "wildlife"
+    ],
+    "category": "Animals",
+    "language": "en",
+    "aliases": [
+      "what is the biggest animal",
+      "what is the fastest animal",
+      "what is the tallest animal",
+      "what is the smartest animal",
+      "what is a tardigrade"
+    ]
+  },
+  {
+    "question": "How do bees, ants and other insects live?",
+    "answer": "Many insects live in organized societies. A honeybee colony has one queen who lays eggs, thousands of female workers who forage, clean, build and guard the hive, and a small number of male drones. Bees communicate food locations through a waggle dance and pollinate a large portion of the crops we eat. Ant colonies also have queens and workers, and ants leave chemical trails called pheromones so others can follow. Some ants farm fungus or tend aphids like livestock. Termites build towering mounds, and butterflies undergo complete metamorphosis, going from egg to caterpillar to chrysalis to adult. Insects make up more than half of all known animal species. Protecting them by planting flowers, avoiding unnecessary pesticides and leaving wild corners helps ecosystems thrive.",
+    "keywords": [
+      "bees",
+      "ants",
+      "insects",
+      "hive",
+      "pollination",
+      "butterfly",
+      "metamorphosis",
+      "colony"
+    ],
+    "category": "Animals",
+    "language": "en",
+    "aliases": [
+      "how do bees make honey",
+      "what is a queen bee",
+      "how do ants communicate",
+      "how do butterflies form",
+      "why are bees important"
+    ]
+  },
+  {
+    "question": "What is a healthy diet?",
+    "answer": "A healthy diet provides the nutrients the body needs in the right amounts. It generally includes plenty of vegetables and fruit, whole grains such as oats, brown rice and whole wheat, protein from sources like beans, lentils, fish, eggs, poultry, nuts and dairy, healthy fats from olive oil and nuts, and enough water. It limits foods high in added sugar, salt and unhealthy fats, such as sodas, candy and ultra-processed snacks. Nutrients include carbohydrates for energy, proteins for growth and repair, fats for hormones and brain health, plus vitamins and minerals such as vitamin C, iron and calcium. No single food is perfect, and variety and balance are the key. Individual needs differ with age, activity and health, so a doctor or dietitian can give personal guidance, particularly for allergies or medical conditions.",
+    "keywords": [
+      "diet",
+      "nutrition",
+      "vegetables",
+      "protein",
+      "vitamins",
+      "healthy eating",
+      "water",
+      "balanced"
+    ],
+    "category": "Food and Health",
+    "language": "en",
+    "aliases": [
+      "what should i eat",
+      "what are vitamins",
+      "how much protein do i need",
+      "is sugar bad",
+      "what is a balanced diet"
+    ]
+  },
+  {
+    "question": "How do I cook simple meals?",
+    "answer": "Start with easy, forgiving recipes and a few basic skills. Learn to boil pasta or rice, scramble or fry an egg, roast vegetables in the oven, make a simple soup or stew, and bake or pan-cook chicken or fish until fully cooked. Read the entire recipe first, prepare ingredients before starting, use sharp knives carefully with a curled finger grip, and taste as you go, adjusting salt, acid and spices. Wash your hands, keep raw meat separate from other foods and cook meat thoroughly to avoid food poisoning. Handy beginner meals include fried rice, omelets, lentil soup, tomato pasta, tacos and sandwiches. Cooking with an adult at first is a good idea, especially around the stove and oven, and every cook burns something occasionally.",
+    "keywords": [
+      "cooking",
+      "recipes",
+      "kitchen",
+      "meals",
+      "food safety",
+      "chef",
+      "baking",
+      "beginner"
+    ],
+    "category": "Food and Health",
+    "language": "en",
+    "aliases": [
+      "how to cook",
+      "how to boil an egg",
+      "easy recipes",
+      "how to cook rice",
+      "what can i make for dinner"
+    ]
+  },
+  {
+    "question": "What are the health benefits of exercise?",
+    "answer": "Regular physical activity strengthens the heart, lungs, muscles and bones, helps control weight, improves sleep, boosts mood and lowers the risk of heart disease, type 2 diabetes and some cancers. Exercise releases endorphins and helps reduce stress, anxiety and symptoms of depression. The World Health Organization recommends that adults do at least 150 to 300 minutes of moderate activity a week, such as brisk walking or cycling, and children and teenagers about 60 minutes a day of moderate to vigorous activity. Good routines mix cardio, strength training, flexibility and balance. Start slowly, warm up, wear suitable shoes, drink water, and rest. Choose activities you enjoy, such as football, swimming, dancing or hiking, because that makes it easier to stay consistent.",
+    "keywords": [
+      "exercise",
+      "fitness",
+      "workout",
+      "cardio",
+      "strength",
+      "health",
+      "walking",
+      "sports"
+    ],
+    "category": "Food and Health",
+    "language": "en",
+    "aliases": [
+      "how much exercise do i need",
+      "why is exercise good for you",
+      "how to start working out",
+      "what is cardio",
+      "how to stay fit"
+    ]
+  },
+  {
+    "question": "What are the different types of music and instruments?",
+    "answer": "Music is organized sound built from rhythm, melody and harmony. Major genres include classical, jazz, blues, rock, pop, hip hop, electronic, reggae, country, folk, metal, R and B, and world music traditions such as Arabic maqam music, Indian classical, flamenco and K-pop. Instruments are grouped into families. String instruments include violin, guitar, oud, cello and harp. Woodwinds include flute, clarinet, saxophone and ney. Brass instruments include trumpet, trombone and French horn. Percussion includes drums, tambourine, darbuka and xylophone. Keyboards include piano and organ. The voice is also an instrument, and computers and synthesizers create electronic sounds. Learning an instrument improves memory, coordination and discipline, and even a few minutes of practice each day makes progress.",
+    "keywords": [
+      "music",
+      "instruments",
+      "genres",
+      "guitar",
+      "piano",
+      "oud",
+      "drums",
+      "rhythm"
+    ],
+    "category": "Arts and Entertainment",
+    "language": "en",
+    "aliases": [
+      "what is jazz",
+      "how to learn guitar",
+      "what is an oud",
+      "what are the instrument families",
+      "what is rhythm"
+    ]
+  },
+  {
+    "question": "What is anime and manga?",
+    "answer": "Manga are comic books and graphic novels from Japan, usually read from right to left, and anime are animated shows and films from Japan. Many anime are adapted from manga, light novels or video games. The medium covers all kinds of genres, including shonen action for young boys, shojo romance, seinen for adult men, josei for adult women, isekai where characters are transported to another world, slice of life, mecha, horror and sports. Famous examples include Dragon Ball, Naruto, One Piece, Attack on Titan, Death Note, Demon Slayer, My Hero Academia and the films of Studio Ghibli, such as Spirited Away by Hayao Miyazaki, which won an Academy Award in 2003. Anime has a huge worldwide fan base, with events, cosplay and conventions.",
+    "keywords": [
+      "anime",
+      "manga",
+      "japan",
+      "studio ghibli",
+      "naruto",
+      "one piece",
+      "isekai",
+      "cosplay"
+    ],
+    "category": "Arts and Entertainment",
+    "language": "en",
+    "aliases": [
+      "what is isekai",
+      "what is shonen",
+      "who is hayao miyazaki",
+      "what is cosplay",
+      "best anime"
+    ]
+  },
+  {
+    "question": "How are movies made?",
+    "answer": "Making a film has three main stages. In pre-production, writers develop a script, producers raise funds, directors plan the visual style, and casting, locations, costumes and schedules are arranged. During production, the crew films scenes with actors, cinematographers operate cameras, lighting and sound teams capture the visuals and audio, and the director guides performances. In post-production, editors assemble the footage, visual effects artists add computer-generated elements, composers write the score, sound designers add effects and colorists adjust the look. Special effects can be practical, like makeup and models, or digital. The first public film screening by the Lumiere brothers took place in Paris in 1895. Today anyone with a phone can make a short film, and many famous directors started with small projects.",
+    "keywords": [
+      "movies",
+      "film",
+      "director",
+      "cinema",
+      "special effects",
+      "script",
+      "editing",
+      "hollywood"
+    ],
+    "category": "Arts and Entertainment",
+    "language": "en",
+    "aliases": [
+      "how do movies get made",
+      "what does a director do",
+      "what is cgi",
+      "what is post-production",
+      "who invented cinema"
+    ]
+  },
+  {
+    "question": "What are some great books and how can I enjoy reading?",
+    "answer": "Reading builds vocabulary, imagination, empathy and focus. Classic works from around the world include The Epic of Gilgamesh, One Thousand and One Nights, Don Quixote, Pride and Prejudice, Les Miserables, Crime and Punishment, The Little Prince, and modern favorites like The Hobbit, Harry Potter, The Hunger Games and Percy Jackson. Authors from the Arab world such as Naguib Mahfouz, who won the Nobel Prize in Literature in 1988, and Mahmoud Darwish, a celebrated poet, are widely read. To enjoy reading more, choose books on topics you love, start with short ones, set aside a regular time each day, keep a book with you, try audiobooks, join a book club and feel free to stop a book that doesn't suit you. Libraries offer many books for free.",
+    "keywords": [
+      "books",
+      "reading",
+      "literature",
+      "novels",
+      "poetry",
+      "library",
+      "nobel prize",
+      "authors"
+    ],
+    "category": "Arts and Entertainment",
+    "language": "en",
+    "aliases": [
+      "what should i read",
+      "how to read more",
+      "who is naguib mahfouz",
+      "what is a novel",
+      "how to enjoy reading"
+    ]
+  },
+  {
+    "question": "What is football and what is the World Cup?",
+    "answer": "Football, called soccer in some countries, is the world's most popular sport, played between two teams of eleven players who try to score by getting the ball into the opponent's goal, mostly without using their hands. Modern rules were codified in England in 1863, and FIFA, the international governing body, was founded in 1904. The FIFA World Cup is held every four years, with the first tournament in Uruguay in 1930, and Brazil has won the most titles, with five. Argentina won the 2022 tournament in Qatar, beating France on penalties after a thrilling 3 to 3 draw, and the 2026 edition was held across the United States, Canada and Mexico. Legendary players include Pele, Diego Maradona, Lionel Messi and Cristiano Ronaldo.",
+    "keywords": [
+      "football",
+      "soccer",
+      "world cup",
+      "fifa",
+      "messi",
+      "ronaldo",
+      "pele",
+      "goal"
+    ],
+    "category": "Sports",
+    "language": "en",
+    "aliases": [
+      "who won the world cup",
+      "what is fifa",
+      "who is messi",
+      "who is ronaldo",
+      "how do you play football"
+    ]
+  },
+  {
+    "question": "What are the Olympic Games?",
+    "answer": "The Olympic Games are the world's leading international sporting event, featuring thousands of athletes from over two hundred countries competing in summer and winter sports. The ancient Games began in Olympia, Greece, in 776 BCE in honor of Zeus. The modern Olympics were revived by Pierre de Coubertin, and the first took place in Athens in 1896. The Summer and Winter Games are each held every four years, alternating at two-year intervals. The five interlocking rings on the Olympic flag symbolize the unity of five continents, and the motto is Faster, Higher, Stronger, with Together added in 2021. Winners receive gold, silver and bronze medals, and the Paralympic Games for athletes with disabilities follow soon after. Paris hosted the Summer Games in 2024.",
+    "keywords": [
+      "olympics",
+      "athletes",
+      "medals",
+      "greece",
+      "paralympics",
+      "olympic rings",
+      "sports",
+      "coubertin"
+    ],
+    "category": "Sports",
+    "language": "en",
+    "aliases": [
+      "when are the olympics",
+      "what do the olympic rings mean",
+      "who started the olympics",
+      "what are the paralympics",
+      "who hosts the olympics"
+    ]
+  },
+  {
+    "question": "How can I learn a new skill quickly?",
+    "answer": "Learning effectively is a skill in itself. Begin by setting a clear, small goal, then break it into steps and practice regularly, since short daily sessions beat long irregular ones. Use active recall, which means testing yourself instead of simply rereading, and spaced repetition, reviewing information at increasing intervals. Focus on one thing at a time, get feedback from a teacher or friend, learn from mistakes, and teach what you learn to someone else, which exposes gaps in understanding. Rest and sleep help your brain consolidate memories. The idea that it takes exactly 10,000 hours to master a skill is a simplification, but deliberate practice, which targets your weaknesses, truly matters. Stay patient, because progress often feels slow before it suddenly clicks.",
+    "keywords": [
+      "learning",
+      "skills",
+      "study",
+      "practice",
+      "memory",
+      "spaced repetition",
+      "habits",
+      "improve"
+    ],
+    "category": "Self Improvement",
+    "language": "en",
+    "aliases": [
+      "how to study effectively",
+      "how to learn faster",
+      "how to build good habits",
+      "how to improve at something",
+      "how to learn a language fast"
+    ]
+  },
+  {
+    "question": "What are some good habits for a healthy daily routine?",
+    "answer": "A healthy routine balances rest, work, movement and enjoyment. Helpful habits include waking up and going to bed around the same time, eating breakfast and balanced meals, drinking enough water, moving your body daily, spending time outside in natural light, planning your most important task early, taking short breaks during study or work and limiting screens before bed. Make time for friends, family and hobbies, and for a few minutes of quiet reflection, such as writing in a journal or practicing breathing. Habits are easier to build when they are small and attached to existing routines, for example doing a few stretches after brushing your teeth. Do not aim for perfection, because missing a day is normal, and returning the next day is what counts.",
+    "keywords": [
+      "routine",
+      "habits",
+      "daily",
+      "health",
+      "sleep",
+      "planning",
+      "journal",
+      "wellbeing"
+    ],
+    "category": "Self Improvement",
+    "language": "en",
+    "aliases": [
+      "how to build a routine",
+      "what is a good morning routine",
+      "how to be more organized",
+      "how to manage time",
+      "how to be healthy"
+    ]
+  },
+  {
+    "question": "What is the difference between weather and climate, and what are seasons?",
+    "answer": "Weather is what the atmosphere is doing right now or over a few days, like rain this afternoon, while climate is the average pattern of weather in a region over decades. Seasons occur because Earth's axis is tilted about 23.5 degrees. When the Northern Hemisphere is tilted toward the Sun, it receives more direct sunlight and experiences summer, while the Southern Hemisphere has winter, and the reverse happens six months later. The solstices mark the longest and shortest days, around June 21 and December 21, and the equinoxes, around March 20 and September 22, have nearly equal day and night. Near the equator seasons are mild, with wet and dry seasons instead. Seasons are not caused by Earth's distance from the Sun, which is actually smallest in early January.",
+    "keywords": [
+      "weather",
+      "climate",
+      "seasons",
+      "solstice",
+      "equinox",
+      "tilt",
+      "summer",
+      "winter"
+    ],
+    "category": "General Knowledge",
+    "language": "en",
+    "aliases": [
+      "why do we have seasons",
+      "what is a solstice",
+      "what is an equinox",
+      "what is the difference between weather and climate",
+      "why is it hot in summer"
+    ]
+  },
+  {
+    "question": "What are tea and coffee and where do they come from?",
+    "answer": "Tea and coffee are two of the world's most popular drinks. Tea comes from the leaves of the Camellia sinensis plant and was first used in China thousands of years ago, with black, green, white and oolong teas differing in how the leaves are processed. Coffee comes from roasted seeds, called beans, of the Coffea plant, and according to legend it was discovered by an Ethiopian goat herder who noticed his goats becoming lively after eating the berries. Coffeehouses spread through the Arab and Ottoman world before reaching Europe. Both drinks contain caffeine, a stimulant that can improve alertness but can disturb sleep if consumed late, and children and teenagers should limit it. In many cultures, offering tea or Arabic coffee is a sign of hospitality.",
+    "keywords": [
+      "tea",
+      "coffee",
+      "caffeine",
+      "china",
+      "ethiopia",
+      "hospitality",
+      "drink",
+      "beans"
+    ],
+    "category": "Food and Health",
+    "language": "en",
+    "aliases": [
+      "where does coffee come from",
+      "where does tea come from",
+      "is caffeine bad",
+      "what is green tea",
+      "who discovered coffee"
+    ]
+  },
+  {
+    "question": "What are colors and how do we see them?",
+    "answer": "Color is how our brain interprets different wavelengths of light. Objects absorb some wavelengths and reflect others, and the reflected light is what we see. The cones in the retina come in three types that are sensitive to red, green and blue light, and the brain mixes their signals to create millions of shades. Primary colors depend on the system. In light, as on screens, they are red, green and blue, and mixing them makes white. In paint and printing, the traditional primaries are red, yellow and blue, or cyan, magenta and yellow in modern printing. Some people have color vision deficiency, often called color blindness, and it is more common in males. Colors also carry cultural meanings and affect mood, for example blue is often seen as calming.",
+    "keywords": [
+      "colors",
+      "light",
+      "cones",
+      "rgb",
+      "primary colors",
+      "color blindness",
+      "wavelength",
+      "paint"
+    ],
+    "category": "General Knowledge",
+    "language": "en",
+    "aliases": [
+      "what are the primary colors",
+      "how do we see color",
+      "what is color blindness",
+      "what is rgb",
+      "how are rainbows made"
+    ]
+  },
+  {
+    "question": "What is art and why does it matter?",
+    "answer": "Art is the expression of ideas, emotions and beauty through creative forms such as painting, drawing, sculpture, photography, music, dance, theater, film, architecture and digital media. Prehistoric cave paintings, such as those in Lascaux and Altamira, show that humans have made art for tens of thousands of years. Famous works include the Mona Lisa by Leonardo da Vinci, The Starry Night by Vincent van Gogh, Guernica by Pablo Picasso and the Great Mosque of Cordoba. Different movements, such as Impressionism, Cubism, Surrealism and Islamic geometric art, have shaped how we see the world. Art helps people communicate across cultures, process feelings, tell stories and preserve history. Everyone can be creative, and you do not need to be perfect to enjoy drawing, writing or making music.",
+    "keywords": [
+      "art",
+      "painting",
+      "drawing",
+      "van gogh",
+      "picasso",
+      "creativity",
+      "museum",
+      "sculpture"
+    ],
+    "category": "Arts and Entertainment",
+    "language": "en",
+    "aliases": [
+      "who painted starry night",
+      "who was picasso",
+      "how to start drawing",
+      "what is impressionism",
+      "why is art important"
+    ]
+  },
+  {
+    "question": "What is mathematics and why do we study it?",
+    "answer": "Mathematics is the study of numbers, shapes, patterns, quantities and logical reasoning. Its main branches include arithmetic, algebra, geometry, trigonometry, calculus, statistics and probability. Math is used in everything from cooking and shopping to engineering, medicine, music, art, video game design and artificial intelligence. Ancient civilizations such as the Babylonians, Egyptians, Greeks, Indians and the scholars of the Islamic world contributed ideas like the number zero, decimal numerals and algebra. Famous mathematicians include Euclid, Archimedes, Al-Khwarizmi, Isaac Newton, Leonhard Euler, Carl Friedrich Gauss and Ada Lovelace. If math feels difficult, try breaking problems into small steps, practicing regularly, using visual examples and asking questions, because mistakes are a normal part of learning.",
+    "keywords": [
+      "math",
+      "mathematics",
+      "algebra",
+      "geometry",
+      "calculus",
+      "statistics",
+      "euclid",
+      "zero"
+    ],
+    "category": "Science",
+    "language": "en",
+    "aliases": [
+      "how to get better at math",
+      "what is algebra",
+      "what is calculus",
+      "who invented zero",
+      "why do we learn math"
+    ]
+  },
+  {
+    "question": "How can I be kind and make the world a little better?",
+    "answer": "Kindness is a choice that costs little and can have a big effect. Small actions include greeting people warmly, saying thank you, listening when someone is struggling, sharing what you have, helping a classmate or neighbor, standing up for someone being treated unfairly, and being polite online. You can also volunteer, donate to a trusted charity, plant a tree, reduce waste, recycle and use less plastic. Research shows that acts of kindness boost the happiness of both the giver and the receiver. Kindness to yourself also matters, which means speaking to yourself gently, resting when you need to and forgiving your own mistakes. If everyone did a few small good things every day, communities would become friendlier and stronger.",
+    "keywords": [
+      "kindness",
+      "helping",
+      "volunteer",
+      "charity",
+      "environment",
+      "recycle",
+      "compassion",
+      "community"
+    ],
+    "category": "Self Improvement",
+    "language": "en",
+    "aliases": [
+      "how to be a good person",
+      "how to help others",
+      "how to make people happy",
+      "what is kindness",
+      "how to help the environment"
+    ]
+  }
+]
