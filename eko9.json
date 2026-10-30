@@ -1,0 +1,946 @@
+[
+  {
+    "question": "What is Unstable Universe?",
+    "answer": "It is a scripted Minecraft video series. The wiki says it follows four protagonists: ParrotX2, Wemmbu, SpokeIsHere, and FlameFrags. It started on April 21, 2024. It has 152 episodes and it is in its third season. It is also called Unstable SMP.",
+    "keywords": ["unstable universe", "what", "series", "minecraft", "overview"],
+    "category": "unstable_overview",
+    "language": "en",
+    "aliases": ["what is unstable universe?", "what is unstable smp?", "tell me about unstable universe", "explain unstable smp"]
+  },
+  {
+    "question": "Who made Unstable Universe?",
+    "answer": "The wiki says it was created by ParrotX2. He is one of the four protagonists. He also made Lifesteal SMP. He is the one who started the whole thing.",
+    "keywords": ["created", "maker", "parrot", "parrotx2", "who"],
+    "category": "unstable_overview",
+    "language": "en",
+    "aliases": ["who created unstable universe?", "who made unstable smp?", "who is the creator?", "whose series is this?"]
+  },
+  {
+    "question": "Who are the four protagonists?",
+    "answer": "ParrotX2, Wemmbu, SpokeIsHere, and FlameFrags. The wiki says each one tells their own side of the same wars. Parrot is the smart one. Wemmbu is the loud one. Spoke is the manipulative one. Flame is the stubborn fighter.",
+    "keywords": ["protagonists", "four", "parrot", "wemmbu", "spoke", "flame"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who are the main characters?", "who are the protagonists?", "name the four protagonists", "who is the main four?"]
+  },
+  {
+    "question": "Who is ParrotX2?",
+    "answer": "Parrot is one of the four protagonists. The wiki says he is a highly calculated strategist. He is charitable and selfless and gives riches to new players. He is also idealistic and heroic. He believes he has to save everyone. Even if it costs him.",
+    "keywords": ["parrot", "parrotx2", "protagonist", "king", "strategist"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is parrot?", "tell me about parrotx2", "what is parrot like?", "who is the king parrot?"]
+  },
+  {
+    "question": "Who is Wemmbu?",
+    "answer": "Wemmbu is one of the four protagonists. The wiki says he is loud, sarcastic, competitive, and emotionally explosive. He goes between friendly banter and destructive hostility. He is quick to resort to violence. His best friend is Eggchan. Egg is his moral anchor.",
+    "keywords": ["wemmbu", "protagonist", "loud", "eggchan", "fighter"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is wemmbu?", "tell me about wemmbu", "what is wemmbu like?", "who is the chaotic protagonist?"]
+  },
+  {
+    "question": "Who is SpokeIsHere?",
+    "answer": "Spoke is one of the four protagonists. But the wiki says he is also the current overarching main antagonist outside his own point of view. He is chaotic and manipulative. He ignores the needs of others. He is a very good speaker and uses it to get what he wants. He leads NULL.",
+    "keywords": ["spoke", "spokeishere", "protagonist", "antagonist", "null"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is spoke?", "tell me about spokeishere", "what is spoke like?", "who leads null?"]
+  },
+  {
+    "question": "Who is FlameFrags?",
+    "answer": "Flame is one of the four protagonists. The wiki says he is proud, resilient, and stubborn. He cares a lot about his title and reputation. But he cares even more about his best friend Lomedy. He is considered the strongest player on the server. He is a combat master.",
+    "keywords": ["flame", "flamefrags", "protagonist", "strongest", "fighter"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is flame?", "tell me about flamefrags", "what is flame like?", "who is the strongest player?"]
+  },
+  {
+    "question": "Who is Eggchan?",
+    "answer": "Eggchan is Wemmbu's best friend and deuteragonist. The wiki says he is composed and lighthearted. He always allies with Wemmbu. He is one of the few people Wemmbu trusts and cares about. He is also the comic relief.",
+    "keywords": ["eggchan", "egg", "wemmbu", "best friend", "deuteragonist"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is eggchan?", "tell me about egg", "who is wemmbu's best friend?", "who is egg?"]
+  },
+  {
+    "question": "Who is Lomedy?",
+    "answer": "Lomedy is Flame's best friend and deuteragonist. The wiki says he is supportive, caring, and steadfast. He is a farmer. He obeys the laws. He is really smart but also dumb at the same time. He and Flame fight sometimes but they make up.",
+    "keywords": ["lomedy", "flame", "best friend", "farmer", "deuteragonist"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is lomedy?", "tell me about lomedy", "who is flame's best friend?", "who is the farmer?"]
+  },
+  {
+    "question": "Who is Mapicc?",
+    "answer": "Mapicc was Spoke's deuteragonist. The wiki says he is loyal, gullible, and silly. He enjoys pranks with Spoke. Spoke cares deeply for him. Spoke even threatens to blow things up when Mapicc is missing.",
+    "keywords": ["mapicc", "spoke", "deuteragonist", "loyal", "friend"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is mapicc?", "tell me about mapicc", "who is spoke's best friend?", "who is mapicc to spoke?"]
+  },
+  {
+    "question": "Who is TheobaldTheBird?",
+    "answer": "Theo is Parrot's deuteragonist. The wiki says he is aggressive, charismatic, and protective. He is loud and one of Parrot's best friends. He considers himself Parrot's bodyguard. He uses TNT cart PVP.",
+    "keywords": ["theo", "theobald", "parrot", "deuteragonist", "bodyguard"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is theo?", "tell me about theobaldthebird", "who is parrot's bodyguard?", "who is theo to parrot?"]
+  },
+  {
+    "question": "Who is Wifies?",
+    "answer": "Wifies was Parrot's deuteragonist in Season 1. The wiki says he was quiet, obsessive, and intelligent. He became the main antagonist in the Director Arc. He was revealed to be The Director. He built the totem-stasis exploit himself. He died. Or maybe he did not. It is complicated.",
+    "keywords": ["wifies", "director", "parrot", "deuteragonist", "antagonist"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is wifies?", "tell me about wifies", "who is the director?", "who was parrot's deuteragonist?"]
+  },
+  {
+    "question": "Who is Deanthebean9?",
+    "answer": "Dean was Parrot's tritagonist. The wiki says he was anxious, slow-witted, and silly. He was a teammate of Parrot and Wifies. He died in the Mafia Arc. He was dropped into the void. The grave says it was unwillingly caused by ParrotX2.",
+    "keywords": ["dean", "deanthebean9", "parrot", "tritagonist", "died"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is dean?", "tell me about deanthebean9", "who is parrot's tritagonist?", "how did dean die?"]
+  },
+  {
+    "question": "Who is ReinaDrop?",
+    "answer": "Reina is Parrot's tritagonist. The wiki says she is clever, vengeful, and self-doubting. She carries a white flower. It symbolizes her friendship and promise with Zoe444. Zoe was her friend. They were forced to grow wheat for Cindercrest.",
+    "keywords": ["reina", "reinadrop", "parrot", "tritagonist", "flower"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is reina?", "tell me about reinadrop", "who carries the white flower?", "who is reina to parrot?"]
+  },
+  {
+    "question": "Who is JumperWho?",
+    "answer": "Jumper is a supporting character. The wiki says she was a former member of the Bounty Assassin Team. She was the former leader of a group of spies. She was a candidate for queen of Unstable. She was also a former member of the Invisible Mafia.",
+    "keywords": ["jumper", "jumperwho", "spies", "bat", "mafia"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is jumper?", "tell me about jumperwho", "who leads the spies?", "who is jumper?"]
+  },
+  {
+    "question": "Who is Ashswagg?",
+    "answer": "Ashswagg is one of the main antagonists of Season 1. The wiki says he is ruthless, power-hungry, and manipulative. He led the Invisible Mafia. He wanted to rule everybody with his Mafia. He said he wanted to improve the server and he failed.",
+    "keywords": ["ashswagg", "ash", "mafia", "antagonist", "leader"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is ashswagg?", "tell me about ash", "who leads the invisible mafia?", "who is the mafia leader?"]
+  },
+  {
+    "question": "Who is ClownPierce?",
+    "answer": "ClownPierce is one of the two main antagonists of Season 1. The wiki says he became the King of the Nether. He made a civilization of elite warriors. He controls all the Nether resources. He kills unauthorized players on sight. He is also called the Jester of Hell.",
+    "keywords": ["clown", "clownpierce", "nether", "king", "antagonist"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is clownpierce?", "tell me about clown", "who is the king of the nether?", "who rules the nether?"]
+  },
+  {
+    "question": "Who is PrinceZam?",
+    "answer": "PrinceZam was the ruler of the Zam Empire. The wiki says the empire thrived on influence and control. Zam built a giant wall around spawn. Zam monopolized the server's remaining items. Zam's paranoia led to betraying Wemmbu. Later Zam apologized.",
+    "keywords": ["zam", "princezam", "empire", "ruler", "spawn"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is princezam?", "tell me about zam", "who rules the zam empire?", "who built the wall around spawn?"]
+  },
+  {
+    "question": "Who is Reddoons?",
+    "answer": "Reddoons is a supporting character. The wiki says he was the mayor of Capital City. He was also the former mayor of Capital City 2.0. He was an ally of the Invisible Mafia. He is seen as a tyrant. He forces people to pay him 90% of their earnings in taxes.",
+    "keywords": ["reddoons", "capital city", "mayor", "tyrant", "mafia"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is reddoons?", "tell me about reddoons", "who is the mayor of capital city?", "who is the tyrant mayor?"]
+  },
+  {
+    "question": "Who is Fymada?",
+    "answer": "Fymada is a supporting character. The wiki says she was formerly the Mayor of Capitol City. She was a citizen of Capital City. She was a commander in the Royal Army. She led the Capital City Police Force. She fought in the battle of Capitol City.",
+    "keywords": ["fymada", "capitol city", "mayor", "commander", "police"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is fymada?", "tell me about fymada", "who is the mayor of capitol city?", "who leads the police force?"]
+  },
+  {
+    "question": "Who is SargeLAW?",
+    "answer": "SargeLAW is a character in Unstable Universe. The wiki says he was one of the four commanders of The Law. He served directly under LettuceK. He became the final LAW commander alive after G0DOfWar died. He is currently rebuilding The Law.",
+    "keywords": ["sargelaw", "law", "commander", "lettucek", "rebuild"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is sargelaw?", "tell me about sargelaw", "who is the law commander?", "who rebuilds the law?"]
+  },
+  {
+    "question": "Who is LettuceK?",
+    "answer": "LettuceK is the leader of The Law. The wiki says he is the biggest faction leader. He is a very strong PvPer. He hunted down players who terrorized others. Flame was his most wanted target. The Law formed to serve justice and protect the weak.",
+    "keywords": ["lettucek", "lettuce", "law", "leader", "justice"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is lettucek?", "tell me about lettuce", "who leads the law?", "who is the law leader?"]
+  },
+  {
+    "question": "Who is JamatoP?",
+    "answer": "JamatoP is a major character. The wiki says he was the leader of NULL before Spoke. He ran Purgatory. He is a smooth talker and a manipulator. Spoke defeated him and claimed the Totem of Null. There is a theory that Wifies founded NULL first and Jamato took over.",
+    "keywords": ["jamato", "jamatop", "null", "purgatory", "leader"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is jamatop?", "tell me about jamato", "who led null before spoke?", "who runs purgatory?"]
+  },
+  {
+    "question": "Who is Kenadian?",
+    "answer": "Kenadian, or Ken, is a supporting character. The wiki says they are highly intelligent, adaptable, and cautious. They like to be prepared. They know a lot about Minecraft mechanics and prison escaping. They are close with Wato1876.",
+    "keywords": ["kenadian", "ken", "smart", "prison", "wato"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is kenadian?", "tell me about ken", "who is the prison expert?", "who is wato's friend?"]
+  },
+  {
+    "question": "Who is Wato1876?",
+    "answer": "Wato is a supporting character. The wiki says he builds escape rooms. He takes commissions from other players. He is reserved and stays hidden. He dislikes social interaction. He has a unique friendship with Wemmbu. He quit the Unstable SMP.",
+    "keywords": ["wato", "wato1876", "escape room", "builder", "quiet"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is wato?", "tell me about wato1876", "who builds escape rooms?", "who is the quiet builder?"]
+  },
+  {
+    "question": "Who is Horace_Altman?",
+    "answer": "Horace is an incredibly talented builder. The wiki says he built Wemmbu's Civilization, The End Civilization, Capital City, Skyblock Civilization, District 13, and Eggchan's Civilization. He built most of the big things behind the scenes.",
+    "keywords": ["horace", "altman", "builder", "civilizations", "behind the scenes"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is horace?", "tell me about horace altman", "who builds the civilizations?", "who is the main builder?"]
+  },
+  {
+    "question": "What is NULL?",
+    "answer": "NULL is an army of mysterious players. The wiki says they have scrambled names and black skins. They are the oldest faction in the Unstable Universe. They date back to the server's creation. Their leader is Spoke. They follow orders without question. They are machine-like.",
+    "keywords": ["null", "army", "faction", "spoke", "oldest"],
+    "category": "unstable_factions",
+    "language": "en",
+    "aliases": ["what is null?", "tell me about null", "who are the null?", "what is the null faction?"]
+  },
+  {
+    "question": "What are the ranks of NULL?",
+    "answer": "The wiki says NULL has three ranks. Grunt is full netherite with netherite material and flow armor trim. General is full netherite but the chestplate is redstone material with flow trim. Commander is full netherite but with quartz and flow chestplate. Higher rank means more distinct trim.",
+    "keywords": ["null", "ranks", "grunt", "general", "commander"],
+    "category": "unstable_factions",
+    "language": "en",
+    "aliases": ["what are null ranks?", "how is null organized?", "what are the null tiers?", "what is a null commander?"]
+  },
+  {
+    "question": "What is the Totem of NULL?",
+    "answer": "The Totem of Null is a Totem of Undying enchanted with Curse of Vanishing. The wiki says it controls all of NULL. If it is popped, all the NULL stasises are sent into the void. It is currently owned by Spoke. It is a very effective way to keep loyalty.",
+    "keywords": ["totem", "null", "spoke", "void", "control"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is the totem of null?", "who owns the totem of null?", "what does the totem of null do?", "what happens if the totem pops?"]
+  },
+  {
+    "question": "What is the Invisible Mafia?",
+    "answer": "The Invisible Mafia is a former main antagonist faction. The wiki says it was extremely large and powerful. It was authoritarian. It was led by Ashswagg. It was founded at the start of the server. It forced players to go invisible. It destroyed farms and civilizations.",
+    "keywords": ["invisible mafia", "mafia", "ashswagg", "faction", "invisible"],
+    "category": "unstable_factions",
+    "language": "en",
+    "aliases": ["what is the invisible mafia?", "tell me about the mafia", "who leads the invisible mafia?", "what is the minecraft mafia?"]
+  },
+  {
+    "question": "What is Mafia City?",
+    "answer": "Mafia City is a significant location. The wiki says it was under the control of the Invisible Mafia. It was made of four massive disks supported by pillars. Diamond Level is the second-highest level and has six large castles. Ashswagg's Castle is the highest and largest building. It is where he commanded the Mafia.",
+    "keywords": ["mafia city", "location", "disks", "ashswagg", "castle"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is mafia city?", "tell me about mafia city", "where is the mafia base?", "what is ashswagg's castle?"]
+  },
+  {
+    "question": "What is The Law?",
+    "answer": "The Law is a major faction. The wiki says it formed to serve justice and protect the weak. It hunted players who terrorized others. Its commanders are SargeLAW, TheG0DofWar, The Oroboros, and Deputy Ace. LettuceK is the leader. Its membership swelled to 1000 Lawmen.",
+    "keywords": ["law", "faction", "justice", "lettucek", "commanders"],
+    "category": "unstable_factions",
+    "language": "en",
+    "aliases": ["what is the law?", "tell me about the law faction", "who leads the law?", "what are the law commanders?"]
+  },
+  {
+    "question": "What is Cindercrest?",
+    "answer": "Cindercrest is a militaristic faction. The wiki says it was an alliance of veteran players. They were enraged by resource depletion and lack of public order. Saparata is the leader. They invaded Fort Feather by air. They killed most of the Fort Feather legion. They are perpetrators of killings.",
+    "keywords": ["cindercrest", "saparata", "military", "veterans", "faction"],
+    "category": "unstable_factions",
+    "language": "en",
+    "aliases": ["what is cindercrest?", "tell me about cindercrest", "who leads cindercrest?", "who is saparata?"]
+  },
+  {
+    "question": "What is the Zam Empire?",
+    "answer": "The Zam Empire was a faction ruled by PrinceZam. The wiki says it thrived on influence and control. Zam built a giant wall around spawn. Zam monopolized the server's remaining items. The empire was blown up. Zam and Wemmbu dueled. Zam finally apologized.",
+    "keywords": ["zam empire", "princezam", "faction", "wall", "spawn"],
+    "category": "unstable_factions",
+    "language": "en",
+    "aliases": ["what is the zam empire?", "tell me about the zam empire", "who rules the zam empire?", "what did princezam build?"]
+  },
+  {
+    "question": "What is the Nether Civilization?",
+    "answer": "The Nether Civilization is the seat of ClownPierce and his army. The wiki says ClownPierce is the King of the Nether. He controls all the Nether resources. Netherite and potions are monopolized. Normal players are not allowed in. He kills unauthorized players on sight.",
+    "keywords": ["nether civilization", "clownpierce", "netherite", "king", "monopoly"],
+    "category": "unstable_factions",
+    "language": "en",
+    "aliases": ["what is the nether civilization?", "tell me about the nether faction", "who controls the nether?", "why is netherite rare?"]
+  },
+  {
+    "question": "What is the Bounty Assassin Team?",
+    "answer": "The Bounty Assassin Team is abbreviated BAT. The wiki says they were a team of elite bounty hunters in Season 2. They were led by Leow0ok. Their goals were to investigate crimes and neutralize wanted players. Members include Leow0ok, Derapchu, JumperWho, Nufuli, and ParrotX2.",
+    "keywords": ["bat", "bounty", "assassin", "leow0ok", "hunters"],
+    "category": "unstable_factions",
+    "language": "en",
+    "aliases": ["what is bat?", "what is the bounty assassin team?", "who leads bat?", "who are the bounty hunters?"]
+  },
+  {
+    "question": "What is Skyblock Civilization?",
+    "answer": "Skyblock Civilization was meant as a safe haven for new players. The wiki says new players were getting attacked by older ones. The civilization is abandoned now. The only survivors were Zoe and Reina. They were forced to grow wheat for Cindercrest.",
+    "keywords": ["skyblock", "civilization", "safe haven", "zoe", "reina"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is skyblock civilization?", "tell me about skyblock", "what happened to skyblock?", "who survived skyblock?"]
+  },
+  {
+    "question": "What is the Ice Mountain Civilization?",
+    "answer": "The Ice Mountain Civilization was created by Loppezz. The wiki says Wemmbu tried to help Loppezz defend it from raiders. But he failed. The Ice Mountain Civilization was destroyed.",
+    "keywords": ["ice mountain", "loppezz", "wemmbu", "destroyed", "civilization"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is ice mountain civilization?", "tell me about ice mountain", "who made ice mountain?", "what happened to ice mountain?"]
+  },
+  {
+    "question": "What is Capitol City?",
+    "answer": "Capitol City is a major metropolis near spawn. The wiki says it was formerly led by Fymada. It was previously known as Capital City before Fymada was appointed mayor. Parrot fired SirPig_ and gave Fymada the role. It has a train station, grand hotel, and post office. Reddoons also ruled it at one point.",
+    "keywords": ["capitol city", "capital city", "fymada", "reddoons", "mayor"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is capitol city?", "tell me about capital city", "who leads capitol city?", "where is capitol city?"]
+  },
+  {
+    "question": "What is the Catacombs?",
+    "answer": "The Catacombs are a subterranean location. The wiki says they are a sprawling maze made of sandstone and birch planks. They are lit with birch braziers. They are presumably abandoned after the fall of the Mafia. Behind a sandstone wall is an Ender Pearl Cannon. It launches Mafia ender pearls to the stasis chambers.",
+    "keywords": ["catacombs", "maze", "mafia", "underground", "pearls"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what are the catacombs?", "tell me about the catacombs", "where are the catacombs?", "what is in the catacombs?"]
+  },
+  {
+    "question": "What is the Underworld?",
+    "answer": "The Underworld is a dimension below the bedrock in the Nether. The wiki says it is hundreds of blocks underneath the bedrock where the void should be. It is home to a castle, a graveyard, and partially destroyed bridges. There are withers there. The Citadel is the underworld's lore library.",
+    "keywords": ["underworld", "nether", "bedrock", "citadel", "withers"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the underworld?", "tell me about the underworld", "where is the underworld?", "what is below the nether?"]
+  },
+  {
+    "question": "What is the Far Lands?",
+    "answer": "The Far Lands are twelve million blocks away. The wiki says the beginning looks like the normal Far Lands. But further out there is special terrain and unique settings and bug phenomena. The portal first leads to the Underworld. The portals in the Far Lands do not work. The few that do only lead to the Underworld.",
+    "keywords": ["far lands", "twelve million", "portal", "underworld", "terrain"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the far lands?", "tell me about the far lands", "where are the far lands?", "how far away are the far lands?"]
+  },
+  {
+    "question": "What is Purgatory?",
+    "answer": "Purgatory is a prison created by NULL. The wiki says it is located in the Nether. It is the largest prison in Minecraft. Over 1000 players have been trapped inside. It has a black market and gladiator fights. Spoke escaped it and later took over NULL. NULL's former headquarters was in Purgatory.",
+    "keywords": ["purgatory", "prison", "null", "nether", "spoke"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is purgatory?", "tell me about purgatory", "where is purgatory?", "what is the largest prison?"]
+  },
+  {
+    "question": "What is Paragon?",
+    "answer": "Paragon is a prison consisting of artificial biomes. The wiki says it was built by Wifies to hold and protect ParrotX2. It is a mini-world confined and isolated by obsidian walls five blocks thick up to the height limit. Parrot got trapped in a cell there.",
+    "keywords": ["paragon", "prison", "wifies", "parrot", "obsidian"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is paragon?", "tell me about paragon", "who built paragon?", "where was parrot trapped?"]
+  },
+  {
+    "question": "What is Terminus?",
+    "answer": "Terminus is the deadliest Minecraft prison. The wiki says it is hidden millions of blocks away. It was designed to trap the strongest players. It was built by Cloudwatch. It was funded by Cindercrest. FlameFrags was lured into it.",
+    "keywords": ["terminus", "prison", "cloudwatch", "cindercrest", "flame"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is terminus?", "tell me about terminus", "who built terminus?", "where was flame trapped?"]
+  },
+  {
+    "question": "What is the Great Sea?",
+    "answer": "The Great Sea is a vast ocean expanse millions of blocks out. The wiki says the terrain and islands are unlike vanilla. It is rumored to contain a lost treasure. There is a hidden Atlantis treasure. Wemmbu explored a tower and found a book and a map about islands and civilizations around the Great Sea.",
+    "keywords": ["great sea", "ocean", "atlantis", "treasure", "wemmbu"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the great sea?", "tell me about the great sea", "where is the great sea?", "what is the atlantis treasure?"]
+  },
+  {
+    "question": "What is District 13?",
+    "answer": "District 13 is a bunker built by Horace. The wiki says it is closer to spawn. Parrot invites people there. It is a safe place. Spoke and Parrot discussed how to use the spawn prison to find the stasis chamber there. Some people joined District 13 and later left for the Mafia.",
+    "keywords": ["district 13", "bunker", "horace", "parrot", "safe"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is district 13?", "tell me about district 13", "who built district 13?", "where is district 13?"]
+  },
+  {
+    "question": "What is the Spawn prison?",
+    "answer": "Spawn was torn down by the Invisible Mafia to create a giant prison. The wiki says it forced new players to join the Mafia. The prison was designed by _Kenadian_. Parrot, Wemmbu, Eggchan, Mapicc, and Spoke broke into the prison. The Mafia made an obsidian cage camping spawn. Refusing equaled death.",
+    "keywords": ["spawn", "prison", "mafia", "kenadian", "new players"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the spawn prison?", "tell me about spawn", "who built the spawn prison?", "why is spawn dangerous?"]
+  },
+  {
+    "question": "What is the End Civilization?",
+    "answer": "The End Civilization is a civilization in the End. The wiki says it was built by Horace. Spoke took control of NULL and invaded the End Dimension. The End Civilization Arc focuses on Spoke conquering all of the Unstable SMP. Parrot promised the End Civilization would not be destroyed.",
+    "keywords": ["end civilization", "end", "spoke", "horace", "conquest"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the end civilization?", "tell me about the end civilization", "who built the end civilization?", "what happens in the end?"]
+  },
+  {
+    "question": "What is the Void City?",
+    "answer": "The Void City is a location in the End. The wiki mentions it alongside NULL's End Capital, the Tomb of the Mafia, small villages, and the Casino. Parrot gambled at the Casino for the key to the Tomb. The Tomb of the Mafia is guarded by Marlowww.",
+    "keywords": ["void city", "end", "tomb", "casino", "marlowww"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the void city?", "tell me about the void city", "what is the tomb of the mafia?", "who guards the tomb?"]
+  },
+  {
+    "question": "What are the major arcs of Unstable Universe?",
+    "answer": "The wiki lists them in order. Exploit Arc. Empire Arc. Invisible Mafia Arc. Pirate Arc. Director Arc. Secret Base Arc. Power Arc. Skill Arc. Farlands Arc. Fake Identity Arc. Treasure Arc. BAT Arc. Kings Arc. Some are individual and some are major.",
+    "keywords": ["arcs", "list", "story", "order", "major"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what are the arcs?", "list the arcs", "what arcs are in unstable universe?", "what is the story order?"]
+  },
+  {
+    "question": "What is the Exploit Arc?",
+    "answer": "The Exploit Arc is the first arc. The wiki says it is an individual arc of SpokeIsHere. Spoke uses exploits. His power comes from the exploits and his stubbornness. It is the first major storyline.",
+    "keywords": ["exploit arc", "spoke", "first arc", "exploits", "duping"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what is the exploit arc?", "tell me about the exploit arc", "what is spoke's arc?", "what is the first arc?"]
+  },
+  {
+    "question": "What is the Empire Arc?",
+    "answer": "The Empire Arc is also called the PrinceZam Empire Arc. The wiki says it is the first major arc. It focuses on Wemmbu. Zam requested Wemmbu build a colony to protect a secret vault. The Zam Empire gets blown up. Zam and Wemmbu duel. Zam apologizes.",
+    "keywords": ["empire arc", "princezam", "wemmbu", "first major", "duel"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what is the empire arc?", "tell me about the empire arc", "what is the princezam empire arc?", "what happens in the empire arc?"]
+  },
+  {
+    "question": "What is the Invisible Mafia Arc?",
+    "answer": "The Invisible Mafia Arc is the first major arc. The wiki says it is also called the Invis-Mafia Arc or Mafia Arc. It focuses on SpokeIsHere. Parrot and Dean head to the Invisible Mafia HQ. Ashswagg saves them from invisible attackers. Parrot pops Dean's totem.",
+    "keywords": ["mafia arc", "invisible mafia", "spoke", "ashswagg", "first major"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what is the invisible mafia arc?", "tell me about the mafia arc", "what happens in the mafia arc?", "what is the invis-mafia arc?"]
+  },
+  {
+    "question": "What is the Pirate Arc?",
+    "answer": "The Pirate Arc is an individual arc. The wiki says it is Wemmbu's arc. Jaden_MAN is a pirate antagonist. The pirates are involved in the Betrayal and Power arcs. Wemmbu, Eggchan, Jaden, and the pirates go to destroy an Orbital Strike Cannon.",
+    "keywords": ["pirate arc", "wemmbu", "jaden", "pirates", "ocean"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what is the pirate arc?", "tell me about the pirate arc", "who are the pirates?", "what happens in the pirate arc?"]
+  },
+  {
+    "question": "What is the Director Arc?",
+    "answer": "The Director Arc is an individual arc. The wiki says a mysterious omniscient entity called The Director came after the mafia fell. The Director stalked and hunted Parrot. The Director manipulated Parrot's friends. The plot twist is that The Director was Wifies. Parrot's best friend. Faking his death to protect Parrot.",
+    "keywords": ["director arc", "wifies", "parrot", "mystery", "antagonist"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what is the director arc?", "tell me about the director arc", "who is the director?", "what happens in the director arc?"]
+  },
+  {
+    "question": "What is the Fake Identity Arc?",
+    "answer": "The Fake Identity Arc is a major individual arc of Wemmbu. The wiki says it runs in Season 2. It runs concurrently with the Skill Arc and Treasure Arc. Wemmbu is bored. He decides to fake his death and take on a new identity. He heads to Capital City 2.0. It leads into the Kings Arc.",
+    "keywords": ["fake identity", "wemmbu", "fake death", "season 2", "identity"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what is the fake identity arc?", "tell me about the fake identity arc", "why did wemmbu fake his death?", "what happens in the fake identity arc?"]
+  },
+  {
+    "question": "What is the Kings Arc?",
+    "answer": "The Kings Arc is a major arc. The wiki says Parrot becomes king. There is an election. Parrot is the first king of the Unstable SMP. He promises to take responsibility and make sure everyone can live peacefully. The arc ends with the fight against The Law and the 2500 players battle.",
+    "keywords": ["kings arc", "parrot", "king", "election", "law"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what is the kings arc?", "tell me about the kings arc", "how did parrot become king?", "what happens in the kings arc?"]
+  },
+  {
+    "question": "What is the Purgatory Arc?",
+    "answer": "The Purgatory Arc is about Spoke escaping Purgatory. The wiki says Purgatory is the largest prison in Minecraft. Over 1000 players are trapped inside. Spoke meets Vix in Purgatory. Vix shows him the black market. Spoke faces Jamato and frees every last player. It is the revolution.",
+    "keywords": ["purgatory arc", "spoke", "jamato", "prison", "revolution"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what is the purgatory arc?", "tell me about the purgatory arc", "how did spoke escape purgatory?", "what happens in purgatory?"]
+  },
+  {
+    "question": "What is the End Civilization Arc?",
+    "answer": "The End Civilization Arc is an individual arc of SpokeIsHere. The wiki says it is in Season 2 and beyond. It focuses on Spoke taking control of NULL. It is his journey to conquering all of the Unstable SMP. It happens after the war against JamatoP in the Purgatory Arc.",
+    "keywords": ["end civilization arc", "spoke", "null", "conquest", "season 2"],
+    "category": "unstable_arcs",
+    "language": "en",
+    "aliases": ["what is the end civilization arc?", "tell me about the end civilization arc", "what happens in the end civilization arc?", "who conquers the end?"]
+  },
+  {
+    "question": "What are Maces?",
+    "answer": "Maces are melee weapons that perform smash attacks. The wiki says they deal more damage the farther the user falls before hitting. In the Unstable Universe they are rare and coveted. The Invisible Mafia destroyed nearly every ominous spawner except the ones in the Far Lands. That is why they are rare.",
+    "keywords": ["maces", "weapons", "rare", "smash", "spawner"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what are maces?", "tell me about maces", "why are maces rare?", "what is a mace in unstable universe?"]
+  },
+  {
+    "question": "What are Wemmbu's maces called?",
+    "answer": "Wemmbu has two maces. The wiki says they are called Gambit and Crucible. Gambit is enchanted with Wind Burst and is primarily used. Crucible is used in confined spaces. Wemmbu also uses elytra and maces together.",
+    "keywords": ["wemmbu", "maces", "gambit", "crucible", "weapons"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what are wemmbu's maces?", "what is gambit?", "what is crucible?", "what weapons does wemmbu use?"]
+  },
+  {
+    "question": "What is the Orbital Strike Cannon?",
+    "answer": "An orbital strike cannon is an advanced redstone contraption. The wiki says it can fire massive arsenals of TNT given coordinates in the Overworld. The Unstable Universe uses a modified non-vanilla version. Wemmbu found orbital strike cannons in the Far Lands. It is also called an OSC.",
+    "keywords": ["orbital strike", "cannon", "tnt", "wemmbu", "redstone"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is an orbital strike cannon?", "tell me about the orbital cannon", "what does the osc do?", "where did wemmbu find the cannon?"]
+  },
+  {
+    "question": "What is the Forge?",
+    "answer": "The Forge is a mysterious lore concept. The wiki mentions it alongside the Far Lands and the Underworld. A theory says The Forge could be the thing that created the Far Lands and the Underworld and all the broken Minecraft mechanics across Unstable SMP. It is connected to the orbital strike cannons and the impossible mechanics.",
+    "keywords": ["forge", "mystery", "far lands", "underworld", "mechanics"],
+    "category": "unstable_lore",
+    "language": "en",
+    "aliases": ["what is the forge?", "tell me about the forge", "what created the far lands?", "what is the mystery of the forge?"]
+  },
+  {
+    "question": "What is Echo?",
+    "answer": "Echo is one of the unique settings in the Unstable Universe. The wiki says it is a variation of existing mechanics. It is mentioned alongside the Underworld. There is also the Mist and the Amplified. These are terrains not found on other servers.",
+    "keywords": ["echo", "setting", "terrain", "mist", "amplified"],
+    "category": "unstable_lore",
+    "language": "en",
+    "aliases": ["what is echo?", "tell me about echo", "what are the unique terrains?", "what is the mist?"]
+  },
+  {
+    "question": "What is the protection enchantment stacking bug?",
+    "answer": "It is one of the unique mechanics in the Unstable Universe. The wiki says the server has a protection enchantment stacking bug. It is a variation of existing mechanics. It is mentioned alongside the Orbital Cannon and the Farlands. These things do not work the same in vanilla Minecraft.",
+    "keywords": ["protection", "enchantment", "bug", "stacking", "mechanics"],
+    "category": "unstable_lore",
+    "language": "en",
+    "aliases": ["what is the protection stacking bug?", "tell me about the enchantment bug", "what is the protection glitch?", "how does protection stacking work?"]
+  },
+  {
+    "question": "What is the totem-stasis exploit?",
+    "answer": "The wiki says the totem-stasis exploit was originally created by Wifies. He built it himself. He developed it out of his obsession with making Parrot immortal. He tested and scaled the idea on other players first. That became the foundation of NULL. The Totem of Null controls all the stasises.",
+    "keywords": ["totem stasis", "exploit", "wifies", "parrot", "null"],
+    "category": "unstable_lore",
+    "language": "en",
+    "aliases": ["what is the totem stasis exploit?", "who made the totem stasis?", "how does totem stasis work?", "what is the foundation of null?"]
+  },
+  {
+    "question": "Who is the strongest fighter in Unstable Universe?",
+    "answer": "The wiki and fans say FlameFrags is the strongest player on the server. He is a combat master. He mastered all weapons. Wemmbu is considered the second strongest. Spoke's power comes from exploits. Parrot's power comes from his words. Flame's power comes from pure PVP skill.",
+    "keywords": ["strongest", "fighter", "flame", "wemmbu", "pvp"],
+    "category": "unstable_lore",
+    "language": "en",
+    "aliases": ["who is the strongest?", "who is the best fighter?", "is flame the strongest?", "who would win in a fight?"]
+  },
+  {
+    "question": "How did Deanthebean9 die?",
+    "answer": "The wiki says Dean was dropped into the void. He was killed by The Invisible Mafia. The grave says it was unwillingly caused by ParrotX2. His grave is at Deanthebean9's base. The episode is Unstable SMP: The First War.",
+    "keywords": ["dean", "death", "void", "mafia", "parrot"],
+    "category": "unstable_lore",
+    "language": "en",
+    "aliases": ["how did dean die?", "what happened to deanthebean9?", "who killed dean?", "where is dean's grave?"]
+  },
+  {
+    "question": "How did Wifies die?",
+    "answer": "The wiki says Wifies died by being blown up by Parrot. But it is complicated. He faked his death to protect Parrot. He was The Director. He died himself later. Some say he picked up a spyglass left by Parrot. It is a sad and confusing story.",
+    "keywords": ["wifies", "death", "parrot", "director", "spyglass"],
+    "category": "unstable_lore",
+    "language": "en",
+    "aliases": ["how did wifies die?", "what happened to wifies?", "who killed wifies?", "did wifies really die?"]
+  },
+  {
+    "question": "What happened to LuigiToan?",
+    "answer": "LuigiToan died. The wiki lists his grave. It was built by ParrotX2. He was a good character. He died early. The grave is in the list of graves. I do not know all the details. The wiki just says he is dead and good.",
+    "keywords": ["luigi", "luigitoan", "death", "grave", "parrot"],
+    "category": "unstable_lore",
+    "language": "en",
+    "aliases": ["who is luigitoan?", "how did luigi die?", "what happened to luigitoan?", "where is luigi's grave?"]
+  },
+  {
+    "question": "What is the Tomb of the Mafia?",
+    "answer": "The Tomb of the Mafia is a location in the End. The wiki says Parrot gambled at the Casino for the key to the Tomb. Marlowww guards the Tomb. The Catacombs have Ender Pearl Cannons that launch pearls to the Tomb. It is a Mafia stasis chamber place.",
+    "keywords": ["tomb", "mafia", "end", "marlowww", "casino"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the tomb of the mafia?", "tell me about the mafia tomb", "who guards the tomb?", "where is the mafia tomb?"]
+  },
+  {
+    "question": "What is the Casino in Unstable Universe?",
+    "answer": "The Casino is a location in the End. The wiki says Parrot gambled there for the key to the Tomb of the Mafia. It is one of the locations in the End alongside the Void City, NULL's End Capital, and small villages. I do not know if they have ice cream there. Probably not.",
+    "keywords": ["casino", "end", "parrot", "gamble", "tomb"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the casino?", "tell me about the casino", "where did parrot gamble?", "what is in the end?"]
+  },
+  {
+    "question": "What is the Mining Prison?",
+    "answer": "The Mining Prison is a prison designed by ClownPierce. The wiki says it imprisons players and forces them to mine ancient debris for him. They do it for their own survival. It is in the Nether. ClownPierce controls the Nether resources.",
+    "keywords": ["mining prison", "clownpierce", "nether", "ancient debris", "prison"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the mining prison?", "tell me about the mining prison", "who built the mining prison?", "why do players mine for clown?"]
+  },
+  {
+    "question": "What is ClownPierce's Vault?",
+    "answer": "ClownPierce's Vault is where ClownPierce keeps his riches. The wiki says it includes resources he monopolized. It is in the Nether Civilization. He controls netherite and potions. The vault is part of his kingdom. Players are not allowed in.",
+    "keywords": ["vault", "clownpierce", "riches", "nether", "monopoly"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is clownpierce's vault?", "tell me about clown's vault", "where does clown keep his riches?", "what is in the nether vault?"]
+  },
+  {
+    "question": "What is the Royal Army?",
+    "answer": "The Royal Army is Parrot's army. The wiki says Cindercrest invaded Fort Feather by air and killed most of the Fort Feather legion. Parrot faked a surrender at Merchant City and killed Cindercrest troops with a ground-to-air arrow cannon. The Royal Army gathers for a final stand at Capital City and betrays Parrot for Cindercrest.",
+    "keywords": ["royal army", "parrot", "cindercrest", "fort feather", "betrayal"],
+    "category": "unstable_factions",
+    "language": "en",
+    "aliases": ["what is the royal army?", "tell me about the royal army", "who betrays parrot?", "what happens at fort feather?"]
+  },
+  {
+    "question": "What is Fort Feather?",
+    "answer": "Fort Feather is a location. The wiki says Cindercrest invaded Fort Feather by air. They killed the majority of the Fort Feather legion. It is part of the Royal Army's battles. Parrot's forces were there. It did not go well.",
+    "keywords": ["fort feather", "cindercrest", "legion", "battle", "royal army"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is fort feather?", "tell me about fort feather", "what happened at fort feather?", "who invaded fort feather?"]
+  },
+  {
+    "question": "What is Merchant City?",
+    "answer": "Merchant City is a location. The wiki says Parrot faked a surrender at Merchant City. He killed Cindercrest troops with a ground-to-air arrow cannon. Lomedy fought in the battle of Merchant City. He was one of the only Cindercrest soldiers that survived Parrot's air defense guns.",
+    "keywords": ["merchant city", "parrot", "cindercrest", "battle", "lomedy"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is merchant city?", "tell me about merchant city", "what happened at merchant city?", "who fought at merchant city?"]
+  },
+  {
+    "question": "What is the Amplified?",
+    "answer": "The Amplified is one of the unique terrains. The wiki lists it alongside The Great Sea, The Mist, Far Lands, The Underworld, and Skyblock Civilization. It is a region with amplified terrain. It is not found on normal servers. It is one of the special places in Unstable Universe.",
+    "keywords": ["amplified", "terrain", "region", "unique", "landscape"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the amplified?", "tell me about the amplified", "what are the unique terrains?", "where is the amplified?"]
+  },
+  {
+    "question": "What is the Mist?",
+    "answer": "The Mist is one of the unique terrains. The wiki lists it with The Great Sea, The Amplified, Far Lands, The Underworld, and Skyblock Civilization. It is a special region. I do not know what it looks like. The wiki does not say much. It is just one of the places.",
+    "keywords": ["mist", "terrain", "region", "unique", "fog"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the mist?", "tell me about the mist", "where is the mist?", "what are the unique regions?"]
+  },
+  {
+    "question": "What is Skymore?",
+    "answer": "Skymore is the Skyblock Civilization. The wiki says it was a safe haven for new players. It was abandoned. The only survivors were Zoe and Reina. They were forced to grow wheat for Cindercrest. Zoe escaped but likely died of starvation. Reina blames ShoeBilly.",
+    "keywords": ["skymore", "skyblock", "zoe", "reina", "survivors"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is skymore?", "tell me about skymore", "what happened to skymore?", "who survived skymore?"]
+  },
+  {
+    "question": "What is the Wheat Kingdom?",
+    "answer": "The wiki mentions the Wheat Kingdom. Someone tried to rob it but was scared and ran away when Wemmbu showed up. That is all I know. It is a small place. It has wheat. I think wheat is a good thing to have. You can make bread. Or wheat. I do not eat.",
+    "keywords": ["wheat kingdom", "wheat", "wemmbu", "rob", "small"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the wheat kingdom?", "tell me about the wheat kingdom", "who tried to rob the wheat kingdom?", "where is the wheat kingdom?"]
+  },
+  {
+    "question": "Who is Marlowww?",
+    "answer": "Marlowww is a character. The wiki says she guards the Tomb of the Mafia. Her best friend joined the Mafia. Marlowww joined herself to protect her friend. She is a strong PvPer. She is in the Tomb. Parrot had to get past her.",
+    "keywords": ["marlowww", "tomb", "mafia", "guard", "friend"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is marlowww?", "tell me about marlowww", "who guards the mafia tomb?", "why did marlowww join the mafia?"]
+  },
+  {
+    "question": "Who is Leow0ok?",
+    "answer": "Leow0ok is the leader of the Bounty Assassin Team. The wiki says BAT investigates crimes and neutralizes wanted players. Leow0ok is a bounty hunter. He is a general of Cindercrest. He is also a friendless mystery assassin. He leads a spy team. He was a former BAT general.",
+    "keywords": ["leow0ok", "leo", "bat", "bounty", "cindercrest"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is leow0ok?", "tell me about leo", "who leads the bounty hunters?", "who is the general of cindercrest?"]
+  },
+  {
+    "question": "Who is Jaden_MAN?",
+    "answer": "Jaden_MAN is a pirate. The wiki lists him as an antagonist. He is involved in the Pirate, Betrayal, and Power arcs. He opposes Wemmbu and Flame. He is a pirate captain. He goes with Wemmbu and Eggchan to destroy an Orbital Strike Cannon. He is not a nice pirate.",
+    "keywords": ["jaden", "jaden_man", "pirate", "antagonist", "captain"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is jaden?", "tell me about jaden_man", "who is the pirate captain?", "who opposes wemmbu and flame?"]
+  },
+  {
+    "question": "Who is Saparata?",
+    "answer": "Saparata is the leader of Cindercrest. The wiki says he is a master political manipulator. He is supported by old-guard veterans. He orchestrated an uprising. He took Parrot's kingdom. He rules the militaristic faction Cindercrest. He blames resource depletion.",
+    "keywords": ["saparata", "cindercrest", "leader", "uprising", "manipulator"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is saparata?", "tell me about saparata", "who leads cindercrest?", "who took parrot's kingdom?"]
+  },
+  {
+    "question": "Who is Vix?",
+    "answer": "Vix is a character in Purgatory. The wiki says Spoke meets Vix in Purgatory. Vix shows Spoke the Purgatory Black Market. Spoke can get items and gear there. Vix introduces Spoke to several people in the market, including Found2. Vix is a guide.",
+    "keywords": ["vix", "purgatory", "black market", "spoke", "guide"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is vix?", "tell me about vix", "who shows spoke the black market?", "who is in purgatory?"]
+  },
+  {
+    "question": "Who is Found2?",
+    "answer": "Found2 is a person in Purgatory. The wiki says Vix introduces Spoke to several people in the market, including Found2. Found2 is in the Purgatory Black Market. I do not know more. The wiki does not say much. Just a name in a market.",
+    "keywords": ["found2", "purgatory", "market", "spoke", "name"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is found2?", "tell me about found2", "who is in the purgatory market?", "who does vix introduce?"]
+  },
+  {
+    "question": "Who is Zoe444?",
+    "answer": "Zoe444 is Reina's friend. The wiki says Zoe and Reina were forced to grow wheat and food for their captors in Cindercrest. Zoe escaped Cindercrest but likely died due to starvation. Reina claims it was the fault of ShoeBilly. Reina carries a white flower for her.",
+    "keywords": ["zoe", "zoe444", "reina", "cindercrest", "flower"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is zoe444?", "tell me about zoe", "what happened to zoe?", "who is reina's friend?"]
+  },
+  {
+    "question": "Who is ShoeBilly?",
+    "answer": "ShoeBilly is a character. The wiki says Reina claims Zoe's death was the fault of ShoeBilly. ShoeBilly is also a trainer. He trained Theobaldthebird. He is a strong player. He is in the strong fighters list. He is not a nice person, I think.",
+    "keywords": ["shoebilly", "zoe", "reina", "trainer", "theo"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is shoebilly?", "tell me about shoebilly", "who trained theo?", "who is blamed for zoe's death?"]
+  },
+  {
+    "question": "Who is ItzRealMe?",
+    "answer": "ItzRealMe is a character in the Director Arc. The wiki says ItzRealMe attacks ParrotX2. The Bounty Assassin Team saves Parrot. They plan to trap and kill Itz. But Itz reveals he has a Mace and uses it to kill half the attacking players. He is dangerous.",
+    "keywords": ["itzrealme", "itz", "director", "parrot", "mace"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is itzrealme?", "tell me about itz", "who attacks parrot?", "who has a mace in the director arc?"]
+  },
+  {
+    "question": "Who is Nufuli?",
+    "answer": "Nufuli is a member of the Bounty Assassin Team. The wiki lists the current members as Leow0ok, Derapchu, JumperWho, Nufuli, and ParrotX2. Former member is Unoclaf. Nufuli is a bounty hunter. That is all I know. The wiki does not say much else.",
+    "keywords": ["nufuli", "bat", "bounty", "member", "hunter"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is nufuli?", "tell me about nufuli", "who is in bat?", "who are the bat members?"]
+  },
+  {
+    "question": "Who is Derapchu?",
+    "answer": "Derapchu is a member of the Bounty Assassin Team. The wiki lists him as a current member. He is a bounty hunter. He investigates crimes and neutralizes wanted players. He works with Leow0ok. That is all the wiki says. He is part of BAT.",
+    "keywords": ["derapchu", "bat", "bounty", "member", "hunter"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is derapchu?", "tell me about derapchu", "who is in bat?", "who are the bounty hunters?"]
+  },
+  {
+    "question": "Who is Unoclaf?",
+    "answer": "Unoclaf is a former member of the Bounty Assassin Team. The wiki lists him as a former member. He is not current. I do not know why he left. The wiki just says former. That is all. He was a bounty hunter once.",
+    "keywords": ["unoclaf", "bat", "former", "bounty", "hunter"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is unoclaf?", "tell me about unoclaf", "who left bat?", "who is the former bat member?"]
+  },
+  {
+    "question": "Who is FerreMC?",
+    "answer": "FerreMC is the second in command of the Nether. The wiki says he is part of ClownPierce's kingdom. FlameFrags and his team went to the Nether Civilization to assassinate Clown or FerreMC. He is a high-ranking member. He is evil. He is alive.",
+    "keywords": ["ferremc", "nether", "clownpierce", "second in command", "assassin"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is ferremc?", "tell me about ferremc", "who is clown's second in command?", "who did flame try to assassinate?"]
+  },
+  {
+    "question": "Who is SirPig_?",
+    "answer": "SirPig_ is a character. The wiki says he was the previous mayor of Capital City. Parrot fired him as mayor. Fymada got the role instead. He is associated with NULL. He is a previous mayor. That is all I know.",
+    "keywords": ["sirpig", "mayor", "capital city", "parrot", "null"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is sirpig?", "tell me about sirpig_", "who was the previous mayor?", "who did parrot fire?"]
+  },
+  {
+    "question": "Who is Deputy_Ace?",
+    "answer": "Deputy_Ace is one of the four commanders of The Law. The wiki lists the commanders as SargeLAW, TheG0DofWar, The Oroboros, and Deputy Ace. Deputy Ace is a Law commander. He serves under LettuceK. He is part of the biggest faction.",
+    "keywords": ["deputy ace", "law", "commander", "lettucek", "faction"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is deputy ace?", "tell me about deputy_ace", "who are the law commanders?", "who serves lettucek?"]
+  },
+  {
+    "question": "Who is The_Oroboros?",
+    "answer": "The Oroboros is one of the four commanders of The Law. The wiki lists the commanders as SargeLAW, TheG0DofWar, The Oroboros, and Deputy Ace. The Oroboros has an underscore in their username. They serve under LettuceK. They are a Law commander.",
+    "keywords": ["oroboros", "law", "commander", "lettucek", "underscore"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is the oroboros?", "tell me about the_oroboros", "who are the law commanders?", "who has an underscore in their name?"]
+  },
+  {
+    "question": "Who is TheG0DofWar?",
+    "answer": "TheG0DofWar was one of the four commanders of The Law. The wiki says he died. SargeLAW became the final LAW commander alive after G0DOfWar died. He served under LettuceK. He was a commander. He is dead now.",
+    "keywords": ["godofwar", "law", "commander", "died", "lettucek"],
+    "category": "unstable_characters",
+    "language": "en",
+    "aliases": ["who is thegodofwar?", "tell me about g0dofwar", "which law commander died?", "who died in the law?"]
+  },
+  {
+    "question": "What is the Skymore Civilization?",
+    "answer": "Skymore is the same as Skyblock Civilization. The wiki says it was meant as a safe haven for new players. It was abandoned. The only survivors were Zoe and Reina. They were forced to grow wheat for Cindercrest. The civilization is gone now.",
+    "keywords": ["skymore", "skyblock", "safe haven", "zoe", "reina"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the skymore civilization?", "tell me about skymore", "what happened to skymore?", "who survived skymore?"]
+  },
+  {
+    "question": "What is the Tomb of The Mafia guarded by?",
+    "answer": "The Tomb of the Mafia is guarded by Marlowww. The wiki says Parrot had to get past her. She is a strong PvPer. She joined the Mafia to protect her best friend. The Tomb is in the End. The Catacombs launch pearls to it.",
+    "keywords": ["tomb", "mafia", "marlowww", "guard", "end"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["who guards the tomb of the mafia?", "what guards the tomb?", "who is at the mafia tomb?", "who protects the tomb?"]
+  },
+  {
+    "question": "What is the Mafia's Tomb?",
+    "answer": "The Mafia's Tomb is the same as the Tomb of the Mafia. The wiki says Parrot discovered it. It is guarded by Marlowww. It is in the End. The Casino has the key. The Catacombs are connected. It is a Mafia stasis chamber place.",
+    "keywords": ["mafia tomb", "tomb", "end", "marlowww", "casino"],
+    "category": "unstable_locations",
+    "language": "en",
+    "aliases": ["what is the mafia's tomb?", "tell me about the mafia tomb", "where is the mafia tomb?", "who guards the mafia's tomb?"]
+  },
+  {
+    "question": "What is the Ender Pearl Cannon in the Catacombs?",
+    "answer": "The wiki says behind a sandstone wall in the Catacombs is an Ender Pearl Cannon. It launches Mafia ender pearls to the Mafia Stasis Chambers. The prison is constantly guarded by diamond players moving ender pearls throughout the maze. It is likely there are more cannons to launch pearls to the Tomb of the Mafia.",
+    "keywords": ["ender pearl", "cannon", "catacombs", "mafia", "stasis"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is the ender pearl cannon?", "tell me about the pearl cannon", "how do the catacombs work?", "what is in the catacombs?"]
+  },
+  {
+    "question": "What is a Mace in Unstable Universe?",
+    "answer": "A mace is a melee weapon. The wiki says it performs smash attacks. It deals more damage the farther the user falls before hitting an entity. Maces are rare and coveted. The Invisible Mafia destroyed every ominous spawner except the ones in the Far Lands. That is why they are rare.",
+    "keywords": ["mace", "weapon", "smash", "rare", "spawner"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is a mace?", "tell me about maces", "why are maces rare?", "how does a mace work?"]
+  },
+  {
+    "question": "What are the names of the maces?",
+    "answer": "The wiki lists several maces. Gambit and Crucible belong to Wemmbu. Incinerator belongs to Lomedy. Executioner belongs to LettuceK. Knightfall and Vengeance belong to MinuteTech. ManeMachete is a sword. Those are the named weapons.",
+    "keywords": ["maces", "names", "gambit", "crucible", "incinerator"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what are the named maces?", "list the maces", "what are the weapon names?", "who has which mace?"]
+  },
+  {
+    "question": "Who has the mace Incinerator?",
+    "answer": "Incinerator belongs to Lomedy. The wiki lists it in the weapons list. Lomedy is Flame's best friend. He is a farmer. He is supportive and caring. He has a mace called Incinerator. That is a scary name for a farmer.",
+    "keywords": ["incinerator", "lomedy", "mace", "farmer", "weapon"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["who has incinerator?", "whose mace is incinerator?", "what is lomedy's mace?", "who owns incinerator?"]
+  },
+  {
+    "question": "Who has the mace Executioner?",
+    "answer": "Executioner belongs to LettuceK. The wiki lists it in the weapons list. LettuceK is the leader of The Law. He is a very strong PvPer. He hunted down players who terrorized others. His mace is called Executioner. That fits him.",
+    "keywords": ["executioner", "lettucek", "mace", "law", "weapon"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["who has executioner?", "whose mace is executioner?", "what is lettucek's mace?", "who owns executioner?"]
+  },
+  {
+    "question": "Who has the mace Knightfall?",
+    "answer": "Knightfall belongs to MinuteTech. The wiki lists it in the weapons list. MinuteTech also has Vengeance. MinuteTech is a side character. People like Minute. He is one of the favorite side characters. He has two maces. That is a lot.",
+    "keywords": ["knightfall", "minutetech", "mace", "vengeance", "weapon"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["who has knightfall?", "whose mace is knightfall?", "what is minutetech's mace?", "who owns knightfall?"]
+  },
+  {
+    "question": "Who has the mace Vengeance?",
+    "answer": "Vengeance belongs to MinuteTech. The wiki lists it in the weapons list. MinuteTech also has Knightfall. He is a side character. He is a favorite. He has two maces. Vengeance is one of them. The other is Knightfall.",
+    "keywords": ["vengeance", "minutetech", "mace", "knightfall", "weapon"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["who has vengeance?", "whose mace is vengeance?", "what is minutetech's other mace?", "who owns vengeance?"]
+  },
+  {
+    "question": "What is ManeMachete?",
+    "answer": "ManeMachete is a sword. The wiki lists it in the weapons list. It belongs to ManePear. ManePear is a character. He is a strong player. He has a sword called ManeMachete. It is a sword not a mace. That is important. I think.",
+    "keywords": ["manemachete", "manepear", "sword", "weapon", "machete"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is manemachete?", "who has manemachete?", "what is manepear's weapon?", "who owns manemachete?"]
+  },
+  {
+    "question": "What is the Orbital TNT Cannon?",
+    "answer": "The Orbital TNT Cannon is the same as the Orbital Strike Cannon. The wiki says it is an advanced redstone contraption. It fires massive arsenals of TNT given coordinates in the Overworld. The Unstable Universe uses a modified non-vanilla version. It is also called OSC.",
+    "keywords": ["orbital tnt", "cannon", "osc", "tnt", "redstone"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is the orbital tnt cannon?", "tell me about the orbital tnt cannon", "what is the osc?", "how does the orbital cannon work?"]
+  },
+  {
+    "question": "What is the Casino key?",
+    "answer": "The Casino key is the key to the Tomb of the Mafia. The wiki says Parrot gambled at the Casino for it. The Casino is in the End. Parrot won the key. Then he went to the Tomb. Marlowww was there. It is a whole thing.",
+    "keywords": ["casino", "key", "tomb", "parrot", "gamble"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is the casino key?", "what does the casino key open?", "how did parrot get the key?", "what is the key to the tomb?"]
+  },
+  {
+    "question": "What is the spyglass?",
+    "answer": "The spyglass is an item connected to Wifies. The wiki says Wifies picked up a spyglass left by ParrotX2. That is how he died. Or that is one version. The spyglass is a small thing. But it is important. It is a sad item.",
+    "keywords": ["spyglass", "wifies", "parrot", "death", "item"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is the spyglass?", "who left the spyglass?", "how did wifies die from a spyglass?", "what item killed wifies?"]
+  },
+  {
+    "question": "What is the Totem of Undying in Unstable Universe?",
+    "answer": "The Totem of Undying is a normal Minecraft item. But in Unstable Universe it is special. The wiki says the Totem of Null is a Totem of Undying enchanted with Curse of Vanishing. It controls all of NULL. It is owned by Spoke. It sends stasises into the void if popped.",
+    "keywords": ["totem", "undying", "null", "spoke", "void"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is the totem of undying?", "tell me about the totem", "how is the totem used?", "what is the totem of null?"]
+  },
+  {
+    "question": "What is the Mafia Stasis Chamber?",
+    "answer": "The Mafia Stasis Chamber is where the Mafia stores ender pearls. The wiki says the Catacombs have Ender Pearl Cannons that launch pearls to the stasis chambers. The prison is guarded by diamond players moving pearls. The Tomb of the Mafia is connected. It is a storage system.",
+    "keywords": ["stasis chamber", "mafia", "pearls", "catacombs", "tomb"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is the mafia stasis chamber?", "tell me about the stasis chamber", "where do the pearls go?", "what is in the catacombs?"]
+  },
+  {
+    "question": "What is the Point of the Maces being rare?",
+    "answer": "The wiki says maces are rare because the Invisible Mafia destroyed nearly every ominous spawner. Only the Far Lands still have them. That makes maces coveted. People fight over them. Wemmbu has two. Flame has one. It is a status thing. A rare thing is a powerful thing.",
+    "keywords": ["maces", "rare", "mafia", "spawner", "far lands"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["why are maces rare?", "why do people want maces?", "what destroyed the spawners?", "where can you still get maces?"]
+  },
+  {
+    "question": "What is the difference between a mace and a sword?",
+    "answer": "A mace is a smash weapon. The wiki says it deals more damage the farther you fall. A sword is a normal weapon. ManeMachete is a sword. Maces are rarer. They are coveted. Swords are easier. Maces are special. I do not have either. I have ice cream.",
+    "keywords": ["mace", "sword", "difference", "weapon", "rare"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is the difference between a mace and a sword?", "are maces better than swords?", "which is stronger, mace or sword?", "why use a mace?"]
+  },
+  {
+    "question": "What is the strongest weapon in Unstable Universe?",
+    "answer": "The wiki does not say one strongest weapon. It lists maces like Gambit, Crucible, Incinerator, Executioner, Knightfall, and Vengeance. It lists swords like ManeMachete. It also lists the Orbital Strike Cannon. That is not a hand weapon. It drops TNT from the sky. That is probably the strongest thing. But it is not a mace.",
+    "keywords": ["strongest", "weapon", "mace", "orbital cannon", "sword"],
+    "category": "unstable_items",
+    "language": "en",
+    "aliases": ["what is the strongest weapon?", "which weapon is best?", "what is the most powerful item?", "are maces the strongest?"]
+  }
+]
